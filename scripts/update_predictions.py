@@ -14,7 +14,7 @@ SOURCE = "https://www.football-data.co.uk"
 LEAGUES = {"E0": "Premier League", "SP1": "La Liga", "D1": "Bundesliga", "I1": "Serie A", "F1": "Ligue 1"}
 OUTPUT = Path("data/predictions.json")
 USER_AGENT = "CalcioIntelligente/1.0"
-MAX_DAYS_AHEAD = 10
+MAX_DAYS_AHEAD = 30
 MIN_TEAM_MATCHES = 4
 PRIOR_MATCHES = 3
 
@@ -152,6 +152,7 @@ def main():
                 fixtures.append((home, away, match_date, (row.get("Time") or row.get("time") or "").strip()))
 
         # Aggiunge il calendario generale, che contiene le prossime partite.
+        known_teams = {team for match in completed for team in match[:2]}
         for row in all_fixtures:
             div = (row.get("Div") or row.get("div") or "").strip()
             if div != code:
