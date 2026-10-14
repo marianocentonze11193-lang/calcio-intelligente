@@ -49,24 +49,24 @@ ESPN_LEAGUES = {
 
 
 def fetch_espn_fixtures(league_code, today, last_date):
-    """Calendario alternativo ESPN, richiesto in intervalli brevi per evitare HTTP 400."""
+    """Calendario alternativo ESPN: l'endpoint scoreboard accetta una sola data per richiesta."""
     sport_code = ESPN_LEAGUES[league_code]
     fixtures = []
     cursor = today
     while cursor <= last_date:
-        chunk_end = min(cursor + timedelta(days=6), last_date)
-        date_range = f"{cursor:%Y%m%d}-{chunk_end:%Y%m%d}"
+        date_param = f"{cursor:%Y%m%d}"
         url = (
             "https://site.api.espn.com/apis/site/v2/sports/soccer/"
-            f"{sport_code}/scoreboard?dates={date_range}&limit=100"
+            f"{sport_code}/scoreboard?dates={date_param}&limit=100"
         )
         try:
-            request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-            with urllib.request.urlopen(request, timeout=20) as response:
+            # Non impostare uno User-Agent personalizzato: ESPN può rifiutare alcune richieste.
+            request = urllib.request.Request(url)
+            with urllib.request.urlopen(request, timeout=15) as response:
                 payload = json.loads(response.read().decode("utf-8"))
         except (urllib.error.URLError, TimeoutError, OSError, ValueError) as error:
-            print(f"AVVISO: calendario ESPN {league_code} ({date_range}) non disponibile: {error}")
-            cursor = chunk_end + timedelta(days=1)
+            print(f"AVVISO: calendario ESPN {league_code} ({date_param}) non disponibile: {error}")
+            cursor += timedelta(days=1)
             continue
 
         for event in payload.get("events", []):
@@ -93,7 +93,7 @@ def fetch_espn_fixtures(league_code, today, last_date):
                 item = (home, away, match_date, kickoff)
                 if item not in fixtures:
                     fixtures.append(item)
-        cursor = chunk_end + timedelta(days=1)
+        cursor += timedelta(days=1)
     return fixtures
 
 
