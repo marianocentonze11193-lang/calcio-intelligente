@@ -1,6 +1,9 @@
-
 {
-  "updated_at": null,
-  "source": null,
-  "matches": []
+  "updated_at": "2026-10-14T20:41:05+00:00",
+  "source": "https://www.football-data.co.uk",
+  "season": "2627",
+  "model": "Poisson semplice; stime indicative, non garanzie",
+  "leagues_checked": 5,
+  "matches": [],
+  "notice": "Le probabilità sono stime statistiche e non garantiscono risultati."
 }
