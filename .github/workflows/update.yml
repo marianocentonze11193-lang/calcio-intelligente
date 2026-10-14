@@ -2,6 +2,10 @@ name: Aggiornamento dati e pronostici
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - "scripts/update_predictions.py"
+      - ".github/workflows/update.yml"
   schedule:
     - cron: "17 */6 * * *"
 
