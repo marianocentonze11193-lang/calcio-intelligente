@@ -119,6 +119,14 @@ def main():
     last_date = today + timedelta(days=MAX_DAYS_AHEAD)
     forecasts, downloaded, failed = [], 0, []
 
+    # Football-data pubblica le prossime partite in un CSV separato.
+    try:
+        all_fixtures = fetch_csv(f"{SOURCE}/fixtures.csv")
+        print(f"Calendario futuro scaricato: {len(all_fixtures)} righe.")
+    except (urllib.error.URLError, TimeoutError, OSError, ValueError) as error:
+        all_fixtures = []
+        print(f"AVVISO: calendario futuro non disponibile: {error}")
+
     for code, league_name in LEAGUES.items():
         try:
             rows = fetch_csv(f"{SOURCE}/mmz4281/{season}/{code}.csv")
@@ -129,6 +137,7 @@ def main():
             continue
 
         completed, fixtures = [], []
+        # Conserva eventuali fixture presenti nel file del campionato.
         for row in rows:
             home = (row.get("HomeTeam") or row.get("Home Team") or "").strip()
             away = (row.get("AwayTeam") or row.get("Away Team") or "").strip()
@@ -140,7 +149,21 @@ def main():
             if hg is not None and ag is not None:
                 completed.append((home, away, int(hg), int(ag)))
             elif today <= match_date <= last_date:
-                fixtures.append((home, away, match_date, (row.get("Time") or "").strip()))
+                fixtures.append((home, away, match_date, (row.get("Time") or row.get("time") or "").strip()))
+
+        # Aggiunge il calendario generale, che contiene le prossime partite.
+        for row in all_fixtures:
+            div = (row.get("Div") or row.get("div") or "").strip()
+            if div != code:
+                continue
+            home = (row.get("HomeTeam") or row.get("Home Team") or row.get("home_team") or "").strip()
+            away = (row.get("AwayTeam") or row.get("Away Team") or row.get("away_team") or "").strip()
+            match_date = parse_date(row.get("Date") or row.get("date"))
+            if home and away and match_date and today <= match_date <= last_date:
+                kickoff = (row.get("Time") or row.get("time") or "").strip()
+                item = (home, away, match_date, kickoff)
+                if item not in fixtures:
+                    fixtures.append(item)
 
         if not completed:
             print(f"AVVISO: {league_name}: nessun risultato concluso disponibile.")
