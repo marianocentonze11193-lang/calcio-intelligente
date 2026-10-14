@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10151f">
+  <meta name="description" content="Analisi e probabilità calcistiche basate su dati verificabili.">
+  <title>Calcio Intelligente</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: system-ui, sans-serif;
+      background: #10151f;
+      color: #f3f6fb;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    header {
+      padding: 24px 18px;
+      background: #171f2d;
+      border-bottom: 1px solid #303b4d;
+    }
+    header h1 { margin: 0; font-size: 25px; }
+    header p { color: #aab6c9; margin-bottom: 0; }
+    main { max-width: 850px; margin: auto; padding: 18px; }
+    .panel {
+      background: #171f2d;
+      border: 1px solid #303b4d;
+      border-radius: 15px;
+      padding: 17px;
+      margin-bottom: 16px;
+    }
+    h2 { font-size: 19px; margin-top: 0; }
+    .muted { color: #aab6c9; font-size: 14px; line-height: 1.6; }
+    button {
+      border: 0;
+      border-radius: 10px;
+      background: #53d69a;
+      color: #0b2118;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 12px 16px;
+      cursor: pointer;
+    }
+    button:disabled { opacity: .6; }
+    .status {
+      border-radius: 9px;
+      padding: 12px;
+      background: #252f40;
+      line-height: 1.5;
+      overflow-wrap: anywhere;
+    }
+    footer { padding: 8px 18px 28px; text-align: center; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>⚽ Calcio Intelligente</h1>
+    <p>Analisi statistiche, probabilità e pronostici prudenti.</p>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>Stato del sistema</h2>
+      <div class="status" id="status" role="status">
+        Verifica dei dati in corso…
+      </div>
+      <p class="muted" id="updated">Ultimo aggiornamento: non disponibile</p>
+      <button id="refresh" type="button">Aggiorna dati</button>
+    </section>
+
+    <section class="panel">
+      <h2>Partite e pronostici</h2>
+      <p class="muted">
+        Le partite compariranno quando sarà configurata una fonte di dati
+        verificabile. Non vengono inventati incontri, quote o probabilità.
+      </p>
+      <div id="matches" class="status">Nessuna partita verificata disponibile.</div>
+    </section>
+
+    <section class="panel">
+      <h2>Mercati previsti</h2>
+      <p class="muted">
+        1X2 · Doppia chance · Over/Under · Goal/No Goal ·
+        Gol squadra casa/trasferta · Risultato esatto · Combinazioni.
+      </p>
+      <p class="muted">
+        Un pronostico verrà mostrato solo quando dati e controlli
+        statistici saranno disponibili. In caso contrario: NO BET.
+      </p>
+    </section>
+
+    <section class="panel">
+      <h2>Trasparenza</h2>
+      <p class="muted">
+        Le probabilità non garantiscono vincite. Fonte dei dati,
+        data di aggiornamento e qualità delle informazioni dovranno
+        essere verificate prima di formulare pronostici reali.
+      </p>
+    </section>
+  </main>
+
+  <footer class="muted">Calcio Intelligente · Progetto in sviluppo</footer>
+
+  <script>
+    const status = document.getElementById("status");
+    const matches = document.getElementById("matches");
+    const updated = document.getElementById("updated");
+    const refresh = document.getElementById("refresh");
+
+    async function loadData() {
+      refresh.disabled = true;
+      status.textContent = "Controllo del file dei dati…";
+
+      try {
+        const response = await fetch("./data/predictions.json", {
+          cache: "no-store"
+        });
+
+        if (!response.ok) throw new Error("Dati non disponibili");
+
+        const data = await response.json();
+        const items = Array.isArray(data.matches) ? data.matches : [];
+
+        if (items.length === 0) {
+          status.textContent =
+            "NO BET · Nessuna partita verificata disponibile.";
+          matches.textContent =
+            "In attesa di collegare una fonte di dati calcistici.";
+        } else {
+          status.textContent =
+            "File letto. Le partite richiedono ancora controlli di qualità.";
+          matches.textContent =
+            "Sono presenti " + items.length +
+            " elementi. Verifica dei dati da completare.";
+        }
+
+        updated.textContent = "Ultimo aggiornamento: " +
+          (data.updated_at || "non indicato");
+
+      } catch (error) {
+        status.textContent =
+          "DATI NON VERIFICATI · Impossibile leggere i dati.";
+        matches.textContent =
+          "Nessun pronostico pubblicato: fonte dati non disponibile.";
+        updated.textContent =
+          "Ultimo aggiornamento: non verificato";
+      } finally {
+        refresh.disabled = false;
+      }
+    }
+
+    refresh.addEventListener("click", loadData);
+    loadData();
+  </script>
+</body>
+</html>
