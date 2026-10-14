@@ -39,6 +39,59 @@ def fetch_csv(url):
     return list(reader)
 
 
+ESPN_LEAGUES = {
+    "E0": "eng.1",
+    "SP1": "esp.1",
+    "D1": "ger.1",
+    "I1": "ita.1",
+    "F1": "fra.1",
+}
+
+
+def fetch_espn_fixtures(league_code, today, last_date):
+    """Calendario alternativo: football-data fixtures.csv non include sempre tutte le leghe."""
+    sport_code = ESPN_LEAGUES[league_code]
+    date_range = f"{today:%Y%m%d}-{last_date:%Y%m%d}"
+    url = (
+        "https://site.api.espn.com/apis/site/v2/sports/soccer/"
+        f"{sport_code}/scoreboard?dates={date_range}&limit=100"
+    )
+    try:
+        request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+        with urllib.request.urlopen(request, timeout=20) as response:
+            payload = json.loads(response.read().decode("utf-8"))
+    except (urllib.error.URLError, TimeoutError, OSError, ValueError) as error:
+        print(f"AVVISO: calendario ESPN {league_code} non disponibile: {error}")
+        return []
+
+    fixtures = []
+    for event in payload.get("events", []):
+        competitions = event.get("competitions") or []
+        if not competitions:
+            continue
+        competition = competitions[0]
+        status = (competition.get("status") or {}).get("type") or {}
+        if status.get("completed"):
+            continue
+        match_date = parse_date(event.get("date", ""))
+        if not match_date or not (today <= match_date <= last_date):
+            continue
+        home = away = ""
+        for competitor in competition.get("competitors", []):
+            team = (competitor.get("team") or {}).get("displayName", "").strip()
+            if competitor.get("homeAway") == "home":
+                home = team
+            elif competitor.get("homeAway") == "away":
+                away = team
+        if home and away:
+            kickoff = ""
+            raw_date = event.get("date", "")
+            if "T" in raw_date:
+                kickoff = raw_date[11:16]
+            fixtures.append((home, away, match_date, kickoff))
+    return fixtures
+
+
 def team_key(value):
     value = unicodedata.normalize("NFKD", str(value or ""))
     value = "".join(ch for ch in value if not unicodedata.combining(ch))
@@ -221,6 +274,14 @@ def main():
             if item not in fixtures:
                 fixtures.append(item)
 
+        # Se il CSV generale non ha partite future per questa lega, usa il calendario ESPN.
+        if not fixtures:
+            alternate_fixtures = fetch_espn_fixtures(code, today, last_date)
+            for item in alternate_fixtures:
+                if item not in fixtures:
+                    fixtures.append(item)
+            if alternate_fixtures:
+                print(f"{league_name}: calendario alternativo ESPN, {len(alternate_fixtures)} partite.")
         print(f"{league_name}: {len(completed)} risultati storici, {fixture_rows_for_league} partite future abbinate, {len(fixtures)} candidate totali.")
         if not completed:
             print(f"AVVISO: {league_name}: nessun risultato concluso disponibile.")
