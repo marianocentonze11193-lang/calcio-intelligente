@@ -160,6 +160,28 @@ def main():
             elif today <= match_date <= last_date:
                 fixtures.append((home, away, match_date, (row.get("Time") or row.get("time") or "").strip()))
 
+        # All'inizio della stagione, se il file corrente non ha risultati,
+        # usa la stagione precedente per costruire una base statistica iniziale.
+        history_season = season
+        if len(completed) < MIN_TEAM_MATCHES:
+            previous_season = f"{(int(season[:2]) - 1) % 100:02d}{season[:2]}"
+            try:
+                previous_rows = fetch_csv(f"{SOURCE}/mmz4281/{previous_season}/{code}.csv")
+                previous_completed = []
+                for row in previous_rows:
+                    home = (row.get("HomeTeam") or row.get("Home Team") or "").strip()
+                    away = (row.get("AwayTeam") or row.get("Away Team") or "").strip()
+                    hg = number(row.get("FTHG") or row.get("HG") or row.get("home_goals"))
+                    ag = number(row.get("FTAG") or row.get("AG") or row.get("away_goals"))
+                    if home and away and hg is not None and ag is not None:
+                        previous_completed.append((home, away, int(hg), int(ag)))
+                if len(previous_completed) > len(completed):
+                    completed = previous_completed
+                    history_season = previous_season
+                    print(f"{league_name}: uso {previous_season} come storico iniziale.")
+            except (urllib.error.URLError, TimeoutError, OSError, ValueError) as error:
+                print(f"AVVISO: storico precedente {code} non disponibile: {error}")
+
         # Aggiunge il calendario generale, che contiene le prossime partite.
         known_teams = {team for match in completed for team in match[:2]}
         fixture_rows_for_league = 0
