@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -8,151 +7,58 @@
   <meta name="description" content="Analisi e probabilità calcistiche basate su dati verificabili.">
   <title>Calcio Intelligente</title>
   <style>
-    :root {
-      color-scheme: dark;
-      font-family: system-ui, sans-serif;
-      background: #10151f;
-      color: #f3f6fb;
-    }
+    :root { color-scheme: dark; font-family: system-ui, sans-serif; background: #10151f; color: #f3f6fb; }
     * { box-sizing: border-box; }
     body { margin: 0; }
-    header {
-      padding: 24px 18px;
-      background: #171f2d;
-      border-bottom: 1px solid #303b4d;
-    }
+    header { padding: 24px 18px; background: #171f2d; border-bottom: 1px solid #303b4d; }
     header h1 { margin: 0; font-size: 25px; }
     header p { color: #aab6c9; margin-bottom: 0; }
-    main { max-width: 850px; margin: auto; padding: 18px; }
-    .panel {
-      background: #171f2d;
-      border: 1px solid #303b4d;
-      border-radius: 15px;
-      padding: 17px;
-      margin-bottom: 16px;
-    }
+    main { max-width: 900px; margin: auto; padding: 18px; }
+    .panel { background: #171f2d; border: 1px solid #303b4d; border-radius: 15px; padding: 17px; margin-bottom: 16px; }
     h2 { font-size: 19px; margin-top: 0; }
     .muted { color: #aab6c9; font-size: 14px; line-height: 1.6; }
-    button {
-      border: 0;
-      border-radius: 10px;
-      background: #53d69a;
-      color: #0b2118;
-      font-size: 15px;
-      font-weight: 700;
-      padding: 12px 16px;
-      cursor: pointer;
-    }
+    button { border: 0; border-radius: 10px; background: #53d69a; color: #0b2118; font-size: 15px; font-weight: 700; padding: 12px 16px; cursor: pointer; }
     button:disabled { opacity: .6; }
-    .status {
-      border-radius: 9px;
-      padding: 12px;
-      background: #252f40;
-      line-height: 1.5;
-      overflow-wrap: anywhere;
-    }
+    .status { border-radius: 9px; padding: 12px; background: #252f40; line-height: 1.5; overflow-wrap: anywhere; }
+    .match-card { background: #111925; border: 1px solid #303b4d; border-radius: 12px; padding: 14px; margin: 12px 0; }
+    .match-meta { color: #aab6c9; font-size: 12px; line-height: 1.5; margin: 0 0 8px; }
+    .match-teams { font-size: 17px; margin: 0 0 8px; }
+    .probabilities { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 7px; margin: 12px 0; }
+    .probability { background: #252f40; border-radius: 8px; padding: 9px 5px; text-align: center; display: flex; flex-direction: column; gap: 5px; }
+    .probability span { color: #aab6c9; font-size: 12px; }
+    .probability strong { font-size: 15px; }
     footer { padding: 8px 18px 28px; text-align: center; }
+    a { color: #53d69a; }
+    @media (max-width: 560px) { .probabilities { grid-template-columns: repeat(3, minmax(0, 1fr)); } .match-teams { font-size: 15px; } }
   </style>
+  <script src="./app.js" defer></script>
 </head>
 <body>
   <header>
     <h1>⚽ Calcio Intelligente</h1>
-    <p>Analisi statistiche, probabilità e pronostici prudenti.</p>
+    <p>Dati calcistici aggiornati e stime statistiche trasparenti.</p>
   </header>
-
   <main>
     <section class="panel">
       <h2>Stato del sistema</h2>
-      <div class="status" id="status" role="status">
-        Verifica dei dati in corso…
-      </div>
+      <div class="status" id="status" role="status">Verifica dei dati in corso…</div>
       <p class="muted" id="updated">Ultimo aggiornamento: non disponibile</p>
       <button id="refresh" type="button">Aggiorna dati</button>
     </section>
-
     <section class="panel">
-      <h2>Partite e pronostici</h2>
-      <p class="muted">
-        Le partite compariranno quando sarà configurata una fonte di dati
-        verificabile. Non vengono inventati incontri, quote o probabilità.
-      </p>
-      <div id="matches" class="status">Nessuna partita verificata disponibile.</div>
+      <h2>Partite e probabilità</h2>
+      <p class="muted">Stime calcolate con un modello Poisson semplice usando i risultati disponibili in casa e in trasferta. Campionati iniziali: Premier League, La Liga, Bundesliga, Serie A e Ligue 1.</p>
+      <div id="matches" class="status">Caricamento delle partite…</div>
     </section>
-
     <section class="panel">
-      <h2>Mercati previsti</h2>
-      <p class="muted">
-        1X2 · Doppia chance · Over/Under · Goal/No Goal ·
-        Gol squadra casa/trasferta · Risultato esatto · Combinazioni.
-      </p>
-      <p class="muted">
-        Un pronostico verrà mostrato solo quando dati e controlli
-        statistici saranno disponibili. In caso contrario: NO BET.
-      </p>
+      <h2>Mercati analizzati</h2>
+      <p class="muted">1X2 · Over 2,5 · Goal/No Goal. Le percentuali sono probabilità modellate, non quote offerte da bookmaker né garanzie di risultato.</p>
     </section>
-
     <section class="panel">
-      <h2>Trasparenza</h2>
-      <p class="muted">
-        Le probabilità non garantiscono vincite. Fonte dei dati,
-        data di aggiornamento e qualità delle informazioni dovranno
-        essere verificate prima di formulare pronostici reali.
-      </p>
+      <h2>Fonte e trasparenza</h2>
+      <p class="muted">Fonte risultati: <a href="https://www.football-data.co.uk/" target="_blank" rel="noopener noreferrer">football-data.co.uk</a>. L'aggiornamento automatico è eseguito da GitHub Actions ogni sei ore, quando il servizio è disponibile. Le stime possono essere assenti se non ci sono partite future o se i dati delle squadre sono insufficienti. Nessun modello garantisce vincite.</p>
     </section>
   </main>
-
-  <footer class="muted">Calcio Intelligente · Progetto in sviluppo</footer>
-
-  <script>
-    const status = document.getElementById("status");
-    const matches = document.getElementById("matches");
-    const updated = document.getElementById("updated");
-    const refresh = document.getElementById("refresh");
-
-    async function loadData() {
-      refresh.disabled = true;
-      status.textContent = "Controllo del file dei dati…";
-
-      try {
-        const response = await fetch("./data/predictions.json", {
-          cache: "no-store"
-        });
-
-        if (!response.ok) throw new Error("Dati non disponibili");
-
-        const data = await response.json();
-        const items = Array.isArray(data.matches) ? data.matches : [];
-
-        if (items.length === 0) {
-          status.textContent =
-            "NO BET · Nessuna partita verificata disponibile.";
-          matches.textContent =
-            "In attesa di collegare una fonte di dati calcistici.";
-        } else {
-          status.textContent =
-            "File letto. Le partite richiedono ancora controlli di qualità.";
-          matches.textContent =
-            "Sono presenti " + items.length +
-            " elementi. Verifica dei dati da completare.";
-        }
-
-        updated.textContent = "Ultimo aggiornamento: " +
-          (data.updated_at || "non indicato");
-
-      } catch (error) {
-        status.textContent =
-          "DATI NON VERIFICATI · Impossibile leggere i dati.";
-        matches.textContent =
-          "Nessun pronostico pubblicato: fonte dati non disponibile.";
-        updated.textContent =
-          "Ultimo aggiornamento: non verificato";
-      } finally {
-        refresh.disabled = false;
-      }
-    }
-
-    refresh.addEventListener("click", loadData);
-    loadData();
-  </script>
+  <footer class="muted">Calcio Intelligente · Stime statistiche indicative</footer>
 </body>
 </html>
