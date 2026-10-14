@@ -1,5 +1,4 @@
-
-name: Controllo periodico dei dati
+name: Aggiornamento dati e pronostici
 
 on:
   workflow_dispatch:
@@ -7,30 +6,33 @@ on:
     - cron: "17 */6 * * *"
 
 permissions:
-  contents: read
+  contents: write
+
+concurrency:
+  group: aggiornamento-pronostici
+  cancel-in-progress: false
 
 jobs:
-  controllo:
+  aggiorna:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - name: Scarica il repository
         uses: actions/checkout@v4
-
-      - name: Controlla il file delle partite
+      - name: Configura Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Scarica risultati e genera stime
+        run: python scripts/update_predictions.py
+      - name: Salva i dati aggiornati nel repository
         run: |
-          python - <<'PY'
-          import json
-          from pathlib import Path
-
-          path = Path("data/predictions.json")
-          data = json.loads(path.read_text(encoding="utf-8"))
-
-          if not isinstance(data.get("matches"), list):
-              raise SystemExit("Errore: matches deve essere una lista")
-
-          print("Controllo completato.")
-          print("Partite presenti:", len(data["matches"]))
-          print("Fonte dichiarata:", data.get("source"))
-          print("Ultimo aggiornamento:", data.get("updated_at"))
-          PY
-          
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/predictions.json
+          if git diff --cached --quiet; then
+            echo "Nessun cambiamento nei dati."
+          else
+            git commit -m "Aggiorna dati e pronostici calcistici"
+            git push
+          fi
