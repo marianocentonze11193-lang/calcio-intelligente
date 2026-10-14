@@ -1,0 +1,36 @@
+
+name: Controllo periodico dei dati
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  controllo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Scarica il repository
+        uses: actions/checkout@v4
+
+      - name: Controlla il file delle partite
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path("data/predictions.json")
+          data = json.loads(path.read_text(encoding="utf-8"))
+
+          if not isinstance(data.get("matches"), list):
+              raise SystemExit("Errore: matches deve essere una lista")
+
+          print("Controllo completato.")
+          print("Partite presenti:", len(data["matches"]))
+          print("Fonte dichiarata:", data.get("source"))
+          print("Ultimo aggiornamento:", data.get("updated_at"))
+          PY
+          
