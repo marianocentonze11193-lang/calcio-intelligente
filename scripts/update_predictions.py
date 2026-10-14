@@ -155,12 +155,16 @@ def main():
         known_teams = {team for match in completed for team in match[:2]}
         for row in all_fixtures:
             div = (row.get("Div") or row.get("div") or "").strip()
-            if div != code:
+            # Alcune versioni di fixtures.csv non includono la colonna Div.
+            # In quel caso identifichiamo il campionato usando le squadre note nello storico.
+            if div and div != code:
                 continue
             home = (row.get("HomeTeam") or row.get("Home Team") or row.get("home_team") or "").strip()
             away = (row.get("AwayTeam") or row.get("Away Team") or row.get("away_team") or "").strip()
             match_date = parse_date(row.get("Date") or row.get("date"))
             if home and away and match_date and today <= match_date <= last_date:
+                if not div and (home not in known_teams or away not in known_teams):
+                    continue
                 kickoff = (row.get("Time") or row.get("time") or "").strip()
                 item = (home, away, match_date, kickoff)
                 if item not in fixtures:
