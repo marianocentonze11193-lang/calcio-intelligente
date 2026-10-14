@@ -49,46 +49,51 @@ ESPN_LEAGUES = {
 
 
 def fetch_espn_fixtures(league_code, today, last_date):
-    """Calendario alternativo: football-data fixtures.csv non include sempre tutte le leghe."""
+    """Calendario alternativo ESPN, richiesto in intervalli brevi per evitare HTTP 400."""
     sport_code = ESPN_LEAGUES[league_code]
-    date_range = f"{today:%Y%m%d}-{last_date:%Y%m%d}"
-    url = (
-        "https://site.api.espn.com/apis/site/v2/sports/soccer/"
-        f"{sport_code}/scoreboard?dates={date_range}&limit=100"
-    )
-    try:
-        request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-        with urllib.request.urlopen(request, timeout=20) as response:
-            payload = json.loads(response.read().decode("utf-8"))
-    except (urllib.error.URLError, TimeoutError, OSError, ValueError) as error:
-        print(f"AVVISO: calendario ESPN {league_code} non disponibile: {error}")
-        return []
-
     fixtures = []
-    for event in payload.get("events", []):
-        competitions = event.get("competitions") or []
-        if not competitions:
+    cursor = today
+    while cursor <= last_date:
+        chunk_end = min(cursor + timedelta(days=6), last_date)
+        date_range = f"{cursor:%Y%m%d}-{chunk_end:%Y%m%d}"
+        url = (
+            "https://site.api.espn.com/apis/site/v2/sports/soccer/"
+            f"{sport_code}/scoreboard?dates={date_range}&limit=100"
+        )
+        try:
+            request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+            with urllib.request.urlopen(request, timeout=20) as response:
+                payload = json.loads(response.read().decode("utf-8"))
+        except (urllib.error.URLError, TimeoutError, OSError, ValueError) as error:
+            print(f"AVVISO: calendario ESPN {league_code} ({date_range}) non disponibile: {error}")
+            cursor = chunk_end + timedelta(days=1)
             continue
-        competition = competitions[0]
-        status = (competition.get("status") or {}).get("type") or {}
-        if status.get("completed"):
-            continue
-        match_date = parse_date(event.get("date", ""))
-        if not match_date or not (today <= match_date <= last_date):
-            continue
-        home = away = ""
-        for competitor in competition.get("competitors", []):
-            team = (competitor.get("team") or {}).get("displayName", "").strip()
-            if competitor.get("homeAway") == "home":
-                home = team
-            elif competitor.get("homeAway") == "away":
-                away = team
-        if home and away:
-            kickoff = ""
+
+        for event in payload.get("events", []):
+            competitions = event.get("competitions") or []
+            if not competitions:
+                continue
+            competition = competitions[0]
+            status = (competition.get("status") or {}).get("type") or {}
+            if status.get("completed"):
+                continue
             raw_date = event.get("date", "")
-            if "T" in raw_date:
-                kickoff = raw_date[11:16]
-            fixtures.append((home, away, match_date, kickoff))
+            match_date = parse_date(raw_date)
+            if not match_date or not (today <= match_date <= last_date):
+                continue
+            home = away = ""
+            for competitor in competition.get("competitors", []):
+                team = (competitor.get("team") or {}).get("displayName", "").strip()
+                if competitor.get("homeAway") == "home":
+                    home = team
+                elif competitor.get("homeAway") == "away":
+                    away = team
+            if home and away:
+                kickoff = raw_date[11:16] if "T" in raw_date else ""
+                item = (home, away, match_date, kickoff)
+                if item not in fixtures:
+                    fixtures.append(item)
+        cursor = chunk_end + timedelta(days=1)
     return fixtures
 
 
