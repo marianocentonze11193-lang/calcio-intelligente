@@ -30,7 +30,13 @@ def fetch_csv(url):
     request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
     with urllib.request.urlopen(request, timeout=25) as response:
         raw = response.read()
-    return list(csv.DictReader(io.StringIO(raw.decode("cp1252", errors="replace"))))
+    # football-data può pubblicare CSV con BOM UTF-8; se decodificato come
+    # cp1252 diventa "ï»¿" e rompe il nome della prima colonna ("Div").
+    text = raw.decode("cp1252", errors="replace").lstrip("\ufeffï»¿")
+    reader = csv.DictReader(io.StringIO(text))
+    if reader.fieldnames:
+        reader.fieldnames = [name.strip().lstrip("\ufeffï»¿") for name in reader.fieldnames]
+    return list(reader)
 
 
 def team_key(value):
