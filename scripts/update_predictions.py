@@ -43,12 +43,18 @@ def number(value):
 
 def parse_date(value):
     value = (value or "").strip()
-    for fmt in ("%d/%m/%Y", "%d/%m/%y", "%Y-%m-%d"):
-        try:
-            return datetime.strptime(value, fmt).date()
-        except ValueError:
-            pass
-    return None
+    # Accetta anche date accompagnate da ora o timestamp ISO.
+    candidates = [value, value[:10]]
+    for candidate in candidates:
+        for fmt in ("%d/%m/%Y", "%d/%m/%y", "%Y-%m-%d"):
+            try:
+                return datetime.strptime(candidate, fmt).date()
+            except ValueError:
+                pass
+    try:
+        return datetime.fromisoformat(value.replace("Z", "+00:00")).date()
+    except ValueError:
+        return None
 
 
 def poisson_probs(lam, maximum=9):
@@ -123,6 +129,9 @@ def main():
     try:
         all_fixtures = fetch_csv(f"{SOURCE}/fixtures.csv")
         print(f"Calendario futuro scaricato: {len(all_fixtures)} righe.")
+        if all_fixtures:
+            print("Colonne calendario:", ", ".join(all_fixtures[0].keys()))
+            print("Esempio calendario:", repr(all_fixtures[0]))
     except (urllib.error.URLError, TimeoutError, OSError, ValueError) as error:
         all_fixtures = []
         print(f"AVVISO: calendario futuro non disponibile: {error}")
@@ -153,6 +162,7 @@ def main():
 
         # Aggiunge il calendario generale, che contiene le prossime partite.
         known_teams = {team for match in completed for team in match[:2]}
+        fixture_rows_for_league = 0
         for row in all_fixtures:
             div = (row.get("Div") or row.get("div") or "").strip()
             # Alcune versioni di fixtures.csv non includono la colonna Div.
@@ -163,13 +173,17 @@ def main():
             away = (row.get("AwayTeam") or row.get("Away Team") or row.get("away_team") or "").strip()
             match_date = parse_date(row.get("Date") or row.get("date"))
             if home and away and match_date and today <= match_date <= last_date:
+                if div and div != code:
+                    continue
                 if not div and (home not in known_teams or away not in known_teams):
                     continue
+                fixture_rows_for_league += 1
                 kickoff = (row.get("Time") or row.get("time") or "").strip()
                 item = (home, away, match_date, kickoff)
                 if item not in fixtures:
                     fixtures.append(item)
 
+        print(f"{league_name}: {len(completed)} risultati storici, {fixture_rows_for_league} partite future abbinate, {len(fixtures)} candidate totali.")
         if not completed:
             print(f"AVVISO: {league_name}: nessun risultato concluso disponibile.")
             continue
@@ -193,10 +207,14 @@ def main():
             aws["away_scored"] += ag
             aws["away_conceded"] += hg
 
+        skipped = 0
         for home, away, match_date, kickoff in fixtures:
             forecast = make_forecast(home, away, league_name, match_date, kickoff, history, league_home_avg, league_away_avg)
             if forecast:
                 forecasts.append(forecast)
+            else:
+                skipped += 1
+        print(f"{league_name}: pronostici creati {len(fixtures) - skipped}; scartate per storico insufficiente {skipped}.")
 
     if downloaded == 0:
         raise SystemExit("Nessuna fonte dati raggiungibile: il file precedente è stato mantenuto.")
