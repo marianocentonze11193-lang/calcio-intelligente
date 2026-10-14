@@ -1,9 +1,1610 @@
 {
-  "updated_at": "2026-10-14T21:02:28+00:00",
+  "updated_at": "2026-10-14T21:04:05+00:00",
   "source": "https://www.football-data.co.uk",
   "season": "2627",
   "model": "Poisson semplice; stime indicative, non garanzie",
   "leagues_checked": 5,
-  "matches": [],
+  "matches": [
+    {
+      "id": "2026-10-16-Bundesliga-Eintracht Frankfurt-FC Cologne",
+      "date": "2026-10-16",
+      "kickoff": "18:30",
+      "league": "Bundesliga",
+      "home_team": "Eintracht Frankfurt",
+      "away_team": "FC Cologne",
+      "expected_home_goals": 2.36,
+      "expected_away_goals": 1.47,
+      "probabilities": {
+        "home_win": 57.3,
+        "draw": 19.4,
+        "away_win": 23.2,
+        "over_2_5": 73.5,
+        "btts_yes": 69.6
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-16-La Liga-Deportivo-Levante",
+      "date": "2026-10-16",
+      "kickoff": "19:00",
+      "league": "La Liga",
+      "home_team": "Deportivo",
+      "away_team": "Levante",
+      "expected_home_goals": 1.61,
+      "expected_away_goals": 0.71,
+      "probabilities": {
+        "home_win": 58.9,
+        "draw": 24.7,
+        "away_win": 16.4,
+        "over_2_5": 41.0,
+        "btts_yes": 40.8
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-16-Ligue 1-Le Mans-Toulouse",
+      "date": "2026-10-16",
+      "kickoff": "18:45",
+      "league": "Ligue 1",
+      "home_team": "Le Mans",
+      "away_team": "Toulouse",
+      "expected_home_goals": 2.02,
+      "expected_away_goals": 1.9,
+      "probabilities": {
+        "home_win": 41.8,
+        "draw": 20.9,
+        "away_win": 37.2,
+        "over_2_5": 74.9,
+        "btts_yes": 73.7
+      },
+      "sample_matches": 6,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-16-Serie A-Frosinone-Sassuolo",
+      "date": "2026-10-16",
+      "kickoff": "18:45",
+      "league": "Serie A",
+      "home_team": "Frosinone",
+      "away_team": "Sassuolo",
+      "expected_home_goals": 1.84,
+      "expected_away_goals": 1.17,
+      "probabilities": {
+        "home_win": 53.2,
+        "draw": 22.8,
+        "away_win": 24.0,
+        "over_2_5": 57.8,
+        "btts_yes": 57.9
+      },
+      "sample_matches": 6,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-17-Bundesliga-1. FC Union Berlin-Borussia Dortmund",
+      "date": "2026-10-17",
+      "kickoff": "13:30",
+      "league": "Bundesliga",
+      "home_team": "1. FC Union Berlin",
+      "away_team": "Borussia Dortmund",
+      "expected_home_goals": 2.36,
+      "expected_away_goals": 1.47,
+      "probabilities": {
+        "home_win": 57.3,
+        "draw": 19.4,
+        "away_win": 23.2,
+        "over_2_5": 73.5,
+        "btts_yes": 69.6
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-17-Bundesliga-Bayern Munich-RB Leipzig",
+      "date": "2026-10-17",
+      "kickoff": "16:30",
+      "league": "Bundesliga",
+      "home_team": "Bayern Munich",
+      "away_team": "RB Leipzig",
+      "expected_home_goals": 3.91,
+      "expected_away_goals": 0.8,
+      "probabilities": {
+        "home_win": 89.6,
+        "draw": 6.9,
+        "away_win": 3.5,
+        "over_2_5": 84.7,
+        "btts_yes": 53.7
+      },
+      "sample_matches": 5,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-17-Bundesliga-Hamburg SV-VfB Stuttgart",
+      "date": "2026-10-17",
+      "kickoff": "13:30",
+      "league": "Bundesliga",
+      "home_team": "Hamburg SV",
+      "away_team": "VfB Stuttgart",
+      "expected_home_goals": 2.36,
+      "expected_away_goals": 1.47,
+      "probabilities": {
+        "home_win": 57.3,
+        "draw": 19.4,
+        "away_win": 23.2,
+        "over_2_5": 73.5,
+        "btts_yes": 69.6
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-17-Bundesliga-SV Elversberg-FC Augsburg",
+      "date": "2026-10-17",
+      "kickoff": "13:30",
+      "league": "Bundesliga",
+      "home_team": "SV Elversberg",
+      "away_team": "FC Augsburg",
+      "expected_home_goals": 2.36,
+      "expected_away_goals": 1.47,
+      "probabilities": {
+        "home_win": 57.3,
+        "draw": 19.4,
+        "away_win": 23.2,
+        "over_2_5": 73.5,
+        "btts_yes": 69.6
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-17-Bundesliga-Schalke 04-Mainz",
+      "date": "2026-10-17",
+      "kickoff": "13:30",
+      "league": "Bundesliga",
+      "home_team": "Schalke 04",
+      "away_team": "Mainz",
+      "expected_home_goals": 1.21,
+      "expected_away_goals": 1.61,
+      "probabilities": {
+        "home_win": 28.7,
+        "draw": 24.6,
+        "away_win": 46.7,
+        "over_2_5": 53.4,
+        "btts_yes": 56.1
+      },
+      "sample_matches": 5,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-17-Bundesliga-Werder Bremen-SC Paderborn 07",
+      "date": "2026-10-17",
+      "kickoff": "13:30",
+      "league": "Bundesliga",
+      "home_team": "Werder Bremen",
+      "away_team": "SC Paderborn 07",
+      "expected_home_goals": 2.61,
+      "expected_away_goals": 1.48,
+      "probabilities": {
+        "home_win": 61.9,
+        "draw": 17.8,
+        "away_win": 20.3,
+        "over_2_5": 77.5,
+        "btts_yes": 71.6
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-17-La Liga-Espanyol-Atlético Madrid",
+      "date": "2026-10-17",
+      "kickoff": "12:00",
+      "league": "La Liga",
+      "home_team": "Espanyol",
+      "away_team": "Atlético Madrid",
+      "expected_home_goals": 1.76,
+      "expected_away_goals": 1.33,
+      "probabilities": {
+        "home_win": 47.5,
+        "draw": 23.3,
+        "away_win": 29.2,
+        "over_2_5": 59.7,
+        "btts_yes": 60.9
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-17-La Liga-Real Betis-Barcelona",
+      "date": "2026-10-17",
+      "kickoff": "16:30",
+      "league": "La Liga",
+      "home_team": "Real Betis",
+      "away_team": "Barcelona",
+      "expected_home_goals": 1.18,
+      "expected_away_goals": 3.0,
+      "probabilities": {
+        "home_win": 11.9,
+        "draw": 14.1,
+        "away_win": 74.0,
+        "over_2_5": 78.7,
+        "btts_yes": 65.9
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-17-La Liga-Valencia-Athletic Club",
+      "date": "2026-10-17",
+      "kickoff": "19:00",
+      "league": "La Liga",
+      "home_team": "Valencia",
+      "away_team": "Athletic Club",
+      "expected_home_goals": 1.04,
+      "expected_away_goals": 1.86,
+      "probabilities": {
+        "home_win": 20.9,
+        "draw": 22.6,
+        "away_win": 56.5,
+        "over_2_5": 55.3,
+        "btts_yes": 54.5
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-17-La Liga-Villarreal-Elche",
+      "date": "2026-10-17",
+      "kickoff": "14:15",
+      "league": "La Liga",
+      "home_team": "Villarreal",
+      "away_team": "Elche",
+      "expected_home_goals": 1.72,
+      "expected_away_goals": 1.96,
+      "probabilities": {
+        "home_win": 34.4,
+        "draw": 21.5,
+        "away_win": 44.1,
+        "over_2_5": 71.2,
+        "btts_yes": 70.6
+      },
+      "sample_matches": 8,
+      "confidence": "media",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-17-Ligue 1-Lille-Brest",
+      "date": "2026-10-17",
+      "kickoff": "18:45",
+      "league": "Ligue 1",
+      "home_team": "Lille",
+      "away_team": "Brest",
+      "expected_home_goals": 1.67,
+      "expected_away_goals": 1.12,
+      "probabilities": {
+        "home_win": 50.2,
+        "draw": 24.3,
+        "away_win": 25.5,
+        "over_2_5": 52.7,
+        "btts_yes": 54.6
+      },
+      "sample_matches": 6,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-17-Ligue 1-Strasbourg-Paris Saint-Germain",
+      "date": "2026-10-17",
+      "kickoff": "15:15",
+      "league": "Ligue 1",
+      "home_team": "Strasbourg",
+      "away_team": "Paris Saint-Germain",
+      "expected_home_goals": 1.6,
+      "expected_away_goals": 1.14,
+      "probabilities": {
+        "home_win": 47.9,
+        "draw": 24.8,
+        "away_win": 27.3,
+        "over_2_5": 51.7,
+        "btts_yes": 54.4
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-17-Ligue 1-Troyes-Lens",
+      "date": "2026-10-17",
+      "kickoff": "18:45",
+      "league": "Ligue 1",
+      "home_team": "Troyes",
+      "away_team": "Lens",
+      "expected_home_goals": 1.28,
+      "expected_away_goals": 2.03,
+      "probabilities": {
+        "home_win": 24.0,
+        "draw": 21.4,
+        "away_win": 54.6,
+        "over_2_5": 64.3,
+        "btts_yes": 62.8
+      },
+      "sample_matches": 6,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-17-Premier League-Brentford-Liverpool",
+      "date": "2026-10-17",
+      "kickoff": "14:00",
+      "league": "Premier League",
+      "home_team": "Brentford",
+      "away_team": "Liverpool",
+      "expected_home_goals": 1.39,
+      "expected_away_goals": 0.94,
+      "probabilities": {
+        "home_win": 47.5,
+        "draw": 27.2,
+        "away_win": 25.3,
+        "over_2_5": 41.2,
+        "btts_yes": 45.8
+      },
+      "sample_matches": 6,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-17-Premier League-Everton-Chelsea",
+      "date": "2026-10-17",
+      "kickoff": "11:30",
+      "league": "Premier League",
+      "home_team": "Everton",
+      "away_team": "Chelsea",
+      "expected_home_goals": 2.01,
+      "expected_away_goals": 1.0,
+      "probabilities": {
+        "home_win": 60.7,
+        "draw": 21.1,
+        "away_win": 18.2,
+        "over_2_5": 57.8,
+        "btts_yes": 54.7
+      },
+      "sample_matches": 6,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-17-Premier League-Fulham-Hull City",
+      "date": "2026-10-17",
+      "kickoff": "14:00",
+      "league": "Premier League",
+      "home_team": "Fulham",
+      "away_team": "Hull City",
+      "expected_home_goals": 1.64,
+      "expected_away_goals": 1.83,
+      "probabilities": {
+        "home_win": 34.9,
+        "draw": 22.3,
+        "away_win": 42.8,
+        "over_2_5": 67.4,
+        "btts_yes": 67.7
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-17-Premier League-Manchester City-Ipswich Town",
+      "date": "2026-10-17",
+      "kickoff": "14:00",
+      "league": "Premier League",
+      "home_team": "Manchester City",
+      "away_team": "Ipswich Town",
+      "expected_home_goals": 1.62,
+      "expected_away_goals": 1.33,
+      "probabilities": {
+        "home_win": 44.1,
+        "draw": 24.3,
+        "away_win": 31.6,
+        "over_2_5": 56.6,
+        "btts_yes": 59.0
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-17-Premier League-Newcastle United-Aston Villa",
+      "date": "2026-10-17",
+      "kickoff": "16:30",
+      "league": "Premier League",
+      "home_team": "Newcastle United",
+      "away_team": "Aston Villa",
+      "expected_home_goals": 1.81,
+      "expected_away_goals": 1.17,
+      "probabilities": {
+        "home_win": 52.4,
+        "draw": 23.1,
+        "away_win": 24.5,
+        "over_2_5": 57.1,
+        "btts_yes": 57.6
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-17-Serie A-AS Roma-Genoa",
+      "date": "2026-10-17",
+      "kickoff": "18:45",
+      "league": "Serie A",
+      "home_team": "AS Roma",
+      "away_team": "Genoa",
+      "expected_home_goals": 1.53,
+      "expected_away_goals": 0.99,
+      "probabilities": {
+        "home_win": 49.8,
+        "draw": 25.7,
+        "away_win": 24.5,
+        "over_2_5": 46.1,
+        "btts_yes": 49.2
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-17-Serie A-Bologna-Internazionale",
+      "date": "2026-10-17",
+      "kickoff": "16:00",
+      "league": "Serie A",
+      "home_team": "Bologna",
+      "away_team": "Internazionale",
+      "expected_home_goals": 1.28,
+      "expected_away_goals": 1.32,
+      "probabilities": {
+        "home_win": 35.6,
+        "draw": 26.4,
+        "away_win": 38.0,
+        "over_2_5": 48.2,
+        "btts_yes": 52.9
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-17-Serie A-Venezia-Napoli",
+      "date": "2026-10-17",
+      "kickoff": "13:00",
+      "league": "Serie A",
+      "home_team": "Venezia",
+      "away_team": "Napoli",
+      "expected_home_goals": 1.03,
+      "expected_away_goals": 2.26,
+      "probabilities": {
+        "home_win": 16.0,
+        "draw": 19.0,
+        "away_win": 65.0,
+        "over_2_5": 63.8,
+        "btts_yes": 57.6
+      },
+      "sample_matches": 6,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-18-Bundesliga-Bayer Leverkusen-SC Freiburg",
+      "date": "2026-10-18",
+      "kickoff": "13:30",
+      "league": "Bundesliga",
+      "home_team": "Bayer Leverkusen",
+      "away_team": "SC Freiburg",
+      "expected_home_goals": 2.36,
+      "expected_away_goals": 1.47,
+      "probabilities": {
+        "home_win": 57.3,
+        "draw": 19.4,
+        "away_win": 23.2,
+        "over_2_5": 73.5,
+        "btts_yes": 69.6
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-18-Bundesliga-Borussia Mönchengladbach-TSG Hoffenheim",
+      "date": "2026-10-18",
+      "kickoff": "15:30",
+      "league": "Bundesliga",
+      "home_team": "Borussia Mönchengladbach",
+      "away_team": "TSG Hoffenheim",
+      "expected_home_goals": 2.36,
+      "expected_away_goals": 1.47,
+      "probabilities": {
+        "home_win": 57.3,
+        "draw": 19.4,
+        "away_win": 23.2,
+        "over_2_5": 73.5,
+        "btts_yes": 69.6
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-18-La Liga-Celta Vigo-Alaves",
+      "date": "2026-10-18",
+      "kickoff": "14:15",
+      "league": "La Liga",
+      "home_team": "Celta Vigo",
+      "away_team": "Alaves",
+      "expected_home_goals": 1.38,
+      "expected_away_goals": 1.0,
+      "probabilities": {
+        "home_win": 45.6,
+        "draw": 27.2,
+        "away_win": 27.3,
+        "over_2_5": 42.5,
+        "btts_yes": 47.3
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-18-La Liga-Malaga-Real Sociedad",
+      "date": "2026-10-18",
+      "kickoff": "16:30",
+      "league": "La Liga",
+      "home_team": "Malaga",
+      "away_team": "Real Sociedad",
+      "expected_home_goals": 1.18,
+      "expected_away_goals": 1.29,
+      "probabilities": {
+        "home_win": 33.9,
+        "draw": 27.2,
+        "away_win": 38.9,
+        "over_2_5": 44.8,
+        "btts_yes": 50.2
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-18-La Liga-Osasuna-Racing Santander",
+      "date": "2026-10-18",
+      "kickoff": "12:00",
+      "league": "La Liga",
+      "home_team": "Osasuna",
+      "away_team": "Racing Santander",
+      "expected_home_goals": 1.04,
+      "expected_away_goals": 1.0,
+      "probabilities": {
+        "home_win": 35.8,
+        "draw": 30.5,
+        "away_win": 33.8,
+        "over_2_5": 33.4,
+        "btts_yes": 40.8
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-18-La Liga-Real Madrid-Sevilla",
+      "date": "2026-10-18",
+      "kickoff": "19:00",
+      "league": "La Liga",
+      "home_team": "Real Madrid",
+      "away_team": "Sevilla",
+      "expected_home_goals": 2.18,
+      "expected_away_goals": 1.1,
+      "probabilities": {
+        "home_win": 61.9,
+        "draw": 19.9,
+        "away_win": 18.2,
+        "over_2_5": 63.7,
+        "btts_yes": 59.2
+      },
+      "sample_matches": 8,
+      "confidence": "media",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-18-Ligue 1-Angers-Marseille",
+      "date": "2026-10-18",
+      "kickoff": "13:00",
+      "league": "Ligue 1",
+      "home_team": "Angers",
+      "away_team": "Marseille",
+      "expected_home_goals": 1.07,
+      "expected_away_goals": 0.99,
+      "probabilities": {
+        "home_win": 36.8,
+        "draw": 30.3,
+        "away_win": 32.8,
+        "over_2_5": 33.8,
+        "btts_yes": 41.2
+      },
+      "sample_matches": 6,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-18-Ligue 1-Le Havre AC-AJ Auxerre",
+      "date": "2026-10-18",
+      "kickoff": "15:15",
+      "league": "Ligue 1",
+      "home_team": "Le Havre AC",
+      "away_team": "AJ Auxerre",
+      "expected_home_goals": 1.67,
+      "expected_away_goals": 1.24,
+      "probabilities": {
+        "home_win": 47.4,
+        "draw": 24.1,
+        "away_win": 28.5,
+        "over_2_5": 55.6,
+        "btts_yes": 57.7
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-18-Ligue 1-Lorient-AS Monaco",
+      "date": "2026-10-18",
+      "kickoff": "15:15",
+      "league": "Ligue 1",
+      "home_team": "Lorient",
+      "away_team": "AS Monaco",
+      "expected_home_goals": 1.5,
+      "expected_away_goals": 1.29,
+      "probabilities": {
+        "home_win": 42.2,
+        "draw": 25.2,
+        "away_win": 32.6,
+        "over_2_5": 52.7,
+        "btts_yes": 56.2
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-18-Ligue 1-Lyon-Nice",
+      "date": "2026-10-18",
+      "kickoff": "18:45",
+      "league": "Ligue 1",
+      "home_team": "Lyon",
+      "away_team": "Nice",
+      "expected_home_goals": 2.34,
+      "expected_away_goals": 0.57,
+      "probabilities": {
+        "home_win": 77.1,
+        "draw": 15.5,
+        "away_win": 7.3,
+        "over_2_5": 55.7,
+        "btts_yes": 39.4
+      },
+      "sample_matches": 6,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-18-Ligue 1-Paris FC-Stade Rennais",
+      "date": "2026-10-18",
+      "kickoff": "15:15",
+      "league": "Ligue 1",
+      "home_team": "Paris FC",
+      "away_team": "Stade Rennais",
+      "expected_home_goals": 1.67,
+      "expected_away_goals": 0.79,
+      "probabilities": {
+        "home_win": 58.3,
+        "draw": 24.2,
+        "away_win": 17.5,
+        "over_2_5": 44.4,
+        "btts_yes": 44.2
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-18-Premier League-AFC Bournemouth-Sunderland",
+      "date": "2026-10-18",
+      "kickoff": "13:00",
+      "league": "Premier League",
+      "home_team": "AFC Bournemouth",
+      "away_team": "Sunderland",
+      "expected_home_goals": 2.14,
+      "expected_away_goals": 1.5,
+      "probabilities": {
+        "home_win": 52.4,
+        "draw": 20.8,
+        "away_win": 26.9,
+        "over_2_5": 70.5,
+        "btts_yes": 68.6
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-18-Premier League-Brighton & Hove Albion-Crystal Palace",
+      "date": "2026-10-18",
+      "kickoff": "13:00",
+      "league": "Premier League",
+      "home_team": "Brighton & Hove Albion",
+      "away_team": "Crystal Palace",
+      "expected_home_goals": 1.47,
+      "expected_away_goals": 1.17,
+      "probabilities": {
+        "home_win": 44.3,
+        "draw": 25.8,
+        "away_win": 30.0,
+        "over_2_5": 49.2,
+        "btts_yes": 53.1
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-18-Premier League-Leeds United-Manchester United",
+      "date": "2026-10-18",
+      "kickoff": "13:00",
+      "league": "Premier League",
+      "home_team": "Leeds United",
+      "away_team": "Manchester United",
+      "expected_home_goals": 1.62,
+      "expected_away_goals": 1.33,
+      "probabilities": {
+        "home_win": 44.1,
+        "draw": 24.3,
+        "away_win": 31.6,
+        "over_2_5": 56.6,
+        "btts_yes": 59.0
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-18-Premier League-Nottingham Forest-Arsenal",
+      "date": "2026-10-18",
+      "kickoff": "15:30",
+      "league": "Premier League",
+      "home_team": "Nottingham Forest",
+      "away_team": "Arsenal",
+      "expected_home_goals": 1.31,
+      "expected_away_goals": 1.17,
+      "probabilities": {
+        "home_win": 39.8,
+        "draw": 27.1,
+        "away_win": 33.1,
+        "over_2_5": 45.0,
+        "btts_yes": 50.2
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-18-Serie A-AC Milan-Atalanta",
+      "date": "2026-10-18",
+      "kickoff": "16:00",
+      "league": "Serie A",
+      "home_team": "AC Milan",
+      "away_team": "Atalanta",
+      "expected_home_goals": 1.73,
+      "expected_away_goals": 0.99,
+      "probabilities": {
+        "home_win": 54.8,
+        "draw": 23.7,
+        "away_win": 21.5,
+        "over_2_5": 51.1,
+        "btts_yes": 51.7
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-18-Serie A-Fiorentina-Como",
+      "date": "2026-10-18",
+      "kickoff": "13:00",
+      "league": "Serie A",
+      "home_team": "Fiorentina",
+      "away_team": "Como",
+      "expected_home_goals": 0.99,
+      "expected_away_goals": 1.97,
+      "probabilities": {
+        "home_win": 18.3,
+        "draw": 21.4,
+        "away_win": 60.3,
+        "over_2_5": 56.7,
+        "btts_yes": 53.9
+      },
+      "sample_matches": 6,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-18-Serie A-Juventus-Lazio",
+      "date": "2026-10-18",
+      "kickoff": "18:45",
+      "league": "Serie A",
+      "home_team": "Juventus",
+      "away_team": "Lazio",
+      "expected_home_goals": 0.98,
+      "expected_away_goals": 0.93,
+      "probabilities": {
+        "home_win": 35.3,
+        "draw": 31.7,
+        "away_win": 33.0,
+        "over_2_5": 29.9,
+        "btts_yes": 37.9
+      },
+      "sample_matches": 6,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-18-Serie A-Udinese-Lecce",
+      "date": "2026-10-18",
+      "kickoff": "10:30",
+      "league": "Serie A",
+      "home_team": "Udinese",
+      "away_team": "Lecce",
+      "expected_home_goals": 1.03,
+      "expected_away_goals": 1.0,
+      "probabilities": {
+        "home_win": 35.6,
+        "draw": 30.6,
+        "away_win": 33.9,
+        "over_2_5": 33.1,
+        "btts_yes": 40.6
+      },
+      "sample_matches": 6,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-19-La Liga-Getafe-Rayo Vallecano",
+      "date": "2026-10-19",
+      "kickoff": "19:00",
+      "league": "La Liga",
+      "home_team": "Getafe",
+      "away_team": "Rayo Vallecano",
+      "expected_home_goals": 1.32,
+      "expected_away_goals": 0.86,
+      "probabilities": {
+        "home_win": 47.6,
+        "draw": 28.2,
+        "away_win": 24.2,
+        "over_2_5": 37.2,
+        "btts_yes": 42.2
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-19-Premier League-Tottenham Hotspur-Coventry City",
+      "date": "2026-10-19",
+      "kickoff": "19:00",
+      "league": "Premier League",
+      "home_team": "Tottenham Hotspur",
+      "away_team": "Coventry City",
+      "expected_home_goals": 1.62,
+      "expected_away_goals": 1.33,
+      "probabilities": {
+        "home_win": 44.1,
+        "draw": 24.3,
+        "away_win": 31.6,
+        "over_2_5": 56.6,
+        "btts_yes": 59.0
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-19-Serie A-Monza-Cagliari",
+      "date": "2026-10-19",
+      "kickoff": "16:30",
+      "league": "Serie A",
+      "home_team": "Monza",
+      "away_team": "Cagliari",
+      "expected_home_goals": 1.05,
+      "expected_away_goals": 1.6,
+      "probabilities": {
+        "home_win": 24.9,
+        "draw": 25.0,
+        "away_win": 50.1,
+        "over_2_5": 49.4,
+        "btts_yes": 51.9
+      },
+      "sample_matches": 6,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-19-Serie A-Parma-Torino",
+      "date": "2026-10-19",
+      "kickoff": "18:45",
+      "league": "Serie A",
+      "home_team": "Parma",
+      "away_team": "Torino",
+      "expected_home_goals": 1.19,
+      "expected_away_goals": 1.17,
+      "probabilities": {
+        "home_win": 36.5,
+        "draw": 28.0,
+        "away_win": 35.5,
+        "over_2_5": 41.8,
+        "btts_yes": 47.8
+      },
+      "sample_matches": 6,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-21-La Liga-Levante-Athletic Club",
+      "date": "2026-10-21",
+      "kickoff": "18:00",
+      "league": "La Liga",
+      "home_team": "Levante",
+      "away_team": "Athletic Club",
+      "expected_home_goals": 2.54,
+      "expected_away_goals": 2.17,
+      "probabilities": {
+        "home_win": 47.4,
+        "draw": 18.7,
+        "away_win": 33.9,
+        "over_2_5": 84.9,
+        "btts_yes": 81.6
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-23-Bundesliga-VfB Stuttgart-Borussia Mönchengladbach",
+      "date": "2026-10-23",
+      "kickoff": "18:30",
+      "league": "Bundesliga",
+      "home_team": "VfB Stuttgart",
+      "away_team": "Borussia Mönchengladbach",
+      "expected_home_goals": 2.36,
+      "expected_away_goals": 1.47,
+      "probabilities": {
+        "home_win": 57.3,
+        "draw": 19.4,
+        "away_win": 23.2,
+        "over_2_5": 73.5,
+        "btts_yes": 69.6
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-23-La Liga-Alaves-Malaga",
+      "date": "2026-10-23",
+      "kickoff": "19:00",
+      "league": "La Liga",
+      "home_team": "Alaves",
+      "away_team": "Malaga",
+      "expected_home_goals": 2.06,
+      "expected_away_goals": 0.6,
+      "probabilities": {
+        "home_win": 71.6,
+        "draw": 18.7,
+        "away_win": 9.7,
+        "over_2_5": 49.7,
+        "btts_yes": 39.5
+      },
+      "sample_matches": 8,
+      "confidence": "media",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-23-Ligue 1-Brest-Nice",
+      "date": "2026-10-23",
+      "kickoff": "18:45",
+      "league": "Ligue 1",
+      "home_team": "Brest",
+      "away_team": "Nice",
+      "expected_home_goals": 2.16,
+      "expected_away_goals": 0.77,
+      "probabilities": {
+        "home_win": 69.3,
+        "draw": 18.7,
+        "away_win": 12.1,
+        "over_2_5": 56.1,
+        "btts_yes": 47.6
+      },
+      "sample_matches": 6,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-23-Premier League-Ipswich Town-Nottingham Forest",
+      "date": "2026-10-23",
+      "kickoff": "19:00",
+      "league": "Premier League",
+      "home_team": "Ipswich Town",
+      "away_team": "Nottingham Forest",
+      "expected_home_goals": 1.62,
+      "expected_away_goals": 1.33,
+      "probabilities": {
+        "home_win": 44.1,
+        "draw": 24.3,
+        "away_win": 31.6,
+        "over_2_5": 56.6,
+        "btts_yes": 59.0
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-23-Serie A-Torino-Monza",
+      "date": "2026-10-23",
+      "kickoff": "18:45",
+      "league": "Serie A",
+      "home_team": "Torino",
+      "away_team": "Monza",
+      "expected_home_goals": 1.84,
+      "expected_away_goals": 1.45,
+      "probabilities": {
+        "home_win": 46.9,
+        "draw": 22.6,
+        "away_win": 30.5,
+        "over_2_5": 63.8,
+        "btts_yes": 64.3
+      },
+      "sample_matches": 6,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-24-Bundesliga-Borussia Dortmund-Eintracht Frankfurt",
+      "date": "2026-10-24",
+      "kickoff": "16:30",
+      "league": "Bundesliga",
+      "home_team": "Borussia Dortmund",
+      "away_team": "Eintracht Frankfurt",
+      "expected_home_goals": 2.36,
+      "expected_away_goals": 1.47,
+      "probabilities": {
+        "home_win": 57.3,
+        "draw": 19.4,
+        "away_win": 23.2,
+        "over_2_5": 73.5,
+        "btts_yes": 69.6
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-24-Bundesliga-FC Augsburg-1. FC Union Berlin",
+      "date": "2026-10-24",
+      "kickoff": "13:30",
+      "league": "Bundesliga",
+      "home_team": "FC Augsburg",
+      "away_team": "1. FC Union Berlin",
+      "expected_home_goals": 2.36,
+      "expected_away_goals": 1.47,
+      "probabilities": {
+        "home_win": 57.3,
+        "draw": 19.4,
+        "away_win": 23.2,
+        "over_2_5": 73.5,
+        "btts_yes": 69.6
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-24-Bundesliga-FC Cologne-Schalke 04",
+      "date": "2026-10-24",
+      "kickoff": "13:30",
+      "league": "Bundesliga",
+      "home_team": "FC Cologne",
+      "away_team": "Schalke 04",
+      "expected_home_goals": 2.18,
+      "expected_away_goals": 1.4,
+      "probabilities": {
+        "home_win": 55.2,
+        "draw": 20.5,
+        "away_win": 24.3,
+        "over_2_5": 69.3,
+        "btts_yes": 66.8
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-24-Bundesliga-Mainz-Werder Bremen",
+      "date": "2026-10-24",
+      "kickoff": "13:30",
+      "league": "Bundesliga",
+      "home_team": "Mainz",
+      "away_team": "Werder Bremen",
+      "expected_home_goals": 1.84,
+      "expected_away_goals": 1.81,
+      "probabilities": {
+        "home_win": 39.6,
+        "draw": 21.8,
+        "away_win": 38.7,
+        "over_2_5": 70.6,
+        "btts_yes": 70.3
+      },
+      "sample_matches": 5,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-24-Bundesliga-RB Leipzig-SV Elversberg",
+      "date": "2026-10-24",
+      "kickoff": "13:30",
+      "league": "Bundesliga",
+      "home_team": "RB Leipzig",
+      "away_team": "SV Elversberg",
+      "expected_home_goals": 3.51,
+      "expected_away_goals": 0.73,
+      "probabilities": {
+        "home_win": 87.5,
+        "draw": 8.3,
+        "away_win": 4.2,
+        "over_2_5": 79.5,
+        "btts_yes": 50.4
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-24-Bundesliga-SC Paderborn 07-Hamburg SV",
+      "date": "2026-10-24",
+      "kickoff": "13:30",
+      "league": "Bundesliga",
+      "home_team": "SC Paderborn 07",
+      "away_team": "Hamburg SV",
+      "expected_home_goals": 2.36,
+      "expected_away_goals": 1.47,
+      "probabilities": {
+        "home_win": 57.3,
+        "draw": 19.4,
+        "away_win": 23.2,
+        "over_2_5": 73.5,
+        "btts_yes": 69.6
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-24-La Liga-Atlético Madrid-Deportivo",
+      "date": "2026-10-24",
+      "kickoff": "19:00",
+      "league": "La Liga",
+      "home_team": "Atlético Madrid",
+      "away_team": "Deportivo",
+      "expected_home_goals": 1.76,
+      "expected_away_goals": 1.33,
+      "probabilities": {
+        "home_win": 47.5,
+        "draw": 23.3,
+        "away_win": 29.2,
+        "over_2_5": 59.7,
+        "btts_yes": 60.9
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-24-La Liga-Racing Santander-Espanyol",
+      "date": "2026-10-24",
+      "kickoff": "14:15",
+      "league": "La Liga",
+      "home_team": "Racing Santander",
+      "away_team": "Espanyol",
+      "expected_home_goals": 1.76,
+      "expected_away_goals": 1.33,
+      "probabilities": {
+        "home_win": 47.5,
+        "draw": 23.3,
+        "away_win": 29.2,
+        "over_2_5": 59.7,
+        "btts_yes": 60.9
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-24-La Liga-Rayo Vallecano-Elche",
+      "date": "2026-10-24",
+      "kickoff": "12:00",
+      "league": "La Liga",
+      "home_team": "Rayo Vallecano",
+      "away_team": "Elche",
+      "expected_home_goals": 1.61,
+      "expected_away_goals": 1.57,
+      "probabilities": {
+        "home_win": 39.1,
+        "draw": 23.5,
+        "away_win": 37.4,
+        "over_2_5": 61.6,
+        "btts_yes": 63.4
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-24-La Liga-Valencia-Villarreal",
+      "date": "2026-10-24",
+      "kickoff": "16:30",
+      "league": "La Liga",
+      "home_team": "Valencia",
+      "away_team": "Villarreal",
+      "expected_home_goals": 0.91,
+      "expected_away_goals": 1.92,
+      "probabilities": {
+        "home_win": 17.3,
+        "draw": 21.7,
+        "away_win": 61.0,
+        "over_2_5": 53.6,
+        "btts_yes": 50.8
+      },
+      "sample_matches": 8,
+      "confidence": "media",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-24-Ligue 1-Lens-Paris FC",
+      "date": "2026-10-24",
+      "kickoff": "18:45",
+      "league": "Ligue 1",
+      "home_team": "Lens",
+      "away_team": "Paris FC",
+      "expected_home_goals": 1.6,
+      "expected_away_goals": 1.16,
+      "probabilities": {
+        "home_win": 47.5,
+        "draw": 24.8,
+        "away_win": 27.7,
+        "over_2_5": 52.1,
+        "btts_yes": 54.8
+      },
+      "sample_matches": 6,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-24-Ligue 1-Toulouse-Troyes",
+      "date": "2026-10-24",
+      "kickoff": "15:15",
+      "league": "Ligue 1",
+      "home_team": "Toulouse",
+      "away_team": "Troyes",
+      "expected_home_goals": 1.33,
+      "expected_away_goals": 1.12,
+      "probabilities": {
+        "home_win": 41.6,
+        "draw": 27.1,
+        "away_win": 31.3,
+        "over_2_5": 44.3,
+        "btts_yes": 49.6
+      },
+      "sample_matches": 6,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-24-Premier League-Arsenal-Everton",
+      "date": "2026-10-24",
+      "kickoff": "14:00",
+      "league": "Premier League",
+      "home_team": "Arsenal",
+      "away_team": "Everton",
+      "expected_home_goals": 1.6,
+      "expected_away_goals": 0.88,
+      "probabilities": {
+        "home_win": 54.4,
+        "draw": 25.0,
+        "away_win": 20.6,
+        "over_2_5": 44.9,
+        "btts_yes": 46.5
+      },
+      "sample_matches": 6,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-24-Premier League-Aston Villa-Manchester City",
+      "date": "2026-10-24",
+      "kickoff": "11:30",
+      "league": "Premier League",
+      "home_team": "Aston Villa",
+      "away_team": "Manchester City",
+      "expected_home_goals": 1.31,
+      "expected_away_goals": 1.5,
+      "probabilities": {
+        "home_win": 33.1,
+        "draw": 25.1,
+        "away_win": 41.8,
+        "over_2_5": 53.3,
+        "btts_yes": 56.7
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-24-Premier League-Chelsea-Tottenham Hotspur",
+      "date": "2026-10-24",
+      "kickoff": "16:30",
+      "league": "Premier League",
+      "home_team": "Chelsea",
+      "away_team": "Tottenham Hotspur",
+      "expected_home_goals": 2.64,
+      "expected_away_goals": 1.67,
+      "probabilities": {
+        "home_win": 58.6,
+        "draw": 18.0,
+        "away_win": 23.3,
+        "over_2_5": 80.4,
+        "btts_yes": 75.3
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-24-Premier League-Coventry City-Fulham",
+      "date": "2026-10-24",
+      "kickoff": "14:00",
+      "league": "Premier League",
+      "home_team": "Coventry City",
+      "away_team": "Fulham",
+      "expected_home_goals": 1.31,
+      "expected_away_goals": 0.83,
+      "probabilities": {
+        "home_win": 47.7,
+        "draw": 28.5,
+        "away_win": 23.8,
+        "over_2_5": 36.2,
+        "btts_yes": 41.3
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-24-Serie A-Cagliari-Bologna",
+      "date": "2026-10-24",
+      "kickoff": "13:00",
+      "league": "Serie A",
+      "home_team": "Cagliari",
+      "away_team": "Bologna",
+      "expected_home_goals": 0.91,
+      "expected_away_goals": 0.75,
+      "probabilities": {
+        "home_win": 37.5,
+        "draw": 34.4,
+        "away_win": 28.2,
+        "over_2_5": 23.2,
+        "btts_yes": 31.5
+      },
+      "sample_matches": 6,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-24-Serie A-Como-Sassuolo",
+      "date": "2026-10-24",
+      "kickoff": "13:00",
+      "league": "Serie A",
+      "home_team": "Como",
+      "away_team": "Sassuolo",
+      "expected_home_goals": 1.52,
+      "expected_away_goals": 1.0,
+      "probabilities": {
+        "home_win": 49.5,
+        "draw": 25.8,
+        "away_win": 24.8,
+        "over_2_5": 46.1,
+        "btts_yes": 49.3
+      },
+      "sample_matches": 6,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-24-Serie A-Lazio-Parma",
+      "date": "2026-10-24",
+      "kickoff": "18:45",
+      "league": "Serie A",
+      "home_team": "Lazio",
+      "away_team": "Parma",
+      "expected_home_goals": 2.22,
+      "expected_away_goals": 0.73,
+      "probabilities": {
+        "home_win": 71.5,
+        "draw": 17.8,
+        "away_win": 10.7,
+        "over_2_5": 56.5,
+        "btts_yes": 46.0
+      },
+      "sample_matches": 6,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-24-Serie A-Napoli-AS Roma",
+      "date": "2026-10-24",
+      "kickoff": "16:00",
+      "league": "Serie A",
+      "home_team": "Napoli",
+      "away_team": "AS Roma",
+      "expected_home_goals": 1.61,
+      "expected_away_goals": 0.99,
+      "probabilities": {
+        "home_win": 51.8,
+        "draw": 24.9,
+        "away_win": 23.3,
+        "over_2_5": 48.2,
+        "btts_yes": 50.3
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-25-Bundesliga-SC Freiburg-Bayern Munich",
+      "date": "2026-10-25",
+      "kickoff": "16:30",
+      "league": "Bundesliga",
+      "home_team": "SC Freiburg",
+      "away_team": "Bayern Munich",
+      "expected_home_goals": 1.68,
+      "expected_away_goals": 1.4,
+      "probabilities": {
+        "home_win": 44.2,
+        "draw": 23.7,
+        "away_win": 32.1,
+        "over_2_5": 59.4,
+        "btts_yes": 61.3
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-25-Bundesliga-TSG Hoffenheim-Bayer Leverkusen",
+      "date": "2026-10-25",
+      "kickoff": "14:30",
+      "league": "Bundesliga",
+      "home_team": "TSG Hoffenheim",
+      "away_team": "Bayer Leverkusen",
+      "expected_home_goals": 2.36,
+      "expected_away_goals": 1.47,
+      "probabilities": {
+        "home_win": 57.3,
+        "draw": 19.4,
+        "away_win": 23.2,
+        "over_2_5": 73.5,
+        "btts_yes": 69.6
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-25-La Liga-Athletic Club-Getafe",
+      "date": "2026-10-25",
+      "kickoff": "13:00",
+      "league": "La Liga",
+      "home_team": "Athletic Club",
+      "away_team": "Getafe",
+      "expected_home_goals": 1.9,
+      "expected_away_goals": 0.57,
+      "probabilities": {
+        "home_win": 69.2,
+        "draw": 20.5,
+        "away_win": 10.3,
+        "over_2_5": 44.8,
+        "btts_yes": 37.0
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-25-La Liga-Barcelona-Real Madrid",
+      "date": "2026-10-25",
+      "kickoff": "20:00",
+      "league": "La Liga",
+      "home_team": "Barcelona",
+      "away_team": "Real Madrid",
+      "expected_home_goals": 2.92,
+      "expected_away_goals": 1.22,
+      "probabilities": {
+        "home_win": 71.9,
+        "draw": 14.9,
+        "away_win": 13.2,
+        "over_2_5": 78.2,
+        "btts_yes": 66.8
+      },
+      "sample_matches": 8,
+      "confidence": "media",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-25-La Liga-Celta Vigo-Real Betis",
+      "date": "2026-10-25",
+      "kickoff": "15:15",
+      "league": "La Liga",
+      "home_team": "Celta Vigo",
+      "away_team": "Real Betis",
+      "expected_home_goals": 1.76,
+      "expected_away_goals": 1.33,
+      "probabilities": {
+        "home_win": 47.5,
+        "draw": 23.3,
+        "away_win": 29.2,
+        "over_2_5": 59.7,
+        "btts_yes": 60.9
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    },
+    {
+      "id": "2026-10-25-La Liga-Real Sociedad-Levante",
+      "date": "2026-10-25",
+      "kickoff": "17:30",
+      "league": "La Liga",
+      "home_team": "Real Sociedad",
+      "away_team": "Levante",
+      "expected_home_goals": 1.61,
+      "expected_away_goals": 0.71,
+      "probabilities": {
+        "home_win": 58.9,
+        "draw": 24.7,
+        "away_win": 16.4,
+        "over_2_5": 41.0,
+        "btts_yes": 40.8
+      },
+      "sample_matches": 0,
+      "confidence": "iniziale",
+      "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega"
+    }
+  ],
   "notice": "Le probabilità sono stime statistiche e non garantiscono risultati."
 }
