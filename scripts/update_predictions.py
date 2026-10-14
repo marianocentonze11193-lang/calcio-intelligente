@@ -4,6 +4,8 @@ import csv
 import io
 import json
 import math
+import re
+import unicodedata
 import urllib.error
 import urllib.request
 from collections import defaultdict
@@ -29,6 +31,12 @@ def fetch_csv(url):
     with urllib.request.urlopen(request, timeout=25) as response:
         raw = response.read()
     return list(csv.DictReader(io.StringIO(raw.decode("cp1252", errors="replace"))))
+
+
+def team_key(value):
+    value = unicodedata.normalize("NFKD", str(value or ""))
+    value = "".join(ch for ch in value if not unicodedata.combining(ch))
+    return re.sub(r"[^a-z0-9]", "", value.lower())
 
 
 def number(value):
@@ -72,12 +80,12 @@ def percent(value):
 
 def make_forecast(home, away, league, match_date, kickoff, history, league_home_avg, league_away_avg):
     hs, aws = history[home], history[away]
-    if hs["played"] < MIN_TEAM_MATCHES or aws["played"] < MIN_TEAM_MATCHES:
-        return None
 
     def smooth(goals, games, prior):
         return (goals + PRIOR_MATCHES * prior) / (games + PRIOR_MATCHES)
 
+    # Se una squadra è promossa o il nome cambia tra i CSV, usa la media
+    # della lega come prior invece di scartare del tutto la partita.
     home_attack = smooth(hs["home_scored"], hs["home_games"], league_home_avg)
     home_defence = smooth(hs["home_conceded"], hs["home_games"], league_away_avg)
     away_attack = smooth(aws["away_scored"], aws["away_games"], league_away_avg)
@@ -184,26 +192,28 @@ def main():
 
         # Aggiunge il calendario generale, che contiene le prossime partite.
         known_teams = {team for match in completed for team in match[:2]}
+        known_team_keys = {team_key(team) for team in known_teams}
         fixture_rows_for_league = 0
         for row in all_fixtures:
-            div = (row.get("Div") or row.get("div") or "").strip()
-            # Alcune versioni di fixtures.csv non includono la colonna Div.
-            # In quel caso identifichiamo il campionato usando le squadre note nello storico.
-            if div and div != code:
-                continue
+            div = (row.get("Div") or row.get("div") or row.get("League") or row.get("league") or "").strip()
             home = (row.get("HomeTeam") or row.get("Home Team") or row.get("home_team") or "").strip()
             away = (row.get("AwayTeam") or row.get("Away Team") or row.get("away_team") or "").strip()
             match_date = parse_date(row.get("Date") or row.get("date"))
-            if home and away and match_date and today <= match_date <= last_date:
-                if div and div != code:
-                    continue
-                if not div and (home not in known_teams or away not in known_teams):
-                    continue
-                fixture_rows_for_league += 1
-                kickoff = (row.get("Time") or row.get("time") or "").strip()
-                item = (home, away, match_date, kickoff)
-                if item not in fixtures:
-                    fixtures.append(item)
+            if not home or not away or not match_date or not (today <= match_date <= last_date):
+                continue
+            # Se il CSV identifica chiaramente un altro campionato, non usarlo.
+            if div in LEAGUES and div != code:
+                continue
+            # Se la colonna lega contiene un nome esteso, prova comunque ad associare
+            # la partita alle squadre dello storico del campionato corrente.
+            home_key, away_key = team_key(home), team_key(away)
+            if div != code and (home_key not in known_team_keys or away_key not in known_team_keys):
+                continue
+            fixture_rows_for_league += 1
+            kickoff = (row.get("Time") or row.get("time") or "").strip()
+            item = (home, away, match_date, kickoff)
+            if item not in fixtures:
+                fixtures.append(item)
 
         print(f"{league_name}: {len(completed)} risultati storici, {fixture_rows_for_league} partite future abbinate, {len(fixtures)} candidate totali.")
         if not completed:
@@ -230,7 +240,11 @@ def main():
             aws["away_conceded"] += hg
 
         skipped = 0
+        # Associa varianti di nomi squadra ai nomi storici più vicini.
+        normalized_history = {team_key(team): team for team in history}
         for home, away, match_date, kickoff in fixtures:
+            home = normalized_history.get(team_key(home), home)
+            away = normalized_history.get(team_key(away), away)
             forecast = make_forecast(home, away, league_name, match_date, kickoff, history, league_home_avg, league_away_avg)
             if forecast:
                 forecasts.append(forecast)
