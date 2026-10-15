@@ -107,10 +107,13 @@ async function aggiornaDati() {
     const dati = await risposta.json();
     if (!Array.isArray(dati.matches)) throw new Error("Formato dati non valido");
 
-    renderMatches(dati.matches);
-    stato.textContent = dati.matches.length
-      ? "DATI LETTI · " + dati.matches.length + " pronostici valutabili nel file pubblicato. Il calcolo automatico viene eseguito da GitHub Actions ogni ora."
-      : "NO BET · Nessun pronostico supera i controlli minimi sui dati. Il sistema riproverà al prossimo aggiornamento automatico.";
+    const validMatches = dati.matches.filter(match =>
+      Number.isFinite(Number(match.sample_matches)) && Number(match.sample_matches) >= 4
+    );
+    renderMatches(validMatches);
+    stato.textContent = validMatches.length
+      ? "PRONOSTICI VALUTABILI · " + validMatches.length + " partite con almeno 4 incontri storici per squadra. Il calcolo automatico viene eseguito da GitHub Actions ogni ora."
+      : "NO BET · Nessuna partita nel file pubblicato supera il controllo minimo di 4 incontri storici per squadra. Il sistema riproverà al prossimo aggiornamento automatico.";
     const stamp = dati.updated_at ? new Date(dati.updated_at).toLocaleString("it-IT") : "non disponibile";
     aggiornamento.textContent = "Ultimo calcolo salvato: " + stamp + ". Il pulsante ricarica il file pubblicato; non avvia direttamente il calcolo sul server.";
   } catch (errore) {
