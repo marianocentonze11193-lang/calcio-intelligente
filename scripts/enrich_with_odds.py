@@ -114,6 +114,7 @@ def main():
         if not all(prices[k] and isinstance(model[k], (int, float)) for k in prices):
             continue
         matched += 1
+        match["value_bets"] = []
         match["odds_1x2"] = prices
         ev = {k: round((model[k] / 100) * prices[k] - 1, 4) for k in prices}
         match["expected_value_1x2"] = ev
