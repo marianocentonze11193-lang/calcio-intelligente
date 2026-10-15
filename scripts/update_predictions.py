@@ -19,13 +19,22 @@ LEAGUES = {
     "E0": "Premier League", "SP1": "La Liga", "D1": "Bundesliga",
     "I1": "Serie A", "F1": "Ligue 1", "SC0": "Scottish Premiership",
     "N1": "Eredivisie", "P1": "Primeira Liga", "B1": "Belgian Pro League",
-    "T1": "Super Lig turca",
+    "T1": "Super Lig turca", "AUT": "Bundesliga austriaca",
+    "DNK": "Superliga danese", "G1": "Super League greca", "FIN": "Veikkausliiga finlandese",
+    "IRL": "Premier Division irlandese", "NOK": "Eliteserien norvegese",
+    "POL": "Ekstraklasa polacca", "RO": "Liga I rumena", "SWE": "Allsvenskan svedese",
+    "SWZ": "Super League svizzera",
 }
 LEAGUE_COUNTRIES = {
     "Premier League": "Inghilterra", "La Liga": "Spagna", "Bundesliga": "Germania",
     "Serie A": "Italia", "Ligue 1": "Francia", "Scottish Premiership": "Scozia",
     "Eredivisie": "Paesi Bassi", "Primeira Liga": "Portogallo",
-    "Belgian Pro League": "Belgio", "Super Lig turca": "Turchia",
+    "Belgian Pro League": "Belgio", "Super Lig turca": "Turchia", "Bundesliga austriaca": "Austria",
+    "Superliga danese": "Danimarca", "Super League greca": "Grecia",
+    "Veikkausliiga finlandese": "Finlandia", "Premier Division irlandese": "Irlanda",
+    "Eliteserien norvegese": "Norvegia", "Ekstraklasa polacca": "Polonia",
+    "Liga I rumena": "Romania", "Allsvenskan svedese": "Svezia",
+    "Super League svizzera": "Svizzera",
 }
 OUTPUT = Path("data/predictions.json")
 USER_AGENT = "CalcioIntelligente/1.0"
@@ -54,13 +63,18 @@ def fetch_csv(url):
 
 ESPN_LEAGUES = {
     "E0": "eng.1", "SP1": "esp.1", "D1": "ger.1", "I1": "ita.1", "F1": "fra.1",
-    "SC0": "sco.1", "N1": "ned.1", "P1": "por.1", "B1": "bel.1", "T1": "tur.1",
+    "SC0": "sco.1", "N1": "ned.1", "P1": "por.1", "B1": "bel.1", "T1": "tur.1", "AUT": "aut.1", "DNK": "den.1", "G1": "gre.1",
+    "FIN": "fin.1", "IRL": "irl.1", "NOK": "nor.1", "POL": "pol.1",
+    "RO": "rou.1", "SWE": "swe.1", "SWZ": "sui.1",
 }
 ESPN_TIMEZONES = {
     "E0": "Europe/London", "SC0": "Europe/London", "SP1": "Europe/Madrid",
     "D1": "Europe/Berlin", "I1": "Europe/Rome", "F1": "Europe/Paris",
     "N1": "Europe/Amsterdam", "P1": "Europe/Lisbon", "B1": "Europe/Brussels",
-    "T1": "Europe/Istanbul",
+    "T1": "Europe/Istanbul", "AUT": "Europe/Vienna", "DNK": "Europe/Copenhagen",
+    "G1": "Europe/Athens", "FIN": "Europe/Helsinki", "IRL": "Europe/Dublin",
+    "NOK": "Europe/Oslo", "POL": "Europe/Warsaw", "RO": "Europe/Bucharest",
+    "SWE": "Europe/Stockholm", "SWZ": "Europe/Zurich",
 }
 
 
