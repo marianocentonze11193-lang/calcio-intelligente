@@ -133,9 +133,15 @@ def main():
     today = datetime.now(timezone.utc).date()
     current_season = season_code(today)
     indexes = {}
-    # Per le partite archiviate nella stagione corrente basta il CSV della stagione corrente.
-    # Evita richieste duplicate allo storico precedente a ogni aggiornamento orario.
+    # Scarica soltanto i campionati con partite da verificare già arrivate alla data odierna.
+    # Così non si effettuano richieste inutili per tutte le leghe a ogni aggiornamento orario.
+    leagues_to_check = {
+        item.get("league") for item in records
+        if item.get("outcome") is None and item.get("date", "") <= today.isoformat()
+    }
     for code, league in LEAGUES.items():
+        if league not in leagues_to_check:
+            continue
         try:
             rows = read_csv(f"{SOURCE}/mmz4281/{current_season}/{code}.csv")
             indexes[league] = result_index(rows)
