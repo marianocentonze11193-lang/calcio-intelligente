@@ -5,7 +5,7 @@ Dashboard statica di pronostici calcistici con aggiornamento automatico tramite 
 ## Funzioni implementate
 - Calendario e risultati da football-data.co.uk, con calendario ESPN di riserva.
 - Solo massime divisioni nazionali supportate dalla fonte storica: Premier League, La Liga, Bundesliga, Serie A, Ligue 1, Scottish Premiership, Eredivisie, Primeira Liga, Belgian Pro League e Süper Lig turca. Le divisioni inferiori inglesi e scozzesi sono escluse.
-- Stime Poisson basate su statistiche casa/trasferta, medie di lega e correzione Elo sequenziale.
+- Stime Poisson basate su statistiche casa/trasferta, medie di lega, Elo sequenziale e forma delle ultime cinque gare.
 - Stima preliminare per campioni ridotti; NO BET quando mancano osservazioni pertinenti.
 - Probabilità 1X2, doppia chance, Over/Under, Goal/No Goal e risultati esatti stimati.
 - Commenti Gemini quando il secret `GEMINI_API_KEY` è configurato; l'AI non inventa informazioni non fornite.
