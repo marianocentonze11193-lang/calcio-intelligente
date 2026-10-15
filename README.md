@@ -9,6 +9,7 @@ Dashboard statica di pronostici calcistici con aggiornamento automatico tramite 
 - Stima preliminare per campioni ridotti; NO BET quando mancano osservazioni pertinenti.
 - Probabilità 1X2, doppia chance, Over/Under, Goal/No Goal e risultati esatti stimati.
 - Commenti Gemini quando il secret `GEMINI_API_KEY` è configurato; l'AI non inventa informazioni non fornite.
+- Integrazione opzionale delle quote 1X2 tramite The Odds API e stima del valore atteso teorico, se è configurato il secret `ODDS_API_KEY`.
 - Archivio della prima stima e verifica dei risultati finali, con accuratezza 1X2 e Brier score.
 - Filtri per nazione e competizione; partite ordinate per nazione, competizione, data e orario.
 - Aggiornamento pianificato ogni ora via GitHub Actions.
@@ -17,16 +18,22 @@ Dashboard statica di pronostici calcistici con aggiornamento automatico tramite 
 - Elo e Poisson sono un modello sperimentale; non è ancora dimostrata la sua redditività e la calibrazione va misurata su un campione storico ampio.
 - Per alcuni campionati il calendario ESPN può essere disponibile senza dati storici equivalenti: in tal caso la partita resta NO BET.
 - Le formazioni ufficiali, gli infortuni e le squalifiche non sono ancora coperti da una fonte automatica sufficientemente uniforme e verificata per tutte le leghe. Non vengono inventati.
-- Le quote bookmaker e il valore atteso non sono disponibili finché non viene configurata una fonte di quote autorizzata e una chiave API. Una probabilità alta non equivale a una value bet.
+- Le quote bookmaker e il valore atteso sono opzionali: richiedono il secret GitHub Actions `ODDS_API_KEY` con accesso a The Odds API. Senza chiave le quote restano non disponibili. Verificare sempre i limiti del piano e le condizioni del fornitore.
+- Il valore atteso è un calcolo teorico dipendente dalla qualità del modello, non una prova di profitto; la soglia EV del 3% genera soltanto candidati da verificare.
 - Le fonti gratuite hanno limiti di copertura, frequenza e condizioni d'uso. Il workflow segnala gli errori e può non aggiornare quando una fonte non è disponibile.
 - Il sito è statico: il pulsante ricarica i dati pubblicati, non avvia il calcolo remoto.
 - Nessun pronostico garantisce risultati o vincite.
+
+## Configurazione opzionale delle quote
+
+Per attivare le quote, crea una chiave secondo le condizioni del fornitore The Odds API e aggiungila in GitHub: **Settings → Secrets and variables → Actions → New repository secret**, nome `ODDS_API_KEY`. Non inserire la chiave nei file del repository e non condividerla in chat. Se non è configurata, il workflow continua senza quote.
 
 ## Fonti e codice
 - Risultati: https://www.football-data.co.uk/
 - Calendario di riserva: API pubblica ESPN.
 - Workflow: `.github/workflows/update.yml`
 - Modello: `scripts/update_predictions.py`
+- Quote e valore atteso opzionali: `scripts/enrich_with_odds.py`
 - Commenti AI: `scripts/enrich_with_gemini.py`
 - Archivio e metriche: `scripts/archive_predictions.py`
 - Test: `tests/test_predictions.py`
