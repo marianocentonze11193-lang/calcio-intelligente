@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-15T11:00:26+00:00",
+  "updated_at": "2026-10-15T11:03:16+00:00",
   "source": "https://www.football-data.co.uk",
   "season": "2627",
   "model": "Poisson casa/trasferta con prior di lega e correzione Elo; stime sperimentali, non garanzie",
@@ -34,7 +34,7 @@
         "home_scores": 89.3,
         "away_scores": 89.0
       },
-      "analysis": "Questo incontro presenta probabilità vicine tra vittoria casalinga e trasferta, con un campione di dati molto limitato. Si tratta di una stima sperimentale di un modello Poisson non validato, caratterizzata da forte incertezza.",
+      "analysis": "Le stime sperimentali di questo modello Poisson non validato mostrano probabilità molto vicine tra vittoria casalinga e ospite. Dato il campione limitato, l'incertezza resta elevata.",
       "suggested_markets": [
         "Over 1,5",
         "Goal"
@@ -75,6 +75,10 @@
         "points_per_match": 1.2
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      },
       "analysis_provider": "Gemini"
     },
     {
@@ -105,7 +109,7 @@
         "home_scores": 80.3,
         "away_scores": 67.6
       },
-      "analysis": "Il modello mostra percentuali vicine e un campione di riferimento esiguo. Le stime derivano da un approccio di Poisson non ancora validato, evidenziando margini di incertezza.",
+      "analysis": "Il modello Poisson non ancora validato evidenzia un certo equilibrio nelle stime. Si tratta di indicazioni preliminari basate su un campione ridotto e caratterizzate da forte incertezza.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -140,6 +144,10 @@
       },
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      },
       "analysis_provider": "Gemini"
     },
     {
@@ -170,7 +178,7 @@
         "home_scores": 78.6,
         "away_scores": 64.1
       },
-      "analysis": "Le probabilità calcolate sono vicine e il campione analizzato è ridotto. Questa analisi rappresenta una stima sperimentale basata su un modello Poisson non validato, soggetta a notevole incertezza.",
+      "analysis": "Le percentuali del modello non validato delineano uno scenario incerto con probabilità vicine per esiti diversi. L'esiguità del campione impone estrema prudenza nell'interpretazione.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -210,6 +218,10 @@
         "points_per_match": 1.4
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      },
       "analysis_provider": "Gemini"
     },
     {
@@ -240,7 +252,7 @@
         "home_scores": 65.4,
         "away_scores": 90.6
       },
-      "analysis": "Il campione limitato e l'uso di un modello Poisson non validato rendono questa stima puramente sperimentale. Si raccomanda di considerare l'elevata incertezza intrinseca dei dati.",
+      "analysis": "Le stime sperimentali di questo modello Poisson non validato assegnano un vantaggio alla trasferta. I limiti del campione e l'incertezza intrinseca richiedono molta cautela.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -280,6 +292,10 @@
         "points_per_match": 0.8
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      },
       "analysis_provider": "Gemini"
     },
     {
@@ -310,7 +326,7 @@
         "home_scores": 64.9,
         "away_scores": 59.9
       },
-      "analysis": "Le probabilità assegnate alle tre opzioni di risultato sono vicine, riflettendo un quadro di forte incertezza. Il campione ridotto e la natura sperimentale del modello Poisson non validato impongono prudenza.",
+      "analysis": "Questo modello Poisson non validato mostra probabilità estremamente vicine tra i vari segni. A causa del campione ridotto, l'incertezza delle stime sperimentali è particolarmente alta.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -348,6 +364,10 @@
         "points_per_match": 0.6
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      },
       "analysis_provider": "Gemini"
     },
     {
@@ -378,7 +398,7 @@
         "home_scores": 78.3,
         "away_scores": 71.8
       },
-      "analysis": "I dati si basano su un campione minimo e su un modello Poisson non ancora validato. Le probabilità vicine per diversi esiti sottolineano l'incertezza della stima sperimentale.",
+      "analysis": "Le proiezioni di questo modello Poisson non ancora validato presentano margini ristretti tra le squadre. Considerando il campione limitato, le stime vanno prese con molta cautela.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -413,6 +433,10 @@
       },
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      },
       "analysis_provider": "Gemini"
     },
     {
@@ -443,7 +467,7 @@
         "home_scores": 81.9,
         "away_scores": 53.6
       },
-      "analysis": "L'analisi si fonda su un campione limitato e su stime sperimentali di un modello Poisson non validato. È opportuno tenere conto della forte incertezza associata a questi dati.",
+      "analysis": "Il modello Poisson non validato indica una tendenza per la squadra di casa secondo le stime sperimentali. Il campione ridotto e l'incertezza complessiva impongono un giudizio prudente.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -478,6 +502,10 @@
       },
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      },
       "analysis_provider": "Gemini"
     },
     {
@@ -508,7 +536,7 @@
         "home_scores": 91.3,
         "away_scores": 36.7
       },
-      "analysis": "Questo output deriva da un modello Poisson non validato con un campione ridotto. I valori restano stime sperimentali da interpretare con cautela a causa della limitatezza dei dati.",
+      "analysis": "Le stime sperimentali di questo modello Poisson non ancora validato offrono una lettura sbilanciata. L'incertezza e i limiti del campione suggeriscono comunque grande prudenza.",
       "suggested_markets": [
         "Over 1,5",
         "1"
@@ -549,6 +577,10 @@
         "points_per_match": 1.4
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      },
       "analysis_provider": "Gemini"
     },
     {
@@ -579,7 +611,7 @@
         "home_scores": 63.5,
         "away_scores": 81.2
       },
-      "analysis": "Il campione di dati è limitato e il modello Poisson non è ancora validato. L'incertezza rimane elevata trattandosi di stime puramente sperimentali.",
+      "analysis": "Questo modello Poisson non validato evidenzia stime orientate verso gli ospiti. Si tratta di dati sperimentali basati su un campione limitato, perciò l'incertezza resta notevole.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -619,6 +651,10 @@
         "points_per_match": 1.4
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      },
       "analysis_provider": "Gemini"
     },
     {
@@ -649,7 +685,7 @@
         "home_scores": 93.1,
         "away_scores": 76.5
       },
-      "analysis": "Le stime fornite derivano da un modello Poisson non validato su un campione ridotto. Tale analisi va considerata sperimentale e soggetta a margini di incertezza.",
+      "analysis": "Le proiezioni del modello Poisson non ancora validato favoriscono i padroni di casa. La limitatezza del campione e l'incertezza intrinseca richiedono grande prudenza.",
       "suggested_markets": [
         "Over 1,5",
         "Goal"
@@ -685,6 +721,10 @@
       },
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      },
       "analysis_provider": "Gemini"
     },
     {
@@ -715,7 +755,7 @@
         "home_scores": 96.6,
         "away_scores": 51.2
       },
-      "analysis": "Trattandosi di un campione di dati molto ridotto e di un modello Poisson non validato, i risultati rappresentano stime sperimentali. Si evidenzia la naturale incertezza legata a questi numeri.",
+      "analysis": "Il modello Poisson non validato assegna un ampio margine alla squadra di casa. Data l'esiguità del campione, le stime sperimentali mantengono un elevato grado di incertezza.",
       "suggested_markets": [
         "Over 1,5",
         "1"
@@ -756,6 +796,10 @@
         "points_per_match": 1.8
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      },
       "analysis_provider": "Gemini"
     },
     {
@@ -786,7 +830,7 @@
         "home_scores": 88.9,
         "away_scores": 61.6
       },
-      "analysis": "Il campione di riferimento è limitato e il modello Poisson utilizzato non è validato. Questa stima sperimentale presenta una forte incertezza intrinseca.",
+      "analysis": "Le stime sperimentali di questo modello Poisson non ancora validato mostrano un favore per i padroni di casa. I limiti del campione impongono di considerare il dato con cautela.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -821,6 +865,10 @@
         "points_per_match": 0.4
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      },
       "analysis_provider": "Gemini"
     },
     {
@@ -851,7 +899,7 @@
         "home_scores": 72.8,
         "away_scores": 73.2
       },
-      "analysis": "Le probabilità di vittoria per le due squadre sono molto vicine, indicando un quadro incerto. Il campione ristretto e la natura sperimentale del modello Poisson non validato impongono prudenza.",
+      "analysis": "Le probabilità calcolate da questo modello Poisson non validato sono estremamente vicine tra i due sfidanti. A causa del campione ridotto, l'incertezza analitica è molto elevata.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -886,6 +934,10 @@
       },
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      },
       "analysis_provider": "Gemini"
     },
     {
@@ -916,7 +968,7 @@
         "home_scores": 80.8,
         "away_scores": 69.2
       },
-      "analysis": "Il campione limitato e l'utilizzo di un modello Poisson non validato generano stime fortemente sperimentali. Si deve considerare l'incertezza intrinseca di questi valori.",
+      "analysis": "Questo modello Poisson non ancora validato restituisce stime vicine tra i diversi esiti possibili. L'esiguità del campione evidenzia i limiti di queste indicazioni preliminari.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -956,6 +1008,10 @@
         "points_per_match": 1.4
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      },
       "analysis_provider": "Gemini"
     },
     {
@@ -986,7 +1042,7 @@
         "home_scores": 83.9,
         "away_scores": 67.9
       },
-      "analysis": "I dati si basano su un campione ridotto e su un modello Poisson non ancora validato. Si tratta di stime sperimentali caratterizzate da una significativa incertezza.",
+      "analysis": "Le stime sperimentali del modello Poisson non validato mostrano margini ristretti. Il campione limitato e l'incertezza impongono di interpretare i dati con molta prudenza.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1021,6 +1077,10 @@
       },
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      },
       "analysis_provider": "Gemini"
     },
     {
@@ -1051,7 +1111,7 @@
         "home_scores": 90.7,
         "away_scores": 54.9
       },
-      "analysis": "Questa analisi si fonda su un campione limitato e su stime sperimentali di un modello Poisson non validato. L'incertezza dei dati richiede molta cautela nell'interpretazione.",
+      "analysis": "Il modello Poisson non ancora validato evidenzia una stima favorevole alla formazione di casa. Trattandosi di dati sperimentali su campione ridotto, l'incertezza resta alta.",
       "suggested_markets": [
         "Over 1,5",
         "1"
@@ -1087,6 +1147,10 @@
       },
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      },
       "analysis_provider": "Gemini"
     },
     {
@@ -1117,7 +1181,7 @@
         "home_scores": 84.6,
         "away_scores": 47.2
       },
-      "analysis": "Il modello Poisson impiegato non è validato e il campione di dati è ristretto. Le percentuali sono da considerare stime sperimentali soggette a marcata incertezza.",
+      "analysis": "Le proiezioni di questo modello Poisson non validato indicano una prevalenza per i padroni di casa. I limiti del campione suggeriscono di mantenere un approccio molto prudente.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1157,6 +1221,10 @@
         "points_per_match": 1.4
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      },
       "analysis_provider": "Gemini"
     },
     {
@@ -1187,7 +1255,7 @@
         "home_scores": 76.3,
         "away_scores": 62.9
       },
-      "analysis": "Le probabilità di vittoria sono vicine tra loro e il campione di dati è limitato. I risultati sono stime sperimentali di un modello Poisson non validato, dunque altamente incerte.",
+      "analysis": "Questo modello Poisson non ancora validato mostra probabilità piuttosto vicine tra le contendenti. L'incertezza rimane marcata a causa della ristrettezza del campione.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1225,6 +1293,10 @@
         "points_per_match": 1.8
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      },
       "analysis_provider": "Gemini"
     },
     {
@@ -1255,7 +1327,7 @@
         "home_scores": 88.4,
         "away_scores": 66.1
       },
-      "analysis": "Il campione ridotto e l'uso di un modello Poisson non validato limitano l'affidabilità di queste stime sperimentali. È necessario considerare l'elevata incertezza di fondo.",
+      "analysis": "Le stime sperimentali di questo modello Poisson non validato delineano un certo divario a favore dei padroni di casa. Il campione limitato richiede tuttavia grande cautela.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1295,6 +1367,10 @@
         "points_per_match": 1.4
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      },
       "analysis_provider": "Gemini"
     },
     {
@@ -1325,7 +1401,7 @@
         "home_scores": 71.0,
         "away_scores": 52.9
       },
-      "analysis": "Le stime provengono da un modello Poisson non validato basato su un campione minimo. Tale analisi sperimentale mostra un grado di incertezza considerevole.",
+      "analysis": "Il modello Poisson non ancora validato presenta stime sperimentali con margini non distanti tra loro. L'incertezza è elevata a causa dei limiti del campione disponibile.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1363,6 +1439,10 @@
         "points_per_match": 1.6
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      },
       "analysis_provider": "Gemini"
     },
     {
@@ -1393,7 +1473,7 @@
         "home_scores": 80.7,
         "away_scores": 83.9
       },
-      "analysis": "Le probabilità vicine evidenziano l'incertezza di questa stima sperimentale. Il modello Poisson non è ancora validato e il campione di dati è molto limitato.",
+      "analysis": "Le probabilità generate da questo modello Poisson non validato evidenziano una situazione di sostanziale vicinanza. Il campione ridotto impone un'interpretazione molto prudente.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1428,6 +1508,10 @@
       },
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      },
       "analysis_provider": "Gemini"
     },
     {
@@ -1458,7 +1542,7 @@
         "home_scores": 84.3,
         "away_scores": 68.0
       },
-      "analysis": "Questo output si basa su un campione ristretto e su un modello Poisson non validato. I dati riflettono stime sperimentali soggette a una naturale incertezza.",
+      "analysis": "Questo modello Poisson non ancora validato mostra una stima orientata verso la squadra di casa. L'incertezza e la limitatezza del campione suggeriscono molta circospezione.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1493,6 +1577,10 @@
         "points_per_match": 1.0
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      },
       "analysis_provider": "Gemini"
     },
     {
@@ -1523,7 +1611,7 @@
         "home_scores": 88.9,
         "away_scores": 76.8
       },
-      "analysis": "Il campione di dati è limitato e il modello Poisson non risulta validato. Si tratta di stime sperimentali da interpretare con prudenza a causa dell'incertezza.",
+      "analysis": "Le stime sperimentali di questo modello Poisson non validato indicano un vantaggio casalingo. I limiti del campione e l'incertezza intrinseca richiedono comunque prudenza.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1558,6 +1646,10 @@
         "points_per_match": 0.8
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      },
       "analysis_provider": "Gemini"
     },
     {
@@ -1588,7 +1680,7 @@
         "home_scores": 77.8,
         "away_scores": 68.1
       },
-      "analysis": "Le percentuali del modello sono vicine e il campione di riferimento è ridotto. Questa stima sperimentale, basata su un modello Poisson non validato, presenta un alto margine di incertezza.",
+      "analysis": "Il modello Poisson non ancora validato restituisce probabilità vicine tra i vari esiti. Data la ristrettezza del campione, le stime vanno prese con estrema cautela.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1623,6 +1715,10 @@
         "points_per_match": 1.4
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      },
       "analysis_provider": "Gemini"
     },
     {
@@ -1653,7 +1749,7 @@
         "home_scores": 73.1,
         "away_scores": 68.7
       },
-      "analysis": "Con probabilità vicine e un campione limitato, l'analisi riflette i limiti di un modello Poisson non validato. I valori sono stime sperimentali caratterizzate da notevole incertezza.",
+      "analysis": "Le proiezioni di questo modello Poisson non validato mostrano percentuali vicine e competitive. L'incertezza del campione limitato richiede un'analisi molto prudente.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1688,6 +1784,10 @@
         "points_per_match": 2.4
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      },
       "analysis_provider": "Gemini"
     },
     {
@@ -1718,7 +1818,7 @@
         "home_scores": 88.2,
         "away_scores": 70.5
       },
-      "analysis": "Il campione analizzato è esiguo e il modello Poisson non è ancora validato. Queste stime sperimentali mantengono un livello di incertezza elevato.",
+      "analysis": "Le stime sperimentali di questo modello Poisson non ancora validato assegnano un vantaggio ai padroni di casa. I limiti del campione e l'incertezza impongono molta cautela.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1758,6 +1858,10 @@
         "points_per_match": 1.6
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      },
       "analysis_provider": "Gemini"
     },
     {
@@ -1788,7 +1892,7 @@
         "home_scores": 56.8,
         "away_scores": 93.2
       },
-      "analysis": "I dati derivano da un campione ridotto e da un modello Poisson non validato. Si tratta di una stima puramente sperimentale soggetta a forte incertezza.",
+      "analysis": "Il modello Poisson non validato evidenzia una probabilità marcata per la squadra ospite. Trattandosi di stime sperimentali su campione ridotto, l'incertezza resta da considerare.",
       "suggested_markets": [
         "Over 1,5",
         "2"
@@ -1829,6 +1933,10 @@
         "points_per_match": 1.4
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      },
       "analysis_provider": "Gemini"
     },
     {
@@ -1859,7 +1967,7 @@
         "home_scores": 72.4,
         "away_scores": 73.0
       },
-      "analysis": "Le probabilità di vittoria per le due squadre sono vicine, segnalando un equilibrio incerto. Il campione limitato e l'assenza di validazione del modello Poisson richiedono molta cautela.",
+      "analysis": "Le percentuali di questo modello Poisson non ancora validato sono estremamente vicine tra i due sfidanti. L'esiguità del campione sottolinea l'elevata incertezza delle stime.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1894,6 +2002,10 @@
       },
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      },
       "analysis_provider": "Gemini"
     },
     {
@@ -1924,7 +2036,7 @@
         "home_scores": 79.3,
         "away_scores": 61.8
       },
-      "analysis": "Il campione di dati ridotto e l'utilizzo di un modello Poisson non validato rendono questa analisi una stima sperimentale. L'incertezza di fondo rimane consistente.",
+      "analysis": "Le stime sperimentali del modello Poisson non validato indicano una preferenza per la formazione di casa. Il campione limitato richiede di interpretare il dato con prudenza.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1959,6 +2071,10 @@
         "points_per_match": 0.8
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      },
       "analysis_provider": "Gemini"
     },
     {
@@ -1989,7 +2105,7 @@
         "home_scores": 70.9,
         "away_scores": 62.9
       },
-      "analysis": "Le percentuali vicine e il campione limitato evidenziano i limiti di queste stime sperimentali. Il modello Poisson utilizzato non è ancora validato e presenta notevole incertezza.",
+      "analysis": "Questo modello Poisson non ancora validato presenta probabilità vicine tra i vari segni. L'incertezza complessiva e i limiti del campione suggeriscono un approccio molto cauto.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -2027,6 +2143,10 @@
         "points_per_match": 0.6
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      },
       "analysis_provider": "Gemini"
     },
     {
@@ -2097,7 +2217,11 @@
         "goals_against": 1.0,
         "points_per_match": 2.0
       },
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-18-Serie A-AC Milan-Atalanta",
@@ -2161,7 +2285,11 @@
         "goals_against": 1.4,
         "points_per_match": 1.2
       },
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-18-Serie A-Juventus-Lazio",
@@ -2228,7 +2356,11 @@
         "goals_against": 0.8,
         "points_per_match": 2.6
       },
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-19-Serie A-Monza-Cagliari",
@@ -2297,7 +2429,11 @@
         "goals_against": 0.6,
         "points_per_match": 2.0
       },
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-19-Serie A-Parma-Torino",
@@ -2364,7 +2500,11 @@
         "goals_against": 1.4,
         "points_per_match": 1.4
       },
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-16-Eredivisie-Heerenveen-Excelsior",
@@ -2433,7 +2573,11 @@
         "goals_against": 2.2,
         "points_per_match": 1.0
       },
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-17-Eredivisie-ADO Den Haag-PSV Eindhoven",
@@ -2498,7 +2642,11 @@
         "goals_against": 1.2,
         "points_per_match": 2.4
       },
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-17-Eredivisie-Telstar-Feyenoord Rotterdam",
@@ -2562,7 +2710,11 @@
         "points_per_match": 0.6
       },
       "away_recent_form": null,
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-17-Eredivisie-Sparta Rotterdam-Willem II",
@@ -2631,7 +2783,11 @@
         "goals_against": 2.6,
         "points_per_match": 0.2
       },
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-18-Eredivisie-PEC Zwolle-Go Ahead Eagles",
@@ -2696,7 +2852,11 @@
         "goals_against": 2.6,
         "points_per_match": 0.8
       },
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-18-Eredivisie-SC Cambuur-AZ Alkmaar",
@@ -2760,7 +2920,11 @@
         "goals_against": 1.4,
         "points_per_match": 2.0
       },
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-19-Primeira Liga-Braga-Gil Vicente",
@@ -2822,7 +2986,11 @@
         "goals_against": 1.0,
         "points_per_match": 1.0
       },
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-17-Scottish Premiership-Aberdeen-St Mirren",
@@ -2889,7 +3057,11 @@
         "goals_against": 2.2,
         "points_per_match": 0.6
       },
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-17-Scottish Premiership-Hibernian-Falkirk",
@@ -2956,7 +3128,11 @@
         "goals_against": 1.4,
         "points_per_match": 1.0
       },
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-17-Scottish Premiership-Kilmarnock-Motherwell",
@@ -3025,7 +3201,11 @@
         "goals_against": 1.8,
         "points_per_match": 0.6
       },
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-17-Scottish Premiership-St Johnstone-Dundee United",
@@ -3094,7 +3274,11 @@
         "goals_against": 0.8,
         "points_per_match": 2.0
       },
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-17-Scottish Premiership-Dundee-Rangers",
@@ -3161,7 +3345,11 @@
         "goals_against": 0.4,
         "points_per_match": 3.0
       },
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-18-Scottish Premiership-Celtic-Heart of Midlothian",
@@ -3223,7 +3411,11 @@
         "points_per_match": 2.4
       },
       "away_recent_form": null,
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-16-La Liga-Deportivo-Levante",
@@ -3285,7 +3477,11 @@
         "goals_against": 2.4,
         "points_per_match": 1.0
       },
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-17-La Liga-Villarreal-Elche",
@@ -3355,7 +3551,11 @@
         "goals_against": 1.6,
         "points_per_match": 1.0
       },
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-17-La Liga-Real Betis-Barcelona",
@@ -3420,7 +3620,11 @@
         "goals_against": 1.0,
         "points_per_match": 3.0
       },
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-17-La Liga-Valencia-Athletic Club",
@@ -3484,7 +3688,11 @@
         "points_per_match": 0.8
       },
       "away_recent_form": null,
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-18-La Liga-Osasuna-Racing Santander",
@@ -3546,7 +3754,11 @@
         "points_per_match": 0.2
       },
       "away_recent_form": null,
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-18-La Liga-Celta Vigo-Alaves",
@@ -3608,7 +3820,11 @@
         "goals_against": 1.4,
         "points_per_match": 0.8
       },
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-18-La Liga-Malaga-Real Sociedad",
@@ -3672,7 +3888,11 @@
         "points_per_match": 0.6
       },
       "away_recent_form": null,
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-18-La Liga-Real Madrid-Sevilla",
@@ -3741,7 +3961,11 @@
         "goals_against": 1.4,
         "points_per_match": 1.6
       },
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-19-La Liga-Getafe-Rayo Vallecano",
@@ -3803,7 +4027,11 @@
         "points_per_match": 1.0
       },
       "away_recent_form": null,
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-17-Super Lig turca-Erzurum BB-Eyupspor",
@@ -3868,7 +4096,11 @@
         "goals_against": 3.6,
         "points_per_match": 0.6
       },
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-17-Super Lig turca-Amed SFK-Konyaspor",
@@ -3932,7 +4164,11 @@
         "goals_against": 0.6,
         "points_per_match": 1.0
       },
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-17-Super Lig turca-Genclerbirligi-Galatasaray",
@@ -4001,7 +4237,11 @@
         "goals_against": 1.8,
         "points_per_match": 2.4
       },
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-17-Super Lig turca-Fenerbahce-Alanyaspor",
@@ -4070,7 +4310,11 @@
         "goals_against": 1.0,
         "points_per_match": 1.6
       },
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-18-Super Lig turca-Kasimpasa-Samsunspor",
@@ -4137,7 +4381,11 @@
         "goals_against": 2.4,
         "points_per_match": 0.0
       },
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-18-Super Lig turca-Kocaelispor-Goztepe",
@@ -4199,7 +4447,11 @@
         "points_per_match": 1.8
       },
       "away_recent_form": null,
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-19-Super Lig turca-Trabzonspor-Besiktas",
@@ -4269,7 +4521,11 @@
         "goals_against": 1.4,
         "points_per_match": 2.4
       },
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     }
   ],
   "no_bet_matches": [
@@ -4298,7 +4554,11 @@
       "elo_away": 1500.0,
       "home_recent_form": null,
       "away_recent_form": null,
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-16-Bundesliga-Eintracht Frankfurt-FC Cologne",
@@ -4325,7 +4585,11 @@
       "elo_away": 1500.0,
       "home_recent_form": null,
       "away_recent_form": null,
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-17-Bundesliga-1. FC Union Berlin-Borussia Dortmund",
@@ -4352,7 +4616,11 @@
       "elo_away": 1500.0,
       "home_recent_form": null,
       "away_recent_form": null,
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-17-Bundesliga-Hamburg SV-VfB Stuttgart",
@@ -4379,7 +4647,11 @@
       "elo_away": 1500.0,
       "home_recent_form": null,
       "away_recent_form": null,
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-17-Bundesliga-SV Elversberg-FC Augsburg",
@@ -4406,7 +4678,11 @@
       "elo_away": 1500.0,
       "home_recent_form": null,
       "away_recent_form": null,
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-18-Bundesliga-Bayer Leverkusen-SC Freiburg",
@@ -4433,7 +4709,11 @@
       "elo_away": 1500.0,
       "home_recent_form": null,
       "away_recent_form": null,
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-18-Bundesliga-Borussia Mönchengladbach-TSG Hoffenheim",
@@ -4460,7 +4740,11 @@
       "elo_away": 1500.0,
       "home_recent_form": null,
       "away_recent_form": null,
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-17-Premier League-Manchester City-Ipswich Town",
@@ -4487,7 +4771,11 @@
       "elo_away": 1500.0,
       "home_recent_form": null,
       "away_recent_form": null,
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-18-Premier League-Leeds United-Manchester United",
@@ -4514,7 +4802,11 @@
       "elo_away": 1500.0,
       "home_recent_form": null,
       "away_recent_form": null,
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-19-Premier League-Tottenham Hotspur-Coventry City",
@@ -4541,7 +4833,11 @@
       "elo_away": 1500.0,
       "home_recent_form": null,
       "away_recent_form": null,
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-18-Eredivisie-FC Groningen-Ajax Amsterdam",
@@ -4568,7 +4864,11 @@
       "elo_away": 1500.0,
       "home_recent_form": null,
       "away_recent_form": null,
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-18-Eredivisie-FC Twente-FC Utrecht",
@@ -4595,7 +4895,11 @@
       "elo_away": 1500.0,
       "home_recent_form": null,
       "away_recent_form": null,
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-18-Eredivisie-NEC Nijmegen-Fortuna Sittard",
@@ -4622,7 +4926,11 @@
       "elo_away": 1500.0,
       "home_recent_form": null,
       "away_recent_form": null,
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-17-La Liga-Espanyol-Atlético Madrid",
@@ -4649,7 +4957,11 @@
       "elo_away": 1500.0,
       "home_recent_form": null,
       "away_recent_form": null,
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-16-Super Lig turca-Çorum FK-Caykur Rizespor",
@@ -4676,7 +4988,11 @@
       "elo_away": 1500.0,
       "home_recent_form": null,
       "away_recent_form": null,
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     },
     {
       "id": "2026-10-18-Super Lig turca-Istanbul Basaksehir-Gaziantep FK",
@@ -4703,7 +5019,11 @@
       "elo_away": 1500.0,
       "home_recent_form": null,
       "away_recent_form": null,
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "non_integrata",
+        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+      }
     }
   ],
   "notice": "Le probabilità sono stime statistiche e non garantiscono risultati."
