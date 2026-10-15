@@ -82,16 +82,10 @@ def fetch_espn_fixtures(league_code, today, last_date):
     try:
         payload = request_payload(f"{today:%Y%m%d}-{last_date:%Y%m%d}")
     except (urllib.error.URLError, TimeoutError, OSError, ValueError) as error:
-        print(f"AVVISO: intervallo ESPN {league_code} non disponibile; provo le date singole: {error}")
-        payload = {"events": []}
-        cursor = today
-        while cursor <= last_date:
-            try:
-                daily = request_payload(f"{cursor:%Y%m%d}")
-                payload["events"].extend(daily.get("events", []))
-            except (urllib.error.URLError, TimeoutError, OSError, ValueError) as daily_error:
-                print(f"AVVISO: calendario ESPN {league_code} ({cursor:%Y%m%d}) non disponibile: {daily_error}")
-            cursor += timedelta(days=1)
+        # Non eseguire decine di richieste giornaliere in caso di rate limit o disservizio.
+        # Il prossimo aggiornamento automatico riproverà la finestra completa.
+        print(f"AVVISO: intervallo ESPN {league_code} non disponibile; salto questa fonte per ora: {error}")
+        return []
 
     fixtures = []
     for event in payload.get("events", []):
