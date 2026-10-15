@@ -59,6 +59,36 @@ class PredictionModelTests(unittest.TestCase):
         self.assertFalse(validator_module.is_recent_timestamp("2026-10-15T19:00:00+00:00", now=now))
         self.assertFalse(validator_module.is_recent_timestamp("not-a-date", now=now))
 
+
+    def test_team_aliases_reconcile_espn_and_football_data_names(self):
+        pairs = [
+            ("Bologna", "Bologna FC 1909"),
+            ("Internazionale", "Inter Milan"),
+            ("AC Milan", "Milan"),
+            ("Atalanta BC", "Atalanta"),
+            ("Juventus FC", "Juventus"),
+            ("Paris Saint-Germain", "PSG"),
+            ("Athletic Bilbao", "Athletic Club"),
+            ("Bayern Munich", "FC Bayern"),
+            ("Manchester United", "Man Utd"),
+        ]
+        for first, second in pairs:
+            with self.subTest(first=first, second=second):
+                self.assertEqual(module.team_key(first), module.team_key(second))
+                self.assertEqual(archive_module.team_key(first), archive_module.team_key(second))
+        self.assertNotEqual(module.team_key("Milan"), module.team_key("Inter"))
+        self.assertNotEqual(module.team_key("Roma"), module.team_key("Lazio"))
+
+    def test_fixture_name_variant_matches_existing_history_key(self):
+        history = defaultdict(lambda: {
+            "played": 12, "home_games": 3, "away_games": 3,
+            "home_scored": 9, "home_conceded": 6,
+            "away_scored": 7, "away_conceded": 8,
+        })
+        history["Inter"].update({"home_games": 0, "away_games": 3, "away_scored": 8, "away_conceded": 3})
+        normalized_history = {module.team_key(team): team for team in history}
+        self.assertEqual(normalized_history.get(module.team_key("Internazionale")), "Inter")
+
     def test_availability_team_matching_uses_safe_aliases(self):
         self.assertTrue(availability_module.same_team("Paris Saint-Germain", "PSG"))
         self.assertTrue(availability_module.same_team("Inter Milan", "Internazionale"))
