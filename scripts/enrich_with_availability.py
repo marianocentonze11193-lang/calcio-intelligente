@@ -295,6 +295,9 @@ def main():
         for match in data.get("matches", []) + data.get("no_bet_matches", []):
             match["availability_data"] = availability_for(match, {}, False)
         DATA_FILE.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        CACHE_FILE.parent.mkdir(parents=True, exist_ok=True)
+        if not CACHE_FILE.exists():
+            CACHE_FILE.write_text(json.dumps(load_cache(), ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
         print("API_FOOTBALL_KEY non configurata: pronostici mantenuti, dati disponibilità dichiarati non configurati.")
         return
 
