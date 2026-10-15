@@ -159,7 +159,7 @@ function renderMatches(matches) {
       if (match.analysis) {
         const analysis = document.createElement("p");
         analysis.className = "match-analysis";
-        analysis.textContent = match.analysis;
+        analysis.textContent = (match.analysis_provider === "Gemini" ? "Analisi Gemini: " : "Nota statistica: ") + match.analysis;
         card.append(analysis);
       }
       container.append(card);
