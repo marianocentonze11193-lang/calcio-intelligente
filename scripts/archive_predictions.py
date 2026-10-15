@@ -71,6 +71,14 @@ TEAM_ALIAS_GROUPS = [
     {"torino", "torinofc"},
     {"verona", "hellasverona"},
     {"psg", "parissaintgermain", "parissaintgermainfc"},
+    {"parisfc", "parisfootballclub"},
+    {"ajax", "ajaxamsterdam", "afcajax"},
+    {"groningen", "fcgroningen"},
+    {"twente", "fctwente"},
+    {"utrecht", "fcutrecht"},
+    {"psv", "psveindhoven"},
+    {"feyenoord", "feyenoordrotterdam"},
+    {"az", "azalkmaar"},
     {"manutd", "manchesterunited", "manchesterutd"},
     {"mancity", "manchestercity"},
     {"athleticclub", "athleticbilbao"},
@@ -87,22 +95,16 @@ TEAM_ALIAS_GROUPS = [
     {"eintrachtfrankfurt", "eintracht"},
     {"borussiadortmund", "dortmund"},
     {"borussiamonchengladbach", "monchengladbach", "gladbach"},
-    {"rbLeipzig".lower(), "rasenballsportleipzig", "rbleipzig"},
-    {"parisfc", "parisfootballclub"},
-    {"ajax", "ajaxamsterdam", "afcajax"},
-    {"groningen", "fcgroningen"},
-    {"twente", "fctwente"},
-    {"utrecht", "fcutrecht"},
-    {"psv", "psveindhoven"},
-    {"feyenoord", "feyenoordrotterdam"},
-    {"az", "azalkmaar"},
+    {"rbLeipzig", "rasenballsportleipzig", "rbleipzig"},
     {"olympiquedemarseille", "marseille"},
     {"olympiquelyonnais", "lyon"},
     {"realbetis", "betis"},
     {"realsociedad", "sociedad"},
     {"celta", "celtavigo"},
-    {"internacional", "internacionalportoalegre"},
+    {"internacional", "internacionalportoalegre"}
 ]
+
+
 
 
 def _raw_team_key(value):
