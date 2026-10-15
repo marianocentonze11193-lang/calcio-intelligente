@@ -240,6 +240,7 @@ TEAM_ALIAS_GROUPS = [
     {"torino", "torinofc"},
     {"verona", "hellasverona"},
     {"psg", "parissaintgermain", "parissaintgermainfc"},
+    {"parisfc", "parisfootballclub"},
     {"manutd", "manchesterunited", "manchesterutd"},
     {"mancity", "manchestercity"},
     {"athleticclub", "athleticbilbao"},
