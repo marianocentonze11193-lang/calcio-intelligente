@@ -40,7 +40,7 @@
     a { color: #53d69a; }
     @media (max-width: 560px) { .probabilities { grid-template-columns: repeat(3, minmax(0, 1fr)); } .match-teams { font-size: 15px; } }
   </style>
-  <script src="./app.js?v=20261015-6" defer></script>
+  <script src="./app.js?v=20261015-8" defer></script>
 </head>
 <body>
   <header>
@@ -56,16 +56,16 @@
     </section>
     <section class="panel">
       <h2>Partite e probabilità</h2>
-      <p class="muted">Stime calcolate con un modello Poisson usando i risultati disponibili in casa e in trasferta. Vengono pubblicati solo pronostici con almeno 6 partite storiche nel contesto casa/trasferta: almeno 6 gare casalinghe per la squadra di casa e 6 trasferte per quella ospite. Campionati: Premier League, Championship, League One, League Two, La Liga, Bundesliga, Serie A, Ligue 1, Scottish Premiership, Scottish Championship, Eredivisie, Primeira Liga, Belgian Pro League e Super Lig turca. Il calendario europeo può includere Champions League, Europa League e Conference League; se lo storico non è sufficiente, la partita resta visibile come NO BET.</p>
+      <p class="muted">Stime calcolate con un modello Poisson usando i risultati disponibili in casa e in trasferta. Una stima viene valutata solo se sono disponibili almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite. È una soglia minima per mostrare una stima sperimentale, non una garanzia di affidabilità; il campione ridotto viene segnalato. Campionati: Premier League, Championship, League One, League Two, La Liga, Bundesliga, Serie A, Ligue 1, Scottish Premiership, Scottish Championship, Eredivisie, Primeira Liga, Belgian Pro League e Super Lig turca. Il calendario europeo può includere Champions League, Europa League e Conference League; se lo storico non è sufficiente, la partita resta visibile come NO BET.</p>
       <div id="matches" class="status">Caricamento delle partite…</div>
     </section>
     <section class="panel">
       <h2>Mercati analizzati</h2>
-      <p class="muted">1X2 · Doppia chance · Over/Under 1,5, 2,5 e 3,5 · Goal/No Goal · probabilità che segnino casa e trasferta · primi risultati esatti stimati. Colori indicativi: verde ≥70%, giallo 55–69,9%, rosso <55% di probabilità stimata. Il colore rappresenta solo la probabilità stimata del singolo mercato: verde ≥70%, giallo 55–69,9%, rosso <55%. Una probabilità alta non significa automaticamente che convenga scommettere: per valutare il valore servono quote reali, che al momento non vengono importate. Le analisi sintetiche sono generate da regole statistiche, non da un servizio AI esterno, e non considerano infortuni o notizie.</p>
+      <p class="muted">1X2 · Doppia chance · Over/Under 1,5, 2,5 e 3,5 · Goal/No Goal · probabilità che segnino casa e trasferta · primi risultati esatti stimati. Colori indicativi: verde ≥70%, giallo 55–69,9%, rosso <55% di probabilità stimata. Il colore rappresenta solo la probabilità stimata del singolo mercato: verde ≥70%, giallo 55–69,9%, rosso <55%. Una probabilità alta non significa automaticamente che convenga scommettere: per valutare il valore servono quote reali, che al momento non vengono importate. Le analisi possono essere assistite da Gemini quando il servizio è configurato; Gemini commenta i dati già calcolati e non modifica probabilità o mercati. Non vengono verificati automaticamente infortuni, formazioni, notizie o quote.</p>
     </section>
     <section class="panel">
       <h2>Fonte e trasparenza</h2>
-      <p class="muted">Fonte risultati: <a href="https://www.football-data.co.uk/" target="_blank" rel="noopener noreferrer">football-data.co.uk</a>, con calendario alternativo ESPN quando necessario. GitHub Actions prova a ricalcolare i dati ogni ora, quando il servizio è disponibile. Il pulsante ricarica le stime già pubblicate: non avvia direttamente il calcolo remoto. Se non ci sono dati sufficienti, la partita viene mostrata come NO BET senza probabilità inventate. Il modello è sperimentale e non ancora validato con un backtest; nessuna stima garantisce risultati.</p>
+      <p class="muted">Fonte risultati: <a href="https://www.football-data.co.uk/" target="_blank" rel="noopener noreferrer">football-data.co.uk</a>, con calendario alternativo ESPN quando necessario. GitHub Actions prova a ricalcolare i dati ogni ora, quando il servizio è disponibile. Il pulsante ricarica le stime già pubblicate: non avvia direttamente il calcolo remoto. Se non ci sono dati sufficienti, la partita viene mostrata come NO BET senza probabilità inventate. Il modello è sperimentale e non ancora validato con un backtest; lo storico disponibile può essere limitato a poche partite. Nessuna stima garantisce risultati.</p>
     </section>
   </main>
   <footer class="muted">Calcio Intelligente · Stime statistiche indicative</footer>
