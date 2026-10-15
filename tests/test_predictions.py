@@ -47,7 +47,7 @@ class PredictionModelTests(unittest.TestCase):
         self.assertAlmostEqual(sum(probabilities), 1.0, places=9)
         self.assertTrue(all(value >= 0 for value in probabilities))
 
-    def test_forecast_requires_home_and_away_samples_in_correct_context(self):
+    def test_small_samples_get_preliminary_estimate_instead_of_false_no_bet(self):
         history = defaultdict(lambda: {
             "played": 20, "home_games": 0, "away_games": 0,
             "home_scored": 0, "home_conceded": 0,
@@ -65,10 +65,31 @@ class PredictionModelTests(unittest.TestCase):
             "Casa", "Trasferta", "Test League", date(2026, 10, 16), "18:00",
             history, 1.4, 1.1,
         )
-        self.assertEqual(forecast["status"], "NO BET")
-        self.assertEqual(forecast["probabilities"], {})
+        self.assertEqual(forecast["status"], "Stima preliminare")
+        self.assertTrue(forecast["probabilities"])
         self.assertEqual(forecast["home_matches_sample"], 3)
         self.assertEqual(forecast["away_matches_sample"], 2)
+
+    def test_elo_ratings_update_after_results(self):
+        ratings = module.calculate_elo([
+            ("Casa", "Trasferta", 2, 0),
+            ("Casa", "Trasferta", 1, 0),
+        ])
+        self.assertGreater(ratings["Casa"], 1500)
+        self.assertLess(ratings["Trasferta"], 1500)
+
+    def test_no_bet_when_no_relevant_sample_exists(self):
+        history = defaultdict(lambda: {
+            "played": 0, "home_games": 0, "away_games": 0,
+            "home_scored": 0, "home_conceded": 0,
+            "away_scored": 0, "away_conceded": 0,
+        })
+        forecast = module.make_forecast(
+            "Casa", "Trasferta", "Test League", date(2026, 10, 16), "18:00",
+            history, 1.4, 1.1,
+        )
+        self.assertEqual(forecast["status"], "NO BET")
+        self.assertEqual(forecast["probabilities"], {})
 
     def test_forecast_probabilities_are_bounded(self):
         history = defaultdict(lambda: {
