@@ -18,6 +18,46 @@ function percent(value) {
     : "—";
 }
 
+function translateAvailabilityTerm(value) {
+  if (!value) return "";
+  const original = String(value).trim();
+  const normalized = original.toLowerCase().replace(/[’']/g, "'").replace(/[_-]+/g, " ").replace(/\s+/g, " ").trim();
+  const exact = {
+    "injury": "Infortunio", "injured": "Infortunato", "injuries": "Infortuni",
+    "suspended": "Squalificato", "suspension": "Squalifica", "questionable": "In dubbio",
+    "doubtful": "In dubbio", "missing fixture": "Non disponibile", "red card": "Espulsione",
+    "yellow cards": "Squalifica per cartellini", "illness": "Malattia", "ill": "Malato",
+    "knee injury": "Problema al ginocchio", "ankle injury": "Problema alla caviglia",
+    "hamstring injury": "Problema ai muscoli posteriori della coscia", "thigh injury": "Problema alla coscia",
+    "muscle injury": "Problema muscolare", "calf injury": "Problema al polpaccio",
+    "groin injury": "Problema all'inguine", "back injury": "Problema alla schiena",
+    "foot injury": "Problema al piede", "shoulder injury": "Problema alla spalla",
+    "cruciate ligament injury": "Lesione ai legamenti crociati", "achilles tendon injury": "Problema al tendine d'Achille",
+    "international duty": "Impegno con la nazionale", "personal reasons": "Motivi personali",
+    "coach's decision": "Scelta tecnica", "coachs decision": "Scelta tecnica",
+    "not in squad": "Non convocato", "unknown": "Non specificato", "unknown injury": "Infortunio non specificato",
+    "rest": "Riposo", "suspended for yellow cards": "Squalifica per somma di ammonizioni",
+    "red card suspension": "Squalifica dopo espulsione", "fitness": "Condizione fisica da verificare",
+    "transfer": "Trasferimento", "no information": "Informazioni non disponibili", "inactive": "Non attivo"
+  };
+  if (Object.prototype.hasOwnProperty.call(exact, normalized)) return exact[normalized];
+  const words = {
+    injury: "infortunio", injured: "infortunato", suspension: "squalifica",
+    suspended: "squalificato", doubtful: "in dubbio", questionable: "in dubbio",
+    knee: "ginocchio", ankle: "caviglia", hamstring: "muscoli posteriori della coscia",
+    thigh: "coscia", muscle: "muscolare", calf: "polpaccio", foot: "piede",
+    shoulder: "spalla", back: "schiena", groin: "inguine", illness: "malattia",
+    personal: "personali", reasons: "motivi", decision: "decisione", coach: "allenatore",
+    international: "nazionale", duty: "impegno", unknown: "non specificato",
+    unavailable: "non disponibile", absent: "assente", card: "cartellino", cards: "cartellini",
+    red: "rosso", yellow: "giallo", ligament: "legamento", tendon: "tendine",
+    fracture: "frattura", surgery: "intervento chirurgico", fitness: "condizione fisica",
+    not: "non", squad: "convocati", rest: "riposo", inactive: "non attivo"
+  };
+  const translated = normalized.split(" ").map(word => words[word] || word).join(" ");
+  return translated.charAt(0).toLocaleUpperCase("it-IT") + translated.slice(1);
+}
+
 function appendAvailability(match, card) {
   const data = match && match.availability_data ? match.availability_data : {};
   const section = document.createElement("section");
