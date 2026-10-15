@@ -185,9 +185,9 @@ def main():
         ev = {k: round((model[k] / 100) * prices[k] - 1, 4) for k in prices}
         match["expected_value_1x2"] = ev
         # Soglia conservativa solo indicativa; non equivale a redditività dimostrata.
-        if match.get("status") == "Pronostico valutabile":
+        if match.get("status") == "Pronostico valutabile" and match.get("home_matches_sample", 0) >= 8 and match.get("away_matches_sample", 0) >= 8:
             for key, label in (("home", "1"), ("draw", "X"), ("away", "2")):
-                if ev[key] >= 0.03:
+                if ev[key] >= 0.05:
                     match["value_bets"].append({
                         "market": label, "model_probability": model[key],
                         "best_odds": prices[key], "expected_value": ev[key],
@@ -198,7 +198,7 @@ def main():
         __import__("datetime").timezone.utc).replace(microsecond=0).isoformat()
     data["odds_source"] = "The Odds API" if matched else data.get("odds_source")
     DATA_FILE.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"Quote abbinate: {matched}; candidati value bet teorici (EV >= 3%): {value_count}.")
+    print(f"Quote abbinate: {matched}; candidati value bet teorici (EV >= 5%, campione >= 8 gare per lato): {value_count}.")
 
 
 if __name__ == "__main__":
