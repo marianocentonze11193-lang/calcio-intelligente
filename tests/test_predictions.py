@@ -12,6 +12,10 @@ SCRIPT = Path(__file__).resolve().parents[1] / "scripts" / "update_predictions.p
 SPEC = importlib.util.spec_from_file_location("update_predictions", SCRIPT)
 module = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(module)
+ODDS_SCRIPT = Path(__file__).resolve().parents[1] / "scripts" / "enrich_with_odds.py"
+ODDS_SPEC = importlib.util.spec_from_file_location("enrich_with_odds", ODDS_SCRIPT)
+odds_module = importlib.util.module_from_spec(ODDS_SPEC)
+ODDS_SPEC.loader.exec_module(odds_module)
 ARCHIVE_SCRIPT = Path(__file__).resolve().parents[1] / "scripts" / "archive_predictions.py"
 ARCHIVE_SPEC = importlib.util.spec_from_file_location("archive_predictions", ARCHIVE_SCRIPT)
 archive_module = importlib.util.module_from_spec(ARCHIVE_SPEC)
@@ -41,6 +45,24 @@ class PredictionModelTests(unittest.TestCase):
         self.assertEqual(metrics["settled_matches"], 1)
         self.assertEqual(metrics["accuracy_1x2"], 100.0)
         self.assertAlmostEqual(metrics["brier_score_1x2"], 0.14, places=4)
+
+    def test_odds_parser_selects_best_1x2_prices(self):
+        event = {
+            "home_team": "Milan", "away_team": "Roma",
+            "bookmakers": [
+                {"markets": [{"key": "h2h", "outcomes": [
+                    {"name": "Milan", "price": 2.1},
+                    {"name": "Draw", "price": 3.2},
+                    {"name": "Roma", "price": 3.5},
+                ]}]},
+                {"markets": [{"key": "h2h", "outcomes": [
+                    {"name": "Milan", "price": 2.2},
+                    {"name": "Draw", "price": 3.1},
+                    {"name": "Roma", "price": 3.7},
+                ]}]},
+            ],
+        }
+        self.assertEqual(odds_module.best_prices(event), {"home": 2.2, "draw": 3.2, "away": 3.7})
 
     def test_poisson_probabilities_sum_to_one(self):
         probabilities = module.poisson_probs(1.7)
