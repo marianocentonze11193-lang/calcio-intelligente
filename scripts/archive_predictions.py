@@ -172,8 +172,17 @@ def fetch_espn_results(league, dates):
 
 
 def calculate_metrics(records):
-    evaluated = [item for item in records if item.get("outcome") in ("1", "X", "2")
-                 and isinstance(item.get("probabilities"), dict)]
+    evaluated = []
+    for item in records:
+        probs = item.get("probabilities")
+        if item.get("outcome") not in ("1", "X", "2") or not isinstance(probs, dict):
+            continue
+        values = [probs.get(key) for key in ("home_win", "draw", "away_win")]
+        if not all(isinstance(value, (int, float)) and 0 <= value <= 100 for value in values):
+            continue
+        if abs(sum(values) - 100) > 1.5:
+            continue
+        evaluated.append(item)
     if len(evaluated) < MIN_METRIC_MATCHES:
         return {
             "settled_matches": len(evaluated), "accuracy_1x2": None, "brier_score_1x2": None,
