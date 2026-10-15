@@ -13,11 +13,16 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 SOURCE = "https://www.football-data.co.uk"
-LEAGUES = {"E0": "Premier League", "SP1": "La Liga", "D1": "Bundesliga", "I1": "Serie A", "F1": "Ligue 1"}
+LEAGUES = {
+    "E0": "Premier League", "E1": "Championship", "E2": "League One", "E3": "League Two",
+    "SP1": "La Liga", "D1": "Bundesliga", "I1": "Serie A", "F1": "Ligue 1",
+    "SC0": "Scottish Premiership", "SC1": "Scottish Championship",
+    "N1": "Eredivisie", "P1": "Primeira Liga", "B1": "Belgian Pro League", "T1": "Super Lig turca",
+}
 OUTPUT = Path("data/predictions.json")
 USER_AGENT = "CalcioIntelligente/1.0"
 MAX_DAYS_AHEAD = 5
-MIN_TEAM_MATCHES = 4
+MIN_TEAM_MATCHES = 6
 PRIOR_MATCHES = 3
 
 
@@ -40,17 +45,17 @@ def fetch_csv(url):
 
 
 ESPN_LEAGUES = {
-    "E0": "eng.1",
-    "SP1": "esp.1",
-    "D1": "ger.1",
-    "I1": "ita.1",
-    "F1": "fra.1",
+    "E0": "eng.1", "E1": "eng.2", "E2": "eng.3", "E3": "eng.4",
+    "SP1": "esp.1", "D1": "ger.1", "I1": "ita.1", "F1": "fra.1",
+    "SC0": "sco.1", "N1": "ned.1", "P1": "por.1", "B1": "bel.1", "T1": "tur.1",
 }
 
 
 def fetch_espn_fixtures(league_code, today, last_date):
     """Calendario alternativo ESPN: l'endpoint scoreboard accetta una sola data per richiesta."""
-    sport_code = ESPN_LEAGUES[league_code]
+    sport_code = ESPN_LEAGUES.get(league_code)
+    if not sport_code:
+        return []
     fixtures = []
     cursor = today
     while cursor <= last_date:
@@ -214,7 +219,7 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
         "home_matches_sample": hs["played"],
         "away_matches_sample": aws["played"],
         "status": "Pronostico valutabile" if valid else "NO BET",
-        "reason": "" if valid else f"Storico insufficiente: servono almeno {MIN_TEAM_MATCHES} partite per ciascuna squadra.",
+        "reason": "" if valid else f"Storico insufficiente: servono almeno {MIN_TEAM_MATCHES} gare casalinghe per la squadra di casa e {MIN_TEAM_MATCHES} trasferte per quella ospite.",
         "confidence": "media" if sample >= 8 else "iniziale",
         "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato",
     }
