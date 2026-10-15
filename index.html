@@ -149,7 +149,7 @@
       .probability strong { font-size: 15px; }
     }
 </style>
-  <script src="./app.js?v=20261015-24" defer></script>
+  <script src="./app.js?v=20261015-25" defer></script>
 </head>
 <body>
   <header>
@@ -172,7 +172,7 @@
     </section>
     <section class="panel">
       <h2>Partite e probabilità</h2>
-      <p class="muted">Stime sperimentali basate su Poisson, statistiche casa/trasferta, prior di lega e correzione Elo. Le partite con campione ridotto sono indicate come stime preliminari; NO BET viene mantenuto quando mancano dati minimi pertinenti. Sono incluse le massime divisioni nazionali per cui è disponibile uno storico football-data: Inghilterra, Spagna, Germania, Italia, Francia, Scozia, Paesi Bassi, Portogallo, Belgio, Turchia, Austria, Danimarca, Grecia, Finlandia, Irlanda, Norvegia, Polonia, Romania, Svezia e Svizzera. Le partite compaiono solo se il calendario è reperibile e le squadre sono abbinabili allo storico.</p>
+      <p class="muted">Stime sperimentali basate su Poisson, statistiche casa/trasferta, prior di lega e correzione Elo. Ogni partita è classificata come pronostico valutabile, stima preliminare o NO BET; la quantità di dati non equivale ad accuratezza verificata. Date, squadre e punteggi vengono sottoposti a controlli di coerenza prima del calcolo. Sono incluse le massime divisioni nazionali per cui è disponibile uno storico football-data: Inghilterra, Spagna, Germania, Italia, Francia, Scozia, Paesi Bassi, Portogallo, Belgio, Turchia, Austria, Danimarca, Grecia, Finlandia, Irlanda, Norvegia, Polonia, Romania, Svezia e Svizzera. Le partite compaiono solo se il calendario è reperibile e le squadre sono abbinabili allo storico.</p>
       <div class="filters">
         <label for="country-filter" class="muted">Nazione<select id="country-filter"><option value="">Tutte le nazioni</option></select></label>
         <label for="league-filter" class="muted">Competizione<select id="league-filter"><option value="">Tutte le competizioni</option></select></label>
@@ -191,7 +191,7 @@
     </section>
     <section class="panel">
       <h2>Fonte e trasparenza</h2>
-      <p class="muted">Fonte risultati e quote storiche disponibili: <a href="https://www.football-data.co.uk/" target="_blank" rel="noopener noreferrer">football-data.co.uk</a>; calendario alternativo ESPN quando necessario. Le quote aggiuntive possono arrivare da The Odds API se è configurato il secret ODDS_API_KEY. Infortuni e squalifiche vengono controllati tramite API-Football se è configurato API_FOOTBALL_KEY; le formazioni sono richieste vicino al calcio d'inizio. Per attivare questa fonte, aggiungi il secret API_FOOTBALL_KEY in GitHub → Settings → Secrets and variables → Actions. La copertura dipende dalla competizione e dal piano: nessuna segnalazione non equivale a una conferma di piena disponibilità. GitHub Actions prova a ricalcolare i dati ogni ora, quando il servizio è disponibile. Il pulsante ricarica le stime già pubblicate: non avvia direttamente il calcolo remoto. Se non ci sono dati sufficienti, la partita viene mostrata come NO BET senza probabilità inventate. Il modello è sperimentale e non ancora validato con un backtest; lo storico disponibile può essere limitato a poche partite. Nessuna stima garantisce risultati.</p>
+      <p class="muted">Fonte risultati e quote storiche disponibili: <a href="https://www.football-data.co.uk/" target="_blank" rel="noopener noreferrer">football-data.co.uk</a>; calendario alternativo ESPN quando necessario. Le quote aggiuntive possono arrivare da The Odds API se è configurato il secret ODDS_API_KEY. Infortuni e squalifiche vengono controllati tramite API-Football se è configurato API_FOOTBALL_KEY; le formazioni sono richieste vicino al calcio d'inizio. Per attivare questa fonte, aggiungi il secret API_FOOTBALL_KEY in GitHub → Settings → Secrets and variables → Actions. La copertura dipende dalla competizione e dal piano: nessuna segnalazione non equivale a una conferma di piena disponibilità. GitHub Actions prova a ricalcolare i dati ogni ora, quando il servizio è disponibile. Il pulsante ricarica le stime già pubblicate: non avvia direttamente il calcolo remoto. Se non ci sono dati sufficienti, la partita viene mostrata come NO BET senza probabilità inventate. Accuratezza e Brier score vengono pubblicati solo dopo almeno 30 partite concluse, abbinate e con probabilità 1X2 coerenti; per singolo campionato è richiesta la stessa soglia. Il modello resta sperimentale e le metriche non dimostrano redditività. Nessuna stima garantisce risultati.</p>
     </section>
   </main>
   <footer class="muted">Calcio Intelligente · Un progetto di Mariano · Stime statistiche indicative</footer>
