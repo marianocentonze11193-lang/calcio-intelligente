@@ -16,7 +16,7 @@ SOURCE = "https://www.football-data.co.uk"
 LEAGUES = {"E0": "Premier League", "SP1": "La Liga", "D1": "Bundesliga", "I1": "Serie A", "F1": "Ligue 1"}
 OUTPUT = Path("data/predictions.json")
 USER_AGENT = "CalcioIntelligente/1.0"
-MAX_DAYS_AHEAD = 30
+MAX_DAYS_AHEAD = 5
 MIN_TEAM_MATCHES = 4
 PRIOR_MATCHES = 3
 
@@ -356,7 +356,13 @@ def main():
     if downloaded == 0:
         raise SystemExit("Nessuna fonte dati raggiungibile: il file precedente è stato mantenuto.")
 
-    forecasts.sort(key=lambda item: (item["date"], item["league"], item["home_team"]))
+    forecasts.sort(key=lambda item: (
+        item["date"],
+        item["kickoff"] or "99:99",
+        item["league"],
+        item["home_team"],
+        item["away_team"],
+    ))
     result = {
         "updated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
         "source": SOURCE, "season": season,
