@@ -91,6 +91,52 @@ class PredictionModelTests(unittest.TestCase):
         self.assertNotEqual(module.team_key("Paris FC"), module.team_key("Paris Saint-Germain"))
         self.assertNotEqual(module.team_key("Inter"), module.team_key("Internacional"))
 
+    def test_every_configured_team_alias_is_consistent_across_all_pipelines(self):
+        # Testa ogni alias dichiarato, non solo una selezione manuale di squadre.
+        all_aliases = []
+        seen = {}
+        for group in module.TEAM_ALIAS_GROUPS:
+            normalized_group = {module._raw_team_key(alias) for alias in group}
+            self.assertGreaterEqual(len(normalized_group), 2)
+            for alias in normalized_group:
+                if alias in seen:
+                    self.fail(f"Alias ambiguo {alias!r}: presente in {seen[alias]!r} e {group!r}")
+                seen[alias] = group
+                all_aliases.append((alias, normalized_group))
+
+        self.assertEqual(
+            {frozenset(module._raw_team_key(x) for x in g) for g in module.TEAM_ALIAS_GROUPS},
+            {frozenset(archive_module._raw_team_key(x) for x in g) for g in archive_module.TEAM_ALIAS_GROUPS},
+        )
+        self.assertEqual(
+            {frozenset(module._raw_team_key(x) for x in g) for g in module.TEAM_ALIAS_GROUPS},
+            {frozenset(availability_module.normalize_team(x) for x in g) for g in availability_module.ALIASES},
+        )
+
+        for alias, group in all_aliases:
+            for equivalent in group:
+                with self.subTest(alias=alias, equivalent=equivalent):
+                    self.assertEqual(module.team_key(alias), module.team_key(equivalent))
+                    self.assertEqual(archive_module.team_key(alias), archive_module.team_key(equivalent))
+                    self.assertTrue(availability_module.same_team(alias, equivalent))
+                    self.assertTrue(odds_module.same_team(alias, equivalent))
+
+    def test_team_aliases_do_not_merge_distinct_clubs(self):
+        distinct_pairs = [
+            ("Milan", "Inter"),
+            ("Roma", "Lazio"),
+            ("Paris FC", "Paris Saint-Germain"),
+            ("Manchester City", "Manchester United"),
+            ("Ajax", "AZ Alkmaar"),
+            ("Inter", "Internacional"),
+        ]
+        for first, second in distinct_pairs:
+            with self.subTest(first=first, second=second):
+                self.assertNotEqual(module.team_key(first), module.team_key(second))
+                self.assertNotEqual(archive_module.team_key(first), archive_module.team_key(second))
+                self.assertFalse(availability_module.same_team(first, second))
+                self.assertFalse(odds_module.same_team(first, second))
+
     def test_fixture_name_variant_matches_existing_history_key(self):
         history = defaultdict(lambda: {
             "played": 12, "home_games": 3, "away_games": 3,
