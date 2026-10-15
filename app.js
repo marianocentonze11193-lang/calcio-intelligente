@@ -3,6 +3,7 @@
 const DATA_URL = "./data/predictions.json";
 const HISTORY_URL = "./data/history.json";
 let allLoadedMatches = [];
+let lastRefreshAt = 0;
 
 function formatDate(value) {
   if (!value) return "Data da confermare";
@@ -399,6 +400,7 @@ async function aggiornaDati() {
     if (!risposta.ok) throw new Error("File dati non disponibile");
     const dati = await risposta.json();
     if (!Array.isArray(dati.matches)) throw new Error("Formato dati non valido");
+    lastRefreshAt = Date.now();
 
     // Mostra soltanto oggi e i prossimi 5 giorni: 6 date di calendario in totale.
     // Il filtro lato pagina evita anche di mostrare partite vecchie se il file dati è datato.
@@ -494,5 +496,22 @@ document.addEventListener("DOMContentLoaded", () => {
     if (league) league.addEventListener("change", applyFilters);
     aggiornaDati();
     aggiornaStorico();
+
+    // Il backend pubblica dati nuovi ogni ora; la pagina aperta li rilegge ogni 15 minuti.
+    // Se la scheda era in background, aggiorna al ritorno senza sovrapporre richieste.
+    window.setInterval(() => {
+      if (document.visibilityState === "visible" && !pulsante.disabled) {
+        aggiornaDati();
+        aggiornaStorico();
+      }
+    }, 15 * 60 * 1000);
+    document.addEventListener("visibilitychange", () => {
+      if (document.visibilityState === "visible" &&
+          Date.now() - lastRefreshAt >= 15 * 60 * 1000 &&
+          !pulsante.disabled) {
+        aggiornaDati();
+        aggiornaStorico();
+      }
+    });
   }
 });
