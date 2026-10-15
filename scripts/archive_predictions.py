@@ -16,9 +16,8 @@ HISTORY_FILE = ROOT / "data" / "history.json"
 SOURCE = "https://www.football-data.co.uk"
 USER_AGENT = "CalcioIntelligente/1.0"
 LEAGUES = {
-    "E0": "Premier League", "E1": "Championship", "E2": "League One", "E3": "League Two",
-    "SP1": "La Liga", "D1": "Bundesliga", "I1": "Serie A", "F1": "Ligue 1",
-    "SC0": "Scottish Premiership", "SC1": "Scottish Championship",
+    "E0": "Premier League", "SP1": "La Liga", "D1": "Bundesliga",
+    "I1": "Serie A", "F1": "Ligue 1", "SC0": "Scottish Premiership",
     "N1": "Eredivisie", "P1": "Primeira Liga", "B1": "Belgian Pro League", "T1": "Super Lig turca",
 }
 
