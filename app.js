@@ -125,7 +125,7 @@ function renderMatches(matches) {
       const q = match.odds_1x2;
       odds.textContent = "Migliori quote 1 / X / 2 disponibili: " +
         (q.home ?? "—") + " / " + (q.draw ?? "—") + " / " + (q.away ?? "—") +
-        " · Fonte: The Odds API";
+        " · Fonte: " + (match.odds_source || "fonte quote configurata");
       card.append(odds);
       if (match.expected_value_1x2) {
         const ev = match.expected_value_1x2;
