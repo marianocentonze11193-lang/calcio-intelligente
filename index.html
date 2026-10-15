@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0b222b">
+  <meta name="theme-color" content="#f2f5fa">
   <meta name="description" content="Calcio Intelligente di Mariano: dati calcistici, probabilità trasparenti e analisi sperimentali.">
   <title>Calcio Intelligente</title>
   <style>
@@ -84,7 +84,71 @@
     .history-pending { color:var(--gold); } a { color:var(--cyan); }
     @media(max-width:560px) { header { padding-top:27px; padding-bottom:24px; } .brand-row { align-items:flex-start; gap:11px; } .brand-mark { flex-basis:45px; width:45px; height:45px; border-radius:14px; font-size:23px; } main { width:calc(100% - 20px); } }
 
-  </style>
+  
+    /* Tema ad alto contrasto: leggibile su schermi piccoli e in piena luce */
+    :root {
+      color-scheme: light;
+      --mint: #087f5b;
+      --cyan: #075985;
+      --gold: #8a4b08;
+      --muted: #46566b;
+      --line: #d4deea;
+      background: #f2f5fa;
+      color: #142238;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    body { background: #f2f5fa; color: #142238; line-height: 1.55; }
+    header {
+      background: linear-gradient(120deg, #e0f2fe, #f0fdfa 68%, #ffffff);
+      border-bottom: 1px solid #cbd9e7;
+      box-shadow: 0 5px 20px rgba(22, 48, 76, .07);
+    }
+    header h1 { color: #102a43; }
+    header p { color: #334e68; }
+    .brand-mark { background: #ffffff; border-color: #9ccfca; box-shadow: 0 5px 15px rgba(15, 80, 90, .10); }
+    .brand-kicker, .creator-tag span { color: #06664f; }
+    .creator-tag { color: #203b53; background: #ffffff; border-color: #c5d8e5; }
+    main { color: #142238; }
+    .panel { background: #ffffff; border-color: #d6e0eb; box-shadow: 0 5px 18px rgba(22, 48, 76, .055); }
+    .panel h2 { color: #142f4c; }
+    .muted, .match-meta { color: #4b5d73; }
+    button { background: #087f5b; color: #ffffff; box-shadow: none; }
+    button:hover { background: #06664a; filter: none; }
+    button:focus-visible, select:focus-visible { outline: 3px solid #075985; outline-offset: 3px; }
+    .status { color: #19324d; background: #eaf2fb; border: 1px solid #c9d9ec; }
+    select { color: #142238; background: #ffffff; border: 1px solid #aebfd1; }
+    .competition-heading { color: #07533f; background: #e7f6f0; border-left-color: #087f5b; }
+    .match-card, .history-item { color: #142238; background: #ffffff; border-color: #d5e0eb; box-shadow: 0 2px 8px rgba(22,48,76,.035); }
+    .match-card:hover, .history-item:hover { border-color: #73b7a4; transform: none; }
+    .match-teams { color: #102a43; font-weight: 750; }
+    .probability { color: #142238; background: #edf2f8; border-color: #d2dce8; }
+    .probability span { color: #46566b; }
+    .probability strong { color: #142238; }
+    .probability.signal-green { background: #e2f5eb; border-color: #68ad8a; }
+    .probability.signal-yellow { background: #fff3d6; border-color: #d6a84b; }
+    .probability.signal-red { background: #fde8e8; border-color: #d58a8a; }
+    .no-bet { color: #8f1d2c; background: #fff0f1; border-color: #d98b96; }
+    .match-analysis { color: #263b53; background: #eff6ff; border-left-color: #087f5b; }
+    .availability-panel { color: #263b53; background: #f3f8fc; border-color: #cbdde9; }
+    .availability-panel > strong { color: #17445a; }
+    .availability-heading { color: #075985; }
+    .availability-list { color: #344b62; }
+    .market-green { color: #07553d; background: #e2f5eb; border-color: #68ad8a; }
+    .market-no-pick { color: #75400a; background: #fff4d9; border-color: #d6a84b; }
+    .history-metric { color: #20364f; background: #edf4fb; border-color: #d1deeb; }
+    .history-metric strong, .history-result { color: #08704f; }
+    .history-pending { color: #82500b; }
+    a { color: #075985; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: #063f5b; }
+    footer { color: #46566b; }
+    @media (max-width: 560px) {
+      .panel { padding: 15px; }
+      .probabilities { gap: 6px; }
+      .probability { padding: 10px 4px; }
+      .probability span { font-size: 12px; }
+      .probability strong { font-size: 15px; }
+    }
+</style>
   <script src="./app.js?v=20261015-24" defer></script>
 </head>
 <body>
