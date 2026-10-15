@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-15T11:08:43+00:00",
+  "updated_at": "2026-10-15T11:11:08+00:00",
   "source": "https://www.football-data.co.uk",
   "season": "2627",
   "model": "Poisson casa/trasferta con prior di lega e correzione Elo; stime sperimentali, non garanzie",
@@ -34,7 +34,7 @@
         "home_scores": 89.3,
         "away_scores": 89.0
       },
-      "analysis": "Le stime sperimentali di questo modello Poisson non validato indicano percentuali vicine per la vittoria delle due squadre, evidenziando una notevole incertezza. Il campione di riferimento molto limitato impone estrema prudenza nell'interpretazione dei dati.",
+      "analysis": "Le probabilità mostrano un quadro molto equilibrato tra Le Mans e Toulouse, con percentuali vicine. Il campione limitato di dati e le stime sperimentali di questo modello Poisson non validato impongono massima prudenza.",
       "suggested_markets": [
         "Over 1,5",
         "Goal"
@@ -112,7 +112,7 @@
         "home_scores": 80.3,
         "away_scores": 67.6
       },
-      "analysis": "Questo modello Poisson non validato mostra probabilità piuttosto vicine tra i diversi esiti, riflettendo una marcata incertezza di fondo. Si tratta di stime sperimentali basate su un campione limitato, da prendere con molta cautela.",
+      "analysis": "Strasbourg e Paris Saint-Germain presentano stime derivate da un modello Poisson non ancora validato e con un campione molto ridotto. Le percentuali vanno interpretate con estrema cautela e margini di incertezza elevati.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -184,7 +184,7 @@
         "home_scores": 78.6,
         "away_scores": 64.1
       },
-      "analysis": "Le probabilità di questo modello Poisson non validato evidenziano uno scenario incerto con percentuali vicine tra i contendenti. I limiti evidenti del campione ridotto richiedono un'interpretazione estremamente prudente.",
+      "analysis": "Il confronto tra Lille e Brest si basa su stime sperimentali di un modello Poisson non validato e su un campione limitato. L'incertezza resta alta e i dati vanno presi con prudenza.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -261,7 +261,7 @@
         "home_scores": 65.4,
         "away_scores": 90.6
       },
-      "analysis": "Le stime sperimentali di questo modello Poisson non validato offrono una lettura probabilistica basata su un campione ristretto e non definitivo. L'incertezza intrinseca di questi dati suggerisce un approccio molto prudente.",
+      "analysis": "Per Troyes-Lens, le stime del modello Poisson non validato evidenziano una probabilità favorevole agli ospiti, ma il campione limitato richiede cautela. Trattandosi di stime sperimentali, l'incertezza complessiva rimane considerevole.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -338,7 +338,7 @@
         "home_scores": 64.9,
         "away_scores": 59.9
       },
-      "analysis": "Questo modello Poisson non validato presenta probabilità molto vicine per i vari esiti, segnalando un quadro di forte incertezza. Il campione limitato rende queste stime sperimentali puramente indicative.",
+      "analysis": "Angers e Marseille mostrano percentuali vicine e un quadro di grande incertezza in base alle stime sperimentali del modello Poisson non validato. I limiti del campione ridotto invitano alla massima prudenza.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -413,7 +413,7 @@
         "home_scores": 78.3,
         "away_scores": 71.8
       },
-      "analysis": "Le percentuali elaborate da questo modello Poisson non validato mostrano margini ravvicinati e una notevole incertezza. Data la natura sperimentale e i limiti del campione, le stime vanno considerate con molta prudenza.",
+      "analysis": "Le stime per Lorient e AS Monaco derivano da un modello Poisson non ancora validato con un campione molto limitato. Questo indice di incertezza richiede di interpretare le percentuali con prudenza.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -485,7 +485,7 @@
         "home_scores": 81.9,
         "away_scores": 53.6
       },
-      "analysis": "Le stime sperimentali di questo modello Poisson non validato risentono dei limiti di un campione esiguo. È necessario interpretare tali probabilità con grande cautela a causa dell'incertezza intrinseca.",
+      "analysis": "Il modello Poisson non validato assegna percentuali a favore della squadra di casa per Paris FC-Stade Rennais, ma il campione è limitato. Trattandosi di stime sperimentali, è necessario considerare i limiti dei dati.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -557,7 +557,7 @@
         "home_scores": 91.3,
         "away_scores": 36.7
       },
-      "analysis": "Questo modello Poisson non validato fornisce stime sperimentali basate su un campione limitato e non ancora validato. L'incertezza rimane un fattore chiave da considerare prima di trarre conclusioni.",
+      "analysis": "Per Lyon-Nice, le stime sperimentali del modello Poisson non validato indicano una netta divisione, ma il campione ridotto suggerisce prudenza. L'incertezza intrinseca di un modello non validato non va trascurata.",
       "suggested_markets": [
         "Over 1,5",
         "1"
@@ -635,7 +635,7 @@
         "home_scores": 63.5,
         "away_scores": 81.2
       },
-      "analysis": "Le probabilità di questo modello Poisson non validato evidenziano stime sperimentali soggette ai limiti di un campione ridotto. Tale incertezza richiede prudenza nella lettura dei dati.",
+      "analysis": "Schalke 04 e Mainz registrano stime preliminari da un modello Poisson non validato con un campione ridotto. Le percentuali vanno valutate con estrema cautela a causa dell'alta incertezza.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -712,7 +712,7 @@
         "home_scores": 93.1,
         "away_scores": 76.5
       },
-      "analysis": "Questo modello Poisson non validato restituisce stime sperimentali basate su un campione molto limitato. La natura non validata del modello impone una grande cautela nell'analisi.",
+      "analysis": "Il confronto tra Werder Bremen e SC Paderborn 07 mostra stime sperimentali basate su un campione limitato di un modello Poisson non validato. I dati vanno interpretati con la dovuta prudenza.",
       "suggested_markets": [
         "Over 1,5",
         "Goal"
@@ -785,7 +785,7 @@
         "home_scores": 96.6,
         "away_scores": 51.2
       },
-      "analysis": "Le stime sperimentali di questo modello Poisson non validato derivano da un campione ridotto e necessitano di cautela. L'incertezza strutturale dei dati non permette valutazioni definitive.",
+      "analysis": "Per Bayern Munich-RB Leipzig, le stime del modello Poisson non validato riflettono un divario ampio ma soffrono dei limiti di un campione ridotto. L'incertezza sperimentale richiede un approccio molto prudente.",
       "suggested_markets": [
         "Over 1,5",
         "1"
@@ -863,7 +863,7 @@
         "home_scores": 88.9,
         "away_scores": 61.6
       },
-      "analysis": "Questo modello Poisson non validato produce stime sperimentali influenzate da un campione molto limitato. È opportuno mantenere un profilo prudente di fronte a tali dati.",
+      "analysis": "Levadiakos e Volos NFC presentano percentuali stimate da un modello Poisson non validato con un campione limitato. La natura sperimentale dei dati impone prudenza nell'analisi.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -935,7 +935,7 @@
         "home_scores": 72.8,
         "away_scores": 73.2
       },
-      "analysis": "Le percentuali di questo modello Poisson non validato evidenziano probabilità vicine e una forte incertezza di fondo. Il campione ridotto richiede un'interpretazione estremamente cauta.",
+      "analysis": "Le percentuali per Atromitos e AEK Athens sono molto vicine, evidenziando equilibrio secondo il modello Poisson non validato. Il campione limitato e la natura sperimentale impongono massima cautela.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1007,7 +1007,7 @@
         "home_scores": 80.8,
         "away_scores": 69.2
       },
-      "analysis": "Questo modello Poisson non validato presenta probabilità vicine tra i diversi esiti, segnalando un quadro incerto. Le stime sperimentali risentono dei limiti di un campione ristretto.",
+      "analysis": "Per Kalamata-OFI Crete, le stime del modello Poisson non validato si basano su un campione ristretto. Questo limite rende necessarie interpretazioni prudenti delle percentuali.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1084,7 +1084,7 @@
         "home_scores": 83.9,
         "away_scores": 67.9
       },
-      "analysis": "Le stime sperimentali di questo modello Poisson non validato si basano su un campione limitato e non validato. L'incertezza dei dati suggerisce di procedere con molta prudenza.",
+      "analysis": "Panetolikos e Olympiacos mostrano stime sperimentali derivate da un modello non validato e con un campione limitato. L'incertezza del campione richiede prudenza nella lettura dei dati.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1156,7 +1156,7 @@
         "home_scores": 90.7,
         "away_scores": 54.9
       },
-      "analysis": "Questo modello Poisson non validato fornisce dati probabilistici derivati da un campione esiguo. Tali stime sperimentali vanno interpretate con la dovuta cautela.",
+      "analysis": "Il modello Poisson non validato fornisce stime per Panathinaikos e Asteras Tripoli basate su un campione ridotto. Trattandosi di dati sperimentali, occorre interpretare i valori con cautela.",
       "suggested_markets": [
         "Over 1,5",
         "1"
@@ -1229,7 +1229,7 @@
         "home_scores": 84.6,
         "away_scores": 47.2
       },
-      "analysis": "Le probabilità calcolate da questo modello Poisson non validato riflettono i limiti strutturali di un campione ridotto. La natura sperimentale delle stime impone un giudizio prudente.",
+      "analysis": "Per Kifisia-Aris, le percentuali del modello Poisson non validato risentono dei limiti di un campione ridotto. L'incertezza sperimentale suggerisce un giudizio molto prudente.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1306,7 +1306,7 @@
         "home_scores": 76.3,
         "away_scores": 62.9
       },
-      "analysis": "Questo modello Poisson non validato mostra percentuali vicine e una notevole incertezza tra i possibili esiti. Le stime sperimentali, basate su un campione limitato, richiedono prudenza.",
+      "analysis": "Le percentuali tra PAOK e Iraklis sono vicine, riflettendo un sostanziale equilibrio stimato dal modello Poisson non validato. Il campione limitato richiede di considerare i dati con prudenza.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1381,7 +1381,7 @@
         "home_scores": 88.4,
         "away_scores": 66.1
       },
-      "analysis": "Le stime sperimentali di questo modello Poisson non validato derivano da un campione ristretto. Tale incertezza invita a una lettura estremamente prudente dei dati.",
+      "analysis": "Everton e Chelsea presentano stime preliminari da un modello Poisson non validato con un campione limitato. La natura sperimentale dei dati impone cautela.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1458,7 +1458,7 @@
         "home_scores": 71.0,
         "away_scores": 52.9
       },
-      "analysis": "Questo modello Poisson non validato presenta probabilità vicine tra loro, evidenziando una significativa incertezza. Il campione limitato richiede cautela nell'interpretazione.",
+      "analysis": "Il confronto tra Brentford e Liverpool mostra stime basate su un campione ridotto di un modello Poisson non validato. L'incertezza statistica richiede massima prudenza.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1533,7 +1533,7 @@
         "home_scores": 80.7,
         "away_scores": 83.9
       },
-      "analysis": "Le percentuali di questo modello Poisson non validato mostrano esiti vicini e un quadro di marcata incertezza. I limiti del campione impongono molta prudenza.",
+      "analysis": "Fulham e Hull City registrano percentuali vicine in base alle stime sperimentali di un modello Poisson non validato. Il campione limitato evidenzia limiti intrinseci da considerare con cautela.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1605,7 +1605,7 @@
         "home_scores": 84.3,
         "away_scores": 68.0
       },
-      "analysis": "Questo modello Poisson non validato fornisce stime sperimentali basate su un campione limitato e non definitivo. L'incertezza intrinseca richiede un approccio molto prudente.",
+      "analysis": "Per Newcastle United-Aston Villa, il modello Poisson non validato offre stime sperimentali soggette a un campione ridotto. La prudenza d'interpretazione è d'obbligo.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1677,7 +1677,7 @@
         "home_scores": 88.9,
         "away_scores": 76.8
       },
-      "analysis": "Le stime sperimentali di questo modello Poisson non validato risentono di un campione di riferimento esiguo. È necessario valutare questi dati con la massima cautela.",
+      "analysis": "AFC Bournemouth e Sunderland mostrano stime derivate da un modello Poisson non validato con limiti di campione evidenti. Le percentuali vanno prese con cautela.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1749,7 +1749,7 @@
         "home_scores": 77.8,
         "away_scores": 68.1
       },
-      "analysis": "Questo modello Poisson non validato evidenzia probabilità vicine e un alto grado di incertezza. La natura sperimentale delle stime impone un profilo prudente.",
+      "analysis": "Brighton & Hove Albion e Crystal Palace presentano percentuali vicine, indicando incertezza secondo il modello Poisson non validato. Il campione limitato richiede un approccio prudente.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1821,7 +1821,7 @@
         "home_scores": 73.1,
         "away_scores": 68.7
       },
-      "analysis": "Le percentuali di questo modello Poisson non validato mostrano esiti molto vicini tra loro. I limiti del campione ridotto richiedono un'interpretazione estremamente prudente.",
+      "analysis": "Il match tra Nottingham Forest e Arsenal mostra probabilità vicine e stime sperimentali da un modello Poisson non validato. I limiti del campione ridotto impongono massima prudenza.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1893,7 +1893,7 @@
         "home_scores": 88.2,
         "away_scores": 70.5
       },
-      "analysis": "Questo modello Poisson non validato presenta stime sperimentali basate su un campione limitato. L'incertezza dei dati suggerisce di procedere con la dovuta cautela.",
+      "analysis": "Frosinone e Sassuolo registrano stime preliminari basate su un campione limitato di un modello Poisson non validato. L'incertezza impone di interpretare i dati con cautela.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1970,7 +1970,7 @@
         "home_scores": 56.8,
         "away_scores": 93.2
       },
-      "analysis": "Le stime sperimentali di questo modello Poisson non validato derivano da un campione ristretto e non validato. Tale incertezza strutturale impone un'analisi molto prudente.",
+      "analysis": "Per Venezia-Napoli, il modello Poisson non validato indica una netta ripartizione, ma il campione ridotto evidenzia limiti importanti. Le stime sperimentali richiedono prudenza.",
       "suggested_markets": [
         "Over 1,5",
         "2"
@@ -2048,7 +2048,7 @@
         "home_scores": 72.4,
         "away_scores": 73.0
       },
-      "analysis": "Questo modello Poisson non validato evidenzia percentuali vicine e una forte incertezza tra i contendenti. Il campione limitato richiede un'interpretazione particolarmente cauta.",
+      "analysis": "Bologna e Internazionale presentano percentuali molto vicine, segnalando equilibrio per il modello Poisson non validato. La limitatezza del campione richiede grande cautela.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -2120,7 +2120,7 @@
         "home_scores": 79.3,
         "away_scores": 61.8
       },
-      "analysis": "Le probabilità elaborate da questo modello Poisson non validato riflettono i limiti di un campione esiguo. Tali stime sperimentali vanno considerate con molta prudenza.",
+      "analysis": "AS Roma e Genoa mostrano stime sperimentali derivate da un modello non validato con un campione ridotto. L'incertezza intrinseca suggerisce un'analisi prudente.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -2192,7 +2192,7 @@
         "home_scores": 70.9,
         "away_scores": 62.9
       },
-      "analysis": "Questo modello Poisson non validato mostra percentuali vicine tra i vari esiti, segnalando un quadro incerto. Le stime sperimentali, basate su un campione limitato, richiedono prudenza.",
+      "analysis": "Udinese e Lecce registrano percentuali vicine nel modello Poisson non validato, indicando un certo equilibrio. Il campione limitato impone di interpretare i dati con prudenza.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
