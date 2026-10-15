@@ -18,6 +18,66 @@ function percent(value) {
     : "—";
 }
 
+function appendAvailability(match, card) {
+  const data = match && match.availability_data ? match.availability_data : {};
+  const section = document.createElement("section");
+  section.className = "availability-panel";
+  const title = document.createElement("strong");
+  title.textContent = "Disponibilità e formazioni";
+  const note = document.createElement("p");
+  note.className = "match-meta";
+  note.textContent = data.note || "Dati non verificati: la fonte disponibilità non ha restituito informazioni.";
+  section.append(title, note);
+  const injuries = Array.isArray(data.injuries) ? data.injuries : [];
+  if (injuries.length) {
+    const heading = document.createElement("p");
+    heading.className = "availability-heading";
+    heading.textContent = "Indisponibilità segnalate dalla fonte";
+    section.append(heading);
+    const list = document.createElement("ul");
+    list.className = "availability-list";
+    for (const item of injuries.slice(0, 12)) {
+      const li = document.createElement("li");
+      const details = [item.type, item.reason].filter(Boolean).join(" · ");
+      li.textContent = [item.player, item.team, details].filter(Boolean).join(" — ");
+      list.append(li);
+    }
+    if (injuries.length > 12) {
+      const more = document.createElement("li");
+      more.textContent = "Altre " + (injuries.length - 12) + " segnalazioni non mostrate.";
+      list.append(more);
+    }
+    section.append(list);
+  }
+  const lineups = data.lineups;
+  if (lineups && (lineups.home_starters?.length || lineups.away_starters?.length)) {
+    const heading = document.createElement("p");
+    heading.className = "availability-heading";
+    heading.textContent = "Formazioni pubblicate";
+    section.append(heading);
+    for (const side of [
+      { label: match.home_team, formation: lineups.home_formation, starters: lineups.home_starters },
+      { label: match.away_team, formation: lineups.away_formation, starters: lineups.away_starters }
+    ]) {
+      if (!side.starters || !side.starters.length) continue;
+      const line = document.createElement("p");
+      line.className = "match-meta";
+      line.textContent = side.label + (side.formation ? " (" + side.formation + ")" : "") + ": " + side.starters.join(", ");
+      section.append(line);
+    }
+    const updated = document.createElement("p");
+    updated.className = "match-meta";
+    updated.textContent = "Ultimo controllo formazioni: " + (lineups.updated_at ? new Date(lineups.updated_at).toLocaleString("it-IT") : "orario non disponibile");
+    section.append(updated);
+  } else if (data.lineup_status === "non_pubblicate") {
+    const lineupNote = document.createElement("p");
+    lineupNote.className = "match-meta";
+    lineupNote.textContent = "Formazioni ufficiali non ancora disponibili nella fonte.";
+    section.append(lineupNote);
+  }
+  card.append(section);
+}
+
 function renderMatches(matches) {
   const container = document.getElementById("matches");
   if (!container) return;
@@ -55,6 +115,7 @@ function renderMatches(matches) {
       noBet.className = "no-bet";
       noBet.textContent = "NO BET · " + (match.reason || "Dati insufficienti: nessun esito consigliato.");
       card.append(meta, teams, noBet);
+      appendAvailability(match, card);
       if (match.analysis) {
         const analysis = document.createElement("p");
         analysis.className = "match-analysis";
@@ -119,12 +180,7 @@ function renderMatches(matches) {
       : "";
 
     card.append(meta, teams, expected, grid, confidence);
-    const availability = document.createElement("p");
-    availability.className = "match-meta";
-    availability.textContent = "Disponibilità squadre: " +
-      ((match.availability_data && match.availability_data.note) ||
-       "infortuni, squalifiche e formazioni ufficiali non verificati dal modello.");
-    card.append(availability);
+    appendAvailability(match, card);
     if (match.odds_1x2) {
       const odds = document.createElement("p");
       odds.className = "match-meta";
