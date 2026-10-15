@@ -266,7 +266,6 @@ TEAM_ALIAS_GROUPS = [
     {"verona", "hellasverona"},
     {"psg", "parissaintgermain", "parissaintgermainfc"},
     {"parisfc", "parisfootballclub"},
-    # Varianti comuni delle squadre Eredivisie tra calendario ESPN e storico football-data.
     {"ajax", "ajaxamsterdam", "afcajax"},
     {"groningen", "fcgroningen"},
     {"twente", "fctwente"},
@@ -290,13 +289,13 @@ TEAM_ALIAS_GROUPS = [
     {"eintrachtfrankfurt", "eintracht"},
     {"borussiadortmund", "dortmund"},
     {"borussiamonchengladbach", "monchengladbach", "gladbach"},
-    {"rbLeipzig".lower(), "rasenballsportleipzig", "rbleipzig"},
+    {"rbleipzig", "rasenballsportleipzig", "rbleipzig"},
     {"olympiquedemarseille", "marseille"},
     {"olympiquelyonnais", "lyon"},
     {"realbetis", "betis"},
     {"realsociedad", "sociedad"},
     {"celta", "celtavigo"},
-    {"internacional", "internacionalportoalegre"},
+    {"internacional", "internacionalportoalegre"}
 ]
 
 
