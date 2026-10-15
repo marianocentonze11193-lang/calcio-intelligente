@@ -6,7 +6,7 @@ Dashboard statica di pronostici calcistici con aggiornamento automatico tramite 
 - Calendario e risultati da football-data.co.uk, con calendario ESPN di riserva.
 - Solo massime divisioni nazionali supportate dalla fonte storica: Premier League, La Liga, Bundesliga, Serie A, Ligue 1, Scottish Premiership, Eredivisie, Primeira Liga, Belgian Pro League, Süper Lig turca, Bundesliga austriaca, Superliga danese, Super League greca, Veikkausliiga finlandese, Premier Division irlandese, Eliteserien norvegese, Ekstraklasa polacca, Liga I rumena, Allsvenskan svedese e Super League svizzera. Il calendario e lo storico devono essere reperibili e abbinabili per ogni partita. Le divisioni inferiori inglesi e scozzesi sono escluse.
 - Stime Poisson basate su statistiche casa/trasferta, medie di lega, Elo sequenziale e forma delle ultime cinque gare.
-- Stima preliminare per campioni ridotti; NO BET quando mancano osservazioni pertinenti.
+- Stima preliminare solo quando entrambe le squadre hanno almeno due gare nel corretto contesto casa/trasferta; NO BET quando mancano dati o il campione è insufficiente.
 - Probabilità 1X2, doppia chance, Over/Under, Goal/No Goal e risultati esatti stimati.
 - Commenti Gemini quando il secret `GEMINI_API_KEY` è configurato; l'AI non inventa informazioni non fornite.
 - Importazione delle quote 1X2 quando presenti nei CSV gratuiti football-data.co.uk; integrazione opzionale di The Odds API tramite il secret `ODDS_API_KEY`; stima del valore atteso teorico.
@@ -16,10 +16,10 @@ Dashboard statica di pronostici calcistici con aggiornamento automatico tramite 
 
 ## Limiti e trasparenza
 - Elo e Poisson sono un modello sperimentale; non è ancora dimostrata la sua redditività e la calibrazione va misurata su un campione storico ampio.
-- Per alcuni campionati il calendario ESPN può essere disponibile senza dati storici equivalenti: in tal caso la partita resta NO BET.
+- Per alcuni campionati il calendario ESPN può essere disponibile senza dati storici equivalenti: in tal caso la partita resta NO BET con una causa esplicita (dati mancanti, campione insufficiente o stima non affidabile).
 - Le formazioni ufficiali, gli infortuni e le squalifiche non sono ancora coperti da una fonte automatica gratuita, uniforme e verificata per tutte le leghe. Non vengono inventati: per integrarli in modo affidabile serve un provider con endpoint dedicati e limiti/condizioni compatibili; una semplice notizia o una formazione non confermata non viene trattata come dato certo.
 - La copertura quote gratuita varia per partita: vengono usate le quote 1X2 presenti nei CSV football-data.co.uk. Per una copertura alternativa è supportata The Odds API con il secret `ODDS_API_KEY`; senza chiave l'app continua a usare le quote gratuite eventualmente disponibili.
-- Il valore atteso è un calcolo teorico dipendente dalla qualità del modello, non una prova di profitto; la soglia EV del 3% genera soltanto candidati da verificare.
+- Il valore atteso è un calcolo teorico dipendente dalla qualità del modello, non una prova di profitto; la soglia EV teorica del 5% genera candidati solo con almeno 8 gare pertinenti per entrambe le squadre; non è una prova di vantaggio reale.
 - Le fonti gratuite hanno limiti di copertura, frequenza e condizioni d'uso. Il workflow segnala gli errori e può non aggiornare quando una fonte non è disponibile.
 - Il sito è statico: il pulsante ricarica i dati pubblicati, non avvia il calcolo remoto.
 - Nessun pronostico garantisce risultati o vincite.
