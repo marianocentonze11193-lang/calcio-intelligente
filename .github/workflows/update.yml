@@ -38,5 +38,7 @@ jobs:
             echo "Nessun cambiamento nei dati."
           else
             git commit -m "Aggiorna dati e pronostici calcistici"
+            # Integra eventuali modifiche pubblicate mentre il calcolo era in corso.
+            git pull --rebase origin main
             git push
           fi
