@@ -24,9 +24,21 @@ AVAILABILITY_SCRIPT = Path(__file__).resolve().parents[1] / "scripts" / "enrich_
 AVAILABILITY_SPEC = importlib.util.spec_from_file_location("enrich_with_availability", AVAILABILITY_SCRIPT)
 availability_module = importlib.util.module_from_spec(AVAILABILITY_SPEC)
 AVAILABILITY_SPEC.loader.exec_module(availability_module)
+VALIDATOR_SCRIPT = Path(__file__).resolve().parents[1] / "scripts" / "validate_published_data.py"
+VALIDATOR_SPEC = importlib.util.spec_from_file_location("validate_published_data", VALIDATOR_SCRIPT)
+validator_module = importlib.util.module_from_spec(VALIDATOR_SPEC)
+VALIDATOR_SPEC.loader.exec_module(validator_module)
 
 
 class PredictionModelTests(unittest.TestCase):
+    def test_published_data_timestamp_rejects_stale_future_and_invalid_values(self):
+        from datetime import datetime, timezone, timedelta
+        now = datetime(2026, 10, 15, 18, 0, tzinfo=timezone.utc)
+        self.assertTrue(validator_module.is_recent_timestamp("2026-10-15T17:00:00+00:00", now=now))
+        self.assertFalse(validator_module.is_recent_timestamp("2026-10-13T00:00:00+00:00", now=now))
+        self.assertFalse(validator_module.is_recent_timestamp("2026-10-15T19:00:00+00:00", now=now))
+        self.assertFalse(validator_module.is_recent_timestamp("not-a-date", now=now))
+
     def test_availability_team_matching_uses_safe_aliases(self):
         self.assertTrue(availability_module.same_team("Paris Saint-Germain", "PSG"))
         self.assertTrue(availability_module.same_team("Inter Milan", "Internazionale"))
