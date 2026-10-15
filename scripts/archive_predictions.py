@@ -16,6 +16,7 @@ PREDICTIONS_FILE = ROOT / "data" / "predictions.json"
 HISTORY_FILE = ROOT / "data" / "history.json"
 SOURCE = "https://www.football-data.co.uk"
 USER_AGENT = "CalcioIntelligente/1.0"
+MIN_METRIC_MATCHES = 30
 LEAGUES = {
     "E0": "Premier League", "SP1": "La Liga", "D1": "Bundesliga",
     "I1": "Serie A", "F1": "Ligue 1", "SC0": "Scottish Premiership",
@@ -102,11 +103,23 @@ def result_index(rows):
         if not match_date or not home or not away or hg in (None, "") or ag in (None, ""):
             continue
         try:
-            score = (int(float(hg)), int(float(ag)))
+            raw_home, raw_away = float(hg), float(ag)
+            if not raw_home.is_integer() or not raw_away.is_integer():
+                continue
+            score = (int(raw_home), int(raw_away))
         except (ValueError, TypeError):
             continue
-        index[(match_date, team_key(home), team_key(away))] = score
-    return index
+        if not (0 <= score[0] <= 15 and 0 <= score[1] <= 15):
+            continue
+        home_key, away_key = team_key(home), team_key(away)
+        if not home_key or not away_key or home_key == away_key:
+            continue
+        key = (match_date, home_key, away_key)
+        if key in index and index[key] != score:
+            index[key] = None
+        elif key not in index:
+            index[key] = score
+    return {key: score for key, score in index.items() if score is not None}
 
 
 def fetch_espn_results(league, dates):
@@ -161,8 +174,12 @@ def fetch_espn_results(league, dates):
 def calculate_metrics(records):
     evaluated = [item for item in records if item.get("outcome") in ("1", "X", "2")
                  and isinstance(item.get("probabilities"), dict)]
-    if not evaluated:
-        return {"settled_matches": 0, "accuracy_1x2": None, "brier_score_1x2": None}
+    if len(evaluated) < MIN_METRIC_MATCHES:
+        return {
+            "settled_matches": len(evaluated), "accuracy_1x2": None, "brier_score_1x2": None,
+            "minimum_matches_required": MIN_METRIC_MATCHES,
+            "note": f"Metriche non pubblicate: servono almeno {MIN_METRIC_MATCHES} partite concluse con probabilità archiviate.",
+        }
     correct = 0
     brier_total = 0.0
     for item in evaluated:
@@ -191,8 +208,8 @@ def calculate_metrics_by_league(records):
     return {
         league: calculate_metrics(items)
         for league, items in sorted(grouped.items())
-        if any(x.get("outcome") in ("1", "X", "2") and isinstance(x.get("probabilities"), dict)
-               for x in items)
+        if sum(1 for x in items if x.get("outcome") in ("1", "X", "2")
+               and isinstance(x.get("probabilities"), dict)) >= MIN_METRIC_MATCHES
     }
 
 
@@ -218,6 +235,7 @@ def main():
             "home_team": match.get("home_team", ""), "away_team": match.get("away_team", ""),
             "status_at_archive": match.get("status", "NO BET"),
             "probabilities": match.get("probabilities") or {},
+            "data_quality": match.get("data_quality", "non_dichiarata"),
             "expected_home_goals": match.get("expected_home_goals"),
             "expected_away_goals": match.get("expected_away_goals"),
             "sample_matches": match.get("sample_matches", 0),
@@ -271,6 +289,12 @@ def main():
         if score is None:
             continue
         hg, ag = score
+        if (not isinstance(hg, int) or not isinstance(ag, int) or
+                not (0 <= hg <= 15 and 0 <= ag <= 15) or
+                not item.get("home_team") or not item.get("away_team") or
+                team_key(item.get("home_team")) == team_key(item.get("away_team"))):
+            print(f"AVVISO: risultato scartato per controllo qualità: {item.get('id')}")
+            continue
         item["home_goals"], item["away_goals"] = hg, ag
         item["outcome"] = "1" if hg > ag else "X" if hg == ag else "2"
         item["settled_at"] = datetime.now(timezone.utc).isoformat()
