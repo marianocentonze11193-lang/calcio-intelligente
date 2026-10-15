@@ -443,9 +443,20 @@ async function aggiornaDati() {
     allLoadedMatches = combined;
     populateFilters(combined);
     applyFilters();
-    stato.textContent = validMatches.length
+    const coverage = dati.coverage || {};
+    const historyCount = Array.isArray(coverage.leagues_with_history)
+      ? coverage.leagues_with_history.length
+      : null;
+    const coverageNote = historyCount !== null
+      ? " Copertura storico: " + historyCount + "/" + (coverage.leagues_configured || "?") + " campionati configurati."
+      : "";
+    const coverageWarning = historyCount !== null && historyCount < (coverage.leagues_configured || historyCount)
+      ? " Alcuni campionati non hanno uno storico verificato: i relativi incontri restano NO BET."
+      : "";
+    stato.textContent = (validMatches.length
       ? "STIME DISPONIBILI · " + validMatches.length + " partite con probabilità; " + noBetMatches.length + " NO BET senza dati sufficienti. Le stime preliminari sono indicate come tali."
-      : "NO BET · Nessuna partita ha dati sufficienti per stimare probabilità; il calendario mostra le partite disponibili.";
+      : "NO BET · Nessuna partita ha dati sufficienti per stimare probabilità; il calendario mostra le partite disponibili.")
+      + coverageNote + coverageWarning;
     const stamp = dati.updated_at ? new Date(dati.updated_at).toLocaleString("it-IT") : "non disponibile";
     aggiornamento.textContent = "Ultimo calcolo salvato: " + stamp + ". Il pulsante ricarica il file pubblicato; non avvia direttamente il calcolo sul server.";
   } catch (errore) {
