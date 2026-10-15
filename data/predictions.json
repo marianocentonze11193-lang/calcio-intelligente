@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-15T09:51:20+00:00",
+  "updated_at": "2026-10-15T09:54:58+00:00",
   "source": "https://www.football-data.co.uk",
   "season": "2627",
   "model": "Poisson semplice con filtro storico minimo; stime indicative, non garanzie",
@@ -33,7 +33,7 @@
         "home_scores": 82.6,
         "away_scores": 79.4
       },
-      "analysis": "Il modello Poisson non validato assegna il 42.2% di probabilità alla vittoria casalinga e il 35.0% a quella esterna, evidenziando una certa vicinanza tra i valori. Con un campione di appena 4 partite per parte, i dati attuali presentano forti limiti di incertezza.",
+      "analysis": "Le stime sperimentali di questo modello Poisson non ancora validato evidenziano una probabilità del 42.2% per la vittoria interna e del 35.0% per quella esterna, con un campione di sole 4 partite per squadra. L'incertezza è elevata e le percentuali sono vicine, suggerendo molta cautela nell'interpretare i dati.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -87,7 +87,7 @@
         "home_scores": 58.8,
         "away_scores": 85.1
       },
-      "analysis": "Le stime sperimentali indicano il 61.3% per la vittoria ospite, ma il campione si limita a sole 4 gare casalinghe e 4 esterne. Questa proiezione probabilistica richiede cautela a causa dei chiari limiti del campione e dell'assenza di validazione del modello.",
+      "analysis": "Basato su un campione limitato a 4 gare casalinghe e 4 esterne, questo modello Poisson non ancora validato assegna il 61.3% alla vittoria ospite e il 16.9% a quella interna. La forte incertezza e i limiti del campione impongono di interpretare queste probabilità con estrema prudenza.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -141,7 +141,7 @@
         "home_scores": 86.7,
         "away_scores": 85.0
       },
-      "analysis": "Il modello evidenzia una forte vicinanza tra la vittoria casalinga al 41.8% e quella esterna al 37.2%. Il campione di 3 partite per squadra è estremamente ridotto e riflette la natura sperimentale e non validata delle stime.",
+      "analysis": "Il modello Poisson non ancora validato indica stime sperimentali molto vicine tra vittoria di casa (41.8%) e degli ospiti (37.2%), basate su un campione ridotto di appena 3 partite. Questa elevata incertezza e i limiti numerici richiedono un'interpretazione estremamente prudente dei dati.",
       "suggested_markets": [
         "Over 1,5",
         "Goal"
@@ -196,7 +196,7 @@
         "home_scores": 84.1,
         "away_scores": 68.8
       },
-      "analysis": "Il modello non validato stima la vittoria di casa al 53.2% e il pareggio al 22.8%. Si tratta di stime sperimentali basate su un campione di sole 3 partite, pertanto l'incertezza statistica resta elevata.",
+      "analysis": "Le probabilità del 53.2% per la vittoria interna e del 24.0% per quella esterna derivano da un campione di sole 3 partite per parte, elaborate da un modello Poisson non ancora validato. L'incertezza intrinseca e i limiti del campione ricordano di trattare queste stime come puramente sperimentali.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -250,7 +250,7 @@
         "home_scores": 86.5,
         "away_scores": 63.2
       },
-      "analysis": "Le probabilità assegnano il 60.7% alla vittoria della squadra di casa, derivanti da un campione limitato a 3 partite. Interpretare questi valori come stime sperimentali di un modello Poisson non validato impone grande prudenza.",
+      "analysis": "Questo modello Poisson non ancora validato stima il 60.7% per la vittoria in casa e il 18.2% per gli ospiti, basandosi su un campione limitato a 3 partite. I limiti del campione e l'incertezza impongono di considerare queste percentuali come stime sperimentali.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -304,7 +304,7 @@
         "home_scores": 64.3,
         "away_scores": 89.5
       },
-      "analysis": "Il modello Poisson assegna il 65.0% di probabilità alla vittoria in trasferta, con un campione di sole 3 gare per entrambe le squadre. La limitatezza dei dati evidenzia l'incertezza intrinseca di queste stime sperimentali non validate.",
+      "analysis": "Le stime sperimentali di questo modello Poisson non ancora validato mostrano il 65.0% di probabilità per la vittoria esterna a fronte del 16.0% per quella interna, con un campione di sole 3 gare. Questa analisi presenta forti limiti campionari e una marcata incertezza intrinseca.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -358,7 +358,7 @@
         "home_scores": 82.3,
         "away_scores": 86.2
       },
-      "analysis": "Le probabilità del modello mostrano una vicinanza tra la vittoria ospite al 44.3% e quella casalinga al 34.3%. Il campione ridotto a 4 partite interne e 3 esterne evidenzia i limiti di queste stime sperimentali non validate.",
+      "analysis": "Il modello Poisson non ancora validato calcola probabilità vicine tra vittoria ospite (44.3%) e interna (34.3%), basandosi su un campione ridotto (4 e 3 partite). L'elevata incertezza e i limiti del campione suggeriscono di interpretare questi dati con molta prudenza.",
       "suggested_markets": [
         "Over 1,5",
         "Goal"
@@ -413,7 +413,7 @@
         "home_scores": 62.3,
         "away_scores": 68.7
       },
-      "analysis": "Il modello segnala una forte vicinanza tra la vittoria esterna al 40.0%, quella casalinga al 30.5% e il pareggio al 29.5%. Basandosi su un campione di 5 partite, le stime restano sperimentali e non validate.",
+      "analysis": "Con un campione di 5 partite per squadra, questo modello Poisson non ancora validato mostra probabilità ravvicinate tra vittoria esterna (40.0%), pareggio (29.5%) e successo interno (30.5%). L'incertezza è considerevole e i limiti del campione richiedono prudenza nell'analisi.",
       "suggested_markets": [],
       "top_scorelines": [
         {
@@ -465,7 +465,7 @@
         "home_scores": 64.2,
         "away_scores": 51.0
       },
-      "analysis": "Le stime sperimentali indicano il 42.1% per la vittoria di casa e il 33.0% per il pareggio, evidenziando una certa vicinanza. Il campione limitato a 4 e 5 partite sottolinea l'incertezza di questo modello Poisson non validato.",
+      "analysis": "Le probabilità del 42.1% (casa), 33.0% (pareggio) e 24.9% (trasferta) provengono da un modello Poisson non ancora validato con un campione limitato a 4 e 5 partite. Data la vicinanza delle stime e l'incertezza, i risultati vanno presi con grande cautela.",
       "suggested_markets": [],
       "top_scorelines": [
         {
@@ -517,7 +517,7 @@
         "home_scores": 75.2,
         "away_scores": 60.8
       },
-      "analysis": "Il modello non validato stima la vittoria casalinga al 47.5% e il pareggio al 27.2%. Trattandosi di stime sperimentali basate su un campione di 3 partite, i limiti dei dati richiedono prudenza.",
+      "analysis": "Questo modello Poisson non ancora validato stima il 47.5% per la vittoria di casa e il 25.3% per gli ospiti, basandosi su un campione di sole 3 partite. La notevole incertezza e i limiti del campione impongono di interpretare queste percentuali con prudenza.",
       "suggested_markets": [],
       "top_scorelines": [
         {
@@ -569,7 +569,7 @@
         "home_scores": 60.0,
         "away_scores": 52.7
       },
-      "analysis": "Le probabilità mostrano una spiccata vicinanza tra la vittoria di casa al 37.5%, il pareggio al 34.3% e la vittoria ospite al 28.1%. Il campione di 4 partite per parte evidenzia i limiti di questo modello Poisson non validato.",
+      "analysis": "Le stime sperimentali di questo modello Poisson non ancora validato indicano percentuali vicine per vittoria interna (37.5%), pareggio (34.3%) e successo esterno (28.1%) su un campione di 4 partite. L'elevata incertezza e i limiti del campione richiedono molta prudenza.",
       "suggested_markets": [],
       "top_scorelines": [
         {
@@ -621,7 +621,7 @@
         "home_scores": 57.4,
         "away_scores": 69.3
       },
-      "analysis": "Il modello assegna il 43.4% alla vittoria esterna e il 30.0% al pareggio, evidenziando una vicinanza di valori. Il campione di 4 partite per squadra riflette la natura sperimentale e non validata delle stime.",
+      "analysis": "Basato su un campione ridotto di 4 partite per squadra, questo modello Poisson non ancora validato assegna il 43.4% alla vittoria ospite e il 30.0% al pareggio. L'incertezza dei dati e i limiti del campione impongono una lettura estremamente prudente.",
       "suggested_markets": [],
       "top_scorelines": [
         {
@@ -673,7 +673,7 @@
         "home_scores": 63.5,
         "away_scores": 90.1
       },
-      "analysis": "Le stime sperimentali indicano il 66.5% per la vittoria della squadra in trasferta. Questo modello Poisson non validato si basa su un campione di sole 4 partite, evidenziando forti limiti nei dati.",
+      "analysis": "Il modello Poisson non ancora validato indica una probabilità del 66.5% per la vittoria esterna e del 15.1% per quella casalinga, basandosi su un campione di 4 partite. I limiti del campione e l'incertezza suggeriscono di considerare queste cifre come stime sperimentali.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -727,7 +727,7 @@
         "home_scores": 84.8,
         "away_scores": 81.5
       },
-      "analysis": "Il modello evidenzia una vicinanza tra la vittoria casalinga al 43.0% e quella esterna al 35.1%. Il campione di 4 partite per squadra sottolinea l'incertezza di queste stime sperimentali non validate.",
+      "analysis": "Le probabilità del 43.0% per la vittoria interna e del 35.1% per quella esterna sono molto vicine, elaborate da un modello Poisson non ancora validato con un campione di 4 partite. L'incertezza e i limiti del campione richiedono una forte prudenza interpretativa.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -781,7 +781,7 @@
         "home_scores": 82.1,
         "away_scores": 86.0
       },
-      "analysis": "Le probabilità mostrano una vicinanza tra la vittoria ospite al 44.1% e quella casalinga al 34.4%. Con un campione di 3 e 4 partite, le stime del modello Poisson non validato presentano evidenti limiti.",
+      "analysis": "Questo modello Poisson non ancora validato mostra stime sperimentali ravvicinate tra vittoria esterna (44.1%) e interna (34.4%), basate su un campione di 3 e 4 partite. L'incertezza complessiva e i limiti del campione impongono di interpretare i dati con cautela.",
       "suggested_markets": [
         "Over 1,5",
         "Goal"
@@ -836,7 +836,7 @@
         "home_scores": 90.2,
         "away_scores": 72.4
       },
-      "analysis": "Il modello stima la vittoria casalinga al 60.4% basandosi su un campione ristretto di 3 e 4 partite. Trattandosi di stime sperimentali non validate, l'incertezza complessiva del campione resta elevata.",
+      "analysis": "Il modello Poisson non ancora validato stima il 60.4% per la vittoria casalinga e il 20.3% per quella ospite, con un campione limitato a 3 e 4 partite. L'incertezza intrinseca e i limiti del campione ricordano di trattare queste percentuali come stime sperimentali.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -890,7 +890,7 @@
         "home_scores": 81.1,
         "away_scores": 67.3
       },
-      "analysis": "Le probabilità indicano il 50.2% per la vittoria di casa, con il pareggio e la vittoria ospite vicini rispettivamente al 24.3% e 25.5%. Il campione di 3 partite evidenzia i limiti di questo modello Poisson non validato.",
+      "analysis": "Basato su un campione di sole 3 partite per parte, questo modello Poisson non ancora validato assegna il 50.2% alla vittoria interna e il 25.5% a quella esterna. La presenza di incertezza e i limiti del campione richiedono un approccio molto prudente.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -944,7 +944,7 @@
         "home_scores": 72.3,
         "away_scores": 86.8
       },
-      "analysis": "Il modello assegna il 54.6% alla vittoria esterna, interpretando i dati come stime sperimentali. Il campione di sole 3 partite per parte impone cautela a causa della mancata validazione del modello.",
+      "analysis": "Le stime sperimentali di questo modello Poisson non ancora validato indicano il 54.6% per la vittoria ospite e il 24.0% per quella di casa, su un campione di sole 3 partite. I limiti del campione e l'incertezza impongono di interpretare queste cifre con cautela.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -998,7 +998,7 @@
         "home_scores": 88.8,
         "away_scores": 80.4
       },
-      "analysis": "Le stime sperimentali indicano il 50.7% per la vittoria casalinga e il 28.8% per quella ospite. Il campione di 4 partite per squadra riflette la natura non validata e i limiti di questo modello Poisson.",
+      "analysis": "Questo modello Poisson non ancora validato indica una probabilità del 50.7% per la vittoria interna e del 28.8% per quella esterna, con un campione di 4 partite. L'incertezza e i limiti del campione suggeriscono di considerare tali dati come mere stime sperimentali.",
       "suggested_markets": [
         "Over 1,5",
         "Goal"
@@ -1053,7 +1053,7 @@
         "home_scores": 60.0,
         "away_scores": 66.8
       },
-      "analysis": "Il modello mostra una forte vicinanza tra la vittoria ospite al 39.6%, il pareggio al 30.5% e la vittoria di casa al 29.9%. Con un campione di 4 partite, le stime sperimentali mantengono un elevato grado di incertezza.",
+      "analysis": "Le probabilità calcolate da questo modello Poisson non ancora validato sono molto vicine: 39.6% per gli ospiti, 30.5% per il pareggio e 29.9% per i padroni di casa, su un campione di 4 partite. L'elevata incertezza e i limiti del campione richiedono massima prudenza.",
       "suggested_markets": [],
       "top_scorelines": [
         {
@@ -1105,7 +1105,7 @@
         "home_scores": 64.3,
         "away_scores": 63.1
       },
-      "analysis": "Le probabilità mostrano una netta vicinanza tra la vittoria di casa al 35.6%, il pareggio al 30.6% e la vittoria ospite al 33.9%. Il campione di 3 partite evidenzia i limiti intrinseci di questo modello Poisson non validato.",
+      "analysis": "Il modello Poisson non ancora validato mostra probabilità estremamente ravvicinate tra vittoria interna (35.6%), pareggio (30.6%) e successo ospite (33.9%), basandosi su 3 partite. L'incertezza è molto alta e i limiti del campione impongono grande cautela.",
       "suggested_markets": [],
       "top_scorelines": [
         {
@@ -1157,7 +1157,7 @@
         "home_scores": 60.6,
         "away_scores": 58.0
       },
-      "analysis": "Il modello indica una forte vicinanza tra tutti i segni principali, con la vittoria casalinga al 35.3%, il pareggio al 32.9% e la vittoria esterna al 31.8%. Le stime sperimentali si basano su un campione di sole 3 partite.",
+      "analysis": "Le stime sperimentali di questo modello Poisson non ancora validato evidenziano percentuali quasi identiche per casa (35.3%), pareggio (32.9%) e trasferta (31.8%) su un campione di 3 partite. Questa forte incertezza e i limiti del campione richiedono estrema prudenza.",
       "suggested_markets": [],
       "top_scorelines": [
         {
@@ -1209,7 +1209,7 @@
         "home_scores": 65.6,
         "away_scores": 62.8
       },
-      "analysis": "Le probabilità evidenziano una stretta vicinanza tra la vittoria casalinga al 36.8%, il pareggio al 30.3% e la vittoria ospite al 32.8%. Trattandosi di un campione di 3 partite, le stime sperimentali non validate presentano grandi limiti.",
+      "analysis": "Con un campione di sole 3 partite, questo modello Poisson non ancora validato indica probabilità molto vicine tra casa (36.8%), pareggio (30.3%) e trasferta (32.8%). L'incertezza intrinseca e i limiti del campione suggeriscono una lettura molto prudente.",
       "suggested_markets": [],
       "top_scorelines": [
         {
@@ -1261,7 +1261,7 @@
         "home_scores": 62.7,
         "away_scores": 86.1
       },
-      "analysis": "Il modello stima la vittoria esterna al 60.3% sfruttando un campione limitato a 3 e 4 partite. L'assenza di validazione e la ridotta dimensione campionaria rendono queste percentuali puramente sperimentali.",
+      "analysis": "Questo modello Poisson non ancora validato stima il 60.3% per la vittoria ospite e il 18.3% per quella interna, basandosi su un campione di 3 e 4 partite. L'incertezza e i limiti del campione richiedono di interpretare queste percentuali come stime sperimentali.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1315,7 +1315,7 @@
         "home_scores": 62.4,
         "away_scores": 60.7
       },
-      "analysis": "Le stime sperimentali mostrano una marcata vicinanza tra la vittoria di casa al 35.3%, il pareggio al 31.7% e la vittoria ospite al 33.0%. Il campione limitato a 3 partite evidenzia l'incertezza di questo modello Poisson.",
+      "analysis": "Le probabilità di questo modello Poisson non ancora validato risultano molto vicine tra casa (35.3%), pareggio (31.7%) e trasferta (33.0%), con un campione di sole 3 partite. L'elevata incertezza e i limiti del campione impongono una prudenza rigorosa.",
       "suggested_markets": [],
       "top_scorelines": [
         {
@@ -1367,7 +1367,7 @@
         "home_scores": 88.7,
         "away_scores": 66.8
       },
-      "analysis": "Il modello assegna il 61.9% alla vittoria casalinga sulla base di un campione di 4 partite per squadra. Questa stima sperimentale non validata deve essere interpretata considerando i limiti del campione.",
+      "analysis": "Il modello Poisson non ancora validato assegna il 61.9% alla vittoria interna e il 18.2% a quella esterna, basandosi su un campione di 4 partite per squadra. I limiti del campione e l'incertezza richiedono di trattare queste cifre come stime sperimentali.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1421,7 +1421,7 @@
         "home_scores": 93.1,
         "away_scores": 56.2
       },
-      "analysis": "Le probabilità indicano il 76.5% per la vittoria di casa secondo il modello Poisson. Il campione limitato a 3 partite evidenzia la natura sperimentale e non validata di questa stima.",
+      "analysis": "Basato su un campione di sole 3 partite per parte, questo modello Poisson non ancora validato stima il 76.5% per la vittoria di casa. L'incertezza dei dati e i limiti del campione impongono di interpretare questa probabilità con la massima prudenza.",
       "suggested_markets": [
         "Over 1,5",
         "1"
@@ -1476,7 +1476,7 @@
         "home_scores": 69.5,
         "away_scores": 68.8
       },
-      "analysis": "Il modello evidenzia una forte vicinanza tra la vittoria casalinga al 36.5%, quella esterna al 35.5% e il pareggio al 28.0%. Le stime sperimentali si basano su un campione di sole 3 partite per parte.",
+      "analysis": "Le stime sperimentali di questo modello Poisson non ancora validato mostrano percentuali vicine tra vittoria interna (36.5%), pareggio (28.0%) e successo esterno (35.5%) su un campione di 3 partite. L'incertezza e i limiti del campione richiedono grande cautela.",
       "suggested_markets": [],
       "top_scorelines": [
         {
@@ -1528,7 +1528,7 @@
         "home_scores": 79.1,
         "away_scores": 39.3
       },
-      "analysis": "Le stime sperimentali indicano il 63.7% per la vittoria della squadra di casa. Il modello Poisson non validato si basa su un campione di 5 e 4 partite, evidenziando i limiti informativi dei dati.",
+      "analysis": "Questo modello Poisson non ancora validato indica una probabilità del 63.7% per la vittoria casalinga e dell'11.6% per gli ospiti, con un campione di 5 e 4 partite. I limiti del campione e l'incertezza impongono di considerare queste stime come puramente sperimentali.",
       "suggested_markets": [],
       "top_scorelines": [
         {
