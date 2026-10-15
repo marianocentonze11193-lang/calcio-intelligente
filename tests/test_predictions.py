@@ -33,6 +33,13 @@ class PredictionModelTests(unittest.TestCase):
         self.assertFalse(availability_module.same_team("Milan", "Inter"))
         self.assertFalse(availability_module.same_team("Roma", "Lazio"))
 
+    def test_duplicate_injury_reports_are_deduplicated(self):
+        cache = {}
+        injury = {"team": "Milan", "player": "Player A", "type": "Injury", "reason": "Ankle"}
+        self.assertTrue(availability_module.add_unique_injury(cache, "123", injury))
+        self.assertFalse(availability_module.add_unique_injury(cache, "123", injury.copy()))
+        self.assertEqual(len(cache["injuries_by_fixture"]["123"]), 1)
+
     def test_availability_without_key_is_explicitly_unconfigured(self):
         result = availability_module.availability_for({"home_team": "A", "away_team": "B"}, {}, False)
         self.assertEqual(result["status"], "non_configurata")
