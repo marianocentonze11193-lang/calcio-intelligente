@@ -47,6 +47,14 @@ function formatDate(value) {
   });
 }
 
+function formatFullDate(value) {
+  if (!value) return "Data da confermare";
+  const parsed = new Date(value + "T12:00:00");
+  return Number.isNaN(parsed.getTime()) ? value : parsed.toLocaleDateString("it-IT", {
+    weekday: "long", day: "2-digit", month: "long", year: "numeric"
+  });
+}
+
 function percent(value) {
   return typeof value === "number"
     ? value.toLocaleString("it-IT", { maximumFractionDigits: 1 }) + "%"
@@ -163,13 +171,16 @@ function renderMatches(matches) {
     return;
   }
 
+  const orderMode = document.getElementById("date-order-filter")?.value || "competition";
   let previousGroup = "";
   for (const match of matches) {
-    const group = (match.country || "Altro") + " · " + (match.league || "Competizione");
+    const group = orderMode === "competition"
+      ? (match.country || "Altro") + " · " + (match.league || "Competizione")
+      : match.date;
     if (group !== previousGroup) {
       const heading = document.createElement("h3");
       heading.className = "competition-heading";
-      heading.textContent = group;
+      heading.textContent = orderMode === "competition" ? group : formatFullDate(match.date);
       container.append(heading);
       previousGroup = group;
     }
@@ -178,7 +189,9 @@ function renderMatches(matches) {
 
     const meta = document.createElement("p");
     meta.className = "match-meta";
-    meta.textContent = formatDate(match.date) +
+    meta.textContent = (orderMode === "competition"
+      ? formatDate(match.date)
+      : (match.country || "Altro") + " · " + (match.league || "Competizione")) +
       (match.kickoff ? " · " + match.kickoff : " · orario da confermare");
 
     const teams = document.createElement("h3");
@@ -559,12 +572,29 @@ function populateFilters(matches) {
 function applyFilters() {
   const country = document.getElementById("country-filter");
   const league = document.getElementById("league-filter");
+  const dateOrder = document.getElementById("date-order-filter");
   const selectedCountry = country ? country.value : "";
   const selectedLeague = league ? league.value : "";
-  renderMatches(allLoadedMatches.filter(m =>
+  const orderMode = dateOrder ? dateOrder.value : "competition";
+  const filtered = allLoadedMatches.filter(m =>
     (!selectedCountry || (m.country || "Altro") === selectedCountry) &&
     (!selectedLeague || (m.league || "Competizione") === selectedLeague)
-  ));
+  );
+  filtered.sort((a, b) => {
+    if (orderMode === "date-asc" || orderMode === "date-desc") {
+      const byDate = a.date.localeCompare(b.date);
+      if (byDate) return orderMode === "date-desc" ? -byDate : byDate;
+      return (a.kickoff || "99:99").localeCompare(b.kickoff || "99:99") ||
+        (a.league || "").localeCompare(b.league || "", "it") ||
+        (a.home_team || "").localeCompare(b.home_team || "", "it");
+    }
+    return (a.country || "Altro").localeCompare(b.country || "Altro", "it") ||
+      (a.league || "").localeCompare(b.league || "", "it") ||
+      a.date.localeCompare(b.date) ||
+      (a.kickoff || "99:99").localeCompare(b.kickoff || "99:99") ||
+      (a.home_team || "").localeCompare(b.home_team || "", "it");
+  });
+  renderMatches(filtered);
 }
 
 function initializeCalcioIntelligente() {
@@ -575,6 +605,8 @@ function initializeCalcioIntelligente() {
     const league = document.getElementById("league-filter");
     if (country) country.addEventListener("change", () => { populateFilters(allLoadedMatches); applyFilters(); });
     if (league) league.addEventListener("change", applyFilters);
+    const dateOrder = document.getElementById("date-order-filter");
+    if (dateOrder) dateOrder.addEventListener("change", applyFilters);
     aggiornaDati();
     aggiornaStorico();
 
