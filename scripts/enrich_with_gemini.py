@@ -158,7 +158,7 @@ def main():
             match["analysis"] = by_id[match["id"]]
             match["analysis_provider"] = "Gemini"
             updated += 1
-    DATA_FILE.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+    DATA_FILE.write_text(json.dumps(data, ensure_ascii=False, indent=2) + chr(10), encoding="utf-8")
     print(f"Analisi Gemini aggiunte a {updated} partite. Probabilità e mercati statistici non sono stati modificati.")
 
 
