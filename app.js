@@ -1,6 +1,6 @@
 "use strict";
 
-const DATA_URL = "./data/predictions.json";
+const DATA_URL = "./data/predictions.json";\nconst HISTORY_URL = "./data/history.json";
 
 function formatDate(value) {
   if (!value) return "Data da confermare";
@@ -138,6 +138,86 @@ function renderMatches(matches) {
   }
 }
 
+
+function renderHistory(history) {
+  const metricsNode = document.getElementById("history-metrics");
+  const listNode = document.getElementById("history-list");
+  if (!metricsNode || !listNode) return;
+  const metrics = history && history.metrics ? history.metrics : {};
+  metricsNode.replaceChildren();
+
+  const metricItems = [
+    ["Partite verificate", Number(metrics.settled_matches || 0).toLocaleString("it-IT")],
+    ["Accuratezza 1X2", typeof metrics.accuracy_1x2 === "number" ? percent(metrics.accuracy_1x2) : "In attesa"],
+    ["Brier score", typeof metrics.brier_score_1x2 === "number" ? metrics.brier_score_1x2.toLocaleString("it-IT", { maximumFractionDigits: 4 }) : "In attesa"]
+  ];
+  for (const [label, value] of metricItems) {
+    const item = document.createElement("div");
+    item.className = "history-metric";
+    const caption = document.createElement("span");
+    caption.className = "match-meta";
+    caption.textContent = label;
+    const strong = document.createElement("strong");
+    strong.textContent = value;
+    item.append(caption, strong);
+    metricsNode.append(item);
+  }
+
+  const records = Array.isArray(history && history.records) ? [...history.records] : [];
+  records.sort((a, b) => (b.date || "").localeCompare(a.date || ""));
+  listNode.replaceChildren();
+  if (!records.length) {
+    listNode.textContent = "Lo storico non contiene ancora partite archiviate.";
+    return;
+  }
+  const summary = document.createElement("p");
+  summary.className = "match-meta";
+  summary.textContent = records.length + " partite archiviate · " + (metrics.settled_matches || 0) + " con risultato verificato";
+  listNode.append(summary);
+
+  for (const record of records.slice(0, 12)) {
+    const card = document.createElement("article");
+    card.className = "history-item";
+    const meta = document.createElement("p");
+    meta.className = "match-meta";
+    meta.textContent = (record.league || "Campionato") + " · " + formatDate(record.date);
+    const teams = document.createElement("p");
+    teams.className = "match-teams";
+    teams.textContent = (record.home_team || "Casa") + " — " + (record.away_team || "Trasferta");
+    const outcome = document.createElement("p");
+    if (record.outcome === "1" || record.outcome === "X" || record.outcome === "2") {
+      outcome.className = "history-result";
+      outcome.textContent = "Risultato finale: " + record.home_goals + "–" + record.away_goals + " · Esito " + record.outcome;
+    } else {
+      outcome.className = "history-pending";
+      outcome.textContent = "Esito in attesa del risultato ufficiale";
+    }
+    const prediction = document.createElement("p");
+    prediction.className = "match-meta";
+    const p = record.probabilities || {};
+    prediction.textContent = "Probabilità archiviate 1 / X / 2: " + percent(p.home_win) + " / " + percent(p.draw) + " / " + percent(p.away_win);
+    card.append(meta, teams, outcome, prediction);
+    listNode.append(card);
+  }
+  if (typeof metrics.note === "string") {
+    const note = document.createElement("p");
+    note.className = "match-meta";
+    note.textContent = metrics.note;
+    listNode.append(note);
+  }
+}
+
+async function aggiornaStorico() {
+  const listNode = document.getElementById("history-list");
+  try {
+    const response = await fetch(HISTORY_URL + "?t=" + Date.now(), { cache: "no-store" });
+    if (!response.ok) throw new Error("Archivio non disponibile");
+    renderHistory(await response.json());
+  } catch (error) {
+    if (listNode) listNode.textContent = "Lo storico non è ancora disponibile. Verrà pubblicato dopo il prossimo aggiornamento automatico.";
+  }
+}
+
 async function aggiornaDati() {
   const stato = document.getElementById("status");
   const aggiornamento = document.getElementById("updated");
@@ -213,6 +293,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const pulsante = document.getElementById("refresh");
   if (pulsante) {
     pulsante.addEventListener("click", aggiornaDati);
-    aggiornaDati();
+    aggiornaDati();\n    aggiornaStorico();
   }
 });
