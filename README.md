@@ -9,7 +9,7 @@ Dashboard statica di pronostici calcistici con aggiornamento automatico tramite 
 - Stima preliminare per campioni ridotti; NO BET quando mancano osservazioni pertinenti.
 - Probabilità 1X2, doppia chance, Over/Under, Goal/No Goal e risultati esatti stimati.
 - Commenti Gemini quando il secret `GEMINI_API_KEY` è configurato; l'AI non inventa informazioni non fornite.
-- Integrazione opzionale delle quote 1X2 tramite The Odds API e stima del valore atteso teorico, se è configurato il secret `ODDS_API_KEY`.
+- Importazione delle quote 1X2 quando presenti nei CSV gratuiti football-data.co.uk; integrazione opzionale di The Odds API tramite il secret `ODDS_API_KEY`; stima del valore atteso teorico.
 - Archivio della prima stima e verifica dei risultati finali, con accuratezza 1X2 e Brier score.
 - Filtri per nazione e competizione; partite ordinate per nazione, competizione, data e orario.
 - Aggiornamento pianificato ogni ora via GitHub Actions.
@@ -18,7 +18,7 @@ Dashboard statica di pronostici calcistici con aggiornamento automatico tramite 
 - Elo e Poisson sono un modello sperimentale; non è ancora dimostrata la sua redditività e la calibrazione va misurata su un campione storico ampio.
 - Per alcuni campionati il calendario ESPN può essere disponibile senza dati storici equivalenti: in tal caso la partita resta NO BET.
 - Le formazioni ufficiali, gli infortuni e le squalifiche non sono ancora coperti da una fonte automatica sufficientemente uniforme e verificata per tutte le leghe. Non vengono inventati.
-- Le quote bookmaker e il valore atteso sono opzionali: richiedono il secret GitHub Actions `ODDS_API_KEY` con accesso a The Odds API. Senza chiave le quote restano non disponibili. Verificare sempre i limiti del piano e le condizioni del fornitore.
+- La copertura quote gratuita varia per partita: vengono usate le quote 1X2 presenti nei CSV football-data.co.uk. Per una copertura alternativa è supportata The Odds API con il secret `ODDS_API_KEY`; senza chiave l'app continua a usare le quote gratuite eventualmente disponibili.
 - Il valore atteso è un calcolo teorico dipendente dalla qualità del modello, non una prova di profitto; la soglia EV del 3% genera soltanto candidati da verificare.
 - Le fonti gratuite hanno limiti di copertura, frequenza e condizioni d'uso. Il workflow segnala gli errori e può non aggiornare quando una fonte non è disponibile.
 - Il sito è statico: il pulsante ricarica i dati pubblicati, non avvia il calcolo remoto.
