@@ -226,6 +226,28 @@ class PredictionModelTests(unittest.TestCase):
         }
         self.assertEqual(odds_module.best_prices(event), {"home": 2.2, "draw": 3.2, "away": 3.7})
 
+    def test_fixture_sources_merge_without_duplicates_and_fill_missing_kickoff(self):
+        primary = [
+            ("Sporting CP", "Benfica", date(2026, 10, 18), ""),
+            ("Porto", "Braga", date(2026, 10, 19), "20:00"),
+        ]
+        secondary = [
+            ("Sporting Lisbon", "Benfica", date(2026, 10, 18), "18:00"),
+            ("Gil Vicente", "Portimonense", date(2026, 10, 20), "19:00"),
+        ]
+        merged = module.merge_fixture_sources(primary, secondary)
+        self.assertEqual(len(merged), 3)
+        self.assertEqual(merged[0][3], "18:00")
+        self.assertEqual(merged[1][0], "Porto")
+        self.assertEqual(merged[2][0], "Gil Vicente")
+
+    def test_fixture_merge_rejects_same_team_and_empty_names(self):
+        merged = module.merge_fixture_sources([
+            ("", "Benfica", date(2026, 10, 18), "18:00"),
+            ("Porto", "Porto", date(2026, 10, 18), "20:00"),
+        ], [])
+        self.assertEqual(merged, [])
+
     def test_poisson_probabilities_sum_to_one(self):
         probabilities = module.poisson_probs(1.7)
         self.assertAlmostEqual(sum(probabilities), 1.0, places=9)
