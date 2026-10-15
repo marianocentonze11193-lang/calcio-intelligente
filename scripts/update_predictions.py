@@ -310,9 +310,12 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
         goal_text = "scenario da almeno 2 gol" if over15 >= 0.70 else "totale gol incerto"
         btts_text = "entrambe a segno plausibile" if btts >= 0.60 else "Goal/No Goal non netto"
         summary = f"{outcome_text}; {goal_text}; {btts_text}. Commento automatico basato solo sul modello statistico, non su notizie o quote."
-        if over15 >= 0.70: suggested.append("Over 1,5")
-        if btts >= 0.70: suggested.append("Goal")
-        if best_probability >= 0.70: suggested.append(best_outcome)
+        # Le selezioni automatiche richiedono un campione minimo casa/trasferta
+        # di almeno tre gare per lato; le stime preliminari restano descrittive.
+        if sample >= MIN_TEAM_MATCHES:
+            if over15 >= 0.70: suggested.append("Over 1,5")
+            if btts >= 0.70: suggested.append("Goal")
+            if best_probability >= 0.70: suggested.append(best_outcome)
     return {
         "id": f"{match_date.isoformat()}-{league}-{home}-{away}",
         "date": match_date.isoformat(), "kickoff": kickoff or "", "league": league,
