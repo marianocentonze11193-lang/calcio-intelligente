@@ -35,12 +35,15 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Sincronizza prima con main per evitare conflitti quando il file dati
+          # viene aggiornato da un'esecuzione precedente.
+          git fetch origin main
+          git reset --hard origin/main
+          python scripts/update_predictions.py
           git add data/predictions.json
           if git diff --cached --quiet; then
             echo "Nessun cambiamento nei dati."
           else
             git commit -m "Aggiorna dati e pronostici calcistici"
-            # Integra eventuali modifiche pubblicate mentre il calcolo era in corso.
-            git pull --rebase origin main
-            git push
+            git push origin HEAD:main
           fi
