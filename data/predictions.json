@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-15T11:51:00+00:00",
+  "updated_at": "2026-10-15T12:08:50+00:00",
   "source": "https://www.football-data.co.uk",
   "season": "2627",
   "model": "Poisson casa/trasferta con prior di lega e correzione Elo; stime sperimentali, non garanzie",
@@ -34,7 +34,7 @@
         "home_scores": 89.3,
         "away_scores": 89.0
       },
-      "analysis": "Le Mans leggermente favorito; scenario da almeno 2 gol; entrambe a segno plausibile. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "La sfida di Ligue 1 tra Le Mans e Toulouse si annuncia estremamente aperta e ricca di reti, con gol attesi elevati pari a 2.24 per i padroni di casa e 2.2 per gli ospiti. Le probabilità del modello indicano un perfetto equilibrio per l'esito 1X2, rispettivamente al 40.8% per la vittoria interna, 39.6% per quella esterna e 19.6% per il pareggio, mentre l'opzione BTTS si attesta al 79.4%. I punteggi Elo sono quasi allineati (1489.8 contro 1492.3), rispecchiando una forma recente simile ma con difese spesso battute. Il campione casalingo e in trasferta si limita a sole 3 partite, fattore che riduce la stabilità complessiva della stima. La fonte segnala 4 indisponibilità complessive tra le due squadre, sebbene l'elenco non sia necessariamente completo.",
       "suggested_markets": [
         "Over 1,5",
         "Goal"
@@ -58,6 +58,7 @@
       "home_matches_sample": 3,
       "away_matches_sample": 3,
       "status": "Pronostico valutabile",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1489.8,
@@ -108,7 +109,8 @@
         ],
         "lineups": null,
         "lineup_status": "non_pubblicate"
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-17-Ligue 1-Strasbourg-Paris Saint-Germain",
@@ -138,7 +140,7 @@
         "home_scores": 80.3,
         "away_scores": 67.6
       },
-      "analysis": "Strasbourg leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Il match di Ligue 1 tra Strasbourg e Paris Saint-Germain vede i padroni di casa favoriti dal modello con una probabilità di vittoria del 48.9%, contro il 26.4% degli ospiti e il 24.6% per il pareggio. I gol attesi delineano un divario a favore dello Strasbourg (1.62 a 1.13), sostenuti da una media recente di 2.2 reti segnate a incontro nelle ultime 5 uscite. I punteggi Elo evidenziano un sostanziale equilibrio a quota 1493.8 per lo Strasbourg e 1500.0 per il PSG. Il campione casalingo si ferma a sole 2 gare e quello esterno a zero, limitando fortemente l'affidabilità predittiva della stima. Le informazioni su infortuni e formazioni non sono al momento disponibili per questa data.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -159,6 +161,7 @@
       "home_matches_sample": 2,
       "away_matches_sample": 0,
       "status": "Stima preliminare",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1493.8,
@@ -177,7 +180,8 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-17-Ligue 1-Lille-Brest",
@@ -207,7 +211,7 @@
         "home_scores": 78.6,
         "away_scores": 64.1
       },
-      "analysis": "Lille leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Per l'incontro di Ligue 1 tra Lille e Brest, il modello assegna alla squadra di casa il 49.3% di probabilità di vittoria, lasciando il 25.2% agli ospiti e il 25.5% al segno X. I gol attesi previsti sono 1.54 per il Lille e 1.02 per il Brest, indicando un incontro tendenzialmente controllato dai padroni di casa. Nei valori Elo il Lille parte leggermente avanti con 1528.0 punti rispetto ai 1498.3 del Brest, confermato da una buona media recente di 2.0 punti a partita. Il campione di riferimento si limita a 3 partite sia in casa che in trasferta, vincolando la precisione del modello. Non risultano dati verificati su formazioni e indisponibili a causa della copertura API limitata.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -230,6 +234,7 @@
       "home_matches_sample": 3,
       "away_matches_sample": 3,
       "status": "Pronostico valutabile",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1528.0,
@@ -253,7 +258,8 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-17-Ligue 1-Troyes-Lens",
@@ -283,7 +289,7 @@
         "home_scores": 65.4,
         "away_scores": 90.6
       },
-      "analysis": "Lens leggermente favorita; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Il confronto di Ligue 1 tra Troyes e Lens pende decisamente dalla parte degli ospiti, accreditati del 66.4% di probabilità di successo dal modello, mentre il Troyes si ferma al 15.4% e il pareggio al 18.2%. I gol attesi evidenziano una netta superiorità offensiva del Lens con 2.37 reti stimate contro l'1.06 dei padroni di casa. La classifica Elo vede il Lens a 1491.2 punti e il Troyes a 1467.1, rispecchiando le difficoltà difensive recenti dei locali, capaci di subire 2.6 gol di media nelle ultime 5 partite. La stima soffre di un campione ridotto a soli 3 incontri interni ed esterni. La copertura attuale non permette di verificare la lista completa degli indisponibili.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -306,6 +312,7 @@
       "home_matches_sample": 3,
       "away_matches_sample": 3,
       "status": "Pronostico valutabile",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1467.1,
@@ -329,7 +336,8 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-18-Ligue 1-Angers-Marseille",
@@ -359,7 +367,7 @@
         "home_scores": 64.9,
         "away_scores": 59.9
       },
-      "analysis": "Angers leggermente favorito; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Il modello assegna il 38.0% di probabilità alla vittoria dell'Angers, il 31.1% al pareggio e il 30.9% al successo del Marseille, con gol attesi pari a 1.05 per i padroni di casa e 0.91 per gli ospiti. I dati Elo vedono l'Angers a quota 1488.7 contro il 1480.6 del Marseille, mentre la forma recente mostra una media punti di 1.4 per l'Angers e di 0.6 per il Marseille nelle ultime cinque gare. Il campione di sole tre partite interne ed esterne risulta ridotto e limita la precisione della stima. Ricordiamo che la copertura API è incompleta e non sono disponibili informazioni ufficiali su infortuni o formazioni.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -380,6 +388,7 @@
       "home_matches_sample": 3,
       "away_matches_sample": 3,
       "status": "Pronostico valutabile",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1488.7,
@@ -403,7 +412,8 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-18-Ligue 1-Lorient-AS Monaco",
@@ -433,7 +443,7 @@
         "home_scores": 78.3,
         "away_scores": 71.8
       },
-      "analysis": "Lorient leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Le stime indicano il 43.4% per la vittoria del Lorient, il 25.1% per il pareggio e il 31.5% per il colpo esterno dell'AS Monaco, con 1.53 gol attesi casalinghi e 1.26 esterni. Entrambe le squadre si attestano su un Elo molto vicino, rispettivamente a 1500.4 e 1500.0, mentre il Lorient vanta una media di 1.4 punti nelle ultime cinque uscite. Il campione casalingo si limita a sole tre partite e quello esterno è addirittura assente, fattori che pesano sull'affidabilità della proiezione. La copertura API risulta attualmente non disponibile, perciò non possiamo confermare assenze o schieramenti ufficiali.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -454,6 +464,7 @@
       "home_matches_sample": 3,
       "away_matches_sample": 0,
       "status": "Stima preliminare",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1500.4,
@@ -472,7 +483,8 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-18-Ligue 1-Paris FC-Stade Rennais",
@@ -502,7 +514,7 @@
         "home_scores": 81.9,
         "away_scores": 53.6
       },
-      "analysis": "Paris FC leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Il Paris FC parte favorito con il 59.8% di probabilità di vittoria, mentre il pareggio si attesta al 23.6% e il successo dello Stade Rennais al 16.5%, supportati da 1.71 gol attesi per la squadra di casa e 0.77 per gli ospiti. Nel ranking Elo il Paris FC registra 1519.9 punti contro i 1500.0 dello Stade Rennais, e la forma recente casalinga mostra una buona media di 2.0 punti a incontro. La stima risente di un campione limitato a tre sole gare casalinghe e senza dati esterni storici. Trattandosi di un periodo fuori dalla copertura API, non abbiamo riscontri su eventuali indisponibili o formazioni.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -523,6 +535,7 @@
       "home_matches_sample": 3,
       "away_matches_sample": 0,
       "status": "Stima preliminare",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1519.9,
@@ -541,7 +554,8 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-18-Ligue 1-Lyon-Nice",
@@ -571,7 +585,7 @@
         "home_scores": 91.3,
         "away_scores": 36.7
       },
-      "analysis": "Lyon leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Il pronostico assegna ben l'81.3% di probabilità al successo del Lyon, lasciando il 13.6% al pareggio e appena il 5.2% alla vittoria del Nice, con 2.45 gol attesi per i padroni di casa a fronte dei 0.46 degli ospiti. La graduatoria Elo vede il Lyon a 1519.1 e il Nice a 1498.2, mentre la forma recente evidenzia una media punti di 1.6 per il Lyon e 1.4 per il Nice nelle ultime cinque uscite. Il campione di riferimento resta piuttosto ridotto, con tre partite casalinghe e due esterne analizzate dal modello. La copertura API risulta incompleta e non sono segnalati dati ufficiali su indisponibili o formazioni.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -592,6 +606,7 @@
       "home_matches_sample": 3,
       "away_matches_sample": 2,
       "status": "Stima preliminare",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1519.1,
@@ -615,7 +630,8 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-17-Bundesliga-Schalke 04-Mainz",
@@ -645,7 +661,7 @@
         "home_scores": 63.5,
         "away_scores": 81.2
       },
-      "analysis": "Mainz leggermente favorita; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Il match di Bundesliga tra Schalke 04 e Mainz presenta probabilità che favoriscono gli ospiti, dati al 52.9% per la vittoria esterna, contro il 22.8% dei padroni di casa e il 24.3% di pareggio. Il modello stima 1.01 gol attesi per lo Schalke e 1.67 per il Mainz, con una discreta probabilità per il segno gol al 51.5%. Entrambe le squadre vantano un campione casalingo e esterno ridotto a sole 2 partite, fattore che limita la precisione della stima preliminare. Nelle ultime 5 uscite il Mainz mostra un attacco prolifico con 2.6 reti medie a fronte di 2 subite, mentre lo Schalke si ferma a 0.8 gol fatti. I valori Elo sono molto vicini, rispettivamente a 1492.4 e 1496.6. Attualmente non sono disponibili dati confermati su formazioni e indisponibili per questa data futura.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -666,6 +682,7 @@
       "home_matches_sample": 2,
       "away_matches_sample": 2,
       "status": "Stima preliminare",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1492.4,
@@ -689,7 +706,8 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-17-Bundesliga-Werder Bremen-SC Paderborn 07",
@@ -719,7 +737,7 @@
         "home_scores": 93.1,
         "away_scores": 76.5
       },
-      "analysis": "Werder Bremen leggermente favorito; scenario da almeno 2 gol; entrambe a segno plausibile. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Per la sfida tra Werder Bremen e SC Paderborn 07, il modello assegna ampi favori alla formazione di casa con una probabilità di successo del 63.6%, mentre il Paderborn si attesta al 19.1% e il pareggio al 17.3%. I gol attesi delineano una gara prolifica, stimati in 2.67 per i padroni di casa e 1.45 per gli ospiti, con l'over 2.5 al 77.9%. Il campione casalingo è limitato a 2 gare e quello esterno è addirittura pari a 0, elementi che riducono l'affidabilità statistica della proiezione. Nelle ultime 5 partite il Werder mantiene una media di 2 gol fatti e 2 subiti con 1.6 punti a incontro. I punteggi Elo registrano 1514.7 per i locali e 1500.0 per gli ospiti. Le informazioni su infortuni e formazioni non risultano verificabili in anticipo.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -740,6 +758,7 @@
       "home_matches_sample": 2,
       "away_matches_sample": 0,
       "status": "Stima preliminare",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1514.7,
@@ -758,7 +777,8 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-17-Bundesliga-Bayern Munich-RB Leipzig",
@@ -788,7 +808,7 @@
         "home_scores": 96.6,
         "away_scores": 51.2
       },
-      "analysis": "Bayern Munich leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Il confronto di vertice in Bundesliga vede il Bayern Munich nettamente favorito con l'86.6% di probabilità di vittoria, lasciando l'8.9% al pareggio e il 4.5% al colpo esterno del RB Leipzig. I gol attesi dal modello sono 3.38 per i bavaresi e 0.72 per gli ospiti, evidenziando un divario tecnico notevole confermato dai punteggi Elo di 1532.4 contro 1508.0. Il campione casalingo e quello esterno sono fermi a 2 partite ciascuno, circoscrivendo la portata di questa stima preliminare. Nelle ultime 5 gare entrambe le squadre hanno mostrato un ottimo stato di forma offensiva, con il Bayern a 3.2 gol fatti e il Leipzig a 3.0. Non sono disponibili dati ufficiali su eventuali indisponibili o sulle formazioni titolari.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -809,6 +829,7 @@
       "home_matches_sample": 2,
       "away_matches_sample": 2,
       "status": "Stima preliminare",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1532.4,
@@ -832,7 +853,8 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-17-Super League greca-Levadiakos-Volos NFC",
@@ -862,7 +884,7 @@
         "home_scores": 88.9,
         "away_scores": 61.6
       },
-      "analysis": "Levadiakos leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "In Super League greca il Levadiakos ospita il Volos NFC con pronostico favorevole ai padroni di casa, dati al 65.6% per la vittoria, mentre il successo esterno si ferma al 15.2% e il pareggio al 19.2%. Il modello indica 2.2 gol attesi per il Levadiakos e 0.96 per il Volos, con una quota del mercato over 1.5 stimata all'82.3%. Il campione casalingo è del tutto assente con 0 partite registrate, mentre gli ospiti contano 3 gare esterne, limitando inevitabilmente la solidità della stima. Nelle 5 partite recenti il Volos ha raccolto solo 0.4 punti di media, subendo 2 gol a incontro. Gli indici Elo si posizionano a 1500.0 per i locali e 1459.1 per gli ospiti, senza dati confermati su formazioni e indisponibili.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -883,6 +905,7 @@
       "home_matches_sample": 0,
       "away_matches_sample": 3,
       "status": "Stima preliminare",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1500.0,
@@ -901,7 +924,8 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-17-Super League greca-Atromitos-AEK Athens",
@@ -931,7 +955,7 @@
         "home_scores": 72.8,
         "away_scores": 73.2
       },
-      "analysis": "AEK Athens leggermente favorita; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "La sfida di Super League greca tra Atromitos e AEK Athens si preannuncia estremamente equilibrata, con il modello che assegna il 36.5% alla vittoria interna e il 37.3% a quella esterna, mentre il pareggio è stimato al 26.3%. I gol attesi rispecchiano questo equilibrio, fissandosi a 1.3 per l'Atromitos e 1.32 per l'AEK Athens. L'indice Elo evidenzia un leggero vantaggio per gli ospiti (1500.0 contro 1457.5), sebbene la forma recente dei padroni di casa mostri qualche difficoltà con soli 0.4 punti a partita nelle ultime cinque uscite. L'analisi risente però di un campione casa estremamente ridotto a sole 3 partite e assente per la trasferta, limitando la precisione della stima. Ricordiamo che il piano API-Football attuale non consente di verificare questa data in anticipo: infortuni e formazioni non sono confermati.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -952,6 +976,7 @@
       "home_matches_sample": 3,
       "away_matches_sample": 0,
       "status": "Stima preliminare",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1457.5,
@@ -970,7 +995,8 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-18-Super League greca-Kalamata-OFI Crete",
@@ -1000,7 +1026,7 @@
         "home_scores": 80.8,
         "away_scores": 69.2
       },
-      "analysis": "Kalamata leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Il match tra Kalamata e OFI Crete vede i padroni di casa favoriti dal modello con una probabilità di successo del 48.4%, contro il 27.3% degli ospiti e un 24.4% di possibilità di pareggio. A livello realizzativo, il modello si attende 1.65 gol per il Kalamata e 1.18 per l'OFI Crete, sostenendo una buona inclinazione verso i gol. I dati Elo mostrano un sostanziale allineamento tra le due compagini (1493.1 per i locali e 1510.2 per i viaggianti), mentre la forma recente descrive entrambe appaiate a quota 1.4 punti per incontro. Il campione di riferimento casa e trasferta si ferma a sole 3 partite ciascuno, un limite evidente per la solidità statistica complessiva. La copertura API risulta limitata per la data odierna, dunque la disponibilità di formazioni ufficiali e indisponibili non è verificata.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1023,6 +1049,7 @@
       "home_matches_sample": 3,
       "away_matches_sample": 3,
       "status": "Pronostico valutabile",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1493.1,
@@ -1046,7 +1073,8 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-18-Super League greca-Panetolikos-Olympiacos",
@@ -1076,7 +1104,7 @@
         "home_scores": 83.9,
         "away_scores": 67.9
       },
-      "analysis": "Panetolikos leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "L'incontro di Super League greca tra Panetolikos e Olympiacos presenta pronostici orientati verso la formazione di casa, accreditata del 53.6% di probabilità di vittoria dal modello, a fronte del 23.5% per gli ospiti e del 22.9% per il pareggio. I gol attesi premiano l'attacco di casa con 1.83 reti rispetto alle 1.14 previste per l'avversario. I punteggi Elo risultano molto vicini, attestandosi a 1497.7 per il Panetolikos e a 1500.0 per l'Olympiacos, con i padroni di casa che beneficiano di una media recente di 1.2 punti a partita. Il campione di partite casalinghe è tuttavia ridotto a sole 3 unità e manca del tutto quello esterno, fattore che vincola la portata della stima preliminare. Segnaliamo che gli infortuni e le formazioni non sono confermati a causa dei limiti del piano API-Football attuale.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1097,6 +1125,7 @@
       "home_matches_sample": 3,
       "away_matches_sample": 0,
       "status": "Stima preliminare",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1497.7,
@@ -1115,7 +1144,8 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-18-Super League greca-Panathinaikos-Asteras Tripoli",
@@ -1145,7 +1175,7 @@
         "home_scores": 90.7,
         "away_scores": 54.9
       },
-      "analysis": "Panathinaikos leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Il Panathinaikos affronta l'Asteras Tripoli partendo con i favori netti del pronostico, raccogliendo il 72.4% delle probabilità di vittoria secondo il modello, mentre il pareggio si ferma al 16.8% e il successo esterno al 10.8%. Sul fronte realizzativo, i gol attesi delineano una netta prevalenza dei padroni di casa con 2.37 reti contro le 0.8 degli ospiti. Il rating Elo premia il Panathinaikos con 1540.5 punti contro i 1500.0 degli avversari, un divario supportato da un eccellente rendimento recente di 2.4 punti a partita. Ciononostante, il campione limitato a 3 sole gare casalinghe e privo di dati sulle trasferte pesa sulla completezza dell'elaborazione statistica. Si specifica che la copertura delle informazioni su formazioni e indisponibili non è al momento verificabile tramite API.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1166,6 +1196,7 @@
       "home_matches_sample": 3,
       "away_matches_sample": 0,
       "status": "Stima preliminare",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1540.5,
@@ -1184,7 +1215,8 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-18-Super League greca-Kifisia-Aris",
@@ -1214,7 +1246,7 @@
         "home_scores": 84.6,
         "away_scores": 47.2
       },
-      "analysis": "Kifisia leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Il Kifisia affronta l'Aris in questa sfida di Super League greca con il favore del pronostico, sostenuto dal 66,9% di probabilità per la vittoria interna e da 1,87 gol attesi. La forma recente vede entrambe le squadre a quota 1,4 punti a partita, mentre i punteggi Elo sono estremamente vicini (1501,4 contro 1509,5). Tuttavia, il campione casalingo e in trasferta di sole 3 partite limita la precisione della stima. Ricordiamo che il piano API attuale non permette di verificare infortuni o formazioni in anticipo, lasciando la copertura incompleta.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1237,6 +1269,7 @@
       "home_matches_sample": 3,
       "away_matches_sample": 3,
       "status": "Pronostico valutabile",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1501.4,
@@ -1260,7 +1293,8 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-18-Super League greca-PAOK-Iraklis",
@@ -1290,7 +1324,7 @@
         "home_scores": 76.3,
         "away_scores": 62.9
       },
-      "analysis": "PAOK leggermente favorito; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Il PAOK ospita l'Iraklis in un match che vede i padroni di casa favoriti al 47,4% per il successo, a fronte di un 26% per gli ospiti e un 26,6% di pareggio. I gol attesi stimati dal modello sono 1,44 per la squadra di casa e 0,99 per la trasferta. Nelle ultime cinque uscite entrambe registrano una media di 1,8 punti a partita, con un Elo praticamente alla pari (1519,5 per i padroni di casa e 1511,8 per gli ospiti). Il campione casalingo di 3 gare e quello esterno di 4 restano ridotti. Non ci sono dati ufficiali disponibili su formazioni e indisponibili.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1311,6 +1345,7 @@
       "home_matches_sample": 3,
       "away_matches_sample": 4,
       "status": "Pronostico valutabile",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1519.5,
@@ -1334,7 +1369,8 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-17-Premier League-Everton-Chelsea",
@@ -1364,7 +1400,7 @@
         "home_scores": 88.4,
         "away_scores": 66.1
       },
-      "analysis": "Everton leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "L'Everton parte con i favori del pronostico contro il Chelsea in Premier League, forte di una probabilità di vittoria interna del 61,8% e di 2,15 gol attesi stimati dal modello. I dati Elo evidenziano un sostanziale equilibrio a quota 1519,7 contro 1510,3, mentre la forma recente registra 1,4 punti a partita per entrambe. Il campione analizzato di appena 3 partite sia in casa che in trasferta limita inevitabilmente l'affidabilità della stima. La verifica su infortuni e formazioni non è attualmente disponibile tramite API, quindi la copertura resta incompleta.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1387,6 +1423,7 @@
       "home_matches_sample": 3,
       "away_matches_sample": 3,
       "status": "Pronostico valutabile",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1519.7,
@@ -1410,7 +1447,8 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-17-Premier League-Brentford-Liverpool",
@@ -1440,7 +1478,7 @@
         "home_scores": 71.0,
         "away_scores": 52.9
       },
-      "analysis": "Brentford leggermente favorito; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Il Brentford riceve il Liverpool in una gara di Premier League che il modello vede equilibrata, assegnando il 47,7% di probabilità alla vittoria interna, il 29,7% al pareggio e il 22,6% agli ospiti. I gol attesi si fermano a 1,24 per i padroni di casa e 0,75 per la trasferta, con una tendenza all'Under 2,5 calcolata al 67,9%. La forma recente mostra medie simili, con 1,4 punti per i locali e 1,6 per gli ospiti, supportati da un Elo quasi identico intorno a quota 1520 e 1509. Il campione di sole 3 gare interne ed esterne riduce la portata della stima, e non vi sono segnalazioni ufficiali sulle formazioni.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1461,6 +1499,7 @@
       "home_matches_sample": 3,
       "away_matches_sample": 3,
       "status": "Pronostico valutabile",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1520.1,
@@ -1484,7 +1523,8 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-17-Premier League-Fulham-Hull City",
@@ -1514,7 +1554,7 @@
         "home_scores": 80.7,
         "away_scores": 83.9
       },
-      "analysis": "Hull City leggermente favorita; scenario da almeno 2 gol; entrambe a segno plausibile. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Il modello assegna un leggero favore all'Hull City con una probabilità del 42,6% per il successo esterno, mentre il Fulham si attesta al 35,1% e il pareggio al 22,3%. I gol attesi delineano una sfida aperta, stimati a 1,65 per i padroni di casa e 1,83 per gli ospiti, con il mercato BTTS yes al 67,8%. Il Fulham mostra una forma recente difficile con soli 0,4 punti a partita nelle ultime cinque uscite, a fronte di un rating Elo di 1458,9 contro il 1500,0 dell'Hull City. Il campione interno del Fulham si limita a 3 partite e quello esterno dell'Hull è nullo, un fattore che riduce la precisione della stima. Non risultano dati verificati su infortuni o formazioni pubblicate per questa data.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1535,6 +1575,7 @@
       "home_matches_sample": 3,
       "away_matches_sample": 0,
       "status": "Stima preliminare",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1458.9,
@@ -1553,7 +1594,8 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-17-Premier League-Newcastle United-Aston Villa",
@@ -1583,7 +1625,7 @@
         "home_scores": 84.3,
         "away_scores": 68.0
       },
-      "analysis": "Newcastle United leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Le stime del modello premiano il Newcastle United con il 54,0% di probabilità di vittoria, lasciando il pareggio al 22,7% e l'affermazione dell'Aston Villa al 23,3%. Sul fronte realizzativo ci si attende una prevalenza locale con 1,85 gol attesi rispetto ai 1,14 degli ospiti, mentre l'over 2,5 si posiziona al 57,5%. L'Aston Villa registra 1,0 punti per match nelle ultime cinque gare, con un Elo di 1481,5 vicinissimo al 1500,0 dei bianconeri. Il campione casalingo del Newcastle è limitato a 0 partite, aspetto che circoscrive l'affidabilità del pronostico preliminare. La copertura API non consente di confermare indisponibili o formazioni ufficiali al momento.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1604,6 +1646,7 @@
       "home_matches_sample": 0,
       "away_matches_sample": 3,
       "status": "Stima preliminare",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1500.0,
@@ -1622,7 +1665,8 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-18-Premier League-AFC Bournemouth-Sunderland",
@@ -1652,7 +1696,7 @@
         "home_scores": 88.9,
         "away_scores": 76.8
       },
-      "analysis": "AFC Bournemouth leggermente favorito; scenario da almeno 2 gol; entrambe a segno plausibile. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "L'AFC Bournemouth parte con i favori del pronostico al 54,5%, mentre il Sunderland raccoglie il 25,2% di probabilità di successo e il pareggio si ferma al 20,4%. Il modello proietta una gara prolifica con 2,2 gol attesi per i padroni di casa e 1,46 per la formazione ospite, accompagnati da un over 2,5 stimato al 70,8%. Nelle ultime cinque partite il Sunderland viaggia a una media di 0,8 punti, confrontandosi con un Elo di 1470,9 inferiore al 1500,0 del Bournemouth. Il campione casalingo pari a zero per i locali e ridotto a tre gare per gli ospiti impone cautela nella lettura dei dati. Non sono presenti informazioni ufficiali su squalifiche, infortuni o formazioni.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1673,6 +1717,7 @@
       "home_matches_sample": 0,
       "away_matches_sample": 3,
       "status": "Stima preliminare",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1500.0,
@@ -1691,7 +1736,8 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-18-Premier League-Brighton & Hove Albion-Crystal Palace",
@@ -1721,7 +1767,7 @@
         "home_scores": 77.8,
         "away_scores": 68.1
       },
-      "analysis": "Brighton & Hove Albion leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Il Brighton & Hove Albion guida le percentuali del modello con il 45,6% per la vittoria, seguito dal Crystal Palace al 28,8% e dal pareggio al 25,6%. I gol attesi evidenziano margini contenuti, con 1,51 per i padroni di casa e 1,14 per gli ospiti, mentre l'under 2,5 è stimato al 50,6%. Il Crystal Palace arriva all'incontro con 1,4 punti di media nelle ultime cinque gare e un Elo di 1490,9, leggermente inferiore al 1500,0 del Brighton. Il campione interno del Brighton è azzerato, limitando così la portata statistica della proiezione preliminare. La verifica degli indisponibili e delle formazioni non è attualmente disponibile per limiti di copertura.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1742,6 +1788,7 @@
       "home_matches_sample": 0,
       "away_matches_sample": 3,
       "status": "Stima preliminare",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1500.0,
@@ -1760,7 +1807,8 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-18-Premier League-Nottingham Forest-Arsenal",
@@ -1790,7 +1838,7 @@
         "home_scores": 73.1,
         "away_scores": 68.7
       },
-      "analysis": "Nottingham Forest leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Il modello assegna al Nottingham Forest il 40.0% di probabilità di vittoria e all'Arsenal il 32.9%, con un pareggio stimato al 27.1%. I gol attesi sono 1.31 per la squadra di casa e 1.16 per gli ospiti, delineando una gara equilibrata. I punteggi Elo si equivalgono quasi perfettamente a quota 1500.0 contro 1541.1, mentre la forma recente dell'Arsenal mostra 2.4 punti a partita. Il campione di riferimento è tuttavia molto limitato, con zero gare casalinghe esaminate per il Nottingham, fattore che riduce l'affidabilità della stima. Ricordiamo che la copertura API attuale non permette una verifica completa delle indisponibilità.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1811,6 +1859,7 @@
       "home_matches_sample": 0,
       "away_matches_sample": 3,
       "status": "Stima preliminare",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1500.0,
@@ -1829,7 +1878,8 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-16-Serie A-Frosinone-Sassuolo",
@@ -1859,7 +1909,7 @@
         "home_scores": 88.2,
         "away_scores": 70.5
       },
-      "analysis": "Frosinone leggermente favorito; scenario da almeno 2 gol; entrambe a segno plausibile. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Il Frosinone parte favorito secondo il modello, che stima una probabilità di successo interno del 58.4% a fronte del 21.1% per il Sassuolo e del 20.5% per il pareggio. Gli attesi gol indicano una spinta offensiva importante dei padroni di casa con 2.14 reti rispetto alle 1.22 degli ospiti. La forma recente premia leggermente il Frosinone con 2.0 punti a incontro contro i 1.6 del Sassuolo, mentre l'Elo è allineato intorno a 1509 contro 1499. Il campione di sole tre partite casalinghe e ospiti limita la precisione complessiva del pronostico. Le fonti segnalano otto indisponibilità complessive tra le due rose, un dato parziale e non esaustivo.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1882,6 +1932,7 @@
       "home_matches_sample": 3,
       "away_matches_sample": 3,
       "status": "Pronostico valutabile",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1509.4,
@@ -1956,7 +2007,8 @@
         ],
         "lineups": null,
         "lineup_status": "non_pubblicate"
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-17-Serie A-Venezia-Napoli",
@@ -1986,7 +2038,7 @@
         "home_scores": 56.8,
         "away_scores": 93.2
       },
-      "analysis": "Napoli leggermente favorita; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Il Napoli domina le proiezioni con il 76.3% di probabilità di vittoria, mentre il Venezia padrone di casa si ferma al 9.2%, lasciando il 14.4% al segno X. I gol attesi riflettono questo divario marcando 2.68 reti per gli ospiti contro appena 0.84 per i lagunari. Nei dati recenti il Venezia registra zero punti nelle ultime cinque uscite con 2.8 gol subiti di media, a differenza del Napoli che viaggia a 1.4 punti. L'Elo assegna 1438.8 ai padroni di casa e 1510.8 agli ospiti, ma il campione di sole tre partite casalinghe e esterne riduce la portata della stima. La copertura API risulta attualmente assente per questa data specifica, dunque non vi è conferma ufficiale sugli infortunati.",
       "suggested_markets": [
         "Over 1,5",
         "2"
@@ -2010,6 +2062,7 @@
       "home_matches_sample": 3,
       "away_matches_sample": 3,
       "status": "Pronostico valutabile",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1438.8,
@@ -2033,7 +2086,8 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-17-Serie A-Bologna-Internazionale",
@@ -2063,7 +2117,7 @@
         "home_scores": 72.4,
         "away_scores": 73.0
       },
-      "analysis": "Internazionale leggermente favorita; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Bologna e Inter si presentano con probabilità vicinissime secondo il modello, rispettivamente al 36.3% e al 37.3%, con il pareggio quotato al 26.4%. Anche i gol attesi confermano l'equilibrio stimato con 1.29 per i padroni di casa e 1.31 per la formazione milanese. I valori Elo risultano molto vicini, attestandosi a 1480.8 per il Bologna e 1500.0 per l'Inter. Il campione di riferimento è tuttavia incompleto, mancando del tutto le partite esterne analizzate per gli ospiti e riducendo così la precisione della proiezione. Trattandosi di un incontro fuori copertura API, non è possibile verificare lo stato attuale di eventuali indisponibili o squalificati.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -2084,6 +2138,7 @@
       "home_matches_sample": 3,
       "away_matches_sample": 0,
       "status": "Stima preliminare",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1480.8,
@@ -2102,7 +2157,8 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-17-Serie A-AS Roma-Genoa",
@@ -2132,7 +2188,7 @@
         "home_scores": 79.3,
         "away_scores": 61.8
       },
-      "analysis": "AS Roma leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Analizzando la sfida di Serie A tra AS Roma e Genoa, il modello assegna il 51,6% di probabilità per la vittoria casalinga, mentre il pareggio si attesta al 25,3% e il successo esterno al 23,1%. I gol attesi sono pari a 1,57 per la formazione di casa e 0,96 per gli ospiti, indicando un incontro potenzialmente orientato verso i padroni di casa. La metrica Elo mostra un leggero vantaggio per la Roma con 1500 punti contro i 1467,4 del Genoa, sebbene il campione di partite casalinghe e in trasferta sia rispettivamente di 0 e 2 gare, un limite che riduce la precisione della stima. Per quanto riguarda la disponibilità, non risultano dati ufficiali verificati tramite API ed eventuali assenze non segnalate non escludono indisponibilità. Ricordiamo che il modello è sperimentale e non garantisce esiti.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -2153,6 +2209,7 @@
       "home_matches_sample": 0,
       "away_matches_sample": 2,
       "status": "Stima preliminare",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1500.0,
@@ -2171,7 +2228,8 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-18-Serie A-Udinese-Lecce",
@@ -2201,7 +2259,7 @@
         "home_scores": 70.9,
         "away_scores": 62.9
       },
-      "analysis": "Udinese leggermente favorito; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Il confronto di Serie A tra Udinese e Lecce vede una situazione di maggiore equilibrio, con il 41,7% di probabilità per il segno uno, il 28,6% per la X e il 29,6% per il colpo esterno del Lecce. I gol attesi dal modello sono 1,23 per i friulani e 0,99 per i salentini, delineando una gara bloccata con il 61,6% di possibilità per l'Under 2,5. I punteggi Elo sono molto vicini, 1469,1 per l'Udinese e 1477,6 per il Lecce, mentre la forma recente registra per entrambe una media di 0,6 punti a incontro nelle ultime cinque uscite. Il campione casa e trasferta si limita a 3 partite per parte, fattore che circoscrive l'affidabilità della proiezione. La copertura delle formazioni non è disponibile in anticipo tramite API e l'assenza di segnalazioni non implica una rosa completa, trattandosi di un sistema sperimentale.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -2222,6 +2280,7 @@
       "home_matches_sample": 3,
       "away_matches_sample": 3,
       "status": "Pronostico valutabile",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1469.1,
@@ -2245,7 +2304,8 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-18-Serie A-Fiorentina-Como",
@@ -2299,6 +2359,7 @@
       "home_matches_sample": 3,
       "away_matches_sample": 4,
       "status": "Pronostico valutabile",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1467.1,
@@ -2373,6 +2434,7 @@
       "home_matches_sample": 0,
       "away_matches_sample": 2,
       "status": "Stima preliminare",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1500.0,
@@ -2442,6 +2504,7 @@
       "home_matches_sample": 3,
       "away_matches_sample": 3,
       "status": "Pronostico valutabile",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1520.7,
@@ -2516,6 +2579,7 @@
       "home_matches_sample": 2,
       "away_matches_sample": 3,
       "status": "Stima preliminare",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1474.1,
@@ -2590,6 +2654,7 @@
       "home_matches_sample": 3,
       "away_matches_sample": 3,
       "status": "Pronostico valutabile",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1471.0,
@@ -2666,6 +2731,7 @@
       "home_matches_sample": 4,
       "away_matches_sample": 4,
       "status": "Pronostico valutabile",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1489.7,
@@ -2755,6 +2821,7 @@
       "home_matches_sample": 0,
       "away_matches_sample": 4,
       "status": "Stima preliminare",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1500.0,
@@ -2824,6 +2891,7 @@
       "home_matches_sample": 4,
       "away_matches_sample": 0,
       "status": "Stima preliminare",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1468.4,
@@ -2895,6 +2963,7 @@
       "home_matches_sample": 4,
       "away_matches_sample": 4,
       "status": "Pronostico valutabile",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1470.0,
@@ -2969,6 +3038,7 @@
       "home_matches_sample": 0,
       "away_matches_sample": 4,
       "status": "Stima preliminare",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1500.0,
@@ -3038,6 +3108,7 @@
       "home_matches_sample": 0,
       "away_matches_sample": 4,
       "status": "Stima preliminare",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1500.0,
@@ -3107,6 +3178,7 @@
       "home_matches_sample": 0,
       "away_matches_sample": 3,
       "status": "Stima preliminare",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1500.0,
@@ -3176,6 +3248,7 @@
       "home_matches_sample": 4,
       "away_matches_sample": 4,
       "status": "Pronostico valutabile",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1478.3,
@@ -3250,6 +3323,7 @@
       "home_matches_sample": 4,
       "away_matches_sample": 4,
       "status": "Pronostico valutabile",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1467.3,
@@ -3326,6 +3400,7 @@
       "home_matches_sample": 4,
       "away_matches_sample": 4,
       "status": "Pronostico valutabile",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1463.7,
@@ -3402,6 +3477,7 @@
       "home_matches_sample": 4,
       "away_matches_sample": 4,
       "status": "Pronostico valutabile",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1501.9,
@@ -3476,6 +3552,7 @@
       "home_matches_sample": 4,
       "away_matches_sample": 4,
       "status": "Pronostico valutabile",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1511.1,
@@ -3550,6 +3627,7 @@
       "home_matches_sample": 4,
       "away_matches_sample": 0,
       "status": "Stima preliminare",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1558.7,
@@ -3619,6 +3697,7 @@
       "home_matches_sample": 0,
       "away_matches_sample": 4,
       "status": "Stima preliminare",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1500.0,
@@ -3691,6 +3770,7 @@
       "home_matches_sample": 3,
       "away_matches_sample": 4,
       "status": "Pronostico valutabile",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1485.2,
@@ -3765,6 +3845,7 @@
       "home_matches_sample": 0,
       "away_matches_sample": 4,
       "status": "Stima preliminare",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1500.0,
@@ -3834,6 +3915,7 @@
       "home_matches_sample": 4,
       "away_matches_sample": 0,
       "status": "Stima preliminare",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1462.7,
@@ -3903,6 +3985,7 @@
       "home_matches_sample": 4,
       "away_matches_sample": 0,
       "status": "Stima preliminare",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1479.3,
@@ -3972,6 +4055,7 @@
       "home_matches_sample": 0,
       "away_matches_sample": 3,
       "status": "Stima preliminare",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1500.0,
@@ -4041,6 +4125,7 @@
       "home_matches_sample": 4,
       "away_matches_sample": 0,
       "status": "Stima preliminare",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1458.4,
@@ -4112,6 +4197,7 @@
       "home_matches_sample": 4,
       "away_matches_sample": 4,
       "status": "Pronostico valutabile",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1538.0,
@@ -4186,6 +4272,7 @@
       "home_matches_sample": 4,
       "away_matches_sample": 0,
       "status": "Stima preliminare",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1482.5,
@@ -4255,6 +4342,7 @@
       "home_matches_sample": 0,
       "away_matches_sample": 3,
       "status": "Stima preliminare",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1500.0,
@@ -4324,6 +4412,7 @@
       "home_matches_sample": 0,
       "away_matches_sample": 3,
       "status": "Stima preliminare",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1500.0,
@@ -4395,6 +4484,7 @@
       "home_matches_sample": 4,
       "away_matches_sample": 3,
       "status": "Pronostico valutabile",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1486.0,
@@ -4471,6 +4561,7 @@
       "home_matches_sample": 3,
       "away_matches_sample": 4,
       "status": "Pronostico valutabile",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1523.1,
@@ -4545,6 +4636,7 @@
       "home_matches_sample": 3,
       "away_matches_sample": 3,
       "status": "Pronostico valutabile",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1511.0,
@@ -4619,6 +4711,7 @@
       "home_matches_sample": 3,
       "away_matches_sample": 0,
       "status": "Stima preliminare",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1512.3,
@@ -4691,6 +4784,7 @@
       "home_matches_sample": 3,
       "away_matches_sample": 3,
       "status": "Pronostico valutabile",
+      "no_bet_type": "",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1522.3,
@@ -4719,6 +4813,425 @@
   ],
   "no_bet_matches": [
     {
+      "id": "2026-10-16-Bundesliga austriaca-Rapid Vienna-TSV Hartberg",
+      "date": "2026-10-16",
+      "kickoff": "19:30",
+      "league": "Bundesliga austriaca",
+      "country": "Austria",
+      "home_team": "Rapid Vienna",
+      "away_team": "TSV Hartberg",
+      "expected_home_goals": null,
+      "expected_away_goals": null,
+      "probabilities": {},
+      "analysis": "",
+      "suggested_markets": [],
+      "value_bets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 0,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: calendario trovato, ma non ci sono risultati storici verificabili per questa competizione.",
+      "confidence": "non stimabile",
+      "method": "Nessuna stima: storico non disponibile",
+      "availability_data": {
+        "status": "nessuna_segnalazione",
+        "source": "API-Football",
+        "note": "La fonte non riporta indisponibilità per questa partita; non è una conferma che tutti i giocatori siano disponibili.",
+        "fixture_id": "1561945",
+        "injuries": [],
+        "lineups": null,
+        "lineup_status": "non_pubblicate"
+      }
+    },
+    {
+      "id": "2026-10-17-Bundesliga austriaca-Austria Lustenau-LASK Linz",
+      "date": "2026-10-17",
+      "kickoff": "17:00",
+      "league": "Bundesliga austriaca",
+      "country": "Austria",
+      "home_team": "Austria Lustenau",
+      "away_team": "LASK Linz",
+      "expected_home_goals": null,
+      "expected_away_goals": null,
+      "probabilities": {},
+      "analysis": "",
+      "suggested_markets": [],
+      "value_bets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 0,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: calendario trovato, ma non ci sono risultati storici verificabili per questa competizione.",
+      "confidence": "non stimabile",
+      "method": "Nessuna stima: storico non disponibile",
+      "availability_data": {
+        "status": "fuori_copertura_api",
+        "source": "API-Football",
+        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "injuries": [],
+        "lineups": null
+      }
+    },
+    {
+      "id": "2026-10-17-Bundesliga austriaca-SV Josko Ried-Austria Vienna",
+      "date": "2026-10-17",
+      "kickoff": "19:30",
+      "league": "Bundesliga austriaca",
+      "country": "Austria",
+      "home_team": "SV Josko Ried",
+      "away_team": "Austria Vienna",
+      "expected_home_goals": null,
+      "expected_away_goals": null,
+      "probabilities": {},
+      "analysis": "",
+      "suggested_markets": [],
+      "value_bets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 0,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: calendario trovato, ma non ci sono risultati storici verificabili per questa competizione.",
+      "confidence": "non stimabile",
+      "method": "Nessuna stima: storico non disponibile",
+      "availability_data": {
+        "status": "fuori_copertura_api",
+        "source": "API-Football",
+        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "injuries": [],
+        "lineups": null
+      }
+    },
+    {
+      "id": "2026-10-18-Bundesliga austriaca-RB Salzburg-SC Rheindorf Altach",
+      "date": "2026-10-18",
+      "kickoff": "14:30",
+      "league": "Bundesliga austriaca",
+      "country": "Austria",
+      "home_team": "RB Salzburg",
+      "away_team": "SC Rheindorf Altach",
+      "expected_home_goals": null,
+      "expected_away_goals": null,
+      "probabilities": {},
+      "analysis": "",
+      "suggested_markets": [],
+      "value_bets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 0,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: calendario trovato, ma non ci sono risultati storici verificabili per questa competizione.",
+      "confidence": "non stimabile",
+      "method": "Nessuna stima: storico non disponibile",
+      "availability_data": {
+        "status": "fuori_copertura_api",
+        "source": "API-Football",
+        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "injuries": [],
+        "lineups": null
+      }
+    },
+    {
+      "id": "2026-10-18-Bundesliga austriaca-Wolfsberger-WSG Swarovski Tirol",
+      "date": "2026-10-18",
+      "kickoff": "14:30",
+      "league": "Bundesliga austriaca",
+      "country": "Austria",
+      "home_team": "Wolfsberger",
+      "away_team": "WSG Swarovski Tirol",
+      "expected_home_goals": null,
+      "expected_away_goals": null,
+      "probabilities": {},
+      "analysis": "",
+      "suggested_markets": [],
+      "value_bets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 0,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: calendario trovato, ma non ci sono risultati storici verificabili per questa competizione.",
+      "confidence": "non stimabile",
+      "method": "Nessuna stima: storico non disponibile",
+      "availability_data": {
+        "status": "fuori_copertura_api",
+        "source": "API-Football",
+        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "injuries": [],
+        "lineups": null
+      }
+    },
+    {
+      "id": "2026-10-18-Bundesliga austriaca-SK Sturm Graz-Grazer AK",
+      "date": "2026-10-18",
+      "kickoff": "17:00",
+      "league": "Bundesliga austriaca",
+      "country": "Austria",
+      "home_team": "SK Sturm Graz",
+      "away_team": "Grazer AK",
+      "expected_home_goals": null,
+      "expected_away_goals": null,
+      "probabilities": {},
+      "analysis": "",
+      "suggested_markets": [],
+      "value_bets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 0,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: calendario trovato, ma non ci sono risultati storici verificabili per questa competizione.",
+      "confidence": "non stimabile",
+      "method": "Nessuna stima: storico non disponibile",
+      "availability_data": {
+        "status": "fuori_copertura_api",
+        "source": "API-Football",
+        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "injuries": [],
+        "lineups": null
+      }
+    },
+    {
+      "id": "2026-10-16-Superliga danese-AC Horsens-Randers FC",
+      "date": "2026-10-16",
+      "kickoff": "19:00",
+      "league": "Superliga danese",
+      "country": "Danimarca",
+      "home_team": "AC Horsens",
+      "away_team": "Randers FC",
+      "expected_home_goals": null,
+      "expected_away_goals": null,
+      "probabilities": {},
+      "analysis": "",
+      "suggested_markets": [],
+      "value_bets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 0,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: calendario trovato, ma non ci sono risultati storici verificabili per questa competizione.",
+      "confidence": "non stimabile",
+      "method": "Nessuna stima: storico non disponibile",
+      "availability_data": {
+        "status": "segnalazioni_trovate",
+        "source": "API-Football",
+        "note": "La fonte segnala 7 indisponibilità; elenco non necessariamente completo.",
+        "fixture_id": "1549035",
+        "injuries": [
+          {
+            "team": "AC Horsens",
+            "player": "C. Vestergaard",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "team": "Randers FC",
+            "player": "J. Bjorkengren",
+            "type": "Missing Fixture",
+            "reason": "Injury"
+          },
+          {
+            "team": "Randers FC",
+            "player": "W. Dammers",
+            "type": "Missing Fixture",
+            "reason": "Injury"
+          },
+          {
+            "team": "Randers FC",
+            "player": "F. Lauenborg",
+            "type": "Missing Fixture",
+            "reason": "Injury"
+          },
+          {
+            "team": "Randers FC",
+            "player": "L. Lissens",
+            "type": "Missing Fixture",
+            "reason": "Injury"
+          },
+          {
+            "team": "Randers FC",
+            "player": "B. Orn",
+            "type": "Missing Fixture",
+            "reason": "Injury"
+          },
+          {
+            "team": "Randers FC",
+            "player": "F. Sommer",
+            "type": "Missing Fixture",
+            "reason": "Injury"
+          }
+        ],
+        "lineups": null,
+        "lineup_status": "non_pubblicate"
+      }
+    },
+    {
+      "id": "2026-10-18-Superliga danese-Lyngby Boldklub-FC Nordsjælland",
+      "date": "2026-10-18",
+      "kickoff": "14:00",
+      "league": "Superliga danese",
+      "country": "Danimarca",
+      "home_team": "Lyngby Boldklub",
+      "away_team": "FC Nordsjælland",
+      "expected_home_goals": null,
+      "expected_away_goals": null,
+      "probabilities": {},
+      "analysis": "",
+      "suggested_markets": [],
+      "value_bets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 0,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: calendario trovato, ma non ci sono risultati storici verificabili per questa competizione.",
+      "confidence": "non stimabile",
+      "method": "Nessuna stima: storico non disponibile",
+      "availability_data": {
+        "status": "fuori_copertura_api",
+        "source": "API-Football",
+        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "injuries": [],
+        "lineups": null
+      }
+    },
+    {
+      "id": "2026-10-18-Superliga danese-Sønderjyske Fodbold-Silkeborg IF",
+      "date": "2026-10-18",
+      "kickoff": "14:00",
+      "league": "Superliga danese",
+      "country": "Danimarca",
+      "home_team": "Sønderjyske Fodbold",
+      "away_team": "Silkeborg IF",
+      "expected_home_goals": null,
+      "expected_away_goals": null,
+      "probabilities": {},
+      "analysis": "",
+      "suggested_markets": [],
+      "value_bets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 0,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: calendario trovato, ma non ci sono risultati storici verificabili per questa competizione.",
+      "confidence": "non stimabile",
+      "method": "Nessuna stima: storico non disponibile",
+      "availability_data": {
+        "status": "fuori_copertura_api",
+        "source": "API-Football",
+        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "injuries": [],
+        "lineups": null
+      }
+    },
+    {
+      "id": "2026-10-18-Superliga danese-Odense Boldklub-Brøndby IF",
+      "date": "2026-10-18",
+      "kickoff": "16:00",
+      "league": "Superliga danese",
+      "country": "Danimarca",
+      "home_team": "Odense Boldklub",
+      "away_team": "Brøndby IF",
+      "expected_home_goals": null,
+      "expected_away_goals": null,
+      "probabilities": {},
+      "analysis": "",
+      "suggested_markets": [],
+      "value_bets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 0,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: calendario trovato, ma non ci sono risultati storici verificabili per questa competizione.",
+      "confidence": "non stimabile",
+      "method": "Nessuna stima: storico non disponibile",
+      "availability_data": {
+        "status": "fuori_copertura_api",
+        "source": "API-Football",
+        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "injuries": [],
+        "lineups": null
+      }
+    },
+    {
+      "id": "2026-10-18-Superliga danese-F.C. København-AGF",
+      "date": "2026-10-18",
+      "kickoff": "18:00",
+      "league": "Superliga danese",
+      "country": "Danimarca",
+      "home_team": "F.C. København",
+      "away_team": "AGF",
+      "expected_home_goals": null,
+      "expected_away_goals": null,
+      "probabilities": {},
+      "analysis": "",
+      "suggested_markets": [],
+      "value_bets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 0,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: calendario trovato, ma non ci sono risultati storici verificabili per questa competizione.",
+      "confidence": "non stimabile",
+      "method": "Nessuna stima: storico non disponibile",
+      "availability_data": {
+        "status": "fuori_copertura_api",
+        "source": "API-Football",
+        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "injuries": [],
+        "lineups": null
+      }
+    },
+    {
+      "id": "2026-10-19-Superliga danese-Viborg FF-FC Midtjylland",
+      "date": "2026-10-19",
+      "kickoff": "19:00",
+      "league": "Superliga danese",
+      "country": "Danimarca",
+      "home_team": "Viborg FF",
+      "away_team": "FC Midtjylland",
+      "expected_home_goals": null,
+      "expected_away_goals": null,
+      "probabilities": {},
+      "analysis": "",
+      "suggested_markets": [],
+      "value_bets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 0,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: calendario trovato, ma non ci sono risultati storici verificabili per questa competizione.",
+      "confidence": "non stimabile",
+      "method": "Nessuna stima: storico non disponibile",
+      "availability_data": {
+        "status": "fuori_copertura_api",
+        "source": "API-Football",
+        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "injuries": [],
+        "lineups": null
+      }
+    },
+    {
       "id": "2026-10-18-Ligue 1-Le Havre AC-AJ Auxerre",
       "date": "2026-10-18",
       "kickoff": "17:15",
@@ -4737,7 +5250,8 @@
       "home_matches_sample": 0,
       "away_matches_sample": 0,
       "status": "NO BET",
-      "reason": "Storico insufficiente: non risultano almeno due osservazioni pertinenti per le squadre.",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: nessuna osservazione storica pertinente per casa o trasferta.",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1500.0,
       "elo_away": 1500.0,
@@ -4771,7 +5285,8 @@
       "home_matches_sample": 0,
       "away_matches_sample": 0,
       "status": "NO BET",
-      "reason": "Storico insufficiente: non risultano almeno due osservazioni pertinenti per le squadre.",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: nessuna osservazione storica pertinente per casa o trasferta.",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1500.0,
       "elo_away": 1500.0,
@@ -4805,7 +5320,8 @@
       "home_matches_sample": 0,
       "away_matches_sample": 0,
       "status": "NO BET",
-      "reason": "Storico insufficiente: non risultano almeno due osservazioni pertinenti per le squadre.",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: nessuna osservazione storica pertinente per casa o trasferta.",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1500.0,
       "elo_away": 1500.0,
@@ -4839,7 +5355,8 @@
       "home_matches_sample": 0,
       "away_matches_sample": 0,
       "status": "NO BET",
-      "reason": "Storico insufficiente: non risultano almeno due osservazioni pertinenti per le squadre.",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: nessuna osservazione storica pertinente per casa o trasferta.",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1500.0,
       "elo_away": 1500.0,
@@ -4873,7 +5390,8 @@
       "home_matches_sample": 0,
       "away_matches_sample": 0,
       "status": "NO BET",
-      "reason": "Storico insufficiente: non risultano almeno due osservazioni pertinenti per le squadre.",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: nessuna osservazione storica pertinente per casa o trasferta.",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1500.0,
       "elo_away": 1500.0,
@@ -4907,7 +5425,8 @@
       "home_matches_sample": 0,
       "away_matches_sample": 0,
       "status": "NO BET",
-      "reason": "Storico insufficiente: non risultano almeno due osservazioni pertinenti per le squadre.",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: nessuna osservazione storica pertinente per casa o trasferta.",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1500.0,
       "elo_away": 1500.0,
@@ -4941,7 +5460,8 @@
       "home_matches_sample": 0,
       "away_matches_sample": 0,
       "status": "NO BET",
-      "reason": "Storico insufficiente: non risultano almeno due osservazioni pertinenti per le squadre.",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: nessuna osservazione storica pertinente per casa o trasferta.",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1500.0,
       "elo_away": 1500.0,
@@ -4975,7 +5495,8 @@
       "home_matches_sample": 0,
       "away_matches_sample": 0,
       "status": "NO BET",
-      "reason": "Storico insufficiente: non risultano almeno due osservazioni pertinenti per le squadre.",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: nessuna osservazione storica pertinente per casa o trasferta.",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1500.0,
       "elo_away": 1500.0,
@@ -5009,7 +5530,8 @@
       "home_matches_sample": 0,
       "away_matches_sample": 0,
       "status": "NO BET",
-      "reason": "Storico insufficiente: non risultano almeno due osservazioni pertinenti per le squadre.",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: nessuna osservazione storica pertinente per casa o trasferta.",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1500.0,
       "elo_away": 1500.0,
@@ -5043,13 +5565,262 @@
       "home_matches_sample": 0,
       "away_matches_sample": 0,
       "status": "NO BET",
-      "reason": "Storico insufficiente: non risultano almeno due osservazioni pertinenti per le squadre.",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: nessuna osservazione storica pertinente per casa o trasferta.",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1500.0,
       "elo_away": 1500.0,
       "home_recent_form": null,
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "fuori_copertura_api",
+        "source": "API-Football",
+        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "injuries": [],
+        "lineups": null
+      }
+    },
+    {
+      "id": "2026-10-17-Eliteserien norvegese-Hamarkameratene-Bodo/Glimt",
+      "date": "2026-10-17",
+      "kickoff": "14:00",
+      "league": "Eliteserien norvegese",
+      "country": "Norvegia",
+      "home_team": "Hamarkameratene",
+      "away_team": "Bodo/Glimt",
+      "expected_home_goals": null,
+      "expected_away_goals": null,
+      "probabilities": {},
+      "analysis": "",
+      "suggested_markets": [],
+      "value_bets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 0,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: calendario trovato, ma non ci sono risultati storici verificabili per questa competizione.",
+      "confidence": "non stimabile",
+      "method": "Nessuna stima: storico non disponibile",
+      "availability_data": {
+        "status": "fuori_copertura_api",
+        "source": "API-Football",
+        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "injuries": [],
+        "lineups": null
+      }
+    },
+    {
+      "id": "2026-10-17-Eliteserien norvegese-Kristiansund BK-Aalesund",
+      "date": "2026-10-17",
+      "kickoff": "16:00",
+      "league": "Eliteserien norvegese",
+      "country": "Norvegia",
+      "home_team": "Kristiansund BK",
+      "away_team": "Aalesund",
+      "expected_home_goals": null,
+      "expected_away_goals": null,
+      "probabilities": {},
+      "analysis": "",
+      "suggested_markets": [],
+      "value_bets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 0,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: calendario trovato, ma non ci sono risultati storici verificabili per questa competizione.",
+      "confidence": "non stimabile",
+      "method": "Nessuna stima: storico non disponibile",
+      "availability_data": {
+        "status": "fuori_copertura_api",
+        "source": "API-Football",
+        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "injuries": [],
+        "lineups": null
+      }
+    },
+    {
+      "id": "2026-10-17-Eliteserien norvegese-VIKING FK-Fredrikstad",
+      "date": "2026-10-17",
+      "kickoff": "18:00",
+      "league": "Eliteserien norvegese",
+      "country": "Norvegia",
+      "home_team": "VIKING FK",
+      "away_team": "Fredrikstad",
+      "expected_home_goals": null,
+      "expected_away_goals": null,
+      "probabilities": {},
+      "analysis": "",
+      "suggested_markets": [],
+      "value_bets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 0,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: calendario trovato, ma non ci sono risultati storici verificabili per questa competizione.",
+      "confidence": "non stimabile",
+      "method": "Nessuna stima: storico non disponibile",
+      "availability_data": {
+        "status": "fuori_copertura_api",
+        "source": "API-Football",
+        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "injuries": [],
+        "lineups": null
+      }
+    },
+    {
+      "id": "2026-10-18-Eliteserien norvegese-Sarpsborg FK-Rosenborg",
+      "date": "2026-10-18",
+      "kickoff": "14:30",
+      "league": "Eliteserien norvegese",
+      "country": "Norvegia",
+      "home_team": "Sarpsborg FK",
+      "away_team": "Rosenborg",
+      "expected_home_goals": null,
+      "expected_away_goals": null,
+      "probabilities": {},
+      "analysis": "",
+      "suggested_markets": [],
+      "value_bets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 0,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: calendario trovato, ma non ci sono risultati storici verificabili per questa competizione.",
+      "confidence": "non stimabile",
+      "method": "Nessuna stima: storico non disponibile",
+      "availability_data": {
+        "status": "fuori_copertura_api",
+        "source": "API-Football",
+        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "injuries": [],
+        "lineups": null
+      }
+    },
+    {
+      "id": "2026-10-18-Eliteserien norvegese-Molde-IK Start",
+      "date": "2026-10-18",
+      "kickoff": "17:00",
+      "league": "Eliteserien norvegese",
+      "country": "Norvegia",
+      "home_team": "Molde",
+      "away_team": "IK Start",
+      "expected_home_goals": null,
+      "expected_away_goals": null,
+      "probabilities": {},
+      "analysis": "",
+      "suggested_markets": [],
+      "value_bets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 0,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: calendario trovato, ma non ci sono risultati storici verificabili per questa competizione.",
+      "confidence": "non stimabile",
+      "method": "Nessuna stima: storico non disponibile",
+      "availability_data": {
+        "status": "fuori_copertura_api",
+        "source": "API-Football",
+        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "injuries": [],
+        "lineups": null
+      }
+    },
+    {
+      "id": "2026-10-18-Eliteserien norvegese-Sandefjord-Lillestrom",
+      "date": "2026-10-18",
+      "kickoff": "17:00",
+      "league": "Eliteserien norvegese",
+      "country": "Norvegia",
+      "home_team": "Sandefjord",
+      "away_team": "Lillestrom",
+      "expected_home_goals": null,
+      "expected_away_goals": null,
+      "probabilities": {},
+      "analysis": "",
+      "suggested_markets": [],
+      "value_bets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 0,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: calendario trovato, ma non ci sono risultati storici verificabili per questa competizione.",
+      "confidence": "non stimabile",
+      "method": "Nessuna stima: storico non disponibile",
+      "availability_data": {
+        "status": "fuori_copertura_api",
+        "source": "API-Football",
+        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "injuries": [],
+        "lineups": null
+      }
+    },
+    {
+      "id": "2026-10-18-Eliteserien norvegese-Vålerenga-SK Brann",
+      "date": "2026-10-18",
+      "kickoff": "17:00",
+      "league": "Eliteserien norvegese",
+      "country": "Norvegia",
+      "home_team": "Vålerenga",
+      "away_team": "SK Brann",
+      "expected_home_goals": null,
+      "expected_away_goals": null,
+      "probabilities": {},
+      "analysis": "",
+      "suggested_markets": [],
+      "value_bets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 0,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: calendario trovato, ma non ci sono risultati storici verificabili per questa competizione.",
+      "confidence": "non stimabile",
+      "method": "Nessuna stima: storico non disponibile",
+      "availability_data": {
+        "status": "fuori_copertura_api",
+        "source": "API-Football",
+        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "injuries": [],
+        "lineups": null
+      }
+    },
+    {
+      "id": "2026-10-18-Eliteserien norvegese-Tromso-KFUM Oslo",
+      "date": "2026-10-18",
+      "kickoff": "19:15",
+      "league": "Eliteserien norvegese",
+      "country": "Norvegia",
+      "home_team": "Tromso",
+      "away_team": "KFUM Oslo",
+      "expected_home_goals": null,
+      "expected_away_goals": null,
+      "probabilities": {},
+      "analysis": "",
+      "suggested_markets": [],
+      "value_bets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 0,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: calendario trovato, ma non ci sono risultati storici verificabili per questa competizione.",
+      "confidence": "non stimabile",
+      "method": "Nessuna stima: storico non disponibile",
       "availability_data": {
         "status": "fuori_copertura_api",
         "source": "API-Football",
@@ -5077,7 +5848,8 @@
       "home_matches_sample": 0,
       "away_matches_sample": 0,
       "status": "NO BET",
-      "reason": "Storico insufficiente: non risultano almeno due osservazioni pertinenti per le squadre.",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: nessuna osservazione storica pertinente per casa o trasferta.",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1500.0,
       "elo_away": 1500.0,
@@ -5111,7 +5883,8 @@
       "home_matches_sample": 0,
       "away_matches_sample": 0,
       "status": "NO BET",
-      "reason": "Storico insufficiente: non risultano almeno due osservazioni pertinenti per le squadre.",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: nessuna osservazione storica pertinente per casa o trasferta.",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1500.0,
       "elo_away": 1500.0,
@@ -5145,7 +5918,8 @@
       "home_matches_sample": 0,
       "away_matches_sample": 0,
       "status": "NO BET",
-      "reason": "Storico insufficiente: non risultano almeno due osservazioni pertinenti per le squadre.",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: nessuna osservazione storica pertinente per casa o trasferta.",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1500.0,
       "elo_away": 1500.0,
@@ -5179,13 +5953,262 @@
       "home_matches_sample": 0,
       "away_matches_sample": 0,
       "status": "NO BET",
-      "reason": "Storico insufficiente: non risultano almeno due osservazioni pertinenti per le squadre.",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: nessuna osservazione storica pertinente per casa o trasferta.",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1500.0,
       "elo_away": 1500.0,
       "home_recent_form": null,
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "fuori_copertura_api",
+        "source": "API-Football",
+        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "injuries": [],
+        "lineups": null
+      }
+    },
+    {
+      "id": "2026-10-16-Allsvenskan svedese-IF Brommapojkarna-Djurgården",
+      "date": "2026-10-16",
+      "kickoff": "19:00",
+      "league": "Allsvenskan svedese",
+      "country": "Svezia",
+      "home_team": "IF Brommapojkarna",
+      "away_team": "Djurgården",
+      "expected_home_goals": null,
+      "expected_away_goals": null,
+      "probabilities": {},
+      "analysis": "",
+      "suggested_markets": [],
+      "value_bets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 0,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: calendario trovato, ma non ci sono risultati storici verificabili per questa competizione.",
+      "confidence": "non stimabile",
+      "method": "Nessuna stima: storico non disponibile",
+      "availability_data": {
+        "status": "non_trovata",
+        "source": "API-Football",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
+        "injuries": [],
+        "lineups": null
+      }
+    },
+    {
+      "id": "2026-10-17-Allsvenskan svedese-AIK-IFK Göteborg",
+      "date": "2026-10-17",
+      "kickoff": "17:30",
+      "league": "Allsvenskan svedese",
+      "country": "Svezia",
+      "home_team": "AIK",
+      "away_team": "IFK Göteborg",
+      "expected_home_goals": null,
+      "expected_away_goals": null,
+      "probabilities": {},
+      "analysis": "",
+      "suggested_markets": [],
+      "value_bets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 0,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: calendario trovato, ma non ci sono risultati storici verificabili per questa competizione.",
+      "confidence": "non stimabile",
+      "method": "Nessuna stima: storico non disponibile",
+      "availability_data": {
+        "status": "fuori_copertura_api",
+        "source": "API-Football",
+        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "injuries": [],
+        "lineups": null
+      }
+    },
+    {
+      "id": "2026-10-18-Allsvenskan svedese-IK Sirius-IF Elfsborg",
+      "date": "2026-10-18",
+      "kickoff": "14:00",
+      "league": "Allsvenskan svedese",
+      "country": "Svezia",
+      "home_team": "IK Sirius",
+      "away_team": "IF Elfsborg",
+      "expected_home_goals": null,
+      "expected_away_goals": null,
+      "probabilities": {},
+      "analysis": "",
+      "suggested_markets": [],
+      "value_bets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 0,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: calendario trovato, ma non ci sono risultati storici verificabili per questa competizione.",
+      "confidence": "non stimabile",
+      "method": "Nessuna stima: storico non disponibile",
+      "availability_data": {
+        "status": "fuori_copertura_api",
+        "source": "API-Football",
+        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "injuries": [],
+        "lineups": null
+      }
+    },
+    {
+      "id": "2026-10-18-Allsvenskan svedese-Västerås SK-Mjällby AIF",
+      "date": "2026-10-18",
+      "kickoff": "14:00",
+      "league": "Allsvenskan svedese",
+      "country": "Svezia",
+      "home_team": "Västerås SK",
+      "away_team": "Mjällby AIF",
+      "expected_home_goals": null,
+      "expected_away_goals": null,
+      "probabilities": {},
+      "analysis": "",
+      "suggested_markets": [],
+      "value_bets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 0,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: calendario trovato, ma non ci sono risultati storici verificabili per questa competizione.",
+      "confidence": "non stimabile",
+      "method": "Nessuna stima: storico non disponibile",
+      "availability_data": {
+        "status": "fuori_copertura_api",
+        "source": "API-Football",
+        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "injuries": [],
+        "lineups": null
+      }
+    },
+    {
+      "id": "2026-10-18-Allsvenskan svedese-Halmstads BK-Hammarby IF",
+      "date": "2026-10-18",
+      "kickoff": "16:30",
+      "league": "Allsvenskan svedese",
+      "country": "Svezia",
+      "home_team": "Halmstads BK",
+      "away_team": "Hammarby IF",
+      "expected_home_goals": null,
+      "expected_away_goals": null,
+      "probabilities": {},
+      "analysis": "",
+      "suggested_markets": [],
+      "value_bets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 0,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: calendario trovato, ma non ci sono risultati storici verificabili per questa competizione.",
+      "confidence": "non stimabile",
+      "method": "Nessuna stima: storico non disponibile",
+      "availability_data": {
+        "status": "fuori_copertura_api",
+        "source": "API-Football",
+        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "injuries": [],
+        "lineups": null
+      }
+    },
+    {
+      "id": "2026-10-18-Allsvenskan svedese-Malmö FF-BK Häcken",
+      "date": "2026-10-18",
+      "kickoff": "16:30",
+      "league": "Allsvenskan svedese",
+      "country": "Svezia",
+      "home_team": "Malmö FF",
+      "away_team": "BK Häcken",
+      "expected_home_goals": null,
+      "expected_away_goals": null,
+      "probabilities": {},
+      "analysis": "",
+      "suggested_markets": [],
+      "value_bets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 0,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: calendario trovato, ma non ci sono risultati storici verificabili per questa competizione.",
+      "confidence": "non stimabile",
+      "method": "Nessuna stima: storico non disponibile",
+      "availability_data": {
+        "status": "fuori_copertura_api",
+        "source": "API-Football",
+        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "injuries": [],
+        "lineups": null
+      }
+    },
+    {
+      "id": "2026-10-18-Allsvenskan svedese-Örgryte IS-GAIS",
+      "date": "2026-10-18",
+      "kickoff": "16:30",
+      "league": "Allsvenskan svedese",
+      "country": "Svezia",
+      "home_team": "Örgryte IS",
+      "away_team": "GAIS",
+      "expected_home_goals": null,
+      "expected_away_goals": null,
+      "probabilities": {},
+      "analysis": "",
+      "suggested_markets": [],
+      "value_bets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 0,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: calendario trovato, ma non ci sono risultati storici verificabili per questa competizione.",
+      "confidence": "non stimabile",
+      "method": "Nessuna stima: storico non disponibile",
+      "availability_data": {
+        "status": "fuori_copertura_api",
+        "source": "API-Football",
+        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "injuries": [],
+        "lineups": null
+      }
+    },
+    {
+      "id": "2026-10-19-Allsvenskan svedese-Degerfors IF-Kalmar FF",
+      "date": "2026-10-19",
+      "kickoff": "19:00",
+      "league": "Allsvenskan svedese",
+      "country": "Svezia",
+      "home_team": "Degerfors IF",
+      "away_team": "Kalmar FF",
+      "expected_home_goals": null,
+      "expected_away_goals": null,
+      "probabilities": {},
+      "analysis": "",
+      "suggested_markets": [],
+      "value_bets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 0,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: calendario trovato, ma non ci sono risultati storici verificabili per questa competizione.",
+      "confidence": "non stimabile",
+      "method": "Nessuna stima: storico non disponibile",
       "availability_data": {
         "status": "fuori_copertura_api",
         "source": "API-Football",
@@ -5213,7 +6236,8 @@
       "home_matches_sample": 0,
       "away_matches_sample": 0,
       "status": "NO BET",
-      "reason": "Storico insufficiente: non risultano almeno due osservazioni pertinenti per le squadre.",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: nessuna osservazione storica pertinente per casa o trasferta.",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1500.0,
       "elo_away": 1500.0,
@@ -5247,7 +6271,8 @@
       "home_matches_sample": 0,
       "away_matches_sample": 0,
       "status": "NO BET",
-      "reason": "Storico insufficiente: non risultano almeno due osservazioni pertinenti per le squadre.",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: nessuna osservazione storica pertinente per casa o trasferta.",
       "confidence": "bassa (campione ridotto)",
       "elo_home": 1500.0,
       "elo_away": 1500.0,
