@@ -59,20 +59,50 @@ def main():
             "probabilita_percentuali_modello": match.get("probabilities", {}),
             "campione_casa": match.get("home_matches_sample"),
             "campione_trasferta": match.get("away_matches_sample"),
+            "forma_recente_casa": match.get("home_recent_form"),
+            "forma_recente_trasferta": match.get("away_recent_form"),
+            "elo_casa": match.get("elo_home"),
+            "elo_trasferta": match.get("elo_away"),
+            "fiducia_modello": match.get("confidence"),
+            "stato_stima": match.get("status"),
+            "disponibilita_verificata": {
+                "stato": (match.get("availability_data") or {}).get("status"),
+                "nota": (match.get("availability_data") or {}).get("note"),
+                "indisponibili_segnalati": (match.get("availability_data") or {}).get("injuries", []),
+                "formazioni_pubblicate": bool(
+                    (match.get("availability_data") or {}).get("lineups")
+                    and (
+                        (match.get("availability_data") or {}).get("lineups", {}).get("home_starters")
+                        or (match.get("availability_data") or {}).get("lineups", {}).get("away_starters")
+                    )
+                ),
+            },
+            "quote_1x2_disponibili": match.get("odds_1x2"),
             "mercati_selezionati_da_regole": match.get("suggested_markets", []),
         })
 
     prompt = (
-        "Sei l'assistente editoriale di Calcio Intelligente. Scrivi un commento in italiano "
-        "breve e prudente per ogni partita usando ESCLUSIVAMENTE i dati JSON forniti. "
-        "Non cercare di inventare infortuni, formazioni, forma recente, motivazioni, quote, "
-        "meteo o notizie: non sono presenti. Non modificare né ricalcolare le probabilità, "
-        "non consigliare puntate e non promettere risultati. Evidenzia l'incertezza e i limiti "
-        "del campione; interpreta le probabilità come stime sperimentali di un modello Poisson "
-        "non ancora validato. Se le probabilità sono vicine, dillo. Per ciascun ID restituisci "
-        "un commento massimo di 2 frasi. Rispondi SOLO con JSON valido nel formato "
-        '{"analyses":[{"id":"ID esatto","analysis":"commento in italiano"}]}. '
-        "Non inventare ID e non omettere il carattere prudente. Dati:\n"
+        "Sei l'analista editoriale di Calcio Intelligente e scrivi in italiano naturale, "
+        "chiaro e concreto, come una persona competente che spiega la partita a un lettore. "
+        "Per ogni incontro scrivi 4-5 frasi complete (circa 90-140 parole), con tono umano "
+        "e senza formule ripetitive. Apri con una lettura sintetica dell'equilibrio tra le "
+        "squadre; interpreta le probabilità 1/X/2 e i gol attesi citando i numeri pertinenti; "
+        "commenta la forma recente solo se i dati sono presenti, spiegando gol fatti/subiti "
+        "e punti medi senza trasformarli in certezze; indica chiaramente se il campione casa/"
+        "trasferta è piccolo o manca del tutto e come questo limita la stima. Se sono presenti "
+        "quote, descrivile come dato di mercato e non come prova di valore; non dichiarare che "
+        "una quota sia conveniente senza calcolare e giustificare il confronto. Se i dati "
+        "infortuni/formazioni sono presenti, riferisci soltanto ciò che la fonte segnala e "
+        "precisa che l'elenco può essere incompleto; se la data è fuori copertura, dillo "
+        "esplicitamente e non interpretare l'assenza di segnalazioni come disponibilità. "
+        "Non inventare notizie, precedenti, motivazioni, forma, quote o giocatori; non "
+        "dedurre informazioni mancanti. Non consigliare puntate, non promettere risultati e "
+        "non modificare probabilità o mercati. Ricorda che il modello Poisson è sperimentale "
+        "e non ancora validato con risultati sufficienti. Evita di ripetere sempre la stessa "
+        "frase generica: rendi ogni analisi specifica ai numeri della partita. Restituisci "
+        "SOLO JSON valido nel formato "
+        '{"analyses":[{"id":"ID esatto","analysis":"analisi in italiano"}]}. '
+        "Non inventare ID e non omettere le cautele. Dati:\\n"
         + json.dumps(compact_matches, ensure_ascii=False, separators=(",", ":"))
     )
     body = {
