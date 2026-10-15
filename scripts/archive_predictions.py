@@ -99,6 +99,20 @@ def calculate_metrics(records):
     }
 
 
+def calculate_metrics_by_league(records):
+    """Metriche descrittive separate per competizione, solo su esiti già noti."""
+    grouped = {}
+    for item in records:
+        league = item.get("league") or "Competizione sconosciuta"
+        grouped.setdefault(league, []).append(item)
+    return {
+        league: calculate_metrics(items)
+        for league, items in sorted(grouped.items())
+        if any(x.get("outcome") in ("1", "X", "2") and isinstance(x.get("probabilities"), dict)
+               for x in items)
+    }
+
+
 def main():
     if not PREDICTIONS_FILE.exists():
         raise SystemExit("File data/predictions.json non trovato.")
@@ -165,6 +179,7 @@ def main():
     history["records"] = records
     history["updated_at"] = datetime.now(timezone.utc).isoformat()
     history["metrics"] = calculate_metrics(records)
+    history["metrics_by_league"] = calculate_metrics_by_league(records)
     HISTORY_FILE.parent.mkdir(parents=True, exist_ok=True)
     HISTORY_FILE.write_text(json.dumps(history, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Storico: {len(records)} partite archiviate; {settled} nuovi risultati associati.")
