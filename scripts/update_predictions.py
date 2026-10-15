@@ -138,6 +138,16 @@ def number(value):
     except ValueError:
         return None
 
+def odds_from_row(row):
+    """Quote 1X2 da football-data: preferisce le medie disponibili, poi il bookmaker B365."""
+    for keys in (("AvgH", "AvgD", "AvgA"), ("B365H", "B365D", "B365A"),
+                 ("MaxH", "MaxD", "MaxA")):
+        values = [number(row.get(key)) for key in keys]
+        if all(value is not None and value > 1 for value in values):
+            return {"home": values[0], "draw": values[1], "away": values[2]}
+    return None
+
+
 
 def parse_date(value):
     value = (value or "").strip()
@@ -326,6 +336,7 @@ def main():
     season = current_season_code(today)
     last_date = today + timedelta(days=MAX_DAYS_AHEAD)
     forecasts, downloaded, failed = [], 0, []
+    fixture_odds = {}
 
     # Football-data pubblica le prossime partite in un CSV separato.
     try:
@@ -361,6 +372,9 @@ def main():
                 completed.append((home, away, int(hg), int(ag)))
             elif today <= match_date <= last_date:
                 fixtures.append((home, away, match_date, (row.get("Time") or row.get("time") or "").strip()))
+                quote = odds_from_row(row)
+                if quote:
+                    fixture_odds[(match_date.isoformat(), team_key(home), team_key(away))] = quote
 
         # All'inizio della stagione, se il file corrente non ha risultati,
         # usa la stagione precedente per costruire una base statistica iniziale.
@@ -408,6 +422,9 @@ def main():
             item = (home, away, match_date, kickoff)
             if item not in fixtures:
                 fixtures.append(item)
+            quote = odds_from_row(row)
+            if quote:
+                fixture_odds[(match_date.isoformat(), team_key(home), team_key(away))] = quote
 
         # Se il CSV generale non ha partite future per questa lega, usa il calendario ESPN.
         if not fixtures:
@@ -451,6 +468,25 @@ def main():
             away = normalized_history.get(team_key(away), away)
             forecast = make_forecast(home, away, league_name, match_date, kickoff, history, league_home_avg, league_away_avg, elo_ratings, recent_form)
             if forecast:
+                quote = fixture_odds.get((match_date.isoformat(), team_key(home), team_key(away)))
+                if quote and forecast.get("probabilities"):
+                    probs = forecast["probabilities"]
+                    ev = {
+                        "home": round(probs["home_win"] / 100 * quote["home"] - 1, 4),
+                        "draw": round(probs["draw"] / 100 * quote["draw"] - 1, 4),
+                        "away": round(probs["away_win"] / 100 * quote["away"] - 1, 4),
+                    }
+                    forecast["odds_1x2"] = quote
+                    forecast["odds_source"] = "football-data.co.uk"
+                    forecast["expected_value_1x2"] = ev
+                    forecast["value_bets"] = [
+                        {"market": label, "model_probability": probs[prob_key],
+                         "best_odds": quote[price_key], "expected_value": ev[price_key]}
+                        for price_key, prob_key, label in (
+                            ("home", "home_win", "1"), ("draw", "draw", "X"), ("away", "away_win", "2")
+                        )
+                        if ev[price_key] >= 0.03 and forecast.get("status") == "Pronostico valutabile"
+                    ]
                 forecasts.append(forecast)
             else:
                 skipped += 1
