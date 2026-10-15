@@ -22,7 +22,7 @@ LEAGUES = {
 OUTPUT = Path("data/predictions.json")
 USER_AGENT = "CalcioIntelligente/1.0"
 MAX_DAYS_AHEAD = 5
-MIN_TEAM_MATCHES = 6
+MIN_TEAM_MATCHES = 4
 PRIOR_MATCHES = 3
 
 
