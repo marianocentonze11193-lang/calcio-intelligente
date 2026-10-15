@@ -86,7 +86,7 @@ def main():
             "Sei l'analista calcistico di Calcio Intelligente. Scrivi in italiano naturale, "
             "con tono umano, chiaro e specifico per ogni partita. Per ciascun incontro produci "
             "4-5 frasi ben collegate, circa 75-105 parole: interpreta le probabilità 1/X/2 e i "
-            "gol attesi con numeri concreti; commenta forma recente e Elo soltanto se presenti; "
+            "gol attesi con numeri concreti; commenta forma recente ed Elo soltanto se presenti; "
             "spiega se il campione casa/trasferta è piccolo e come limita la stima. "
             "Per indisponibilità e formazioni cita solo dati espliciti e ricorda che la copertura "
             "può essere incompleta; nessuna segnalazione non significa che tutti siano disponibili. "
@@ -95,7 +95,7 @@ def main():
             "Il modello è sperimentale e non ancora validato su un campione sufficiente. "
             "Evita frasi generiche ripetute. Rispondi SOLO con JSON valido nel formato "
             '{"analyses":[{"id":"ID esatto","analysis":"testo in italiano"}]}. '
-            "Includi esattamente un commento per ogni ID fornito. Dati:\\n"
+            "Includi un commento per ogni ID fornito. Dati:\\n"
             + json.dumps(batch, ensure_ascii=False, separators=(",", ":"))
         )
         body = {
@@ -149,17 +149,17 @@ def main():
         except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, OSError, ValueError, KeyError, IndexError) as error:
             print(f"AVVISO: batch Gemini {offset + 1}-{offset + len(batch)} non riuscito ({error}); continuo con il gruppo successivo.")
 
-        updated = 0
-        for match in data.get("matches", []):
-            if match.get("id") in by_id:
-                match["analysis"] = by_id[match["id"]]
-                match["analysis_provider"] = "Gemini"
-                updated += 1
-        DATA_FILE.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-        print(f"Analisi Gemini aggiunte a {updated} partite. Probabilità e mercati statistici non sono stati modificati.")
-    except (OSError, ValueError, KeyError, IndexError) as error:
-        print(f"AVVISO: impossibile salvare le analisi Gemini ({error}). Mantengo i dati statistici.")
-
+    if not by_id:
+        print("AVVISO: Gemini non ha restituito analisi utilizzabili; mantengo le analisi statistiche.")
+        return
+    updated = 0
+    for match in data.get("matches", []):
+        if match.get("id") in by_id:
+            match["analysis"] = by_id[match["id"]]
+            match["analysis_provider"] = "Gemini"
+            updated += 1
+    DATA_FILE.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+    print(f"Analisi Gemini aggiunte a {updated} partite. Probabilità e mercati statistici non sono stati modificati.")
 
 
 if __name__ == "__main__":
