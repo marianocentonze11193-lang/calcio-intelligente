@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-10-15T10:15:28+00:00",
+  "updated_at": "2026-10-15T10:25:28+00:00",
   "source": "https://www.football-data.co.uk",
   "season": "2627",
   "model": "Poisson casa/trasferta con prior di lega e correzione Elo; stime sperimentali, non garanzie",
-  "leagues_checked": 10,
+  "leagues_checked": 11,
   "no_bet_notice": "Le partite NO BET sono mostrate perché i dati non bastano o non sono comparabili. Nessun esito consigliato.",
   "matches": [
     {
@@ -34,11 +34,12 @@
         "home_scores": 89.3,
         "away_scores": 89.0
       },
-      "analysis": "Le stime sperimentali di questo modello Poisson non ancora validato mostrano probabilità molto vicine tra vittoria casalinga (40.8%) e della trasferta (39.6%), con un campione di riferimento limitato a sole 3 partite per parte. I limiti del campione invitano a una forte prudenza nella lettura dei dati.",
+      "analysis": "Questo incontro mostra probabilità molto vicine tra vittoria casalinga e ospite, basate su un campione limitato di partite. Si tratta di una stima sperimentale di un modello Poisson non validato, caratterizzata da forte incertezza.",
       "suggested_markets": [
         "Over 1,5",
         "Goal"
       ],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "2-2",
@@ -104,10 +105,11 @@
         "home_scores": 80.3,
         "away_scores": 67.6
       },
-      "analysis": "Questo modello Poisson non ancora validato assegna il 48.9% alla vittoria di casa e il 26.4% agli ospiti, basandosi però su un campione ridotto di 2 gare casalinghe e 0 esterne. L'alta incertezza e i limiti del campione impongono molta cautela interpretativa.",
+      "analysis": "Il campione di riferimento è estremamente ridotto e le probabilità derivano da stime sperimentali di un modello Poisson non ancora validato. L'incertezza resta elevata per questa lettura.",
       "suggested_markets": [
         "Over 1,5"
       ],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "1-1",
@@ -168,10 +170,11 @@
         "home_scores": 78.6,
         "away_scores": 64.1
       },
-      "analysis": "Le probabilità calcolate da questo modello Poisson non ancora validato vedono il Lille al 49.3% e il Brest al 25.2%, derivando da un campione limitato a 3 partite per entrambe. Tale ridotta numerosità campionaria evidenzia notevoli limiti e margini di incertezza.",
+      "analysis": "Le stime di questo modello Poisson non validato mostrano percentuali vicine tra le possibili opzioni di esito. Il campione limitato evidenzia l'incertezza intrinseca di questa analisi sperimentale.",
       "suggested_markets": [
         "Over 1,5"
       ],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "1-1",
@@ -237,10 +240,11 @@
         "home_scores": 65.4,
         "away_scores": 90.6
       },
-      "analysis": "Il modello Poisson non ancora validato stima la vittoria della trasferta al 66.4% e quella di casa al 15.4%, utilizzando un campione di sole 3 gare per squadra. Questa stima sperimentale risente di forti limiti legati alla scarsità del campione.",
+      "analysis": "Basato su un campione ridotto, questo modello Poisson non ancora validato fornisce stime sperimentali soggette a marcata incertezza. I dati vanno dunque interpretati con estrema prudenza.",
       "suggested_markets": [
         "Over 1,5"
       ],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "1-2",
@@ -306,8 +310,9 @@
         "home_scores": 64.9,
         "away_scores": 59.9
       },
-      "analysis": "Le percentuali del modello Poisson non ancora validato sono molto vicine, con il 38.0% per i padroni di casa e il 30.9% per gli ospiti, basandosi su un campione di sole 3 partite. I limiti del campione e l'incertezza intrinseca richiedono estrema prudenza.",
+      "analysis": "Le probabilità per i possibili segni appaiono vicine, evidenziando i limiti di un campione ristretto. Trattandosi di stime sperimentali di un modello Poisson non validato, l'incertezza è elevata.",
       "suggested_markets": [],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "1-0",
@@ -373,10 +378,11 @@
         "home_scores": 78.3,
         "away_scores": 71.8
       },
-      "analysis": "Questo modello Poisson non ancora validato indica una stima sperimentale del 43.4% per la vittoria interna e del 31.5% per quella esterna, con un campione di 3 gare casalinghe e 0 esterne. La limitatezza dei dati evidenzia un grado elevato di incertezza.",
+      "analysis": "Il campione limitato e l'assenza di dati completi per gli ospiti riflettono la natura sperimentale di questo modello Poisson non validato. Le stime presentano un evidente grado di incertezza.",
       "suggested_markets": [
         "Over 1,5"
       ],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "1-1",
@@ -437,10 +443,11 @@
         "home_scores": 81.9,
         "away_scores": 53.6
       },
-      "analysis": "Il modello Poisson non ancora validato stima il successo casalingo al 59.8% e quello ospite al 16.5%, limitandosi a un campione di 3 partite in casa e 0 in trasferta. L'incertezza legata a questi limiti campionari suggerisce molta prudenza.",
+      "analysis": "Questa elaborazione si basa su stime sperimentali di un modello Poisson non ancora validato, con un campione di dati molto ristretto. È necessario considerare l'alta incertezza di tali proiezioni.",
       "suggested_markets": [
         "Over 1,5"
       ],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "1-0",
@@ -501,11 +508,12 @@
         "home_scores": 91.3,
         "away_scores": 36.7
       },
-      "analysis": "La vittoria del Lione è stimata all'81.3% da questo modello Poisson non ancora validato, a fronte di un campione molto ristretto di 3 partite casalinghe e 2 esterne. I limiti del campione ricordano che si tratta esclusivamente di stime sperimentali.",
+      "analysis": "Il modello Poisson non validato evidenzia una netta preferenza per la squadra di casa, pur basandosi su un campione limitato. Trattandosi di stime sperimentali, occorre interpretare questi dati con cautela.",
       "suggested_markets": [
         "Over 1,5",
         "1"
       ],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "2-0",
@@ -571,10 +579,11 @@
         "home_scores": 63.5,
         "away_scores": 81.2
       },
-      "analysis": "Questo modello Poisson non ancora validato assegna il 52.9% alla vittoria esterna e il 22.8% a quella interna, basandosi su un campione di appena 2 partite per lato. La forte incertezza e i limiti del campione invitano a interpretare i dati con molta cautela.",
+      "analysis": "Con un campione di partite molto ristretto, le stime di questo modello Poisson non validato mostrano margini di incertezza considerevoli. I valori vanno considerati unicamente come proiezioni sperimentali.",
       "suggested_markets": [
         "Over 1,5"
       ],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "1-1",
@@ -640,11 +649,12 @@
         "home_scores": 93.1,
         "away_scores": 76.5
       },
-      "analysis": "Il modello Poisson non ancora validato stima il successo dei padroni di casa al 63.6%, basandosi su un campione di 2 gare casalinghe e 0 esterne. L'esiguità del campione evidenzia notevoli limiti e margini di incertezza nelle stime.",
+      "analysis": "I dati si fondano su un campione limitato e rappresentano stime sperimentali di un modello Poisson non ancora validato. L'incertezza intrinseca impone grande prudenza nella lettura dei valori.",
       "suggested_markets": [
         "Over 1,5",
         "Goal"
       ],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "2-1",
@@ -705,11 +715,12 @@
         "home_scores": 96.6,
         "away_scores": 51.2
       },
-      "analysis": "Le stime sperimentali di questo modello Poisson non ancora validato indicano l'86.6% di probabilità per la vittoria interna, ricavato da un campione di sole 2 partite per squadra. I limiti del campione richiedono grande prudenza nella lettura del dato.",
+      "analysis": "Trattandosi di stime sperimentali generate da un modello Poisson non validato e con un campione ridotto, i dati mostrano un quadro da interpretare con cautela. I limiti del campione evidenziano una forte incertezza.",
       "suggested_markets": [
         "Over 1,5",
         "1"
       ],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "3-0",
@@ -748,6 +759,475 @@
       "analysis_provider": "Gemini"
     },
     {
+      "id": "2026-10-17-Super League greca-Levadiakos-Volos NFC",
+      "date": "2026-10-17",
+      "kickoff": "17:00",
+      "league": "Super League greca",
+      "country": "Grecia",
+      "home_team": "Levadiakos",
+      "away_team": "Volos NFC",
+      "expected_home_goals": 2.2,
+      "expected_away_goals": 0.96,
+      "probabilities": {
+        "home_win": 65.6,
+        "draw": 19.2,
+        "away_win": 15.2,
+        "double_chance_1x": 84.8,
+        "double_chance_x2": 34.4,
+        "double_chance_12": 80.8,
+        "over_1_5": 82.3,
+        "over_2_5": 61.1,
+        "over_3_5": 38.8,
+        "under_1_5": 17.7,
+        "under_2_5": 38.9,
+        "under_3_5": 61.2,
+        "btts_yes": 54.8,
+        "btts_no": 45.2,
+        "home_scores": 88.9,
+        "away_scores": 61.6
+      },
+      "analysis": "Il campione di riferimento è limitato e le percentuali derivano da stime sperimentali di un modello Poisson non ancora validato. È opportuno considerare l'elevata incertezza di questa analisi.",
+      "suggested_markets": [
+        "Over 1,5"
+      ],
+      "value_bets": [],
+      "top_scorelines": [
+        {
+          "score": "2-0",
+          "probability": 10.3
+        },
+        {
+          "score": "2-1",
+          "probability": 9.9
+        },
+        {
+          "score": "1-0",
+          "probability": 9.4
+        }
+      ],
+      "sample_matches": 0,
+      "home_matches_sample": 0,
+      "away_matches_sample": 3,
+      "status": "Stima preliminare",
+      "reason": "",
+      "confidence": "bassa (campione ridotto)",
+      "elo_home": 1500.0,
+      "elo_away": 1459.1,
+      "home_recent_form": null,
+      "away_recent_form": {
+        "games": 5,
+        "goals_for": 1.2,
+        "goals_against": 2.0,
+        "points_per_match": 0.4
+      },
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "analysis_provider": "Gemini"
+    },
+    {
+      "id": "2026-10-17-Super League greca-Atromitos-AEK Athens",
+      "date": "2026-10-17",
+      "kickoff": "19:30",
+      "league": "Super League greca",
+      "country": "Grecia",
+      "home_team": "Atromitos",
+      "away_team": "AEK Athens",
+      "expected_home_goals": 1.3,
+      "expected_away_goals": 1.32,
+      "probabilities": {
+        "home_win": 36.5,
+        "draw": 26.3,
+        "away_win": 37.3,
+        "double_chance_1x": 62.7,
+        "double_chance_x2": 63.5,
+        "double_chance_12": 73.7,
+        "over_1_5": 73.6,
+        "over_2_5": 48.6,
+        "over_3_5": 26.8,
+        "under_1_5": 26.4,
+        "under_2_5": 51.4,
+        "under_3_5": 73.2,
+        "btts_yes": 53.3,
+        "btts_no": 46.7,
+        "home_scores": 72.8,
+        "away_scores": 73.2
+      },
+      "analysis": "Le probabilità di vittoria per le due squadre sono molto vicine, riflettendo un quadro incerto. Il campione ristretto e la natura sperimentale di questo modello Poisson non validato richiedono grande prudenza.",
+      "suggested_markets": [
+        "Over 1,5"
+      ],
+      "value_bets": [],
+      "top_scorelines": [
+        {
+          "score": "1-1",
+          "probability": 12.5
+        },
+        {
+          "score": "0-1",
+          "probability": 9.6
+        },
+        {
+          "score": "1-0",
+          "probability": 9.5
+        }
+      ],
+      "sample_matches": 0,
+      "home_matches_sample": 3,
+      "away_matches_sample": 0,
+      "status": "Stima preliminare",
+      "reason": "",
+      "confidence": "bassa (campione ridotto)",
+      "elo_home": 1457.5,
+      "elo_away": 1500.0,
+      "home_recent_form": {
+        "games": 5,
+        "goals_for": 1.0,
+        "goals_against": 1.6,
+        "points_per_match": 0.4
+      },
+      "away_recent_form": null,
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "analysis_provider": "Gemini"
+    },
+    {
+      "id": "2026-10-18-Super League greca-Kalamata-OFI Crete",
+      "date": "2026-10-18",
+      "kickoff": "16:00",
+      "league": "Super League greca",
+      "country": "Grecia",
+      "home_team": "Kalamata",
+      "away_team": "OFI Crete",
+      "expected_home_goals": 1.65,
+      "expected_away_goals": 1.18,
+      "probabilities": {
+        "home_win": 48.4,
+        "draw": 24.4,
+        "away_win": 27.3,
+        "double_chance_1x": 72.7,
+        "double_chance_x2": 51.6,
+        "double_chance_12": 75.6,
+        "over_1_5": 77.3,
+        "over_2_5": 53.7,
+        "over_3_5": 31.4,
+        "under_1_5": 22.7,
+        "under_2_5": 46.3,
+        "under_3_5": 68.6,
+        "btts_yes": 55.9,
+        "btts_no": 44.1,
+        "home_scores": 80.8,
+        "away_scores": 69.2
+      },
+      "analysis": "Questo modello Poisson non validato produce stime sperimentali basate su un campione limitato. L'incertezza dei dati suggerisce di interpretare i risultati con molta cautela.",
+      "suggested_markets": [
+        "Over 1,5"
+      ],
+      "value_bets": [],
+      "top_scorelines": [
+        {
+          "score": "1-1",
+          "probability": 11.5
+        },
+        {
+          "score": "1-0",
+          "probability": 9.8
+        },
+        {
+          "score": "2-1",
+          "probability": 9.5
+        }
+      ],
+      "sample_matches": 3,
+      "home_matches_sample": 3,
+      "away_matches_sample": 3,
+      "status": "Pronostico valutabile",
+      "reason": "",
+      "confidence": "bassa (campione ridotto)",
+      "elo_home": 1493.1,
+      "elo_away": 1510.2,
+      "home_recent_form": {
+        "games": 5,
+        "goals_for": 1.4,
+        "goals_against": 1.2,
+        "points_per_match": 1.4
+      },
+      "away_recent_form": {
+        "games": 5,
+        "goals_for": 1.2,
+        "goals_against": 1.4,
+        "points_per_match": 1.4
+      },
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "analysis_provider": "Gemini"
+    },
+    {
+      "id": "2026-10-18-Super League greca-Panetolikos-Olympiacos",
+      "date": "2026-10-18",
+      "kickoff": "17:00",
+      "league": "Super League greca",
+      "country": "Grecia",
+      "home_team": "Panetolikos",
+      "away_team": "Olympiacos",
+      "expected_home_goals": 1.83,
+      "expected_away_goals": 1.14,
+      "probabilities": {
+        "home_win": 53.6,
+        "draw": 22.9,
+        "away_win": 23.5,
+        "double_chance_1x": 76.5,
+        "double_chance_x2": 46.4,
+        "double_chance_12": 77.1,
+        "over_1_5": 79.5,
+        "over_2_5": 56.9,
+        "over_3_5": 34.5,
+        "under_1_5": 20.5,
+        "under_2_5": 43.1,
+        "under_3_5": 65.5,
+        "btts_yes": 57.0,
+        "btts_no": 43.0,
+        "home_scores": 83.9,
+        "away_scores": 67.9
+      },
+      "analysis": "Le percentuali fornite rappresentano stime sperimentali di un modello Poisson non ancora validato, frenato dai limiti di un campione ridotto. Tale condizione evidenzia un'intrinseca incertezza.",
+      "suggested_markets": [
+        "Over 1,5"
+      ],
+      "value_bets": [],
+      "top_scorelines": [
+        {
+          "score": "1-1",
+          "probability": 10.7
+        },
+        {
+          "score": "2-1",
+          "probability": 9.8
+        },
+        {
+          "score": "1-0",
+          "probability": 9.4
+        }
+      ],
+      "sample_matches": 0,
+      "home_matches_sample": 3,
+      "away_matches_sample": 0,
+      "status": "Stima preliminare",
+      "reason": "",
+      "confidence": "bassa (campione ridotto)",
+      "elo_home": 1497.7,
+      "elo_away": 1500.0,
+      "home_recent_form": {
+        "games": 5,
+        "goals_for": 1.0,
+        "goals_against": 1.6,
+        "points_per_match": 1.2
+      },
+      "away_recent_form": null,
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "analysis_provider": "Gemini"
+    },
+    {
+      "id": "2026-10-18-Super League greca-Panathinaikos-Asteras Tripoli",
+      "date": "2026-10-18",
+      "kickoff": "17:30",
+      "league": "Super League greca",
+      "country": "Grecia",
+      "home_team": "Panathinaikos",
+      "away_team": "Asteras Tripoli",
+      "expected_home_goals": 2.37,
+      "expected_away_goals": 0.8,
+      "probabilities": {
+        "home_win": 72.4,
+        "draw": 16.8,
+        "away_win": 10.8,
+        "double_chance_1x": 89.2,
+        "double_chance_x2": 27.6,
+        "double_chance_12": 83.2,
+        "over_1_5": 82.4,
+        "over_2_5": 61.3,
+        "over_3_5": 39.0,
+        "under_1_5": 17.6,
+        "under_2_5": 38.7,
+        "under_3_5": 61.0,
+        "btts_yes": 49.8,
+        "btts_no": 50.2,
+        "home_scores": 90.7,
+        "away_scores": 54.9
+      },
+      "analysis": "Il campione di dati è limitato e le proiezioni derivano da stime sperimentali di un modello Poisson non validato. Pertanto, l'incertezza complessiva di questa analisi rimane elevata.",
+      "suggested_markets": [
+        "Over 1,5",
+        "1"
+      ],
+      "value_bets": [],
+      "top_scorelines": [
+        {
+          "score": "2-0",
+          "probability": 11.8
+        },
+        {
+          "score": "1-0",
+          "probability": 10.0
+        },
+        {
+          "score": "2-1",
+          "probability": 9.4
+        }
+      ],
+      "sample_matches": 0,
+      "home_matches_sample": 3,
+      "away_matches_sample": 0,
+      "status": "Stima preliminare",
+      "reason": "",
+      "confidence": "bassa (campione ridotto)",
+      "elo_home": 1540.5,
+      "elo_away": 1500.0,
+      "home_recent_form": {
+        "games": 5,
+        "goals_for": 2.0,
+        "goals_against": 0.6,
+        "points_per_match": 2.4
+      },
+      "away_recent_form": null,
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "analysis_provider": "Gemini"
+    },
+    {
+      "id": "2026-10-18-Super League greca-Kifisia-Aris",
+      "date": "2026-10-18",
+      "kickoff": "20:00",
+      "league": "Super League greca",
+      "country": "Grecia",
+      "home_team": "Kifisia",
+      "away_team": "Aris",
+      "expected_home_goals": 1.87,
+      "expected_away_goals": 0.64,
+      "probabilities": {
+        "home_win": 66.9,
+        "draw": 21.1,
+        "away_win": 11.9,
+        "double_chance_1x": 88.1,
+        "double_chance_x2": 33.1,
+        "double_chance_12": 78.9,
+        "over_1_5": 71.5,
+        "over_2_5": 45.9,
+        "over_3_5": 24.5,
+        "under_1_5": 28.5,
+        "under_2_5": 54.1,
+        "under_3_5": 75.5,
+        "btts_yes": 39.9,
+        "btts_no": 60.1,
+        "home_scores": 84.6,
+        "away_scores": 47.2
+      },
+      "analysis": "Si tratta di stime sperimentali generate da un modello Poisson non ancora validato, basato su un campione ridotto. I dati vanno letti tenendo conto dei limiti e della conseguente incertezza.",
+      "suggested_markets": [
+        "Over 1,5"
+      ],
+      "value_bets": [],
+      "top_scorelines": [
+        {
+          "score": "1-0",
+          "probability": 15.2
+        },
+        {
+          "score": "2-0",
+          "probability": 14.2
+        },
+        {
+          "score": "1-1",
+          "probability": 9.7
+        }
+      ],
+      "sample_matches": 3,
+      "home_matches_sample": 3,
+      "away_matches_sample": 3,
+      "status": "Pronostico valutabile",
+      "reason": "",
+      "confidence": "bassa (campione ridotto)",
+      "elo_home": 1501.4,
+      "elo_away": 1509.5,
+      "home_recent_form": {
+        "games": 5,
+        "goals_for": 1.0,
+        "goals_against": 1.2,
+        "points_per_match": 1.4
+      },
+      "away_recent_form": {
+        "games": 5,
+        "goals_for": 1.0,
+        "goals_against": 2.0,
+        "points_per_match": 1.4
+      },
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "analysis_provider": "Gemini"
+    },
+    {
+      "id": "2026-10-18-Super League greca-PAOK-Iraklis",
+      "date": "2026-10-18",
+      "kickoff": "21:00",
+      "league": "Super League greca",
+      "country": "Grecia",
+      "home_team": "PAOK",
+      "away_team": "Iraklis",
+      "expected_home_goals": 1.44,
+      "expected_away_goals": 0.99,
+      "probabilities": {
+        "home_win": 47.4,
+        "draw": 26.6,
+        "away_win": 26.0,
+        "double_chance_1x": 74.0,
+        "double_chance_x2": 52.6,
+        "double_chance_12": 73.4,
+        "over_1_5": 69.8,
+        "over_2_5": 43.9,
+        "over_3_5": 22.8,
+        "under_1_5": 30.2,
+        "under_2_5": 56.1,
+        "under_3_5": 77.2,
+        "btts_yes": 48.0,
+        "btts_no": 52.0,
+        "home_scores": 76.3,
+        "away_scores": 62.9
+      },
+      "analysis": "Le probabilità di vittoria e pareggio sono relativamente vicine, evidenziando i limiti di un campione ristretto. Queste stime sperimentali di un modello Poisson non validato richiedono molta prudenza.",
+      "suggested_markets": [],
+      "value_bets": [],
+      "top_scorelines": [
+        {
+          "score": "1-0",
+          "probability": 12.7
+        },
+        {
+          "score": "1-1",
+          "probability": 12.5
+        },
+        {
+          "score": "2-0",
+          "probability": 9.1
+        }
+      ],
+      "sample_matches": 3,
+      "home_matches_sample": 3,
+      "away_matches_sample": 4,
+      "status": "Pronostico valutabile",
+      "reason": "",
+      "confidence": "bassa (campione ridotto)",
+      "elo_home": 1519.5,
+      "elo_away": 1511.8,
+      "home_recent_form": {
+        "games": 5,
+        "goals_for": 1.8,
+        "goals_against": 1.6,
+        "points_per_match": 1.8
+      },
+      "away_recent_form": {
+        "games": 5,
+        "goals_for": 1.2,
+        "goals_against": 0.4,
+        "points_per_match": 1.8
+      },
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "analysis_provider": "Gemini"
+    },
+    {
       "id": "2026-10-17-Premier League-Everton-Chelsea",
       "date": "2026-10-17",
       "kickoff": "12:30",
@@ -775,10 +1255,11 @@
         "home_scores": 88.4,
         "away_scores": 66.1
       },
-      "analysis": "Il modello Poisson non ancora validato stima la vittoria dell'Everton al 61.8% e quella del Chelsea al 18.1%, utilizzando un campione limitato a 3 partite per parte. Tale ristrettezza campionaria evidenzia chiari limiti e un elevato grado di incertezza.",
+      "analysis": "Il campione limitato e la natura sperimentale di questo modello Poisson non validato restituiscono stime soggette a incertezza. I dati vanno presi con le dovute cautele.",
       "suggested_markets": [
         "Over 1,5"
       ],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "2-1",
@@ -844,8 +1325,9 @@
         "home_scores": 71.0,
         "away_scores": 52.9
       },
-      "analysis": "In questo caso il modello Poisson non ancora validato mostra probabilità ravvicinate tra il 47.7% della squadra di casa e il 22.6% degli ospiti, derivanti da un campione di sole 3 gare. I limiti del campione impongono molta cautela interpretativa.",
+      "analysis": "Le percentuali vicine e il campione ristretto evidenziano i limiti di questa analisi. Siamo di fronte a stime sperimentali di un modello Poisson non ancora validato, caratterizzate da forte incertezza.",
       "suggested_markets": [],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "1-0",
@@ -911,10 +1393,11 @@
         "home_scores": 80.7,
         "away_scores": 83.9
       },
-      "analysis": "Le percentuali di questo modello Poisson non ancora validato sono vicine, con il 42.6% per gli ospiti e il 35.1% per i padroni di casa, basandosi su un campione di 3 partite in casa e 0 in trasferta. La forte incertezza riflette i limiti evidenti del campione.",
+      "analysis": "Le probabilità per la squadra di casa e quella ospite risultano vicine, indicando un quadro incerto. Il campione limitato e la natura di modello Poisson non validato impongono massima prudenza.",
       "suggested_markets": [
         "Over 1,5"
       ],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "1-1",
@@ -975,10 +1458,11 @@
         "home_scores": 84.3,
         "away_scores": 68.0
       },
-      "analysis": "Questo modello Poisson non ancora validato stima la vittoria casalinga al 54.0% e quella esterna al 23.3%, basandosi su un campione di 0 gare interne e 3 esterne. I limiti del campione suggeriscono di considerare queste cifre con estrema prudenza.",
+      "analysis": "Con un campione di riferimento ridotto, le cifre fornite sono stime sperimentali di un modello Poisson non ancora validato. L'incertezza intrinseca richiede un'interpretazione molto prudente.",
       "suggested_markets": [
         "Over 1,5"
       ],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "1-1",
@@ -1039,10 +1523,11 @@
         "home_scores": 88.9,
         "away_scores": 76.8
       },
-      "analysis": "Il modello Poisson non ancora validato indica il 54.5% per il successo interno e il 25.2% per quello esterno, utilizzando un campione limitato a 0 partite casalinghe e 3 trasferte. Tali limiti campionari evidenziano un margine notevole di incertezza.",
+      "analysis": "Questa analisi si basa su stime sperimentali di un modello Poisson non validato, limitato da un campione ristretto. L'incertezza dei dati suggerisce di valutarli con cautela.",
       "suggested_markets": [
         "Over 1,5"
       ],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "2-1",
@@ -1103,10 +1588,11 @@
         "home_scores": 77.8,
         "away_scores": 68.1
       },
-      "analysis": "Le stime sperimentali di questo modello Poisson non ancora validato vedono il Brighton al 45.6% e il Crystal Palace al 28.8%, con un campione di 0 gare in casa e 3 in trasferta. L'incertezza e i limiti del campione impongono una lettura molto prudente.",
+      "analysis": "Le probabilità appaiono piuttosto vicine tra i vari esiti, riflettendo i limiti di un campione ridotto. Si tratta di stime sperimentali di un modello Poisson non ancora validato, perciò altamente incerte.",
       "suggested_markets": [
         "Over 1,5"
       ],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "1-1",
@@ -1167,10 +1653,11 @@
         "home_scores": 73.1,
         "away_scores": 68.7
       },
-      "analysis": "Questo modello Poisson non ancora validato mostra probabilità vicine tra la vittoria casalinga (40.0%) e quella ospite (32.9%), basandosi su un campione di 0 partite interne e 3 esterne. I limiti del campione evidenziano l'elevata incertezza della stima.",
+      "analysis": "Le percentuali dei possibili risultati sono vicine e derivano da un campione limitato. Questa stima sperimentale di un modello Poisson non validato presenta margini evidenti di incertezza.",
       "suggested_markets": [
         "Over 1,5"
       ],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "1-1",
@@ -1231,10 +1718,11 @@
         "home_scores": 88.2,
         "away_scores": 70.5
       },
-      "analysis": "Il modello Poisson non ancora validato stima la vittoria del Frosinone al 58.4% e quella del Sassuolo al 21.1%, a fronte di un campione ridotto a sole 3 partite per parte. La limitatezza dei dati richiede una prudenza rigorosa nella valutazione.",
+      "analysis": "Il campione di partite è ridotto e le percentuali riflettono stime sperimentali di un modello Poisson non ancora validato. L'incertezza di questa lettura resta complessivamente elevata.",
       "suggested_markets": [
         "Over 1,5"
       ],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "2-1",
@@ -1300,11 +1788,12 @@
         "home_scores": 56.8,
         "away_scores": 93.2
       },
-      "analysis": "Le stime sperimentali di questo modello Poisson non ancora validato assegnano il 76.3% alla vittoria del Napoli e il 9.2% al Venezia, basandosi su un campione di 3 partite per squadra. I limiti del campione invitano a una corretta percezione dell'incertezza.",
+      "analysis": "Il modello Poisson non validato evidenzia un netto divario nelle probabilità, basandosi tuttavia su un campione limitato. Tali stime sperimentali vanno interpretate con la massima cautela.",
       "suggested_markets": [
         "Over 1,5",
         "2"
       ],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "0-2",
@@ -1370,10 +1859,11 @@
         "home_scores": 72.4,
         "away_scores": 73.0
       },
-      "analysis": "Questo modello Poisson non ancora validato restituisce probabilità molto vicine tra Bologna (36.3%) e Inter (37.3%), utilizzando un campione di 3 gare casalinghe e 0 esterne. I limiti del campione sottolineano l'alta incertezza di queste stime sperimentali.",
+      "analysis": "Le probabilità di vittoria per le due compagini sono molto vicine, indicando un sostanziale equilibrio teorico. Trattandosi di stime sperimentali di un modello Poisson non validato con un campione ristretto, l'incertezza è notevole.",
       "suggested_markets": [
         "Over 1,5"
       ],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "1-1",
@@ -1434,10 +1924,11 @@
         "home_scores": 79.3,
         "away_scores": 61.8
       },
-      "analysis": "Il modello Poisson non ancora validato indica il 51.6% per la vittoria della Roma e il 23.1% per il Genoa, ricavato da un campione di 0 partite interne e 2 esterne. Tali limiti campionari evidenziano la natura sperimentale e incerta del dato.",
+      "analysis": "Le stime derivano da un modello Poisson non ancora validato e risentono dei limiti di un campione ridotto. È necessario considerare l'elevata incertezza legata a queste proiezioni sperimentali.",
       "suggested_markets": [
         "Over 1,5"
       ],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "1-0",
@@ -1498,8 +1989,9 @@
         "home_scores": 70.9,
         "away_scores": 62.9
       },
-      "analysis": "Le percentuali di questo modello Poisson non ancora validato sono ravvicinate, con l'Udinese al 41.7% e il Lecce al 29.6%, basandosi su un campione di 3 partite per squadra. L'incertezza e i limiti del campione impongono molta cautela.",
+      "analysis": "Le probabilità appaiono ravvicinate e il campione di riferimento è limitato. Questa analisi si basa su stime sperimentali di un modello Poisson non validato, caratterizzate da marcata incertezza.",
       "suggested_markets": [],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "1-0",
@@ -1565,11 +2057,12 @@
         "home_scores": 55.4,
         "away_scores": 90.3
       },
-      "analysis": "Questo modello Poisson non ancora validato stima il successo del Como al 71.5% e quello della Fiorentina all'11.3%, utilizzando un campione di 3 partite casalinghe e 4 esterne. I limiti del campione evidenziano la necessità di una forte prudenza.",
+      "analysis": "Como leggermente favorita; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
       "suggested_markets": [
         "Over 1,5",
         "2"
       ],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "0-2",
@@ -1604,8 +2097,7 @@
         "goals_against": 1.0,
         "points_per_match": 2.0
       },
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
-      "analysis_provider": "Gemini"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
     },
     {
       "id": "2026-10-18-Serie A-AC Milan-Atalanta",
@@ -1635,10 +2127,11 @@
         "home_scores": 82.9,
         "away_scores": 62.1
       },
-      "analysis": "Il modello Poisson non ancora validato assegna il 56.0% alla vittoria del Milan e il 20.6% all'Atalanta, a fronte di un campione limitato a 0 gare in casa e 2 in trasferta. La scarsità dei dati conferma i limiti del campione e l'incertezza del modello.",
+      "analysis": "AC Milan leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
       "suggested_markets": [
         "Over 1,5"
       ],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "1-0",
@@ -1668,8 +2161,7 @@
         "goals_against": 1.4,
         "points_per_match": 1.2
       },
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
-      "analysis_provider": "Gemini"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
     },
     {
       "id": "2026-10-18-Serie A-Juventus-Lazio",
@@ -1699,8 +2191,9 @@
         "home_scores": 55.4,
         "away_scores": 61.5
       },
-      "analysis": "Le stime sperimentali di questo modello Poisson non ancora validato mostrano probabilità molto vicine tra Juventus (29.3%), pareggio (33.2%) e Lazio (37.5%), basandosi su 3 partite per parte. I limiti del campione evidenziano un quadro di marcata incertezza.",
+      "analysis": "Lazio leggermente favorita; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
       "suggested_markets": [],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "0-0",
@@ -1735,8 +2228,7 @@
         "goals_against": 0.8,
         "points_per_match": 2.6
       },
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
-      "analysis_provider": "Gemini"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
     },
     {
       "id": "2026-10-19-Serie A-Monza-Cagliari",
@@ -1766,10 +2258,11 @@
         "home_scores": 57.7,
         "away_scores": 82.3
       },
-      "analysis": "Questo modello Poisson non ancora validato stima la vittoria del Cagliari al 58.0% e quella del Monza al 18.4%, utilizzando un campione ristretto a 2 partite casalinghe e 3 esterne. L'incertezza e i limiti del campione richiedono una lettura molto prudente.",
+      "analysis": "Cagliari leggermente favorita; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
       "suggested_markets": [
         "Over 1,5"
       ],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "0-1",
@@ -1804,8 +2297,7 @@
         "goals_against": 0.6,
         "points_per_match": 2.0
       },
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
-      "analysis_provider": "Gemini"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
     },
     {
       "id": "2026-10-19-Serie A-Parma-Torino",
@@ -1835,8 +2327,9 @@
         "home_scores": 62.6,
         "away_scores": 70.9
       },
-      "analysis": "Il modello Poisson non ancora validato indica probabilità vicine tra il Torino (41.9%), il Parma (29.4%) e il pareggio (28.7%), basandosi su un campione di 3 partite per squadra. I limiti del campione suggeriscono di mantenere grande cautela.",
+      "analysis": "Torino leggermente favorita; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
       "suggested_markets": [],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "0-1",
@@ -1871,8 +2364,7 @@
         "goals_against": 1.4,
         "points_per_match": 1.4
       },
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
-      "analysis_provider": "Gemini"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
     },
     {
       "id": "2026-10-16-Eredivisie-Heerenveen-Excelsior",
@@ -1902,10 +2394,11 @@
         "home_scores": 61.1,
         "away_scores": 78.5
       },
-      "analysis": "Le percentuali di questo modello Poisson non ancora validato vedono l'Excelsior al 51.2% e l'Heerenveen al 23.2%, ricavate da un campione di 4 partite per parte. La limitatezza dei dati evidenzia chiari limiti campionari e margini di incertezza.",
+      "analysis": "Excelsior leggermente favorita; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
       "suggested_markets": [
         "Over 1,5"
       ],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "0-1",
@@ -1940,8 +2433,7 @@
         "goals_against": 2.2,
         "points_per_match": 1.0
       },
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
-      "analysis_provider": "Gemini"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
     },
     {
       "id": "2026-10-17-Eredivisie-ADO Den Haag-PSV Eindhoven",
@@ -1971,11 +2463,12 @@
         "home_scores": 79.6,
         "away_scores": 93.5
       },
-      "analysis": "Questo modello Poisson non ancora validato stima la vittoria del PSV al 61.7% e quella dell'ADO Den Haag al 20.9%, basandosi su un campione di 0 gare interne e 4 esterne. I limiti del campione ricordano che si tratta di stime sperimentali e incerte.",
+      "analysis": "PSV Eindhoven leggermente favorita; scenario da almeno 2 gol; entrambe a segno plausibile. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
       "suggested_markets": [
         "Over 1,5",
         "Goal"
       ],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "1-2",
@@ -2005,8 +2498,7 @@
         "goals_against": 1.2,
         "points_per_match": 2.4
       },
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
-      "analysis_provider": "Gemini"
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato"
     },
     {
       "id": "2026-10-17-Eredivisie-Telstar-Feyenoord Rotterdam",
@@ -2040,6 +2532,7 @@
       "suggested_markets": [
         "Over 1,5"
       ],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "1-2",
@@ -2103,6 +2596,7 @@
       "suggested_markets": [
         "Over 1,5"
       ],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "2-1",
@@ -2172,6 +2666,7 @@
         "Over 1,5",
         "Goal"
       ],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "2-1",
@@ -2235,6 +2730,7 @@
       "suggested_markets": [
         "Over 1,5"
       ],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "1-2",
@@ -2296,6 +2792,7 @@
       },
       "analysis": "Braga leggermente favorito; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
       "suggested_markets": [],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "1-1",
@@ -2357,6 +2854,7 @@
       },
       "analysis": "Aberdeen leggermente favorito; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
       "suggested_markets": [],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "1-0",
@@ -2423,6 +2921,7 @@
       },
       "analysis": "Falkirk leggermente favorita; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
       "suggested_markets": [],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "0-1",
@@ -2491,6 +2990,7 @@
       "suggested_markets": [
         "Over 1,5"
       ],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "0-1",
@@ -2559,6 +3059,7 @@
       "suggested_markets": [
         "Over 1,5"
       ],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "1-1",
@@ -2625,6 +3126,7 @@
       },
       "analysis": "Rangers leggermente favorita; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
       "suggested_markets": [],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "0-1",
@@ -2691,6 +3193,7 @@
       },
       "analysis": "Celtic leggermente favorito; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
       "suggested_markets": [],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "1-0",
@@ -2752,6 +3255,7 @@
       },
       "analysis": "Deportivo leggermente favorito; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
       "suggested_markets": [],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "1-0",
@@ -2816,6 +3320,7 @@
         "Over 1,5",
         "Goal"
       ],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "1-2",
@@ -2885,6 +3390,7 @@
         "Over 1,5",
         "2"
       ],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "1-3",
@@ -2948,6 +3454,7 @@
       "suggested_markets": [
         "Over 1,5"
       ],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "1-1",
@@ -3009,6 +3516,7 @@
       },
       "analysis": "Osasuna leggermente favorito; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
       "suggested_markets": [],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "1-0",
@@ -3070,6 +3578,7 @@
       },
       "analysis": "Celta Vigo leggermente favorito; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
       "suggested_markets": [],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "1-0",
@@ -3133,6 +3642,7 @@
       "suggested_markets": [
         "Over 1,5"
       ],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "1-1",
@@ -3196,6 +3706,7 @@
       "suggested_markets": [
         "Over 1,5"
       ],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "2-0",
@@ -3262,6 +3773,7 @@
       },
       "analysis": "Getafe leggermente favorito; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
       "suggested_markets": [],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "1-0",
@@ -3326,6 +3838,7 @@
         "Over 1,5",
         "1"
       ],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "2-0",
@@ -3389,6 +3902,7 @@
       "suggested_markets": [
         "Over 1,5"
       ],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "1-0",
@@ -3452,6 +3966,7 @@
       "suggested_markets": [
         "Over 1,5"
       ],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "1-2",
@@ -3520,6 +4035,7 @@
       "suggested_markets": [
         "Over 1,5"
       ],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "2-1",
@@ -3586,6 +4102,7 @@
       },
       "analysis": "Kasimpasa leggermente favorito; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
       "suggested_markets": [],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "1-0",
@@ -3652,6 +4169,7 @@
       },
       "analysis": "Kocaelispor leggermente favorito; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
       "suggested_markets": [],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "1-0",
@@ -3716,6 +4234,7 @@
         "Over 1,5",
         "1"
       ],
+      "value_bets": [],
       "top_scorelines": [
         {
           "score": "3-0",
@@ -3767,6 +4286,7 @@
       "probabilities": {},
       "analysis": "",
       "suggested_markets": [],
+      "value_bets": [],
       "top_scorelines": [],
       "sample_matches": 0,
       "home_matches_sample": 0,
@@ -3793,6 +4313,7 @@
       "probabilities": {},
       "analysis": "",
       "suggested_markets": [],
+      "value_bets": [],
       "top_scorelines": [],
       "sample_matches": 0,
       "home_matches_sample": 0,
@@ -3819,6 +4340,7 @@
       "probabilities": {},
       "analysis": "",
       "suggested_markets": [],
+      "value_bets": [],
       "top_scorelines": [],
       "sample_matches": 0,
       "home_matches_sample": 0,
@@ -3845,6 +4367,7 @@
       "probabilities": {},
       "analysis": "",
       "suggested_markets": [],
+      "value_bets": [],
       "top_scorelines": [],
       "sample_matches": 0,
       "home_matches_sample": 0,
@@ -3871,6 +4394,7 @@
       "probabilities": {},
       "analysis": "",
       "suggested_markets": [],
+      "value_bets": [],
       "top_scorelines": [],
       "sample_matches": 0,
       "home_matches_sample": 0,
@@ -3897,6 +4421,7 @@
       "probabilities": {},
       "analysis": "",
       "suggested_markets": [],
+      "value_bets": [],
       "top_scorelines": [],
       "sample_matches": 0,
       "home_matches_sample": 0,
@@ -3923,6 +4448,7 @@
       "probabilities": {},
       "analysis": "",
       "suggested_markets": [],
+      "value_bets": [],
       "top_scorelines": [],
       "sample_matches": 0,
       "home_matches_sample": 0,
@@ -3949,6 +4475,7 @@
       "probabilities": {},
       "analysis": "",
       "suggested_markets": [],
+      "value_bets": [],
       "top_scorelines": [],
       "sample_matches": 0,
       "home_matches_sample": 0,
@@ -3975,6 +4502,7 @@
       "probabilities": {},
       "analysis": "",
       "suggested_markets": [],
+      "value_bets": [],
       "top_scorelines": [],
       "sample_matches": 0,
       "home_matches_sample": 0,
@@ -4001,6 +4529,7 @@
       "probabilities": {},
       "analysis": "",
       "suggested_markets": [],
+      "value_bets": [],
       "top_scorelines": [],
       "sample_matches": 0,
       "home_matches_sample": 0,
@@ -4027,6 +4556,7 @@
       "probabilities": {},
       "analysis": "",
       "suggested_markets": [],
+      "value_bets": [],
       "top_scorelines": [],
       "sample_matches": 0,
       "home_matches_sample": 0,
@@ -4053,6 +4583,7 @@
       "probabilities": {},
       "analysis": "",
       "suggested_markets": [],
+      "value_bets": [],
       "top_scorelines": [],
       "sample_matches": 0,
       "home_matches_sample": 0,
@@ -4079,6 +4610,7 @@
       "probabilities": {},
       "analysis": "",
       "suggested_markets": [],
+      "value_bets": [],
       "top_scorelines": [],
       "sample_matches": 0,
       "home_matches_sample": 0,
@@ -4105,6 +4637,7 @@
       "probabilities": {},
       "analysis": "",
       "suggested_markets": [],
+      "value_bets": [],
       "top_scorelines": [],
       "sample_matches": 0,
       "home_matches_sample": 0,
@@ -4131,6 +4664,7 @@
       "probabilities": {},
       "analysis": "",
       "suggested_markets": [],
+      "value_bets": [],
       "top_scorelines": [],
       "sample_matches": 0,
       "home_matches_sample": 0,
@@ -4157,6 +4691,7 @@
       "probabilities": {},
       "analysis": "",
       "suggested_markets": [],
+      "value_bets": [],
       "top_scorelines": [],
       "sample_matches": 0,
       "home_matches_sample": 0,
