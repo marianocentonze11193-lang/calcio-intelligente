@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-15T11:29:44+00:00",
+  "updated_at": "2026-10-15T11:49:46+00:00",
   "source": "https://www.football-data.co.uk",
   "season": "2627",
   "model": "Poisson casa/trasferta con prior di lega e correzione Elo; stime sperimentali, non garanzie",
@@ -34,7 +34,7 @@
         "home_scores": 89.3,
         "away_scores": 89.0
       },
-      "analysis": "Le probabilità del modello Poisson non validato mostrano percentuali vicine tra vittoria casalinga e trasferta, con un campione limitato di 3 partite. Questa stima sperimentale evidenzia comunque una forte incertezza complessiva.",
+      "analysis": "Le Mans leggermente favorito; scenario da almeno 2 gol; entrambe a segno plausibile. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
       "suggested_markets": [
         "Over 1,5",
         "Goal"
@@ -108,8 +108,7 @@
         ],
         "lineups": null,
         "lineup_status": "non_pubblicate"
-      },
-      "analysis_provider": "Gemini"
+      }
     },
     {
       "id": "2026-10-17-Ligue 1-Strasbourg-Paris Saint-Germain",
@@ -139,10 +138,8 @@
         "home_scores": 80.3,
         "away_scores": 67.6
       },
-      "analysis": "Basato su un campione ridotto di sole 2 gare casalinghe e 0 esterne, questo modello Poisson non validato offre stime sperimentali da prendere con cautela. I dati mostrano un certo equilibrio e limiti evidenti di campionamento.",
-      "suggested_markets": [
-        "Over 1,5"
-      ],
+      "analysis": "Strasbourg leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
         {
@@ -180,8 +177,7 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      },
-      "analysis_provider": "Gemini"
+      }
     },
     {
       "id": "2026-10-17-Ligue 1-Lille-Brest",
@@ -211,7 +207,7 @@
         "home_scores": 78.6,
         "away_scores": 64.1
       },
-      "analysis": "Il campione limitato a 3 partite per entrambe le squadre rende questa stima di Poisson non ancora validata puramente sperimentale. Le probabilità vicine tra i vari esiti riflettono una marcata incertezza.",
+      "analysis": "Lille leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -257,8 +253,7 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      },
-      "analysis_provider": "Gemini"
+      }
     },
     {
       "id": "2026-10-17-Ligue 1-Troyes-Lens",
@@ -288,7 +283,7 @@
         "home_scores": 65.4,
         "away_scores": 90.6
       },
-      "analysis": "Con un campione ridotto a sole 3 partite, la stima del modello Poisson non validato va considerata con prudenza. I dati sperimentali evidenziano un divario di probabilità ma risentono dei limiti numerici.",
+      "analysis": "Lens leggermente favorita; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -334,8 +329,7 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      },
-      "analysis_provider": "Gemini"
+      }
     },
     {
       "id": "2026-10-18-Ligue 1-Angers-Marseille",
@@ -365,7 +359,7 @@
         "home_scores": 64.9,
         "away_scores": 59.9
       },
-      "analysis": "Le probabilità calcolate da questo modello Poisson non validato sono molto vicine tra i tre segni, evidenziando una forte incertezza. Il campione di sole 3 partite per lato limita l'affidabilità di queste stime sperimentali.",
+      "analysis": "Angers leggermente favorito; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -409,8 +403,7 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      },
-      "analysis_provider": "Gemini"
+      }
     },
     {
       "id": "2026-10-18-Ligue 1-Lorient-AS Monaco",
@@ -440,10 +433,8 @@
         "home_scores": 78.3,
         "away_scores": 71.8
       },
-      "analysis": "Questa stima sperimentale deriva da un modello Poisson non validato e da un campione molto limitato (3 gare casalinghe e 0 esterne). La vicinanza delle probabilità sottolinea i limiti del campione e l'incertezza del match.",
-      "suggested_markets": [
-        "Over 1,5"
-      ],
+      "analysis": "Lorient leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
         {
@@ -481,8 +472,7 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      },
-      "analysis_provider": "Gemini"
+      }
     },
     {
       "id": "2026-10-18-Ligue 1-Paris FC-Stade Rennais",
@@ -512,10 +502,8 @@
         "home_scores": 81.9,
         "away_scores": 53.6
       },
-      "analysis": "Il modello Poisson non validato si basa su un campione di sole 3 partite casalinghe e nessuna esterna, evidenziando chiari limiti numerici. Trattandosi di stime sperimentali, i margini di incertezza restano elevati.",
-      "suggested_markets": [
-        "Over 1,5"
-      ],
+      "analysis": "Paris FC leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
         {
@@ -553,8 +541,7 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      },
-      "analysis_provider": "Gemini"
+      }
     },
     {
       "id": "2026-10-18-Ligue 1-Lyon-Nice",
@@ -584,11 +571,8 @@
         "home_scores": 91.3,
         "away_scores": 36.7
       },
-      "analysis": "Questo modello Poisson non validato produce stime sperimentali basate su campioni ridotti (3 gare interne e 2 esterne). I limiti del campione invitano a interpretare i dati con estrema prudenza.",
-      "suggested_markets": [
-        "Over 1,5",
-        "1"
-      ],
+      "analysis": "Lyon leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
         {
@@ -631,8 +615,7 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      },
-      "analysis_provider": "Gemini"
+      }
     },
     {
       "id": "2026-10-17-Bundesliga-Schalke 04-Mainz",
@@ -662,10 +645,8 @@
         "home_scores": 63.5,
         "away_scores": 81.2
       },
-      "analysis": "Il campione di appena 2 partite per parte evidenzia forti limiti statistici in queste stime di Poisson non validate. Le percentuali sperimentali mostrano comunque una notevole incertezza nei vari esiti.",
-      "suggested_markets": [
-        "Over 1,5"
-      ],
+      "analysis": "Mainz leggermente favorita; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
         {
@@ -708,8 +689,7 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      },
-      "analysis_provider": "Gemini"
+      }
     },
     {
       "id": "2026-10-17-Bundesliga-Werder Bremen-SC Paderborn 07",
@@ -739,11 +719,8 @@
         "home_scores": 93.1,
         "away_scores": 76.5
       },
-      "analysis": "Basato su un campione ridotto di 2 partite in casa e 0 in trasferta, questo modello Poisson non validato fornisce stime puramente sperimentali. La limitatezza dei dati impone prudenza nell'analisi delle probabilità.",
-      "suggested_markets": [
-        "Over 1,5",
-        "Goal"
-      ],
+      "analysis": "Werder Bremen leggermente favorito; scenario da almeno 2 gol; entrambe a segno plausibile. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
         {
@@ -781,8 +758,7 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      },
-      "analysis_provider": "Gemini"
+      }
     },
     {
       "id": "2026-10-17-Bundesliga-Bayern Munich-RB Leipzig",
@@ -812,11 +788,8 @@
         "home_scores": 96.6,
         "away_scores": 51.2
       },
-      "analysis": "Le stime di questo modello Poisson non validato risentono di un campione molto ristretto di sole 2 partite per squadra. Trattandosi di dati sperimentali, l'incertezza di fondo rimane rilevante.",
-      "suggested_markets": [
-        "Over 1,5",
-        "1"
-      ],
+      "analysis": "Bayern Munich leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
         {
@@ -859,8 +832,7 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      },
-      "analysis_provider": "Gemini"
+      }
     },
     {
       "id": "2026-10-17-Super League greca-Levadiakos-Volos NFC",
@@ -890,10 +862,8 @@
         "home_scores": 88.9,
         "away_scores": 61.6
       },
-      "analysis": "Questo modello Poisson non validato si basa su un campione limitato (0 gare casalinghe e 3 esterne), rendendo le percentuali stime puramente sperimentali. I limiti del campione suggeriscono grande cautela.",
-      "suggested_markets": [
-        "Over 1,5"
-      ],
+      "analysis": "Levadiakos leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
         {
@@ -931,8 +901,7 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      },
-      "analysis_provider": "Gemini"
+      }
     },
     {
       "id": "2026-10-17-Super League greca-Atromitos-AEK Athens",
@@ -962,10 +931,8 @@
         "home_scores": 72.8,
         "away_scores": 73.2
       },
-      "analysis": "Le probabilità per la vittoria casalinga e la trasferta sono estremamente vicine in questa stima sperimentale. Il modello Poisson non validato sconta tuttavia i limiti di un campione ridotto a sole 3 partite.",
-      "suggested_markets": [
-        "Over 1,5"
-      ],
+      "analysis": "AEK Athens leggermente favorita; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
         {
@@ -1003,8 +970,7 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      },
-      "analysis_provider": "Gemini"
+      }
     },
     {
       "id": "2026-10-18-Super League greca-Kalamata-OFI Crete",
@@ -1034,7 +1000,7 @@
         "home_scores": 80.8,
         "away_scores": 69.2
       },
-      "analysis": "Il campione limitato a 3 partite per parte evidenzia i limiti strutturali di questo modello Poisson non validato. Le probabilità vicine riflettono l'incertezza intrinseca di queste stime sperimentali.",
+      "analysis": "Kalamata leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1080,8 +1046,7 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      },
-      "analysis_provider": "Gemini"
+      }
     },
     {
       "id": "2026-10-18-Super League greca-Panetolikos-Olympiacos",
@@ -1111,10 +1076,8 @@
         "home_scores": 83.9,
         "away_scores": 67.9
       },
-      "analysis": "Con un campione di sole 3 gare casalinghe e 0 esterne, le stime di questo modello Poisson non validato restano puramente sperimentali. I limiti numerici richiedono una lettura molto prudente dei dati.",
-      "suggested_markets": [
-        "Over 1,5"
-      ],
+      "analysis": "Panetolikos leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
         {
@@ -1152,8 +1115,7 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      },
-      "analysis_provider": "Gemini"
+      }
     },
     {
       "id": "2026-10-18-Super League greca-Panathinaikos-Asteras Tripoli",
@@ -1183,11 +1145,8 @@
         "home_scores": 90.7,
         "away_scores": 54.9
       },
-      "analysis": "Questo modello Poisson non validato produce stime sperimentali basate su un campione ridotto (3 partite in casa e 0 in trasferta). Tale limite campionario impone massima cautela nell'interpretazione.",
-      "suggested_markets": [
-        "Over 1,5",
-        "1"
-      ],
+      "analysis": "Panathinaikos leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
         {
@@ -1225,8 +1184,7 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      },
-      "analysis_provider": "Gemini"
+      }
     },
     {
       "id": "2026-10-18-Super League greca-Kifisia-Aris",
@@ -1256,7 +1214,7 @@
         "home_scores": 84.6,
         "away_scores": 47.2
       },
-      "analysis": "Le stime sperimentali derivano da un modello Poisson non validato e da un campione limitato a 3 partite per squadra. I limiti numerici evidenziano la necessità di considerare con prudenza le percentuali.",
+      "analysis": "Kifisia leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1302,8 +1260,7 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      },
-      "analysis_provider": "Gemini"
+      }
     },
     {
       "id": "2026-10-18-Super League greca-PAOK-Iraklis",
@@ -1333,7 +1290,7 @@
         "home_scores": 76.3,
         "away_scores": 62.9
       },
-      "analysis": "Le percentuali di vittoria e pareggio sono particolarmente vicine in questa analisi, segnalando forte incertezza. Il modello Poisson non validato sconta tuttavia i limiti di un campione molto ridotto.",
+      "analysis": "PAOK leggermente favorito; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1377,8 +1334,7 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      },
-      "analysis_provider": "Gemini"
+      }
     },
     {
       "id": "2026-10-17-Premier League-Everton-Chelsea",
@@ -1408,7 +1364,7 @@
         "home_scores": 88.4,
         "away_scores": 66.1
       },
-      "analysis": "Il campione limitato a 3 partite per parte rende queste percentuali stime sperimentali di un modello Poisson non validato. Nonostante il divario numerico, l'incertezza legata ai pochi dati resta alta.",
+      "analysis": "Everton leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1454,8 +1410,7 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      },
-      "analysis_provider": "Gemini"
+      }
     },
     {
       "id": "2026-10-17-Premier League-Brentford-Liverpool",
@@ -1485,7 +1440,7 @@
         "home_scores": 71.0,
         "away_scores": 52.9
       },
-      "analysis": "Le stime sperimentali di questo modello Poisson non validato si basano su sole 3 partite per squadra. La vicinanza tra i vari esiti evidenzia i limiti del campione e l'incertezza della sfida.",
+      "analysis": "Brentford leggermente favorito; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1529,8 +1484,7 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      },
-      "analysis_provider": "Gemini"
+      }
     },
     {
       "id": "2026-10-17-Premier League-Fulham-Hull City",
@@ -1560,10 +1514,8 @@
         "home_scores": 80.7,
         "away_scores": 83.9
       },
-      "analysis": "Questo modello Poisson non validato mostra probabilità vicine tra le due contendenti, segnalando alta incertezza. Il campione di riferimento è limitato a 3 partite casalinghe e 0 esterne.",
-      "suggested_markets": [
-        "Over 1,5"
-      ],
+      "analysis": "Hull City leggermente favorita; scenario da almeno 2 gol; entrambe a segno plausibile. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
         {
@@ -1601,8 +1553,7 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      },
-      "analysis_provider": "Gemini"
+      }
     },
     {
       "id": "2026-10-17-Premier League-Newcastle United-Aston Villa",
@@ -1632,10 +1583,8 @@
         "home_scores": 84.3,
         "away_scores": 68.0
       },
-      "analysis": "Con un campione ristretto a 0 gare casalinghe e 3 esterne, le percentuali fornite sono stime sperimentali non ancora validate. I limiti del campione invitano a interpretare i dati con prudenza.",
-      "suggested_markets": [
-        "Over 1,5"
-      ],
+      "analysis": "Newcastle United leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
         {
@@ -1673,8 +1622,7 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      },
-      "analysis_provider": "Gemini"
+      }
     },
     {
       "id": "2026-10-18-Premier League-AFC Bournemouth-Sunderland",
@@ -1704,10 +1652,8 @@
         "home_scores": 88.9,
         "away_scores": 76.8
       },
-      "analysis": "Questo modello Poisson non validato si basa su un campione ridotto (0 in casa e 3 in trasferta), fornendo stime puramente sperimentali. I limiti campionari evidenziano la cautela necessaria nella lettura dei dati.",
-      "suggested_markets": [
-        "Over 1,5"
-      ],
+      "analysis": "AFC Bournemouth leggermente favorito; scenario da almeno 2 gol; entrambe a segno plausibile. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
         {
@@ -1745,8 +1691,7 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      },
-      "analysis_provider": "Gemini"
+      }
     },
     {
       "id": "2026-10-18-Premier League-Brighton & Hove Albion-Crystal Palace",
@@ -1776,10 +1721,8 @@
         "home_scores": 77.8,
         "away_scores": 68.1
       },
-      "analysis": "Le probabilità calcolate da questo modello Poisson non validato appaiono piuttosto ravvicinate, riflettendo incertezza. Il campione limitato a 3 partite esterne impone di trattare le stime con cautela.",
-      "suggested_markets": [
-        "Over 1,5"
-      ],
+      "analysis": "Brighton & Hove Albion leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
         {
@@ -1817,8 +1760,7 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      },
-      "analysis_provider": "Gemini"
+      }
     },
     {
       "id": "2026-10-18-Premier League-Nottingham Forest-Arsenal",
@@ -1848,10 +1790,8 @@
         "home_scores": 73.1,
         "away_scores": 68.7
       },
-      "analysis": "Le percentuali dei diversi esiti sono molto vicine, evidenziando una significativa incertezza in queste stime sperimentali. Il campione limitato a 3 partite esterne sottolinea i limiti del modello non validato.",
-      "suggested_markets": [
-        "Over 1,5"
-      ],
+      "analysis": "Nottingham Forest leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
         {
@@ -1889,8 +1829,7 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      },
-      "analysis_provider": "Gemini"
+      }
     },
     {
       "id": "2026-10-16-Serie A-Frosinone-Sassuolo",
@@ -1920,7 +1859,7 @@
         "home_scores": 88.2,
         "away_scores": 70.5
       },
-      "analysis": "Questo modello Poisson non validato si basa su un campione di sole 3 partite per lato, rendendo le percentuali stime sperimentali. I limiti numerici richiedono di interpretare con prudenza l'incertezza del match.",
+      "analysis": "Frosinone leggermente favorito; scenario da almeno 2 gol; entrambe a segno plausibile. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -2017,8 +1956,7 @@
         ],
         "lineups": null,
         "lineup_status": "non_pubblicate"
-      },
-      "analysis_provider": "Gemini"
+      }
     },
     {
       "id": "2026-10-17-Serie A-Venezia-Napoli",
@@ -2048,7 +1986,7 @@
         "home_scores": 56.8,
         "away_scores": 93.2
       },
-      "analysis": "Le stime di questo modello Poisson non validato derivano da un campione ridotto a sole 3 partite per squadra. Trattandosi di dati sperimentali, i limiti campionari impongono cautela nella lettura delle percentuali.",
+      "analysis": "Napoli leggermente favorita; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
       "suggested_markets": [
         "Over 1,5",
         "2"
@@ -2095,8 +2033,7 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      },
-      "analysis_provider": "Gemini"
+      }
     },
     {
       "id": "2026-10-17-Serie A-Bologna-Internazionale",
@@ -2126,10 +2063,8 @@
         "home_scores": 72.4,
         "away_scores": 73.0
       },
-      "analysis": "Le probabilità di vittoria per entrambe le squadre sono praticamente identiche in questa stima sperimentale, evidenziando la massima incertezza. Il modello Poisson non validato risente tuttavia dei limiti di un campione ristretto.",
-      "suggested_markets": [
-        "Over 1,5"
-      ],
+      "analysis": "Internazionale leggermente favorita; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
         {
@@ -2167,8 +2102,7 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      },
-      "analysis_provider": "Gemini"
+      }
     },
     {
       "id": "2026-10-17-Serie A-AS Roma-Genoa",
@@ -2198,10 +2132,8 @@
         "home_scores": 79.3,
         "away_scores": 61.8
       },
-      "analysis": "Il campione limitato a 0 partite casalinghe e 2 esterne evidenzia i limiti strutturali di questo modello Poisson non validato. Le percentuali vanno dunque considerate come stime sperimentali soggette a incertezza.",
-      "suggested_markets": [
-        "Over 1,5"
-      ],
+      "analysis": "AS Roma leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
         {
@@ -2239,8 +2171,7 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      },
-      "analysis_provider": "Gemini"
+      }
     },
     {
       "id": "2026-10-18-Serie A-Udinese-Lecce",
@@ -2270,7 +2201,7 @@
         "home_scores": 70.9,
         "away_scores": 62.9
       },
-      "analysis": "Le probabilità calcolate sono vicine tra loro, riflettendo una situazione di notevole incertezza in campo. Questo modello Poisson non validato offre stime puramente sperimentali basate su un campione limitato a 3 partite.",
+      "analysis": "Udinese leggermente favorito; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -2314,8 +2245,7 @@
         "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
         "injuries": [],
         "lineups": null
-      },
-      "analysis_provider": "Gemini"
+      }
     },
     {
       "id": "2026-10-18-Serie A-Fiorentina-Como",
@@ -2423,9 +2353,7 @@
         "away_scores": 62.1
       },
       "analysis": "AC Milan leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
-      "suggested_markets": [
-        "Over 1,5"
-      ],
+      "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
         {
@@ -2568,9 +2496,7 @@
         "away_scores": 82.3
       },
       "analysis": "Cagliari leggermente favorita; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
-      "suggested_markets": [
-        "Over 1,5"
-      ],
+      "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
         {
@@ -2809,10 +2735,7 @@
         "away_scores": 93.5
       },
       "analysis": "PSV Eindhoven leggermente favorita; scenario da almeno 2 gol; entrambe a segno plausibile. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
-      "suggested_markets": [
-        "Over 1,5",
-        "Goal"
-      ],
+      "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
         {
@@ -2881,9 +2804,7 @@
         "away_scores": 91.1
       },
       "analysis": "Feyenoord Rotterdam leggermente favorita; scenario da almeno 2 gol; entrambe a segno plausibile. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
-      "suggested_markets": [
-        "Over 1,5"
-      ],
+      "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
         {
@@ -3028,10 +2949,7 @@
         "away_scores": 86.2
       },
       "analysis": "PEC Zwolle leggermente favorito; scenario da almeno 2 gol; entrambe a segno plausibile. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
-      "suggested_markets": [
-        "Over 1,5",
-        "Goal"
-      ],
+      "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
         {
@@ -3100,9 +3018,7 @@
         "away_scores": 88.4
       },
       "analysis": "AZ Alkmaar leggermente favorita; scenario da almeno 2 gol; entrambe a segno plausibile. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
-      "suggested_markets": [
-        "Over 1,5"
-      ],
+      "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
         {
@@ -3829,10 +3745,7 @@
         "away_scores": 95.2
       },
       "analysis": "Barcelona leggermente favorita; scenario da almeno 2 gol; entrambe a segno plausibile. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
-      "suggested_markets": [
-        "Over 1,5",
-        "2"
-      ],
+      "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
         {
@@ -3901,9 +3814,7 @@
         "away_scores": 84.3
       },
       "analysis": "Athletic Club leggermente favorita; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
-      "suggested_markets": [
-        "Over 1,5"
-      ],
+      "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
         {
@@ -4110,9 +4021,7 @@
         "away_scores": 72.2
       },
       "analysis": "Real Sociedad leggermente favorita; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
-      "suggested_markets": [
-        "Over 1,5"
-      ],
+      "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
         {
@@ -4326,10 +4235,7 @@
         "away_scores": 46.2
       },
       "analysis": "Erzurum BB leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
-      "suggested_markets": [
-        "Over 1,5",
-        "1"
-      ],
+      "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
         {
@@ -4398,9 +4304,7 @@
         "away_scores": 61.3
       },
       "analysis": "Amed SFK leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
-      "suggested_markets": [
-        "Over 1,5"
-      ],
+      "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
         {
