@@ -29,12 +29,16 @@ SPORTS = {
     "Superliga danese": "soccer_denmark_superliga",
     "Super League greca": "soccer_greece_super_league",
     "Veikkausliiga finlandese": "soccer_finland_veikkausliiga",
-    "Premier Division irlandese": "soccer_ireland_premier_division",
+    "Premier Division irlandese": "soccer_league_of_ireland",
     "Eliteserien norvegese": "soccer_norway_eliteserien",
     "Ekstraklasa polacca": "soccer_poland_ekstraklasa",
     "Liga I rumena": "soccer_romania_liga_1",
     "Allsvenskan svedese": "soccer_sweden_allsvenskan",
-    "Super League svizzera": "soccer_switzerland_super_league",
+    "Super League svizzera": "soccer_switzerland_superleague",
+    # Le coppe sono mappate solo per le quote: il modello non genera pronostici per queste competizioni.
+    "UEFA Champions League (quote)": "soccer_uefa_champs_league",
+    "UEFA Europa League (quote)": "soccer_uefa_europa_league",
+    "UEFA Conference League (quote)": "soccer_uefa_europa_conference_league",
 }
 
 
@@ -42,6 +46,16 @@ def team_key(value):
     value = unicodedata.normalize("NFKD", str(value or ""))
     value = "".join(ch for ch in value if not unicodedata.combining(ch))
     return re.sub(r"[^a-z0-9]", "", value.lower())
+
+
+def available_sports(api_key):
+    """Legge le chiavi effettivamente disponibili nel piano/account senza consumare crediti odds."""
+    query = urllib.parse.urlencode({"apiKey": api_key})
+    request = urllib.request.Request(f"{BASE_URL}/?{query}",
+                                     headers={"User-Agent": "CalcioIntelligente/1.0"})
+    with urllib.request.urlopen(request, timeout=15) as response:
+        payload = json.loads(response.read().decode("utf-8"))
+    return {item.get("key") for item in payload if item.get("key") and item.get("active", True)}
 
 
 def fetch_odds(sport, api_key):
@@ -86,8 +100,21 @@ def main():
         return
 
     events_by_league = {}
+    try:
+        active_sports = available_sports(api_key)
+        print(f"Chiavi sport attive rilevate: {len(active_sports)}.")
+    except (urllib.error.URLError, TimeoutError, OSError, ValueError) as error:
+        print(f"AVVISO: elenco sport non disponibile: {error}")
+        active_sports = set()
+
+    # Recupera le quote solo per le competizioni effettivamente presenti nei pronostici.
+    # Le chiavi vengono validate contro l'endpoint ufficiale, così le leghe fuori stagione
+    # o non incluse nel piano non causano richieste inutili.
     for league, sport in SPORTS.items():
         if not any(m.get("league") == league for m in data.get("matches", [])):
+            continue
+        if sport not in active_sports:
+            print(f"Quote {league}: chiave {sport} non attiva/disponibile nell'account, salto.")
             continue
         try:
             events_by_league[league] = fetch_odds(sport, api_key)
@@ -130,7 +157,7 @@ def main():
 
     data["odds_updated_at"] = __import__("datetime").datetime.now(
         __import__("datetime").timezone.utc).replace(microsecond=0).isoformat()
-    data["odds_source"] = "The Odds API" if matched else None
+    data["odds_source"] = "The Odds API" if matched else data.get("odds_source")
     DATA_FILE.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Quote abbinate: {matched}; candidati value bet teorici (EV >= 3%): {value_count}.")
 
