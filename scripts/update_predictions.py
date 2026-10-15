@@ -12,6 +12,7 @@ from collections import defaultdict
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 SOURCE = "https://www.football-data.co.uk"
 # Solo massime divisioni nazionali con risultati storici disponibili nella fonte primaria.
@@ -134,57 +135,78 @@ def fetch_espn_fixtures(league_code, today, last_date):
     return fixtures
 
 def fetch_espn_historical_results(league_code, start_date, end_date):
-    """Prova un recupero storico ESPN per intervallo, senza attribuire risultati non conclusi."""
+    """Recupera risultati ESPN verificati giorno per giorno per le ultime tre settimane."""
     sport_code = ESPN_LEAGUES.get(league_code)
     if not sport_code:
         return []
-    start = start_date.strftime("%Y%m%d")
-    end = end_date.strftime("%Y%m%d")
-    url = (f"https://site.api.espn.com/apis/site/v2/sports/soccer/{sport_code}/scoreboard"
-           f"?dates={start}-{end}&limit=1000")
-    try:
-        request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-        with urllib.request.urlopen(request, timeout=12) as response:
-            payload = json.loads(response.read().decode("utf-8"))
-    except (urllib.error.URLError, TimeoutError, OSError, ValueError) as error:
-        print(f"AVVISO: storico ESPN {league_code} non disponibile: {error}")
-        return []
-    results, seen = [], set()
-    for event in payload.get("events", []):
-        competitions = event.get("competitions") or []
-        if not competitions:
-            continue
-        competition = competitions[0]
-        status = (competition.get("status") or {}).get("type") or {}
-        if not status.get("completed"):
-            continue
-        raw_date = event.get("date", "")
+    # Il scoreboard ESPN accetta in modo affidabile una singola data, non sempre intervalli.
+    # Limita il fallback a 21 giorni e usa concorrenza moderata per non rallentare il job.
+    start_date = max(start_date, end_date - timedelta(days=20))
+    days = []
+    cursor = start_date
+    while cursor <= end_date:
+        days.append(cursor)
+        cursor += timedelta(days=1)
+
+    def fetch_day(day):
+        url = (f"https://site.api.espn.com/apis/site/v2/sports/soccer/{sport_code}/scoreboard"
+               f"?dates={day:%Y%m%d}&limit=100")
         try:
-            event_dt = datetime.fromisoformat(raw_date.replace("Z", "+00:00"))
-            match_date = event_dt.astimezone(ZoneInfo(ESPN_TIMEZONES.get(league_code, "Europe/Rome"))).date()
-        except (ValueError, TypeError):
-            match_date = parse_date(raw_date)
-        if not match_date or not (start_date <= match_date <= end_date):
-            continue
-        home = away = None
-        for competitor in competition.get("competitors", []):
-            team = (competitor.get("team") or {}).get("displayName", "").strip()
-            score = number(competitor.get("score"))
-            if competitor.get("homeAway") == "home":
-                home = (team, score)
-            elif competitor.get("homeAway") == "away":
-                away = (team, score)
-        if not home or not away or not home[0] or not away[0]:
-            continue
-        if home[1] is None or away[1] is None or not (0 <= home[1] <= 15 and 0 <= away[1] <= 15):
-            continue
-        if team_key(home[0]) == team_key(away[0]):
-            continue
-        key = (match_date.isoformat(), team_key(home[0]), team_key(away[0]))
-        if key in seen:
-            continue
-        seen.add(key)
-        results.append((home[0], away[0], int(home[1]), int(away[1]), match_date))
+            request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+            with urllib.request.urlopen(request, timeout=8) as response:
+                payload = json.loads(response.read().decode("utf-8"))
+        except (urllib.error.URLError, TimeoutError, OSError, ValueError) as error:
+            print(f"AVVISO: storico ESPN {league_code} {day}: {error}")
+            return []
+        day_results = []
+        for event in payload.get("events", []):
+            competitions = event.get("competitions") or []
+            if not competitions:
+                continue
+            competition = competitions[0]
+            status = (competition.get("status") or {}).get("type") or {}
+            if not status.get("completed"):
+                continue
+            raw_date = event.get("date", "")
+            try:
+                event_dt = datetime.fromisoformat(raw_date.replace("Z", "+00:00"))
+                match_date = event_dt.astimezone(
+                    ZoneInfo(ESPN_TIMEZONES.get(league_code, "Europe/Rome"))
+                ).date()
+            except (ValueError, TypeError):
+                match_date = parse_date(raw_date)
+            if not match_date or not (start_date <= match_date <= end_date):
+                continue
+            home = away = None
+            for competitor in competition.get("competitors", []):
+                team = (competitor.get("team") or {}).get("displayName", "").strip()
+                score = number(competitor.get("score"))
+                if competitor.get("homeAway") == "home":
+                    home = (team, score)
+                elif competitor.get("homeAway") == "away":
+                    away = (team, score)
+            if not home or not away or not home[0] or not away[0]:
+                continue
+            if home[1] is None or away[1] is None:
+                continue
+            if not (0 <= home[1] <= 15 and 0 <= away[1] <= 15):
+                continue
+            if team_key(home[0]) == team_key(away[0]):
+                continue
+            day_results.append((home[0], away[0], int(home[1]), int(away[1]), match_date))
+        return day_results
+
+    results, seen = [], set()
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        futures = [pool.submit(fetch_day, day) for day in days]
+        for future in as_completed(futures):
+            for home, away, hg, ag, match_date in future.result():
+                key = (match_date.isoformat(), team_key(home), team_key(away))
+                if key in seen:
+                    continue
+                seen.add(key)
+                results.append((home, away, hg, ag, match_date))
+    results.sort(key=lambda row: row[4])
     return results
 
 
