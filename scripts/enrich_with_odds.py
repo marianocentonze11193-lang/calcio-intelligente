@@ -25,6 +25,16 @@ SPORTS = {
     "Primeira Liga": "soccer_portugal_primeira_liga",
     "Belgian Pro League": "soccer_belgium_first_div",
     "Super Lig turca": "soccer_turkey_super_league",
+    "Bundesliga austriaca": "soccer_austria_bundesliga",
+    "Superliga danese": "soccer_denmark_superliga",
+    "Super League greca": "soccer_greece_super_league",
+    "Veikkausliiga finlandese": "soccer_finland_veikkausliiga",
+    "Premier Division irlandese": "soccer_ireland_premier_division",
+    "Eliteserien norvegese": "soccer_norway_eliteserien",
+    "Ekstraklasa polacca": "soccer_poland_ekstraklasa",
+    "Liga I rumena": "soccer_romania_liga_1",
+    "Allsvenskan svedese": "soccer_sweden_allsvenskan",
+    "Super League svizzera": "soccer_switzerland_super_league",
 }
 
 
