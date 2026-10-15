@@ -17,6 +17,7 @@ BASE_URL = "https://v3.football.api-sports.io"
 REFRESH_SECONDS = 6 * 60 * 60
 # Il piano rilevato consente oggi e domani: limita le richieste alle date accessibili.
 API_DAYS_AHEAD = 1
+CACHE_VERSION = 2
 MAX_LINEUP_CALLS_PER_RUN = 1
 TIMEZONE = "Europe/Rome"
 
@@ -184,6 +185,7 @@ def full_refresh(api_key, cache, today):
             if "Free plans do not have access to this date" in str(error):
                 cache.setdefault("unavailable_dates", {})[day] = "Data fuori copertura del piano API-Football configurato."
             print(f"AVVISO disponibilità {day}: {error}. Mantengo la cache precedente.")
+    cache["cache_version"] = CACHE_VERSION
     cache["last_full_refresh"] = now_utc().isoformat()
 
 
@@ -270,6 +272,20 @@ def availability_for(match, cache, configured):
             "injuries": [],
             "lineups": None,
         }
+    day = str(match.get("date") or "")[:10]
+    current_day = now_utc().date()
+    try:
+        match_day = datetime.fromisoformat(day).date()
+    except ValueError:
+        match_day = None
+    if match_day and match_day > current_day + timedelta(days=API_DAYS_AHEAD):
+        return {
+            "status": "fuori_copertura_api",
+            "source": "API-Football",
+            "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+            "injuries": [],
+            "lineups": None,
+        }
     fixture = match_fixture(match, cache)
     if not fixture:
         day = str(match.get("date") or "")[:10]
@@ -335,7 +351,18 @@ def main():
 
     print("API_FOOTBALL_KEY presente: avvio verifica della connessione API-Football (la chiave non viene stampata).")
     cache = load_cache()
-    today = now_utc().astimezone().date()
+    if cache.get("cache_version") != CACHE_VERSION:
+        cache = {
+            "cache_version": CACHE_VERSION,
+            "last_full_refresh": None,
+            "fixtures_by_date": {},
+            "injuries_by_fixture": {},
+            "injury_checked_dates": [],
+            "lineups_by_fixture": {},
+            "lineup_attempts": {},
+            "unavailable_dates": {},
+        }
+    today = now_utc().date()
     last_refresh = parse_datetime(cache.get("last_full_refresh"))
     if not last_refresh or now_utc() - last_refresh >= timedelta(seconds=REFRESH_SECONDS):
         full_refresh(api_key, cache, today)
