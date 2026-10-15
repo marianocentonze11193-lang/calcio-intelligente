@@ -95,7 +95,7 @@ TEAM_ALIAS_GROUPS = [
     {"eintrachtfrankfurt", "eintracht"},
     {"borussiadortmund", "dortmund"},
     {"borussiamonchengladbach", "monchengladbach", "gladbach"},
-    {"rbLeipzig", "rasenballsportleipzig", "rbleipzig"},
+    {"rbleipzig", "rasenballsportleipzig", "rbleipzig"},
     {"olympiquedemarseille", "marseille"},
     {"olympiquelyonnais", "lyon"},
     {"realbetis", "betis"},
