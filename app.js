@@ -161,7 +161,8 @@ function renderMatches(matches) {
       };
       const noBetLabel = noBetLabels[match.no_bet_type] || "CONTROLLO NON SUPERATO";
       noBet.textContent = "NO BET · " + noBetLabel + " — " +
-        (match.reason || "Dati insufficienti: nessun esito consigliato.");
+        (match.reason || "Dati insufficienti: nessun esito consigliato.") +
+        (match.data_quality ? " · Controllo qualità: " + match.data_quality : "");
       card.append(meta, teams, noBet);
       appendAvailability(match, card);
       if (match.analysis) {
@@ -216,8 +217,12 @@ function renderMatches(matches) {
 
     const confidence = document.createElement("p");
     confidence.className = "match-meta";
-    confidence.textContent = "Campione: " + (match.home_matches_sample ?? "—") + " gare casa in casa / " + (match.away_matches_sample ?? "—") + " gare ospite fuori casa · Stato: " + (match.status || "Pronostico valutabile") +
-      " · Fiducia: " + (match.confidence || "iniziale") +
+    confidence.classList.add("reliability-line");
+    confidence.textContent = (match.status === "Pronostico valutabile" ? "PRONOSTICO VALUTABILE" : "STIMA PRELIMINARE") +
+      " · Dati: " + (match.home_matches_sample ?? "—") +
+      " gare casa della squadra di casa / " + (match.away_matches_sample ?? "—") +
+      " trasferte della squadra ospite · " + (match.confidence || "quantità dati non specificata") +
+      (match.data_quality ? " · Controllo: " + match.data_quality : "") +
       (match.elo_home != null && match.elo_away != null ? " · Elo " + match.elo_home + " / " + match.elo_away : "");
 
     const score = document.createElement("p");
@@ -295,8 +300,8 @@ function renderHistory(history) {
 
   const metricItems = [
     ["Partite verificate", Number(metrics.settled_matches || 0).toLocaleString("it-IT")],
-    ["Accuratezza 1X2", typeof metrics.accuracy_1x2 === "number" ? percent(metrics.accuracy_1x2) : "In attesa"],
-    ["Brier score", typeof metrics.brier_score_1x2 === "number" ? metrics.brier_score_1x2.toLocaleString("it-IT", { maximumFractionDigits: 4 }) : "In attesa"]
+    ["Accuratezza 1X2", typeof metrics.accuracy_1x2 === "number" ? percent(metrics.accuracy_1x2) : "Non ancora pubblicabile"],
+    ["Brier score", typeof metrics.brier_score_1x2 === "number" ? metrics.brier_score_1x2.toLocaleString("it-IT", { maximumFractionDigits: 4 }) : "Non ancora pubblicabile"]
   ];
   for (const [label, value] of metricItems) {
     const item = document.createElement("div");
@@ -308,6 +313,13 @@ function renderHistory(history) {
     strong.textContent = value;
     item.append(caption, strong);
     metricsNode.append(item);
+  }
+
+  if (typeof metrics.note === "string") {
+    const readiness = document.createElement("p");
+    readiness.className = "match-meta";
+    readiness.textContent = metrics.note;
+    metricsNode.append(readiness);
   }
 
   const records = Array.isArray(history && history.records) ? [...history.records] : [];
@@ -448,10 +460,10 @@ async function aggiornaDati() {
       ? coverage.leagues_with_history.length
       : null;
     const coverageNote = historyCount !== null
-      ? " Copertura storico: " + historyCount + "/" + (coverage.leagues_configured || "?") + " campionati configurati."
+      ? " Copertura storico recente: " + historyCount + "/" + (coverage.leagues_configured || "?") + " campionati con almeno un risultato disponibile; non equivale a copertura completa."
       : "";
-    const coverageWarning = historyCount !== null && historyCount < (coverage.leagues_configured || historyCount)
-      ? " Alcuni campionati non hanno uno storico verificato: i relativi incontri restano NO BET."
+    const coverageWarning = Array.isArray(coverage.leagues_without_history) && coverage.leagues_without_history.length
+      ? " Senza storico: " + coverage.leagues_without_history.join(", ") + "."
       : "";
     stato.textContent = (validMatches.length
       ? "STIME DISPONIBILI · " + validMatches.length + " partite con probabilità; " + noBetMatches.length + " NO BET senza dati sufficienti. Le stime preliminari sono indicate come tali."
