@@ -507,7 +507,7 @@ async function aggiornaDati() {
     const parsedUpdate = dati.updated_at ? new Date(dati.updated_at) : null;
     const validUpdate = parsedUpdate && !Number.isNaN(parsedUpdate.getTime());
     const dataAgeHours = validUpdate ? (Date.now() - parsedUpdate.getTime()) / 3600000 : Infinity;
-    const staleWarning = !validUpdate || dataAgeHours < 0 || dataAgeHours > 36;
+    const staleWarning = !validUpdate || dataAgeHours < 0 || dataAgeHours > 2;
     const stamp = validUpdate ? parsedUpdate.toLocaleString("it-IT") : "non disponibile";
     const failedSources = Array.isArray(coverage.failed_sources) ? coverage.failed_sources : [];
     if (failedSources.length) {
@@ -517,7 +517,7 @@ async function aggiornaDati() {
       stato.textContent = "ATTENZIONE · I dati pubblicati sono obsoleti o hanno un timestamp non valido. Non considerarli aggiornati. " + stato.textContent;
     }
     aggiornamento.textContent = "Ultimo calcolo salvato: " + stamp +
-      (staleWarning ? " · ATTENZIONE: dati più vecchi di 36 ore o data non valida." : "") +
+      (staleWarning ? " · ATTENZIONE: dati più vecchi di 2 ore o data non valida." : "") +
       ". Il pulsante ricarica il file pubblicato; non avvia direttamente il calcolo sul server.";
   } catch (errore) {
     stato.textContent = "DATI NON DISPONIBILI · L'aggiornamento non è riuscito.";
