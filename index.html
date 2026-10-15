@@ -20,6 +20,9 @@
     button { border: 0; border-radius: 10px; background: #53d69a; color: #0b2118; font-size: 15px; font-weight: 700; padding: 12px 16px; cursor: pointer; }
     button:disabled { opacity: .6; }
     .status { border-radius: 9px; padding: 12px; background: #252f40; line-height: 1.5; overflow-wrap: anywhere; }
+    .competition-heading { margin: 20px 0 8px; padding: 10px 12px; border-left: 3px solid #53d69a; background: #202c3d; border-radius: 7px; font-size: 15px; }
+    .filters { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 12px 0; }
+    select { width: 100%; padding: 11px; border-radius: 8px; border: 1px solid #46546a; background: #111925; color: #f3f6fb; }
     .match-card { background: #111925; border: 1px solid #303b4d; border-radius: 12px; padding: 14px; margin: 12px 0; }
     .match-meta { color: #aab6c9; font-size: 12px; line-height: 1.5; margin: 0 0 8px; }
     .match-teams { font-size: 17px; margin: 0 0 8px; }
@@ -46,7 +49,7 @@
     a { color: #53d69a; }
     @media (max-width: 560px) { .probabilities { grid-template-columns: repeat(3, minmax(0, 1fr)); } .match-teams { font-size: 15px; } }
   </style>
-  <script src="./app.js?v=20261015-10" defer></script>
+  <script src="./app.js?v=20261015-11" defer></script>
 </head>
 <body>
   <header>
@@ -62,7 +65,11 @@
     </section>
     <section class="panel">
       <h2>Partite e probabilità</h2>
-      <p class="muted">Stime calcolate con un modello Poisson usando i risultati disponibili in casa e in trasferta. Una stima viene valutata solo se sono disponibili almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite. È una soglia minima per mostrare una stima sperimentale, non una garanzia di affidabilità; il campione ridotto viene segnalato. Campionati: Premier League, Championship, League One, League Two, La Liga, Bundesliga, Serie A, Ligue 1, Scottish Premiership, Scottish Championship, Eredivisie, Primeira Liga, Belgian Pro League e Super Lig turca. Il calendario europeo può includere Champions League, Europa League e Conference League; se lo storico non è sufficiente, la partita resta visibile come NO BET.</p>
+      <p class="muted">Stime sperimentali basate su Poisson, statistiche casa/trasferta, prior di lega e correzione Elo. Le partite con campione ridotto sono indicate come stime preliminari; NO BET viene mantenuto quando mancano dati minimi pertinenti. Sono incluse soltanto le massime divisioni nazionali per cui la fonte primaria offre dati storici, oltre alle coppe UEFA mostrate separatamente.</p>
+      <div class="filters">
+        <label for="country-filter" class="muted">Nazione<select id="country-filter"><option value="">Tutte le nazioni</option></select></label>
+        <label for="league-filter" class="muted">Competizione<select id="league-filter"><option value="">Tutte le competizioni</option></select></label>
+      </div>
       <div id="matches" class="status">Caricamento delle partite…</div>
     </section>
     <section class="panel">
