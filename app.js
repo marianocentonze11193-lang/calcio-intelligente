@@ -22,7 +22,7 @@ function renderMatches(matches) {
   container.replaceChildren();
 
   if (!matches.length) {
-    container.textContent = "Nessuna partita futura con un campione statistico sufficiente. Il sistema riproverà al prossimo aggiornamento.";
+    container.textContent = "Nessuna partita nei prossimi 6 giorni supera il controllo storico minimo. Il sistema riproverà al prossimo aggiornamento.";
     return;
   }
 
@@ -70,6 +70,11 @@ function renderMatches(matches) {
       labelNode.textContent = pair[0];
       const valueNode = document.createElement("strong");
       valueNode.textContent = percent(pair[1]);
+      const p = pair[1];
+      if (typeof p === "number") {
+        item.classList.add(p >= 70 ? "signal-green" : p >= 55 ? "signal-yellow" : "signal-red");
+        item.title = p >= 70 ? "Probabilità stimata alta (70% o più)" : p >= 55 ? "Probabilità stimata intermedia (55–69,9%)" : "Probabilità stimata bassa (meno del 55%)";
+      }
       item.append(labelNode, valueNode);
       grid.append(item);
     }
@@ -126,7 +131,7 @@ async function aggiornaDati() {
         match.date >= firstDate &&
         match.date <= lastDate &&
         Number.isFinite(Number(match.sample_matches)) &&
-        Number(match.sample_matches) >= 4
+        Number(match.sample_matches) >= 6
       )
       .sort((a, b) =>
         a.date.localeCompare(b.date) ||
@@ -136,8 +141,8 @@ async function aggiornaDati() {
       );
     renderMatches(validMatches);
     stato.textContent = validMatches.length
-      ? "PRONOSTICI VALUTABILI · " + validMatches.length + " partite nei prossimi 6 giorni (oggi incluso), ordinate per data e orario, con almeno 4 incontri storici per squadra. Il calcolo automatico viene eseguito da GitHub Actions ogni ora."
-      : "NO BET · Nessuna partita nei prossimi 6 giorni supera il controllo minimo di 4 incontri storici per squadra. Il sistema riproverà al prossimo aggiornamento automatico.";
+      ? "PRONOSTICI VALUTABILI · " + validMatches.length + " partite nei prossimi 6 giorni (oggi incluso), ordinate per data e orario, con almeno 6 partite storiche nel contesto casa/trasferta. Il calcolo automatico viene eseguito da GitHub Actions ogni ora."
+      : "NO BET · Nessuna partita nei prossimi 6 giorni supera il controllo minimo di 6 partite storiche nel contesto casa/trasferta. Il sistema riproverà al prossimo aggiornamento automatico.";
     const stamp = dati.updated_at ? new Date(dati.updated_at).toLocaleString("it-IT") : "non disponibile";
     aggiornamento.textContent = "Ultimo calcolo salvato: " + stamp + ". Il pulsante ricarica il file pubblicato; non avvia direttamente il calcolo sul server.";
   } catch (errore) {
