@@ -374,11 +374,19 @@ def main():
     for match in data.get("matches", []) + data.get("no_bet_matches", []):
         match["availability_data"] = availability_for(match, cache, True)
     DATA_FILE.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    configured_matches = sum(
+    matched_matches = sum(
         1 for match in data.get("matches", []) + data.get("no_bet_matches", [])
-        if match.get("availability_data", {}).get("status") not in ("non_trovata", "non_configurata")
+        if match.get("availability_data", {}).get("fixture_id")
     )
-    print(f"Dati disponibilità aggiornati: {configured_matches} partite abbinate. Le probabilità non sono state modificate.")
+    outside_coverage = sum(
+        1 for match in data.get("matches", []) + data.get("no_bet_matches", [])
+        if match.get("availability_data", {}).get("status") == "fuori_copertura_api"
+    )
+    print(
+        f"Dati disponibilità: {matched_matches} partite abbinate; "
+        f"{outside_coverage} fuori copertura del piano API. "
+        "Le probabilità non sono state modificate."
+    )
 
 
 if __name__ == "__main__":
