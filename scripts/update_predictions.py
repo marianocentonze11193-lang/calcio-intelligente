@@ -13,11 +13,18 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 SOURCE = "https://www.football-data.co.uk"
+# Solo massime divisioni nazionali con risultati storici disponibili nella fonte primaria.
 LEAGUES = {
-    "E0": "Premier League", "E1": "Championship", "E2": "League One", "E3": "League Two",
-    "SP1": "La Liga", "D1": "Bundesliga", "I1": "Serie A", "F1": "Ligue 1",
-    "SC0": "Scottish Premiership", "SC1": "Scottish Championship",
-    "N1": "Eredivisie", "P1": "Primeira Liga", "B1": "Belgian Pro League", "T1": "Super Lig turca",
+    "E0": "Premier League", "SP1": "La Liga", "D1": "Bundesliga",
+    "I1": "Serie A", "F1": "Ligue 1", "SC0": "Scottish Premiership",
+    "N1": "Eredivisie", "P1": "Primeira Liga", "B1": "Belgian Pro League",
+    "T1": "Super Lig turca",
+}
+LEAGUE_COUNTRIES = {
+    "Premier League": "Inghilterra", "La Liga": "Spagna", "Bundesliga": "Germania",
+    "Serie A": "Italia", "Ligue 1": "Francia", "Scottish Premiership": "Scozia",
+    "Eredivisie": "Paesi Bassi", "Primeira Liga": "Portogallo",
+    "Belgian Pro League": "Belgio", "Super Lig turca": "Turchia",
 }
 OUTPUT = Path("data/predictions.json")
 USER_AGENT = "CalcioIntelligente/1.0"
@@ -45,8 +52,7 @@ def fetch_csv(url):
 
 
 ESPN_LEAGUES = {
-    "E0": "eng.1", "E1": "eng.2", "E2": "eng.3", "E3": "eng.4",
-    "SP1": "esp.1", "D1": "ger.1", "I1": "ita.1", "F1": "fra.1",
+    "E0": "eng.1", "SP1": "esp.1", "D1": "ger.1", "I1": "ita.1", "F1": "fra.1",
     "SC0": "sco.1", "N1": "ned.1", "P1": "por.1", "B1": "bel.1", "T1": "tur.1",
     "UCL": "uefa.champions", "UEL": "uefa.europa", "UECL": "uefa.europa.conf",
 }
@@ -148,7 +154,21 @@ def percent(value):
     return round(max(0.0, min(1.0, value)) * 100, 1)
 
 
-def make_forecast(home, away, league, match_date, kickoff, history, league_home_avg, league_away_avg):
+def calculate_elo(completed, initial=1500.0, k_factor=22.0, home_advantage=55.0):
+    """Stima Elo sequenziale usando i risultati disponibili, senza usare dati futuri."""
+    ratings = defaultdict(lambda: initial)
+    for home, away, home_goals, away_goals in completed:
+        home_rating = ratings[home] + home_advantage
+        away_rating = ratings[away]
+        expected_home = 1 / (1 + 10 ** ((away_rating - home_rating) / 400))
+        actual_home = 1.0 if home_goals > away_goals else 0.5 if home_goals == away_goals else 0.0
+        delta = k_factor * (actual_home - expected_home)
+        ratings[home] += delta
+        ratings[away] -= delta
+    return dict(ratings)
+
+
+def make_forecast(home, away, league, match_date, kickoff, history, league_home_avg, league_away_avg, elo_ratings=None):
     hs, aws = history[home], history[away]
 
     def smooth(goals, games, prior):
@@ -162,6 +182,12 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
     away_defence = smooth(aws["away_conceded"], aws["away_games"], league_home_avg)
     expected_home = max(0.15, min(4.5, home_attack * away_defence / max(0.2, league_home_avg)))
     expected_away = max(0.15, min(4.5, away_attack * home_defence / max(0.2, league_away_avg)))
+    # Correzione Elo moderata: informa la forza relativa senza sostituire le statistiche gol.
+    if elo_ratings:
+        rating_gap = elo_ratings.get(home, 1500.0) - elo_ratings.get(away, 1500.0) + 50.0
+        elo_factor = math.exp(max(-250.0, min(250.0, rating_gap)) * math.log(1.15) / 400.0)
+        expected_home = max(0.15, min(4.5, expected_home * elo_factor))
+        expected_away = max(0.15, min(4.5, expected_away / elo_factor))
     hp, ap = poisson_probs(expected_home), poisson_probs(expected_away)
 
     home_win = draw = away_win = over15 = over25 = over35 = btts = 0.0
@@ -190,12 +216,12 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
             if a >= 1:
                 away_scores += p
     total = home_win + draw + away_win
-    # Il requisito è specifico per il contesto della partita: almeno 6 gare
-    # casalinghe della squadra di casa e 6 trasferte della squadra ospite.
+    # Il prior di lega consente una stima preliminare anche con pochi dati specifici.
+    # NO BET resta per casi senza campione pertinente, non solo perché il campione è piccolo.
     home_sample = hs["home_games"]
     away_sample = aws["away_games"]
     sample = min(home_sample, away_sample)
-    valid = home_sample >= MIN_TEAM_MATCHES and away_sample >= MIN_TEAM_MATCHES
+    valid = (home_sample + away_sample) >= 2
     scorelines.sort(reverse=True)
     probabilities = {
         "home_win": percent(home_win / total), "draw": percent(draw / total),
@@ -224,6 +250,7 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
     return {
         "id": f"{match_date.isoformat()}-{league}-{home}-{away}",
         "date": match_date.isoformat(), "kickoff": kickoff or "", "league": league,
+        "country": LEAGUE_COUNTRIES.get(league, "Competizioni UEFA" if league in ("Champions League", "Europa League", "Conference League") else "Altro"),
         "home_team": home, "away_team": away,
         "expected_home_goals": round(expected_home, 2),
         "expected_away_goals": round(expected_away, 2),
@@ -237,10 +264,12 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
         "sample_matches": sample,
         "home_matches_sample": home_sample,
         "away_matches_sample": away_sample,
-        "status": "Pronostico valutabile" if valid else "NO BET",
-        "reason": "" if valid else f"Storico insufficiente: servono almeno {MIN_TEAM_MATCHES} gare casalinghe per la squadra di casa e {MIN_TEAM_MATCHES} trasferte per quella ospite.",
+        "status": ("Pronostico valutabile" if sample >= 5 else "Stima preliminare") if valid else "NO BET",
+        "reason": "" if valid else "Storico insufficiente: non risultano almeno due osservazioni pertinenti per le squadre.",
         "confidence": "più solida" if sample >= 8 else "intermedia" if sample >= 5 else "bassa (campione ridotto)",
-        "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato",
+        "elo_home": round((elo_ratings or {}).get(home, 1500.0), 1),
+        "elo_away": round((elo_ratings or {}).get(away, 1500.0), 1),
+        "method": "Poisson casa/trasferta + correzione Elo moderata + prior di lega; sperimentale non ancora validato",
     }
 
 
@@ -349,6 +378,7 @@ def main():
         if league_home_avg <= 0 or league_away_avg <= 0:
             continue
 
+        elo_ratings = calculate_elo(completed)
         history = defaultdict(lambda: {
             "played": 0, "home_games": 0, "away_games": 0,
             "home_scored": 0, "home_conceded": 0, "away_scored": 0, "away_conceded": 0,
@@ -370,7 +400,7 @@ def main():
         for home, away, match_date, kickoff in fixtures:
             home = normalized_history.get(team_key(home), home)
             away = normalized_history.get(team_key(away), away)
-            forecast = make_forecast(home, away, league_name, match_date, kickoff, history, league_home_avg, league_away_avg)
+            forecast = make_forecast(home, away, league_name, match_date, kickoff, history, league_home_avg, league_away_avg, elo_ratings)
             if forecast:
                 forecasts.append(forecast)
             else:
@@ -383,6 +413,7 @@ def main():
             forecasts.append({
                 "id": f"{match_date.isoformat()}-{league_name}-{home}-{away}",
                 "date": match_date.isoformat(), "kickoff": kickoff, "league": league_name,
+                "country": "Competizioni UEFA",
                 "home_team": home, "away_team": away, "expected_home_goals": None,
                 "expected_away_goals": None, "probabilities": {}, "top_scorelines": [],
                 "sample_matches": 0, "home_matches_sample": 0, "away_matches_sample": 0,
@@ -397,19 +428,20 @@ def main():
         raise SystemExit("Nessuna fonte dati raggiungibile: il file precedente è stato mantenuto.")
 
     forecasts.sort(key=lambda item: (
+        item.get("country", "Altro"),
+        item["league"],
         item["date"],
         item["kickoff"] or "99:99",
-        item["league"],
         item["home_team"],
         item["away_team"],
     ))
     result = {
         "updated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
         "source": SOURCE, "season": season,
-        "model": "Poisson semplice con filtro storico minimo; stime indicative, non garanzie",
+        "model": "Poisson casa/trasferta con prior di lega e correzione Elo; stime sperimentali, non garanzie",
         "leagues_checked": downloaded,
         "no_bet_notice": "Le partite NO BET sono mostrate perché i dati non bastano o non sono comparabili. Nessun esito consigliato.",
-        "matches": [item for item in forecasts if item.get("status") == "Pronostico valutabile"][:80],
+        "matches": [item for item in forecasts if item.get("status") in ("Pronostico valutabile", "Stima preliminare")][:120],
         "no_bet_matches": [item for item in forecasts if item.get("status") == "NO BET"][:80],
         "notice": "Le probabilità sono stime statistiche e non garantiscono risultati.",
     }
