@@ -38,7 +38,7 @@ def main():
     data = json.loads(DATA_FILE.read_text(encoding="utf-8"))
     matches = [
         match for match in data.get("matches", [])
-        if match.get("status") == "Pronostico valutabile" and match.get("probabilities")
+        if match.get("status") in ("Pronostico valutabile", "Stima preliminare") and match.get("probabilities")
     ][:MAX_MATCHES]
     if not matches:
         print("Nessuna partita valutabile da inviare a Gemini.")
