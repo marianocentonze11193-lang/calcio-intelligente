@@ -39,3 +39,15 @@ Per attivare le quote, crea una chiave secondo le condizioni del fornitore The O
 - Test: `tests/test_predictions.py`
 
 Questa applicazione è sperimentale e informativa. Le probabilità non costituiscono garanzia di esito.
+
+
+## Infortuni, squalifiche e formazioni
+
+Il flusso opzionale `scripts/enrich_with_availability.py` usa API-Football (API-Sports) per cercare segnalazioni di infortuni/squalifiche e, vicino al calcio d'inizio, le formazioni disponibili. Richiede il secret GitHub Actions `API_FOOTBALL_KEY`. Se il secret non è configurato, le probabilità continuano a essere generate e l'app mostra chiaramente che i dati di disponibilità non sono configurati.
+
+- La cache `data/availability_cache.json` riduce le chiamate: calendario e indisponibilità vengono aggiornati circa ogni 6 ore.
+- Le formazioni vengono controllate vicino al calcio d'inizio, con al massimo una richiesta di formazione per esecuzione del workflow.
+- Il matching usa data, ordine casa/trasferta e alias espliciti; se la partita non si abbina con certezza, i dati non vengono attribuiti.
+- La fonte può avere copertura incompleta per campionato. Un elenco vuoto significa solo che non sono state trovate segnalazioni nella risposta, non che tutti i giocatori siano certamente disponibili.
+- Le informazioni di disponibilità sono mostrate come contesto e non modificano automaticamente le probabilità del modello.
+- Per attivare: repository GitHub → Settings → Secrets and variables → Actions → New repository secret → nome `API_FOOTBALL_KEY`, valore della chiave API-Football. Non inserire mai la chiave nei file del repository.
