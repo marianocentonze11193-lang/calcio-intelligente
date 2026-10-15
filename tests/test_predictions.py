@@ -92,6 +92,16 @@ class PredictionModelTests(unittest.TestCase):
         self.assertEqual(forecast["home_matches_sample"], 3)
         self.assertEqual(forecast["away_matches_sample"], 2)
 
+    def test_recent_form_uses_latest_five_matches(self):
+        form = module.calculate_recent_form([
+            ("Casa", "Avversaria1", 1, 0),
+            ("Casa", "Avversaria2", 2, 0),
+            ("Casa", "Avversaria3", 0, 1),
+        ])
+        self.assertEqual(form["Casa"]["games"], 3)
+        self.assertAlmostEqual(form["Casa"]["goals_for"], 1.0)
+        self.assertAlmostEqual(form["Casa"]["points_per_match"], 2.0 / 3)
+
     def test_elo_ratings_update_after_results(self):
         ratings = module.calculate_elo([
             ("Casa", "Trasferta", 2, 0),
