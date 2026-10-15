@@ -7,6 +7,7 @@ on:
       - "scripts/update_predictions.py"
       - "scripts/enrich_with_gemini.py"
       - "scripts/enrich_with_odds.py"
+      - "scripts/enrich_with_availability.py"
       - "scripts/archive_predictions.py"
       - "app.js"
       - "index.html"
@@ -45,6 +46,7 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -56,10 +58,11 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             python scripts/update_predictions.py
+            python scripts/enrich_with_availability.py
             python scripts/enrich_with_odds.py
             python scripts/enrich_with_gemini.py
             python scripts/archive_predictions.py
-            git add data/predictions.json data/history.json
+            git add data/predictions.json data/history.json data/availability_cache.json
             if git diff --cached --quiet; then
               echo "Nessun cambiamento nei dati."
               exit 0
