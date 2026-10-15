@@ -39,6 +39,18 @@ class PredictionModelTests(unittest.TestCase):
         self.assertEqual(module.EXTRA_HISTORY_DAYS, 365)
         self.assertEqual(archive_module.EXTRA_FOOTBALL_DATA_LEAGUES, expected)
 
+    def test_extra_csv_source_codes_match_published_files(self):
+        self.assertEqual(module.EXTRA_SOURCE_CODES, {"NOK": "NOR", "RO": "ROU"})
+        self.assertEqual(archive_module.EXTRA_SOURCE_CODES, {"NOK": "NOR", "RO": "ROU"})
+
+    def test_archive_result_index_accepts_lowercase_extra_csv_columns(self):
+        index = archive_module.result_index([{
+            "date": "15/10/26", "home_team": "Milan", "away_team": "Roma",
+            "fthg": "0", "ftag": "2",
+        }])
+        key = ("2026-10-15", archive_module.team_key("Milan"), archive_module.team_key("Roma"))
+        self.assertEqual(index[key], (0, 2))
+
     def test_published_data_timestamp_rejects_stale_future_and_invalid_values(self):
         from datetime import datetime, timezone, timedelta
         now = datetime(2026, 10, 15, 18, 0, tzinfo=timezone.utc)
