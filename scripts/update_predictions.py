@@ -55,14 +55,12 @@ def fetch_csv(url):
 ESPN_LEAGUES = {
     "E0": "eng.1", "SP1": "esp.1", "D1": "ger.1", "I1": "ita.1", "F1": "fra.1",
     "SC0": "sco.1", "N1": "ned.1", "P1": "por.1", "B1": "bel.1", "T1": "tur.1",
-    "UCL": "uefa.champions", "UEL": "uefa.europa", "UECL": "uefa.europa.conf",
 }
 ESPN_TIMEZONES = {
     "E0": "Europe/London", "SC0": "Europe/London", "SP1": "Europe/Madrid",
     "D1": "Europe/Berlin", "I1": "Europe/Rome", "F1": "Europe/Paris",
     "N1": "Europe/Amsterdam", "P1": "Europe/Lisbon", "B1": "Europe/Brussels",
-    "T1": "Europe/Istanbul", "UCL": "Europe/Rome", "UEL": "Europe/Rome",
-    "UECL": "Europe/Rome",
+    "T1": "Europe/Istanbul",
 }
 
 
