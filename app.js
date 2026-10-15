@@ -39,6 +39,21 @@ function renderMatches(matches) {
     teams.className = "match-teams";
     teams.textContent = match.home_team + " — " + match.away_team;
 
+    if (match.status === "NO BET") {
+      const noBet = document.createElement("p");
+      noBet.className = "no-bet";
+      noBet.textContent = "NO BET · " + (match.reason || "Dati insufficienti: nessun esito consigliato.");
+      card.append(meta, teams, noBet);
+      if (match.analysis) {
+        const analysis = document.createElement("p");
+        analysis.className = "match-analysis";
+        analysis.textContent = match.analysis;
+        card.append(analysis);
+      }
+      container.append(card);
+      continue;
+    }
+
     const expected = document.createElement("p");
     expected.className = "match-meta";
     expected.textContent = "Gol attesi (modello): " + match.expected_home_goals + " — " + match.expected_away_goals;
@@ -92,6 +107,18 @@ function renderMatches(matches) {
       : "";
 
     card.append(meta, teams, expected, grid, confidence);
+    if (match.analysis) {
+      const analysis = document.createElement("p");
+      analysis.className = "match-analysis";
+      analysis.textContent = "Analisi sintetica: " + match.analysis;
+      card.append(analysis);
+    }
+    if (Array.isArray(match.suggested_markets) && match.suggested_markets.length) {
+      const suggested = document.createElement("p");
+      suggested.className = "match-meta";
+      suggested.textContent = "Mercati con probabilità modello ≥70% (da verificare con le quote): " + match.suggested_markets.join(", ");
+      card.append(suggested);
+    }
     if (score.textContent) card.append(score);
     container.append(card);
   }
@@ -139,10 +166,23 @@ async function aggiornaDati() {
         (a.league || "").localeCompare(b.league || "", "it") ||
         (a.home_team || "").localeCompare(b.home_team || "", "it")
       );
-    renderMatches(validMatches);
+    const noBetMatches = (Array.isArray(dati.no_bet_matches) ? dati.no_bet_matches : [])
+      .filter(match => match.date >= firstDate && match.date <= lastDate)
+      .sort((a, b) =>
+        a.date.localeCompare(b.date) ||
+        (a.kickoff || "99:99").localeCompare(b.kickoff || "99:99") ||
+        (a.league || "").localeCompare(b.league || "", "it") ||
+        (a.home_team || "").localeCompare(b.home_team || "", "it")
+      );
+    const combined = [...validMatches, ...noBetMatches].sort((a, b) =>
+      a.date.localeCompare(b.date) ||
+      (a.kickoff || "99:99").localeCompare(b.kickoff || "99:99") ||
+      (a.league || "").localeCompare(b.league || "", "it")
+    );
+    renderMatches(combined);
     stato.textContent = validMatches.length
-      ? "PRONOSTICI VALUTABILI · " + validMatches.length + " partite nei prossimi 6 giorni (oggi incluso), ordinate per data e orario, con almeno 6 partite storiche nel contesto casa/trasferta. Il calcolo automatico viene eseguito da GitHub Actions ogni ora."
-      : "NO BET · Nessuna partita nei prossimi 6 giorni supera il controllo minimo di 6 partite storiche nel contesto casa/trasferta. Il sistema riproverà al prossimo aggiornamento automatico.";
+      ? "PRONOSTICI VALUTABILI · " + validMatches.length + " partite con dati sufficienti; sono mostrate anche " + noBetMatches.length + " partite NO BET quando lo storico è insufficiente."
+      : "NO BET · Nessuna partita supera il controllo minimo; vengono comunque mostrate le partite in calendario con dati insufficienti.";
     const stamp = dati.updated_at ? new Date(dati.updated_at).toLocaleString("it-IT") : "non disponibile";
     aggiornamento.textContent = "Ultimo calcolo salvato: " + stamp + ". Il pulsante ricarica il file pubblicato; non avvia direttamente il calcolo sul server.";
   } catch (errore) {
