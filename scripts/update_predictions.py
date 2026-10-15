@@ -264,7 +264,7 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
         "sample_matches": sample,
         "home_matches_sample": home_sample,
         "away_matches_sample": away_sample,
-        "status": ("Pronostico valutabile" if sample >= 5 else "Stima preliminare") if valid else "NO BET",
+        "status": ("Pronostico valutabile" if sample >= 3 else "Stima preliminare") if valid else "NO BET",
         "reason": "" if valid else "Storico insufficiente: non risultano almeno due osservazioni pertinenti per le squadre.",
         "confidence": "più solida" if sample >= 8 else "intermedia" if sample >= 5 else "bassa (campione ridotto)",
         "elo_home": round((elo_ratings or {}).get(home, 1500.0), 1),
