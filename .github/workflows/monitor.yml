@@ -1,0 +1,78 @@
+name: Controllo salute e avvisi
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["Aggiornamento dati e pronostici"]
+    types: [completed]
+
+permissions:
+  contents: read
+  issues: write
+  actions: read
+
+jobs:
+  controlla:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'failure' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Scarica i dati pubblicati
+        if: ${{ github.event_name != 'workflow_run' }}
+        uses: actions/checkout@v4
+
+      - name: Verifica se serve un avviso
+        id: check
+        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          set -euo pipefail
+          if [ "$EVENT_NAME" = "workflow_run" ]; then
+            echo "needed=true" >> "$GITHUB_OUTPUT"
+            echo "reason=Il workflow di aggiornamento dati e pronostici è terminato con errore." >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          python - <<'PY'
+          import json, os
+          from datetime import datetime, timezone
+          path = "data/predictions.json"
+          reason = ""
+          try:
+              with open(path, encoding="utf-8") as f:
+                  data = json.load(f)
+              raw = data.get("updated_at")
+              stamp = datetime.fromisoformat(str(raw).replace("Z", "+00:00"))
+              if stamp.tzinfo is None:
+                  stamp = stamp.replace(tzinfo=timezone.utc)
+              age_hours = (datetime.now(timezone.utc) - stamp.astimezone(timezone.utc)).total_seconds() / 3600
+              if age_hours < 0:
+                  reason = "Il timestamp di predictions.json è nel futuro."
+              elif age_hours > 36:
+                  reason = f"I dati pubblicati sono vecchi di circa {age_hours:.1f} ore (limite: 36 ore)."
+          except Exception as exc:
+              reason = f"Impossibile leggere o verificare data/predictions.json: {exc}"
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as out:
+              out.write("needed=" + ("true" if reason else "false") + "\n")
+              if reason:
+                  out.write("reason=" + reason.replace("\n", " ") + "\n")
+          print(reason or "Dati aggiornati: nessun avviso necessario.")
+          PY
+
+      - name: Apri un avviso GitHub (senza duplicati)
+        if: ${{ steps.check.outputs.needed == 'true' }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ALERT_REASON: ${{ steps.check.outputs.reason }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          TITLE="[MONITORAGGIO] Controllare aggiornamento app pronostici"
+          if gh issue list --state open --limit 100 --json title --jq '.[].title' | grep -Fxq "$TITLE"; then
+            echo "Esiste già un avviso aperto: evito duplicati."
+            exit 0
+          fi
+          BODY="Il monitor automatico ha rilevato un problema.\n\n**Dettaglio:** $ALERT_REASON\n\n**Controlli consigliati:** aprire la scheda Actions, verificare il workflow \"Aggiornamento dati e pronostici\" e controllare la data `updated_at` in `data/predictions.json`.\n\n[Apri i workflow](https://github.com/${GITHUB_REPOSITORY}/actions) · [Apri l'app](https://marianocentonze11193-lang.github.io/calcio-intelligente/)"
+          gh issue create --title "$TITLE" --body "$BODY"
