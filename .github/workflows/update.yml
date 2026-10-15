@@ -6,6 +6,7 @@ on:
     paths:
       - "scripts/update_predictions.py"
       - "scripts/enrich_with_gemini.py"
+      - "scripts/archive_predictions.py"
       - "tests/**"
       - ".github/workflows/update.yml"
   schedule:
@@ -43,7 +44,8 @@ jobs:
           git reset --hard origin/main
           python scripts/update_predictions.py
           python scripts/enrich_with_gemini.py
-          git add data/predictions.json
+          python scripts/archive_predictions.py
+          git add data/predictions.json data/history.json
           if git diff --cached --quiet; then
             echo "Nessun cambiamento nei dati."
           else
