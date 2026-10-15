@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - "scripts/update_predictions.py"
+      - "scripts/enrich_with_gemini.py"
       - "tests/**"
       - ".github/workflows/update.yml"
   schedule:
