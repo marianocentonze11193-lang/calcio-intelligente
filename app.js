@@ -119,6 +119,32 @@ function renderMatches(matches) {
       : "";
 
     card.append(meta, teams, expected, grid, confidence);
+    if (match.odds_1x2) {
+      const odds = document.createElement("p");
+      odds.className = "match-meta";
+      const q = match.odds_1x2;
+      odds.textContent = "Migliori quote 1 / X / 2 disponibili: " +
+        (q.home ?? "—") + " / " + (q.draw ?? "—") + " / " + (q.away ?? "—") +
+        " · Fonte: The Odds API";
+      card.append(odds);
+      if (match.expected_value_1x2) {
+        const ev = match.expected_value_1x2;
+        const evNode = document.createElement("p");
+        evNode.className = "market-no-pick";
+        evNode.textContent = "Valore atteso teorico 1 / X / 2: " +
+          (ev.home * 100).toFixed(1) + "% / " + (ev.draw * 100).toFixed(1) + "% / " +
+          (ev.away * 100).toFixed(1) + "%. Stima basata sul modello, prima di considerare l'errore del modello.";
+        card.append(evNode);
+      }
+      if (Array.isArray(match.value_bets) && match.value_bets.length) {
+        const value = document.createElement("p");
+        value.className = "market-chip market-green";
+        value.textContent = "Candidati teorici EV ≥ 3%: " + match.value_bets.map(v =>
+          v.market + " @ " + v.best_odds + " (EV " + (v.expected_value * 100).toFixed(1) + "%)"
+        ).join(" · ");
+        card.append(value);
+      }
+    }
     if (match.analysis) {
       const analysis = document.createElement("p");
       analysis.className = "match-analysis";
