@@ -323,6 +323,7 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
         "probabilities": probabilities,
         "analysis": summary,
         "suggested_markets": suggested,
+        "value_bets": [],
         "top_scorelines": [
             {"score": f"{h}-{a}", "probability": percent(p)}
             for p, h, a in scorelines[:3]
