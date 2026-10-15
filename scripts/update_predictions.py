@@ -149,6 +149,31 @@ def fetch_espn_fixtures(league_code, today, last_date):
         cursor += timedelta(days=1)
     return fixtures
 
+def merge_fixture_sources(primary, secondary):
+    """Unisce calendari diversi senza duplicare gare per data e squadre normalizzate."""
+    merged = []
+    positions = {}
+    for item in list(primary or []) + list(secondary or []):
+        if len(item) < 4:
+            continue
+        home, away, match_date, kickoff = item
+        if not home or not away or not match_date:
+            continue
+        key = (match_date.isoformat(), team_key(home), team_key(away))
+        if not key[1] or not key[2] or key[1] == key[2]:
+            continue
+        if key in positions:
+            index = positions[key]
+            old_item = merged[index]
+            # Preferisce l'orario già disponibile; se manca, recupera quello dell'altra fonte.
+            if not old_item[3] and kickoff:
+                merged[index] = (old_item[0], old_item[1], old_item[2], kickoff)
+            continue
+        positions[key] = len(merged)
+        merged.append((home.strip(), away.strip(), match_date, (kickoff or "").strip()))
+    return merged
+
+
 def fetch_espn_historical_results(league_code, start_date, end_date):
     """Recupera risultati ESPN verificati giorno per giorno per le ultime tre settimane."""
     sport_code = ESPN_LEAGUES.get(league_code)
@@ -634,14 +659,21 @@ def main():
             if quote:
                 fixture_odds[(match_date.isoformat(), team_key(home), team_key(away))] = quote
 
-        # Se il CSV generale non ha partite future per questa lega, usa il calendario ESPN.
-        if not fixtures:
+        # ESPN integra anche calendari parziali: una sola partita CSV non significa
+        # che la copertura sia completa. Evita richieste aggiuntive quando il CSV ha
+        # già almeno due candidate; unisce le fonti usando data + nomi normalizzati.
+        if len(fixtures) < 2:
             alternate_fixtures = fetch_espn_fixtures(code, today, last_date)
-            for item in alternate_fixtures:
-                if item not in fixtures:
-                    fixtures.append(item)
+            before_merge = len(fixtures)
+            fixtures = merge_fixture_sources(fixtures, alternate_fixtures)
+            added = len(fixtures) - before_merge
             if alternate_fixtures:
-                print(f"{league_name}: calendario alternativo ESPN, {len(alternate_fixtures)} partite.")
+                print(
+                    f"{league_name}: calendario ESPN consultato ({len(alternate_fixtures)} gare); "
+                    f"{added} nuove candidate aggiunte, {len(fixtures)} totali."
+                )
+        else:
+            fixtures = merge_fixture_sources(fixtures, [])
         print(f"{league_name}: {len(completed)} risultati storici, {fixture_rows_for_league} partite future abbinate, {len(fixtures)} candidate totali.")
         if not completed:
             print(f"AVVISO: {league_name}: nessun risultato concluso disponibile; le partite alternative saranno mostrate come NO BET.")
