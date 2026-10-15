@@ -65,69 +65,58 @@ ESPN_TIMEZONES = {
 
 
 def fetch_espn_fixtures(league_code, today, last_date):
-    """Calendario ESPN: usa una richiesta per intervallo e ripiega sulle singole date se necessario."""
+    """Calendario ESPN per giorno: endpoint affidabile anche quando gli intervalli non funzionano."""
     sport_code = ESPN_LEAGUES.get(league_code)
     if not sport_code:
         return []
-
-    def request_payload(date_param):
+    fixtures = []
+    cursor = today
+    while cursor <= last_date:
+        date_param = f"{cursor:%Y%m%d}"
         url = (
             "https://site.api.espn.com/apis/site/v2/sports/soccer/"
             f"{sport_code}/scoreboard?dates={date_param}&limit=100"
         )
-        request = urllib.request.Request(url)
-        with urllib.request.urlopen(request, timeout=5) as response:
-            return json.loads(response.read().decode("utf-8"))
-
-    try:
-        payload = request_payload(f"{today:%Y%m%d}-{last_date:%Y%m%d}")
-    except (urllib.error.URLError, TimeoutError, OSError, ValueError) as error:
-        print(f"AVVISO: intervallo ESPN {league_code} non disponibile; provo le date singole: {error}")
-        payload = {"events": []}
-
-    # Alcune versioni dell'endpoint ESPN accettano l'intervallo ma restituiscono
-    # un elenco vuoto: in quel caso usa le singole date, con timeout breve.
-    if not payload.get("events"):
-        cursor = today
-        while cursor <= last_date:
-            try:
-                daily = request_payload(f"{cursor:%Y%m%d}")
-                payload["events"].extend(daily.get("events", []))
-            except (urllib.error.URLError, TimeoutError, OSError, ValueError) as error:
-                print(f"AVVISO: calendario ESPN {league_code} ({cursor:%Y%m%d}) non disponibile: {error}")
-            cursor += timedelta(days=1)
-
-    fixtures = []
-    for event in payload.get("events", []):
-        competitions = event.get("competitions") or []
-        if not competitions:
-            continue
-        competition = competitions[0]
-        status = (competition.get("status") or {}).get("type") or {}
-        if status.get("completed"):
-            continue
-        raw_date = event.get("date", "")
         try:
-            event_dt = datetime.fromisoformat(raw_date.replace("Z", "+00:00"))
-            local_dt = event_dt.astimezone(ZoneInfo(ESPN_TIMEZONES.get(league_code, "Europe/Rome")))
-            match_date = local_dt.date()
-        except (ValueError, TypeError):
-            match_date = parse_date(raw_date)
-            local_dt = None
-        if not match_date or not (today <= match_date <= last_date):
+            request = urllib.request.Request(url)
+            with urllib.request.urlopen(request, timeout=5) as response:
+                payload = json.loads(response.read().decode("utf-8"))
+        except (urllib.error.URLError, TimeoutError, OSError, ValueError) as error:
+            print(f"AVVISO: calendario ESPN {league_code} ({date_param}) non disponibile: {error}")
+            cursor += timedelta(days=1)
             continue
-        home = away = ""
-        for competitor in competition.get("competitors", []):
-            team = (competitor.get("team") or {}).get("displayName", "").strip()
-            if competitor.get("homeAway") == "home":
-                home = team
-            elif competitor.get("homeAway") == "away":
-                away = team
-        if home and away:
-            kickoff = local_dt.strftime("%H:%M") if local_dt else (raw_date[11:16] if "T" in raw_date else "")
-            item = (home, away, match_date, kickoff)
-            if item not in fixtures:
-                fixtures.append(item)
+
+        for event in payload.get("events", []):
+            competitions = event.get("competitions") or []
+            if not competitions:
+                continue
+            competition = competitions[0]
+            status = (competition.get("status") or {}).get("type") or {}
+            if status.get("completed"):
+                continue
+            raw_date = event.get("date", "")
+            try:
+                event_dt = datetime.fromisoformat(raw_date.replace("Z", "+00:00"))
+                local_dt = event_dt.astimezone(ZoneInfo(ESPN_TIMEZONES.get(league_code, "Europe/Rome")))
+                match_date = local_dt.date()
+            except (ValueError, TypeError):
+                match_date = parse_date(raw_date)
+                local_dt = None
+            if not match_date or not (today <= match_date <= last_date):
+                continue
+            home = away = ""
+            for competitor in competition.get("competitors", []):
+                team = (competitor.get("team") or {}).get("displayName", "").strip()
+                if competitor.get("homeAway") == "home":
+                    home = team
+                elif competitor.get("homeAway") == "away":
+                    away = team
+            if home and away:
+                kickoff = local_dt.strftime("%H:%M") if local_dt else (raw_date[11:16] if "T" in raw_date else "")
+                item = (home, away, match_date, kickoff)
+                if item not in fixtures:
+                    fixtures.append(item)
+        cursor += timedelta(days=1)
     return fixtures
 
 def team_key(value):
