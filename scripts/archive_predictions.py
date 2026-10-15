@@ -88,7 +88,7 @@ TEAM_ALIAS_GROUPS = [
     {"borussiadortmund", "dortmund"},
     {"borussiamonchengladbach", "monchengladbach", "gladbach"},
     {"rbLeipzig".lower(), "rasenballsportleipzig", "rbleipzig"},
-    {"parisfc", "paris"},
+    {"parisfc", "parisfootballclub"},
     {"olympiquedemarseille", "marseille"},
     {"olympiquelyonnais", "lyon"},
     {"realbetis", "betis"},
