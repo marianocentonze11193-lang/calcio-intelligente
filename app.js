@@ -153,7 +153,14 @@ function renderMatches(matches) {
     if (match.status === "NO BET") {
       const noBet = document.createElement("p");
       noBet.className = "no-bet";
-      noBet.textContent = "NO BET · " + (match.reason || "Dati insufficienti: nessun esito consigliato.");
+      const noBetLabels = {
+        dati_mancanti: "DATI MANCANTI",
+        campione_insufficiente: "CAMPIONE INSUFFICIENTE",
+        stima_non_affidabile: "STIMA NON AFFIDABILE"
+      };
+      const noBetLabel = noBetLabels[match.no_bet_type] || "CONTROLLO NON SUPERATO";
+      noBet.textContent = "NO BET · " + noBetLabel + " — " +
+        (match.reason || "Dati insufficienti: nessun esito consigliato.");
       card.append(meta, teams, noBet);
       appendAvailability(match, card);
       if (match.analysis) {
