@@ -168,7 +168,26 @@ def calculate_elo(completed, initial=1500.0, k_factor=22.0, home_advantage=55.0)
     return dict(ratings)
 
 
-def make_forecast(home, away, league, match_date, kickoff, history, league_home_avg, league_away_avg, elo_ratings=None):
+def calculate_recent_form(completed, limit=5):
+    """Ultime gare disponibili per squadra; i CSV sorgente sono letti in ordine temporale."""
+    recent = defaultdict(list)
+    for home, away, home_goals, away_goals in completed:
+        home_points = 3 if home_goals > away_goals else 1 if home_goals == away_goals else 0
+        away_points = 3 if away_goals > home_goals else 1 if home_goals == away_goals else 0
+        recent[home].append({"gf": home_goals, "ga": away_goals, "points": home_points})
+        recent[away].append({"gf": away_goals, "ga": home_goals, "points": away_points})
+    return {
+        team: {
+            "games": len(items[-limit:]),
+            "goals_for": sum(x["gf"] for x in items[-limit:]) / len(items[-limit:]),
+            "goals_against": sum(x["ga"] for x in items[-limit:]) / len(items[-limit:]),
+            "points_per_match": sum(x["points"] for x in items[-limit:]) / len(items[-limit:]),
+        }
+        for team, items in recent.items() if items
+    }
+
+
+def make_forecast(home, away, league, match_date, kickoff, history, league_home_avg, league_away_avg, elo_ratings=None, recent_form=None):
     hs, aws = history[home], history[away]
 
     def smooth(goals, games, prior):
@@ -188,6 +207,19 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
         elo_factor = math.exp(max(-250.0, min(250.0, rating_gap)) * math.log(1.15) / 400.0)
         expected_home = max(0.15, min(4.5, expected_home * elo_factor))
         expected_away = max(0.15, min(4.5, expected_away / elo_factor))
+    # Forma delle ultime cinque gare, con correzione volutamente moderata.
+    home_form = (recent_form or {}).get(home, {})
+    away_form = (recent_form or {}).get(away, {})
+    if home_form and away_form:
+        league_goal_avg = max(0.5, (league_home_avg + league_away_avg) / 2)
+        home_attack_form = home_form["goals_for"] / league_goal_avg
+        home_defence_form = away_form["goals_against"] / max(0.5, league_home_avg)
+        away_attack_form = away_form["goals_for"] / league_goal_avg
+        away_defence_form = home_form["goals_against"] / max(0.5, league_away_avg)
+        home_form_factor = max(0.82, min(1.18, math.sqrt(home_attack_form * home_defence_form)))
+        away_form_factor = max(0.82, min(1.18, math.sqrt(away_attack_form * away_defence_form)))
+        expected_home = max(0.15, min(4.5, expected_home * home_form_factor))
+        expected_away = max(0.15, min(4.5, expected_away * away_form_factor))
     hp, ap = poisson_probs(expected_home), poisson_probs(expected_away)
 
     home_win = draw = away_win = over15 = over25 = over35 = btts = 0.0
@@ -269,7 +301,9 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
         "confidence": "più solida" if sample >= 8 else "intermedia" if sample >= 5 else "bassa (campione ridotto)",
         "elo_home": round((elo_ratings or {}).get(home, 1500.0), 1),
         "elo_away": round((elo_ratings or {}).get(away, 1500.0), 1),
-        "method": "Poisson casa/trasferta + correzione Elo moderata + prior di lega; sperimentale non ancora validato",
+        "home_recent_form": (recent_form or {}).get(home),
+        "away_recent_form": (recent_form or {}).get(away),
+        "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
     }
 
 
@@ -379,6 +413,7 @@ def main():
             continue
 
         elo_ratings = calculate_elo(completed)
+        recent_form = calculate_recent_form(completed)
         history = defaultdict(lambda: {
             "played": 0, "home_games": 0, "away_games": 0,
             "home_scored": 0, "home_conceded": 0, "away_scored": 0, "away_conceded": 0,
@@ -400,7 +435,7 @@ def main():
         for home, away, match_date, kickoff in fixtures:
             home = normalized_history.get(team_key(home), home)
             away = normalized_history.get(team_key(away), away)
-            forecast = make_forecast(home, away, league_name, match_date, kickoff, history, league_home_avg, league_away_avg, elo_ratings)
+            forecast = make_forecast(home, away, league_name, match_date, kickoff, history, league_home_avg, league_away_avg, elo_ratings, recent_form)
             if forecast:
                 forecasts.append(forecast)
             else:
