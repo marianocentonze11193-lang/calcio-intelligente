@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-15T09:45:50+00:00",
+  "updated_at": "2026-10-15T09:51:20+00:00",
   "source": "https://www.football-data.co.uk",
   "season": "2627",
   "model": "Poisson semplice con filtro storico minimo; stime indicative, non garanzie",
@@ -33,7 +33,7 @@
         "home_scores": 82.6,
         "away_scores": 79.4
       },
-      "analysis": "Il modello Poisson evidenzia una situazione incerta tra Mansfield e Oxford con un campione di sole 4 partite. Trattandosi di stime sperimentali non validate, le probabilità vanno prese con cautela.",
+      "analysis": "Il modello Poisson non validato assegna il 42.2% di probabilità alla vittoria casalinga e il 35.0% a quella esterna, evidenziando una certa vicinanza tra i valori. Con un campione di appena 4 partite per parte, i dati attuali presentano forti limiti di incertezza.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -87,7 +87,7 @@
         "home_scores": 58.8,
         "away_scores": 85.1
       },
-      "analysis": "Le stime del modello Poisson per Heerenveen-Excelsior si basano su un campione limitato a 4 incontri per squadra. L'incertezza resta alta e le percentuali sono da considerare semplici indicazioni sperimentali.",
+      "analysis": "Le stime sperimentali indicano il 61.3% per la vittoria ospite, ma il campione si limita a sole 4 gare casalinghe e 4 esterne. Questa proiezione probabilistica richiede cautela a causa dei chiari limiti del campione e dell'assenza di validazione del modello.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -141,7 +141,7 @@
         "home_scores": 86.7,
         "away_scores": 85.0
       },
-      "analysis": "Con un campione di soli 3 match, le probabilità di Le Mans-Toulouse riflettono i limiti di un modello Poisson non validato. Le percentuali vicine per la vittoria evidenziano una forte incertezza.",
+      "analysis": "Il modello evidenzia una forte vicinanza tra la vittoria casalinga al 41.8% e quella esterna al 37.2%. Il campione di 3 partite per squadra è estremamente ridotto e riflette la natura sperimentale e non validata delle stime.",
       "suggested_markets": [
         "Over 1,5",
         "Goal"
@@ -196,7 +196,7 @@
         "home_scores": 84.1,
         "away_scores": 68.8
       },
-      "analysis": "Il campione di 3 gare rende le stime per Frosinone-Sassuolo puramente sperimentali e soggette a incertezza. Il modello Poisson non ancora validato mostra comunque un certo equilibrio nelle quote di probabilità.",
+      "analysis": "Il modello non validato stima la vittoria di casa al 53.2% e il pareggio al 22.8%. Si tratta di stime sperimentali basate su un campione di sole 3 partite, pertanto l'incertezza statistica resta elevata.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -250,7 +250,7 @@
         "home_scores": 86.5,
         "away_scores": 63.2
       },
-      "analysis": "Le probabilità per Everton-Chelsea derivano da un campione ridotto di 3 partite per lato. Trattandosi di stime di un modello Poisson non validato, i margini di errore e l'incertezza sono elevati.",
+      "analysis": "Le probabilità assegnano il 60.7% alla vittoria della squadra di casa, derivanti da un campione limitato a 3 partite. Interpretare questi valori come stime sperimentali di un modello Poisson non validato impone grande prudenza.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -304,7 +304,7 @@
         "home_scores": 64.3,
         "away_scores": 89.5
       },
-      "analysis": "Il modello Poisson mostra stime basate su un campione limitato a 3 partite per Venezia e Napoli. Questa analisi sperimentale non validata presenta margini di incertezza intrinseci da non sottovalutare.",
+      "analysis": "Il modello Poisson assegna il 65.0% di probabilità alla vittoria in trasferta, con un campione di sole 3 gare per entrambe le squadre. La limitatezza dei dati evidenzia l'incertezza intrinseca di queste stime sperimentali non validate.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -358,7 +358,7 @@
         "home_scores": 82.3,
         "away_scores": 86.2
       },
-      "analysis": "Le percentuali vicine tra Genclerbirligi e Galatasaray evidenziano l'incertezza di queste stime sperimentali. Il campione ridotto e la natura non validata del modello Poisson impongono molta prudenza.",
+      "analysis": "Le probabilità del modello mostrano una vicinanza tra la vittoria ospite al 44.3% e quella casalinga al 34.3%. Il campione ridotto a 4 partite interne e 3 esterne evidenzia i limiti di queste stime sperimentali non validate.",
       "suggested_markets": [
         "Over 1,5",
         "Goal"
@@ -413,7 +413,7 @@
         "home_scores": 62.3,
         "away_scores": 68.7
       },
-      "analysis": "Le probabilità vicine per Bristol City e Sheffield United mostrano una situazione molto incerta. Il campione di 5 partite e il modello Poisson non validato richiedono un'interpretazione estremamente prudente.",
+      "analysis": "Il modello segnala una forte vicinanza tra la vittoria esterna al 40.0%, quella casalinga al 30.5% e il pareggio al 29.5%. Basandosi su un campione di 5 partite, le stime restano sperimentali e non validate.",
       "suggested_markets": [],
       "top_scorelines": [
         {
@@ -465,7 +465,7 @@
         "home_scores": 64.2,
         "away_scores": 51.0
       },
-      "analysis": "Il modello Poisson fornisce stime sperimentali basate su un campione ristretto per Port Vale e Chesterfield. L'incertezza legata a dati non validati impone grande cautela nell'interpretare i valori.",
+      "analysis": "Le stime sperimentali indicano il 42.1% per la vittoria di casa e il 33.0% per il pareggio, evidenziando una certa vicinanza. Il campione limitato a 4 e 5 partite sottolinea l'incertezza di questo modello Poisson non validato.",
       "suggested_markets": [],
       "top_scorelines": [
         {
@@ -517,7 +517,7 @@
         "home_scores": 75.2,
         "away_scores": 60.8
       },
-      "analysis": "Con un campione di sole 3 partite, le stime per Brentford-Liverpool rimangono puramente sperimentali. Interpretiamo le probabilità del modello Poisson non validato con la dovuta incertezza.",
+      "analysis": "Il modello non validato stima la vittoria casalinga al 47.5% e il pareggio al 27.2%. Trattandosi di stime sperimentali basate su un campione di 3 partite, i limiti dei dati richiedono prudenza.",
       "suggested_markets": [],
       "top_scorelines": [
         {
@@ -569,7 +569,7 @@
         "home_scores": 60.0,
         "away_scores": 52.7
       },
-      "analysis": "Le probabilità molto vicine tra Aberdeen e St Mirren riflettono l'incertezza di questo incontro. Il campione limitato a 4 partite e il modello Poisson non validato richiedono prudenza.",
+      "analysis": "Le probabilità mostrano una spiccata vicinanza tra la vittoria di casa al 37.5%, il pareggio al 34.3% e la vittoria ospite al 28.1%. Il campione di 4 partite per parte evidenzia i limiti di questo modello Poisson non validato.",
       "suggested_markets": [],
       "top_scorelines": [
         {
@@ -621,7 +621,7 @@
         "home_scores": 57.4,
         "away_scores": 69.3
       },
-      "analysis": "Il modello Poisson offre stime sperimentali basate su un campione di 4 gare per Hibernian e Falkirk. Data la natura non validata del modello, l'incertezza statistica resta elevata.",
+      "analysis": "Il modello assegna il 43.4% alla vittoria esterna e il 30.0% al pareggio, evidenziando una vicinanza di valori. Il campione di 4 partite per squadra riflette la natura sperimentale e non validata delle stime.",
       "suggested_markets": [],
       "top_scorelines": [
         {
@@ -673,7 +673,7 @@
         "home_scores": 63.5,
         "away_scores": 90.1
       },
-      "analysis": "Le stime per Kilmarnock-Motherwell derivano da un campione ridotto di 4 partite per parte. Trattandosi di un modello Poisson non validato, le percentuali vanno considerate con cautela e incertezza.",
+      "analysis": "Le stime sperimentali indicano il 66.5% per la vittoria della squadra in trasferta. Questo modello Poisson non validato si basa su un campione di sole 4 partite, evidenziando forti limiti nei dati.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -727,7 +727,7 @@
         "home_scores": 84.8,
         "away_scores": 81.5
       },
-      "analysis": "Il campione di 4 partite per St Johnstone e Dundee United evidenzia i limiti di queste stime. Le probabilità vicine mostrano incertezza in un modello Poisson non ancora validato.",
+      "analysis": "Il modello evidenzia una vicinanza tra la vittoria casalinga al 43.0% e quella esterna al 35.1%. Il campione di 4 partite per squadra sottolinea l'incertezza di queste stime sperimentali non validate.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -781,7 +781,7 @@
         "home_scores": 82.1,
         "away_scores": 86.0
       },
-      "analysis": "Le percentuali vicine per Villarreal e Elche indicano una gara incerta secondo il modello. Il campione ridotto e l'assenza di validazione impongono di trattare queste stime con estrema prudenza.",
+      "analysis": "Le probabilità mostrano una vicinanza tra la vittoria ospite al 44.1% e quella casalinga al 34.4%. Con un campione di 3 e 4 partite, le stime del modello Poisson non validato presentano evidenti limiti.",
       "suggested_markets": [
         "Over 1,5",
         "Goal"
@@ -836,7 +836,7 @@
         "home_scores": 90.2,
         "away_scores": 72.4
       },
-      "analysis": "Il modello Poisson calcola queste probabilità su un campione ristretto di 3 e 4 partite. Trattandosi di stime sperimentali non validate, i margini di incertezza restano significativi.",
+      "analysis": "Il modello stima la vittoria casalinga al 60.4% basandosi su un campione ristretto di 3 e 4 partite. Trattandosi di stime sperimentali non validate, l'incertezza complessiva del campione resta elevata.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -890,7 +890,7 @@
         "home_scores": 81.1,
         "away_scores": 67.3
       },
-      "analysis": "Le stime per Lille-Brest si basano su un campione di sole 3 partite per squadra. L'incertezza è intrinseca in questo modello Poisson sperimentale e non ancora validato.",
+      "analysis": "Le probabilità indicano il 50.2% per la vittoria di casa, con il pareggio e la vittoria ospite vicini rispettivamente al 24.3% e 25.5%. Il campione di 3 partite evidenzia i limiti di questo modello Poisson non validato.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -944,7 +944,7 @@
         "home_scores": 72.3,
         "away_scores": 86.8
       },
-      "analysis": "Il campione limitato a 3 partite rende le percentuali di Troyes-Lens puramente sperimentali. Il modello Poisson non validato evidenzia limiti strutturali e margini di incertezza.",
+      "analysis": "Il modello assegna il 54.6% alla vittoria esterna, interpretando i dati come stime sperimentali. Il campione di sole 3 partite per parte impone cautela a causa della mancata validazione del modello.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -998,7 +998,7 @@
         "home_scores": 88.8,
         "away_scores": 80.4
       },
-      "analysis": "Con un campione di 4 partite, le probabilità per Sparta Rotterdam e Willem II sono stime preliminari. La natura non validata del modello Poisson richiede un approccio prudente.",
+      "analysis": "Le stime sperimentali indicano il 50.7% per la vittoria casalinga e il 28.8% per quella ospite. Il campione di 4 partite per squadra riflette la natura non validata e i limiti di questo modello Poisson.",
       "suggested_markets": [
         "Over 1,5",
         "Goal"
@@ -1053,7 +1053,7 @@
         "home_scores": 60.0,
         "away_scores": 66.8
       },
-      "analysis": "Le probabilità vicine tra Dundee e Rangers mostrano un quadro di forte incertezza. Il campione di 4 partite e il modello Poisson non validato impongono massima cautela nell'analisi.",
+      "analysis": "Il modello mostra una forte vicinanza tra la vittoria ospite al 39.6%, il pareggio al 30.5% e la vittoria di casa al 29.9%. Con un campione di 4 partite, le stime sperimentali mantengono un elevato grado di incertezza.",
       "suggested_markets": [],
       "top_scorelines": [
         {
@@ -1105,7 +1105,7 @@
         "home_scores": 64.3,
         "away_scores": 63.1
       },
-      "analysis": "Le percentuali vicine per Udinese e Lecce riflettono l'equilibrio e l'incertezza del match. Le stime derivano da un campione ridotto di 3 partite e da un modello Poisson non validato.",
+      "analysis": "Le probabilità mostrano una netta vicinanza tra la vittoria di casa al 35.6%, il pareggio al 30.6% e la vittoria ospite al 33.9%. Il campione di 3 partite evidenzia i limiti intrinseci di questo modello Poisson non validato.",
       "suggested_markets": [],
       "top_scorelines": [
         {
@@ -1157,7 +1157,7 @@
         "home_scores": 60.6,
         "away_scores": 58.0
       },
-      "analysis": "Il campione di sole 3 partite limita l'affidabilità delle stime per Kasimpasa e Samsunspor. Le probabilità vicine evidenziano l'incertezza intrinseca di questo modello Poisson non validato.",
+      "analysis": "Il modello indica una forte vicinanza tra tutti i segni principali, con la vittoria casalinga al 35.3%, il pareggio al 32.9% e la vittoria esterna al 31.8%. Le stime sperimentali si basano su un campione di sole 3 partite.",
       "suggested_markets": [],
       "top_scorelines": [
         {
@@ -1209,7 +1209,7 @@
         "home_scores": 65.6,
         "away_scores": 62.8
       },
-      "analysis": "Le stime per Angers-Marseille mostrano percentuali molto vicine e un alto grado di incertezza. Il campione di 3 partite richiede di considerare i dati come un esperimento Poisson non validato.",
+      "analysis": "Le probabilità evidenziano una stretta vicinanza tra la vittoria casalinga al 36.8%, il pareggio al 30.3% e la vittoria ospite al 32.8%. Trattandosi di un campione di 3 partite, le stime sperimentali non validate presentano grandi limiti.",
       "suggested_markets": [],
       "top_scorelines": [
         {
@@ -1261,7 +1261,7 @@
         "home_scores": 62.7,
         "away_scores": 86.1
       },
-      "analysis": "Il modello Poisson restituisce stime basate su un campione limitato di 3 e 4 partite. La natura sperimentale e non validata del modello comporta notevoli margini di incertezza.",
+      "analysis": "Il modello stima la vittoria esterna al 60.3% sfruttando un campione limitato a 3 e 4 partite. L'assenza di validazione e la ridotta dimensione campionaria rendono queste percentuali puramente sperimentali.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1315,7 +1315,7 @@
         "home_scores": 62.4,
         "away_scores": 60.7
       },
-      "analysis": "Le probabilità vicine tra Juventus e Lazio evidenziano una situazione di grande equilibrio e incertezza. Il campione di 3 partite e l'assenza di validazione impongono prudenza.",
+      "analysis": "Le stime sperimentali mostrano una marcata vicinanza tra la vittoria di casa al 35.3%, il pareggio al 31.7% e la vittoria ospite al 33.0%. Il campione limitato a 3 partite evidenzia l'incertezza di questo modello Poisson.",
       "suggested_markets": [],
       "top_scorelines": [
         {
@@ -1367,7 +1367,7 @@
         "home_scores": 88.7,
         "away_scores": 66.8
       },
-      "analysis": "Il campione limitato a 4 partite per Real Madrid e Sevilla rende le stime puramente sperimentali. L'incertezza del modello Poisson non validato richiede di interpretare i dati con cautela.",
+      "analysis": "Il modello assegna il 61.9% alla vittoria casalinga sulla base di un campione di 4 partite per squadra. Questa stima sperimentale non validata deve essere interpretata considerando i limiti del campione.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1421,7 +1421,7 @@
         "home_scores": 93.1,
         "away_scores": 56.2
       },
-      "analysis": "Le stime per Trabzonspor-Besiktas si fondano su un campione ridotto di 3 partite. Trattandosi di un modello Poisson non validato, le percentuali vanno prese con la dovuta prudenza.",
+      "analysis": "Le probabilità indicano il 76.5% per la vittoria di casa secondo il modello Poisson. Il campione limitato a 3 partite evidenzia la natura sperimentale e non validata di questa stima.",
       "suggested_markets": [
         "Over 1,5",
         "1"
@@ -1476,7 +1476,7 @@
         "home_scores": 69.5,
         "away_scores": 68.8
       },
-      "analysis": "Le probabilità vicine tra Parma e Torino mostrano una previsione altamente incerta. Il campione di 3 partite e il modello Poisson non validato richiedono un'interpretazione molto prudente.",
+      "analysis": "Il modello evidenzia una forte vicinanza tra la vittoria casalinga al 36.5%, quella esterna al 35.5% e il pareggio al 28.0%. Le stime sperimentali si basano su un campione di sole 3 partite per parte.",
       "suggested_markets": [],
       "top_scorelines": [
         {
@@ -1528,7 +1528,7 @@
         "home_scores": 79.1,
         "away_scores": 39.3
       },
-      "analysis": "Il modello Poisson fornisce stime sperimentali basate su un campione di 4 e 5 partite. La mancanza di validazione e i limiti del campione ricordano di mantenere un profilo prudente.",
+      "analysis": "Le stime sperimentali indicano il 63.7% per la vittoria della squadra di casa. Il modello Poisson non validato si basa su un campione di 5 e 4 partite, evidenziando i limiti informativi dei dati.",
       "suggested_markets": [],
       "top_scorelines": [
         {
