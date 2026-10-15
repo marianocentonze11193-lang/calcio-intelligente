@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-15T11:03:16+00:00",
+  "updated_at": "2026-10-15T11:08:43+00:00",
   "source": "https://www.football-data.co.uk",
   "season": "2627",
   "model": "Poisson casa/trasferta con prior di lega e correzione Elo; stime sperimentali, non garanzie",
@@ -34,7 +34,7 @@
         "home_scores": 89.3,
         "away_scores": 89.0
       },
-      "analysis": "Le stime sperimentali di questo modello Poisson non validato mostrano probabilità molto vicine tra vittoria casalinga e ospite. Dato il campione limitato, l'incertezza resta elevata.",
+      "analysis": "Le stime sperimentali di questo modello Poisson non validato indicano percentuali vicine per la vittoria delle due squadre, evidenziando una notevole incertezza. Il campione di riferimento molto limitato impone estrema prudenza nell'interpretazione dei dati.",
       "suggested_markets": [
         "Over 1,5",
         "Goal"
@@ -76,8 +76,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       },
       "analysis_provider": "Gemini"
     },
@@ -109,7 +112,7 @@
         "home_scores": 80.3,
         "away_scores": 67.6
       },
-      "analysis": "Il modello Poisson non ancora validato evidenzia un certo equilibrio nelle stime. Si tratta di indicazioni preliminari basate su un campione ridotto e caratterizzate da forte incertezza.",
+      "analysis": "Questo modello Poisson non validato mostra probabilità piuttosto vicine tra i diversi esiti, riflettendo una marcata incertezza di fondo. Si tratta di stime sperimentali basate su un campione limitato, da prendere con molta cautela.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -145,8 +148,11 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       },
       "analysis_provider": "Gemini"
     },
@@ -178,7 +184,7 @@
         "home_scores": 78.6,
         "away_scores": 64.1
       },
-      "analysis": "Le percentuali del modello non validato delineano uno scenario incerto con probabilità vicine per esiti diversi. L'esiguità del campione impone estrema prudenza nell'interpretazione.",
+      "analysis": "Le probabilità di questo modello Poisson non validato evidenziano uno scenario incerto con percentuali vicine tra i contendenti. I limiti evidenti del campione ridotto richiedono un'interpretazione estremamente prudente.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -219,8 +225,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       },
       "analysis_provider": "Gemini"
     },
@@ -252,7 +261,7 @@
         "home_scores": 65.4,
         "away_scores": 90.6
       },
-      "analysis": "Le stime sperimentali di questo modello Poisson non validato assegnano un vantaggio alla trasferta. I limiti del campione e l'incertezza intrinseca richiedono molta cautela.",
+      "analysis": "Le stime sperimentali di questo modello Poisson non validato offrono una lettura probabilistica basata su un campione ristretto e non definitivo. L'incertezza intrinseca di questi dati suggerisce un approccio molto prudente.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -293,8 +302,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       },
       "analysis_provider": "Gemini"
     },
@@ -326,7 +338,7 @@
         "home_scores": 64.9,
         "away_scores": 59.9
       },
-      "analysis": "Questo modello Poisson non validato mostra probabilità estremamente vicine tra i vari segni. A causa del campione ridotto, l'incertezza delle stime sperimentali è particolarmente alta.",
+      "analysis": "Questo modello Poisson non validato presenta probabilità molto vicine per i vari esiti, segnalando un quadro di forte incertezza. Il campione limitato rende queste stime sperimentali puramente indicative.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -365,8 +377,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       },
       "analysis_provider": "Gemini"
     },
@@ -398,7 +413,7 @@
         "home_scores": 78.3,
         "away_scores": 71.8
       },
-      "analysis": "Le proiezioni di questo modello Poisson non ancora validato presentano margini ristretti tra le squadre. Considerando il campione limitato, le stime vanno prese con molta cautela.",
+      "analysis": "Le percentuali elaborate da questo modello Poisson non validato mostrano margini ravvicinati e una notevole incertezza. Data la natura sperimentale e i limiti del campione, le stime vanno considerate con molta prudenza.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -434,8 +449,11 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       },
       "analysis_provider": "Gemini"
     },
@@ -467,7 +485,7 @@
         "home_scores": 81.9,
         "away_scores": 53.6
       },
-      "analysis": "Il modello Poisson non validato indica una tendenza per la squadra di casa secondo le stime sperimentali. Il campione ridotto e l'incertezza complessiva impongono un giudizio prudente.",
+      "analysis": "Le stime sperimentali di questo modello Poisson non validato risentono dei limiti di un campione esiguo. È necessario interpretare tali probabilità con grande cautela a causa dell'incertezza intrinseca.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -503,8 +521,11 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       },
       "analysis_provider": "Gemini"
     },
@@ -536,7 +557,7 @@
         "home_scores": 91.3,
         "away_scores": 36.7
       },
-      "analysis": "Le stime sperimentali di questo modello Poisson non ancora validato offrono una lettura sbilanciata. L'incertezza e i limiti del campione suggeriscono comunque grande prudenza.",
+      "analysis": "Questo modello Poisson non validato fornisce stime sperimentali basate su un campione limitato e non ancora validato. L'incertezza rimane un fattore chiave da considerare prima di trarre conclusioni.",
       "suggested_markets": [
         "Over 1,5",
         "1"
@@ -578,8 +599,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       },
       "analysis_provider": "Gemini"
     },
@@ -611,7 +635,7 @@
         "home_scores": 63.5,
         "away_scores": 81.2
       },
-      "analysis": "Questo modello Poisson non validato evidenzia stime orientate verso gli ospiti. Si tratta di dati sperimentali basati su un campione limitato, perciò l'incertezza resta notevole.",
+      "analysis": "Le probabilità di questo modello Poisson non validato evidenziano stime sperimentali soggette ai limiti di un campione ridotto. Tale incertezza richiede prudenza nella lettura dei dati.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -652,8 +676,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       },
       "analysis_provider": "Gemini"
     },
@@ -685,7 +712,7 @@
         "home_scores": 93.1,
         "away_scores": 76.5
       },
-      "analysis": "Le proiezioni del modello Poisson non ancora validato favoriscono i padroni di casa. La limitatezza del campione e l'incertezza intrinseca richiedono grande prudenza.",
+      "analysis": "Questo modello Poisson non validato restituisce stime sperimentali basate su un campione molto limitato. La natura non validata del modello impone una grande cautela nell'analisi.",
       "suggested_markets": [
         "Over 1,5",
         "Goal"
@@ -722,8 +749,11 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       },
       "analysis_provider": "Gemini"
     },
@@ -755,7 +785,7 @@
         "home_scores": 96.6,
         "away_scores": 51.2
       },
-      "analysis": "Il modello Poisson non validato assegna un ampio margine alla squadra di casa. Data l'esiguità del campione, le stime sperimentali mantengono un elevato grado di incertezza.",
+      "analysis": "Le stime sperimentali di questo modello Poisson non validato derivano da un campione ridotto e necessitano di cautela. L'incertezza strutturale dei dati non permette valutazioni definitive.",
       "suggested_markets": [
         "Over 1,5",
         "1"
@@ -797,8 +827,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       },
       "analysis_provider": "Gemini"
     },
@@ -830,7 +863,7 @@
         "home_scores": 88.9,
         "away_scores": 61.6
       },
-      "analysis": "Le stime sperimentali di questo modello Poisson non ancora validato mostrano un favore per i padroni di casa. I limiti del campione impongono di considerare il dato con cautela.",
+      "analysis": "Questo modello Poisson non validato produce stime sperimentali influenzate da un campione molto limitato. È opportuno mantenere un profilo prudente di fronte a tali dati.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -866,8 +899,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       },
       "analysis_provider": "Gemini"
     },
@@ -899,7 +935,7 @@
         "home_scores": 72.8,
         "away_scores": 73.2
       },
-      "analysis": "Le probabilità calcolate da questo modello Poisson non validato sono estremamente vicine tra i due sfidanti. A causa del campione ridotto, l'incertezza analitica è molto elevata.",
+      "analysis": "Le percentuali di questo modello Poisson non validato evidenziano probabilità vicine e una forte incertezza di fondo. Il campione ridotto richiede un'interpretazione estremamente cauta.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -935,8 +971,11 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       },
       "analysis_provider": "Gemini"
     },
@@ -968,7 +1007,7 @@
         "home_scores": 80.8,
         "away_scores": 69.2
       },
-      "analysis": "Questo modello Poisson non ancora validato restituisce stime vicine tra i diversi esiti possibili. L'esiguità del campione evidenzia i limiti di queste indicazioni preliminari.",
+      "analysis": "Questo modello Poisson non validato presenta probabilità vicine tra i diversi esiti, segnalando un quadro incerto. Le stime sperimentali risentono dei limiti di un campione ristretto.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1009,8 +1048,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       },
       "analysis_provider": "Gemini"
     },
@@ -1042,7 +1084,7 @@
         "home_scores": 83.9,
         "away_scores": 67.9
       },
-      "analysis": "Le stime sperimentali del modello Poisson non validato mostrano margini ristretti. Il campione limitato e l'incertezza impongono di interpretare i dati con molta prudenza.",
+      "analysis": "Le stime sperimentali di questo modello Poisson non validato si basano su un campione limitato e non validato. L'incertezza dei dati suggerisce di procedere con molta prudenza.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1078,8 +1120,11 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       },
       "analysis_provider": "Gemini"
     },
@@ -1111,7 +1156,7 @@
         "home_scores": 90.7,
         "away_scores": 54.9
       },
-      "analysis": "Il modello Poisson non ancora validato evidenzia una stima favorevole alla formazione di casa. Trattandosi di dati sperimentali su campione ridotto, l'incertezza resta alta.",
+      "analysis": "Questo modello Poisson non validato fornisce dati probabilistici derivati da un campione esiguo. Tali stime sperimentali vanno interpretate con la dovuta cautela.",
       "suggested_markets": [
         "Over 1,5",
         "1"
@@ -1148,8 +1193,11 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       },
       "analysis_provider": "Gemini"
     },
@@ -1181,7 +1229,7 @@
         "home_scores": 84.6,
         "away_scores": 47.2
       },
-      "analysis": "Le proiezioni di questo modello Poisson non validato indicano una prevalenza per i padroni di casa. I limiti del campione suggeriscono di mantenere un approccio molto prudente.",
+      "analysis": "Le probabilità calcolate da questo modello Poisson non validato riflettono i limiti strutturali di un campione ridotto. La natura sperimentale delle stime impone un giudizio prudente.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1222,8 +1270,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       },
       "analysis_provider": "Gemini"
     },
@@ -1255,7 +1306,7 @@
         "home_scores": 76.3,
         "away_scores": 62.9
       },
-      "analysis": "Questo modello Poisson non ancora validato mostra probabilità piuttosto vicine tra le contendenti. L'incertezza rimane marcata a causa della ristrettezza del campione.",
+      "analysis": "Questo modello Poisson non validato mostra percentuali vicine e una notevole incertezza tra i possibili esiti. Le stime sperimentali, basate su un campione limitato, richiedono prudenza.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1294,8 +1345,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       },
       "analysis_provider": "Gemini"
     },
@@ -1327,7 +1381,7 @@
         "home_scores": 88.4,
         "away_scores": 66.1
       },
-      "analysis": "Le stime sperimentali di questo modello Poisson non validato delineano un certo divario a favore dei padroni di casa. Il campione limitato richiede tuttavia grande cautela.",
+      "analysis": "Le stime sperimentali di questo modello Poisson non validato derivano da un campione ristretto. Tale incertezza invita a una lettura estremamente prudente dei dati.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1368,8 +1422,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       },
       "analysis_provider": "Gemini"
     },
@@ -1401,7 +1458,7 @@
         "home_scores": 71.0,
         "away_scores": 52.9
       },
-      "analysis": "Il modello Poisson non ancora validato presenta stime sperimentali con margini non distanti tra loro. L'incertezza è elevata a causa dei limiti del campione disponibile.",
+      "analysis": "Questo modello Poisson non validato presenta probabilità vicine tra loro, evidenziando una significativa incertezza. Il campione limitato richiede cautela nell'interpretazione.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1440,8 +1497,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       },
       "analysis_provider": "Gemini"
     },
@@ -1473,7 +1533,7 @@
         "home_scores": 80.7,
         "away_scores": 83.9
       },
-      "analysis": "Le probabilità generate da questo modello Poisson non validato evidenziano una situazione di sostanziale vicinanza. Il campione ridotto impone un'interpretazione molto prudente.",
+      "analysis": "Le percentuali di questo modello Poisson non validato mostrano esiti vicini e un quadro di marcata incertezza. I limiti del campione impongono molta prudenza.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1509,8 +1569,11 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       },
       "analysis_provider": "Gemini"
     },
@@ -1542,7 +1605,7 @@
         "home_scores": 84.3,
         "away_scores": 68.0
       },
-      "analysis": "Questo modello Poisson non ancora validato mostra una stima orientata verso la squadra di casa. L'incertezza e la limitatezza del campione suggeriscono molta circospezione.",
+      "analysis": "Questo modello Poisson non validato fornisce stime sperimentali basate su un campione limitato e non definitivo. L'incertezza intrinseca richiede un approccio molto prudente.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1578,8 +1641,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       },
       "analysis_provider": "Gemini"
     },
@@ -1611,7 +1677,7 @@
         "home_scores": 88.9,
         "away_scores": 76.8
       },
-      "analysis": "Le stime sperimentali di questo modello Poisson non validato indicano un vantaggio casalingo. I limiti del campione e l'incertezza intrinseca richiedono comunque prudenza.",
+      "analysis": "Le stime sperimentali di questo modello Poisson non validato risentono di un campione di riferimento esiguo. È necessario valutare questi dati con la massima cautela.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1647,8 +1713,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       },
       "analysis_provider": "Gemini"
     },
@@ -1680,7 +1749,7 @@
         "home_scores": 77.8,
         "away_scores": 68.1
       },
-      "analysis": "Il modello Poisson non ancora validato restituisce probabilità vicine tra i vari esiti. Data la ristrettezza del campione, le stime vanno prese con estrema cautela.",
+      "analysis": "Questo modello Poisson non validato evidenzia probabilità vicine e un alto grado di incertezza. La natura sperimentale delle stime impone un profilo prudente.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1716,8 +1785,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       },
       "analysis_provider": "Gemini"
     },
@@ -1749,7 +1821,7 @@
         "home_scores": 73.1,
         "away_scores": 68.7
       },
-      "analysis": "Le proiezioni di questo modello Poisson non validato mostrano percentuali vicine e competitive. L'incertezza del campione limitato richiede un'analisi molto prudente.",
+      "analysis": "Le percentuali di questo modello Poisson non validato mostrano esiti molto vicini tra loro. I limiti del campione ridotto richiedono un'interpretazione estremamente prudente.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1785,8 +1857,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       },
       "analysis_provider": "Gemini"
     },
@@ -1818,7 +1893,7 @@
         "home_scores": 88.2,
         "away_scores": 70.5
       },
-      "analysis": "Le stime sperimentali di questo modello Poisson non ancora validato assegnano un vantaggio ai padroni di casa. I limiti del campione e l'incertezza impongono molta cautela.",
+      "analysis": "Questo modello Poisson non validato presenta stime sperimentali basate su un campione limitato. L'incertezza dei dati suggerisce di procedere con la dovuta cautela.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1859,8 +1934,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       },
       "analysis_provider": "Gemini"
     },
@@ -1892,7 +1970,7 @@
         "home_scores": 56.8,
         "away_scores": 93.2
       },
-      "analysis": "Il modello Poisson non validato evidenzia una probabilità marcata per la squadra ospite. Trattandosi di stime sperimentali su campione ridotto, l'incertezza resta da considerare.",
+      "analysis": "Le stime sperimentali di questo modello Poisson non validato derivano da un campione ristretto e non validato. Tale incertezza strutturale impone un'analisi molto prudente.",
       "suggested_markets": [
         "Over 1,5",
         "2"
@@ -1934,8 +2012,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       },
       "analysis_provider": "Gemini"
     },
@@ -1967,7 +2048,7 @@
         "home_scores": 72.4,
         "away_scores": 73.0
       },
-      "analysis": "Le percentuali di questo modello Poisson non ancora validato sono estremamente vicine tra i due sfidanti. L'esiguità del campione sottolinea l'elevata incertezza delle stime.",
+      "analysis": "Questo modello Poisson non validato evidenzia percentuali vicine e una forte incertezza tra i contendenti. Il campione limitato richiede un'interpretazione particolarmente cauta.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -2003,8 +2084,11 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       },
       "analysis_provider": "Gemini"
     },
@@ -2036,7 +2120,7 @@
         "home_scores": 79.3,
         "away_scores": 61.8
       },
-      "analysis": "Le stime sperimentali del modello Poisson non validato indicano una preferenza per la formazione di casa. Il campione limitato richiede di interpretare il dato con prudenza.",
+      "analysis": "Le probabilità elaborate da questo modello Poisson non validato riflettono i limiti di un campione esiguo. Tali stime sperimentali vanno considerate con molta prudenza.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -2072,8 +2156,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       },
       "analysis_provider": "Gemini"
     },
@@ -2105,7 +2192,7 @@
         "home_scores": 70.9,
         "away_scores": 62.9
       },
-      "analysis": "Questo modello Poisson non ancora validato presenta probabilità vicine tra i vari segni. L'incertezza complessiva e i limiti del campione suggeriscono un approccio molto cauto.",
+      "analysis": "Questo modello Poisson non validato mostra percentuali vicine tra i vari esiti, segnalando un quadro incerto. Le stime sperimentali, basate su un campione limitato, richiedono prudenza.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -2144,8 +2231,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       },
       "analysis_provider": "Gemini"
     },
@@ -2219,8 +2309,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -2287,8 +2380,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -2358,8 +2454,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -2431,8 +2530,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -2502,8 +2604,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -2575,8 +2680,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -2644,8 +2752,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -2712,8 +2823,11 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -2785,8 +2899,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -2854,8 +2971,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -2922,8 +3042,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -2988,8 +3111,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -3059,8 +3185,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -3130,8 +3259,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -3203,8 +3335,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -3276,8 +3411,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -3347,8 +3485,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -3413,8 +3554,11 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -3479,8 +3623,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -3553,8 +3700,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -3622,8 +3772,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -3690,8 +3843,11 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -3756,8 +3912,11 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -3822,8 +3981,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -3890,8 +4052,11 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -3963,8 +4128,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -4029,8 +4197,11 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -4098,8 +4269,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -4166,8 +4340,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -4239,8 +4416,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -4312,8 +4492,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -4383,8 +4566,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -4449,8 +4635,11 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -4523,8 +4712,11 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     }
   ],
@@ -4556,8 +4748,11 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -4587,8 +4782,11 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -4618,8 +4816,11 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -4649,8 +4850,11 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -4680,8 +4884,11 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -4711,8 +4918,11 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -4742,8 +4952,11 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -4773,8 +4986,11 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -4804,8 +5020,11 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -4835,8 +5054,11 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -4866,8 +5088,11 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -4897,8 +5122,11 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -4928,8 +5156,11 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -4959,8 +5190,11 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -4990,8 +5224,11 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     },
     {
@@ -5021,8 +5258,11 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_integrata",
-        "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        "status": "non_configurata",
+        "source": "API-Football",
+        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "injuries": [],
+        "lineups": null
       }
     }
   ],
