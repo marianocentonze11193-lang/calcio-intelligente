@@ -49,8 +49,19 @@ function renderMatches(matches) {
       ["1", match.probabilities && match.probabilities.home_win],
       ["X", match.probabilities && match.probabilities.draw],
       ["2", match.probabilities && match.probabilities.away_win],
+      ["1X", match.probabilities && match.probabilities.double_chance_1x],
+      ["X2", match.probabilities && match.probabilities.double_chance_x2],
+      ["12", match.probabilities && match.probabilities.double_chance_12],
+      ["Over 1,5", match.probabilities && match.probabilities.over_1_5],
       ["Over 2,5", match.probabilities && match.probabilities.over_2_5],
-      ["Goal", match.probabilities && match.probabilities.btts_yes]
+      ["Over 3,5", match.probabilities && match.probabilities.over_3_5],
+      ["Under 1,5", match.probabilities && match.probabilities.under_1_5],
+      ["Under 2,5", match.probabilities && match.probabilities.under_2_5],
+      ["Under 3,5", match.probabilities && match.probabilities.under_3_5],
+      ["Goal", match.probabilities && match.probabilities.btts_yes],
+      ["No Goal", match.probabilities && match.probabilities.btts_no],
+      ["Segna casa", match.probabilities && match.probabilities.home_scores],
+      ["Segna trasferta", match.probabilities && match.probabilities.away_scores]
     ];
     for (const pair of probabilities) {
       const item = document.createElement("div");
@@ -65,10 +76,18 @@ function renderMatches(matches) {
 
     const confidence = document.createElement("p");
     confidence.className = "match-meta";
-    confidence.textContent = "Campione: " + match.sample_matches +
-      " partite per squadra · Affidabilità del campione: " + (match.confidence || "iniziale");
+    confidence.textContent = "Campione minimo: " + match.sample_matches +
+      " partite per squadra · Stato: " + (match.status || "Pronostico valutabile") +
+      " · Campione: " + (match.confidence || "iniziale");
+
+    const score = document.createElement("p");
+    score.className = "match-meta";
+    score.textContent = match.top_scorelines && match.top_scorelines.length
+      ? "Risultati esatti più probabili (stime): " + match.top_scorelines.map(s => s.score + " (" + percent(s.probability) + ")").join(" · ")
+      : "";
 
     card.append(meta, teams, expected, grid, confidence);
+    if (score.textContent) card.append(score);
     container.append(card);
   }
 }
@@ -80,7 +99,7 @@ async function aggiornaDati() {
   if (!stato || !aggiornamento || !pulsante) return;
 
   pulsante.disabled = true;
-  stato.textContent = "Caricamento delle ultime stime disponibili…";
+  stato.textContent = "Ricarico le stime già pubblicate…";
 
   try {
     const risposta = await fetch(DATA_URL + "?t=" + Date.now(), { cache: "no-store" });
@@ -90,10 +109,10 @@ async function aggiornaDati() {
 
     renderMatches(dati.matches);
     stato.textContent = dati.matches.length
-      ? "DATI AGGIORNATI · " + dati.matches.length + " partite con stime statistiche disponibili."
-      : "NO BET · Nessuna partita futura con dati sufficienti al momento.";
+      ? "DATI LETTI · " + dati.matches.length + " pronostici valutabili nel file pubblicato. Il calcolo automatico viene eseguito da GitHub Actions ogni ora."
+      : "NO BET · Nessun pronostico supera i controlli minimi sui dati. Il sistema riproverà al prossimo aggiornamento automatico.";
     const stamp = dati.updated_at ? new Date(dati.updated_at).toLocaleString("it-IT") : "non disponibile";
-    aggiornamento.textContent = "Ultimo aggiornamento dati: " + stamp + ". Fonte: football-data.co.uk.";
+    aggiornamento.textContent = "Ultimo calcolo salvato: " + stamp + ". Il pulsante ricarica il file pubblicato; non avvia direttamente il calcolo sul server.";
   } catch (errore) {
     stato.textContent = "DATI NON DISPONIBILI · L'aggiornamento non è riuscito.";
     const container = document.getElementById("matches");
