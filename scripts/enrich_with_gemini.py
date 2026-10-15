@@ -8,7 +8,7 @@ import urllib.request
 from pathlib import Path
 
 DATA_FILE = Path("data/predictions.json")
-MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
+MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.5-flash-lite")
 API_URL = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generateContent"
 MAX_MATCHES = 30
 
