@@ -4,7 +4,7 @@ Dashboard statica di pronostici calcistici con aggiornamento automatico tramite 
 
 ## Funzioni implementate
 - Calendario e risultati da football-data.co.uk, con calendario ESPN di riserva.
-- 20 massime divisioni configurate. I CSV storici di football-data.co.uk sono disponibili per 11 competizioni (Inghilterra, Spagna, Germania, Italia, Francia, Scozia, Paesi Bassi, Portogallo, Belgio, Turchia e Grecia); per le altre competizioni si tenta il calendario/storico ESPN, se disponibile. La copertura può quindi variare per lega e stagione. Le divisioni inferiori inglesi e scozzesi sono escluse.
+- 20 massime divisioni configurate. Usa i CSV stagionali di football-data.co.uk per 11 competizioni (Inghilterra, Spagna, Germania, Italia, Francia, Scozia, Paesi Bassi, Portogallo, Belgio, Turchia e Grecia) e tenta anche i CSV cumulativi gratuiti `/new/{CODICE}.csv` per Austria, Danimarca, Finlandia, Irlanda, Norvegia, Polonia, Romania, Svezia e Svizzera. Per i CSV cumulativi vengono considerati solo i risultati dell'ultimo anno; ESPN resta una fonte di riserva. La copertura reale varia per lega e stagione e viene riportata nel JSON di aggiornamento. Le divisioni inferiori inglesi e scozzesi sono escluse.
 - Stime Poisson basate su statistiche casa/trasferta, medie di lega, Elo sequenziale e forma delle ultime cinque gare.
 - Stima preliminare solo quando entrambe le squadre hanno almeno due gare nel corretto contesto casa/trasferta; NO BET quando mancano dati o il campione è insufficiente.
 - Probabilità 1X2, doppia chance, Over/Under, Goal/No Goal e risultati esatti stimati.
