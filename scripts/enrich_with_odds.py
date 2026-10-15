@@ -48,6 +48,42 @@ def team_key(value):
     return re.sub(r"[^a-z0-9]", "", value.lower())
 
 
+# Alias espliciti: niente fuzzy matching generico che rischierebbe di associare
+# quote alla squadra sbagliata.
+TEAM_ALIASES = {
+    "inter": {"inter", "intermilan", "fcinternazionale", "internazionale"},
+    "internazionale": {"inter", "intermilan", "fcinternazionale", "internazionale"},
+    "milan": {"milan", "acmilan"},
+    "psg": {"psg", "parissaintgermain"},
+    "parissaintgermain": {"psg", "parissaintgermain"},
+    "manutd": {"manutd", "manchesterunited"},
+    "manchesterunited": {"manutd", "manchesterunited"},
+    "man city": {"mancity", "manchestercity"},
+    "mancity": {"mancity", "manchestercity"},
+    "manchestercity": {"mancity", "manchestercity"},
+    "athleticbilbao": {"athleticbilbao", "athleticclub"},
+    "athleticclub": {"athleticbilbao", "athleticclub"},
+    "atleticomadrid": {"atleticomadrid", "atleticodemadrid"},
+    "atleticodemadrid": {"atleticomadrid", "atleticodemadrid"},
+    "bayernmunich": {"bayernmunich", "fc bayern", "fcbayern"},
+    "fcbayern": {"bayernmunich", "fcbayern"},
+    "sportinglisbon": {"sportinglisbon", "sportingcp"},
+    "sportingcp": {"sportinglisbon", "sportingcp"},
+    "redbullsalzburg": {"redbullsalzburg", "salzburg"},
+    "salzburg": {"redbullsalzburg", "salzburg"},
+}
+
+
+def team_keys(value):
+    key = team_key(value)
+    aliases = TEAM_ALIASES.get(key, {key})
+    return {team_key(alias) for alias in aliases}
+
+
+def same_team(first, second):
+    return bool(team_keys(first) & team_keys(second))
+
+
 def available_sports(api_key):
     """Legge le chiavi effettivamente disponibili nel piano/account senza consumare crediti odds."""
     query = urllib.parse.urlencode({"apiKey": api_key})
@@ -73,7 +109,7 @@ def fetch_odds(sport, api_key):
 
 def best_prices(event):
     prices = {"home": None, "draw": None, "away": None}
-    home_key, away_key = team_key(event.get("home_team")), team_key(event.get("away_team"))
+    home_name, away_name = event.get("home_team"), event.get("away_team")
     for bookmaker in event.get("bookmakers", []):
         for market in bookmaker.get("markets", []):
             if market.get("key") != "h2h":
@@ -81,7 +117,7 @@ def best_prices(event):
             for outcome in market.get("outcomes", []):
                 name = team_key(outcome.get("name"))
                 key = "draw" if name in ("draw", "pareggio", "tie") else (
-                    "home" if name == home_key else "away" if name == away_key else None
+                    "home" if same_team(outcome.get("name"), home_name) else "away" if same_team(outcome.get("name"), away_name) else None
                 )
                 price = outcome.get("price")
                 if key and isinstance(price, (int, float)) and price > 1:
@@ -125,10 +161,11 @@ def main():
     matched = value_count = 0
     for match in data.get("matches", []):
         events = events_by_league.get(match.get("league"), [])
-        target_home, target_away = team_key(match.get("home_team")), team_key(match.get("away_team"))
+        # Match solo se casa e trasferta coincidono nell'ordine corretto.
+        # Gli alias sono espliciti; niente associazioni approssimative non verificabili.
         event = next((e for e in events
-                      if team_key(e.get("home_team")) == target_home
-                      and team_key(e.get("away_team")) == target_away), None)
+                      if same_team(e.get("home_team"), match.get("home_team"))
+                      and same_team(e.get("away_team"), match.get("away_team"))), None)
         if not event:
             continue
         prices = best_prices(event)
