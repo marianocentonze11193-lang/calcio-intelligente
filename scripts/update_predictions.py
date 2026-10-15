@@ -190,8 +190,12 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
             if a >= 1:
                 away_scores += p
     total = home_win + draw + away_win
-    sample = min(hs["played"], aws["played"])
-    valid = sample >= MIN_TEAM_MATCHES
+    # Il requisito è specifico per il contesto della partita: almeno 6 gare
+    # casalinghe della squadra di casa e 6 trasferte della squadra ospite.
+    home_sample = hs["home_games"]
+    away_sample = aws["away_games"]
+    sample = min(home_sample, away_sample)
+    valid = home_sample >= MIN_TEAM_MATCHES and away_sample >= MIN_TEAM_MATCHES
     scorelines.sort(reverse=True)
     probabilities = {
         "home_win": percent(home_win / total), "draw": percent(draw / total),
@@ -231,8 +235,8 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
             for p, h, a in scorelines[:3]
         ] if valid else [],
         "sample_matches": sample,
-        "home_matches_sample": hs["played"],
-        "away_matches_sample": aws["played"],
+        "home_matches_sample": home_sample,
+        "away_matches_sample": away_sample,
         "status": "Pronostico valutabile" if valid else "NO BET",
         "reason": "" if valid else f"Storico insufficiente: servono almeno {MIN_TEAM_MATCHES} gare casalinghe per la squadra di casa e {MIN_TEAM_MATCHES} trasferte per quella ospite.",
         "confidence": "media" if sample >= 8 else "iniziale",
