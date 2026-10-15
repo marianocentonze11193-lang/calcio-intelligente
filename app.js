@@ -172,7 +172,7 @@ async function aggiornaDati() {
         match.date >= firstDate &&
         match.date <= lastDate &&
         Number.isFinite(Number(match.sample_matches)) &&
-        Number(match.sample_matches) >= 6
+        Number(match.sample_matches) >= 4
       )
       .sort((a, b) =>
         a.date.localeCompare(b.date) ||
