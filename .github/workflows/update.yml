@@ -7,7 +7,7 @@ on:
       - "scripts/update_predictions.py"
       - ".github/workflows/update.yml"
   schedule:
-    - cron: "17 */6 * * *"
+    - cron: "23 * * * *"
 
 permissions:
   contents: write
@@ -19,7 +19,7 @@ concurrency:
 jobs:
   aggiorna:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     steps:
       - name: Scarica il repository
         uses: actions/checkout@v4
