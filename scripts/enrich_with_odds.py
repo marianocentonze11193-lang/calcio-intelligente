@@ -52,6 +52,8 @@ def team_key(value):
 # quote alla squadra sbagliata.
 TEAM_ALIASES = {
     "inter": {"inter", "intermilan", "fcinternazionale", "internazionale"},
+    "intermilan": {"inter", "intermilan", "fcinternazionale", "internazionale"},
+    "fcinternazionale": {"inter", "intermilan", "fcinternazionale", "internazionale"},
     "internazionale": {"inter", "intermilan", "fcinternazionale", "internazionale"},
     "milan": {"milan", "acmilan"},
     "psg": {"psg", "parissaintgermain"},
