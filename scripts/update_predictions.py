@@ -133,6 +133,61 @@ def fetch_espn_fixtures(league_code, today, last_date):
         cursor += timedelta(days=1)
     return fixtures
 
+def fetch_espn_historical_results(league_code, start_date, end_date):
+    """Prova un recupero storico ESPN per intervallo, senza attribuire risultati non conclusi."""
+    sport_code = ESPN_LEAGUES.get(league_code)
+    if not sport_code:
+        return []
+    start = start_date.strftime("%Y%m%d")
+    end = end_date.strftime("%Y%m%d")
+    url = (f"https://site.api.espn.com/apis/site/v2/sports/soccer/{sport_code}/scoreboard"
+           f"?dates={start}-{end}&limit=1000")
+    try:
+        request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+        with urllib.request.urlopen(request, timeout=12) as response:
+            payload = json.loads(response.read().decode("utf-8"))
+    except (urllib.error.URLError, TimeoutError, OSError, ValueError) as error:
+        print(f"AVVISO: storico ESPN {league_code} non disponibile: {error}")
+        return []
+    results, seen = [], set()
+    for event in payload.get("events", []):
+        competitions = event.get("competitions") or []
+        if not competitions:
+            continue
+        competition = competitions[0]
+        status = (competition.get("status") or {}).get("type") or {}
+        if not status.get("completed"):
+            continue
+        raw_date = event.get("date", "")
+        try:
+            event_dt = datetime.fromisoformat(raw_date.replace("Z", "+00:00"))
+            match_date = event_dt.astimezone(ZoneInfo(ESPN_TIMEZONES.get(league_code, "Europe/Rome"))).date()
+        except (ValueError, TypeError):
+            match_date = parse_date(raw_date)
+        if not match_date or not (start_date <= match_date <= end_date):
+            continue
+        home = away = None
+        for competitor in competition.get("competitors", []):
+            team = (competitor.get("team") or {}).get("displayName", "").strip()
+            score = number(competitor.get("score"))
+            if competitor.get("homeAway") == "home":
+                home = (team, score)
+            elif competitor.get("homeAway") == "away":
+                away = (team, score)
+        if not home or not away or not home[0] or not away[0]:
+            continue
+        if home[1] is None or away[1] is None or not (0 <= home[1] <= 15 and 0 <= away[1] <= 15):
+            continue
+        if team_key(home[0]) == team_key(away[0]):
+            continue
+        key = (match_date.isoformat(), team_key(home[0]), team_key(away[0]))
+        if key in seen:
+            continue
+        seen.add(key)
+        results.append((home[0], away[0], int(home[1]), int(away[1]), match_date))
+    return results
+
+
 def team_key(value):
     value = unicodedata.normalize("NFKD", str(value or ""))
     value = "".join(ch for ch in value if not unicodedata.combining(ch))
@@ -348,7 +403,8 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
         "status": ("Pronostico valutabile" if sample >= 3 else "Stima preliminare") if valid else "NO BET",
         "no_bet_type": "" if valid else no_bet_type,
         "reason": "" if valid else no_bet_reason,
-        "confidence": "più solida" if sample >= 8 else "intermedia" if sample >= 5 else "bassa (campione ridotto)",
+        "confidence": "alta quantità di dati (non sinonimo di accuratezza verificata)" if sample >= 8 else "media quantità di dati" if sample >= 5 else "bassa quantità di dati",
+        "data_quality": "controllata",
         "elo_home": round((elo_ratings or {}).get(home, 1500.0), 1),
         "elo_away": round((elo_ratings or {}).get(away, 1500.0), 1),
         "home_recent_form": (recent_form or {}).get(home),
@@ -399,16 +455,16 @@ def main():
                 continue
             hg = number(row.get("FTHG") or row.get("HG") or row.get("home_goals"))
             ag = number(row.get("FTAG") or row.get("AG") or row.get("away_goals"))
-            if hg is not None and ag is not None:
+            if (hg is not None and ag is not None and match_date < today and
+                    0 <= hg <= 15 and 0 <= ag <= 15 and team_key(home) != team_key(away)):
                 completed.append((home, away, int(hg), int(ag)))
-            elif today <= match_date <= last_date:
+            elif today <= match_date <= last_date and team_key(home) != team_key(away):
                 fixtures.append((home, away, match_date, (row.get("Time") or row.get("time") or "").strip()))
                 quote = odds_from_row(row)
                 if quote:
                     fixture_odds[(match_date.isoformat(), team_key(home), team_key(away))] = quote
 
-        # All'inizio della stagione, se il file corrente non ha risultati,
-        # usa la stagione precedente per costruire una base statistica iniziale.
+        # All'inizio della stagione prova prima la stagione precedente della fonte primaria.
         history_season = season
         if len(completed) < MIN_TEAM_MATCHES:
             previous_season = f"{(int(season[:2]) - 1) % 100:02d}{season[:2]}"
@@ -418,9 +474,12 @@ def main():
                 for row in previous_rows:
                     home = (row.get("HomeTeam") or row.get("Home Team") or "").strip()
                     away = (row.get("AwayTeam") or row.get("Away Team") or "").strip()
+                    match_date = parse_date(row.get("Date") or row.get("date"))
                     hg = number(row.get("FTHG") or row.get("HG") or row.get("home_goals"))
                     ag = number(row.get("FTAG") or row.get("AG") or row.get("away_goals"))
-                    if home and away and hg is not None and ag is not None:
+                    if (home and away and match_date and match_date < today and
+                            hg is not None and ag is not None and 0 <= hg <= 15 and 0 <= ag <= 15 and
+                            team_key(home) != team_key(away)):
                         previous_completed.append((home, away, int(hg), int(ag)))
                 if len(previous_completed) > len(completed):
                     completed = previous_completed
@@ -428,6 +487,14 @@ def main():
                     print(f"{league_name}: uso {previous_season} come storico iniziale.")
             except (urllib.error.URLError, TimeoutError, OSError, ValueError) as error:
                 print(f"AVVISO: storico precedente {code} non disponibile: {error}")
+
+        # Fallback storico ESPN in una singola richiesta per intervallo, se supportato.
+        if len(completed) < MIN_TEAM_MATCHES:
+            espn_rows = fetch_espn_historical_results(code, today - timedelta(days=120), today - timedelta(days=1))
+            if len(espn_rows) > len(completed):
+                completed = [(h, a, hg, ag) for h, a, hg, ag, _ in espn_rows]
+                history_season = "ESPN-120-giorni"
+                print(f"{league_name}: recuperati {len(completed)} risultati ESPN per lo storico recente.")
 
         if completed:
             historical_available.append(league_name)
@@ -482,7 +549,7 @@ def main():
                     "sample_matches": 0, "home_matches_sample": 0, "away_matches_sample": 0,
                     "status": "NO BET", "no_bet_type": "dati_mancanti",
                     "reason": "Dati mancanti: calendario trovato, ma non ci sono risultati storici verificabili per questa competizione.",
-                    "confidence": "non stimabile", "method": "Nessuna stima: storico non disponibile",
+                    "confidence": "non stimabile", "data_quality": "storico_assente", "method": "Nessuna stima: storico non disponibile",
                     "availability_data": {"status": "non_integrata", "note": "Disponibilità non verificata."}
                 })
             continue
@@ -501,7 +568,7 @@ def main():
                     "suggested_markets": [], "value_bets": [], "top_scorelines": [],
                     "sample_matches": 0, "home_matches_sample": 0, "away_matches_sample": 0,
                     "status": "NO BET", "no_bet_type": no_type, "reason": no_reason,
-                    "confidence": "non stimabile", "method": "Nessuna stima: dati statistici non validi",
+                    "confidence": "non stimabile", "data_quality": "dati_non_validi", "method": "Nessuna stima: dati statistici non validi",
                     "availability_data": {"status": "non_integrata", "note": "Disponibilità non verificata."}
                 })
             continue
