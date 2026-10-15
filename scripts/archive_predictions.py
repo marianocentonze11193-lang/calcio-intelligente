@@ -19,6 +19,7 @@ USER_AGENT = "CalcioIntelligente/1.0"
 LEAGUES = {
     "E0": "Premier League", "SP1": "La Liga", "D1": "Bundesliga",
     "I1": "Serie A", "F1": "Ligue 1", "SC0": "Scottish Premiership",
+    "E1": "Championship", "E2": "League One", "E3": "League Two",
     "N1": "Eredivisie", "P1": "Primeira Liga", "B1": "Belgian Pro League", "T1": "Super Lig turca",
     "AUT": "Bundesliga austriaca", "DNK": "Superliga danese", "G1": "Super League greca",
     "FIN": "Veikkausliiga finlandese", "IRL": "Premier Division irlandese",
@@ -26,7 +27,8 @@ LEAGUES = {
     "SWE": "Allsvenskan svedese", "SWZ": "Super League svizzera",
 }
 ESPN_LEAGUES = {
-    "Premier League": "eng.1", "La Liga": "esp.1", "Bundesliga": "ger.1",
+    "Premier League": "eng.1", "Championship": "eng.2", "League One": "eng.3", "League Two": "eng.4",
+    "La Liga": "esp.1", "Bundesliga": "ger.1",
     "Serie A": "ita.1", "Ligue 1": "fra.1", "Scottish Premiership": "sco.1",
     "Eredivisie": "ned.1", "Primeira Liga": "por.1", "Belgian Pro League": "bel.1",
     "Super Lig turca": "tur.1", "Bundesliga austriaca": "aut.1", "Superliga danese": "den.1",
@@ -36,7 +38,8 @@ ESPN_LEAGUES = {
     "Allsvenskan svedese": "swe.1", "Super League svizzera": "sui.1",
 }
 ESPN_TIMEZONES = {
-    "Premier League": "Europe/London", "Scottish Premiership": "Europe/London",
+    "Premier League": "Europe/London", "Championship": "Europe/London",
+    "League One": "Europe/London", "League Two": "Europe/London", "Scottish Premiership": "Europe/London",
     "La Liga": "Europe/Madrid", "Bundesliga": "Europe/Berlin", "Serie A": "Europe/Rome",
     "Ligue 1": "Europe/Paris", "Eredivisie": "Europe/Amsterdam", "Primeira Liga": "Europe/Lisbon",
     "Belgian Pro League": "Europe/Brussels", "Super Lig turca": "Europe/Istanbul",
