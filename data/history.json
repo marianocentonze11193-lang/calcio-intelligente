@@ -2246,11 +2246,13 @@
       "away_goals": null
     }
   ],
-  "updated_at": "2026-10-15T14:57:44.723914+00:00",
+  "updated_at": "2026-10-15T15:06:01.397219+00:00",
   "metrics": {
     "settled_matches": 0,
     "accuracy_1x2": null,
-    "brier_score_1x2": null
+    "brier_score_1x2": null,
+    "minimum_matches_required": 30,
+    "note": "Metriche non pubblicate: servono almeno 30 partite concluse con probabilità archiviate."
   },
   "metrics_by_league": {}
 }
