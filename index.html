@@ -49,7 +49,7 @@
     a { color: #53d69a; }
     @media (max-width: 560px) { .probabilities { grid-template-columns: repeat(3, minmax(0, 1fr)); } .match-teams { font-size: 15px; } }
   </style>
-  <script src="./app.js?v=20261015-11" defer></script>
+  <script src="./app.js?v=20261015-15" defer></script>
 </head>
 <body>
   <header>
@@ -65,7 +65,7 @@
     </section>
     <section class="panel">
       <h2>Partite e probabilità</h2>
-      <p class="muted">Stime sperimentali basate su Poisson, statistiche casa/trasferta, prior di lega e correzione Elo. Le partite con campione ridotto sono indicate come stime preliminari; NO BET viene mantenuto quando mancano dati minimi pertinenti. Sono incluse soltanto le massime divisioni nazionali per cui la fonte primaria offre dati storici; le coppe europee sono escluse finché non è disponibile uno storico inter-lega verificato.</p>
+      <p class="muted">Stime sperimentali basate su Poisson, statistiche casa/trasferta, prior di lega e correzione Elo. Le partite con campione ridotto sono indicate come stime preliminari; NO BET viene mantenuto quando mancano dati minimi pertinenti. Sono incluse le massime divisioni nazionali per cui è disponibile uno storico football-data: Inghilterra, Spagna, Germania, Italia, Francia, Scozia, Paesi Bassi, Portogallo, Belgio, Turchia, Austria, Danimarca, Grecia, Finlandia, Irlanda, Norvegia, Polonia, Romania, Svezia e Svizzera. Le partite compaiono solo se il calendario è reperibile e le squadre sono abbinabili allo storico.</p>
       <div class="filters">
         <label for="country-filter" class="muted">Nazione<select id="country-filter"><option value="">Tutte le nazioni</option></select></label>
         <label for="league-filter" class="muted">Competizione<select id="league-filter"><option value="">Tutte le competizioni</option></select></label>
@@ -80,11 +80,11 @@
     </section>
     <section class="panel">
       <h2>Mercati analizzati</h2>
-      <p class="muted">1X2 · Doppia chance · Over/Under 1,5, 2,5 e 3,5 · Goal/No Goal · probabilità che segnino casa e trasferta · primi risultati esatti stimati. Colori indicativi: verde ≥70%, giallo 55–69,9%, rosso <55% di probabilità stimata. Il colore rappresenta solo la probabilità stimata del singolo mercato: verde ≥70%, giallo 55–69,9%, rosso <55%. Una probabilità alta non significa automaticamente che convenga scommettere: per valutare il valore servono quote reali, che al momento non vengono importate. Le analisi possono essere assistite da Gemini quando il servizio è configurato; Gemini commenta i dati già calcolati e non modifica probabilità. Le quote 1X2 e il valore atteso sono mostrati quando disponibili nei dati gratuiti football-data.co.uk; come fonte opzionale è supportata anche The Odds API tramite ODDS_API_KEY. Infortuni, squalifiche e formazioni ufficiali non sono ancora coperti da una fonte automatica verificata e uniforme; non vengono inventati.</p>
+      <p class="muted">1X2 · Doppia chance · Over/Under 1,5, 2,5 e 3,5 · Goal/No Goal · probabilità che segnino casa e trasferta · primi risultati esatti stimati. Colori indicativi: verde ≥70%, giallo 55–69,9%, rosso <55% di probabilità stimata. Il colore rappresenta solo la probabilità stimata del singolo mercato: verde ≥70%, giallo 55–69,9%, rosso <55%. Una probabilità alta non significa automaticamente che convenga scommettere: quando sono disponibili quote 1X2 reali, l’app calcola il valore atteso teorico. Le analisi possono essere assistite da Gemini quando il servizio è configurato; Gemini commenta i dati già calcolati e non modifica probabilità. Le quote 1X2 e il valore atteso sono mostrati quando disponibili nei dati gratuiti football-data.co.uk; come fonte opzionale è supportata anche The Odds API tramite ODDS_API_KEY. Infortuni, squalifiche e formazioni ufficiali non sono ancora disponibili da una fonte automatica gratuita, verificata e uniforme per tutti i campionati; l’app non li presume né li inventa.</p>
     </section>
     <section class="panel">
       <h2>Fonte e trasparenza</h2>
-      <p class="muted">Fonte risultati: <a href="https://www.football-data.co.uk/" target="_blank" rel="noopener noreferrer">football-data.co.uk</a>, con calendario alternativo ESPN quando necessario. GitHub Actions prova a ricalcolare i dati ogni ora, quando il servizio è disponibile. Il pulsante ricarica le stime già pubblicate: non avvia direttamente il calcolo remoto. Se non ci sono dati sufficienti, la partita viene mostrata come NO BET senza probabilità inventate. Il modello è sperimentale e non ancora validato con un backtest; lo storico disponibile può essere limitato a poche partite. Nessuna stima garantisce risultati.</p>
+      <p class="muted">Fonte risultati e quote storiche disponibili: <a href="https://www.football-data.co.uk/" target="_blank" rel="noopener noreferrer">football-data.co.uk</a>; calendario alternativo ESPN quando necessario. Le quote aggiuntive possono arrivare da The Odds API se è configurato il secret ODDS_API_KEY. GitHub Actions prova a ricalcolare i dati ogni ora, quando il servizio è disponibile. Il pulsante ricarica le stime già pubblicate: non avvia direttamente il calcolo remoto. Se non ci sono dati sufficienti, la partita viene mostrata come NO BET senza probabilità inventate. Il modello è sperimentale e non ancora validato con un backtest; lo storico disponibile può essere limitato a poche partite. Nessuna stima garantisce risultati.</p>
     </section>
   </main>
   <footer class="muted">Calcio Intelligente · Stime statistiche indicative</footer>
