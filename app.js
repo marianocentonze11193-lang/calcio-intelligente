@@ -110,7 +110,7 @@ function renderMatches(matches) {
     if (match.analysis) {
       const analysis = document.createElement("p");
       analysis.className = "match-analysis";
-      analysis.textContent = "Analisi sintetica: " + match.analysis;
+      analysis.textContent = (match.analysis_provider === "Gemini" ? "Analisi assistita da Gemini: " : "Analisi sintetica: ") + match.analysis;
       card.append(analysis);
     }
     if (Array.isArray(match.suggested_markets) && match.suggested_markets.length) {
