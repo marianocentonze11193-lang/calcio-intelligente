@@ -71,7 +71,7 @@ class PredictionModelTests(unittest.TestCase):
         records = [{
             "outcome": "1",
             "probabilities": {"home_win": 70, "draw": 20, "away_win": 10},
-        }]
+        } for _ in range(30)]
         metrics = archive_module.calculate_metrics(records)
         self.assertEqual(metrics["settled_matches"], 1)
         self.assertEqual(metrics["accuracy_1x2"], 100.0)
@@ -102,13 +102,24 @@ class PredictionModelTests(unittest.TestCase):
         self.assertFalse(odds_module.same_team("Milan", "Inter"))
         self.assertFalse(odds_module.same_team("Roma", "Milan"))
 
+    def test_metrics_are_hidden_until_minimum_sample(self):
+        records = [{
+            "outcome": "1",
+            "probabilities": {"home_win": 70, "draw": 20, "away_win": 10},
+        } for _ in range(29)]
+        metrics = archive_module.calculate_metrics(records)
+        self.assertEqual(metrics["settled_matches"], 29)
+        self.assertIsNone(metrics["accuracy_1x2"])
+        self.assertIsNone(metrics["brier_score_1x2"])
+        self.assertEqual(metrics["minimum_matches_required"], 30)
+
     def test_metrics_are_separated_by_league(self):
-        records = [
-            {"league": "Serie A", "outcome": "1",
-             "probabilities": {"home_win": 70, "draw": 20, "away_win": 10}},
-            {"league": "Premier League", "outcome": "2",
-             "probabilities": {"home_win": 20, "draw": 20, "away_win": 60}},
-        ]
+        records = (
+            [{"league": "Serie A", "outcome": "1",
+              "probabilities": {"home_win": 70, "draw": 20, "away_win": 10}} for _ in range(30)] +
+            [{"league": "Premier League", "outcome": "2",
+              "probabilities": {"home_win": 20, "draw": 20, "away_win": 60}} for _ in range(30)]
+        )
         metrics = archive_module.calculate_metrics_by_league(records)
         self.assertEqual(metrics["Serie A"]["settled_matches"], 1)
         self.assertEqual(metrics["Premier League"]["accuracy_1x2"], 100.0)
