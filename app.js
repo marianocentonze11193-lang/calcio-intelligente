@@ -2,6 +2,7 @@
 
 const DATA_URL = "./data/predictions.json";
 const HISTORY_URL = "./data/history.json";
+let allLoadedMatches = [];
 
 function formatDate(value) {
   if (!value) return "Data da confermare";
@@ -27,14 +28,23 @@ function renderMatches(matches) {
     return;
   }
 
+  let previousGroup = "";
   for (const match of matches) {
+    const group = (match.country || "Altro") + " · " + (match.league || "Competizione");
+    if (group !== previousGroup) {
+      const heading = document.createElement("h3");
+      heading.className = "competition-heading";
+      heading.textContent = group;
+      container.append(heading);
+      previousGroup = group;
+    }
     const card = document.createElement("article");
     card.className = "match-card";
 
     const meta = document.createElement("p");
     meta.className = "match-meta";
-    meta.textContent = (match.league || "Campionato") + " · " + formatDate(match.date) +
-      (match.kickoff ? " · " + match.kickoff : "");
+    meta.textContent = formatDate(match.date) +
+      (match.kickoff ? " · " + match.kickoff : " · orario da confermare");
 
     const teams = document.createElement("h3");
     teams.className = "match-teams";
@@ -98,8 +108,9 @@ function renderMatches(matches) {
     const confidence = document.createElement("p");
     confidence.className = "match-meta";
     confidence.textContent = "Campione minimo: " + match.sample_matches +
-      " partite per squadra · Stato: " + (match.status || "Pronostico valutabile") +
-      " · Campione: " + (match.confidence || "iniziale");
+      " partite nel contesto casa/trasferta · Stato: " + (match.status || "Pronostico valutabile") +
+      " · Fiducia: " + (match.confidence || "iniziale") +
+      (match.elo_home != null && match.elo_away != null ? " · Elo " + match.elo_home + " / " + match.elo_away : "");
 
     const score = document.createElement("p");
     score.className = "match-meta";
@@ -249,16 +260,12 @@ async function aggiornaDati() {
     const firstDate = isoLocalDate(today);
     const lastDate = isoLocalDate(lastDay);
     const validMatches = dati.matches
-      .filter(match =>
-        match.date >= firstDate &&
-        match.date <= lastDate &&
-        Number.isFinite(Number(match.sample_matches)) &&
-        Number(match.sample_matches) >= 3
-      )
+      .filter(match => match.date >= firstDate && match.date <= lastDate)
       .sort((a, b) =>
+        (a.country || "Altro").localeCompare(b.country || "Altro", "it") ||
+        (a.league || "").localeCompare(b.league || "", "it") ||
         a.date.localeCompare(b.date) ||
         (a.kickoff || "99:99").localeCompare(b.kickoff || "99:99") ||
-        (a.league || "").localeCompare(b.league || "", "it") ||
         (a.home_team || "").localeCompare(b.home_team || "", "it")
       );
     const noBetMatches = (Array.isArray(dati.no_bet_matches) ? dati.no_bet_matches : [])
@@ -270,14 +277,18 @@ async function aggiornaDati() {
         (a.home_team || "").localeCompare(b.home_team || "", "it")
       );
     const combined = [...validMatches, ...noBetMatches].sort((a, b) =>
+      (a.country || "Altro").localeCompare(b.country || "Altro", "it") ||
+      (a.league || "").localeCompare(b.league || "", "it") ||
       a.date.localeCompare(b.date) ||
       (a.kickoff || "99:99").localeCompare(b.kickoff || "99:99") ||
-      (a.league || "").localeCompare(b.league || "", "it")
+      (a.home_team || "").localeCompare(b.home_team || "", "it")
     );
-    renderMatches(combined);
+    allLoadedMatches = combined;
+    populateFilters(combined);
+    applyFilters();
     stato.textContent = validMatches.length
-      ? "PRONOSTICI VALUTABILI · " + validMatches.length + " partite con dati sufficienti; sono mostrate anche " + noBetMatches.length + " partite NO BET quando lo storico è insufficiente."
-      : "NO BET · Nessuna partita supera il controllo minimo; vengono comunque mostrate le partite in calendario con dati insufficienti.";
+      ? "STIME DISPONIBILI · " + validMatches.length + " partite con probabilità; " + noBetMatches.length + " NO BET senza dati sufficienti. Le stime preliminari sono indicate come tali."
+      : "NO BET · Nessuna partita ha dati sufficienti per stimare probabilità; il calendario mostra le partite disponibili.";
     const stamp = dati.updated_at ? new Date(dati.updated_at).toLocaleString("it-IT") : "non disponibile";
     aggiornamento.textContent = "Ultimo calcolo salvato: " + stamp + ". Il pulsante ricarica il file pubblicato; non avvia direttamente il calcolo sul server.";
   } catch (errore) {
@@ -290,12 +301,43 @@ async function aggiornaDati() {
   }
 }
 
+function populateFilters(matches) {
+  const country = document.getElementById("country-filter");
+  const league = document.getElementById("league-filter");
+  if (!country || !league) return;
+  const selectedCountry = country.value;
+  const selectedLeague = league.value;
+  const countries = [...new Set(matches.map(m => m.country || "Altro"))].sort((a, b) => a.localeCompare(b, "it"));
+  country.replaceChildren(new Option("Tutte le nazioni", ""));
+  for (const value of countries) country.add(new Option(value, value));
+  country.value = countries.includes(selectedCountry) ? selectedCountry : "";
+  const filtered = matches.filter(m => !country.value || (m.country || "Altro") === country.value);
+  const leagues = [...new Set(filtered.map(m => m.league || "Competizione"))].sort((a, b) => a.localeCompare(b, "it"));
+  league.replaceChildren(new Option("Tutte le competizioni", ""));
+  for (const value of leagues) league.add(new Option(value, value));
+  league.value = leagues.includes(selectedLeague) ? selectedLeague : "";
+}
+
+function applyFilters() {
+  const country = document.getElementById("country-filter");
+  const league = document.getElementById("league-filter");
+  const selectedCountry = country ? country.value : "";
+  const selectedLeague = league ? league.value : "";
+  renderMatches(allLoadedMatches.filter(m =>
+    (!selectedCountry || (m.country || "Altro") === selectedCountry) &&
+    (!selectedLeague || (m.league || "Competizione") === selectedLeague)
+  ));
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const pulsante = document.getElementById("refresh");
   if (pulsante) {
     pulsante.addEventListener("click", aggiornaDati);
+    const country = document.getElementById("country-filter");
+    const league = document.getElementById("league-filter");
+    if (country) country.addEventListener("change", () => { populateFilters(allLoadedMatches); applyFilters(); });
+    if (league) league.addEventListener("change", applyFilters);
     aggiornaDati();
-    aggiornaStorico();
     aggiornaStorico();
   }
 });
