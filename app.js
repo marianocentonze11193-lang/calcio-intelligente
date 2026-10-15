@@ -119,6 +119,12 @@ function renderMatches(matches) {
       : "";
 
     card.append(meta, teams, expected, grid, confidence);
+    const availability = document.createElement("p");
+    availability.className = "match-meta";
+    availability.textContent = "Disponibilità squadre: " +
+      ((match.availability_data && match.availability_data.note) ||
+       "infortuni, squalifiche e formazioni ufficiali non verificati dal modello.");
+    card.append(availability);
     if (match.odds_1x2) {
       const odds = document.createElement("p");
       odds.className = "match-meta";
@@ -212,6 +218,27 @@ function renderHistory(history) {
   summary.className = "match-meta";
   summary.textContent = records.length + " partite archiviate · " + (metrics.settled_matches || 0) + " con risultato verificato";
   listNode.append(summary);
+
+  const byLeague = history && history.metrics_by_league ? history.metrics_by_league : {};
+  const leagueEntries = Object.entries(byLeague);
+  if (leagueEntries.length) {
+    const heading = document.createElement("h3");
+    heading.textContent = "Validazione storica per campionato";
+    listNode.append(heading);
+    const note = document.createElement("p");
+    note.className = "match-meta";
+    note.textContent = "Solo partite con esito verificato. Campioni piccoli non dimostrano affidabilità futura.";
+    listNode.append(note);
+    for (const [league, values] of leagueEntries.sort((a, b) => a[0].localeCompare(b[0], "it"))) {
+      const row = document.createElement("p");
+      row.className = "match-meta";
+      row.textContent = league + ": " + values.settled_matches + " verificate · accuratezza " +
+        (typeof values.accuracy_1x2 === "number" ? percent(values.accuracy_1x2) : "in attesa") +
+        " · Brier " + (typeof values.brier_score_1x2 === "number"
+          ? values.brier_score_1x2.toLocaleString("it-IT", { maximumFractionDigits: 4 }) : "in attesa");
+      listNode.append(row);
+    }
+  }
 
   for (const record of records.slice(0, 12)) {
     const card = document.createElement("article");
