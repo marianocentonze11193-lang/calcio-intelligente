@@ -68,6 +68,13 @@ class PredictionModelTests(unittest.TestCase):
             ("Atalanta BC", "Atalanta"),
             ("Juventus FC", "Juventus"),
             ("Paris Saint-Germain", "PSG"),
+            ("Ajax Amsterdam", "Ajax"),
+            ("FC Groningen", "Groningen"),
+            ("FC Twente", "Twente"),
+            ("FC Utrecht", "Utrecht"),
+            ("PSV Eindhoven", "PSV"),
+            ("Feyenoord Rotterdam", "Feyenoord"),
+            ("AZ Alkmaar", "AZ"),
             ("Athletic Bilbao", "Athletic Club"),
             ("Bayern Munich", "FC Bayern"),
             ("Manchester United", "Man Utd"),
@@ -99,6 +106,10 @@ class PredictionModelTests(unittest.TestCase):
         self.assertTrue(availability_module.same_team("Inter Milan", "Internazionale"))
         self.assertFalse(availability_module.same_team("Milan", "Inter"))
         self.assertFalse(availability_module.same_team("Roma", "Lazio"))
+        self.assertTrue(availability_module.same_team("Ajax Amsterdam", "Ajax"))
+        self.assertTrue(availability_module.same_team("FC Groningen", "Groningen"))
+        self.assertTrue(odds_module.same_team("Feyenoord Rotterdam", "Feyenoord"))
+        self.assertTrue(odds_module.same_team("AZ Alkmaar", "AZ"))
 
     def test_duplicate_injury_reports_are_deduplicated(self):
         cache = {}
