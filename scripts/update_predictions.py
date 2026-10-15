@@ -497,22 +497,8 @@ def main():
                 skipped += 1
         print(f"{league_name}: pronostici creati {len(fixtures) - skipped}; scartate per storico insufficiente {skipped}.")
 
-    # Competizioni UEFA: mostra il calendario ma evita stime senza storico omogeneo verificato.
-    for code, league_name in [("UCL", "Champions League"), ("UEL", "Europa League"), ("UECL", "Conference League")]:
-        for home, away, match_date, kickoff in fetch_espn_fixtures(code, today, last_date):
-            forecasts.append({
-                "id": f"{match_date.isoformat()}-{league_name}-{home}-{away}",
-                "date": match_date.isoformat(), "kickoff": kickoff, "league": league_name,
-                "country": "Competizioni UEFA",
-                "home_team": home, "away_team": away, "expected_home_goals": None,
-                "expected_away_goals": None, "probabilities": {}, "top_scorelines": [],
-                "sample_matches": 0, "home_matches_sample": 0, "away_matches_sample": 0,
-                "status": "NO BET",
-                "reason": "Competizione europea: storico comparabile insufficiente per stimare un pronostico affidabile.",
-                "analysis": "Partita visibile a calendario, ma nessun esito viene consigliato finché non sono disponibili dati storici verificabili.",
-                "suggested_markets": [], "confidence": "non valutabile",
-                "method": "NO BET: calendario ESPN, storico statistico non validato"
-            })
+    # Il calendario si concentra sulle massime divisioni nazionali selezionate.
+    # Le coppe UEFA restano escluse finché non è disponibile uno storico inter-lega verificato.
 
     if downloaded == 0:
         raise SystemExit("Nessuna fonte dati raggiungibile: il file precedente è stato mantenuto.")
