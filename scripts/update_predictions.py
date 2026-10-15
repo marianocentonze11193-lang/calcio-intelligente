@@ -76,7 +76,7 @@ def fetch_espn_fixtures(league_code, today, last_date):
             f"{sport_code}/scoreboard?dates={date_param}&limit=100"
         )
         request = urllib.request.Request(url)
-        with urllib.request.urlopen(request, timeout=15) as response:
+        with urllib.request.urlopen(request, timeout=8) as response:
             return json.loads(response.read().decode("utf-8"))
 
     try:
@@ -86,6 +86,18 @@ def fetch_espn_fixtures(league_code, today, last_date):
         # Il prossimo aggiornamento automatico riproverà la finestra completa.
         print(f"AVVISO: intervallo ESPN {league_code} non disponibile; salto questa fonte per ora: {error}")
         return []
+
+    # Alcune versioni dell'endpoint ESPN accettano l'intervallo ma restituiscono
+    # un elenco vuoto: in quel caso usa le singole date, con timeout breve.
+    if not payload.get("events"):
+        cursor = today
+        while cursor <= last_date:
+            try:
+                daily = request_payload(f"{cursor:%Y%m%d}")
+                payload["events"].extend(daily.get("events", []))
+            except (urllib.error.URLError, TimeoutError, OSError, ValueError) as error:
+                print(f"AVVISO: calendario ESPN {league_code} ({cursor:%Y%m%d}) non disponibile: {error}")
+            cursor += timedelta(days=1)
 
     fixtures = []
     for event in payload.get("events", []):
