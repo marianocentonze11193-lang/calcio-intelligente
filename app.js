@@ -107,13 +107,37 @@ async function aggiornaDati() {
     const dati = await risposta.json();
     if (!Array.isArray(dati.matches)) throw new Error("Formato dati non valido");
 
-    const validMatches = dati.matches.filter(match =>
-      Number.isFinite(Number(match.sample_matches)) && Number(match.sample_matches) >= 4
-    );
+    // Mostra soltanto oggi e i prossimi 5 giorni: 6 date di calendario in totale.
+    // Il filtro lato pagina evita anche di mostrare partite vecchie se il file dati è datato.
+    const now = new Date();
+    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    const lastDay = new Date(today);
+    lastDay.setDate(lastDay.getDate() + 5);
+    const isoLocalDate = date => [
+      date.getFullYear(),
+      String(date.getMonth() + 1).padStart(2, "0"),
+      String(date.getDate()).padStart(2, "0")
+    ].join("-");
+
+    const firstDate = isoLocalDate(today);
+    const lastDate = isoLocalDate(lastDay);
+    const validMatches = dati.matches
+      .filter(match =>
+        match.date >= firstDate &&
+        match.date <= lastDate &&
+        Number.isFinite(Number(match.sample_matches)) &&
+        Number(match.sample_matches) >= 4
+      )
+      .sort((a, b) =>
+        a.date.localeCompare(b.date) ||
+        (a.kickoff || "99:99").localeCompare(b.kickoff || "99:99") ||
+        (a.league || "").localeCompare(b.league || "", "it") ||
+        (a.home_team || "").localeCompare(b.home_team || "", "it")
+      );
     renderMatches(validMatches);
     stato.textContent = validMatches.length
-      ? "PRONOSTICI VALUTABILI · " + validMatches.length + " partite con almeno 4 incontri storici per squadra. Il calcolo automatico viene eseguito da GitHub Actions ogni ora."
-      : "NO BET · Nessuna partita nel file pubblicato supera il controllo minimo di 4 incontri storici per squadra. Il sistema riproverà al prossimo aggiornamento automatico.";
+      ? "PRONOSTICI VALUTABILI · " + validMatches.length + " partite nei prossimi 6 giorni (oggi incluso), ordinate per data e orario, con almeno 4 incontri storici per squadra. Il calcolo automatico viene eseguito da GitHub Actions ogni ora."
+      : "NO BET · Nessuna partita nei prossimi 6 giorni supera il controllo minimo di 4 incontri storici per squadra. Il sistema riproverà al prossimo aggiornamento automatico.";
     const stamp = dati.updated_at ? new Date(dati.updated_at).toLocaleString("it-IT") : "non disponibile";
     aggiornamento.textContent = "Ultimo calcolo salvato: " + stamp + ". Il pulsante ricarica il file pubblicato; non avvia direttamente il calcolo sul server.";
   } catch (errore) {
