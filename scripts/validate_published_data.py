@@ -2,7 +2,7 @@
 """Controlli d'integrità sui JSON pubblicati prima del commit automatico."""
 import json
 import math
-from datetime import date
+from datetime import date, datetime, timezone, timedelta
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -15,10 +15,28 @@ def load_json(path):
         return json.load(handle)
 
 
+def is_recent_timestamp(value, now=None, max_age_hours=36):
+    """True solo per timestamp ISO valido, non futuro e aggiornato da massimo 36 ore."""
+    try:
+        parsed = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+        if parsed.tzinfo is None:
+            parsed = parsed.replace(tzinfo=timezone.utc)
+        current = now or datetime.now(timezone.utc)
+        if current.tzinfo is None:
+            current = current.replace(tzinfo=timezone.utc)
+        age = current - parsed.astimezone(timezone.utc)
+        return timedelta(0) <= age <= timedelta(hours=max_age_hours)
+    except (TypeError, ValueError, OverflowError):
+        return False
+
+
 def validate():
     predictions = load_json(PREDICTIONS_FILE)
     history = load_json(HISTORY_FILE)
     errors = []
+
+    if not is_recent_timestamp(predictions.get("updated_at")):
+        errors.append("predictions.json: updated_at mancante, non valido, nel futuro o più vecchio di 36 ore.")
 
     matches = predictions.get("matches")
     no_bet_matches = predictions.get("no_bet_matches", [])
