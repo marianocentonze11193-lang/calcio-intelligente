@@ -287,7 +287,7 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
     home_sample = hs["home_games"]
     away_sample = aws["away_games"]
     sample = min(home_sample, away_sample)
-    valid = (home_sample + away_sample) >= 2
+    valid = (home_sample + away_sample) >= 2 and not (home_sample < 2 and away_sample < 2)
     scorelines.sort(reverse=True)
     probabilities = {
         "home_win": percent(home_win / total), "draw": percent(draw / total),
@@ -335,8 +335,8 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
         "home_matches_sample": home_sample,
         "away_matches_sample": away_sample,
         "status": ("Pronostico valutabile" if sample >= 3 else "Stima preliminare") if valid else "NO BET",
-        "no_bet_type": "" if valid else ("dati_mancanti" if home_sample + away_sample == 0 else "campione_insufficiente"),
-        "reason": "" if valid else ("Dati mancanti: nessuna osservazione storica pertinente per casa o trasferta." if home_sample + away_sample == 0 else "Campione insufficiente: meno di due osservazioni pertinenti complessive; non è possibile calcolare probabilità affidabili."),
+        "no_bet_type": "" if valid else ("dati_mancanti" if home_sample + away_sample == 0 else "campione_insufficiente" if home_sample + away_sample < 2 else "stima_non_affidabile"),
+        "reason": "" if valid else ("Dati mancanti: nessuna osservazione storica pertinente per casa o trasferta." if home_sample + away_sample == 0 else "Campione insufficiente: meno di due osservazioni pertinenti complessive." if home_sample + away_sample < 2 else "Partita non adatta a una stima affidabile: entrambe le squadre hanno meno di due gare pertinenti nel contesto casa/trasferta."),
         "confidence": "più solida" if sample >= 8 else "intermedia" if sample >= 5 else "bassa (campione ridotto)",
         "elo_home": round((elo_ratings or {}).get(home, 1500.0), 1),
         "elo_away": round((elo_ratings or {}).get(away, 1500.0), 1),
