@@ -30,6 +30,7 @@ LEAGUES = {
 EXTRA_FOOTBALL_DATA_LEAGUES = frozenset({
     "AUT", "DNK", "FIN", "IRL", "NOK", "POL", "RO", "SWE", "SWZ",
 })
+EXTRA_SOURCE_CODES = {"NOK": "NOR", "RO": "ROU"}
 ESPN_LEAGUES = {
     "Premier League": "eng.1", "Championship": "eng.2", "League One": "eng.3", "League Two": "eng.4",
     "La Liga": "esp.1", "Bundesliga": "ger.1",
@@ -99,10 +100,10 @@ def result_index(rows):
     index = {}
     for row in rows:
         match_date = parse_date(row.get("Date") or row.get("date"))
-        home = (row.get("HomeTeam") or row.get("Home Team") or "").strip()
-        away = (row.get("AwayTeam") or row.get("Away Team") or "").strip()
-        hg = row.get("FTHG") or row.get("HG")
-        ag = row.get("FTAG") or row.get("AG")
+        home = (row.get("HomeTeam") or row.get("Home Team") or row.get("home_team") or "").strip()
+        away = (row.get("AwayTeam") or row.get("Away Team") or row.get("away_team") or "").strip()
+        hg = row.get("FTHG") or row.get("HG") or row.get("fthg")
+        ag = row.get("FTAG") or row.get("AG") or row.get("ftag")
         if not match_date or not home or not away or hg in (None, "") or ag in (None, ""):
             continue
         try:
@@ -280,7 +281,7 @@ def main():
         try:
             # Per Austria, Danimarca, Finlandia, Irlanda, Norvegia, Polonia,
             # Romania, Svezia e Svizzera i risultati sono nel CSV cumulativo.
-            url = (f"{SOURCE}/new/{code}.csv" if code in EXTRA_FOOTBALL_DATA_LEAGUES
+            url = (f"{SOURCE}/new/{EXTRA_SOURCE_CODES.get(code, code)}.csv" if code in EXTRA_FOOTBALL_DATA_LEAGUES
                    else f"{SOURCE}/mmz4281/{season}/{code}.csv")
             rows = read_csv(url)
             indexes.setdefault(league, {}).update(result_index(rows))
