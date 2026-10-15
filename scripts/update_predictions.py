@@ -221,6 +221,15 @@ def calculate_recent_form(completed, limit=5):
     }
 
 
+def classify_no_bet(home_sample, away_sample, data_quality_ok=True):
+    """Classifica in modo esplicito perché una partita non può essere stimata."""
+    if not data_quality_ok:
+        return "stima_non_affidabile", "Partita non adatta a una stima affidabile: qualità o comparabilità dei dati insufficiente."
+    if home_sample + away_sample == 0:
+        return "dati_mancanti", "Dati mancanti: nessuna osservazione storica pertinente per casa o trasferta."
+    return "campione_insufficiente", "Campione insufficiente: servono almeno due gare casalinghe per la squadra di casa e due gare in trasferta per l’avversaria."
+
+
 def make_forecast(home, away, league, match_date, kickoff, history, league_home_avg, league_away_avg, elo_ratings=None, recent_form=None):
     hs, aws = history[home], history[away]
 
@@ -287,7 +296,9 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
     home_sample = hs["home_games"]
     away_sample = aws["away_games"]
     sample = min(home_sample, away_sample)
-    valid = (home_sample + away_sample) >= 2 and not (home_sample < 2 and away_sample < 2)
+    # Pubblica una stima solo con almeno due gare pertinenti per entrambe le squadre.
+    valid = home_sample >= 2 and away_sample >= 2
+    no_bet_type, no_bet_reason = classify_no_bet(home_sample, away_sample)
     scorelines.sort(reverse=True)
     probabilities = {
         "home_win": percent(home_win / total), "draw": percent(draw / total),
@@ -335,8 +346,8 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
         "home_matches_sample": home_sample,
         "away_matches_sample": away_sample,
         "status": ("Pronostico valutabile" if sample >= 3 else "Stima preliminare") if valid else "NO BET",
-        "no_bet_type": "" if valid else ("dati_mancanti" if home_sample + away_sample == 0 else "campione_insufficiente" if home_sample + away_sample < 2 else "stima_non_affidabile"),
-        "reason": "" if valid else ("Dati mancanti: nessuna osservazione storica pertinente per casa o trasferta." if home_sample + away_sample == 0 else "Campione insufficiente: meno di due osservazioni pertinenti complessive." if home_sample + away_sample < 2 else "Partita non adatta a una stima affidabile: entrambe le squadre hanno meno di due gare pertinenti nel contesto casa/trasferta."),
+        "no_bet_type": "" if valid else no_bet_type,
+        "reason": "" if valid else no_bet_reason,
         "confidence": "più solida" if sample >= 8 else "intermedia" if sample >= 5 else "bassa (campione ridotto)",
         "elo_home": round((elo_ratings or {}).get(home, 1500.0), 1),
         "elo_away": round((elo_ratings or {}).get(away, 1500.0), 1),
@@ -474,6 +485,21 @@ def main():
         league_home_avg = sum(item[2] for item in completed) / len(completed)
         league_away_avg = sum(item[3] for item in completed) / len(completed)
         if league_home_avg <= 0 or league_away_avg <= 0:
+            print(f"AVVISO: {league_name}: medie gol non valide; nessuna probabilità sarà pubblicata.")
+            for home, away, match_date, kickoff in fixtures:
+                no_type, no_reason = classify_no_bet(0, 0, data_quality_ok=False)
+                forecasts.append({
+                    "id": f"{match_date.isoformat()}-{league_name}-{home}-{away}",
+                    "date": match_date.isoformat(), "kickoff": kickoff or "", "league": league_name,
+                    "country": LEAGUE_COUNTRIES.get(league_name, "Altro"),
+                    "home_team": home, "away_team": away, "expected_home_goals": None,
+                    "expected_away_goals": None, "probabilities": {}, "analysis": "",
+                    "suggested_markets": [], "value_bets": [], "top_scorelines": [],
+                    "sample_matches": 0, "home_matches_sample": 0, "away_matches_sample": 0,
+                    "status": "NO BET", "no_bet_type": no_type, "reason": no_reason,
+                    "confidence": "non stimabile", "method": "Nessuna stima: dati statistici non validi",
+                    "availability_data": {"status": "non_integrata", "note": "Disponibilità non verificata."}
+                })
             continue
 
         elo_ratings = calculate_elo(completed)
@@ -518,7 +544,7 @@ def main():
                         for price_key, prob_key, label in (
                             ("home", "home_win", "1"), ("draw", "draw", "X"), ("away", "away_win", "2")
                         )
-                        if ev[price_key] >= 0.03 and forecast.get("status") == "Pronostico valutabile"
+                        if ev[price_key] >= 0.05 and forecast.get("status") == "Pronostico valutabile" and home_sample >= 8 and away_sample >= 8
                     ]
                 forecasts.append(forecast)
             else:
