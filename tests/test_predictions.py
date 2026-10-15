@@ -46,6 +46,12 @@ class PredictionModelTests(unittest.TestCase):
         self.assertEqual(metrics["accuracy_1x2"], 100.0)
         self.assertAlmostEqual(metrics["brier_score_1x2"], 0.14, places=4)
 
+    def test_supported_leagues_have_country_and_calendar_mappings(self):
+        for code in ("AUT", "DNK", "G1", "FIN", "IRL", "NOK", "POL", "RO", "SWE", "SWZ"):
+            self.assertIn(code, module.LEAGUES)
+            self.assertIn(module.LEAGUES[code], module.LEAGUE_COUNTRIES)
+            self.assertIn(code, module.ESPN_LEAGUES)
+
     def test_odds_parser_selects_best_1x2_prices(self):
         event = {
             "home_team": "Milan", "away_team": "Roma",
