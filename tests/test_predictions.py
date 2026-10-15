@@ -20,9 +20,25 @@ ARCHIVE_SCRIPT = Path(__file__).resolve().parents[1] / "scripts" / "archive_pred
 ARCHIVE_SPEC = importlib.util.spec_from_file_location("archive_predictions", ARCHIVE_SCRIPT)
 archive_module = importlib.util.module_from_spec(ARCHIVE_SPEC)
 ARCHIVE_SPEC.loader.exec_module(archive_module)
+AVAILABILITY_SCRIPT = Path(__file__).resolve().parents[1] / "scripts" / "enrich_with_availability.py"
+AVAILABILITY_SPEC = importlib.util.spec_from_file_location("enrich_with_availability", AVAILABILITY_SCRIPT)
+availability_module = importlib.util.module_from_spec(AVAILABILITY_SPEC)
+AVAILABILITY_SPEC.loader.exec_module(availability_module)
 
 
 class PredictionModelTests(unittest.TestCase):
+    def test_availability_team_matching_uses_safe_aliases(self):
+        self.assertTrue(availability_module.same_team("Paris Saint-Germain", "PSG"))
+        self.assertTrue(availability_module.same_team("Inter Milan", "Internazionale"))
+        self.assertFalse(availability_module.same_team("Milan", "Inter"))
+        self.assertFalse(availability_module.same_team("Roma", "Lazio"))
+
+    def test_availability_without_key_is_explicitly_unconfigured(self):
+        result = availability_module.availability_for({"home_team": "A", "away_team": "B"}, {}, False)
+        self.assertEqual(result["status"], "non_configurata")
+        self.assertEqual(result["injuries"], [])
+        self.assertIsNone(result["lineups"])
+
     def test_gemini_json_parser_accepts_plain_and_markdown_json(self):
         self.assertEqual(gemini_module.extract_json('{"analyses": []}'), {"analyses": []})
         self.assertEqual(gemini_module.extract_json('```json\n{"analyses": []}\n```'), {"analyses": []})
