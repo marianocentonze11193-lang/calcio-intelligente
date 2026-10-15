@@ -637,7 +637,7 @@ def main():
                         for price_key, prob_key, label in (
                             ("home", "home_win", "1"), ("draw", "draw", "X"), ("away", "away_win", "2")
                         )
-                        if ev[price_key] >= 0.05 and forecast.get("status") == "Pronostico valutabile" and home_sample >= 8 and away_sample >= 8
+                        if ev[price_key] >= 0.05 and forecast.get("status") == "Pronostico valutabile" and forecast.get("home_matches_sample", 0) >= 8 and forecast.get("away_matches_sample", 0) >= 8
                     ]
                 forecasts.append(forecast)
             else:
