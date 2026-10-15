@@ -20,6 +20,12 @@ LEAGUES = {
     "I1": "Serie A", "F1": "Ligue 1", "SC0": "Scottish Premiership",
     "N1": "Eredivisie", "P1": "Primeira Liga", "B1": "Belgian Pro League", "T1": "Super Lig turca",
 }
+ESPN_LEAGUES = {
+    "Premier League": "eng.1", "La Liga": "esp.1", "Bundesliga": "ger.1",
+    "Serie A": "ita.1", "Ligue 1": "fra.1", "Scottish Premiership": "sco.1",
+    "Eredivisie": "ned.1", "Primeira Liga": "por.1", "Belgian Pro League": "bel.1",
+    "Super Lig turca": "tur.1",
+}
 
 
 def team_key(value):
@@ -73,6 +79,48 @@ def result_index(rows):
             continue
         index[(match_date, team_key(home), team_key(away))] = score
     return index
+
+
+def fetch_espn_results(league, dates):
+    """Fallback gratuito ESPN per recuperare risultati conclusi non trovati nel CSV."""
+    sport_code = ESPN_LEAGUES.get(league)
+    if not sport_code:
+        return {}
+    found = {}
+    for date_value in sorted(set(dates)):
+        try:
+            day = datetime.strptime(date_value, "%Y-%m-%d").strftime("%Y%m%d")
+            url = f"https://site.api.espn.com/apis/site/v2/sports/soccer/{sport_code}/scoreboard?dates={day}&limit=100"
+            request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+            with urllib.request.urlopen(request, timeout=10) as response:
+                payload = json.loads(response.read().decode("utf-8"))
+        except (urllib.error.URLError, TimeoutError, OSError, ValueError):
+            continue
+        for event in payload.get("events", []):
+            competitions = event.get("competitions") or []
+            if not competitions:
+                continue
+            competition = competitions[0]
+            status = (competition.get("status") or {}).get("type") or {}
+            if not status.get("completed"):
+                continue
+            event_date = parse_date(event.get("date", ""))
+            home = away = None
+            for competitor in competition.get("competitors", []):
+                team = (competitor.get("team") or {}).get("displayName", "").strip()
+                score = competitor.get("score")
+                if competitor.get("homeAway") == "home":
+                    home = (team, score)
+                elif competitor.get("homeAway") == "away":
+                    away = (team, score)
+            if not event_date or not home or not away:
+                continue
+            try:
+                score = (int(float(home[1])), int(float(away[1])))
+            except (ValueError, TypeError):
+                continue
+            found[(event_date, team_key(home[0]), team_key(away[0]))] = score
+    return found
 
 
 def calculate_metrics(records):
@@ -160,6 +208,17 @@ def main():
             indexes[league] = result_index(rows)
         except (urllib.error.URLError, TimeoutError, OSError, ValueError) as error:
             print(f"AVVISO: risultati per {league} ({current_season}) non disponibili: {error}")
+
+    # Se il CSV principale non ha associato l'esito, tenta il tabellone risultati ESPN gratuito.
+    pending_by_league = {}
+    for item in records:
+        if item.get("outcome") is None and item.get("date", "") <= today.isoformat():
+            pending_by_league.setdefault(item.get("league"), []).append(item.get("date"))
+    for league, dates in pending_by_league.items():
+        fallback = fetch_espn_results(league, dates)
+        if fallback:
+            indexes.setdefault(league, {}).update(fallback)
+            print(f"Risultati alternativi ESPN per {league}: {len(fallback)} risultati verificati.")
 
     settled = 0
     for item in records:
