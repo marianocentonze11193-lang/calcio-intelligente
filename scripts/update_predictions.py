@@ -48,6 +48,7 @@ ESPN_LEAGUES = {
     "E0": "eng.1", "E1": "eng.2", "E2": "eng.3", "E3": "eng.4",
     "SP1": "esp.1", "D1": "ger.1", "I1": "ita.1", "F1": "fra.1",
     "SC0": "sco.1", "N1": "ned.1", "P1": "por.1", "B1": "bel.1", "T1": "tur.1",
+    "UCL": "uefa.champions", "UEL": "uefa.europa", "UECL": "uefa.europa.conf",
 }
 
 
@@ -204,6 +205,18 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
         "btts_yes": percent(btts), "btts_no": percent(1 - btts),
         "home_scores": percent(home_scores), "away_scores": percent(away_scores),
     } if valid else {}
+    summary = ""
+    suggested = []
+    if valid:
+        probs_1x2 = [(home_win / total, "1"), (draw / total, "X"), (away_win / total, "2")]
+        best_probability, best_outcome = max(probs_1x2)
+        outcome_text = {"1": f"{home} leggermente favorito", "X": "pareggio da considerare", "2": f"{away} leggermente favorita"}[best_outcome]
+        goal_text = "scenario da almeno 2 gol" if over15 >= 0.70 else "totale gol incerto"
+        btts_text = "entrambe a segno plausibile" if btts >= 0.60 else "Goal/No Goal non netto"
+        summary = f"{outcome_text}; {goal_text}; {btts_text}. Commento automatico basato solo sul modello statistico, non su notizie o quote."
+        if over15 >= 0.70: suggested.append("Over 1,5")
+        if btts >= 0.70: suggested.append("Goal")
+        if best_probability >= 0.70: suggested.append(best_outcome)
     return {
         "id": f"{match_date.isoformat()}-{league}-{home}-{away}",
         "date": match_date.isoformat(), "kickoff": kickoff or "", "league": league,
@@ -211,6 +224,8 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
         "expected_home_goals": round(expected_home, 2),
         "expected_away_goals": round(expected_away, 2),
         "probabilities": probabilities,
+        "analysis": summary,
+        "suggested_markets": suggested,
         "top_scorelines": [
             {"score": f"{h}-{a}", "probability": percent(p)}
             for p, h, a in scorelines[:3]
@@ -358,6 +373,22 @@ def main():
                 skipped += 1
         print(f"{league_name}: pronostici creati {len(fixtures) - skipped}; scartate per storico insufficiente {skipped}.")
 
+    # Competizioni UEFA: mostra il calendario ma evita stime senza storico omogeneo verificato.
+    for code, league_name in [("UCL", "Champions League"), ("UEL", "Europa League"), ("UECL", "Conference League")]:
+        for home, away, match_date, kickoff in fetch_espn_fixtures(code, today, last_date):
+            forecasts.append({
+                "id": f"{match_date.isoformat()}-{league_name}-{home}-{away}",
+                "date": match_date.isoformat(), "kickoff": kickoff, "league": league_name,
+                "home_team": home, "away_team": away, "expected_home_goals": None,
+                "expected_away_goals": None, "probabilities": {}, "top_scorelines": [],
+                "sample_matches": 0, "home_matches_sample": 0, "away_matches_sample": 0,
+                "status": "NO BET",
+                "reason": "Competizione europea: storico comparabile insufficiente per stimare un pronostico affidabile.",
+                "analysis": "Partita visibile a calendario, ma nessun esito viene consigliato finché non sono disponibili dati storici verificabili.",
+                "suggested_markets": [], "confidence": "non valutabile",
+                "method": "NO BET: calendario ESPN, storico statistico non validato"
+            })
+
     if downloaded == 0:
         raise SystemExit("Nessuna fonte dati raggiungibile: il file precedente è stato mantenuto.")
 
@@ -373,6 +404,7 @@ def main():
         "source": SOURCE, "season": season,
         "model": "Poisson semplice con filtro storico minimo; stime indicative, non garanzie",
         "leagues_checked": downloaded,
+        "no_bet_notice": "Le partite NO BET sono mostrate perché i dati non bastano o non sono comparabili. Nessun esito consigliato.",
         "matches": [item for item in forecasts if item.get("status") == "Pronostico valutabile"][:80],
         "no_bet_matches": [item for item in forecasts if item.get("status") == "NO BET"][:80],
         "notice": "Le probabilità sono stime statistiche e non garantiscono risultati.",
