@@ -59,6 +59,14 @@ class PredictionModelTests(unittest.TestCase):
         key = ("2026-10-15", archive_module.team_key("Milan"), archive_module.team_key("Roma"))
         self.assertEqual(index[key], (2, 1))
 
+    def test_archive_selects_season_from_match_date(self):
+        self.assertEqual(archive_module.season_code_for_match("2026-10-15"), "2627")
+        self.assertEqual(archive_module.season_code_for_match("2026-05-15"), "2526")
+
+    def test_archive_supports_same_leagues_as_forecast_calendar(self):
+        for league in module.LEAGUES.values():
+            self.assertIn(league, archive_module.ESPN_LEAGUES)
+
     def test_backtest_metrics_calculate_accuracy_and_brier_score(self):
         records = [{
             "outcome": "1",
@@ -142,8 +150,10 @@ class PredictionModelTests(unittest.TestCase):
             "Casa", "Trasferta", "Test League", date(2026, 10, 16), "18:00",
             history, 1.4, 1.1,
         )
-        self.assertEqual(forecast["status"], "Stima preliminare")
+        self.assertEqual(forecast["status"], "NO BET")
+        self.assertEqual(forecast["no_bet_type"], "campione_insufficiente")
         self.assertEqual(forecast["away_matches_sample"], 0)
+        self.assertEqual(forecast["probabilities"], {})
         self.assertEqual(forecast["suggested_markets"], [])
 
     def test_small_samples_get_preliminary_estimate_instead_of_false_no_bet(self):
@@ -229,8 +239,16 @@ class PredictionModelTests(unittest.TestCase):
             history, 1.4, 1.1,
         )
         self.assertEqual(forecast["status"], "NO BET")
-        self.assertEqual(forecast["no_bet_type"], "stima_non_affidabile")
-        self.assertIn("non adatta a una stima affidabile", forecast["reason"])
+        self.assertEqual(forecast["no_bet_type"], "campione_insufficiente")
+        self.assertIn("Campione insufficiente", forecast["reason"])
+        category, reason = module.classify_no_bet(5, 5, data_quality_ok=False)
+        self.assertEqual(category, "stima_non_affidabile")
+        self.assertIn("non adatta a una stima affidabile", reason)
+
+    def test_no_bet_categories_are_explicit(self):
+        self.assertEqual(module.classify_no_bet(0, 0)[0], "dati_mancanti")
+        self.assertEqual(module.classify_no_bet(1, 3)[0], "campione_insufficiente")
+        self.assertEqual(module.classify_no_bet(5, 5, data_quality_ok=False)[0], "stima_non_affidabile")
 
     def test_forecast_probabilities_are_bounded(self):
         history = defaultdict(lambda: {
