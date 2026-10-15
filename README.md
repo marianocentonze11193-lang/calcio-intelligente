@@ -51,3 +51,20 @@ Il flusso opzionale `scripts/enrich_with_availability.py` usa API-Football (API-
 - La fonte può avere copertura incompleta per campionato. Un elenco vuoto significa solo che non sono state trovate segnalazioni nella risposta, non che tutti i giocatori siano certamente disponibili.
 - Le informazioni di disponibilità sono mostrate come contesto e non modificano automaticamente le probabilità del modello.
 - Per attivare: repository GitHub → Settings → Secrets and variables → Actions → New repository secret → nome `API_FOOTBALL_KEY`, valore della chiave API-Football. Non inserire mai la chiave nei file del repository.
+
+
+## Obiettivo e limiti
+
+Il progetto usa un modello statistico sperimentale (Poisson, prior di lega, Elo e forma recente). Le probabilità sono stime, non certezze e non costituiscono una garanzia di vincita o redditività. Le etichette di fiducia descrivono la quantità di dati, non una probabilità di successo verificata.
+
+### Funzioni gratuite e integrazioni opzionali
+
+- Il sito statico e gli aggiornamenti pianificati sono pubblicati tramite GitHub Pages e GitHub Actions.
+- I calendari e i risultati provengono da fonti pubbliche gratuite quando disponibili; le coperture possono variare per competizione e stagione.
+- Gemini, quote bookmaker e dati su infortuni/formazioni sono integrazioni opzionali con chiavi personali e quote/limiti del rispettivo fornitore. Non sono necessarie per visualizzare le stime statistiche di base e non si deve presumere che ogni endpoint o piano resti gratuito per sempre.
+- Quando mancano dati, il sistema deve mostrare NO BET e spiegare il motivo, senza inventare probabilità, quote, infortuni o formazioni.
+- Le statistiche storiche (accuratezza 1X2 e Brier score) sono mostrate solo dopo l'associazione a risultati finali verificati. Un campione piccolo non dimostra un vantaggio sulle quote o una redditività positiva.
+
+### Aggiornamento e controllo
+
+GitHub Actions tenta l'aggiornamento ogni ora. In caso di errore di una fonte, controllare la scheda Actions del repository. Il completamento del workflow prova che il processo è terminato senza errori tecnici, non che ogni campionato abbia dati completi.
