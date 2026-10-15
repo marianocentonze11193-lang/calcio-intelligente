@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - "scripts/update_predictions.py"
+      - "tests/**"
       - ".github/workflows/update.yml"
   schedule:
     - cron: "23 * * * *"
