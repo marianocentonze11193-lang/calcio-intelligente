@@ -1,6 +1,8 @@
 "use strict";
 
-const DATA_URL = "./data/predictions.json";\nconst HISTORY_URL = "./data/history.json";
+const DATA_URL = "./data/predictions.json";
+const HISTORY_URL = "./data/history.json";
+const HISTORY_URL = "./data/history.json";
 
 function formatDate(value) {
   if (!value) return "Data da confermare";
@@ -293,6 +295,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const pulsante = document.getElementById("refresh");
   if (pulsante) {
     pulsante.addEventListener("click", aggiornaDati);
-    aggiornaDati();\n    aggiornaStorico();
+    aggiornaDati();
+    aggiornaStorico();
+    aggiornaStorico();
   }
 });
