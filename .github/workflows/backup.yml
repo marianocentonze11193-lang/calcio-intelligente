@@ -1,0 +1,46 @@
+name: Backup completo settimanale
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "41 3 * * 1"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: backup-completo-settimanale
+  cancel-in-progress: false
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Scarica tutta la cronologia Git
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Crea bundle completo e verifica che sia leggibile
+        id: bundle
+        shell: bash
+        run: |
+          set -euo pipefail
+          DATE="$(date -u +%Y-%m-%d)"
+          FILE="calcio-intelligente-backup-${DATE}.bundle"
+          git bundle create "$FILE" --all
+          git bundle verify "$FILE"
+          test -s "$FILE"
+          echo "date=$DATE" >> "$GITHUB_OUTPUT"
+          echo "file=$FILE" >> "$GITHUB_OUTPUT"
+          sha256sum "$FILE" | tee "${FILE}.sha256"
+      - name: Pubblica il backup come release GitHub
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="backup-${{ steps.bundle.outputs.date }}"
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            echo "La release $TAG esiste già; non la sovrascrivo."
+            exit 0
+          fi
+          gh release create "$TAG" "${{ steps.bundle.outputs.file }}" "${{ steps.bundle.outputs.file }}.sha256"             --title "Backup completo ${{ steps.bundle.outputs.date }}"             --notes "Snapshot automatico del repository con cronologia Git completa. Il bundle è stato verificato con git bundle verify. Conservare anche una copia su un dispositivo personale: questo backup resta nello stesso account GitHub."
