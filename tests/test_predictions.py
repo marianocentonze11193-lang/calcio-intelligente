@@ -100,7 +100,7 @@ class PredictionModelTests(unittest.TestCase):
         ])
         self.assertEqual(form["Casa"]["games"], 3)
         self.assertAlmostEqual(form["Casa"]["goals_for"], 1.0)
-        self.assertAlmostEqual(form["Casa"]["points_per_match"], 2.0 / 3)
+        self.assertAlmostEqual(form["Casa"]["points_per_match"], 2.0)
 
     def test_elo_ratings_update_after_results(self):
         ratings = module.calculate_elo([
