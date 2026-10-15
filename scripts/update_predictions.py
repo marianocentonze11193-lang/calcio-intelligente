@@ -366,6 +366,7 @@ def main():
     season = current_season_code(today)
     last_date = today + timedelta(days=MAX_DAYS_AHEAD)
     forecasts, downloaded, failed = [], 0, []
+    historical_available = []
     fixture_odds = {}
 
     # Football-data pubblica le prossime partite in un CSV separato.
@@ -427,6 +428,9 @@ def main():
                     print(f"{league_name}: uso {previous_season} come storico iniziale.")
             except (urllib.error.URLError, TimeoutError, OSError, ValueError) as error:
                 print(f"AVVISO: storico precedente {code} non disponibile: {error}")
+
+        if completed:
+            historical_available.append(league_name)
 
         # Aggiunge il calendario generale, che contiene le prossime partite.
         known_teams = {team for match in completed for team in match[:2]}
@@ -570,6 +574,15 @@ def main():
         "source": SOURCE, "season": season,
         "model": "Poisson casa/trasferta con prior di lega e correzione Elo; stime sperimentali, non garanzie",
         "leagues_checked": downloaded,
+        "coverage": {
+            "leagues_configured": len(LEAGUES),
+            "csv_downloaded": downloaded,
+            "leagues_with_history": sorted(set(historical_available)),
+            "leagues_without_history": sorted(set(LEAGUES.values()) - set(historical_available)),
+            "matches_with_estimates": sum(1 for item in forecasts if item.get("status") in ("Pronostico valutabile", "Stima preliminare")),
+            "matches_no_bet": sum(1 for item in forecasts if item.get("status") == "NO BET"),
+            "failed_sources": failed,
+        },
         "no_bet_notice": "Le partite NO BET sono mostrate perché i dati non bastano o non sono comparabili. Nessun esito consigliato.",
         "matches": [item for item in forecasts if item.get("status") in ("Pronostico valutabile", "Stima preliminare")][:120],
         "no_bet_matches": [item for item in forecasts if item.get("status") == "NO BET"][:80],
