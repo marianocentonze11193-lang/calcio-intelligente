@@ -22,7 +22,7 @@ LEAGUES = {
 OUTPUT = Path("data/predictions.json")
 USER_AGENT = "CalcioIntelligente/1.0"
 MAX_DAYS_AHEAD = 5
-MIN_TEAM_MATCHES = 4
+MIN_TEAM_MATCHES = 3
 PRIOR_MATCHES = 3
 
 
@@ -239,7 +239,7 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
         "away_matches_sample": away_sample,
         "status": "Pronostico valutabile" if valid else "NO BET",
         "reason": "" if valid else f"Storico insufficiente: servono almeno {MIN_TEAM_MATCHES} gare casalinghe per la squadra di casa e {MIN_TEAM_MATCHES} trasferte per quella ospite.",
-        "confidence": "media" if sample >= 8 else "iniziale",
+        "confidence": "più solida" if sample >= 8 else "intermedia" if sample >= 5 else "bassa (campione ridotto)",
         "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato",
     }
 
