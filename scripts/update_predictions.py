@@ -32,6 +32,13 @@ LEAGUES = {
 FOOTBALL_DATA_LEAGUES = frozenset({
     "E0", "SP1", "D1", "I1", "F1", "SC0", "N1", "P1", "B1", "T1", "G1",
 })
+# Football-data pubblica queste competizioni in CSV cumulativi /new/{CODICE}.csv.
+# Si limita lo storico importato all'ultimo anno per evitare di mescolare stagioni
+# troppo lontane, mantenendo copertura utile anche per i campionati a calendario solare.
+EXTRA_FOOTBALL_DATA_LEAGUES = frozenset({
+    "AUT", "DNK", "FIN", "IRL", "NOK", "POL", "RO", "SWE", "SWZ",
+})
+EXTRA_HISTORY_DAYS = 365
 LEAGUE_COUNTRIES = {
     "Premier League": "Inghilterra", "La Liga": "Spagna", "Bundesliga": "Germania",
     "Serie A": "Italia", "Ligue 1": "Francia", "Scottish Premiership": "Scozia",
@@ -473,8 +480,16 @@ def main():
             except (urllib.error.URLError, TimeoutError, OSError, ValueError) as error:
                 failed.append(f"{code}: {error}")
                 print(f"AVVISO: storico principale {code} non disponibile: {error}; provo calendario alternativo.")
+        elif code in EXTRA_FOOTBALL_DATA_LEAGUES:
+            try:
+                rows = fetch_csv(f"{SOURCE}/new/{code}.csv")
+                downloaded += 1
+                print(f"{league_name}: CSV cumulativo gratuito scaricato ({code}).")
+            except (urllib.error.URLError, TimeoutError, OSError, ValueError) as error:
+                failed.append(f"{code}: {error}")
+                print(f"AVVISO: CSV cumulativo {code} non disponibile: {error}; provo il fallback ESPN.")
         else:
-            print(f"{league_name}: CSV storico non previsto dalla fonte football-data; provo il fallback ESPN.")
+            print(f"{league_name}: nessun CSV dedicato configurato; provo il fallback ESPN.")
 
         completed, fixtures = [], []
         # Conserva eventuali fixture presenti nel file del campionato.
@@ -483,6 +498,10 @@ def main():
             away = (row.get("AwayTeam") or row.get("Away Team") or "").strip()
             match_date = parse_date(row.get("Date") or row.get("date"))
             if not home or not away or not match_date:
+                continue
+            # I CSV /new/ contengono più stagioni: limita i risultati usati dal
+            # modello all'ultimo anno, evitando che dati vecchi dominino la forma.
+            if code in EXTRA_FOOTBALL_DATA_LEAGUES and match_date < today - timedelta(days=EXTRA_HISTORY_DAYS):
                 continue
             hg = number(row.get("FTHG") or row.get("HG") or row.get("home_goals"))
             ag = number(row.get("FTAG") or row.get("AG") or row.get("away_goals"))
