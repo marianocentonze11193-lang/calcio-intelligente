@@ -11,6 +11,7 @@ import urllib.request
 from collections import defaultdict
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 SOURCE = "https://www.football-data.co.uk"
 # Solo massime divisioni nazionali con risultati storici disponibili nella fonte primaria.
@@ -56,6 +57,13 @@ ESPN_LEAGUES = {
     "SC0": "sco.1", "N1": "ned.1", "P1": "por.1", "B1": "bel.1", "T1": "tur.1",
     "UCL": "uefa.champions", "UEL": "uefa.europa", "UECL": "uefa.europa.conf",
 }
+ESPN_TIMEZONES = {
+    "E0": "Europe/London", "SC0": "Europe/London", "SP1": "Europe/Madrid",
+    "D1": "Europe/Berlin", "I1": "Europe/Rome", "F1": "Europe/Paris",
+    "N1": "Europe/Amsterdam", "P1": "Europe/Lisbon", "B1": "Europe/Brussels",
+    "T1": "Europe/Istanbul", "UCL": "Europe/Rome", "UEL": "Europe/Rome",
+    "UECL": "Europe/Rome",
+}
 
 
 def fetch_espn_fixtures(league_code, today, last_date):
@@ -90,7 +98,13 @@ def fetch_espn_fixtures(league_code, today, last_date):
             if status.get("completed"):
                 continue
             raw_date = event.get("date", "")
-            match_date = parse_date(raw_date)
+            try:
+                event_dt = datetime.fromisoformat(raw_date.replace("Z", "+00:00"))
+                local_dt = event_dt.astimezone(ZoneInfo(ESPN_TIMEZONES.get(league_code, "Europe/Rome")))
+                match_date = local_dt.date()
+            except (ValueError, TypeError):
+                match_date = parse_date(raw_date)
+                local_dt = None
             if not match_date or not (today <= match_date <= last_date):
                 continue
             home = away = ""
@@ -101,7 +115,7 @@ def fetch_espn_fixtures(league_code, today, last_date):
                 elif competitor.get("homeAway") == "away":
                     away = team
             if home and away:
-                kickoff = raw_date[11:16] if "T" in raw_date else ""
+                kickoff = local_dt.strftime("%H:%M") if local_dt else (raw_date[11:16] if "T" in raw_date else "")
                 item = (home, away, match_date, kickoff)
                 if item not in fixtures:
                     fixtures.append(item)
