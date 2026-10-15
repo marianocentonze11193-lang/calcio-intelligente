@@ -15,6 +15,8 @@ DATA_FILE = Path("data/predictions.json")
 CACHE_FILE = Path("data/availability_cache.json")
 BASE_URL = "https://v3.football.api-sports.io"
 REFRESH_SECONDS = 6 * 60 * 60
+# Il piano rilevato consente oggi e domani: limita le richieste alle date accessibili.
+API_DAYS_AHEAD = 1
 MAX_LINEUP_CALLS_PER_RUN = 1
 TIMEZONE = "Europe/Rome"
 
@@ -97,6 +99,7 @@ def load_cache():
             "injury_checked_dates": [],
             "lineups_by_fixture": {},
             "lineup_attempts": {},
+            "unavailable_dates": {},
         }
     try:
         cache = json.loads(CACHE_FILE.read_text(encoding="utf-8"))
@@ -107,6 +110,7 @@ def load_cache():
         cache.setdefault("injury_checked_dates", [])
         cache.setdefault("lineups_by_fixture", {})
         cache.setdefault("lineup_attempts", {})
+        cache.setdefault("unavailable_dates", {})
         return cache
     except (OSError, ValueError):
         return {
@@ -119,8 +123,17 @@ def load_cache():
         }
 
 
+def add_unique_injury(cache, fixture_id, entry):
+    entries = cache.setdefault("injuries_by_fixture", {}).setdefault(str(fixture_id), [])
+    identity = (entry.get("team"), entry.get("player"), entry.get("type"), entry.get("reason"))
+    if any((old.get("team"), old.get("player"), old.get("type"), old.get("reason")) == identity for old in entries):
+        return False
+    entries.append(entry)
+    return True
+
+
 def full_refresh(api_key, cache, today):
-    dates = [(today + timedelta(days=offset)).isoformat() for offset in range(6)]
+    dates = [(today + timedelta(days=offset)).isoformat() for offset in range(API_DAYS_AHEAD + 1)]
     for day in dates:
         try:
             fixtures = api_get(api_key, "fixtures", {"date": day, "timezone": TIMEZONE})
@@ -136,8 +149,7 @@ def full_refresh(api_key, cache, today):
                     continue
                 normalized.append({
                     "id": str(fixture_id),
-                    "date": start.astimezone(timezone(timedelta(hours=2))).date().isoformat()
-                    if False else str(fixture.get("date", ""))[:10],
+                    "date": str(fixture.get("date", ""))[:10],
                     "kickoff_utc": start.isoformat(),
                     "home": home,
                     "away": away,
@@ -145,6 +157,7 @@ def full_refresh(api_key, cache, today):
                     "league": (item.get("league") or {}).get("name", ""),
                 })
             cache["fixtures_by_date"][day] = normalized
+            cache.setdefault("unavailable_dates", {}).pop(day, None)
             injuries = api_get(api_key, "injuries", {"date": day, "timezone": TIMEZONE})
             # La richiesta è andata a buon fine: l'assenza di record non viene
             # interpretata come prova che tutti i giocatori siano disponibili.
@@ -164,10 +177,12 @@ def full_refresh(api_key, cache, today):
                     "type": player.get("type") or "Indisponibilità",
                     "reason": player.get("reason") or "",
                 }
-                cache["injuries_by_fixture"].setdefault(fixture_id, []).append(entry)
+                add_unique_injury(cache, fixture_id, entry)
             print(f"{day}: {len(normalized)} partite API-Football, {len(injuries)} segnalazioni indisponibilità.")
         except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, OSError, ValueError, KeyError) as error:
             # Mantieni l'ultimo dato valido per questa data, senza bloccare i pronostici.
+            if "Free plans do not have access to this date" in str(error):
+                cache.setdefault("unavailable_dates", {})[day] = "Data fuori copertura del piano API-Football configurato."
             print(f"AVVISO disponibilità {day}: {error}. Mantengo la cache precedente.")
     cache["last_full_refresh"] = now_utc().isoformat()
 
@@ -250,6 +265,16 @@ def availability_for(match, cache, configured):
         }
     fixture = match_fixture(match, cache)
     if not fixture:
+        day = str(match.get("date") or "")[:10]
+        unavailable = cache.get("unavailable_dates", {}).get(day)
+        if unavailable:
+            return {
+                "status": "fuori_copertura_api",
+                "source": "API-Football",
+                "note": unavailable + " Le probabilità non vengono corrette con dati non verificati.",
+                "injuries": [],
+                "lineups": None,
+            }
         return {
             "status": "non_trovata",
             "source": "API-Football",
