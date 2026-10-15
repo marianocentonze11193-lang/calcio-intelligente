@@ -214,12 +214,14 @@ def calculate_metrics_by_league(records):
     for item in records:
         league = item.get("league") or "Competizione sconosciuta"
         grouped.setdefault(league, []).append(item)
-    return {
-        league: calculate_metrics(items)
-        for league, items in sorted(grouped.items())
-        if sum(1 for x in items if x.get("outcome") in ("1", "X", "2")
-               and isinstance(x.get("probabilities"), dict)) >= MIN_METRIC_MATCHES
-    }
+    metrics_by_league = {}
+    for league, items in sorted(grouped.items()):
+        metrics = calculate_metrics(items)
+        # Applica la soglia dopo tutti i controlli di validità, non contando
+        # semplicemente i record che contengono un dizionario probabilità.
+        if metrics.get("settled_matches", 0) >= MIN_METRIC_MATCHES:
+            metrics_by_league[league] = metrics
+    return metrics_by_league
 
 
 def main():
