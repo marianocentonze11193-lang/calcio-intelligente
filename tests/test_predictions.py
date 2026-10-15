@@ -52,6 +52,18 @@ class PredictionModelTests(unittest.TestCase):
             self.assertIn(module.LEAGUES[code], module.LEAGUE_COUNTRIES)
             self.assertIn(code, module.ESPN_LEAGUES)
 
+    def test_forecast_initializes_value_bets_list(self):
+        history = defaultdict(lambda: {
+            "played": 12, "home_games": 3, "away_games": 3,
+            "home_scored": 9, "home_conceded": 6,
+            "away_scored": 7, "away_conceded": 8,
+        })
+        forecast = module.make_forecast(
+            "Casa", "Trasferta", "Test League", date(2026, 10, 16), "18:00",
+            history, 1.4, 1.1,
+        )
+        self.assertEqual(forecast["value_bets"], [])
+
     def test_odds_parser_selects_best_1x2_prices(self):
         event = {
             "home_team": "Milan", "away_team": "Roma",
