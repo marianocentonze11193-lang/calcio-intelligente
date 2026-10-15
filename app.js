@@ -469,8 +469,21 @@ async function aggiornaDati() {
       ? "STIME DISPONIBILI · " + validMatches.length + " partite con probabilità; " + noBetMatches.length + " NO BET senza dati sufficienti. Le stime preliminari sono indicate come tali."
       : "NO BET · Nessuna partita ha dati sufficienti per stimare probabilità; il calendario mostra le partite disponibili.")
       + coverageNote + coverageWarning;
-    const stamp = dati.updated_at ? new Date(dati.updated_at).toLocaleString("it-IT") : "non disponibile";
-    aggiornamento.textContent = "Ultimo calcolo salvato: " + stamp + ". Il pulsante ricarica il file pubblicato; non avvia direttamente il calcolo sul server.";
+    const parsedUpdate = dati.updated_at ? new Date(dati.updated_at) : null;
+    const validUpdate = parsedUpdate && !Number.isNaN(parsedUpdate.getTime());
+    const dataAgeHours = validUpdate ? (Date.now() - parsedUpdate.getTime()) / 3600000 : Infinity;
+    const staleWarning = !validUpdate || dataAgeHours < 0 || dataAgeHours > 36;
+    const stamp = validUpdate ? parsedUpdate.toLocaleString("it-IT") : "non disponibile";
+    const failedSources = Array.isArray(coverage.failed_sources) ? coverage.failed_sources : [];
+    if (failedSources.length) {
+      stato.textContent += " Fonti con problemi: " + failedSources.join(", ") + ".";
+    }
+    if (staleWarning) {
+      stato.textContent = "ATTENZIONE · I dati pubblicati sono obsoleti o hanno un timestamp non valido. Non considerarli aggiornati. " + stato.textContent;
+    }
+    aggiornamento.textContent = "Ultimo calcolo salvato: " + stamp +
+      (staleWarning ? " · ATTENZIONE: dati più vecchi di 36 ore o data non valida." : "") +
+      ". Il pulsante ricarica il file pubblicato; non avvia direttamente il calcolo sul server.";
   } catch (errore) {
     stato.textContent = "DATI NON DISPONIBILI · L'aggiornamento non è riuscito.";
     const container = document.getElementById("matches");
