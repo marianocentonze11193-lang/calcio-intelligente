@@ -1,14 +1,13 @@
 import importlib.util
 import unittest
+from collections import defaultdict
+from datetime import date
+from pathlib import Path
 
 GEMINI_SCRIPT = Path(__file__).resolve().parents[1] / "scripts" / "enrich_with_gemini.py"
 GEMINI_SPEC = importlib.util.spec_from_file_location("enrich_with_gemini", GEMINI_SCRIPT)
 gemini_module = importlib.util.module_from_spec(GEMINI_SPEC)
 GEMINI_SPEC.loader.exec_module(gemini_module)
-from collections import defaultdict
-from datetime import date
-from pathlib import Path
-
 SCRIPT = Path(__file__).resolve().parents[1] / "scripts" / "update_predictions.py"
 SPEC = importlib.util.spec_from_file_location("update_predictions", SCRIPT)
 module = importlib.util.module_from_spec(SPEC)
@@ -18,7 +17,7 @@ SPEC.loader.exec_module(module)
 class PredictionModelTests(unittest.TestCase):
     def test_gemini_json_parser_accepts_plain_and_markdown_json(self):
         self.assertEqual(gemini_module.extract_json('{"analyses": []}'), {"analyses": []})
-        self.assertEqual(gemini_module.extract_json('```json\\n{"analyses": []}\\n```'), {"analyses": []})
+        self.assertEqual(gemini_module.extract_json('```json\n{"analyses": []}\n```'), {"analyses": []})
 
     def test_poisson_probabilities_sum_to_one(self):
         probabilities = module.poisson_probs(1.7)
