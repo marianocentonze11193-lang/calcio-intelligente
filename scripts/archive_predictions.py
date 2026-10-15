@@ -27,6 +27,9 @@ LEAGUES = {
     "NOK": "Eliteserien norvegese", "POL": "Ekstraklasa polacca", "RO": "Liga I rumena",
     "SWE": "Allsvenskan svedese", "SWZ": "Super League svizzera",
 }
+EXTRA_FOOTBALL_DATA_LEAGUES = frozenset({
+    "AUT", "DNK", "FIN", "IRL", "NOK", "POL", "RO", "SWE", "SWZ",
+})
 ESPN_LEAGUES = {
     "Premier League": "eng.1", "Championship": "eng.2", "League One": "eng.3", "League Two": "eng.4",
     "La Liga": "esp.1", "Bundesliga": "ger.1",
@@ -275,7 +278,11 @@ def main():
         if not code:
             continue
         try:
-            rows = read_csv(f"{SOURCE}/mmz4281/{season}/{code}.csv")
+            # Per Austria, Danimarca, Finlandia, Irlanda, Norvegia, Polonia,
+            # Romania, Svezia e Svizzera i risultati sono nel CSV cumulativo.
+            url = (f"{SOURCE}/new/{code}.csv" if code in EXTRA_FOOTBALL_DATA_LEAGUES
+                   else f"{SOURCE}/mmz4281/{season}/{code}.csv")
+            rows = read_csv(url)
             indexes.setdefault(league, {}).update(result_index(rows))
         except (urllib.error.URLError, TimeoutError, OSError, ValueError) as error:
             print(f"AVVISO: risultati per {league} ({season}) non disponibili: {error}")
