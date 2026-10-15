@@ -37,6 +37,7 @@ class PredictionModelTests(unittest.TestCase):
         self.assertTrue(expected.issubset(module.LEAGUES))
         self.assertTrue(expected.isdisjoint(module.FOOTBALL_DATA_LEAGUES))
         self.assertEqual(module.EXTRA_HISTORY_DAYS, 365)
+        self.assertEqual(archive_module.EXTRA_FOOTBALL_DATA_LEAGUES, expected)
 
     def test_published_data_timestamp_rejects_stale_future_and_invalid_values(self):
         from datetime import datetime, timezone, timedelta
