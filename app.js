@@ -5,6 +5,36 @@ const HISTORY_URL = "./data/history.json";
 let allLoadedMatches = [];
 let lastRefreshAt = 0;
 
+// Evita che una rete mobile lenta lasci la schermata bloccata indefinitamente.
+async function fetchJsonWithTimeout(url, timeoutMs = 12000) {
+  const controller = new AbortController();
+  const timeoutId = window.setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    const response = await fetch(url, { cache: "no-store", signal: controller.signal });
+    if (!response.ok) throw new Error("Risposta HTTP " + response.status);
+    return await response.json();
+  } finally {
+    window.clearTimeout(timeoutId);
+  }
+}
+
+function isValidMatchRecord(match, expectedStatus) {
+  if (!match || typeof match !== "object" || Array.isArray(match)) return false;
+  if (typeof match.date !== "string" || !/^\\d{4}-\\d{2}-\\d{2}$/.test(match.date) ||
+      Number.isNaN(Date.parse(match.date + "T12:00:00Z"))) return false;
+  if (typeof match.home_team !== "string" || !match.home_team.trim() ||
+      typeof match.away_team !== "string" || !match.away_team.trim() ||
+      match.home_team.trim().toLocaleLowerCase() === match.away_team.trim().toLocaleLowerCase()) return false;
+  if (expectedStatus === "NO BET") return match.status === "NO BET" &&
+    (match.probabilities == null || (typeof match.probabilities === "object" && Object.keys(match.probabilities).length === 0));
+  if (match.status !== "Pronostico valutabile" && match.status !== "Stima preliminare") return false;
+  const p = match.probabilities;
+  if (!p || typeof p !== "object") return false;
+  const core = [p.home_win, p.draw, p.away_win];
+  return core.every(value => typeof value === "number" && Number.isFinite(value) && value >= 0 && value <= 100) &&
+    Math.abs(core.reduce((sum, value) => sum + value, 0) - 100) <= 1.5;
+}
+
 function formatDate(value) {
   if (!value) return "Data da confermare";
   const parsed = new Date(value + "T12:00:00");
@@ -390,9 +420,11 @@ function renderHistory(history) {
 async function aggiornaStorico() {
   const listNode = document.getElementById("history-list");
   try {
-    const response = await fetch(HISTORY_URL + "?t=" + Date.now(), { cache: "no-store" });
-    if (!response.ok) throw new Error("Archivio non disponibile");
-    renderHistory(await response.json());
+    const history = await fetchJsonWithTimeout(HISTORY_URL + "?t=" + Date.now());
+    if (!history || !Array.isArray(history.records) || !history.metrics || typeof history.metrics !== "object") {
+      throw new Error("Formato archivio non valido");
+    }
+    renderHistory(history);
   } catch (error) {
     if (listNode) listNode.textContent = "Lo storico non è ancora disponibile. Verrà pubblicato dopo il prossimo aggiornamento automatico.";
   }
@@ -408,10 +440,8 @@ async function aggiornaDati() {
   stato.textContent = "Ricarico le stime già pubblicate…";
 
   try {
-    const risposta = await fetch(DATA_URL + "?t=" + Date.now(), { cache: "no-store" });
-    if (!risposta.ok) throw new Error("File dati non disponibile");
-    const dati = await risposta.json();
-    if (!Array.isArray(dati.matches)) throw new Error("Formato dati non valido");
+    const dati = await fetchJsonWithTimeout(DATA_URL + "?t=" + Date.now());
+    if (!dati || !Array.isArray(dati.matches)) throw new Error("Formato dati non valido");
     lastRefreshAt = Date.now();
 
     // Mostra soltanto oggi e i prossimi 5 giorni: 6 date di calendario in totale.
@@ -428,7 +458,9 @@ async function aggiornaDati() {
 
     const firstDate = isoLocalDate(today);
     const lastDate = isoLocalDate(lastDay);
+    const rejectedForecasts = dati.matches.filter(match => !isValidMatchRecord(match)).length;
     const validMatches = dati.matches
+      .filter(match => isValidMatchRecord(match))
       .filter(match => match.date >= firstDate && match.date <= lastDate)
       .sort((a, b) =>
         (a.country || "Altro").localeCompare(b.country || "Altro", "it") ||
@@ -437,7 +469,10 @@ async function aggiornaDati() {
         (a.kickoff || "99:99").localeCompare(b.kickoff || "99:99") ||
         (a.home_team || "").localeCompare(b.home_team || "", "it")
       );
-    const noBetMatches = (Array.isArray(dati.no_bet_matches) ? dati.no_bet_matches : [])
+    const rawNoBetMatches = Array.isArray(dati.no_bet_matches) ? dati.no_bet_matches : [];
+    const rejectedNoBets = rawNoBetMatches.filter(match => !isValidMatchRecord(match, "NO BET")).length;
+    const noBetMatches = rawNoBetMatches
+      .filter(match => isValidMatchRecord(match, "NO BET"))
       .filter(match => match.date >= firstDate && match.date <= lastDate)
       .sort((a, b) =>
         a.date.localeCompare(b.date) ||
