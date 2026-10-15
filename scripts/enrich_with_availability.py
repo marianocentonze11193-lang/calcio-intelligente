@@ -43,9 +43,19 @@ def normalize_team(value):
 
 
 ALIASES = [
-    {"inter", "intermilan", "fcinternazionale", "internazionale"},
-    {"milan", "acmilan"},
+    {"inter", "intermilan", "fcinternazionale", "internazionale", "internazionalefc"},
+    {"milan", "acmilan", "acmilan1899"},
+    {"bologna", "bolognafc", "bolognafc1909"},
+    {"atalanta", "atalantabc", "atalantabergamasca"},
+    {"juventus", "juve", "juventusfc"},
+    {"roma", "asroma", "associazionesportivaroma"},
+    {"napoli", "sscnapoli", "societasportivacalcionapoli"},
+    {"fiorentina", "acfiorentina"},
+    {"lazio", "sslazio"},
+    {"torino", "torinofc"},
+    {"verona", "hellasverona"},
     {"psg", "parissaintgermain", "parissaintgermainfc"},
+    {"parisfc", "parisfootballclub"},
     {"ajax", "ajaxamsterdam", "afcajax"},
     {"groningen", "fcgroningen"},
     {"twente", "fctwente"},
@@ -66,7 +76,19 @@ ALIASES = [
     {"westham", "westhamunited"},
     {"leicester", "leicestercity"},
     {"brighton", "brightonandhovealbion"},
+    {"eintrachtfrankfurt", "eintracht"},
+    {"borussiadortmund", "dortmund"},
+    {"borussiamonchengladbach", "monchengladbach", "gladbach"},
+    {"rbLeipzig", "rasenballsportleipzig", "rbleipzig"},
+    {"olympiquedemarseille", "marseille"},
+    {"olympiquelyonnais", "lyon"},
+    {"realbetis", "betis"},
+    {"realsociedad", "sociedad"},
+    {"celta", "celtavigo"},
+    {"internacional", "internacionalportoalegre"}
 ]
+
+
 
 
 def team_keys(value):
