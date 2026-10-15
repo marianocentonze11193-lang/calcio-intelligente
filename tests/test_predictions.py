@@ -73,7 +73,7 @@ class PredictionModelTests(unittest.TestCase):
             "probabilities": {"home_win": 70, "draw": 20, "away_win": 10},
         } for _ in range(30)]
         metrics = archive_module.calculate_metrics(records)
-        self.assertEqual(metrics["settled_matches"], 1)
+        self.assertEqual(metrics["settled_matches"], 30)
         self.assertEqual(metrics["accuracy_1x2"], 100.0)
         self.assertAlmostEqual(metrics["brier_score_1x2"], 0.14, places=4)
 
@@ -121,7 +121,8 @@ class PredictionModelTests(unittest.TestCase):
               "probabilities": {"home_win": 20, "draw": 20, "away_win": 60}} for _ in range(30)]
         )
         metrics = archive_module.calculate_metrics_by_league(records)
-        self.assertEqual(metrics["Serie A"]["settled_matches"], 1)
+        self.assertEqual(metrics["Serie A"]["settled_matches"], 30)
+        self.assertEqual(metrics["Premier League"]["settled_matches"], 30)
         self.assertEqual(metrics["Premier League"]["accuracy_1x2"], 100.0)
 
     def test_odds_parser_selects_best_1x2_prices(self):
