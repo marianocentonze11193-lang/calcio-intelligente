@@ -113,6 +113,15 @@ class PredictionModelTests(unittest.TestCase):
         self.assertIsNone(metrics["brier_score_1x2"])
         self.assertEqual(metrics["minimum_matches_required"], 30)
 
+    def test_invalid_probabilities_do_not_unlock_league_metrics(self):
+        records = [
+            {"league": "Serie A", "outcome": "1",
+             "probabilities": {"home_win": 80, "draw": 30, "away_win": 10}}
+            for _ in range(40)
+        ]
+        metrics = archive_module.calculate_metrics_by_league(records)
+        self.assertNotIn("Serie A", metrics)
+
     def test_metrics_are_separated_by_league(self):
         records = (
             [{"league": "Serie A", "outcome": "1",
