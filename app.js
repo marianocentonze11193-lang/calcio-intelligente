@@ -20,8 +20,12 @@ async function fetchJsonWithTimeout(url, timeoutMs = 12000) {
 
 function isValidMatchRecord(match, expectedStatus) {
   if (!match || typeof match !== "object" || Array.isArray(match)) return false;
-  if (typeof match.date !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(match.date) ||
-      Number.isNaN(Date.parse(match.date + "T12:00:00Z"))) return false;
+  if (typeof match.date !== "string" || !/^\\d{4}-\\d{2}-\\d{2}$/.test(match.date)) return false;
+  const [year, month, day] = match.date.split("-").map(Number);
+  const calendarDate = new Date(Date.UTC(year, month - 1, day));
+  if (calendarDate.getUTCFullYear() !== year ||
+      calendarDate.getUTCMonth() !== month - 1 ||
+      calendarDate.getUTCDate() !== day) return false;
   if (typeof match.home_team !== "string" || !match.home_team.trim() ||
       typeof match.away_team !== "string" || !match.away_team.trim() ||
       match.home_team.trim().toLocaleLowerCase() === match.away_team.trim().toLocaleLowerCase()) return false;
@@ -512,6 +516,12 @@ async function aggiornaDati() {
     const failedSources = Array.isArray(coverage.failed_sources) ? coverage.failed_sources : [];
     if (failedSources.length) {
       stato.textContent += " Fonti con problemi: " + failedSources.join(", ") + ".";
+    }
+    if (rejectedForecasts || rejectedNoBets) {
+      const rejectedTotal = rejectedForecasts + rejectedNoBets;
+      stato.textContent += " Avviso integrità: " + rejectedTotal +
+        " record esclus" + (rejectedTotal === 1 ? "o" : "i") +
+        " perché non superano i controlli di formato/coerenza.";
     }
     if (staleWarning) {
       stato.textContent = "ATTENZIONE · I dati pubblicati sono obsoleti o hanno un timestamp non valido. Non considerarli aggiornati. " + stato.textContent;
