@@ -20,7 +20,7 @@ async function fetchJsonWithTimeout(url, timeoutMs = 12000) {
 
 function isValidMatchRecord(match, expectedStatus) {
   if (!match || typeof match !== "object" || Array.isArray(match)) return false;
-  if (typeof match.date !== "string" || !/^\\d{4}-\\d{2}-\\d{2}$/.test(match.date) ||
+  if (typeof match.date !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(match.date) ||
       Number.isNaN(Date.parse(match.date + "T12:00:00Z"))) return false;
   if (typeof match.home_team !== "string" || !match.home_team.trim() ||
       typeof match.away_team !== "string" || !match.away_team.trim() ||
