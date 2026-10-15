@@ -78,6 +78,11 @@ class PredictionModelTests(unittest.TestCase):
                 self.assertEqual(archive_module.team_key(first), archive_module.team_key(second))
         self.assertNotEqual(module.team_key("Milan"), module.team_key("Inter"))
         self.assertNotEqual(module.team_key("Roma"), module.team_key("Lazio"))
+        self.assertEqual(module.team_key("Paris FC"), module.team_key("Paris Football Club"))
+        self.assertEqual(archive_module.team_key("Paris FC"), archive_module.team_key("Paris Football Club"))
+        self.assertEqual(module.team_key("Paris FC"), archive_module.team_key("Paris FC"))
+        self.assertNotEqual(module.team_key("Paris FC"), module.team_key("Paris Saint-Germain"))
+        self.assertNotEqual(module.team_key("Inter"), module.team_key("Internacional"))
 
     def test_fixture_name_variant_matches_existing_history_key(self):
         history = defaultdict(lambda: {
