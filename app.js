@@ -208,8 +208,7 @@ function renderMatches(matches) {
 
     const confidence = document.createElement("p");
     confidence.className = "match-meta";
-    confidence.textContent = "Campione minimo: " + match.sample_matches +
-      " partite nel contesto casa/trasferta · Stato: " + (match.status || "Pronostico valutabile") +
+    confidence.textContent = "Campione: " + (match.home_matches_sample ?? "—") + " gare casa in casa / " + (match.away_matches_sample ?? "—") + " gare ospite fuori casa · Stato: " + (match.status || "Pronostico valutabile") +
       " · Fiducia: " + (match.confidence || "iniziale") +
       (match.elo_home != null && match.elo_away != null ? " · Elo " + match.elo_home + " / " + match.elo_away : "");
 
@@ -235,13 +234,13 @@ function renderMatches(matches) {
         evNode.className = "market-no-pick";
         evNode.textContent = "Valore atteso teorico 1 / X / 2: " +
           (ev.home * 100).toFixed(1) + "% / " + (ev.draw * 100).toFixed(1) + "% / " +
-          (ev.away * 100).toFixed(1) + "%. Stima basata sul modello, prima di considerare l'errore del modello.";
+          (ev.away * 100).toFixed(1) + "%. Stima teorica non validata; non dimostra un vantaggio reale né redditività.";
         card.append(evNode);
       }
       if (Array.isArray(match.value_bets) && match.value_bets.length) {
         const value = document.createElement("p");
         value.className = "market-chip market-green";
-        value.textContent = "Candidati teorici EV ≥ 3%: " + match.value_bets.map(v =>
+        value.textContent = "Candidati teorici EV ≥ 5% (campione ≥ 8 gare per lato): " + match.value_bets.map(v =>
           v.market + " @ " + v.best_odds + " (EV " + (v.expected_value * 100).toFixed(1) + "%)"
         ).join(" · ");
         card.append(value);
