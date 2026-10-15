@@ -31,6 +31,8 @@ jobs:
       - name: Verifica il modello con test automatici
         run: python -m unittest discover -s tests -v
       - name: Sincronizza, genera e salva i dati aggiornati
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -39,6 +41,7 @@ jobs:
           git fetch origin main
           git reset --hard origin/main
           python scripts/update_predictions.py
+          python scripts/enrich_with_gemini.py
           git add data/predictions.json
           if git diff --cached --quiet; then
             echo "Nessun cambiamento nei dati."
