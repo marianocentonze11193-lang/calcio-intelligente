@@ -26,6 +26,13 @@
     .probabilities { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 7px; margin: 12px 0; }
     .no-bet { color: #ffb7bd; background: #421f27; border: 1px solid #a94b59; border-radius: 8px; padding: 10px; font-weight: 800; line-height: 1.5; }
     .match-analysis { color: #d8e4f4; font-size: 13px; line-height: 1.6; background: #1b293a; border-left: 3px solid #53d69a; padding: 10px; border-radius: 6px; }
+    .probability.signal-green { background: #123b2c; border: 1px solid #2b9b6b; }
+    .probability.signal-yellow { background: #443819; border: 1px solid #b58a26; }
+    .probability.signal-red { background: #421f27; border: 1px solid #a94b59; }
+    .suggested-markets { margin: 12px 0; }
+    .market-chip { display: inline-block; margin: 3px 5px 3px 0; padding: 7px 10px; border-radius: 8px; font-size: 13px; font-weight: 800; }
+    .market-green { background: #123b2c; border: 1px solid #2b9b6b; color: #a4f2ca; }
+    .market-no-pick { color: #f3d28a; background: #443819; border: 1px solid #b58a26; border-radius: 8px; padding: 9px; font-size: 12px; line-height: 1.5; }
     .probability { background: #252f40; border-radius: 8px; padding: 9px 5px; text-align: center; display: flex; flex-direction: column; gap: 5px; }
     .probability span { color: #aab6c9; font-size: 12px; }
     .probability strong { font-size: 15px; }
@@ -33,7 +40,7 @@
     a { color: #53d69a; }
     @media (max-width: 560px) { .probabilities { grid-template-columns: repeat(3, minmax(0, 1fr)); } .match-teams { font-size: 15px; } }
   </style>
-  <script src="./app.js?v=20261015-5" defer></script>
+  <script src="./app.js?v=20261015-6" defer></script>
 </head>
 <body>
   <header>
