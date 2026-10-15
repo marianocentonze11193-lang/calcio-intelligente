@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-15T10:52:34+00:00",
+  "updated_at": "2026-10-15T10:59:31+00:00",
   "source": "https://www.football-data.co.uk",
   "season": "2627",
   "model": "Poisson casa/trasferta con prior di lega e correzione Elo; stime sperimentali, non garanzie",
@@ -34,7 +34,7 @@
         "home_scores": 89.3,
         "away_scores": 89.0
       },
-      "analysis": "Questo modello Poisson non validato mostra probabilità vicine per la vittoria delle due squadre, evidenziando forte incertezza. Il campione di riferimento è molto limitato e va considerato con prudenza.",
+      "analysis": "Le stime sperimentali di questo modello Poisson non validato mostrano probabilità molto vicine tra vittoria casalinga e trasferta. Il campione limitato di sole 3 partite evidenzia una forte incertezza.",
       "suggested_markets": [
         "Over 1,5",
         "Goal"
@@ -105,7 +105,7 @@
         "home_scores": 80.3,
         "away_scores": 67.6
       },
-      "analysis": "Le stime sperimentali di questo modello Poisson non validato presentano un campione ridotto. L'incertezza resta elevata data la natura preliminare dei dati.",
+      "analysis": "Le probabilità derivano da stime sperimentali di un modello Poisson non ancora validato e risentono di un campione molto limitato. Questo dato evidenzia un'elevata incertezza nelle previsioni.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -170,7 +170,7 @@
         "home_scores": 78.6,
         "away_scores": 64.1
       },
-      "analysis": "Le probabilità di questo modello Poisson non validato derivano da un campione limitato. I dati mostrano stime vicine e vanno interpretati con cautela.",
+      "analysis": "Trattandosi di stime sperimentali da un modello Poisson non validato con un campione ridotto di 3 partite, sussiste una notevole incertezza. Le percentuali vicine tra i diversi esiti riflettono i limiti del campione.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -240,7 +240,7 @@
         "home_scores": 65.4,
         "away_scores": 90.6
       },
-      "analysis": "Questo modello Poisson non validato si basa su un campione ridotto, evidenziando notevole incertezza. Le stime sperimentali non sono ancora state verificate.",
+      "analysis": "Il modello Poisson non validato fornisce stime sperimentali basate su un campione limitato di 3 partite, evidenziando una marcata incertezza intrinseca. Le percentuali descrivono puramente l'andamento numerico del modello.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -310,7 +310,7 @@
         "home_scores": 64.9,
         "away_scores": 59.9
       },
-      "analysis": "Le probabilità vicine segnalano una forte incertezza in questo incontro. Trattandosi di stime sperimentali di un modello Poisson non validato e con un campione limitato, i dati vanno presi con cautela.",
+      "analysis": "Le probabilità vicine per i tre segni mostrano l'incertezza legata a stime sperimentali di un modello Poisson non ancora validato. Il campione limitato di 3 partite impone molta prudenza nella lettura dei dati.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -378,7 +378,7 @@
         "home_scores": 78.3,
         "away_scores": 71.8
       },
-      "analysis": "Il campione di riferimento è molto limitato per questo modello Poisson non validato. Le stime sperimentali mostrano incertezza e richiedono prudenza.",
+      "analysis": "Queste percentuali sono stime sperimentali di un modello Poisson non validato e soffrono di limiti evidenti dovuti al campione ridotto. L'incertezza resta elevata a causa della vicinanza dei valori.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -443,7 +443,7 @@
         "home_scores": 81.9,
         "away_scores": 53.6
       },
-      "analysis": "Le stime di questo modello Poisson non validato soffrono dei limiti di un campione ridotto. Si raccomanda prudenza nell'interpretazione di questi dati sperimentali.",
+      "analysis": "Il campione limitato a sole 3 partite e la natura sperimentale di questo modello Poisson non validato impongono cautela. Le stime mostrano i limiti numerici del campione attuale.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -508,7 +508,7 @@
         "home_scores": 91.3,
         "away_scores": 36.7
       },
-      "analysis": "Questo modello Poisson non validato si basa su un campione limitato. Le probabilità restano stime sperimentali da interpretare con la dovuta cautela.",
+      "analysis": "Le stime derivano da un modello Poisson non ancora validato e risentono dei limiti di un campione ridotto. È opportuno considerare l'incertezza intrinseca di questi dati.",
       "suggested_markets": [
         "Over 1,5",
         "1"
@@ -579,7 +579,7 @@
         "home_scores": 63.5,
         "away_scores": 81.2
       },
-      "analysis": "Le probabilità di questo modello Poisson non validato derivano da un campione molto ridotto. L'incertezza è alta e i dati sono puramente sperimentali.",
+      "analysis": "Il campione limitato a sole 2 partite evidenzia i forti limiti di queste stime sperimentali basate su un modello Poisson non validato. La lettura dei dati richiede molta prudenza a causa dell'incertezza.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -649,7 +649,7 @@
         "home_scores": 93.1,
         "away_scores": 76.5
       },
-      "analysis": "I limiti del campione rendono queste stime sperimentali di un modello Poisson non validato particolarmente incerte. È necessario interpretare i dati con prudenza.",
+      "analysis": "Trattandosi di stime sperimentali di un modello Poisson non ancora validato con un campione ridotto di 2 partite, i dati presentano una forte incertezza. Le percentuali vanno interpretate con estrema cautela.",
       "suggested_markets": [
         "Over 1,5",
         "Goal"
@@ -715,7 +715,7 @@
         "home_scores": 96.6,
         "away_scores": 51.2
       },
-      "analysis": "Questo modello Poisson non validato presenta un campione ridotto. Le stime sperimentali vanno considerate con cautela dati i limiti metodologici.",
+      "analysis": "Le percentuali rappresentano stime sperimentali di un modello Poisson non validato e si basano su un campione limitato di sole 2 partite. Questo limite evidenzia un'elevata incertezza strutturale.",
       "suggested_markets": [
         "Over 1,5",
         "1"
@@ -786,7 +786,7 @@
         "home_scores": 88.9,
         "away_scores": 61.6
       },
-      "analysis": "Le stime sperimentali di questo modello Poisson non validato si fondano su un campione limitato. L'incertezza intrinseca richiede molta prudenza.",
+      "analysis": "Queste cifre sono stime sperimentali derivate da un modello Poisson non ancora validato, basato su un campione ridotto di 3 partite. I limiti del campione suggeriscono di interpretare i dati con prudenza.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -851,7 +851,7 @@
         "home_scores": 72.8,
         "away_scores": 73.2
       },
-      "analysis": "Le probabilità vicine evidenziano una situazione di grande incertezza. Il modello Poisson non è validato e si basa su un campione ridotto.",
+      "analysis": "Le probabilità molto vicine tra vittoria in casa e in trasferta riflettono l'incertezza di stime sperimentali da un modello Poisson non validato. Il campione limitato a 3 partite impone cautela.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -916,7 +916,7 @@
         "home_scores": 80.8,
         "away_scores": 69.2
       },
-      "analysis": "Le stime sperimentali di questo modello Poisson non validato presentano un campione limitato. I dati vanno letti con la massima cautela.",
+      "analysis": "Il modello Poisson non validato fornisce stime sperimentali basate su un campione ridotto, evidenziando una marcata incertezza. Le percentuali vicine dimostrano i limiti metodologici attuali.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -986,7 +986,7 @@
         "home_scores": 83.9,
         "away_scores": 67.9
       },
-      "analysis": "Questo modello Poisson non validato utilizza un campione ridotto. L'incertezza dei dati sperimentali impone un'interpretazione molto prudente.",
+      "analysis": "Questi dati sono stime sperimentali di un modello Poisson non ancora validato e risentono dei limiti di un campione ristretto. L'incertezza complessiva rimane elevata.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1051,7 +1051,7 @@
         "home_scores": 90.7,
         "away_scores": 54.9
       },
-      "analysis": "I limiti del campione rendono queste stime di un modello Poisson non validato puramente sperimentali. Si consiglia prudenza nell'analisi.",
+      "analysis": "Trattandosi di stime sperimentali generate da un modello Poisson non validato con un campione limitato di 3 partite, i dati vanno presi con cautela. I limiti del campione evidenziano un'intrinseca incertezza.",
       "suggested_markets": [
         "Over 1,5",
         "1"
@@ -1117,7 +1117,7 @@
         "home_scores": 84.6,
         "away_scores": 47.2
       },
-      "analysis": "Le stime di questo modello Poisson non validato derivano da un campione ridotto. L'incertezza dei dati sperimentali richiede un approccio prudente.",
+      "analysis": "Le probabilità del modello si basano su stime sperimentali di un sistema Poisson non ancora validato. Il campione ridotto a 3 partite evidenzia i limiti e l'incertezza delle percentuali.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1187,7 +1187,7 @@
         "home_scores": 76.3,
         "away_scores": 62.9
       },
-      "analysis": "Le probabilità vicine indicano una forte incertezza in questa partita. Il modello Poisson non è validato e il campione di dati è limitato.",
+      "analysis": "Le probabilità vicine per i diversi esiti mostrano l'incertezza tipica di stime sperimentali da un modello Poisson non validato. Il campione limitato richiede una lettura estremamente prudente.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1255,7 +1255,7 @@
         "home_scores": 88.4,
         "away_scores": 66.1
       },
-      "analysis": "Questo modello Poisson non validato si basa su un campione ridotto. Le stime sperimentali vanno interpretate con la dovuta cautela.",
+      "analysis": "Il campione limitato a 3 partite e la natura sperimentale di questo modello Poisson non validato impongono molta cautela. Le stime numeriche mostrano evidenti limiti di robustezza.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1325,7 +1325,7 @@
         "home_scores": 71.0,
         "away_scores": 52.9
       },
-      "analysis": "Le stime sperimentali di questo modello Poisson non validato risentono di un campione limitato. L'incertezza dei dati richiede molta prudenza.",
+      "analysis": "Le stime sperimentali di questo modello Poisson non validato mostrano probabilità vicine e risentono di un campione ridotto. L'incertezza statistica resta un fattore dominante.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1393,7 +1393,7 @@
         "home_scores": 80.7,
         "away_scores": 83.9
       },
-      "analysis": "Le probabilità vicine evidenziano una situazione incerta. Trattandosi di un modello Poisson non validato con campione ridotto, i dati sono puramente sperimentali.",
+      "analysis": "Le percentuali vicine evidenziano l'incertezza intrinseca di stime sperimentali prodotte da un modello Poisson non ancora validato. Il campione limitato di 3 partite richiede grande prudenza.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1458,7 +1458,7 @@
         "home_scores": 84.3,
         "away_scores": 68.0
       },
-      "analysis": "Il campione di riferimento è limitato per questo modello Poisson non validato. Le stime sperimentali richiedono un'interpretazione prudente.",
+      "analysis": "Trattandosi di stime sperimentali di un modello Poisson non validato basato su sole 3 partite, i dati presentano forti limiti. L'incertezza complessiva suggerisce di interpretare i numeri con cautela.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1523,7 +1523,7 @@
         "home_scores": 88.9,
         "away_scores": 76.8
       },
-      "analysis": "Le stime di questo modello Poisson non validato si basano su un campione ridotto. L'incertezza dei dati sperimentali impone cautela.",
+      "analysis": "Il campione ridotto di sole 3 partite evidenzia i limiti strutturali di queste stime sperimentali da un modello Poisson non validato. La lettura dei dati richiede prudenza a causa dell'incertezza.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1588,7 +1588,7 @@
         "home_scores": 77.8,
         "away_scores": 68.1
       },
-      "analysis": "Le probabilità vicine segnalano una notevole incertezza in questo incontro. Il modello Poisson non è ancora validato e il campione è limitato.",
+      "analysis": "Le probabilità vicine per casa e trasferta riflettono l'incertezza di stime sperimentali prodotte da un modello Poisson non validato. I limiti del campione ridotto impongono molta cautela.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1653,7 +1653,7 @@
         "home_scores": 73.1,
         "away_scores": 68.7
       },
-      "analysis": "Le probabilità vicine mostrano un quadro di forte incertezza. Si tratta di stime sperimentali di un modello Poisson non validato, basato su un campione ridotto.",
+      "analysis": "Le percentuali molto ravvicinate dimostrano l'incertezza di stime sperimentali derivate da un modello Poisson non ancora validato. Il campione limitato richiede una lettura prudente.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1718,7 +1718,7 @@
         "home_scores": 88.2,
         "away_scores": 70.5
       },
-      "analysis": "Questo modello Poisson non validato presenta un campione limitato. Le stime sperimentali devono essere interpretate con prudenza.",
+      "analysis": "Il modello Poisson non validato restituisce stime sperimentali basate su un campione limitato di 3 partite, evidenziando una forte incertezza. I dati vanno presi con la dovuta cautela.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1788,7 +1788,7 @@
         "home_scores": 56.8,
         "away_scores": 93.2
       },
-      "analysis": "I limiti del campione rendono queste stime di un modello Poisson non validato altamente incerte. I dati vanno presi con la dovuta cautela.",
+      "analysis": "Le stime sperimentali di questo modello Poisson non ancora validato risentono dei limiti di un campione ridotto. L'incertezza del modello suggerisce di interpretare i valori con prudenza.",
       "suggested_markets": [
         "Over 1,5",
         "2"
@@ -1859,7 +1859,7 @@
         "home_scores": 72.4,
         "away_scores": 73.0
       },
-      "analysis": "Le probabilità vicine evidenziano una forte incertezza in questa partita. Il modello Poisson non è validato e si fonda su un campione ridotto.",
+      "analysis": "La vicinanza tra le probabilità dei vari esiti evidenzia l'incertezza di stime sperimentali derivate da un modello Poisson non validato. Il campione limitato di 3 partite impone cautela.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1924,7 +1924,7 @@
         "home_scores": 79.3,
         "away_scores": 61.8
       },
-      "analysis": "Le stime sperimentali di questo modello Poisson non validato risentono dei limiti del campione. È necessario procedere con molta prudenza.",
+      "analysis": "Trattandosi di stime sperimentali di un modello Poisson non validato con un campione ridotto di 2 partite, i dati presentano limiti evidenti. L'incertezza statistica richiede molta prudenza.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1989,7 +1989,7 @@
         "home_scores": 70.9,
         "away_scores": 62.9
       },
-      "analysis": "Le probabilità vicine indicano un livello elevato di incertezza. Il modello Poisson non è validato e il campione di dati è limitato.",
+      "analysis": "Le probabilità vicine tra i diversi segni riflettono l'incertezza di stime sperimentali fornite da un modello Poisson non ancora validato. Il campione limitato a 3 partite impone cautela nella lettura.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
