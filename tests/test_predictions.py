@@ -23,11 +23,11 @@ class PredictionModelTests(unittest.TestCase):
             "away_scored": 0, "away_conceded": 0,
         })
         history["Casa"].update({
-            "played": 20, "home_games": 4, "home_scored": 7,
+            "played": 20, "home_games": 3, "home_scored": 5,
             "home_conceded": 7,
         })
         history["Trasferta"].update({
-            "played": 20, "away_games": 3, "away_scored": 5,
+            "played": 20, "away_games": 2, "away_scored": 3,
             "away_conceded": 9,
         })
         forecast = module.make_forecast(
@@ -36,12 +36,12 @@ class PredictionModelTests(unittest.TestCase):
         )
         self.assertEqual(forecast["status"], "NO BET")
         self.assertEqual(forecast["probabilities"], {})
-        self.assertEqual(forecast["home_matches_sample"], 4)
-        self.assertEqual(forecast["away_matches_sample"], 3)
+        self.assertEqual(forecast["home_matches_sample"], 3)
+        self.assertEqual(forecast["away_matches_sample"], 2)
 
     def test_forecast_probabilities_are_bounded(self):
         history = defaultdict(lambda: {
-            "played": 12, "home_games": 4, "away_games": 4,
+            "played": 12, "home_games": 3, "away_games": 3,
             "home_scored": 9, "home_conceded": 6,
             "away_scored": 7, "away_conceded": 8,
         })
