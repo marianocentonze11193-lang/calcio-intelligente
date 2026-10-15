@@ -114,10 +114,24 @@ function renderMatches(matches) {
       card.append(analysis);
     }
     if (Array.isArray(match.suggested_markets) && match.suggested_markets.length) {
-      const suggested = document.createElement("p");
-      suggested.className = "match-meta";
-      suggested.textContent = "Mercati con probabilità modello ≥70% (da verificare con le quote): " + match.suggested_markets.join(", ");
+      const suggested = document.createElement("div");
+      suggested.className = "suggested-markets";
+      const title = document.createElement("p");
+      title.className = "match-meta";
+      title.textContent = "ESITI DA VALUTARE · probabilità modello ≥70% (controllare le quote)";
+      suggested.append(title);
+      for (const market of match.suggested_markets) {
+        const chip = document.createElement("span");
+        chip.className = "market-chip market-green";
+        chip.textContent = "✓ " + market;
+        suggested.append(chip);
+      }
       card.append(suggested);
+    } else {
+      const noPick = document.createElement("p");
+      noPick.className = "market-no-pick";
+      noPick.textContent = "NESSUN ESITO SELEZIONATO · nessun mercato supera la soglia automatica del 70%.";
+      card.append(noPick);
     }
     if (score.textContent) card.append(score);
     container.append(card);
