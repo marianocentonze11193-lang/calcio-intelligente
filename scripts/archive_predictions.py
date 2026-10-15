@@ -9,6 +9,7 @@ import urllib.error
 import urllib.request
 from datetime import date, datetime, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[1]
 PREDICTIONS_FILE = ROOT / "data" / "predictions.json"
@@ -19,12 +20,31 @@ LEAGUES = {
     "E0": "Premier League", "SP1": "La Liga", "D1": "Bundesliga",
     "I1": "Serie A", "F1": "Ligue 1", "SC0": "Scottish Premiership",
     "N1": "Eredivisie", "P1": "Primeira Liga", "B1": "Belgian Pro League", "T1": "Super Lig turca",
+    "AUT": "Bundesliga austriaca", "DNK": "Superliga danese", "G1": "Super League greca",
+    "FIN": "Veikkausliiga finlandese", "IRL": "Premier Division irlandese",
+    "NOK": "Eliteserien norvegese", "POL": "Ekstraklasa polacca", "RO": "Liga I rumena",
+    "SWE": "Allsvenskan svedese", "SWZ": "Super League svizzera",
 }
 ESPN_LEAGUES = {
     "Premier League": "eng.1", "La Liga": "esp.1", "Bundesliga": "ger.1",
     "Serie A": "ita.1", "Ligue 1": "fra.1", "Scottish Premiership": "sco.1",
     "Eredivisie": "ned.1", "Primeira Liga": "por.1", "Belgian Pro League": "bel.1",
-    "Super Lig turca": "tur.1",
+    "Super Lig turca": "tur.1", "Bundesliga austriaca": "aut.1", "Superliga danese": "den.1",
+    "Super League greca": "gre.1", "Veikkausliiga finlandese": "fin.1",
+    "Premier Division irlandese": "irl.1", "Eliteserien norvegese": "nor.1",
+    "Ekstraklasa polacca": "pol.1", "Liga I rumena": "rou.1",
+    "Allsvenskan svedese": "swe.1", "Super League svizzera": "sui.1",
+}
+ESPN_TIMEZONES = {
+    "Premier League": "Europe/London", "Scottish Premiership": "Europe/London",
+    "La Liga": "Europe/Madrid", "Bundesliga": "Europe/Berlin", "Serie A": "Europe/Rome",
+    "Ligue 1": "Europe/Paris", "Eredivisie": "Europe/Amsterdam", "Primeira Liga": "Europe/Lisbon",
+    "Belgian Pro League": "Europe/Brussels", "Super Lig turca": "Europe/Istanbul",
+    "Bundesliga austriaca": "Europe/Vienna", "Superliga danese": "Europe/Copenhagen",
+    "Super League greca": "Europe/Athens", "Veikkausliiga finlandese": "Europe/Helsinki",
+    "Premier Division irlandese": "Europe/Dublin", "Eliteserien norvegese": "Europe/Oslo",
+    "Ekstraklasa polacca": "Europe/Warsaw", "Liga I rumena": "Europe/Bucharest",
+    "Allsvenskan svedese": "Europe/Stockholm", "Super League svizzera": "Europe/Zurich",
 }
 
 
@@ -51,6 +71,11 @@ def parse_date(value):
 def season_code(today):
     start_year = today.year if today.month >= 7 else today.year - 1
     return f"{start_year % 100:02d}{(start_year + 1) % 100:02d}"
+
+
+def season_code_for_match(match_date):
+    parsed = datetime.strptime(match_date, "%Y-%m-%d").date()
+    return season_code(parsed)
 
 
 def read_csv(url):
@@ -104,7 +129,14 @@ def fetch_espn_results(league, dates):
             status = (competition.get("status") or {}).get("type") or {}
             if not status.get("completed"):
                 continue
-            event_date = parse_date(event.get("date", ""))
+            raw_date = event.get("date", "")
+            try:
+                event_dt = datetime.fromisoformat(raw_date.replace("Z", "+00:00"))
+                event_date = event_dt.astimezone(
+                    ZoneInfo(ESPN_TIMEZONES.get(league, "Europe/Rome"))
+                ).date().isoformat()
+            except (ValueError, TypeError):
+                event_date = parse_date(raw_date)
             home = away = None
             for competitor in competition.get("competitors", []):
                 team = (competitor.get("team") or {}).get("displayName", "").strip()
@@ -192,28 +224,34 @@ def main():
         known_ids.add(match_id)
 
     today = datetime.now(timezone.utc).date()
-    current_season = season_code(today)
     indexes = {}
-    # Scarica soltanto i campionati con partite da verificare già arrivate alla data odierna.
-    # Così non si effettuano richieste inutili per tutte le leghe a ogni aggiornamento orario.
-    leagues_to_check = {
-        item.get("league") for item in records
+    # Recupera la stagione corretta per ogni partita pendente, anche oltre il cambio stagione.
+    pending = [
+        item for item in records
         if item.get("outcome") is None and item.get("date", "") <= today.isoformat()
-    }
-    for code, league in LEAGUES.items():
-        if league not in leagues_to_check:
+    ]
+    pending_by_league_season = {}
+    for item in pending:
+        try:
+            season = season_code_for_match(item.get("date", ""))
+        except ValueError:
+            continue
+        pending_by_league_season.setdefault((item.get("league"), season), []).append(item.get("date"))
+    code_by_league = {league: code for code, league in LEAGUES.items()}
+    for (league, season), dates in pending_by_league_season.items():
+        code = code_by_league.get(league)
+        if not code:
             continue
         try:
-            rows = read_csv(f"{SOURCE}/mmz4281/{current_season}/{code}.csv")
-            indexes[league] = result_index(rows)
+            rows = read_csv(f"{SOURCE}/mmz4281/{season}/{code}.csv")
+            indexes.setdefault(league, {}).update(result_index(rows))
         except (urllib.error.URLError, TimeoutError, OSError, ValueError) as error:
-            print(f"AVVISO: risultati per {league} ({current_season}) non disponibili: {error}")
+            print(f"AVVISO: risultati per {league} ({season}) non disponibili: {error}")
 
     # Se il CSV principale non ha associato l'esito, tenta il tabellone risultati ESPN gratuito.
     pending_by_league = {}
-    for item in records:
-        if item.get("outcome") is None and item.get("date", "") <= today.isoformat():
-            pending_by_league.setdefault(item.get("league"), []).append(item.get("date"))
+    for item in pending:
+        pending_by_league.setdefault(item.get("league"), []).append(item.get("date"))
     for league, dates in pending_by_league.items():
         fallback = fetch_espn_results(league, dates)
         if fallback:
