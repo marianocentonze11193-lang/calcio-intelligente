@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-15T07:05:58+00:00",
+  "updated_at": "2026-10-15T07:13:29+00:00",
   "source": "https://www.football-data.co.uk",
   "season": "2627",
   "model": "Poisson semplice con filtro storico minimo; stime indicative, non garanzie",
@@ -56,7 +56,7 @@
       "away_matches_sample": 4,
       "status": "Pronostico valutabile",
       "reason": "",
-      "confidence": "iniziale",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -109,7 +109,274 @@
       "away_matches_sample": 4,
       "status": "Pronostico valutabile",
       "reason": "",
-      "confidence": "iniziale",
+      "confidence": "bassa (campione ridotto)",
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+    },
+    {
+      "id": "2026-10-16-Ligue 1-Le Mans-Toulouse",
+      "date": "2026-10-16",
+      "kickoff": "18:45",
+      "league": "Ligue 1",
+      "home_team": "Le Mans",
+      "away_team": "Toulouse",
+      "expected_home_goals": 2.02,
+      "expected_away_goals": 1.9,
+      "probabilities": {
+        "home_win": 41.8,
+        "draw": 20.9,
+        "away_win": 37.2,
+        "double_chance_1x": 62.8,
+        "double_chance_x2": 58.2,
+        "double_chance_12": 79.1,
+        "over_1_5": 90.2,
+        "over_2_5": 74.9,
+        "over_3_5": 55.0,
+        "under_1_5": 9.8,
+        "under_2_5": 25.1,
+        "under_3_5": 45.0,
+        "btts_yes": 73.7,
+        "btts_no": 26.3,
+        "home_scores": 86.7,
+        "away_scores": 85.0
+      },
+      "analysis": "Le Mans leggermente favorito; scenario da almeno 2 gol; entrambe a segno plausibile. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "suggested_markets": [
+        "Over 1,5",
+        "Goal"
+      ],
+      "top_scorelines": [
+        {
+          "score": "2-1",
+          "probability": 7.7
+        },
+        {
+          "score": "1-1",
+          "probability": 7.6
+        },
+        {
+          "score": "2-2",
+          "probability": 7.3
+        }
+      ],
+      "sample_matches": 3,
+      "home_matches_sample": 3,
+      "away_matches_sample": 3,
+      "status": "Pronostico valutabile",
+      "reason": "",
+      "confidence": "bassa (campione ridotto)",
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+    },
+    {
+      "id": "2026-10-16-Serie A-Frosinone-Sassuolo",
+      "date": "2026-10-16",
+      "kickoff": "18:45",
+      "league": "Serie A",
+      "home_team": "Frosinone",
+      "away_team": "Sassuolo",
+      "expected_home_goals": 1.84,
+      "expected_away_goals": 1.17,
+      "probabilities": {
+        "home_win": 53.2,
+        "draw": 22.8,
+        "away_win": 24.0,
+        "double_chance_1x": 76.0,
+        "double_chance_x2": 46.8,
+        "double_chance_12": 77.2,
+        "over_1_5": 80.2,
+        "over_2_5": 57.8,
+        "over_3_5": 35.4,
+        "under_1_5": 19.8,
+        "under_2_5": 42.2,
+        "under_3_5": 64.6,
+        "btts_yes": 57.9,
+        "btts_no": 42.1,
+        "home_scores": 84.1,
+        "away_scores": 68.8
+      },
+      "analysis": "Frosinone leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "suggested_markets": [
+        "Over 1,5"
+      ],
+      "top_scorelines": [
+        {
+          "score": "1-1",
+          "probability": 10.6
+        },
+        {
+          "score": "2-1",
+          "probability": 9.8
+        },
+        {
+          "score": "1-0",
+          "probability": 9.1
+        }
+      ],
+      "sample_matches": 3,
+      "home_matches_sample": 3,
+      "away_matches_sample": 3,
+      "status": "Pronostico valutabile",
+      "reason": "",
+      "confidence": "bassa (campione ridotto)",
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+    },
+    {
+      "id": "2026-10-17-Premier League-Everton-Chelsea",
+      "date": "2026-10-17",
+      "kickoff": "11:30",
+      "league": "Premier League",
+      "home_team": "Everton",
+      "away_team": "Chelsea",
+      "expected_home_goals": 2.01,
+      "expected_away_goals": 1.0,
+      "probabilities": {
+        "home_win": 60.7,
+        "draw": 21.1,
+        "away_win": 18.2,
+        "double_chance_1x": 81.8,
+        "double_chance_x2": 39.3,
+        "double_chance_12": 78.9,
+        "over_1_5": 80.2,
+        "over_2_5": 57.8,
+        "over_3_5": 35.4,
+        "under_1_5": 19.8,
+        "under_2_5": 42.2,
+        "under_3_5": 64.6,
+        "btts_yes": 54.7,
+        "btts_no": 45.3,
+        "home_scores": 86.5,
+        "away_scores": 63.2
+      },
+      "analysis": "Everton leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "suggested_markets": [
+        "Over 1,5"
+      ],
+      "top_scorelines": [
+        {
+          "score": "2-1",
+          "probability": 10.0
+        },
+        {
+          "score": "2-0",
+          "probability": 10.0
+        },
+        {
+          "score": "1-1",
+          "probability": 9.9
+        }
+      ],
+      "sample_matches": 3,
+      "home_matches_sample": 3,
+      "away_matches_sample": 3,
+      "status": "Pronostico valutabile",
+      "reason": "",
+      "confidence": "bassa (campione ridotto)",
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+    },
+    {
+      "id": "2026-10-17-Serie A-Venezia-Napoli",
+      "date": "2026-10-17",
+      "kickoff": "13:00",
+      "league": "Serie A",
+      "home_team": "Venezia",
+      "away_team": "Napoli",
+      "expected_home_goals": 1.03,
+      "expected_away_goals": 2.26,
+      "probabilities": {
+        "home_win": 16.0,
+        "draw": 19.0,
+        "away_win": 65.0,
+        "double_chance_1x": 35.0,
+        "double_chance_x2": 84.0,
+        "double_chance_12": 81.0,
+        "over_1_5": 84.0,
+        "over_2_5": 63.8,
+        "over_3_5": 41.7,
+        "under_1_5": 16.0,
+        "under_2_5": 36.2,
+        "under_3_5": 58.3,
+        "btts_yes": 57.6,
+        "btts_no": 42.4,
+        "home_scores": 64.3,
+        "away_scores": 89.5
+      },
+      "analysis": "Napoli leggermente favorita; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "suggested_markets": [
+        "Over 1,5"
+      ],
+      "top_scorelines": [
+        {
+          "score": "1-2",
+          "probability": 9.8
+        },
+        {
+          "score": "0-2",
+          "probability": 9.5
+        },
+        {
+          "score": "1-1",
+          "probability": 8.7
+        }
+      ],
+      "sample_matches": 3,
+      "home_matches_sample": 3,
+      "away_matches_sample": 3,
+      "status": "Pronostico valutabile",
+      "reason": "",
+      "confidence": "bassa (campione ridotto)",
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+    },
+    {
+      "id": "2026-10-17-Super Lig turca-Genclerbirligi-Galatasaray",
+      "date": "2026-10-17",
+      "kickoff": "13:00",
+      "league": "Super Lig turca",
+      "home_team": "Genclerbirligi",
+      "away_team": "Galatasaray",
+      "expected_home_goals": 1.73,
+      "expected_away_goals": 1.98,
+      "probabilities": {
+        "home_win": 34.3,
+        "draw": 21.4,
+        "away_win": 44.3,
+        "double_chance_1x": 55.7,
+        "double_chance_x2": 65.7,
+        "double_chance_12": 78.6,
+        "over_1_5": 88.5,
+        "over_2_5": 71.7,
+        "over_3_5": 50.8,
+        "under_1_5": 11.5,
+        "under_2_5": 28.3,
+        "under_3_5": 49.2,
+        "btts_yes": 70.9,
+        "btts_no": 29.1,
+        "home_scores": 82.3,
+        "away_scores": 86.2
+      },
+      "analysis": "Galatasaray leggermente favorita; scenario da almeno 2 gol; entrambe a segno plausibile. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "suggested_markets": [
+        "Over 1,5",
+        "Goal"
+      ],
+      "top_scorelines": [
+        {
+          "score": "1-1",
+          "probability": 8.4
+        },
+        {
+          "score": "1-2",
+          "probability": 8.3
+        },
+        {
+          "score": "2-1",
+          "probability": 7.2
+        }
+      ],
+      "sample_matches": 3,
+      "home_matches_sample": 4,
+      "away_matches_sample": 3,
+      "status": "Pronostico valutabile",
+      "reason": "",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -160,7 +427,7 @@
       "away_matches_sample": 5,
       "status": "Pronostico valutabile",
       "reason": "",
-      "confidence": "iniziale",
+      "confidence": "intermedia",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -211,7 +478,58 @@
       "away_matches_sample": 5,
       "status": "Pronostico valutabile",
       "reason": "",
-      "confidence": "iniziale",
+      "confidence": "bassa (campione ridotto)",
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+    },
+    {
+      "id": "2026-10-17-Premier League-Brentford-Liverpool",
+      "date": "2026-10-17",
+      "kickoff": "14:00",
+      "league": "Premier League",
+      "home_team": "Brentford",
+      "away_team": "Liverpool",
+      "expected_home_goals": 1.39,
+      "expected_away_goals": 0.94,
+      "probabilities": {
+        "home_win": 47.5,
+        "draw": 27.2,
+        "away_win": 25.3,
+        "double_chance_1x": 74.7,
+        "double_chance_x2": 52.5,
+        "double_chance_12": 72.8,
+        "over_1_5": 67.7,
+        "over_2_5": 41.2,
+        "over_3_5": 20.7,
+        "under_1_5": 32.3,
+        "under_2_5": 58.8,
+        "under_3_5": 79.3,
+        "btts_yes": 45.8,
+        "btts_no": 54.2,
+        "home_scores": 75.2,
+        "away_scores": 60.8
+      },
+      "analysis": "Brentford leggermente favorito; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "suggested_markets": [],
+      "top_scorelines": [
+        {
+          "score": "1-0",
+          "probability": 13.5
+        },
+        {
+          "score": "1-1",
+          "probability": 12.7
+        },
+        {
+          "score": "0-0",
+          "probability": 9.7
+        }
+      ],
+      "sample_matches": 3,
+      "home_matches_sample": 3,
+      "away_matches_sample": 3,
+      "status": "Pronostico valutabile",
+      "reason": "",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -262,7 +580,7 @@
       "away_matches_sample": 4,
       "status": "Pronostico valutabile",
       "reason": "",
-      "confidence": "iniziale",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -313,7 +631,7 @@
       "away_matches_sample": 4,
       "status": "Pronostico valutabile",
       "reason": "",
-      "confidence": "iniziale",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -366,7 +684,7 @@
       "away_matches_sample": 4,
       "status": "Pronostico valutabile",
       "reason": "",
-      "confidence": "iniziale",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -419,7 +737,220 @@
       "away_matches_sample": 4,
       "status": "Pronostico valutabile",
       "reason": "",
-      "confidence": "iniziale",
+      "confidence": "bassa (campione ridotto)",
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+    },
+    {
+      "id": "2026-10-17-La Liga-Villarreal-Elche",
+      "date": "2026-10-17",
+      "kickoff": "14:15",
+      "league": "La Liga",
+      "home_team": "Villarreal",
+      "away_team": "Elche",
+      "expected_home_goals": 1.72,
+      "expected_away_goals": 1.96,
+      "probabilities": {
+        "home_win": 34.4,
+        "draw": 21.5,
+        "away_win": 44.1,
+        "double_chance_1x": 55.9,
+        "double_chance_x2": 65.6,
+        "double_chance_12": 78.5,
+        "over_1_5": 88.2,
+        "over_2_5": 71.2,
+        "over_3_5": 50.3,
+        "under_1_5": 11.8,
+        "under_2_5": 28.8,
+        "under_3_5": 49.7,
+        "btts_yes": 70.6,
+        "btts_no": 29.4,
+        "home_scores": 82.1,
+        "away_scores": 86.0
+      },
+      "analysis": "Elche leggermente favorita; scenario da almeno 2 gol; entrambe a segno plausibile. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "suggested_markets": [
+        "Over 1,5",
+        "Goal"
+      ],
+      "top_scorelines": [
+        {
+          "score": "1-1",
+          "probability": 8.5
+        },
+        {
+          "score": "1-2",
+          "probability": 8.3
+        },
+        {
+          "score": "2-1",
+          "probability": 7.3
+        }
+      ],
+      "sample_matches": 3,
+      "home_matches_sample": 3,
+      "away_matches_sample": 4,
+      "status": "Pronostico valutabile",
+      "reason": "",
+      "confidence": "bassa (campione ridotto)",
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+    },
+    {
+      "id": "2026-10-17-Super Lig turca-Fenerbahce-Alanyaspor",
+      "date": "2026-10-17",
+      "kickoff": "16:00",
+      "league": "Super Lig turca",
+      "home_team": "Fenerbahce",
+      "away_team": "Alanyaspor",
+      "expected_home_goals": 2.32,
+      "expected_away_goals": 1.29,
+      "probabilities": {
+        "home_win": 60.4,
+        "draw": 19.3,
+        "away_win": 20.3,
+        "double_chance_1x": 79.7,
+        "double_chance_x2": 39.6,
+        "double_chance_12": 80.7,
+        "over_1_5": 87.5,
+        "over_2_5": 69.8,
+        "over_3_5": 48.6,
+        "under_1_5": 12.5,
+        "under_2_5": 30.2,
+        "under_3_5": 51.4,
+        "btts_yes": 65.3,
+        "btts_no": 34.7,
+        "home_scores": 90.2,
+        "away_scores": 72.4
+      },
+      "analysis": "Fenerbahce leggermente favorito; scenario da almeno 2 gol; entrambe a segno plausibile. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "suggested_markets": [
+        "Over 1,5"
+      ],
+      "top_scorelines": [
+        {
+          "score": "2-1",
+          "probability": 9.4
+        },
+        {
+          "score": "1-1",
+          "probability": 8.1
+        },
+        {
+          "score": "2-0",
+          "probability": 7.3
+        }
+      ],
+      "sample_matches": 3,
+      "home_matches_sample": 3,
+      "away_matches_sample": 4,
+      "status": "Pronostico valutabile",
+      "reason": "",
+      "confidence": "bassa (campione ridotto)",
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+    },
+    {
+      "id": "2026-10-17-Ligue 1-Lille-Brest",
+      "date": "2026-10-17",
+      "kickoff": "18:45",
+      "league": "Ligue 1",
+      "home_team": "Lille",
+      "away_team": "Brest",
+      "expected_home_goals": 1.67,
+      "expected_away_goals": 1.12,
+      "probabilities": {
+        "home_win": 50.2,
+        "draw": 24.3,
+        "away_win": 25.5,
+        "double_chance_1x": 74.5,
+        "double_chance_x2": 49.8,
+        "double_chance_12": 75.7,
+        "over_1_5": 76.6,
+        "over_2_5": 52.7,
+        "over_3_5": 30.5,
+        "under_1_5": 23.4,
+        "under_2_5": 47.3,
+        "under_3_5": 69.5,
+        "btts_yes": 54.6,
+        "btts_no": 45.4,
+        "home_scores": 81.1,
+        "away_scores": 67.3
+      },
+      "analysis": "Lille leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "suggested_markets": [
+        "Over 1,5"
+      ],
+      "top_scorelines": [
+        {
+          "score": "1-1",
+          "probability": 11.5
+        },
+        {
+          "score": "1-0",
+          "probability": 10.3
+        },
+        {
+          "score": "2-1",
+          "probability": 9.6
+        }
+      ],
+      "sample_matches": 3,
+      "home_matches_sample": 3,
+      "away_matches_sample": 3,
+      "status": "Pronostico valutabile",
+      "reason": "",
+      "confidence": "bassa (campione ridotto)",
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+    },
+    {
+      "id": "2026-10-17-Ligue 1-Troyes-Lens",
+      "date": "2026-10-17",
+      "kickoff": "18:45",
+      "league": "Ligue 1",
+      "home_team": "Troyes",
+      "away_team": "Lens",
+      "expected_home_goals": 1.28,
+      "expected_away_goals": 2.03,
+      "probabilities": {
+        "home_win": 24.0,
+        "draw": 21.4,
+        "away_win": 54.6,
+        "double_chance_1x": 45.4,
+        "double_chance_x2": 76.0,
+        "double_chance_12": 78.6,
+        "over_1_5": 84.3,
+        "over_2_5": 64.3,
+        "over_3_5": 42.2,
+        "under_1_5": 15.7,
+        "under_2_5": 35.7,
+        "under_3_5": 57.8,
+        "btts_yes": 62.8,
+        "btts_no": 37.2,
+        "home_scores": 72.3,
+        "away_scores": 86.8
+      },
+      "analysis": "Lens leggermente favorita; scenario da almeno 2 gol; entrambe a segno plausibile. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "suggested_markets": [
+        "Over 1,5"
+      ],
+      "top_scorelines": [
+        {
+          "score": "1-2",
+          "probability": 9.6
+        },
+        {
+          "score": "1-1",
+          "probability": 9.5
+        },
+        {
+          "score": "0-2",
+          "probability": 7.5
+        }
+      ],
+      "sample_matches": 3,
+      "home_matches_sample": 3,
+      "away_matches_sample": 3,
+      "status": "Pronostico valutabile",
+      "reason": "",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -473,7 +1004,7 @@
       "away_matches_sample": 4,
       "status": "Pronostico valutabile",
       "reason": "",
-      "confidence": "iniziale",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -524,7 +1055,264 @@
       "away_matches_sample": 4,
       "status": "Pronostico valutabile",
       "reason": "",
-      "confidence": "iniziale",
+      "confidence": "bassa (campione ridotto)",
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+    },
+    {
+      "id": "2026-10-18-Serie A-Udinese-Lecce",
+      "date": "2026-10-18",
+      "kickoff": "10:30",
+      "league": "Serie A",
+      "home_team": "Udinese",
+      "away_team": "Lecce",
+      "expected_home_goals": 1.03,
+      "expected_away_goals": 1.0,
+      "probabilities": {
+        "home_win": 35.6,
+        "draw": 30.6,
+        "away_win": 33.9,
+        "double_chance_1x": 66.1,
+        "double_chance_x2": 64.4,
+        "double_chance_12": 69.4,
+        "over_1_5": 60.2,
+        "over_2_5": 33.1,
+        "over_3_5": 14.8,
+        "under_1_5": 39.8,
+        "under_2_5": 66.9,
+        "under_3_5": 85.2,
+        "btts_yes": 40.6,
+        "btts_no": 59.4,
+        "home_scores": 64.3,
+        "away_scores": 63.1
+      },
+      "analysis": "Udinese leggermente favorito; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "suggested_markets": [],
+      "top_scorelines": [
+        {
+          "score": "1-0",
+          "probability": 13.6
+        },
+        {
+          "score": "1-1",
+          "probability": 13.5
+        },
+        {
+          "score": "0-0",
+          "probability": 13.1
+        }
+      ],
+      "sample_matches": 3,
+      "home_matches_sample": 3,
+      "away_matches_sample": 3,
+      "status": "Pronostico valutabile",
+      "reason": "",
+      "confidence": "bassa (campione ridotto)",
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+    },
+    {
+      "id": "2026-10-18-Super Lig turca-Kasimpasa-Samsunspor",
+      "date": "2026-10-18",
+      "kickoff": "10:30",
+      "league": "Super Lig turca",
+      "home_team": "Kasimpasa",
+      "away_team": "Samsunspor",
+      "expected_home_goals": 0.93,
+      "expected_away_goals": 0.87,
+      "probabilities": {
+        "home_win": 35.3,
+        "draw": 32.9,
+        "away_win": 31.8,
+        "double_chance_1x": 68.2,
+        "double_chance_x2": 64.7,
+        "double_chance_12": 67.1,
+        "over_1_5": 53.7,
+        "over_2_5": 26.9,
+        "over_3_5": 10.8,
+        "under_1_5": 46.3,
+        "under_2_5": 73.1,
+        "under_3_5": 89.2,
+        "btts_yes": 35.1,
+        "btts_no": 64.9,
+        "home_scores": 60.6,
+        "away_scores": 58.0
+      },
+      "analysis": "Kasimpasa leggermente favorito; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "suggested_markets": [],
+      "top_scorelines": [
+        {
+          "score": "0-0",
+          "probability": 16.6
+        },
+        {
+          "score": "1-0",
+          "probability": 15.4
+        },
+        {
+          "score": "0-1",
+          "probability": 14.4
+        }
+      ],
+      "sample_matches": 3,
+      "home_matches_sample": 3,
+      "away_matches_sample": 3,
+      "status": "Pronostico valutabile",
+      "reason": "",
+      "confidence": "bassa (campione ridotto)",
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+    },
+    {
+      "id": "2026-10-18-Ligue 1-Angers-Marseille",
+      "date": "2026-10-18",
+      "kickoff": "13:00",
+      "league": "Ligue 1",
+      "home_team": "Angers",
+      "away_team": "Marseille",
+      "expected_home_goals": 1.07,
+      "expected_away_goals": 0.99,
+      "probabilities": {
+        "home_win": 36.8,
+        "draw": 30.3,
+        "away_win": 32.8,
+        "double_chance_1x": 67.2,
+        "double_chance_x2": 63.2,
+        "double_chance_12": 69.7,
+        "over_1_5": 60.9,
+        "over_2_5": 33.8,
+        "over_3_5": 15.3,
+        "under_1_5": 39.1,
+        "under_2_5": 66.2,
+        "under_3_5": 84.7,
+        "btts_yes": 41.2,
+        "btts_no": 58.8,
+        "home_scores": 65.6,
+        "away_scores": 62.8
+      },
+      "analysis": "Angers leggermente favorito; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "suggested_markets": [],
+      "top_scorelines": [
+        {
+          "score": "1-0",
+          "probability": 13.7
+        },
+        {
+          "score": "1-1",
+          "probability": 13.5
+        },
+        {
+          "score": "0-0",
+          "probability": 12.8
+        }
+      ],
+      "sample_matches": 3,
+      "home_matches_sample": 3,
+      "away_matches_sample": 3,
+      "status": "Pronostico valutabile",
+      "reason": "",
+      "confidence": "bassa (campione ridotto)",
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+    },
+    {
+      "id": "2026-10-18-Serie A-Fiorentina-Como",
+      "date": "2026-10-18",
+      "kickoff": "13:00",
+      "league": "Serie A",
+      "home_team": "Fiorentina",
+      "away_team": "Como",
+      "expected_home_goals": 0.99,
+      "expected_away_goals": 1.97,
+      "probabilities": {
+        "home_win": 18.3,
+        "draw": 21.4,
+        "away_win": 60.3,
+        "double_chance_1x": 39.7,
+        "double_chance_x2": 81.7,
+        "double_chance_12": 78.6,
+        "over_1_5": 79.4,
+        "over_2_5": 56.7,
+        "over_3_5": 34.3,
+        "under_1_5": 20.6,
+        "under_2_5": 43.3,
+        "under_3_5": 65.7,
+        "btts_yes": 53.9,
+        "btts_no": 46.1,
+        "home_scores": 62.7,
+        "away_scores": 86.1
+      },
+      "analysis": "Como leggermente favorita; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "suggested_markets": [
+        "Over 1,5"
+      ],
+      "top_scorelines": [
+        {
+          "score": "0-1",
+          "probability": 10.3
+        },
+        {
+          "score": "1-1",
+          "probability": 10.1
+        },
+        {
+          "score": "0-2",
+          "probability": 10.1
+        }
+      ],
+      "sample_matches": 3,
+      "home_matches_sample": 3,
+      "away_matches_sample": 4,
+      "status": "Pronostico valutabile",
+      "reason": "",
+      "confidence": "bassa (campione ridotto)",
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+    },
+    {
+      "id": "2026-10-18-Serie A-Juventus-Lazio",
+      "date": "2026-10-18",
+      "kickoff": "18:45",
+      "league": "Serie A",
+      "home_team": "Juventus",
+      "away_team": "Lazio",
+      "expected_home_goals": 0.98,
+      "expected_away_goals": 0.93,
+      "probabilities": {
+        "home_win": 35.3,
+        "draw": 31.7,
+        "away_win": 33.0,
+        "double_chance_1x": 67.0,
+        "double_chance_x2": 64.7,
+        "double_chance_12": 68.3,
+        "over_1_5": 57.0,
+        "over_2_5": 29.9,
+        "over_3_5": 12.7,
+        "under_1_5": 43.0,
+        "under_2_5": 70.1,
+        "under_3_5": 87.3,
+        "btts_yes": 37.9,
+        "btts_no": 62.1,
+        "home_scores": 62.4,
+        "away_scores": 60.7
+      },
+      "analysis": "Juventus leggermente favorito; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "suggested_markets": [],
+      "top_scorelines": [
+        {
+          "score": "0-0",
+          "probability": 14.8
+        },
+        {
+          "score": "1-0",
+          "probability": 14.4
+        },
+        {
+          "score": "0-1",
+          "probability": 13.8
+        }
+      ],
+      "sample_matches": 3,
+      "home_matches_sample": 3,
+      "away_matches_sample": 3,
+      "status": "Pronostico valutabile",
+      "reason": "",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -577,7 +1365,112 @@
       "away_matches_sample": 4,
       "status": "Pronostico valutabile",
       "reason": "",
-      "confidence": "iniziale",
+      "confidence": "bassa (campione ridotto)",
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+    },
+    {
+      "id": "2026-10-19-Super Lig turca-Trabzonspor-Besiktas",
+      "date": "2026-10-19",
+      "kickoff": "17:00",
+      "league": "Super Lig turca",
+      "home_team": "Trabzonspor",
+      "away_team": "Besiktas",
+      "expected_home_goals": 2.67,
+      "expected_away_goals": 0.82,
+      "probabilities": {
+        "home_win": 76.5,
+        "draw": 14.4,
+        "away_win": 9.1,
+        "double_chance_1x": 90.9,
+        "double_chance_x2": 23.5,
+        "double_chance_12": 85.6,
+        "over_1_5": 86.4,
+        "over_2_5": 67.8,
+        "over_3_5": 46.2,
+        "under_1_5": 13.6,
+        "under_2_5": 32.2,
+        "under_3_5": 53.8,
+        "btts_yes": 52.3,
+        "btts_no": 47.7,
+        "home_scores": 93.1,
+        "away_scores": 56.2
+      },
+      "analysis": "Trabzonspor leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "suggested_markets": [
+        "Over 1,5",
+        "1"
+      ],
+      "top_scorelines": [
+        {
+          "score": "2-0",
+          "probability": 10.8
+        },
+        {
+          "score": "3-0",
+          "probability": 9.6
+        },
+        {
+          "score": "2-1",
+          "probability": 8.9
+        }
+      ],
+      "sample_matches": 3,
+      "home_matches_sample": 3,
+      "away_matches_sample": 3,
+      "status": "Pronostico valutabile",
+      "reason": "",
+      "confidence": "bassa (campione ridotto)",
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+    },
+    {
+      "id": "2026-10-19-Serie A-Parma-Torino",
+      "date": "2026-10-19",
+      "kickoff": "18:45",
+      "league": "Serie A",
+      "home_team": "Parma",
+      "away_team": "Torino",
+      "expected_home_goals": 1.19,
+      "expected_away_goals": 1.17,
+      "probabilities": {
+        "home_win": 36.5,
+        "draw": 28.0,
+        "away_win": 35.5,
+        "double_chance_1x": 64.5,
+        "double_chance_x2": 63.5,
+        "double_chance_12": 72.0,
+        "over_1_5": 68.1,
+        "over_2_5": 41.8,
+        "over_3_5": 21.1,
+        "under_1_5": 31.9,
+        "under_2_5": 58.2,
+        "under_3_5": 78.9,
+        "btts_yes": 47.8,
+        "btts_no": 52.2,
+        "home_scores": 69.5,
+        "away_scores": 68.8
+      },
+      "analysis": "Parma leggermente favorito; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "suggested_markets": [],
+      "top_scorelines": [
+        {
+          "score": "1-1",
+          "probability": 13.2
+        },
+        {
+          "score": "1-0",
+          "probability": 11.3
+        },
+        {
+          "score": "0-1",
+          "probability": 11.1
+        }
+      ],
+      "sample_matches": 3,
+      "home_matches_sample": 3,
+      "away_matches_sample": 3,
+      "status": "Pronostico valutabile",
+      "reason": "",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -628,7 +1521,7 @@
       "away_matches_sample": 4,
       "status": "Pronostico valutabile",
       "reason": "",
-      "confidence": "iniziale",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     }
   ],
@@ -1406,8 +2299,8 @@
       "home_matches_sample": 0,
       "away_matches_sample": 0,
       "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -1427,50 +2320,8 @@
       "home_matches_sample": 0,
       "away_matches_sample": 0,
       "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
-      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
-    },
-    {
-      "id": "2026-10-16-Ligue 1-Le Mans-Toulouse",
-      "date": "2026-10-16",
-      "kickoff": "18:45",
-      "league": "Ligue 1",
-      "home_team": "Le Mans",
-      "away_team": "Toulouse",
-      "expected_home_goals": 2.02,
-      "expected_away_goals": 1.9,
-      "probabilities": {},
-      "analysis": "",
-      "suggested_markets": [],
-      "top_scorelines": [],
-      "sample_matches": 3,
-      "home_matches_sample": 3,
-      "away_matches_sample": 3,
-      "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
-      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
-    },
-    {
-      "id": "2026-10-16-Serie A-Frosinone-Sassuolo",
-      "date": "2026-10-16",
-      "kickoff": "18:45",
-      "league": "Serie A",
-      "home_team": "Frosinone",
-      "away_team": "Sassuolo",
-      "expected_home_goals": 1.84,
-      "expected_away_goals": 1.17,
-      "probabilities": {},
-      "analysis": "",
-      "suggested_markets": [],
-      "top_scorelines": [],
-      "sample_matches": 3,
-      "home_matches_sample": 3,
-      "away_matches_sample": 3,
-      "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -1490,8 +2341,8 @@
       "home_matches_sample": 5,
       "away_matches_sample": 0,
       "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -1511,8 +2362,8 @@
       "home_matches_sample": 0,
       "away_matches_sample": 4,
       "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -1532,8 +2383,8 @@
       "home_matches_sample": 0,
       "away_matches_sample": 3,
       "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -1553,8 +2404,8 @@
       "home_matches_sample": 5,
       "away_matches_sample": 0,
       "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -1574,8 +2425,8 @@
       "home_matches_sample": 5,
       "away_matches_sample": 0,
       "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -1595,8 +2446,8 @@
       "home_matches_sample": 5,
       "away_matches_sample": 0,
       "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -1616,8 +2467,8 @@
       "home_matches_sample": 5,
       "away_matches_sample": 0,
       "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -1637,29 +2488,8 @@
       "home_matches_sample": 0,
       "away_matches_sample": 0,
       "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
-      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
-    },
-    {
-      "id": "2026-10-17-Premier League-Everton-Chelsea",
-      "date": "2026-10-17",
-      "kickoff": "11:30",
-      "league": "Premier League",
-      "home_team": "Everton",
-      "away_team": "Chelsea",
-      "expected_home_goals": 2.01,
-      "expected_away_goals": 1.0,
-      "probabilities": {},
-      "analysis": "",
-      "suggested_markets": [],
-      "top_scorelines": [],
-      "sample_matches": 3,
-      "home_matches_sample": 3,
-      "away_matches_sample": 3,
-      "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -1679,29 +2509,8 @@
       "home_matches_sample": 0,
       "away_matches_sample": 0,
       "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
-      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
-    },
-    {
-      "id": "2026-10-17-Serie A-Venezia-Napoli",
-      "date": "2026-10-17",
-      "kickoff": "13:00",
-      "league": "Serie A",
-      "home_team": "Venezia",
-      "away_team": "Napoli",
-      "expected_home_goals": 1.03,
-      "expected_away_goals": 2.26,
-      "probabilities": {},
-      "analysis": "",
-      "suggested_markets": [],
-      "top_scorelines": [],
-      "sample_matches": 3,
-      "home_matches_sample": 3,
-      "away_matches_sample": 3,
-      "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -1721,29 +2530,8 @@
       "home_matches_sample": 0,
       "away_matches_sample": 3,
       "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
-      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
-    },
-    {
-      "id": "2026-10-17-Super Lig turca-Genclerbirligi-Galatasaray",
-      "date": "2026-10-17",
-      "kickoff": "13:00",
-      "league": "Super Lig turca",
-      "home_team": "Genclerbirligi",
-      "away_team": "Galatasaray",
-      "expected_home_goals": 1.73,
-      "expected_away_goals": 1.98,
-      "probabilities": {},
-      "analysis": "",
-      "suggested_markets": [],
-      "top_scorelines": [],
-      "sample_matches": 3,
-      "home_matches_sample": 4,
-      "away_matches_sample": 3,
-      "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -1763,8 +2551,8 @@
       "home_matches_sample": 0,
       "away_matches_sample": 0,
       "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -1784,8 +2572,8 @@
       "home_matches_sample": 0,
       "away_matches_sample": 0,
       "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -1805,8 +2593,8 @@
       "home_matches_sample": 0,
       "away_matches_sample": 0,
       "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -1826,8 +2614,8 @@
       "home_matches_sample": 2,
       "away_matches_sample": 2,
       "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -1847,8 +2635,8 @@
       "home_matches_sample": 2,
       "away_matches_sample": 0,
       "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -1868,8 +2656,8 @@
       "home_matches_sample": 0,
       "away_matches_sample": 0,
       "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -1889,8 +2677,8 @@
       "home_matches_sample": 0,
       "away_matches_sample": 0,
       "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -1910,8 +2698,8 @@
       "home_matches_sample": 0,
       "away_matches_sample": 4,
       "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -1931,8 +2719,8 @@
       "home_matches_sample": 5,
       "away_matches_sample": 0,
       "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -1952,8 +2740,8 @@
       "home_matches_sample": 0,
       "away_matches_sample": 0,
       "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -1973,8 +2761,8 @@
       "home_matches_sample": 0,
       "away_matches_sample": 0,
       "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -1994,8 +2782,8 @@
       "home_matches_sample": 5,
       "away_matches_sample": 0,
       "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -2015,8 +2803,8 @@
       "home_matches_sample": 0,
       "away_matches_sample": 5,
       "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -2036,8 +2824,8 @@
       "home_matches_sample": 0,
       "away_matches_sample": 0,
       "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -2057,8 +2845,8 @@
       "home_matches_sample": 0,
       "away_matches_sample": 5,
       "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -2078,8 +2866,8 @@
       "home_matches_sample": 0,
       "away_matches_sample": 0,
       "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -2099,8 +2887,8 @@
       "home_matches_sample": 5,
       "away_matches_sample": 0,
       "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -2120,8 +2908,8 @@
       "home_matches_sample": 0,
       "away_matches_sample": 0,
       "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -2141,8 +2929,8 @@
       "home_matches_sample": 0,
       "away_matches_sample": 4,
       "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -2162,8 +2950,8 @@
       "home_matches_sample": 0,
       "away_matches_sample": 5,
       "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -2183,29 +2971,8 @@
       "home_matches_sample": 0,
       "away_matches_sample": 4,
       "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
-      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
-    },
-    {
-      "id": "2026-10-17-Premier League-Brentford-Liverpool",
-      "date": "2026-10-17",
-      "kickoff": "14:00",
-      "league": "Premier League",
-      "home_team": "Brentford",
-      "away_team": "Liverpool",
-      "expected_home_goals": 1.39,
-      "expected_away_goals": 0.94,
-      "probabilities": {},
-      "analysis": "",
-      "suggested_markets": [],
-      "top_scorelines": [],
-      "sample_matches": 3,
-      "home_matches_sample": 3,
-      "away_matches_sample": 3,
-      "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -2225,8 +2992,8 @@
       "home_matches_sample": 3,
       "away_matches_sample": 0,
       "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -2246,29 +3013,8 @@
       "home_matches_sample": 0,
       "away_matches_sample": 0,
       "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
-      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
-    },
-    {
-      "id": "2026-10-17-La Liga-Villarreal-Elche",
-      "date": "2026-10-17",
-      "kickoff": "14:15",
-      "league": "La Liga",
-      "home_team": "Villarreal",
-      "away_team": "Elche",
-      "expected_home_goals": 1.72,
-      "expected_away_goals": 1.96,
-      "probabilities": {},
-      "analysis": "",
-      "suggested_markets": [],
-      "top_scorelines": [],
-      "sample_matches": 3,
-      "home_matches_sample": 3,
-      "away_matches_sample": 4,
-      "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -2288,8 +3034,8 @@
       "home_matches_sample": 0,
       "away_matches_sample": 4,
       "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     },
     {
@@ -2309,8 +3055,155 @@
       "home_matches_sample": 2,
       "away_matches_sample": 0,
       "status": "NO BET",
-      "reason": "Storico insufficiente: servono almeno 4 gare casalinghe per la squadra di casa e 4 trasferte per quella ospite.",
-      "confidence": "iniziale",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+    },
+    {
+      "id": "2026-10-17-Serie A-Bologna-Internazionale",
+      "date": "2026-10-17",
+      "kickoff": "16:00",
+      "league": "Serie A",
+      "home_team": "Bologna",
+      "away_team": "Internazionale",
+      "expected_home_goals": 1.28,
+      "expected_away_goals": 1.32,
+      "probabilities": {},
+      "analysis": "",
+      "suggested_markets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 3,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+    },
+    {
+      "id": "2026-10-17-Bundesliga-Bayern Munich-RB Leipzig",
+      "date": "2026-10-17",
+      "kickoff": "16:30",
+      "league": "Bundesliga",
+      "home_team": "Bayern Munich",
+      "away_team": "RB Leipzig",
+      "expected_home_goals": 3.91,
+      "expected_away_goals": 0.8,
+      "probabilities": {},
+      "analysis": "",
+      "suggested_markets": [],
+      "top_scorelines": [],
+      "sample_matches": 2,
+      "home_matches_sample": 2,
+      "away_matches_sample": 2,
+      "status": "NO BET",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+    },
+    {
+      "id": "2026-10-17-La Liga-Real Betis-Barcelona",
+      "date": "2026-10-17",
+      "kickoff": "16:30",
+      "league": "La Liga",
+      "home_team": "Real Betis",
+      "away_team": "Barcelona",
+      "expected_home_goals": 1.18,
+      "expected_away_goals": 3.0,
+      "probabilities": {},
+      "analysis": "",
+      "suggested_markets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 0,
+      "away_matches_sample": 4,
+      "status": "NO BET",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+    },
+    {
+      "id": "2026-10-17-Premier League-Newcastle United-Aston Villa",
+      "date": "2026-10-17",
+      "kickoff": "16:30",
+      "league": "Premier League",
+      "home_team": "Newcastle United",
+      "away_team": "Aston Villa",
+      "expected_home_goals": 1.81,
+      "expected_away_goals": 1.17,
+      "probabilities": {},
+      "analysis": "",
+      "suggested_markets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 0,
+      "away_matches_sample": 3,
+      "status": "NO BET",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+    },
+    {
+      "id": "2026-10-17-Eredivisie-Telstar-Feyenoord Rotterdam",
+      "date": "2026-10-17",
+      "kickoff": "18:00",
+      "league": "Eredivisie",
+      "home_team": "Telstar",
+      "away_team": "Feyenoord Rotterdam",
+      "expected_home_goals": 1.45,
+      "expected_away_goals": 2.44,
+      "probabilities": {},
+      "analysis": "",
+      "suggested_markets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 4,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+    },
+    {
+      "id": "2026-10-17-Serie A-AS Roma-Genoa",
+      "date": "2026-10-17",
+      "kickoff": "18:45",
+      "league": "Serie A",
+      "home_team": "AS Roma",
+      "away_team": "Genoa",
+      "expected_home_goals": 1.53,
+      "expected_away_goals": 0.99,
+      "probabilities": {},
+      "analysis": "",
+      "suggested_markets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 0,
+      "away_matches_sample": 2,
+      "status": "NO BET",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+    },
+    {
+      "id": "2026-10-17-La Liga-Valencia-Athletic Club",
+      "date": "2026-10-17",
+      "kickoff": "19:00",
+      "league": "La Liga",
+      "home_team": "Valencia",
+      "away_team": "Athletic Club",
+      "expected_home_goals": 1.04,
+      "expected_away_goals": 1.86,
+      "probabilities": {},
+      "analysis": "",
+      "suggested_markets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 4,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "reason": "Storico insufficiente: servono almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite.",
+      "confidence": "bassa (campione ridotto)",
       "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
     }
   ],
