@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-15T11:11:08+00:00",
+  "updated_at": "2026-10-15T11:21:02+00:00",
   "source": "https://www.football-data.co.uk",
   "season": "2627",
   "model": "Poisson casa/trasferta con prior di lega e correzione Elo; stime sperimentali, non garanzie",
@@ -34,7 +34,7 @@
         "home_scores": 89.3,
         "away_scores": 89.0
       },
-      "analysis": "Le probabilità mostrano un quadro molto equilibrato tra Le Mans e Toulouse, con percentuali vicine. Il campione limitato di dati e le stime sperimentali di questo modello Poisson non validato impongono massima prudenza.",
+      "analysis": "Le stime sperimentali di questo modello Poisson non validato mostrano probabilità molto vicine tra vittoria casalinga e trasferta. Tenendo conto del campione limitato di 3 partite, l'incertezza resta elevata.",
       "suggested_markets": [
         "Over 1,5",
         "Goal"
@@ -76,11 +76,62 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "segnalazioni_trovate",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
-        "injuries": [],
-        "lineups": null
+        "note": "La fonte segnala 8 indisponibilità; elenco non necessariamente completo.",
+        "fixture_id": "1552785",
+        "injuries": [
+          {
+            "team": "Le Mans",
+            "player": "A. Bourabaa",
+            "type": "Missing Fixture",
+            "reason": "Ankle Injury"
+          },
+          {
+            "team": "Le Mans",
+            "player": "E. Colas",
+            "type": "Missing Fixture",
+            "reason": "Injury"
+          },
+          {
+            "team": "Le Mans",
+            "player": "M. Rossignol",
+            "type": "Missing Fixture",
+            "reason": "Injury"
+          },
+          {
+            "team": "Toulouse",
+            "player": "J. Vignolo",
+            "type": "Missing Fixture",
+            "reason": "Inactive"
+          },
+          {
+            "team": "Le Mans",
+            "player": "A. Bourabaa",
+            "type": "Missing Fixture",
+            "reason": "Ankle Injury"
+          },
+          {
+            "team": "Le Mans",
+            "player": "E. Colas",
+            "type": "Missing Fixture",
+            "reason": "Injury"
+          },
+          {
+            "team": "Le Mans",
+            "player": "M. Rossignol",
+            "type": "Missing Fixture",
+            "reason": "Injury"
+          },
+          {
+            "team": "Toulouse",
+            "player": "J. Vignolo",
+            "type": "Missing Fixture",
+            "reason": "Inactive"
+          }
+        ],
+        "lineups": null,
+        "lineup_status": "non_pubblicate"
       },
       "analysis_provider": "Gemini"
     },
@@ -112,7 +163,7 @@
         "home_scores": 80.3,
         "away_scores": 67.6
       },
-      "analysis": "Strasbourg e Paris Saint-Germain presentano stime derivate da un modello Poisson non ancora validato e con un campione molto ridotto. Le percentuali vanno interpretate con estrema cautela e margini di incertezza elevati.",
+      "analysis": "Il modello Poisson non ancora validato evidenzia un campione di riferimento molto ridotto per gli ospiti. Le percentuali vanno prese con cautela a causa della forte incertezza intrinseca.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -148,9 +199,9 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       },
@@ -184,7 +235,7 @@
         "home_scores": 78.6,
         "away_scores": 64.1
       },
-      "analysis": "Il confronto tra Lille e Brest si basa su stime sperimentali di un modello Poisson non validato e su un campione limitato. L'incertezza resta alta e i dati vanno presi con prudenza.",
+      "analysis": "Le probabilità stimate dal modello Poisson non validato risultano vicine tra i diversi esiti possibili. Il campione limitato a sole 3 partite impone di considerare queste indicazioni con estrema prudenza.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -225,9 +276,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       },
@@ -261,7 +312,7 @@
         "home_scores": 65.4,
         "away_scores": 90.6
       },
-      "analysis": "Per Troyes-Lens, le stime del modello Poisson non validato evidenziano una probabilità favorevole agli ospiti, ma il campione limitato richiede cautela. Trattandosi di stime sperimentali, l'incertezza complessiva rimane considerevole.",
+      "analysis": "Basato su stime sperimentali di un modello Poisson non validato, l'incontro presenta un campione limitato di sole 3 gare per parte. Tale ristrettezza campionaria evidenzia una marcata incertezza nelle percentuali.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -302,9 +353,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       },
@@ -338,7 +389,7 @@
         "home_scores": 64.9,
         "away_scores": 59.9
       },
-      "analysis": "Angers e Marseille mostrano percentuali vicine e un quadro di grande incertezza in base alle stime sperimentali del modello Poisson non validato. I limiti del campione ridotto invitano alla massima prudenza.",
+      "analysis": "Le probabilità del modello Poisson non validato mostrano valori vicini tra i vari esiti. I limiti evidenti del campione ridotto invitano a interpretare questi dati con molta prudenza.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -377,9 +428,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       },
@@ -413,7 +464,7 @@
         "home_scores": 78.3,
         "away_scores": 71.8
       },
-      "analysis": "Le stime per Lorient e AS Monaco derivano da un modello Poisson non ancora validato con un campione molto limitato. Questo indice di incertezza richiede di interpretare le percentuali con prudenza.",
+      "analysis": "Questo modello Poisson non ancora validato si basa su un campione estremamente limitato. L'incertezza delle stime sperimentali rimane alta e richiede cautela.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -449,9 +500,9 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       },
@@ -485,7 +536,7 @@
         "home_scores": 81.9,
         "away_scores": 53.6
       },
-      "analysis": "Il modello Poisson non validato assegna percentuali a favore della squadra di casa per Paris FC-Stade Rennais, ma il campione è limitato. Trattandosi di stime sperimentali, è necessario considerare i limiti dei dati.",
+      "analysis": "Le stime sperimentali derivano da un modello Poisson non validato e da un campione ridotto. L'incertezza complessiva dei dati suggerisce di mantenere un approccio molto prudente.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -521,9 +572,9 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       },
@@ -557,7 +608,7 @@
         "home_scores": 91.3,
         "away_scores": 36.7
       },
-      "analysis": "Per Lyon-Nice, le stime sperimentali del modello Poisson non validato indicano una netta divisione, ma il campione ridotto suggerisce prudenza. L'incertezza intrinseca di un modello non validato non va trascurata.",
+      "analysis": "Il modello Poisson non validato mostra una stima preliminare basata su un campione molto limitato. A causa di questa forte incertezza, i dati vanno presi con le dovute cautele.",
       "suggested_markets": [
         "Over 1,5",
         "1"
@@ -599,9 +650,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       },
@@ -635,7 +686,7 @@
         "home_scores": 63.5,
         "away_scores": 81.2
       },
-      "analysis": "Schalke 04 e Mainz registrano stime preliminari da un modello Poisson non validato con un campione ridotto. Le percentuali vanno valutate con estrema cautela a causa dell'alta incertezza.",
+      "analysis": "Le percentuali fornite sono stime sperimentali di un modello Poisson non ancora validato. Visto il campione di poche partite, l'incertezza dell'analisi resta notevole.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -676,9 +727,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       },
@@ -712,7 +763,7 @@
         "home_scores": 93.1,
         "away_scores": 76.5
       },
-      "analysis": "Il confronto tra Werder Bremen e SC Paderborn 07 mostra stime sperimentali basate su un campione limitato di un modello Poisson non validato. I dati vanno interpretati con la dovuta prudenza.",
+      "analysis": "Questo modello Poisson non validato soffre dei limiti di un campione ridotto. Le stime sperimentali vanno quindi interpretate con grande prudenza.",
       "suggested_markets": [
         "Over 1,5",
         "Goal"
@@ -749,9 +800,9 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       },
@@ -785,7 +836,7 @@
         "home_scores": 96.6,
         "away_scores": 51.2
       },
-      "analysis": "Per Bayern Munich-RB Leipzig, le stime del modello Poisson non validato riflettono un divario ampio ma soffrono dei limiti di un campione ridotto. L'incertezza sperimentale richiede un approccio molto prudente.",
+      "analysis": "Trattandosi di stime sperimentali da un modello Poisson non validato con poche osservazioni, i dati presentano evidenti limiti campionari. La prudenza nell'interpretare le percentuali è d'obbligo.",
       "suggested_markets": [
         "Over 1,5",
         "1"
@@ -827,9 +878,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       },
@@ -863,7 +914,7 @@
         "home_scores": 88.9,
         "away_scores": 61.6
       },
-      "analysis": "Levadiakos e Volos NFC presentano percentuali stimate da un modello Poisson non validato con un campione limitato. La natura sperimentale dei dati impone prudenza nell'analisi.",
+      "analysis": "Il campione limitato a poche gare e la natura sperimentale di questo modello Poisson non validato generano una forte incertezza. Le stime vanno considerate con molta cautela.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -899,9 +950,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       },
@@ -935,7 +986,7 @@
         "home_scores": 72.8,
         "away_scores": 73.2
       },
-      "analysis": "Le percentuali per Atromitos e AEK Athens sono molto vicine, evidenziando equilibrio secondo il modello Poisson non validato. Il campione limitato e la natura sperimentale impongono massima cautela.",
+      "analysis": "Le probabilità stimate dal modello Poisson non validato sono molto vicine tra casa e trasferta. I limiti del campione ridotto evidenziano un'elevata incertezza complessiva.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -971,9 +1022,9 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       },
@@ -1007,7 +1058,7 @@
         "home_scores": 80.8,
         "away_scores": 69.2
       },
-      "analysis": "Per Kalamata-OFI Crete, le stime del modello Poisson non validato si basano su un campione ristretto. Questo limite rende necessarie interpretazioni prudenti delle percentuali.",
+      "analysis": "Il modello Poisson non ancora validato fornisce stime sperimentali basate su un campione limitato. Questa situazione mantiene alta l'incertezza dei dati.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1048,9 +1099,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       },
@@ -1084,7 +1135,7 @@
         "home_scores": 83.9,
         "away_scores": 67.9
       },
-      "analysis": "Panetolikos e Olympiacos mostrano stime sperimentali derivate da un modello non validato e con un campione limitato. L'incertezza del campione richiede prudenza nella lettura dei dati.",
+      "analysis": "Le percentuali provengono da un modello Poisson non validato con un campione ridotto di partite. È necessario interpretare tali stime sperimentali con la massima cautela.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1120,9 +1171,9 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       },
@@ -1156,7 +1207,7 @@
         "home_scores": 90.7,
         "away_scores": 54.9
       },
-      "analysis": "Il modello Poisson non validato fornisce stime per Panathinaikos e Asteras Tripoli basate su un campione ridotto. Trattandosi di dati sperimentali, occorre interpretare i valori con cautela.",
+      "analysis": "Le stime sperimentali di questo modello Poisson non validato risentono dei limiti di un campione esiguo. L'incertezza statistica resta un fattore dominante.",
       "suggested_markets": [
         "Over 1,5",
         "1"
@@ -1193,9 +1244,9 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       },
@@ -1229,7 +1280,7 @@
         "home_scores": 84.6,
         "away_scores": 47.2
       },
-      "analysis": "Per Kifisia-Aris, le percentuali del modello Poisson non validato risentono dei limiti di un campione ridotto. L'incertezza sperimentale suggerisce un giudizio molto prudente.",
+      "analysis": "Basato su un modello Poisson non ancora validato, l'algoritmo utilizza un campione di partite molto limitato. Di conseguenza, le stime presentano margini di incertezza evidenti.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1270,9 +1321,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       },
@@ -1306,7 +1357,7 @@
         "home_scores": 76.3,
         "away_scores": 62.9
       },
-      "analysis": "Le percentuali tra PAOK e Iraklis sono vicine, riflettendo un sostanziale equilibrio stimato dal modello Poisson non validato. Il campione limitato richiede di considerare i dati con prudenza.",
+      "analysis": "Le probabilità stimate per la vittoria casalinga e la trasferta risultano piuttosto vicine. I limiti del campione e la natura di modello Poisson non validato impongono molta prudenza.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1345,9 +1396,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       },
@@ -1381,7 +1432,7 @@
         "home_scores": 88.4,
         "away_scores": 66.1
       },
-      "analysis": "Everton e Chelsea presentano stime preliminari da un modello Poisson non validato con un campione limitato. La natura sperimentale dei dati impone cautela.",
+      "analysis": "Trattandosi di stime sperimentali da un modello Poisson non validato con un campione limitato, le percentuali vanno lette con cautela. L'incertezza analitica rimane elevata.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1422,9 +1473,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       },
@@ -1458,7 +1509,7 @@
         "home_scores": 71.0,
         "away_scores": 52.9
       },
-      "analysis": "Il confronto tra Brentford e Liverpool mostra stime basate su un campione ridotto di un modello Poisson non validato. L'incertezza statistica richiede massima prudenza.",
+      "analysis": "Questo modello Poisson non ancora validato mostra probabilità vicine e si basa su un campione ridotto. Tali limiti impongono un'interpretazione estremamente prudente.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1497,9 +1548,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       },
@@ -1533,7 +1584,7 @@
         "home_scores": 80.7,
         "away_scores": 83.9
       },
-      "analysis": "Fulham e Hull City registrano percentuali vicine in base alle stime sperimentali di un modello Poisson non validato. Il campione limitato evidenzia limiti intrinseci da considerare con cautela.",
+      "analysis": "Le stime sperimentali di questo modello Poisson non validato evidenziano probabilità vicine tra le due squadre. Il campione limitato suggerisce di considerare i dati con molta circospezione.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1569,9 +1620,9 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       },
@@ -1605,7 +1656,7 @@
         "home_scores": 84.3,
         "away_scores": 68.0
       },
-      "analysis": "Per Newcastle United-Aston Villa, il modello Poisson non validato offre stime sperimentali soggette a un campione ridotto. La prudenza d'interpretazione è d'obbligo.",
+      "analysis": "Il modello Poisson non validato si basa su un campione ridotto di partite. Questa condizione genera una forte incertezza nelle stime sperimentali proposte.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1641,9 +1692,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       },
@@ -1677,7 +1728,7 @@
         "home_scores": 88.9,
         "away_scores": 76.8
       },
-      "analysis": "AFC Bournemouth e Sunderland mostrano stime derivate da un modello Poisson non validato con limiti di campione evidenti. Le percentuali vanno prese con cautela.",
+      "analysis": "Le percentuali derivano da un modello Poisson non ancora validato con limiti di campione evidenti. L'incertezza delle stime sperimentali richiede un'analisi molto prudente.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1713,9 +1764,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       },
@@ -1749,7 +1800,7 @@
         "home_scores": 77.8,
         "away_scores": 68.1
       },
-      "analysis": "Brighton & Hove Albion e Crystal Palace presentano percentuali vicine, indicando incertezza secondo il modello Poisson non validato. Il campione limitato richiede un approccio prudente.",
+      "analysis": "Le probabilità calcolate dal modello Poisson non validato sono piuttosto vicine tra i vari esiti. L'esiguità del campione impone di mantenere un alto livello di cautela.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1785,9 +1836,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       },
@@ -1821,7 +1872,7 @@
         "home_scores": 73.1,
         "away_scores": 68.7
       },
-      "analysis": "Il match tra Nottingham Forest e Arsenal mostra probabilità vicine e stime sperimentali da un modello Poisson non validato. I limiti del campione ridotto impongono massima prudenza.",
+      "analysis": "Questo modello Poisson non validato mostra stime con probabilità molto vicine tra loro. I limiti del campione ridotto evidenziano un quadro di marcata incertezza.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1857,9 +1908,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       },
@@ -1893,7 +1944,7 @@
         "home_scores": 88.2,
         "away_scores": 70.5
       },
-      "analysis": "Frosinone e Sassuolo registrano stime preliminari basate su un campione limitato di un modello Poisson non validato. L'incertezza impone di interpretare i dati con cautela.",
+      "analysis": "Le stime sperimentali di questo modello Poisson non ancora validato si fondano su un campione ristretto. Tale limite campionario richiede molta prudenza nell'interpretare i dati.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1934,11 +1985,110 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "segnalazioni_trovate",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
-        "injuries": [],
-        "lineups": null
+        "note": "La fonte segnala 16 indisponibilità; elenco non necessariamente completo.",
+        "fixture_id": "1550151",
+        "injuries": [
+          {
+            "team": "Frosinone",
+            "player": "D. Birligea",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "team": "Frosinone",
+            "player": "F. Grillitsch",
+            "type": "Missing Fixture",
+            "reason": "Thigh Injury"
+          },
+          {
+            "team": "Sassuolo",
+            "player": "D. Boloca",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "team": "Sassuolo",
+            "player": "J. Idzes",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "team": "Sassuolo",
+            "player": "I. Kone",
+            "type": "Missing Fixture",
+            "reason": "Broken Leg"
+          },
+          {
+            "team": "Sassuolo",
+            "player": "Y. Paz",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "team": "Sassuolo",
+            "player": "E. Pieragnolo",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "team": "Sassuolo",
+            "player": "F. Leysen",
+            "type": "Questionable",
+            "reason": "Injury"
+          },
+          {
+            "team": "Frosinone",
+            "player": "D. Birligea",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "team": "Frosinone",
+            "player": "F. Grillitsch",
+            "type": "Missing Fixture",
+            "reason": "Thigh Injury"
+          },
+          {
+            "team": "Sassuolo",
+            "player": "D. Boloca",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "team": "Sassuolo",
+            "player": "J. Idzes",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "team": "Sassuolo",
+            "player": "I. Kone",
+            "type": "Missing Fixture",
+            "reason": "Broken Leg"
+          },
+          {
+            "team": "Sassuolo",
+            "player": "Y. Paz",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "team": "Sassuolo",
+            "player": "E. Pieragnolo",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "team": "Sassuolo",
+            "player": "F. Leysen",
+            "type": "Questionable",
+            "reason": "Injury"
+          }
+        ],
+        "lineups": null,
+        "lineup_status": "non_pubblicate"
       },
       "analysis_provider": "Gemini"
     },
@@ -1970,7 +2120,7 @@
         "home_scores": 56.8,
         "away_scores": 93.2
       },
-      "analysis": "Per Venezia-Napoli, il modello Poisson non validato indica una netta ripartizione, ma il campione ridotto evidenzia limiti importanti. Le stime sperimentali richiedono prudenza.",
+      "analysis": "Il modello Poisson non validato presenta un campione di partite limitato. L'incertezza intrinseca delle stime sperimentali invita a considerare i numeri con grande cautela.",
       "suggested_markets": [
         "Over 1,5",
         "2"
@@ -2012,9 +2162,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       },
@@ -2048,7 +2198,7 @@
         "home_scores": 72.4,
         "away_scores": 73.0
       },
-      "analysis": "Bologna e Internazionale presentano percentuali molto vicine, segnalando equilibrio per il modello Poisson non validato. La limitatezza del campione richiede grande cautela.",
+      "analysis": "Le probabilità per la vittoria di casa e trasferta risultano molto vicine secondo questo modello Poisson non validato. I limiti del campione impongono di interpretare l'analisi con prudenza.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -2084,9 +2234,9 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       },
@@ -2120,7 +2270,7 @@
         "home_scores": 79.3,
         "away_scores": 61.8
       },
-      "analysis": "AS Roma e Genoa mostrano stime sperimentali derivate da un modello non validato con un campione ridotto. L'incertezza intrinseca suggerisce un'analisi prudente.",
+      "analysis": "Questo modello Poisson non ancora validato mostra stime sperimentali basate su poche partite. L'incertezza complessiva dei dati richiede un approccio prudente.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -2156,9 +2306,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       },
@@ -2192,7 +2342,7 @@
         "home_scores": 70.9,
         "away_scores": 62.9
       },
-      "analysis": "Udinese e Lecce registrano percentuali vicine nel modello Poisson non validato, indicando un certo equilibrio. Il campione limitato impone di interpretare i dati con prudenza.",
+      "analysis": "Le percentuali del modello Poisson non validato sono vicine e derivano da un campione limitato. Tali fattori evidenziano un'elevata incertezza che richiede massima cautela.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -2231,9 +2381,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       },
@@ -2309,9 +2459,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -2380,9 +2530,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -2454,9 +2604,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -2530,9 +2680,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -2604,9 +2754,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -2680,11 +2830,38 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "segnalazioni_trovate",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
-        "injuries": [],
-        "lineups": null
+        "note": "La fonte segnala 4 indisponibilità; elenco non necessariamente completo.",
+        "fixture_id": "1552189",
+        "injuries": [
+          {
+            "team": "Heerenveen",
+            "player": "D. Proper",
+            "type": "Missing Fixture",
+            "reason": "Hamstring Injury"
+          },
+          {
+            "team": "Excelsior",
+            "player": "N. Naujoks",
+            "type": "Questionable",
+            "reason": "Injury"
+          },
+          {
+            "team": "Heerenveen",
+            "player": "D. Proper",
+            "type": "Missing Fixture",
+            "reason": "Hamstring Injury"
+          },
+          {
+            "team": "Excelsior",
+            "player": "N. Naujoks",
+            "type": "Questionable",
+            "reason": "Injury"
+          }
+        ],
+        "lineups": null,
+        "lineup_status": "non_pubblicate"
       }
     },
     {
@@ -2752,9 +2929,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -2823,9 +3000,9 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -2899,9 +3076,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -2971,9 +3148,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -3042,9 +3219,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -3111,9 +3288,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -3185,9 +3362,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -3259,9 +3436,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -3335,9 +3512,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -3411,9 +3588,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -3485,9 +3662,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -3554,9 +3731,9 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -3623,9 +3800,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -3700,9 +3877,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -3772,9 +3949,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -3843,9 +4020,9 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -3912,9 +4089,9 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -3981,9 +4158,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -4052,9 +4229,9 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -4128,9 +4305,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -4197,9 +4374,9 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -4269,9 +4446,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -4340,9 +4517,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -4416,9 +4593,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -4492,9 +4669,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -4566,9 +4743,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -4635,9 +4812,9 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -4712,9 +4889,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -4748,9 +4925,9 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -4782,9 +4959,9 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -4816,9 +4993,9 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -4850,9 +5027,9 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -4884,9 +5061,9 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -4918,9 +5095,9 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -4952,9 +5129,9 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -4986,9 +5163,9 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -5020,9 +5197,9 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -5054,9 +5231,9 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -5088,9 +5265,9 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -5122,9 +5299,9 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -5156,9 +5333,9 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -5190,9 +5367,9 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -5224,9 +5401,9 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -5258,9 +5435,9 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "non_configurata",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Fonte infortuni/formazioni non configurata: aggiungi il secret API_FOOTBALL_KEY su GitHub per attivare il controllo.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
