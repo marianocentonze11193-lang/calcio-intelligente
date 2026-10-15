@@ -216,6 +216,22 @@ class PredictionModelTests(unittest.TestCase):
         self.assertEqual(forecast["no_bet_type"], "campione_insufficiente")
         self.assertIn("Campione insufficiente", forecast["reason"])
 
+    def test_no_bet_flags_unreliable_context_when_both_sides_have_tiny_samples(self):
+        history = defaultdict(lambda: {
+            "played": 0, "home_games": 0, "away_games": 0,
+            "home_scored": 0, "home_conceded": 0,
+            "away_scored": 0, "away_conceded": 0,
+        })
+        history["Casa"].update({"played": 1, "home_games": 1, "home_scored": 1, "home_conceded": 1})
+        history["Trasferta"].update({"played": 1, "away_games": 1, "away_scored": 1, "away_conceded": 1})
+        forecast = module.make_forecast(
+            "Casa", "Trasferta", "Test League", date(2026, 10, 16), "18:00",
+            history, 1.4, 1.1,
+        )
+        self.assertEqual(forecast["status"], "NO BET")
+        self.assertEqual(forecast["no_bet_type"], "stima_non_affidabile")
+        self.assertIn("non adatta a una stima affidabile", forecast["reason"])
+
     def test_forecast_probabilities_are_bounded(self):
         history = defaultdict(lambda: {
             "played": 12, "home_games": 3, "away_games": 3,
