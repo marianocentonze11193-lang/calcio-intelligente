@@ -83,24 +83,30 @@ def main():
 
     prompt = (
         "Sei l'analista editoriale di Calcio Intelligente e scrivi in italiano naturale, "
-        "chiaro e concreto, come una persona competente che spiega la partita a un lettore. "
-        "Per ogni incontro scrivi 4-5 frasi complete (circa 90-140 parole), con tono umano "
-        "e senza formule ripetitive. Apri con una lettura sintetica dell'equilibrio tra le "
-        "squadre; interpreta le probabilità 1/X/2 e i gol attesi citando i numeri pertinenti; "
-        "commenta la forma recente solo se i dati sono presenti, spiegando gol fatti/subiti "
-        "e punti medi senza trasformarli in certezze; indica chiaramente se il campione casa/"
-        "trasferta è piccolo o manca del tutto e come questo limita la stima. Se sono presenti "
-        "quote, descrivile come dato di mercato e non come prova di valore; non dichiarare che "
-        "una quota sia conveniente senza calcolare e giustificare il confronto. Se i dati "
-        "infortuni/formazioni sono presenti, riferisci soltanto ciò che la fonte segnala e "
-        "precisa che l'elenco può essere incompleto; se la data è fuori copertura, dillo "
-        "esplicitamente e non interpretare l'assenza di segnalazioni come disponibilità. "
-        "Non inventare notizie, precedenti, motivazioni, forma, quote o giocatori; non "
-        "dedurre informazioni mancanti. Non consigliare puntate, non promettere risultati e "
-        "non modificare probabilità o mercati. Ricorda che il modello Poisson è sperimentale "
-        "e non ancora validato con risultati sufficienti. Evita di ripetere sempre la stessa "
-        "frase generica: rendi ogni analisi specifica ai numeri della partita. Restituisci "
-        "SOLO JSON valido nel formato "
+        "con il tono di una persona competente che accompagna il lettore nella partita, "
+        "senza gergo superfluo né entusiasmo artificiale. Per ogni incontro produci 5-6 frasi "
+        "ben collegate, circa 110-160 parole: l'analisi deve essere più utile di una semplice "
+        "lettura dei numeri, ma non deve diventare prolissa. Apri descrivendo in modo concreto "
+        "quanto la gara appare equilibrata o sbilanciata. Interpreta le probabilità 1/X/2 e i "
+        "gol attesi citando i valori più importanti in modo comprensibile; se utile, spiega "
+        "che cosa suggeriscono sul possibile andamento, senza descrivere scenari come certi. "
+        "Confronta la forma recente delle due squadre solo quando è presente nel JSON e "
+        "riporta con prudenza gol fatti/subiti e punti medi; usa i valori Elo come indicatore "
+        "secondario, non come classifica ufficiale. Indica il numero di gare nel campione casa/"
+        "trasferta e spiega chiaramente se è piccolo, perché rende la stima meno stabile. "
+        "Se ci sono quote, presentale solo come riferimento del mercato: non chiamarle "
+        "convenienti senza un confronto quantitativo giustificato. Per indisponibilità e "
+        "formazioni cita solo le informazioni esplicitamente fornite, specificando che la fonte "
+        "può essere incompleta; se la partita è fuori copertura API o non ci sono segnalazioni, "
+        "non lasciare intendere che tutti i giocatori siano disponibili. Non inventare notizie, "
+        "precedenti, classifiche, motivazioni, tattiche, giocatori, quote o statistiche; se un "
+        "dato manca, dichiaralo solo quando è utile e non riempire il vuoto con supposizioni. "
+        "Spiega un limite concreto della previsione e ricorda, senza ripetere sempre la stessa "
+        "formula, che il modello statistico è sperimentale e non ancora validato su un campione "
+        "sufficiente. Non consigliare puntate, non promettere risultati e non modificare le "
+        "probabilità o i mercati. Rendi ogni commento specifico ai dati di quella partita, "
+        "evitando introduzioni e conclusioni identiche tra gli incontri. Restituisci SOLO JSON "
+        "valido nel formato "
         '{"analyses":[{"id":"ID esatto","analysis":"analisi in italiano"}]}. '
         "Non inventare ID e non omettere le cautele. Dati:\\n"
         + json.dumps(compact_matches, ensure_ascii=False, separators=(",", ":"))
@@ -109,7 +115,7 @@ def main():
         "contents": [{"role": "user", "parts": [{"text": prompt}]}],
         "generationConfig": {
             "temperature": 0.2,
-            "maxOutputTokens": 5000,
+            "maxOutputTokens": 7000,
             "responseMimeType": "application/json",
         },
     }
@@ -144,7 +150,7 @@ def main():
             if match_id in allowed_ids and isinstance(analysis, str):
                 clean = " ".join(analysis.split())
                 if clean:
-                    by_id[match_id] = clean[:700]
+                    by_id[match_id] = clean[:1200]
         if not by_id:
             raise ValueError("Gemini non ha restituito commenti utilizzabili")
 
