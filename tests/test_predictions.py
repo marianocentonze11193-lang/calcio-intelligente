@@ -83,6 +83,13 @@ class PredictionModelTests(unittest.TestCase):
             self.assertIn(module.LEAGUES[code], module.LEAGUE_COUNTRIES)
             self.assertIn(code, module.ESPN_LEAGUES)
 
+    def test_only_real_football_data_csv_divisions_use_primary_history(self):
+        self.assertEqual(
+            module.FOOTBALL_DATA_LEAGUES,
+            frozenset({"E0", "SP1", "D1", "I1", "F1", "SC0", "N1", "P1", "B1", "T1", "G1"}),
+        )
+        self.assertTrue(module.FOOTBALL_DATA_LEAGUES.issubset(module.LEAGUES))
+
     def test_forecast_initializes_value_bets_list(self):
         history = defaultdict(lambda: {
             "played": 12, "home_games": 3, "away_games": 3,

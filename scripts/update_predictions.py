@@ -26,6 +26,12 @@ LEAGUES = {
     "POL": "Ekstraklasa polacca", "RO": "Liga I rumena", "SWE": "Allsvenskan svedese",
     "SWZ": "Super League svizzera",
 }
+# Divisioni con CSV storici dedicati su football-data.co.uk. Le altre leghe
+# usano il calendario/storico ESPN quando disponibili, senza chiamate CSV che
+# restituiscono sistematicamente 404.
+FOOTBALL_DATA_LEAGUES = frozenset({
+    "E0", "SP1", "D1", "I1", "F1", "SC0", "N1", "P1", "B1", "T1", "G1",
+})
 LEAGUE_COUNTRIES = {
     "Premier League": "Inghilterra", "La Liga": "Spagna", "Bundesliga": "Germania",
     "Serie A": "Italia", "Ligue 1": "Francia", "Scottish Premiership": "Scozia",
@@ -459,13 +465,16 @@ def main():
         print(f"AVVISO: calendario futuro non disponibile: {error}")
 
     for code, league_name in LEAGUES.items():
-        try:
-            rows = fetch_csv(f"{SOURCE}/mmz4281/{season}/{code}.csv")
-            downloaded += 1
-        except (urllib.error.URLError, TimeoutError, OSError, ValueError) as error:
-            failed.append(f"{code}: {error}")
-            print(f"AVVISO: storico principale {code} non disponibile: {error}; provo calendario alternativo.")
-            rows = []
+        rows = []
+        if code in FOOTBALL_DATA_LEAGUES:
+            try:
+                rows = fetch_csv(f"{SOURCE}/mmz4281/{season}/{code}.csv")
+                downloaded += 1
+            except (urllib.error.URLError, TimeoutError, OSError, ValueError) as error:
+                failed.append(f"{code}: {error}")
+                print(f"AVVISO: storico principale {code} non disponibile: {error}; provo calendario alternativo.")
+        else:
+            print(f"{league_name}: CSV storico non previsto dalla fonte football-data; provo il fallback ESPN.")
 
         completed, fixtures = [], []
         # Conserva eventuali fixture presenti nel file del campionato.
@@ -488,7 +497,7 @@ def main():
 
         # All'inizio della stagione prova prima la stagione precedente della fonte primaria.
         history_season = season
-        if len(completed) < MIN_TEAM_MATCHES:
+        if len(completed) < MIN_TEAM_MATCHES and code in FOOTBALL_DATA_LEAGUES:
             previous_season = f"{(int(season[:2]) - 1) % 100:02d}{season[:2]}"
             try:
                 previous_rows = fetch_csv(f"{SOURCE}/mmz4281/{previous_season}/{code}.csv")

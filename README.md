@@ -4,7 +4,7 @@ Dashboard statica di pronostici calcistici con aggiornamento automatico tramite 
 
 ## Funzioni implementate
 - Calendario e risultati da football-data.co.uk, con calendario ESPN di riserva.
-- Solo massime divisioni nazionali supportate dalla fonte storica: Premier League, La Liga, Bundesliga, Serie A, Ligue 1, Scottish Premiership, Eredivisie, Primeira Liga, Belgian Pro League, Süper Lig turca, Bundesliga austriaca, Superliga danese, Super League greca, Veikkausliiga finlandese, Premier Division irlandese, Eliteserien norvegese, Ekstraklasa polacca, Liga I rumena, Allsvenskan svedese e Super League svizzera. Il calendario e lo storico devono essere reperibili e abbinabili per ogni partita. Le divisioni inferiori inglesi e scozzesi sono escluse.
+- 20 massime divisioni configurate. I CSV storici di football-data.co.uk sono disponibili per 11 competizioni (Inghilterra, Spagna, Germania, Italia, Francia, Scozia, Paesi Bassi, Portogallo, Belgio, Turchia e Grecia); per le altre competizioni si tenta il calendario/storico ESPN, se disponibile. La copertura può quindi variare per lega e stagione. Le divisioni inferiori inglesi e scozzesi sono escluse.
 - Stime Poisson basate su statistiche casa/trasferta, medie di lega, Elo sequenziale e forma delle ultime cinque gare.
 - Stima preliminare solo quando entrambe le squadre hanno almeno due gare nel corretto contesto casa/trasferta; NO BET quando mancano dati o il campione è insufficiente.
 - Probabilità 1X2, doppia chance, Over/Under, Goal/No Goal e risultati esatti stimati.
@@ -16,7 +16,7 @@ Dashboard statica di pronostici calcistici con aggiornamento automatico tramite 
 
 ## Limiti e trasparenza
 - Elo e Poisson sono un modello sperimentale; non è ancora dimostrata la sua redditività e la calibrazione va misurata su un campione storico ampio.
-- Per alcuni campionati il calendario ESPN può essere disponibile senza dati storici equivalenti. Il flusso prova anche un recupero storico ESPN per intervallo recente; se la fonte non restituisce risultati verificabili, la partita resta NO BET con una causa esplicita. La disponibilità del fallback può variare e non garantisce copertura completa.
+- Per alcuni campionati il calendario ESPN può essere disponibile senza dati storici equivalenti. Il flusso evita richieste CSV alle divisioni non supportate dalla fonte primaria e prova un recupero storico ESPN recente; se la fonte non restituisce risultati verificabili, la partita resta NO BET con una causa esplicita. La disponibilità del fallback può variare e non garantisce copertura completa.
 - Le formazioni ufficiali, gli infortuni e le squalifiche non sono ancora coperti da una fonte automatica gratuita, uniforme e verificata per tutte le leghe. Non vengono inventati: per integrarli in modo affidabile serve un provider con endpoint dedicati e limiti/condizioni compatibili; una semplice notizia o una formazione non confermata non viene trattata come dato certo.
 - La copertura quote gratuita varia per partita: vengono usate le quote 1X2 presenti nei CSV football-data.co.uk. Per una copertura alternativa è supportata The Odds API con il secret `ODDS_API_KEY`; senza chiave l'app continua a usare le quote gratuite eventualmente disponibili.
 - Il valore atteso è un calcolo teorico dipendente dalla qualità del modello, non una prova di profitto; la soglia EV teorica del 5% genera candidati solo con almeno 8 gare pertinenti per entrambe le squadre; non è una prova di vantaggio reale.
