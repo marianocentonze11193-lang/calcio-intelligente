@@ -87,9 +87,6 @@ def main():
 
     matched = value_count = 0
     for match in data.get("matches", []):
-        match["odds_1x2"] = None
-        match["expected_value_1x2"] = None
-        match["value_bets"] = []
         events = events_by_league.get(match.get("league"), [])
         target_home, target_away = team_key(match.get("home_team")), team_key(match.get("away_team"))
         event = next((e for e in events
