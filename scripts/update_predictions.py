@@ -38,6 +38,8 @@ FOOTBALL_DATA_LEAGUES = frozenset({
 EXTRA_FOOTBALL_DATA_LEAGUES = frozenset({
     "AUT", "DNK", "FIN", "IRL", "NOK", "POL", "RO", "SWE", "SWZ",
 })
+# Codici effettivi dei CSV cumulativi pubblicati dalla fonte (diversi dai codici interni ESPN).
+EXTRA_SOURCE_CODES = {"NOK": "NOR", "RO": "ROU"}
 EXTRA_HISTORY_DAYS = 365
 LEAGUE_COUNTRIES = {
     "Premier League": "Inghilterra", "La Liga": "Spagna", "Bundesliga": "Germania",
@@ -482,7 +484,7 @@ def main():
                 print(f"AVVISO: storico principale {code} non disponibile: {error}; provo calendario alternativo.")
         elif code in EXTRA_FOOTBALL_DATA_LEAGUES:
             try:
-                rows = fetch_csv(f"{SOURCE}/new/{code}.csv")
+                rows = fetch_csv(f"{SOURCE}/new/{EXTRA_SOURCE_CODES.get(code, code)}.csv")
                 downloaded += 1
                 print(f"{league_name}: CSV cumulativo gratuito scaricato ({code}).")
             except (urllib.error.URLError, TimeoutError, OSError, ValueError) as error:
@@ -494,8 +496,8 @@ def main():
         completed, fixtures = [], []
         # Conserva eventuali fixture presenti nel file del campionato.
         for row in rows:
-            home = (row.get("HomeTeam") or row.get("Home Team") or "").strip()
-            away = (row.get("AwayTeam") or row.get("Away Team") or "").strip()
+            home = (row.get("HomeTeam") or row.get("Home Team") or row.get("home_team") or "").strip()
+            away = (row.get("AwayTeam") or row.get("Away Team") or row.get("away_team") or "").strip()
             match_date = parse_date(row.get("Date") or row.get("date"))
             if not home or not away or not match_date:
                 continue
@@ -503,8 +505,8 @@ def main():
             # modello all'ultimo anno, evitando che dati vecchi dominino la forma.
             if code in EXTRA_FOOTBALL_DATA_LEAGUES and match_date < today - timedelta(days=EXTRA_HISTORY_DAYS):
                 continue
-            hg = number(row.get("FTHG") or row.get("HG") or row.get("home_goals"))
-            ag = number(row.get("FTAG") or row.get("AG") or row.get("away_goals"))
+            hg = number(row.get("FTHG") or row.get("HG") or row.get("fthg") or row.get("home_goals"))
+            ag = number(row.get("FTAG") or row.get("AG") or row.get("ftag") or row.get("away_goals"))
             if (hg is not None and ag is not None and match_date < today and
                     0 <= hg <= 15 and 0 <= ag <= 15 and team_key(home) != team_key(away)):
                 completed.append((home, away, int(hg), int(ag)))
@@ -555,6 +557,7 @@ def main():
         fixture_rows_for_league = 0
         for row in all_fixtures:
             div = (row.get("Div") or row.get("div") or row.get("League") or row.get("league") or "").strip()
+            div = {"NOR": "NOK", "ROU": "RO"}.get(div, div)
             home = (row.get("HomeTeam") or row.get("Home Team") or row.get("home_team") or "").strip()
             away = (row.get("AwayTeam") or row.get("Away Team") or row.get("away_team") or "").strip()
             match_date = parse_date(row.get("Date") or row.get("date"))
