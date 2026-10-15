@@ -335,7 +335,8 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
         "home_matches_sample": home_sample,
         "away_matches_sample": away_sample,
         "status": ("Pronostico valutabile" if sample >= 3 else "Stima preliminare") if valid else "NO BET",
-        "reason": "" if valid else "Storico insufficiente: non risultano almeno due osservazioni pertinenti per le squadre.",
+        "no_bet_type": "" if valid else ("dati_mancanti" if home_sample + away_sample == 0 else "campione_insufficiente"),
+        "reason": "" if valid else ("Dati mancanti: nessuna osservazione storica pertinente per casa o trasferta." if home_sample + away_sample == 0 else "Campione insufficiente: meno di due osservazioni pertinenti complessive; non è possibile calcolare probabilità affidabili."),
         "confidence": "più solida" if sample >= 8 else "intermedia" if sample >= 5 else "bassa (campione ridotto)",
         "elo_home": round((elo_ratings or {}).get(home, 1500.0), 1),
         "elo_away": round((elo_ratings or {}).get(away, 1500.0), 1),
@@ -373,8 +374,8 @@ def main():
             downloaded += 1
         except (urllib.error.URLError, TimeoutError, OSError, ValueError) as error:
             failed.append(f"{code}: {error}")
-            print(f"AVVISO: impossibile scaricare {code}: {error}")
-            continue
+            print(f"AVVISO: storico principale {code} non disponibile: {error}; provo calendario alternativo.")
+            rows = []
 
         completed, fixtures = [], []
         # Conserva eventuali fixture presenti nel file del campionato.
@@ -454,7 +455,21 @@ def main():
                 print(f"{league_name}: calendario alternativo ESPN, {len(alternate_fixtures)} partite.")
         print(f"{league_name}: {len(completed)} risultati storici, {fixture_rows_for_league} partite future abbinate, {len(fixtures)} candidate totali.")
         if not completed:
-            print(f"AVVISO: {league_name}: nessun risultato concluso disponibile.")
+            print(f"AVVISO: {league_name}: nessun risultato concluso disponibile; le partite alternative saranno mostrate come NO BET.")
+            for home, away, match_date, kickoff in fixtures:
+                forecasts.append({
+                    "id": f"{match_date.isoformat()}-{league_name}-{home}-{away}",
+                    "date": match_date.isoformat(), "kickoff": kickoff or "", "league": league_name,
+                    "country": LEAGUE_COUNTRIES.get(league_name, "Altro"),
+                    "home_team": home, "away_team": away, "expected_home_goals": None,
+                    "expected_away_goals": None, "probabilities": {}, "analysis": "",
+                    "suggested_markets": [], "value_bets": [], "top_scorelines": [],
+                    "sample_matches": 0, "home_matches_sample": 0, "away_matches_sample": 0,
+                    "status": "NO BET", "no_bet_type": "dati_mancanti",
+                    "reason": "Dati mancanti: calendario trovato, ma non ci sono risultati storici verificabili per questa competizione.",
+                    "confidence": "non stimabile", "method": "Nessuna stima: storico non disponibile",
+                    "availability_data": {"status": "non_integrata", "note": "Disponibilità non verificata."}
+                })
             continue
         league_home_avg = sum(item[2] for item in completed) / len(completed)
         league_away_avg = sum(item[3] for item in completed) / len(completed)
