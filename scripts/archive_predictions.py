@@ -132,15 +132,15 @@ def main():
 
     today = datetime.now(timezone.utc).date()
     current_season = season_code(today)
-    previous_season = f"{(int(current_season[:2]) - 1) % 100:02d}{current_season[:2]}"
     indexes = {}
+    # Per le partite archiviate nella stagione corrente basta il CSV della stagione corrente.
+    # Evita richieste duplicate allo storico precedente a ogni aggiornamento orario.
     for code, league in LEAGUES.items():
-        for season in (current_season, previous_season):
-            try:
-                rows = read_csv(f"{SOURCE}/mmz4281/{season}/{code}.csv")
-                indexes.setdefault(league, {}).update(result_index(rows))
-            except (urllib.error.URLError, TimeoutError, OSError, ValueError) as error:
-                print(f"AVVISO: risultati per {league} ({season}) non disponibili: {error}")
+        try:
+            rows = read_csv(f"{SOURCE}/mmz4281/{current_season}/{code}.csv")
+            indexes[league] = result_index(rows)
+        except (urllib.error.URLError, TimeoutError, OSError, ValueError) as error:
+            print(f"AVVISO: risultati per {league} ({current_season}) non disponibili: {error}")
 
     settled = 0
     for item in records:
