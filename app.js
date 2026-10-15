@@ -2,7 +2,6 @@
 
 const DATA_URL = "./data/predictions.json";
 const HISTORY_URL = "./data/history.json";
-const HISTORY_URL = "./data/history.json";
 
 function formatDate(value) {
   if (!value) return "Data da confermare";
