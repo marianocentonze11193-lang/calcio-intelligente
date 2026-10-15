@@ -44,18 +44,27 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          # Sincronizza prima con main per evitare conflitti quando il file dati
-          # viene aggiornato da un'esecuzione precedente.
-          git fetch origin main
-          git reset --hard origin/main
-          python scripts/update_predictions.py
-          python scripts/enrich_with_odds.py
-          python scripts/enrich_with_gemini.py
-          python scripts/archive_predictions.py
-          git add data/predictions.json data/history.json
-          if git diff --cached --quiet; then
-            echo "Nessun cambiamento nei dati."
-          else
+          # Ricalcola su main aggiornato e riprova in caso di push concorrente.
+          # Il lock di concorrenza riduce le collisioni; il retry evita che una
+          # modifica manuale durante il calcolo perda l'aggiornamento automatico.
+          for attempt in 1 2 3; do
+            echo "Tentativo sincronizzazione $attempt/3"
+            git fetch origin main
+            git reset --hard origin/main
+            python scripts/update_predictions.py
+            python scripts/enrich_with_odds.py
+            python scripts/enrich_with_gemini.py
+            python scripts/archive_predictions.py
+            git add data/predictions.json data/history.json
+            if git diff --cached --quiet; then
+              echo "Nessun cambiamento nei dati."
+              exit 0
+            fi
             git commit -m "Aggiorna dati e pronostici calcistici"
-            git push origin HEAD:main
-          fi
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Push concorrente: riprovo da main aggiornato."
+          done
+          echo "Impossibile pubblicare i dati dopo tre tentativi."
+          exit 1
