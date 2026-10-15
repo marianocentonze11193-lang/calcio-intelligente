@@ -56,10 +56,64 @@ ESPN_TIMEZONES = {
 }
 
 
-def team_key(value):
+# Alias canonici espliciti per riconciliare i nomi restituiti da ESPN e football-data.
+# La chiave canonica resta distinta tra club diversi (es. Milan e Inter).
+TEAM_ALIAS_GROUPS = [
+    {"inter", "intermilan", "fcinternazionale", "internazionale", "internazionalefc"},
+    {"milan", "acmilan", "acmilan1899"},
+    {"bologna", "bolognafc", "bolognafc1909"},
+    {"atalanta", "atalantabc", "atalantabergamasca"},
+    {"juventus", "juve", "juventusfc"},
+    {"roma", "asroma", "associazionesportivaroma"},
+    {"napoli", "sscnapoli", "societasportivacalcionapoli"},
+    {"fiorentina", "acfiorentina"},
+    {"lazio", "sslazio"},
+    {"torino", "torinofc"},
+    {"verona", "hellasverona"},
+    {"psg", "parissaintgermain", "parissaintgermainfc"},
+    {"manutd", "manchesterunited", "manchesterutd"},
+    {"mancity", "manchestercity"},
+    {"athleticclub", "athleticbilbao"},
+    {"atleticodemadrid", "atleticomadrid"},
+    {"fcbayern", "bayernmunich", "bayernmunchen"},
+    {"sportingcp", "sportinglisbon"},
+    {"salzburg", "redbullsalzburg"},
+    {"tottenham", "tottenhamhotspur"},
+    {"wolves", "wolverhamptonwanderers"},
+    {"newcastle", "newcastleunited"},
+    {"westham", "westhamunited"},
+    {"leicester", "leicestercity"},
+    {"brighton", "brightonandhovealbion"},
+    {"eintrachtfrankfurt", "eintracht"},
+    {"borussiadortmund", "dortmund"},
+    {"borussiamonchengladbach", "monchengladbach", "gladbach"},
+    {"rbLeipzig".lower(), "rasenballsportleipzig", "rbleipzig"},
+    {"parisfc", "paris"},
+    {"olympiquedemarseille", "marseille"},
+    {"olympiquelyonnais", "lyon"},
+    {"realbetis", "betis"},
+    {"realsociedad", "sociedad"},
+    {"celta", "celtavigo"},
+    {"internacional", "internacionalportoalegre"},
+]
+
+
+def _raw_team_key(value):
     value = unicodedata.normalize("NFKD", str(value or ""))
     value = "".join(ch for ch in value if not unicodedata.combining(ch))
     return re.sub(r"[^a-z0-9]", "", value.lower())
+
+
+_TEAM_CANONICAL = {
+    alias: _raw_team_key(min(group, key=len))
+    for group in TEAM_ALIAS_GROUPS
+    for alias in group
+}
+
+
+def team_key(value):
+    key = _raw_team_key(value)
+    return _TEAM_CANONICAL.get(key, key)
 
 
 def parse_date(value):
