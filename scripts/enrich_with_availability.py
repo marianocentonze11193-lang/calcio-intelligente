@@ -187,7 +187,7 @@ def full_refresh(api_key, cache, today):
     cache["last_full_refresh"] = now_utc().isoformat()
 
 
-def refresh_one_lineup(api_key, cache):
+def refresh_one_lineup(api_key, cache, target_matches=None):
     now = now_utc()
     candidates = []
     for fixtures in cache.get("fixtures_by_date", {}).values():
@@ -198,6 +198,13 @@ def refresh_one_lineup(api_key, cache):
             if fixture.get("status") not in ("NS", "TBD", ""):
                 continue
             fixture_id = fixture["id"]
+            if target_matches is not None and not any(
+                str(match.get("date") or "")[:10] == str(fixture.get("date") or "")[:10]
+                and same_team(fixture.get("home"), match.get("home_team"))
+                and same_team(fixture.get("away"), match.get("away_team"))
+                for match in target_matches
+            ):
+                continue
             lineup = cache.get("lineups_by_fixture", {}).get(fixture_id)
             if lineup and (lineup.get("home_starters") or lineup.get("away_starters")):
                 continue
@@ -333,7 +340,8 @@ def main():
     if not last_refresh or now_utc() - last_refresh >= timedelta(seconds=REFRESH_SECONDS):
         full_refresh(api_key, cache, today)
     # Le formazioni arrivano in prossimità del calcio d'inizio: massimo una chiamata per esecuzione.
-    refresh_one_lineup(api_key, cache)
+    target_matches = data.get("matches", []) + data.get("no_bet_matches", [])
+    refresh_one_lineup(api_key, cache, target_matches)
     CACHE_FILE.parent.mkdir(parents=True, exist_ok=True)
     CACHE_FILE.write_text(json.dumps(cache, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     for match in data.get("matches", []) + data.get("no_bet_matches", []):
