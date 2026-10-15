@@ -2,6 +2,9 @@ name: Backup completo settimanale
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/backup.yml"
   schedule:
     - cron: "41 3 * * 1"
 
