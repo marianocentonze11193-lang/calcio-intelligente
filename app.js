@@ -530,10 +530,10 @@ async function aggiornaDati() {
       (staleWarning ? " · ATTENZIONE: dati più vecchi di 2 ore o data non valida." : "") +
       ". Il pulsante ricarica il file pubblicato; non avvia direttamente il calcolo sul server.";
   } catch (errore) {
-    stato.textContent = "DATI NON DISPONIBILI · L'aggiornamento non è riuscito.";
+    stato.textContent = "DATI NON DISPONIBILI · " + (errore && errore.message ? errore.message : "L'aggiornamento non è riuscito.");
     const container = document.getElementById("matches");
-    if (container) container.textContent = "Non è stato possibile leggere le stime. Riprova più tardi.";
-    aggiornamento.textContent = "Vengono mostrate solo le stime già salvate nel file dati.";
+    if (container) container.textContent = "Non è stato possibile leggere le stime. Controlla la connessione e premi Ricarica dati.";
+    aggiornamento.textContent = "Il file dati non è stato caricato o non ha il formato atteso.";
   } finally {
     pulsante.disabled = false;
   }
@@ -567,7 +567,7 @@ function applyFilters() {
   ));
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+function initializeCalcioIntelligente() {
   const pulsante = document.getElementById("refresh");
   if (pulsante) {
     pulsante.addEventListener("click", aggiornaDati);
@@ -595,4 +595,11 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-});
+}
+
+// Supporta sia script defer sia inserimento dopo DOMContentLoaded.
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initializeCalcioIntelligente, { once: true });
+} else {
+  initializeCalcioIntelligente();
+}
