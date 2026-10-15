@@ -33,7 +33,19 @@
     .market-chip { display: inline-block; margin: 3px 5px 3px 0; padding: 7px 10px; border-radius: 8px; font-size: 13px; font-weight: 800; }
     .market-green { background: #123b2c; border: 1px solid #2b9b6b; color: #a4f2ca; }
     .market-no-pick { color: #f3d28a; background: #443819; border: 1px solid #b58a26; border-radius: 8px; padding: 9px; font-size: 12px; line-height: 1.5; }
-    .history-item { background: #111925; border: 1px solid #303b4d; border-radius: 10px; padding: 12px; margin: 10px 0; }\n    .history-result { font-weight: 800; color: #a4f2ca; }\n    .history-pending { color: #f3d28a; }\n    .history-metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin: 12px 0; }\n    .history-metric { background: #252f40; padding: 10px; border-radius: 8px; }\n    .history-metric strong { display: block; font-size: 18px; margin-top: 5px; }\n    .probability { background: #252f40; border-radius: 8px; padding: 9px 5px; text-align: center; display: flex; flex-direction: column; gap: 5px; }
+    .history-item { background: #111925; border: 1px solid #303b4d; border-radius: 10px; padding: 12px; margin: 10px 0; }
+    .history-result { font-weight: 800; color: #a4f2ca; }
+    .history-pending { color: #f3d28a; }
+    .history-metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin: 12px 0; }
+    .history-metric { background: #252f40; padding: 10px; border-radius: 8px; }
+    .history-metric strong { display: block; font-size: 18px; margin-top: 5px; }
+    .history-item { background: #111925; border: 1px solid #303b4d; border-radius: 10px; padding: 12px; margin: 10px 0; }
+    .history-result { font-weight: 800; color: #a4f2ca; }
+    .history-pending { color: #f3d28a; }
+    .history-metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin: 12px 0; }
+    .history-metric { background: #252f40; padding: 10px; border-radius: 8px; }
+    .history-metric strong { display: block; font-size: 18px; margin-top: 5px; }
+    .probability { background: #252f40; border-radius: 8px; padding: 9px 5px; text-align: center; display: flex; flex-direction: column; gap: 5px; }
     .probability span { color: #aab6c9; font-size: 12px; }
     .probability strong { font-size: 15px; }
     footer { padding: 8px 18px 28px; text-align: center; }
@@ -58,6 +70,12 @@
       <h2>Partite e probabilità</h2>
       <p class="muted">Stime calcolate con un modello Poisson usando i risultati disponibili in casa e in trasferta. Una stima viene valutata solo se sono disponibili almeno 3 gare casalinghe per la squadra di casa e 3 trasferte per quella ospite. È una soglia minima per mostrare una stima sperimentale, non una garanzia di affidabilità; il campione ridotto viene segnalato. Campionati: Premier League, Championship, League One, League Two, La Liga, Bundesliga, Serie A, Ligue 1, Scottish Premiership, Scottish Championship, Eredivisie, Primeira Liga, Belgian Pro League e Super Lig turca. Il calendario europeo può includere Champions League, Europa League e Conference League; se lo storico non è sufficiente, la partita resta visibile come NO BET.</p>
       <div id="matches" class="status">Caricamento delle partite…</div>
+    </section>
+    <section class="panel">
+      <h2>Storico e verifica</h2>
+      <p class="muted">Qui vengono conservate le stime archiviate e, quando la fonte fornisce il risultato finale, confrontate con l’esito reale. Le metriche hanno valore descrittivo e richiedono un campione ampio.</p>
+      <div id="history-metrics" class="history-metrics"><div class="status">Caricamento metriche…</div></div>
+      <div id="history-list" class="status">Caricamento dello storico…</div>
     </section>
     <section class="panel">
       <h2>Mercati analizzati</h2>
