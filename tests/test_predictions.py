@@ -31,6 +31,13 @@ VALIDATOR_SPEC.loader.exec_module(validator_module)
 
 
 class PredictionModelTests(unittest.TestCase):
+    def test_extra_european_leagues_have_free_csv_fallback_configured(self):
+        expected = {"AUT", "DNK", "FIN", "IRL", "NOK", "POL", "RO", "SWE", "SWZ"}
+        self.assertEqual(module.EXTRA_FOOTBALL_DATA_LEAGUES, expected)
+        self.assertTrue(expected.issubset(module.LEAGUES))
+        self.assertTrue(expected.isdisjoint(module.FOOTBALL_DATA_LEAGUES))
+        self.assertEqual(module.EXTRA_HISTORY_DAYS, 365)
+
     def test_published_data_timestamp_rejects_stale_future_and_invalid_values(self):
         from datetime import datetime, timezone, timedelta
         now = datetime(2026, 10, 15, 18, 0, tzinfo=timezone.utc)
