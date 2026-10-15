@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-15T08:54:56+00:00",
+  "updated_at": "2026-10-15T09:45:50+00:00",
   "source": "https://www.football-data.co.uk",
   "season": "2627",
   "model": "Poisson semplice con filtro storico minimo; stime indicative, non garanzie",
@@ -33,7 +33,7 @@
         "home_scores": 82.6,
         "away_scores": 79.4
       },
-      "analysis": "Mansfield leggermente favorito; scenario da almeno 2 gol; entrambe a segno plausibile. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Il modello Poisson evidenzia una situazione incerta tra Mansfield e Oxford con un campione di sole 4 partite. Trattandosi di stime sperimentali non validate, le probabilità vanno prese con cautela.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -57,7 +57,8 @@
       "status": "Pronostico valutabile",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
-      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato",
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-16-Eredivisie-Heerenveen-Excelsior",
@@ -86,7 +87,7 @@
         "home_scores": 58.8,
         "away_scores": 85.1
       },
-      "analysis": "Excelsior leggermente favorita; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Le stime del modello Poisson per Heerenveen-Excelsior si basano su un campione limitato a 4 incontri per squadra. L'incertezza resta alta e le percentuali sono da considerare semplici indicazioni sperimentali.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -110,7 +111,8 @@
       "status": "Pronostico valutabile",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
-      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato",
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-16-Ligue 1-Le Mans-Toulouse",
@@ -139,7 +141,7 @@
         "home_scores": 86.7,
         "away_scores": 85.0
       },
-      "analysis": "Le Mans leggermente favorito; scenario da almeno 2 gol; entrambe a segno plausibile. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Con un campione di soli 3 match, le probabilità di Le Mans-Toulouse riflettono i limiti di un modello Poisson non validato. Le percentuali vicine per la vittoria evidenziano una forte incertezza.",
       "suggested_markets": [
         "Over 1,5",
         "Goal"
@@ -164,7 +166,8 @@
       "status": "Pronostico valutabile",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
-      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato",
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-16-Serie A-Frosinone-Sassuolo",
@@ -193,7 +196,7 @@
         "home_scores": 84.1,
         "away_scores": 68.8
       },
-      "analysis": "Frosinone leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Il campione di 3 gare rende le stime per Frosinone-Sassuolo puramente sperimentali e soggette a incertezza. Il modello Poisson non ancora validato mostra comunque un certo equilibrio nelle quote di probabilità.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -217,7 +220,8 @@
       "status": "Pronostico valutabile",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
-      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato",
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-17-Premier League-Everton-Chelsea",
@@ -246,7 +250,7 @@
         "home_scores": 86.5,
         "away_scores": 63.2
       },
-      "analysis": "Everton leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Le probabilità per Everton-Chelsea derivano da un campione ridotto di 3 partite per lato. Trattandosi di stime di un modello Poisson non validato, i margini di errore e l'incertezza sono elevati.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -270,7 +274,8 @@
       "status": "Pronostico valutabile",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
-      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato",
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-17-Serie A-Venezia-Napoli",
@@ -299,7 +304,7 @@
         "home_scores": 64.3,
         "away_scores": 89.5
       },
-      "analysis": "Napoli leggermente favorita; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Il modello Poisson mostra stime basate su un campione limitato a 3 partite per Venezia e Napoli. Questa analisi sperimentale non validata presenta margini di incertezza intrinseci da non sottovalutare.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -323,7 +328,8 @@
       "status": "Pronostico valutabile",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
-      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato",
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-17-Super Lig turca-Genclerbirligi-Galatasaray",
@@ -352,7 +358,7 @@
         "home_scores": 82.3,
         "away_scores": 86.2
       },
-      "analysis": "Galatasaray leggermente favorita; scenario da almeno 2 gol; entrambe a segno plausibile. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Le percentuali vicine tra Genclerbirligi e Galatasaray evidenziano l'incertezza di queste stime sperimentali. Il campione ridotto e la natura non validata del modello Poisson impongono molta prudenza.",
       "suggested_markets": [
         "Over 1,5",
         "Goal"
@@ -377,7 +383,8 @@
       "status": "Pronostico valutabile",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
-      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato",
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-17-Championship-Bristol City-Sheffield United",
@@ -406,7 +413,7 @@
         "home_scores": 62.3,
         "away_scores": 68.7
       },
-      "analysis": "Sheffield United leggermente favorita; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Le probabilità vicine per Bristol City e Sheffield United mostrano una situazione molto incerta. Il campione di 5 partite e il modello Poisson non validato richiedono un'interpretazione estremamente prudente.",
       "suggested_markets": [],
       "top_scorelines": [
         {
@@ -428,7 +435,8 @@
       "status": "Pronostico valutabile",
       "reason": "",
       "confidence": "intermedia",
-      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato",
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-17-League Two-Port Vale-Chesterfield",
@@ -457,7 +465,7 @@
         "home_scores": 64.2,
         "away_scores": 51.0
       },
-      "analysis": "Port Vale leggermente favorito; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Il modello Poisson fornisce stime sperimentali basate su un campione ristretto per Port Vale e Chesterfield. L'incertezza legata a dati non validati impone grande cautela nell'interpretare i valori.",
       "suggested_markets": [],
       "top_scorelines": [
         {
@@ -479,7 +487,8 @@
       "status": "Pronostico valutabile",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
-      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato",
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-17-Premier League-Brentford-Liverpool",
@@ -508,7 +517,7 @@
         "home_scores": 75.2,
         "away_scores": 60.8
       },
-      "analysis": "Brentford leggermente favorito; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Con un campione di sole 3 partite, le stime per Brentford-Liverpool rimangono puramente sperimentali. Interpretiamo le probabilità del modello Poisson non validato con la dovuta incertezza.",
       "suggested_markets": [],
       "top_scorelines": [
         {
@@ -530,7 +539,8 @@
       "status": "Pronostico valutabile",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
-      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato",
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-17-Scottish Premiership-Aberdeen-St Mirren",
@@ -559,7 +569,7 @@
         "home_scores": 60.0,
         "away_scores": 52.7
       },
-      "analysis": "Aberdeen leggermente favorito; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Le probabilità molto vicine tra Aberdeen e St Mirren riflettono l'incertezza di questo incontro. Il campione limitato a 4 partite e il modello Poisson non validato richiedono prudenza.",
       "suggested_markets": [],
       "top_scorelines": [
         {
@@ -581,7 +591,8 @@
       "status": "Pronostico valutabile",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
-      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato",
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-17-Scottish Premiership-Hibernian-Falkirk",
@@ -610,7 +621,7 @@
         "home_scores": 57.4,
         "away_scores": 69.3
       },
-      "analysis": "Falkirk leggermente favorita; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Il modello Poisson offre stime sperimentali basate su un campione di 4 gare per Hibernian e Falkirk. Data la natura non validata del modello, l'incertezza statistica resta elevata.",
       "suggested_markets": [],
       "top_scorelines": [
         {
@@ -632,7 +643,8 @@
       "status": "Pronostico valutabile",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
-      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato",
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-17-Scottish Premiership-Kilmarnock-Motherwell",
@@ -661,7 +673,7 @@
         "home_scores": 63.5,
         "away_scores": 90.1
       },
-      "analysis": "Motherwell leggermente favorita; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Le stime per Kilmarnock-Motherwell derivano da un campione ridotto di 4 partite per parte. Trattandosi di un modello Poisson non validato, le percentuali vanno considerate con cautela e incertezza.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -685,7 +697,8 @@
       "status": "Pronostico valutabile",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
-      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato",
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-17-Scottish Premiership-St Johnstone-Dundee United",
@@ -714,7 +727,7 @@
         "home_scores": 84.8,
         "away_scores": 81.5
       },
-      "analysis": "St Johnstone leggermente favorito; scenario da almeno 2 gol; entrambe a segno plausibile. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Il campione di 4 partite per St Johnstone e Dundee United evidenzia i limiti di queste stime. Le probabilità vicine mostrano incertezza in un modello Poisson non ancora validato.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -738,7 +751,8 @@
       "status": "Pronostico valutabile",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
-      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato",
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-17-La Liga-Villarreal-Elche",
@@ -767,7 +781,7 @@
         "home_scores": 82.1,
         "away_scores": 86.0
       },
-      "analysis": "Elche leggermente favorita; scenario da almeno 2 gol; entrambe a segno plausibile. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Le percentuali vicine per Villarreal e Elche indicano una gara incerta secondo il modello. Il campione ridotto e l'assenza di validazione impongono di trattare queste stime con estrema prudenza.",
       "suggested_markets": [
         "Over 1,5",
         "Goal"
@@ -792,7 +806,8 @@
       "status": "Pronostico valutabile",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
-      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato",
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-17-Super Lig turca-Fenerbahce-Alanyaspor",
@@ -821,7 +836,7 @@
         "home_scores": 90.2,
         "away_scores": 72.4
       },
-      "analysis": "Fenerbahce leggermente favorito; scenario da almeno 2 gol; entrambe a segno plausibile. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Il modello Poisson calcola queste probabilità su un campione ristretto di 3 e 4 partite. Trattandosi di stime sperimentali non validate, i margini di incertezza restano significativi.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -845,7 +860,8 @@
       "status": "Pronostico valutabile",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
-      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato",
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-17-Ligue 1-Lille-Brest",
@@ -874,7 +890,7 @@
         "home_scores": 81.1,
         "away_scores": 67.3
       },
-      "analysis": "Lille leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Le stime per Lille-Brest si basano su un campione di sole 3 partite per squadra. L'incertezza è intrinseca in questo modello Poisson sperimentale e non ancora validato.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -898,7 +914,8 @@
       "status": "Pronostico valutabile",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
-      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato",
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-17-Ligue 1-Troyes-Lens",
@@ -927,7 +944,7 @@
         "home_scores": 72.3,
         "away_scores": 86.8
       },
-      "analysis": "Lens leggermente favorita; scenario da almeno 2 gol; entrambe a segno plausibile. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Il campione limitato a 3 partite rende le percentuali di Troyes-Lens puramente sperimentali. Il modello Poisson non validato evidenzia limiti strutturali e margini di incertezza.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -951,7 +968,8 @@
       "status": "Pronostico valutabile",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
-      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato",
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-17-Eredivisie-Sparta Rotterdam-Willem II",
@@ -980,7 +998,7 @@
         "home_scores": 88.8,
         "away_scores": 80.4
       },
-      "analysis": "Sparta Rotterdam leggermente favorito; scenario da almeno 2 gol; entrambe a segno plausibile. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Con un campione di 4 partite, le probabilità per Sparta Rotterdam e Willem II sono stime preliminari. La natura non validata del modello Poisson richiede un approccio prudente.",
       "suggested_markets": [
         "Over 1,5",
         "Goal"
@@ -1005,7 +1023,8 @@
       "status": "Pronostico valutabile",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
-      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato",
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-17-Scottish Premiership-Dundee-Rangers",
@@ -1034,7 +1053,7 @@
         "home_scores": 60.0,
         "away_scores": 66.8
       },
-      "analysis": "Rangers leggermente favorita; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Le probabilità vicine tra Dundee e Rangers mostrano un quadro di forte incertezza. Il campione di 4 partite e il modello Poisson non validato impongono massima cautela nell'analisi.",
       "suggested_markets": [],
       "top_scorelines": [
         {
@@ -1056,7 +1075,8 @@
       "status": "Pronostico valutabile",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
-      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato",
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-18-Serie A-Udinese-Lecce",
@@ -1085,7 +1105,7 @@
         "home_scores": 64.3,
         "away_scores": 63.1
       },
-      "analysis": "Udinese leggermente favorito; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Le percentuali vicine per Udinese e Lecce riflettono l'equilibrio e l'incertezza del match. Le stime derivano da un campione ridotto di 3 partite e da un modello Poisson non validato.",
       "suggested_markets": [],
       "top_scorelines": [
         {
@@ -1107,7 +1127,8 @@
       "status": "Pronostico valutabile",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
-      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato",
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-18-Super Lig turca-Kasimpasa-Samsunspor",
@@ -1136,7 +1157,7 @@
         "home_scores": 60.6,
         "away_scores": 58.0
       },
-      "analysis": "Kasimpasa leggermente favorito; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Il campione di sole 3 partite limita l'affidabilità delle stime per Kasimpasa e Samsunspor. Le probabilità vicine evidenziano l'incertezza intrinseca di questo modello Poisson non validato.",
       "suggested_markets": [],
       "top_scorelines": [
         {
@@ -1158,7 +1179,8 @@
       "status": "Pronostico valutabile",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
-      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato",
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-18-Ligue 1-Angers-Marseille",
@@ -1187,7 +1209,7 @@
         "home_scores": 65.6,
         "away_scores": 62.8
       },
-      "analysis": "Angers leggermente favorito; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Le stime per Angers-Marseille mostrano percentuali molto vicine e un alto grado di incertezza. Il campione di 3 partite richiede di considerare i dati come un esperimento Poisson non validato.",
       "suggested_markets": [],
       "top_scorelines": [
         {
@@ -1209,7 +1231,8 @@
       "status": "Pronostico valutabile",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
-      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato",
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-18-Serie A-Fiorentina-Como",
@@ -1238,7 +1261,7 @@
         "home_scores": 62.7,
         "away_scores": 86.1
       },
-      "analysis": "Como leggermente favorita; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Il modello Poisson restituisce stime basate su un campione limitato di 3 e 4 partite. La natura sperimentale e non validata del modello comporta notevoli margini di incertezza.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1262,7 +1285,8 @@
       "status": "Pronostico valutabile",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
-      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato",
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-18-Serie A-Juventus-Lazio",
@@ -1291,7 +1315,7 @@
         "home_scores": 62.4,
         "away_scores": 60.7
       },
-      "analysis": "Juventus leggermente favorito; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Le probabilità vicine tra Juventus e Lazio evidenziano una situazione di grande equilibrio e incertezza. Il campione di 3 partite e l'assenza di validazione impongono prudenza.",
       "suggested_markets": [],
       "top_scorelines": [
         {
@@ -1313,7 +1337,8 @@
       "status": "Pronostico valutabile",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
-      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato",
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-18-La Liga-Real Madrid-Sevilla",
@@ -1342,7 +1367,7 @@
         "home_scores": 88.7,
         "away_scores": 66.8
       },
-      "analysis": "Real Madrid leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Il campione limitato a 4 partite per Real Madrid e Sevilla rende le stime puramente sperimentali. L'incertezza del modello Poisson non validato richiede di interpretare i dati con cautela.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1366,7 +1391,8 @@
       "status": "Pronostico valutabile",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
-      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato",
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-19-Super Lig turca-Trabzonspor-Besiktas",
@@ -1395,7 +1421,7 @@
         "home_scores": 93.1,
         "away_scores": 56.2
       },
-      "analysis": "Trabzonspor leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Le stime per Trabzonspor-Besiktas si fondano su un campione ridotto di 3 partite. Trattandosi di un modello Poisson non validato, le percentuali vanno prese con la dovuta prudenza.",
       "suggested_markets": [
         "Over 1,5",
         "1"
@@ -1420,7 +1446,8 @@
       "status": "Pronostico valutabile",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
-      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato",
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-19-Serie A-Parma-Torino",
@@ -1449,7 +1476,7 @@
         "home_scores": 69.5,
         "away_scores": 68.8
       },
-      "analysis": "Parma leggermente favorito; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Le probabilità vicine tra Parma e Torino mostrano una previsione altamente incerta. Il campione di 3 partite e il modello Poisson non validato richiedono un'interpretazione molto prudente.",
       "suggested_markets": [],
       "top_scorelines": [
         {
@@ -1471,7 +1498,8 @@
       "status": "Pronostico valutabile",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
-      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato",
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-20-League Two-Gillingham-Port Vale",
@@ -1500,7 +1528,7 @@
         "home_scores": 79.1,
         "away_scores": 39.3
       },
-      "analysis": "Gillingham leggermente favorito; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Il modello Poisson fornisce stime sperimentali basate su un campione di 4 e 5 partite. La mancanza di validazione e i limiti del campione ricordano di mantenere un profilo prudente.",
       "suggested_markets": [],
       "top_scorelines": [
         {
@@ -1522,7 +1550,8 @@
       "status": "Pronostico valutabile",
       "reason": "",
       "confidence": "bassa (campione ridotto)",
-      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato"
+      "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato",
+      "analysis_provider": "Gemini"
     }
   ],
   "no_bet_matches": [
