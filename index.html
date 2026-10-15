@@ -31,7 +31,7 @@
     a { color: #53d69a; }
     @media (max-width: 560px) { .probabilities { grid-template-columns: repeat(3, minmax(0, 1fr)); } .match-teams { font-size: 15px; } }
   </style>
-  <script src="./app.js?v=20261015-3" defer></script>
+  <script src="./app.js?v=20261015-4" defer></script>
 </head>
 <body>
   <header>
@@ -47,12 +47,12 @@
     </section>
     <section class="panel">
       <h2>Partite e probabilità</h2>
-      <p class="muted">Stime calcolate con un modello Poisson usando i risultati disponibili in casa e in trasferta. Vengono pubblicati solo pronostici con almeno 4 partite storiche per ciascuna squadra; gli altri sono esclusi dal gruppo dei pronostici valutabili. Campionati iniziali: Premier League, La Liga, Bundesliga, Serie A e Ligue 1.</p>
+      <p class="muted">Stime calcolate con un modello Poisson usando i risultati disponibili in casa e in trasferta. Vengono pubblicati solo pronostici con almeno 6 partite storiche nel contesto casa/trasferta: almeno 6 gare casalinghe per la squadra di casa e 6 trasferte per quella ospite. Campionati: Premier League, Championship, League One, League Two, La Liga, Bundesliga, Serie A, Ligue 1, Scottish Premiership, Scottish Championship, Eredivisie, Primeira Liga, Belgian Pro League e Super Lig turca. La disponibilità dipende dai dati pubblicati dalle fonti.</p>
       <div id="matches" class="status">Caricamento delle partite…</div>
     </section>
     <section class="panel">
       <h2>Mercati analizzati</h2>
-      <p class="muted">1X2 · Doppia chance · Over/Under 1,5, 2,5 e 3,5 · Goal/No Goal · probabilità che segnino casa e trasferta · primi risultati esatti stimati. Le percentuali sono probabilità modellate, non quote offerte da bookmaker né garanzie di risultato.</p>
+      <p class="muted">1X2 · Doppia chance · Over/Under 1,5, 2,5 e 3,5 · Goal/No Goal · probabilità che segnino casa e trasferta · primi risultati esatti stimati. Colori indicativi: verde ≥70%, giallo 55–69,9%, rosso <55% di probabilità stimata. Il colore rappresenta la probabilità del singolo mercato, non una garanzia né un consiglio automatico di puntata. Le percentuali sono stime modellate, non quote offerte da bookmaker.</p>
     </section>
     <section class="panel">
       <h2>Fonte e trasparenza</h2>
