@@ -63,6 +63,24 @@ class PredictionModelTests(unittest.TestCase):
             history, 1.4, 1.1,
         )
         self.assertEqual(forecast["value_bets"], [])
+        self.assertEqual(forecast["availability_data"]["status"], "non_integrata")
+
+    def test_odds_team_aliases_are_explicit_and_ordered(self):
+        self.assertTrue(odds_module.same_team("Inter Milan", "Internazionale"))
+        self.assertTrue(odds_module.same_team("Paris Saint-Germain", "PSG"))
+        self.assertFalse(odds_module.same_team("Milan", "Inter"))
+        self.assertFalse(odds_module.same_team("Roma", "Milan"))
+
+    def test_metrics_are_separated_by_league(self):
+        records = [
+            {"league": "Serie A", "outcome": "1",
+             "probabilities": {"home_win": 70, "draw": 20, "away_win": 10}},
+            {"league": "Premier League", "outcome": "2",
+             "probabilities": {"home_win": 20, "draw": 20, "away_win": 60}},
+        ]
+        metrics = archive_module.calculate_metrics_by_league(records)
+        self.assertEqual(metrics["Serie A"]["settled_matches"], 1)
+        self.assertEqual(metrics["Premier League"]["accuracy_1x2"], 100.0)
 
     def test_odds_parser_selects_best_1x2_prices(self):
         event = {
@@ -154,6 +172,8 @@ class PredictionModelTests(unittest.TestCase):
         self.assertEqual(forecast["status"], "Pronostico valutabile")
         self.assertTrue(forecast["probabilities"])
         self.assertTrue(all(0 <= p <= 100 for p in forecast["probabilities"].values()))
+        self.assertFalse(any("Champions League" in name or "Europa League" in name or "Conference League" in name
+                             for name in module.LEAGUES.values()))
 
 
 if __name__ == "__main__":
