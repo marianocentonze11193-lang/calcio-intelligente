@@ -20,7 +20,7 @@ async function fetchJsonWithTimeout(url, timeoutMs = 12000) {
 
 function isValidMatchRecord(match, expectedStatus) {
   if (!match || typeof match !== "object" || Array.isArray(match)) return false;
-  if (typeof match.date !== "string" || !/^\\d{4}-\\d{2}-\\d{2}$/.test(match.date)) return false;
+  if (typeof match.date !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(match.date)) return false;
   const [year, month, day] = match.date.split("-").map(Number);
   const calendarDate = new Date(Date.UTC(year, month - 1, day));
   if (calendarDate.getUTCFullYear() !== year ||
