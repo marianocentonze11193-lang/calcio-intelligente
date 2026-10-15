@@ -9,6 +9,7 @@ on:
       - "scripts/enrich_with_odds.py"
       - "scripts/enrich_with_availability.py"
       - "scripts/archive_predictions.py"
+      - "scripts/validate_published_data.py"
       - "app.js"
       - "index.html"
       - "tests/**"
@@ -62,6 +63,7 @@ jobs:
             python scripts/enrich_with_odds.py
             python scripts/enrich_with_gemini.py
             python scripts/archive_predictions.py
+            python scripts/validate_published_data.py
             git add data/predictions.json data/history.json data/availability_cache.json
             if git diff --cached --quiet; then
               echo "Nessun cambiamento nei dati."
