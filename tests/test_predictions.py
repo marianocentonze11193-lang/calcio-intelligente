@@ -128,6 +128,24 @@ class PredictionModelTests(unittest.TestCase):
         self.assertAlmostEqual(sum(probabilities), 1.0, places=9)
         self.assertTrue(all(value >= 0 for value in probabilities))
 
+    def test_preliminary_estimates_do_not_auto_select_markets(self):
+        history = defaultdict(lambda: {
+            "played": 20, "home_games": 0, "away_games": 0,
+            "home_scored": 0, "home_conceded": 0,
+            "away_scored": 0, "away_conceded": 0,
+        })
+        history["Casa"].update({
+            "played": 20, "home_games": 3, "home_scored": 9,
+            "home_conceded": 4,
+        })
+        forecast = module.make_forecast(
+            "Casa", "Trasferta", "Test League", date(2026, 10, 16), "18:00",
+            history, 1.4, 1.1,
+        )
+        self.assertEqual(forecast["status"], "Stima preliminare")
+        self.assertEqual(forecast["away_matches_sample"], 0)
+        self.assertEqual(forecast["suggested_markets"], [])
+
     def test_small_samples_get_preliminary_estimate_instead_of_false_no_bet(self):
         history = defaultdict(lambda: {
             "played": 20, "home_games": 0, "away_games": 0,
