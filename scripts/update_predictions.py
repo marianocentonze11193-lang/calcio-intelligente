@@ -158,36 +158,65 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
     expected_away = max(0.15, min(4.5, away_attack * home_defence / max(0.2, league_away_avg)))
     hp, ap = poisson_probs(expected_home), poisson_probs(expected_away)
 
-    home_win = draw = away_win = over25 = btts = 0.0
+    home_win = draw = away_win = over15 = over25 = over35 = btts = 0.0
+    home_scores = away_scores = 0.0
+    scorelines = []
     for h, ph in enumerate(hp):
         for a, pa in enumerate(ap):
             p = ph * pa
+            scorelines.append((p, h, a))
             if h > a:
                 home_win += p
             elif h == a:
                 draw += p
             else:
                 away_win += p
+            if h + a >= 2:
+                over15 += p
             if h + a >= 3:
                 over25 += p
+            if h + a >= 4:
+                over35 += p
             if h >= 1 and a >= 1:
                 btts += p
+            if h >= 1:
+                home_scores += p
+            if a >= 1:
+                away_scores += p
     total = home_win + draw + away_win
     sample = min(hs["played"], aws["played"])
+    valid = sample >= MIN_TEAM_MATCHES
+    scorelines.sort(reverse=True)
+    probabilities = {
+        "home_win": percent(home_win / total), "draw": percent(draw / total),
+        "away_win": percent(away_win / total),
+        "double_chance_1x": percent((home_win + draw) / total),
+        "double_chance_x2": percent((draw + away_win) / total),
+        "double_chance_12": percent((home_win + away_win) / total),
+        "over_1_5": percent(over15), "over_2_5": percent(over25),
+        "over_3_5": percent(over35), "under_1_5": percent(1 - over15),
+        "under_2_5": percent(1 - over25), "under_3_5": percent(1 - over35),
+        "btts_yes": percent(btts), "btts_no": percent(1 - btts),
+        "home_scores": percent(home_scores), "away_scores": percent(away_scores),
+    } if valid else {}
     return {
         "id": f"{match_date.isoformat()}-{league}-{home}-{away}",
         "date": match_date.isoformat(), "kickoff": kickoff or "", "league": league,
         "home_team": home, "away_team": away,
         "expected_home_goals": round(expected_home, 2),
         "expected_away_goals": round(expected_away, 2),
-        "probabilities": {
-            "home_win": percent(home_win / total), "draw": percent(draw / total),
-            "away_win": percent(away_win / total), "over_2_5": percent(over25),
-            "btts_yes": percent(btts),
-        },
+        "probabilities": probabilities,
+        "top_scorelines": [
+            {"score": f"{h}-{a}", "probability": percent(p)}
+            for p, h, a in scorelines[:3]
+        ] if valid else [],
         "sample_matches": sample,
+        "home_matches_sample": hs["played"],
+        "away_matches_sample": aws["played"],
+        "status": "Pronostico valutabile" if valid else "NO BET",
+        "reason": "" if valid else f"Storico insufficiente: servono almeno {MIN_TEAM_MATCHES} partite per ciascuna squadra.",
         "confidence": "media" if sample >= 8 else "iniziale",
-        "method": "Modello Poisson con medie casa/trasferta e correzione per media di lega",
+        "method": "Poisson indipendente con medie casa/trasferta e prior di lega; non validato come modello calibrato",
     }
 
 
@@ -330,8 +359,11 @@ def main():
     forecasts.sort(key=lambda item: (item["date"], item["league"], item["home_team"]))
     result = {
         "updated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
-        "source": SOURCE, "season": season, "model": "Poisson semplice; stime indicative, non garanzie",
-        "leagues_checked": downloaded, "matches": forecasts[:80],
+        "source": SOURCE, "season": season,
+        "model": "Poisson semplice con filtro storico minimo; stime indicative, non garanzie",
+        "leagues_checked": downloaded,
+        "matches": [item for item in forecasts if item.get("status") == "Pronostico valutabile"][:80],
+        "no_bet_matches": [item for item in forecasts if item.get("status") == "NO BET"][:80],
         "notice": "Le probabilità sono stime statistiche e non garantiscono risultati.",
     }
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
