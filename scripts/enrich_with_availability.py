@@ -301,6 +301,7 @@ def main():
         print("API_FOOTBALL_KEY non configurata: pronostici mantenuti, dati disponibilità dichiarati non configurati.")
         return
 
+    print("API_FOOTBALL_KEY presente: avvio verifica della connessione API-Football (la chiave non viene stampata).")
     cache = load_cache()
     today = now_utc().astimezone().date()
     last_refresh = parse_datetime(cache.get("last_full_refresh"))
