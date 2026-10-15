@@ -339,6 +339,10 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
         "home_recent_form": (recent_form or {}).get(home),
         "away_recent_form": (recent_form or {}).get(away),
         "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+        "availability_data": {
+            "status": "non_integrata",
+            "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
+        },
     }
 
 
