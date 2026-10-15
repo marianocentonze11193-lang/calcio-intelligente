@@ -19,7 +19,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: aggiornamento-pronostici
+  group: aggiornamento-pronostici-v2
   cancel-in-progress: true
 
 jobs:
