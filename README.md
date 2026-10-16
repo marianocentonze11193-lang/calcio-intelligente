@@ -9,7 +9,7 @@ Dashboard statica di pronostici calcistici con aggiornamento automatico tramite 
 - Stima preliminare solo quando entrambe le squadre hanno almeno due gare nel corretto contesto casa/trasferta; NO BET quando mancano dati o il campione è insufficiente.
 - Probabilità 1X2, doppia chance, Over/Under, Goal/No Goal e risultati esatti stimati.
 - Commenti Gemini quando il secret `GEMINI_API_KEY` è configurato; l'AI non inventa informazioni non fornite.
-- Importazione delle quote 1X2 quando presenti nei CSV gratuiti football-data.co.uk; integrazione opzionale di The Odds API tramite `ODDS_API_KEY` e di API-Football tramite `API_FOOTBALL_KEY`; confronto con le probabilità del modello e stima del valore atteso teorico.
+- Quote 1X2 e, quando disponibili nella risposta API-Football, Over/Under 1,5, 2,5 e 3,5, Gol/No Gol e doppia chance. Confronto con le probabilità del modello, stima del valore atteso teorico e metriche storiche separate per Over/Under e Gol/No Gol.
 - Archivio della prima stima e verifica dei risultati finali, con controlli su data, squadre, punteggi e coerenza delle probabilità. Accuratezza 1X2 e Brier score vengono pubblicati solo dopo almeno 30 partite valutate; anche le metriche per campionato richiedono almeno 30 esiti verificati. Un confronto separato misura modello contro mercato sugli stessi match conclusi con quote archiviate, usando accuratezza, Brier score e log loss.
 - Filtri per nazione e competizione; partite ordinate per nazione, competizione, data e orario. Il filtro nazione viene popolato automaticamente dalle partite effettivamente caricate.
 - Aggiornamento pianificato ogni ora via GitHub Actions.
@@ -80,3 +80,10 @@ Il progetto usa un modello statistico sperimentale (Poisson, prior di lega, Elo 
 ### Aggiornamento e controllo
 
 GitHub Actions tenta l'aggiornamento ogni ora. In caso di errore di una fonte, controllare la scheda Actions del repository. Il completamento del workflow prova che il processo è terminato senza errori tecnici, non che ogni campionato abbia dati completi.
+
+
+## Mercati quote aggiuntivi
+
+Quando API-Football restituisce i mercati per una partita, il flusso salva le migliori quote disponibili per Over/Under 1,5, 2,5 e 3,5, Gol/No Gol e doppia chance. La copertura dipende da campionato, partita, bookmaker e piano API: se il provider non restituisce un mercato, viene lasciato non disponibile senza valori inventati. Le probabilità modello per questi mercati derivano dalla matrice di punteggi Poisson già usata per il pronostico; le quote aggiuntive non modificano automaticamente il modello.
+
+Per Over/Under e Gol/No Gol si calcolano probabilità implicite normalizzate, scarto modello-mercato ed EV teorico. Per doppia chance le selezioni si sovrappongono: viene mostrata la probabilità grezza 1/quota, non una probabilità depurata dal margine. Lo storico valuta Over/Under e Gol/No Gol separatamente, dopo almeno 30 partite concluse con quote e probabilità archiviate. Le metriche sono descrittive e non provano redditività.

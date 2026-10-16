@@ -57,6 +57,25 @@ class PredictionModelTests(unittest.TestCase):
         prices = api_odds_module.parse_odds_payload(payload, "Milan", "Roma")
         self.assertEqual(prices, {"home": 2.25, "draw": 3.2, "away": 3.95})
 
+    def test_api_football_parser_extracts_goal_markets(self):
+        payload = {"response": [{"bookmakers": [{"bets": [
+            {"id": 5, "name": "Goals Over/Under", "values": [
+                {"value": "Over 2.5", "odd": "1.90"}, {"value": "Under 2.5", "odd": "1.95"},
+                {"value": "Over 1.5", "odd": "1.30"}, {"value": "Under 1.5", "odd": "3.50"},
+            ]},
+            {"id": 8, "name": "Both Teams Score", "values": [
+                {"value": "Yes", "odd": "1.80"}, {"value": "No", "odd": "2.00"},
+            ]},
+            {"id": 12, "name": "Double Chance", "values": [
+                {"value": "Home/Draw", "odd": "1.25"}, {"value": "Draw/Away", "odd": "1.60"},
+                {"value": "Home/Away", "odd": "1.35"},
+            ]},
+        ]}]}]}
+        parsed = api_odds_module.parse_all_odds_payload(payload, "Milan", "Roma")
+        self.assertEqual(parsed["markets"]["over_under_2_5"], {"over": 1.9, "under": 1.95})
+        self.assertEqual(parsed["markets"]["btts"], {"yes": 1.8, "no": 2.0})
+        self.assertEqual(parsed["markets"]["double_chance"], {"1x": 1.25, "x2": 1.6, "12": 1.35})
+
     def test_api_football_odds_parser_ignores_incomplete_prices(self):
         payload = {"response": [{"bookmakers": [{"bets": [{"id": 1, "name": "Match Winner", "values": [
             {"value": "Home", "odd": "1.75"},
@@ -76,6 +95,25 @@ class PredictionModelTests(unittest.TestCase):
         self.assertEqual(match["odds_source"], "API-Football")
         self.assertEqual(match["expected_value_1x2"], {"home": 0.1, "draw": 0.0, "away": 0.1})
         self.assertEqual({item["market"] for item in match["value_bets"]}, {"1", "2"})
+
+    def test_additional_market_analysis_calculates_probabilities_and_ev(self):
+        match = {
+            "odds_markets": {
+                "over_under_2_5": {"over": 2.0, "under": 2.0},
+                "btts": {"yes": 1.8, "no": 2.2},
+                "double_chance": {"1x": 1.3},
+            },
+            "probabilities": {
+                "over_2_5": 60, "under_2_5": 40,
+                "btts_yes": 55, "btts_no": 45,
+                "double_chance_1x": 80,
+            },
+        }
+        self.assertTrue(market_module.market_analysis_additional(match))
+        totals = match["market_analysis_markets"]["over_under_2_5"]
+        self.assertEqual(totals["market_implied_probability"], {"over": 50.0, "under": 50.0})
+        self.assertAlmostEqual(totals["expected_value"]["over"], 0.2, places=4)
+        self.assertEqual(match["market_analysis_markets"]["double_chance"]["1x"]["expected_value"], 0.04)
 
     def test_market_analysis_removes_margin_and_calculates_ev(self):
         match = {

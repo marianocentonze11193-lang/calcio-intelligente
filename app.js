@@ -319,6 +319,46 @@ function renderMatches(matches) {
         card.append(value);
       }
     }
+    if (match.market_analysis_markets && Object.keys(match.market_analysis_markets).length) {
+      const extraTitle = document.createElement("p");
+      extraTitle.className = "match-meta";
+      extraTitle.textContent = "QUOTE E CONFRONTO DEI MERCATI GOAL · quando disponibili";
+      card.append(extraTitle);
+      const marketLabels = {
+        over_under_1_5: ["Over/Under 1,5", "over", "under"],
+        over_under_2_5: ["Over/Under 2,5", "over", "under"],
+        over_under_3_5: ["Over/Under 3,5", "over", "under"],
+        btts: ["Gol / No Gol", "yes", "no"]
+      };
+      for (const [key, labelAndSides] of Object.entries(marketLabels)) {
+        const data = match.market_analysis_markets[key];
+        if (!data || !data.odds || !data.model_probability || !data.market_implied_probability) continue;
+        const [label, sideA, sideB] = labelAndSides;
+        const line = document.createElement("p");
+        line.className = "match-meta";
+        const part = side => {
+          const odd = data.odds[side];
+          const modelP = data.model_probability[side];
+          const marketP = data.market_implied_probability[side];
+          const ev = data.expected_value && data.expected_value[side];
+          return side.toUpperCase() + " quota " + odd + " · modello " + percent(modelP) +
+            " · mercato " + percent(marketP) +
+            (typeof ev === "number" ? " · EV " + (ev * 100).toFixed(1) + "%" : "");
+        };
+        line.textContent = label + ": " + part(sideA) + " | " + part(sideB);
+        card.append(line);
+      }
+      const dc = match.market_analysis_markets.double_chance;
+      if (dc && Object.keys(dc).length) {
+        const dcLine = document.createElement("p");
+        dcLine.className = "match-meta";
+        dcLine.textContent = "Doppia chance: " + Object.entries(dc).map(([key, item]) =>
+          key.toUpperCase() + " quota " + item.odds + " · modello " + percent(item.model_probability) +
+          " · EV " + (item.expected_value * 100).toFixed(1) + "%"
+        ).join(" | ") + ". Probabilità implicita 1/quota non depurata: le selezioni si sovrappongono.";
+        card.append(dcLine);
+      }
+    }
     if (match.analysis) {
       const analysis = document.createElement("p");
       analysis.className = "match-analysis";
@@ -432,6 +472,22 @@ function renderHistory(history) {
     }
   }
 
+  const extraMetrics = history && history.additional_market_metrics ? history.additional_market_metrics : {};
+  const availableExtraMetrics = Object.entries(extraMetrics).filter(([, value]) => value && value.model && value.market);
+  if (availableExtraMetrics.length) {
+    const heading = document.createElement("h3");
+    heading.textContent = "Validazione storica mercati Over/Under e Gol/No Gol";
+    listNode.append(heading);
+    for (const [market, value] of availableExtraMetrics) {
+      const row = document.createElement("p");
+      row.className = "match-meta";
+      row.textContent = market.replaceAll("_", " ") + ": " + value.settled_matches_with_model_and_odds +
+        " partite · accuratezza modello " + percent(value.model.accuracy) +
+        " / mercato " + percent(value.market.accuracy) +
+        " · Brier modello " + value.model.brier_score + " / mercato " + value.market.brier_score;
+      listNode.append(row);
+    }
+  }
   for (const record of records.slice(0, 12)) {
     const card = document.createElement("article");
     card.className = "history-item";
