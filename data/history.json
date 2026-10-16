@@ -2966,9 +2966,10 @@
       "expected_away_goals": 0.7,
       "sample_matches": 0,
       "archived_at": "2026-10-15T10:09:22.994915+00:00",
-      "outcome": null,
-      "home_goals": null,
-      "away_goals": null
+      "outcome": "X",
+      "home_goals": 1,
+      "away_goals": 1,
+      "settled_at": "2026-10-16T21:49:00.345899+00:00"
     },
     {
       "id": "2026-10-17-La Liga-Real Betis-Barcelona",
@@ -6727,9 +6728,9 @@
       "away_goals": null
     }
   ],
-  "updated_at": "2026-10-16T20:51:11.164050+00:00",
+  "updated_at": "2026-10-16T21:49:00.346265+00:00",
   "metrics": {
-    "settled_matches": 3,
+    "settled_matches": 4,
     "accuracy_1x2": null,
     "brier_score_1x2": null,
     "minimum_matches_required": 30,
@@ -6779,7 +6780,7 @@
     }
   },
   "result_matching": {
-    "checked_at": "2026-10-16T20:51:11.164041+00:00",
+    "checked_at": "2026-10-16T21:49:00.346255+00:00",
     "unresolved_past_matches": 1,
     "examples": [
       {
