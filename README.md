@@ -9,7 +9,7 @@ Dashboard statica di pronostici calcistici con aggiornamento automatico tramite 
 - Stima preliminare solo quando entrambe le squadre hanno almeno due gare nel corretto contesto casa/trasferta; NO BET quando mancano dati o il campione è insufficiente.
 - Probabilità 1X2, doppia chance, Over/Under, Goal/No Goal e risultati esatti stimati.
 - Commenti Gemini quando il secret `GEMINI_API_KEY` è configurato; l'AI non inventa informazioni non fornite.
-- Importazione delle quote 1X2 quando presenti nei CSV gratuiti football-data.co.uk; integrazione opzionale di The Odds API tramite il secret `ODDS_API_KEY`; stima del valore atteso teorico.
+- Importazione delle quote 1X2 quando presenti nei CSV gratuiti football-data.co.uk; integrazione opzionale di The Odds API tramite `ODDS_API_KEY` e di API-Football tramite `API_FOOTBALL_KEY`; confronto con le probabilità del modello e stima del valore atteso teorico.
 - Archivio della prima stima e verifica dei risultati finali, con controlli su data, squadre, punteggi e coerenza delle probabilità. Accuratezza 1X2 e Brier score vengono pubblicati solo dopo almeno 30 partite valutate; anche le metriche per campionato richiedono almeno 30 esiti verificati.
 - Filtri per nazione e competizione; partite ordinate per nazione, competizione, data e orario. Il filtro nazione viene popolato automaticamente dalle partite effettivamente caricate.
 - Aggiornamento pianificato ogni ora via GitHub Actions.
@@ -18,7 +18,7 @@ Dashboard statica di pronostici calcistici con aggiornamento automatico tramite 
 - Elo e Poisson sono un modello sperimentale; non è ancora dimostrata la sua redditività e la calibrazione va misurata su un campione storico ampio.
 - Per alcuni campionati il calendario ESPN può essere disponibile senza dati storici equivalenti. Il flusso evita richieste CSV alle divisioni non supportate dalla fonte primaria e prova un recupero storico ESPN recente; se la fonte non restituisce risultati verificabili, la partita resta NO BET con una causa esplicita. La disponibilità del fallback può variare e non garantisce copertura completa.
 - Le formazioni ufficiali, gli infortuni e le squalifiche non sono ancora coperti da una fonte automatica gratuita, uniforme e verificata per tutte le leghe. Non vengono inventati: per integrarli in modo affidabile serve un provider con endpoint dedicati e limiti/condizioni compatibili; una semplice notizia o una formazione non confermata non viene trattata come dato certo.
-- La copertura quote gratuita varia per partita: vengono usate le quote 1X2 presenti nei CSV football-data.co.uk. Per una copertura alternativa è supportata The Odds API con il secret `ODDS_API_KEY`; senza chiave l'app continua a usare le quote gratuite eventualmente disponibili.
+- La copertura quote gratuita varia per partita e campionato. Sono supportate le quote 1X2 nei CSV football-data.co.uk, The Odds API se il piano dell’account include calcio e API-Football tramite `API_FOOTBALL_KEY`. Il piano gratuito di The Odds API attualmente pubblicizza NBA e MLB, non il calcio; per evitare dipendenze da un piano a pagamento, il flusso prova API-Football quando la chiave è configurata. API-Football offre un piano gratuito con 100 richieste al giorno, ma la copertura delle quote non è garantita per ogni partita. Il nuovo flusso limita prudenzialmente le richieste quote a 15 al giorno, con cache persistente, perché la stessa chiave è usata anche per calendario, indisponibilità e formazioni.
 - Il valore atteso è un calcolo teorico dipendente dalla qualità del modello, non una prova di profitto; la soglia EV teorica del 5% genera candidati solo con almeno 8 gare pertinenti per entrambe le squadre; non è una prova di vantaggio reale.
 - Le fonti gratuite hanno limiti di copertura, frequenza e condizioni d'uso. Il workflow segnala gli errori e può non aggiornare quando una fonte non è disponibile.
 - Il sito è statico: il pulsante ricarica i dati pubblicati, non avvia il calcolo remoto.
@@ -33,13 +33,19 @@ Per attivare le quote, crea una chiave secondo le condizioni del fornitore The O
 - Calendario di riserva: API pubblica ESPN.
 - Workflow: `.github/workflows/update.yml`
 - Modello: `scripts/update_predictions.py`
-- Quote e valore atteso opzionali: `scripts/enrich_with_odds.py`
+- Quote e valore atteso opzionali: `scripts/enrich_with_odds.py` (The Odds API) e `scripts/enrich_with_api_football_odds.py` (API-Football, cache in `data/odds_cache.json`)
 - Commenti AI: `scripts/enrich_with_gemini.py`
 - Archivio e metriche: `scripts/archive_predictions.py`
 - Test: `tests/test_predictions.py`
 
 Questa applicazione è sperimentale e informativa. Le probabilità non costituiscono garanzia di esito.
 
+
+## Quote calcistiche da API-Football
+
+Il flusso `scripts/enrich_with_api_football_odds.py` riutilizza il secret `API_FOOTBALL_KEY` già previsto per disponibilità, senza esporre la chiave al browser. Cerca le quote pre-partita 1X2 per gli incontri abbinati con certezza tramite l’ID fixture, salva le risposte in `data/odds_cache.json` e non inventa quote mancanti. Per proteggere il piano gratuito limita le nuove richieste quote a 15 al giorno e non ripete la richiesta per la stessa partita nello stesso giorno. Il limite si somma comunque all’uso degli altri endpoint API-Football, quindi la copertura dipende dalla quota residua e dalla disponibilità della competizione.
+
+Le quote migliori tra quelle restituite vengono confrontate con le probabilità del modello per calcolare l’EV teorico. Un EV positivo non prova che esista un vantaggio reale: la calibrazione deve essere verificata sui risultati storici.
 
 ## Infortuni, squalifiche e formazioni
 
