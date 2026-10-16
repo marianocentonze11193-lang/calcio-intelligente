@@ -63,9 +63,9 @@
       "expected_away_goals": 1.91,
       "sample_matches": 4,
       "archived_at": "2026-10-15T09:51:33.523957+00:00",
-      "outcome": null,
-      "home_goals": null,
-      "away_goals": null,
+      "outcome": "1",
+      "home_goals": 4,
+      "away_goals": 0,
       "odds_1x2": {
         "home": 1.65,
         "draw": 4.5,
@@ -115,7 +115,8 @@
           },
           "overround": 7.71
         }
-      }
+      },
+      "settled_at": "2026-10-16T20:51:11.163445+00:00"
     },
     {
       "id": "2026-10-16-Ligue 1-Le Mans-Toulouse",
@@ -146,9 +147,9 @@
       "expected_away_goals": 1.9,
       "sample_matches": 3,
       "archived_at": "2026-10-15T09:51:33.523977+00:00",
-      "outcome": null,
-      "home_goals": null,
-      "away_goals": null,
+      "outcome": "2",
+      "home_goals": 0,
+      "away_goals": 3,
       "odds_1x2": {
         "home": 3.11,
         "draw": 3.6,
@@ -198,7 +199,8 @@
           },
           "overround": 7.06
         }
-      }
+      },
+      "settled_at": "2026-10-16T20:51:11.163469+00:00"
     },
     {
       "id": "2026-10-16-Serie A-Frosinone-Sassuolo",
@@ -229,9 +231,9 @@
       "expected_away_goals": 1.17,
       "sample_matches": 3,
       "archived_at": "2026-10-15T09:51:33.523993+00:00",
-      "outcome": null,
-      "home_goals": null,
-      "away_goals": null,
+      "outcome": "1",
+      "home_goals": 4,
+      "away_goals": 2,
       "odds_1x2": {
         "home": 2.62,
         "draw": 3.75,
@@ -281,7 +283,8 @@
           },
           "overround": 6.89
         }
-      }
+      },
+      "settled_at": "2026-10-16T20:51:11.163483+00:00"
     },
     {
       "id": "2026-10-17-Premier League-Everton-Chelsea",
@@ -6724,9 +6727,9 @@
       "away_goals": null
     }
   ],
-  "updated_at": "2026-10-16T19:46:32.816699+00:00",
+  "updated_at": "2026-10-16T20:51:11.164050+00:00",
   "metrics": {
-    "settled_matches": 0,
+    "settled_matches": 3,
     "accuracy_1x2": null,
     "brier_score_1x2": null,
     "minimum_matches_required": 30,
@@ -6734,7 +6737,7 @@
   },
   "metrics_by_league": {},
   "model_vs_market_metrics": {
-    "settled_matches_with_model_and_odds": 0,
+    "settled_matches_with_model_and_odds": 3,
     "minimum_matches_required": 30,
     "model": null,
     "market": null,
@@ -6751,7 +6754,7 @@
       "note": "Servono almeno 30 partite concluse con quote e probabilità per questo mercato."
     },
     "over_under_2_5": {
-      "settled_matches_with_model_and_odds": 0,
+      "settled_matches_with_model_and_odds": 3,
       "minimum_matches_required": 30,
       "model": null,
       "market": null,
@@ -6776,7 +6779,7 @@
     }
   },
   "result_matching": {
-    "checked_at": "2026-10-16T19:46:32.816685+00:00",
+    "checked_at": "2026-10-16T20:51:11.164041+00:00",
     "unresolved_past_matches": 1,
     "examples": [
       {
