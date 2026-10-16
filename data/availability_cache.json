@@ -24541,10 +24541,70 @@
       "away_formation": "4-2-3-1",
       "home_coach": "Niki Zimling",
       "away_coach": "R. Bertelsen"
+    },
+    "1552189": {
+      "updated_at": "2026-10-16T17:48:12.151719+00:00",
+      "home_starters": [
+        "B. Klaverboer",
+        "O. Braude",
+        "S. Kersten",
+        "M. Willemsen",
+        "V. Zagaritis",
+        "M. Linday",
+        "N. Courtens",
+        "J. Trenskow",
+        "L. Smans",
+        "M. Rivera",
+        "D. Vente"
+      ],
+      "away_starters": [
+        "S. van Gassel",
+        "Eric Emanuel da Silva Moreira",
+        "C. Widell",
+        "J. Plug",
+        "S. Janssen",
+        "I. Yegoian",
+        "R. Meissen",
+        "L. Hartjes",
+        "A. Sliti",
+        "D. Garden",
+        "Á. Þorsteinsson"
+      ],
+      "home_substitutes": [
+        "D. Bladi",
+        "Anass Bouziane",
+        "M. Farji",
+        "M. Hilgers",
+        "H. Petrov",
+        "L. Machine",
+        "R. Meerveld",
+        "M. Egbring",
+        "A. Noppert",
+        "L. Oyen",
+        "T. Schreuder",
+        "R. Uldriķis"
+      ],
+      "away_substitutes": [
+        "D. van Vianen",
+        "O. Turay",
+        "V. Sulzbacher",
+        "I. Silva Timas",
+        "N. Naujoks",
+        "A. Jahanbakhsh",
+        "N. Groen",
+        "Mario Domínguez",
+        "Giulliano Cairo",
+        "Celton Biai"
+      ],
+      "home_formation": "4-2-3-1",
+      "away_formation": "4-3-3",
+      "home_coach": "R. Veldeman",
+      "away_coach": "R. den Uil"
     }
   },
   "lineup_attempts": {
-    "1549035": "2026-10-16T16:52:05.657004+00:00"
+    "1549035": "2026-10-16T16:52:05.657004+00:00",
+    "1552189": "2026-10-16T17:48:12.151719+00:00"
   },
   "unavailable_dates": {}
 }
