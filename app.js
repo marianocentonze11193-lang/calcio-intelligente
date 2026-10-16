@@ -288,6 +288,19 @@ function renderMatches(matches) {
         (q.home ?? "—") + " / " + (q.draw ?? "—") + " / " + (q.away ?? "—") +
         " · Fonte: " + (match.odds_source || "fonte quote configurata");
       card.append(odds);
+      if (match.market_implied_probability_1x2) {
+        const marketLine = document.createElement("p");
+        marketLine.className = "match-meta";
+        const implied = match.market_implied_probability_1x2;
+        const delta = match.model_vs_market_delta_1x2 || {};
+        marketLine.textContent = "Probabilità mercato depurata dal margine 1 / X / 2: " +
+          percent(implied.home) + " / " + percent(implied.draw) + " / " + percent(implied.away) +
+          " · Scarto modello-mercato: " + (typeof delta.home === "number" ? (delta.home > 0 ? "+" : "") + delta.home.toFixed(1) + "%" : "—") +
+          " / " + (typeof delta.draw === "number" ? (delta.draw > 0 ? "+" : "") + delta.draw.toFixed(1) + "%" : "—") +
+          " / " + (typeof delta.away === "number" ? (delta.away > 0 ? "+" : "") + delta.away.toFixed(1) + "%" : "—") +
+          (typeof match.market_overround_1x2 === "number" ? " · Margine quote grezze: " + match.market_overround_1x2.toFixed(1) + "%" : "");
+        card.append(marketLine);
+      }
       if (match.expected_value_1x2) {
         const ev = match.expected_value_1x2;
         const evNode = document.createElement("p");
@@ -367,6 +380,23 @@ function renderHistory(history) {
     readiness.className = "match-meta";
     readiness.textContent = metrics.note;
     metricsNode.append(readiness);
+  }
+
+  const comparison = history && history.model_vs_market_metrics;
+  if (comparison) {
+    const heading = document.createElement("h3");
+    heading.textContent = "Modello contro mercato (stesse partite concluse)";
+    metricsNode.append(heading);
+    const summary = document.createElement("p");
+    summary.className = "match-meta";
+    summary.textContent = comparison.settled_matches_with_model_and_odds + " partite concluse con probabilità e quote archiviate. " +
+      (comparison.model && comparison.market
+        ? "Accuratezza: modello " + percent(comparison.model.accuracy_1x2) + " vs mercato " + percent(comparison.market.accuracy_1x2) +
+          " · Brier: " + comparison.model.brier_score_1x2 + " vs " + comparison.market.brier_score_1x2 +
+          " · Log loss: " + comparison.model.log_loss_1x2 + " vs " + comparison.market.log_loss_1x2 +
+          " (Brier e log loss: più basso è meglio)."
+        : (comparison.note || "Confronto in attesa di un campione sufficiente."));
+    metricsNode.append(summary);
   }
 
   const records = Array.isArray(history && history.records) ? [...history.records] : [];
