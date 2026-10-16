@@ -303,6 +303,70 @@ def calculate_metrics_by_league(records):
     return metrics_by_league
 
 
+def calculate_model_market_metrics(records):
+    """Confronto modello/mercato sugli stessi incontri conclusi con quote archiviate."""
+    import math
+    evaluated = []
+    for item in records:
+        if item.get("outcome") not in ("1", "X", "2"):
+            continue
+        model_probs = item.get("probabilities")
+        market_probs = item.get("market_implied_probability_1x2")
+        if not isinstance(model_probs, dict) or not isinstance(market_probs, dict):
+            continue
+        try:
+            model = [float(model_probs[k]) / 100 for k in ("home_win", "draw", "away_win")]
+            market = [float(market_probs[k]) / 100 for k in ("home", "draw", "away")]
+        except (KeyError, TypeError, ValueError):
+            continue
+        if any(p < 0 or p > 1 for p in model + market):
+            continue
+        if abs(sum(model) - 1) > 0.015 or abs(sum(market) - 1) > 0.03:
+            continue
+        evaluated.append((model, market, ("1", "X", "2").index(item["outcome"])))
+    if len(evaluated) < MIN_METRIC_MATCHES:
+        return {
+            "settled_matches_with_model_and_odds": len(evaluated),
+            "minimum_matches_required": MIN_METRIC_MATCHES,
+            "model": None,
+            "market": None,
+            "comparison": None,
+            "note": f"Confronto non conclusivo: servono almeno {MIN_METRIC_MATCHES} partite concluse con probabilità modello e quote archiviate.",
+        }
+    results = {}
+    for name, idx in (("model", 0), ("market", 1)):
+        correct = 0
+        brier_sum = 0.0
+        logloss_sum = 0.0
+        for model, market, actual_idx in evaluated:
+            probs = (model, market)[idx]
+            predicted_idx = max(range(3), key=lambda i: probs[i])
+            correct += int(predicted_idx == actual_idx)
+            actual = [1.0 if i == actual_idx else 0.0 for i in range(3)]
+            brier_sum += sum((probs[i] - actual[i]) ** 2 for i in range(3))
+            logloss_sum += -math.log(max(1e-15, probs[actual_idx]))
+        n = len(evaluated)
+        results[name] = {
+            "accuracy_1x2": round(correct / n * 100, 2),
+            "brier_score_1x2": round(brier_sum / n, 4),
+            "log_loss_1x2": round(logloss_sum / n, 4),
+        }
+    comparison = {
+        "accuracy_difference_percentage_points_model_minus_market": round(results["model"]["accuracy_1x2"] - results["market"]["accuracy_1x2"], 2),
+        "brier_difference_model_minus_market": round(results["model"]["brier_score_1x2"] - results["market"]["brier_score_1x2"], 4),
+        "log_loss_difference_model_minus_market": round(results["model"]["log_loss_1x2"] - results["market"]["log_loss_1x2"], 4),
+        "interpretation": "Differenze positive favoriscono il modello per accuracy; differenze negative favoriscono il modello per Brier score e log loss.",
+    }
+    return {
+        "settled_matches_with_model_and_odds": len(evaluated),
+        "minimum_matches_required": MIN_METRIC_MATCHES,
+        "model": results["model"],
+        "market": results["market"],
+        "comparison": comparison,
+        "note": "Confronto descrittivo sugli stessi incontri. Brier score e log loss più bassi sono migliori; non dimostra redditività né causalità.",
+    }
+
+
 def main():
     if not PREDICTIONS_FILE.exists():
         raise SystemExit("File data/predictions.json non trovato.")
@@ -329,10 +393,31 @@ def main():
             "expected_home_goals": match.get("expected_home_goals"),
             "expected_away_goals": match.get("expected_away_goals"),
             "sample_matches": match.get("sample_matches", 0),
+            "odds_1x2": match.get("odds_1x2"),
+            "odds_source": match.get("odds_source"),
+            "market_implied_probability_1x2": match.get("market_implied_probability_1x2"),
+            "market_overround_1x2": match.get("market_overround_1x2"),
+            "expected_value_1x2": match.get("expected_value_1x2"),
+            "odds_snapshot_at": match.get("market_analysis_updated_at"),
             "archived_at": datetime.now(timezone.utc).isoformat(),
             "outcome": None, "home_goals": None, "away_goals": None,
         })
         known_ids.add(match_id)
+
+    # Arricchisce gli archivi futuri creati prima dell'introduzione delle quote.
+    # Lo snapshot potrebbe non essere la quota di apertura: la data viene conservata.
+    current_by_id = {item.get("id"): item for item in data.get("matches", []) if item.get("id")}
+    for item in records:
+        current = current_by_id.get(item.get("id"))
+        if not current or item.get("outcome") is not None or item.get("market_implied_probability_1x2"):
+            continue
+        if current.get("odds_1x2") and current.get("market_implied_probability_1x2"):
+            item["odds_1x2"] = current.get("odds_1x2")
+            item["odds_source"] = current.get("odds_source")
+            item["market_implied_probability_1x2"] = current.get("market_implied_probability_1x2")
+            item["market_overround_1x2"] = current.get("market_overround_1x2")
+            item["expected_value_1x2"] = current.get("expected_value_1x2")
+            item["odds_snapshot_at"] = current.get("market_analysis_updated_at")
 
     today = datetime.now(timezone.utc).date()
     indexes = {}
@@ -398,6 +483,7 @@ def main():
     history["updated_at"] = datetime.now(timezone.utc).isoformat()
     history["metrics"] = calculate_metrics(records)
     history["metrics_by_league"] = calculate_metrics_by_league(records)
+    history["model_vs_market_metrics"] = calculate_model_market_metrics(records)
     HISTORY_FILE.parent.mkdir(parents=True, exist_ok=True)
     HISTORY_FILE.write_text(json.dumps(history, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Storico: {len(records)} partite archiviate; {settled} nuovi risultati associati.")
