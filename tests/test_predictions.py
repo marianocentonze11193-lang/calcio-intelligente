@@ -411,6 +411,17 @@ class PredictionModelTests(unittest.TestCase):
         self.assertFalse(odds_module.same_team("Milan", "Inter"))
         self.assertFalse(odds_module.same_team("Roma", "Milan"))
 
+    def test_archive_reports_past_matches_without_verified_results(self):
+        records = [
+            {"date": "2026-10-15", "outcome": None, "league": "Test", "home_team": "Casa", "away_team": "Ospite"},
+            {"date": "2026-10-16", "outcome": None},
+            {"date": "2026-10-17", "outcome": None},
+            {"date": "2026-10-14", "outcome": "1"},
+        ]
+        unresolved = archive_module.unresolved_past_matches(records, date(2026, 10, 16))
+        self.assertEqual(len(unresolved), 1)
+        self.assertEqual(unresolved[0]["home_team"], "Casa")
+
     def test_metrics_are_hidden_until_minimum_sample(self):
         records = [{
             "outcome": "1",

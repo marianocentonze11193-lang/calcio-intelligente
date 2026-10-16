@@ -421,6 +421,14 @@ function renderHistory(history) {
     readiness.textContent = metrics.note;
     metricsNode.append(readiness);
   }
+  const resultMatching = history && history.result_matching;
+  if (resultMatching && Number(resultMatching.unresolved_past_matches || 0) > 0) {
+    const unresolved = document.createElement("p");
+    unresolved.className = "match-meta";
+    unresolved.textContent = resultMatching.unresolved_past_matches +
+      " partite con data passata non hanno ancora un risultato associato. Sono escluse dalle metriche finché l'esito non viene verificato.";
+    metricsNode.append(unresolved);
+  }
 
   const comparison = history && history.model_vs_market_metrics;
   if (comparison) {

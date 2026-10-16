@@ -425,6 +425,18 @@ def calculate_additional_market_metrics(records):
     return output
 
 
+def unresolved_past_matches(records, today=None):
+    """Partite con data passata ancora senza esito associato: diagnostica, non esiti inventati."""
+    today_value = (today or datetime.now(timezone.utc).date()).isoformat()
+    return [
+        item for item in records
+        if isinstance(item, dict)
+        and item.get("outcome") is None
+        and isinstance(item.get("date"), str)
+        and item.get("date") < today_value
+    ]
+
+
 def main():
     if not PREDICTIONS_FILE.exists():
         raise SystemExit("File data/predictions.json non trovato.")
@@ -546,6 +558,19 @@ def main():
         item["settled_at"] = datetime.now(timezone.utc).isoformat()
         settled += 1
 
+    unresolved = unresolved_past_matches(records, today)
+    history["result_matching"] = {
+        "checked_at": datetime.now(timezone.utc).isoformat(),
+        "unresolved_past_matches": len(unresolved),
+        "examples": [
+            {"date": item.get("date"), "league": item.get("league"),
+             "home_team": item.get("home_team"), "away_team": item.get("away_team")}
+            for item in unresolved[:20]
+        ],
+        "note": "Le partite passate senza esito restano escluse dalle metriche finché il risultato non è associato con certezza.",
+    }
+    if unresolved:
+        print(f"AVVISO: {len(unresolved)} partite con data passata restano senza esito associato; non vengono usate per le metriche.")
     history["records"] = records
     history["updated_at"] = datetime.now(timezone.utc).isoformat()
     history["metrics"] = calculate_metrics(records)
