@@ -295,6 +295,18 @@ TEAM_ALIAS_GROUPS = [
     {"realbetis", "betis"},
     {"realsociedad", "sociedad"},
     {"celta", "celtavigo"},
+    {"cologne", "fccologne", "koln", "fckoln", "1fckoln", "1fccologne"},
+    {"unionberlin", "fcunionberlin", "1fcunionberlin"},
+    {"paderborn", "paderborn07", "scpaderborn", "scpaderborn07"},
+    {"mainz", "mainz05", "fsvmainz05", "1fsvmainz05"},
+    {"hamburgsv", "hamburgersv", "hsv"},
+    {"stuttgart", "vfbstuttgart", "vfbstuttgart1893"},
+    {"augsburg", "fcaugsburg"},
+    {"leverkusen", "bayerleverkusen"},
+    {"freiburg", "scfreiburg"},
+    {"hoffenheim", "tsghoffenheim"},
+    {"elversberg", "svelversberg"},
+    {"schalke", "schalke04", "fcs04"},
     {"internacional", "internacionalportoalegre"}
 ]
 
@@ -315,6 +327,20 @@ _TEAM_CANONICAL = {
 def team_key(value):
     key = _raw_team_key(value)
     return _TEAM_CANONICAL.get(key, key)
+
+
+def row_value(row, *names):
+    """Legge colonne CSV senza dipendere da maiuscole, spazi o separatori."""
+    normalized = {
+        re.sub(r"[^a-z0-9]", "", str(key).lower()): value
+        for key, value in (row or {}).items()
+    }
+    for name in names:
+        key = re.sub(r"[^a-z0-9]", "", str(name).lower())
+        value = normalized.get(key)
+        if value is not None and str(value).strip() != "":
+            return value
+    return None
 
 
 def number(value):
@@ -582,22 +608,22 @@ def main():
         completed, fixtures = [], []
         # Conserva eventuali fixture presenti nel file del campionato.
         for row in rows:
-            home = (row.get("HomeTeam") or row.get("Home Team") or row.get("home_team") or "").strip()
-            away = (row.get("AwayTeam") or row.get("Away Team") or row.get("away_team") or "").strip()
-            match_date = parse_date(row.get("Date") or row.get("date"))
+            home = str(row_value(row, "HomeTeam", "Home Team", "home_team", "home", "hometeamname") or "").strip()
+            away = str(row_value(row, "AwayTeam", "Away Team", "away_team", "away", "awayteamname") or "").strip()
+            match_date = parse_date(row_value(row, "Date", "date", "match_date", "matchdate"))
             if not home or not away or not match_date:
                 continue
             # I CSV /new/ contengono più stagioni: limita i risultati usati dal
             # modello all'ultimo anno, evitando che dati vecchi dominino la forma.
             if code in EXTRA_FOOTBALL_DATA_LEAGUES and match_date < today - timedelta(days=EXTRA_HISTORY_DAYS):
                 continue
-            hg = number(row.get("FTHG") or row.get("HG") or row.get("fthg") or row.get("home_goals"))
-            ag = number(row.get("FTAG") or row.get("AG") or row.get("ftag") or row.get("away_goals"))
+            hg = number(row_value(row, "FTHG", "HG", "fthg", "home_goals", "home_score", "home_score_ft", "score_home"))
+            ag = number(row_value(row, "FTAG", "AG", "ftag", "away_goals", "away_score", "away_score_ft", "score_away"))
             if (hg is not None and ag is not None and match_date < today and
                     0 <= hg <= 15 and 0 <= ag <= 15 and team_key(home) != team_key(away)):
                 completed.append((home, away, int(hg), int(ag)))
             elif today <= match_date <= last_date and team_key(home) != team_key(away):
-                fixtures.append((home, away, match_date, (row.get("Time") or row.get("time") or "").strip()))
+                fixtures.append((home, away, match_date, str(row_value(row, "Time", "time", "kickoff") or "").strip()))
                 quote = odds_from_row(row)
                 if quote:
                     fixture_odds[(match_date.isoformat(), team_key(home), team_key(away))] = quote
@@ -612,7 +638,7 @@ def main():
                 for row in previous_rows:
                     home = (row.get("HomeTeam") or row.get("Home Team") or "").strip()
                     away = (row.get("AwayTeam") or row.get("Away Team") or "").strip()
-                    match_date = parse_date(row.get("Date") or row.get("date"))
+                    match_date = parse_date(row_value(row, "Date", "date", "match_date", "matchdate"))
                     hg = number(row.get("FTHG") or row.get("HG") or row.get("home_goals"))
                     ag = number(row.get("FTAG") or row.get("AG") or row.get("away_goals"))
                     if (home and away and match_date and match_date < today and
@@ -642,11 +668,11 @@ def main():
         known_team_keys = {team_key(team) for team in known_teams}
         fixture_rows_for_league = 0
         for row in all_fixtures:
-            div = (row.get("Div") or row.get("div") or row.get("League") or row.get("league") or "").strip()
+            div = str(row_value(row, "Div", "div", "League", "league", "division", "country") or "").strip()
             div = {"NOR": "NOK", "ROU": "RO"}.get(div, div)
-            home = (row.get("HomeTeam") or row.get("Home Team") or row.get("home_team") or "").strip()
-            away = (row.get("AwayTeam") or row.get("Away Team") or row.get("away_team") or "").strip()
-            match_date = parse_date(row.get("Date") or row.get("date"))
+            home = str(row_value(row, "HomeTeam", "Home Team", "home_team", "home", "hometeamname") or "").strip()
+            away = str(row_value(row, "AwayTeam", "Away Team", "away_team", "away", "awayteamname") or "").strip()
+            match_date = parse_date(row_value(row, "Date", "date", "match_date", "matchdate"))
             if not home or not away or not match_date or not (today <= match_date <= last_date):
                 continue
             # Se il CSV identifica chiaramente un altro campionato, non usarlo.
@@ -658,7 +684,7 @@ def main():
             if div != code and (home_key not in known_team_keys or away_key not in known_team_keys):
                 continue
             fixture_rows_for_league += 1
-            kickoff = (row.get("Time") or row.get("time") or "").strip()
+            kickoff = str(row_value(row, "Time", "time", "kickoff") or "").strip()
             item = (home, away, match_date, kickoff)
             if item not in fixtures:
                 fixtures.append(item)
