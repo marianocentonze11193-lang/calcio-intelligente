@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-16T07:00:19+00:00",
+  "updated_at": "2026-10-16T07:05:29+00:00",
   "source": "https://www.football-data.co.uk",
   "season": "2627",
   "model": "Poisson casa/trasferta con prior di lega e correzione Elo; stime sperimentali, non garanzie",
@@ -64,7 +64,7 @@
         "home_scores": 89.3,
         "away_scores": 89.0
       },
-      "analysis": "La sfida tra Le Mans e Toulouse si preannuncia molto aperta, con il modello che assegna il 40.8% di probabilità alla vittoria casalinga e il 39.6% a quella esterna. I gol attesi sono elevati, stimati a 2.24 per i padroni di casa e 2.2 per gli ospiti, sostenuti da una probabilità del BTTS al 79.4%. I ratings Elo sono praticamente allineati intorno a quota 1490, mentre la forma recente evidenzia una certa vulnerabilità difensiva per entrambe. Il campione casalingo e in trasferta di sole 3 partite limita però la precisione della stima. La fonte segnala 5 indisponibilità per il Le Mans, ricordando che la copertura può essere incompleta.",
+      "analysis": "La sfida tra Le Mans e Toulouse si preannuncia particolarmente aperta e ricca di reti, con 2.24 gol attesi per i padroni di casa e 2.2 per gli ospiti. Le percentuali del modello vedono un leggero favore per la vittoria interna al 40.8% e quella esterna al 39.6%, mentre il pareggio si attesta al 19.6%. I punteggi Elo di 1489.8 per il Le Mans e 1492.3 per il Toulouse riflettono un sostanziale equilibrio in campo. Il campione casalingo e in trasferta di sole tre partite è ridotto e limita la precisione della stima. La fonte segnala 5 indisponibilità per il Le Mans, ricordando che la copertura può essere incompleta e nessuna segnalazione non significa piena disponibilità.",
       "suggested_markets": [
         "Over 1,5",
         "Goal"
@@ -188,7 +188,7 @@
         "home_scores": 78.6,
         "away_scores": 64.1
       },
-      "analysis": "Il Lille parte favorito contro il Brest con una probabilità di successo del 49.3%, contro il 25.2% degli ospiti e il 25.5% di സാധ്യത per il pareggio. I gol attesi dal modello sono 1.54 per la squadra di casa e 1.02 per la formazione in trasferta. Nei dati recenti, il Lille mostra una buona solidità difensiva con soli 0.8 gol subiti a partita nelle ultime cinque uscite, a fronte di un Elo leggermente superiore a 1528 contro il 1498 degli avversari. Il campione di appena 3 partite casalinghe e esterne riduce l'ampiezza statistica dell'analisi. Non sono disponibili dati specifici sulle indisponibilità o sulle formazioni.",
+      "analysis": "Il Lille ospita il Brest in una gara in cui i padroni di casa partono favoriti con il 49.3% di probabilità di successo, rispetto al 25.2% degli ospiti e al 25.5% del pareggio. I gol attesi delineano un incontro moderato, stimati a 1.54 per il Lille e 1.02 per il Brest. Nei valori Elo troviamo i padroni di casa a 1528.0 contro i 1498.3 degli avversari, accompagnati da una forma recente positiva per il Lille con 2.0 punti a partita. Il campione di casa e trasferta limitato a tre gare circoscrive l'ampiezza dell'analisi statistica. Non sono disponibili dati specifici sulle formazioni o sugli indisponibili per questo incontro.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -267,7 +267,7 @@
         "home_scores": 65.4,
         "away_scores": 90.6
       },
-      "analysis": "Il Lens affronta la trasferta contro il Troyes con i favori del pronostico, raccogliendo il 66.4% di probabilità di vittoria secondo il modello. I gol attesi premiano nettamente gli ospiti con 2.37 reti previste, rispetto alle 1.06 attribuite ai padroni di casa. La forma recente evidenzia grandi difficoltà difensive per il Troyes, che ha subito 2.6 gol di media nelle ultime cinque partite, mentre i valori Elo indicano un leggero vantaggio per il Lens a quota 1491. Il campione casalingo e esterno limitato a sole 3 gare impone prudenza nella lettura dei dati. Mancano riscontri ufficiali su eventuali assenze o formazioni.",
+      "analysis": "Il Lens affronta in trasferta il Troyes partendo con i favori del pronostico, forte di una probabilità di vittoria del 66.4% contro il 15.4% dei padroni di casa e il 18.2% di pareggio. Il modello assegna 2.37 gol attesi alla formazione ospite e 1.06 a quella di casa, indicando una spinta offensiva importante per il Lens. L'Elo di 1491.2 per gli ospiti sovrasta leggermente il 1467.1 del Troyes, inserendosi in un contesto di forma recente piuttosto difficile per i padroni di casa. Il campione di appena tre partite casalinghe e in trasferta rappresenta un limite strutturale per la stima. La copertura delle disponibilità non mostra dati ufficiali registrati.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -346,7 +346,7 @@
         "home_scores": 64.9,
         "away_scores": 59.9
       },
-      "analysis": "La partita tra Angers e Marseille si profila molto equilibrata, con il modello che assegna il 38.0% alla vittoria interna, il 31.1% al pareggio e il 30.9% al successo esterno. Gli indicatori offensivi restano bassi, con 1.05 gol attesi per i padroni di casa e 0.91 per gli ospiti, confermando l'Under 2.5 al 68.8%. I punteggi Elo si equivalgono intorno a quota 1480-1488, inseriti in un contesto di forma recente piuttosto altalenante. Il campione analizzato di soli 3 incontri per campo circoscrive la portata predittiva della stima. La copertura API risulta attualmente non disponibile per la data indicata, lasciando incerta la situazione degli infortuni.",
+      "analysis": "La partita tra Angers e Marseille presenta probabilità molto equilibrate, con il segno uno al 38.0%, la X al 31.1% e il due al 30.9%. I gol attesi rimangono contenuti, rispettivamente a quota 1.05 per i padroni di casa e 0.91 per gli ospiti, suggerendo un match bloccato. I dati Elo evidenziano una situazione di quasi parità con 1488.7 per l'Angers e 1480.6 per il Marseille. Il campione limitato a tre incontri per entrambe le squadre riduce la portata predittiva del modello. Il piano API attuale non copre questa data, per cui infortuni e formazioni non sono confermati e la copertura resta incompleta.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -423,7 +423,7 @@
         "home_scores": 91.3,
         "away_scores": 36.7
       },
-      "analysis": "Il Lione affronta il Nizza con i favori del pronostico secondo il modello, che assegna l'81,3% di probabilità alla vittoria casalinga e stima ben 2,45 gol attesi per i padroni di casa. La forma recente vede il Lione a quota 1,6 punti per match contro l'1,4 degli avversari, supportati da un rating Elo leggermente superiore per i padroni di casa (1519.1 contro 1498.2). Il campione casa di 3 partite e quello trasferta di 2 gare risultano però piuttosto ridotti, limitando inevitabilmente la precisione della stima preliminare. Per quanto riguarda le indisponibilità, la partita è attualmente fuori copertura API e non ci sono dati confermati sulle formazioni.",
+      "analysis": "Il modello assegna al Lione una netta probabilità di vittoria dell'81.3%, contro il 5.2% del Nizza e il 13.6% di pareggio, supportata da 2.45 gol attesi per i padroni di casa a fronte dei 0.46 ospiti. Nei dati Elo il Lione parte leggermente avanti con 1519.1 punti contro i 1498.2 del Nizza, mentre la forma recente vede i padroni di casa a 1.6 punti per partita e gli ospiti a 1.4. Il campione casa di sole 3 partite e quello trasferta di 2 gare riducono la precisione della stima. La copertura API indica che non è possibile verificare gli infortuni in anticipo, lasciando le formazioni non confermate e senza indisponibili segnalati.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -500,7 +500,7 @@
         "home_scores": 82.3,
         "away_scores": 93.7
       },
-      "analysis": "L'Elversberg ospita l'Augsburg in una sfida in cui il modello vede favorita la squadra in trasferta con il 59,7% di probabilità di successo e 2,77 gol attesi. I valori Elo sono vicini, rispettivamente 1499.3 per i padroni di casa e 1508.5 per gli ospiti, mentre la forma recente premia leggermente l'Augsburg (1,6 punti a partita contro 1,4). Il campione casa e trasferta si ferma a sole 2 partite ciascuno, rappresentando un limite importante per la solidità della stima. La fonte segnala 9 indisponibilità complessive tra le due squadre, sebbene l'elenco non sia necessariamente completo e le formazioni non siano ancora state pubblicate.",
+      "analysis": "L'Augsburg parte favorito con una probabilità di vittoria del 59.7% e 2.77 gol attesi, mentre l'Elversberg si ferma al 22.9% con 1.73 reti previste dal modello; il pareggio è stimato al 17.5%. L'Elo dei due club è molto vicino, con 1499.3 per i padroni di casa e 1508.5 per gli ospiti, accompagnati da una forma recente di 1.4 e 1.6 punti a match. Le sole 2 partite nel campione casalingo e altrettante in quello esterno limitano la solidità dell'analisi. Per le disponibilità, la fonte segnala 9 indisponibilità totali tra le due squadre, tra cui L. Seifert per l'Elversberg e N. Banks per l'Augsburg, ma l'elenco potrebbe non essere completo e le formazioni non sono pubblicate.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -634,7 +634,7 @@
         "home_scores": 63.5,
         "away_scores": 81.2
       },
-      "analysis": "La sfida di Bundesliga tra Schalke 04 e Mainz presenta un quadro orientato verso gli ospiti, favoriti dal modello al 52,9% con 1,67 gol attesi rispetto ai 1,01 stimati per la squadra di casa. A livello di Elo le due formazioni si equivalgono quasi perfettamente (1492.4 per lo Schalke e 1496.6 per il Mainz), mentre nelle ultime 5 uscite il Mainz ha ottenuto 1,4 punti di media contro l'1,0 dei padroni di casa. Il campione di sole 2 partite casalinghe e 2 esterne risulta molto piccolo e riduce l'affidabilità della stima preliminare. La partita non è abbinata con certezza al calendario API-Football e non sono disponibili dati verificati sulle assenze o sulle formazioni.",
+      "analysis": "Il Mainz gode di favore nei pronostici con il 52.9% di probabilità di successo e 1.67 gol attesi, rispetto al 22.8% dello Schalke 04 che vanta 1.01 reti stimate; il pareggio si attesta al 24.3%. A livello di Elo troviamo un sostanziale equilibrio con 1492.4 per i padroni di casa e 1496.6 per gli ospiti, mentre la forma recente premia leggermente il Mainz con 1.4 punti a incontro contro l'1.0 dello Schalke. Il campione casa e trasferta ridotto a sole 2 partite ciascuno limita la portata della stima preliminare. La partita risulta fuori copertura API e non ci sono dati di disponibilità o indisponibili segnalati, con formazioni non pubblicate.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -711,7 +711,7 @@
         "home_scores": 71.8,
         "away_scores": 90.5
       },
-      "analysis": "L'Union Berlin riceve il Borussia Dortmund con il modello che assegna agli ospiti il 61,6% di probabilità di vittoria e un dato di 2,35 gol attesi. Il Dortmund vanta un Elo superiore (1538.6 contro 1478.8) e una striscia recente decisamente positiva da 2,6 punti a partita, a fronte dei 0,8 punti raccolti dall'Union Berlin. Il campione utilizzato si basa su 3 gare interne e 2 esterne, un numero ridotto che incide sui margini di stima preliminare. La fonte riporta la segnalazione esplicita di 8 indisponibilità totali tra i due club, un elenco parziale che non esclude ulteriori assenze poiché le formazioni non risultano pubblicate.",
+      "analysis": "Il Borussia Dortmund si presenta con il 61.6% di probabilità di vittoria e 2.35 gol attesi, contro il 19.4% dell'Union Berlin e le loro 1.27 reti stimate; il pareggio è calcolato al 19.0%. Gli ospiti prevalgono anche nell'Elo con 1538.6 punti contro 1478.8, oltre a una forma recente nettamente superiore con 2.6 punti a partita a fronte dei 0.8 dei padroni di casa. Il campione di 3 gare casalinghe e 2 esterne rappresenta un set di dati ridotto che circoscrive l'affidabilità della stima. La fonte segnala 8 indisponibilità complessive, tra cui A. Ilic per l'Union Berlin ed Emre Can per il Dortmund, precisando però che l'elenco non è necessariamente completo e le formazioni non sono pubbliche.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -839,7 +839,7 @@
         "home_scores": 84.9,
         "away_scores": 50.7
       },
-      "analysis": "Il Werder Brema affronta il Paderborn con un favore del pronostico netto, registrando una probabilità di vittoria interna del 65,5% a fronte di un 13,2% per gli ospiti. I gol attesi dal modello premiano i padroni di casa con 1,89 reti contro le 0,71 previste per gli avversari. Nelle ultime cinque uscite il Werder ha ottenuto 1,6 punti di media, mentre il Paderborn si ferma a 0,8. I valori Elo di 1514,7 per il Werder e 1477,4 per il Paderborn confermano il divario. Il campione casalingo e esterno limitato a sole due partite riduce tuttavia la precisione della stima. La fonte segnala 13 indisponibilità complessive, ma l'elenco potrebbe non essere completo e le formazioni non sono ancora state pubblicate.",
+      "analysis": "Il Werder Brema affronta il Paderborn con un favore del pronostico netto, registrando una probabilità di successo dell'65,5% a fronte del 13,2% assegnato agli ospiti. Il modello stima 1.89 gol attesi per la squadra di casa e 0.71 per la trasferta, evidenziando una differenza di valori confermata anche dall'Elo (1514.7 contro 1477.4). La forma recente vede i padroni di casa a 1.6 punti per match nelle ultime cinque gare, mentre il Paderborn fatica a quota 0.8. Il campione casalingo e esterno limitato a sole 2 partite riduce l'affidabilità della stima. La fonte segnala diverse indisponibilità, ma l'elenco potrebbe non essere completo.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -997,7 +997,7 @@
         "home_scores": 96.6,
         "away_scores": 51.2
       },
-      "analysis": "Il Bayern Monaco parte nettamente favorito contro il RB Leipzig, forte di una probabilità di successo dell'86,6% e di ben 3,38 gol attesi dal modello, mentre gli ospiti si fermano a 0,72. Nelle ultime cinque gare entrambe le squadre hanno mostrato un ottimo potenziale offensivo, con medie di 3,2 e 3,0 reti segnate e una media punti rispettivamente di 2,2 e 1,8. I punteggi Elo di 1532,4 per i bavaresi e 1508,0 per il Lipsia rispecchiano una superiorità territoriale e qualitativa dei padroni di casa. Il campione di sole due partite disputate in casa e in trasferta risulta ristretto e condiziona la portata della stima. Sono state segnalate 5 indisponibilità tra le due rose, ricordando che la copertura informativa può essere parziale e che le formazioni ufficiali non sono ancora note.",
+      "analysis": "Il Bayern Monaco parte nettamente favorito contro il RB Leipzig con una probabilità di vittoria dell'86.6%, mentre gli ospiti si fermano al 4.5%. L'attacco bavarese guida i numeri del modello con ben 3.38 gol attesi, contro i 0.72 stimati per il Lipsia. I valori Elo mostrano una leggera superiorità dei padroni di casa (1532.4 a 1508.0), supportati da una solida media recente di 2.2 punti a partita. Il campione casa e trasferta si ferma però a sole 2 partite, fattore che vincola la precisione della stima preliminare. Sono presenti alcune segnalazioni di indisponibilità, ma la copertura della rosa potrebbe non essere esaustiva.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1107,7 +1107,7 @@
         "home_scores": 81.2,
         "away_scores": 64.5
       },
-      "analysis": "La sfida tra Leverkusen e Fregiburgo vede i padroni di casa favoriti al 52,2% per la vittoria, con un pareggio stimato al 24,3% e un successo esterno al 23,5%. I gol attesi delineano un incontro da 1,67 reti per il Leverkusen e 1,03 per il Fpatto Friburgo. Nelle ultime cinque partite gli ospiti vantano una media di 2,6 punti a fronte dei 2,0 dei padroni di casa, un andamento supportato da Elo vicini (1524,7 contro 1539,0). Il campione di appena due gare interne ed esterne rappresenta un limite strutturale per l'affidabilità della proiezione. La data dell'incontro risulta fuori dalla copertura API corrente, dunque infortuni e formazioni non sono verificati e la copertura potrebbe essere incompleta.",
+      "analysis": "La sfida tra Leverkusen e Fregiburgo vede i padroni di casa favoriti con il 52.2% di probabilità di vittoria, contro il 23.5% degli ospiti e un 24.3% di pareggio. I gol attesi dal modello sono 1.67 per la squadra di casa e 1.03 per la trasferta, rispecchiando un sostanziale equilibrio. L'Elo evidenzia un leggero vantaggio esterno (1539.0 per il Friburgo contro 1524.7), ma la forma recente premia gli ospiti con 2.6 punti di media nelle ultime cinque uscite. Il campione casa e trasferta di sole 2 partite limita fortemente la portata della stima. La copertura API risulta limitata e non permette verifiche anticipate sulle formazioni o sugli infortuni.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1184,7 +1184,7 @@
         "home_scores": 80.8,
         "away_scores": 69.2
       },
-      "analysis": "Il match tra Kalamata e OFI Creta presenta quote di equilibrio relativo, con il segno uno stimato al 48,4%, la X al 24,4% e il due al 27,3%. I gol attesi dal modello si attestano a 1,65 per la formazione di casa e 1,18 per gli ospiti. La forma recente mostra un rendimento speculare, con entrambe le squadre a quota 1,4 punti di media nelle ultime cinque giornate. I valori Elo di 1493,1 per i locali e 1510,2 per gli ospiti confermano la vicinanza dei valori in campo. Il campione analizzato si basa su tre gare casalinghe ed esterne, un numero ridotto che incide sul margine di stima. L'incontro è attualmente fuori dalla copertura API e non vi sono dati confermati su indisponibili o formazioni ufficiali.",
+      "analysis": "Il confronto di Super League greca tra Kalamata e OFI Creta presenta un pronostico equilibrato, con il 48.4% di probabilità per la vittoria interna e il 27.3% per quella esterna. Il modello prevede 1.65 gol attesi per i padroni di casa e 1.18 per gli ospiti, con una discreta propensione per l'Over 1.5. I dati Elo vedono gli ospiti leggermente avanti a quota 1510.2 rispetto al 1493.1 del Kalamata, mentre la forma recente è perfettamente identica con 1.4 punti a incontro per entrambe. Il campione analizzato di 3 partite casalinghe e esterne resta ridotto e condiziona la proiezione. La data è fuori copertura API, dunque non vi è conferma ufficiale su indisponibili o formazioni.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1263,7 +1263,7 @@
         "home_scores": 84.6,
         "away_scores": 47.2
       },
-      "analysis": "Il modello assegna al Kifisia una probabilità di successo del 66,9%, supportata da 1,87 gol attesi rispetto ai 0,64 concessi all'Aris. I valori Elo di 1501,4 per i padroni di casa e 1509,5 per gli ospiti delineano un sostanziale equilibrio di forza, sebbene la forma recente mostri medie simili a quota 1,4 punti. Il campione casalingo e esterno limitato a sole tre partite riduce l'affidabilità della stima complessiva. Inoltre, il piano API attuale non permette verifiche anticipate e le formazioni non sono confermate. Il mercato Over 1,5 è indicato con il 71,5% di probabilità.",
+      "analysis": "Il modello assegna al Kifisia un netto 66,9% di probabilità di vittoria, sostenuto da 1,87 gol attesi contro i 0,64 degli ospiti. Il piccolo campione casalingo e esterno di sole tre partite limita parzialmente l'affidabilità della stima complessiva. L'Elo si equivale intorno a quota 1500, mentre la forma recente vede entrambe le squadre a 1,4 punti di media. Ricordiamo che la copertura API è fuori servizio, dunque la lista degli indisponibili risulta incompleta e da verificare. L'incontro evidenzia una discreta propensione per l'Over 1,5, stimato al 71,5% dal nostro algoritmo.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1342,7 +1342,7 @@
         "home_scores": 76.3,
         "away_scores": 62.9
       },
-      "analysis": "Il pronostico vede il PAOK favorito con il 47,4% di probabilità di vittoria, a fronte del 26,0% assegnato all'Iraklis e del 26,6% per il pareggio. I gol attesi delineano una gara da 1,44 reti per i padroni di casa e 0,99 per gli ospiti. I punteggi Elo di 1519,5 e 1511,8 confermano il bilanciamento dei valori, mentre la forma recente evidenzia 1,8 punti a partita per entrambe le compagini. Le analisi si basano su campioni di casa e trasferta ristretti a tre e quattro partite, limitando la precisione della proiezione. La copertura API è assente per questa data e non risultano infortuni o formazioni ufficiali verificate.",
+      "analysis": "La sfida vede il PAOK favorito con il 47,4% di probabilità di successo e 1,44 gol attesi, mentre l'Iraklis risponde con 0,99 reti previste. Entcuna squadra vanta un campione limitato a tre o quattro partite casalinghe e esterne, fattore che riduce la precisione della proiezione numerica. I valori Elo sono vicini a 1519 per i padroni di casa e 1511 per gli ospiti, con una forma recente identica a 1,8 punti a match. La copertura API non è attiva e non sono presenti segnalazioni di infortuni o formazioni ufficiali verificate. Il mercato Over 1,5 si attesta al 69,8% secondo le metriche elaborate.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1419,7 +1419,7 @@
         "home_scores": 88.4,
         "away_scores": 66.1
       },
-      "analysis": "L'Everton gode del favore del pronostico con una probabilità interna del 61,8% e 2,15 gol attesi, mentre il Chelsea risponde con 1,08 reti e il 18,1% di successo. Gli indici Elo di 1519,7 e 1510,3 descrivono una sfida tra rose vicine, con una forma recente da 1,4 punti a testa. Il campione di sole tre gare casalinghe ed esterne vincola l'ampiezza statistica della stima. La fonte segnala tre indisponibilità complessive, tra cui Mykolenko, Gittens ed Emegha, sebbene l'elenco non sia necessariamente esaustivo. Le quote 1X2 offrono 3,28 per l'1, 3,88 per la X e 2,23 per il 2, accompagnate dalla selezione del mercato Over 1,5.",
+      "analysis": "L'Everton parte avanti nelle proiezioni con il 61,8% di probabilità di vittoria e ben 2,15 gol attesi rispetto ai 1,08 del Chelsea. Il campione di sole tre gare casalinghe e esterne impone prudenza nella lettura statistica di questa stima. Le valutazioni Elo sono allineate attorno a 1519 per i Toffees e 1510 per i Blues, mentre la forma recente mostra parità nei punti ma attacchi prolifici. La fonte segnala 3 indisponibilità tra cui V. Mykolenko e J. Gittens, sebbene l'elenco rimanga potenzialmente incompleto. Le quote 1X2 attuali offrono 3.28 per l'uno, 3.88 per la X e 2.23 per il due.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1530,7 +1530,7 @@
         "home_scores": 71.0,
         "away_scores": 52.9
       },
-      "analysis": "Il confronto tra Brentford e Liverpool presenta probabilità di vittoria casalinga al 47,7% e affermazione esterna al 22,6%, con il pareggio stimato al 29,7%. I gol attesi si attestano a 1,24 per i padroni di casa e 0,75 per gli ospiti, sostenuti da Elo quasi identici intorno a quota 1520 e 1509. Il campione limitato a tre partite interne ed esterne riduce la portata predittiva del modello. La copertura evidenzia quattordici segnalazioni di indisponibilità tra cui Furo, Gakpo e Szoboszlai, sebbene la lista possa essere incompleta e senza formazioni pubblicate. L'analisi resta puramente statistica e indipendente dai dati sulle assenze.",
+      "analysis": "Il Brentford riceve il Liverpool in un match dove i padroni di casa registrano il 47,7% di probabilità di vittoria e 1,24 gol attesi. Il campione limitato a tre partite interne ed esterne riduce la portata predittiva del modello statistico applicato. I dati Elo evidenziano un sostanziale equilibrio a quota 1520 e 1509, con il Liverpool leggermente superiore nella forma recente a 1,6 punti. La copertura API segnala ben 14 indisponibilità complessive, tra cui C. Gakpo e D. Szoboszlai, sebbene la lista non sia necessariamente esaustiva. Non risultano quote 1X2 disponibili al momento della nostra analisi.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1694,7 +1694,7 @@
         "home_scores": 86.6,
         "away_scores": 77.4
       },
-      "analysis": "Per la sfida di Premier League tra Newcastle e Aston Villa, il modello assegna il 49.8% di probabilità alla vittoria casalinga, il 21.6% al pareggio e il 28.6% al successo esterno, stimando 2.01 gol attesi per i padroni di casa e 1.49 per gli ospiti. L'indice Elo evidenzia un sostanziale equilibrio con 1498.7 punti per il Newcastle e 1481.5 per l'Aston Villa, mentre la forma recente vede i bianconeri a 1.4 punti a partita e gli avversari a 1.0. Tuttavia, il campione di sole 3 partite casalinghe e 3 esterne rappresenta un limite importante per l'affidabilità della stima. La fonte segnala 11 indisponibilità complessive, tra cui A. Elanga e A. Onana, ricordando che la copertura potrebbe essere incompleta.",
+      "analysis": "Newcastle leggermente favorito; scenario da almeno 2 gol; entrambe a segno plausibile. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1811,8 +1811,7 @@
         ],
         "lineups": null,
         "lineup_status": "non_pubblicate"
-      },
-      "analysis_provider": "Gemini"
+      }
     },
     {
       "id": "2026-10-16-Serie A-Frosinone-Sassuolo",
@@ -1842,7 +1841,7 @@
         "home_scores": 88.2,
         "away_scores": 70.5
       },
-      "analysis": "In questo confronto di Serie A tra Frosinone e Sassuolo, il modello indica il 58.4% di probabilità per il segno 1, il 20.5% per la X e il 21.1% per il 2, con 2.14 gol attesi per la squadra di casa e 1.22 per quella in trasferta. La classifica Elo posiziona il Frosinone a 1509.4 punti e il Sassuolo a 1499.6, con un recente rendimento di 2.0 punti a partita per i ciociari e 1.6 per i neroverdi. Il campione di sole 3 gare interne e 3 esterne risulta molto ridotto e limita la precisione della proiezione numerica. Vengono segnalate 7 indisponibilità totali, inclusi elementi come D. Boloca e F. Grillitsch, rammentando che l'elenco potrebbe non essere esaustivo.",
+      "analysis": "Frosinone leggermente favorito; scenario da almeno 2 gol; entrambe a segno plausibile. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1946,8 +1945,7 @@
         "home": 0.5301,
         "draw": -0.2313,
         "away": -0.4176
-      },
-      "analysis_provider": "Gemini"
+      }
     },
     {
       "id": "2026-10-17-Serie A-Venezia-Napoli",
@@ -1977,7 +1975,7 @@
         "home_scores": 56.8,
         "away_scores": 93.2
       },
-      "analysis": "Il match di Serie A tra Venezia e Napoli vede gli ospiti nettamente favoriti dal modello con il 76.3% di probabilità di successo, contro il 14.4% del pareggio e il 9.2% per la vittoria interna, supportati da 2.68 gol attesi a fronte dei 0.84 dei lagunari. I dati Elo premiano il Napoli con 1510.8 punti rispetto ai 1438.8 del Venezia, la cui forma recente mostra una media di 0.0 punti a partita contro i 1.4 dei partenopei. Le statistiche si basano su un campione limitato di appena 3 partite casalinghe e 3 esterne, elemento che incide sulla solidità della stima. Le segnalazioni indicano 13 indisponibilità complessive, tra cui A. Buongiorno e G. Busio, sebbene la copertura possa essere incompleta.",
+      "analysis": "Napoli leggermente favorita; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
       "suggested_markets": [
         "Over 1,5",
         "2"
@@ -2118,8 +2116,7 @@
         "home": -0.5501,
         "draw": -0.3923,
         "away": 0.3276
-      },
-      "analysis_provider": "Gemini"
+      }
     },
     {
       "id": "2026-10-17-Serie A-Bologna-Inter",
@@ -2149,7 +2146,7 @@
         "home_scores": 59.0,
         "away_scores": 81.0
       },
-      "analysis": "Per la partita di Serie A tra Bologna e Inter, il modello stima il 55.5% di probabilità per la vittoria esterna, il 24.4% per il pareggio e il 20.1% per il segno 1, con 1.66 gol attesi per l'Inter e 0.89 per il Bologna. Il punteggio Elo riflette il divario assegnando 1548.2 punti ai nerazzurri e 1480.8 ai felsinei, mentre nelle ultime 5 uscite l'Inter viaggia a 2.6 punti di media contro i 1.0 dei rossoblù. La stima preliminare risente di un campione ridotto di 3 gare interne per il Bologna e 2 esterne per l'Inter, circoscrivendo la portata dell'analisi. Sono presenti 8 segnalazioni di indisponibilità, tra cui L. Martinez e R. Orsolini, con la consueta avvertenza di una possibile incompletezza dei dati.",
+      "analysis": "Inter leggermente favorita; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -2246,8 +2243,7 @@
         ],
         "lineups": null,
         "lineup_status": "non_pubblicate"
-      },
-      "analysis_provider": "Gemini"
+      }
     },
     {
       "id": "2026-10-17-Serie A-Roma-Genoa",
@@ -2277,7 +2273,7 @@
         "home_scores": 92.3,
         "away_scores": 49.5
       },
-      "analysis": "La Roma parte nettamente favorita contro il Genoa, con il 78.0% di probabilità per la vittoria casalinga e ben 2.57 gol attesi dal modello. Nelle ultime cinque uscite i giallorossi hanno mantenuto una media di 2.2 punti e subito solo 0.6 reti, confermando un solido vantaggio nell'Elo (1542.1 contro 1467.4). Il campione casa di 3 partite e quello trasferta di 2 gare sono piuttosto piccoli, limitando la precisione della stima. La fonte segnala 13 indisponibilità complessive tra le due squadre, ma l'elenco potrebbe non essere completo e non ci sono garanzie di totale assenza di altri forfait.",
+      "analysis": "La Roma parte nettamente favorita contro il Genoa, con una probabilità di vittoria casalinga del 78.0% e 2.57 gol attesi dal modello. Il Genoa risponde con appena il 7.7% di chance esterne e 0.68 gol previsti, confermando le difficoltà recenti. L'Elo assegna 1542.1 punti alla Roma e 1467.4 al Genoa, rispecchiando il divario di forma. Il campione casalingo di 3 partite e quello esterno di 2 sono molto piccoli, limitando la precisione della stima. La fonte segnala 13 indisponibilità complessive, ma l'elenco non è necessariamente completo e non copre tutti i dettagli.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -2435,7 +2431,7 @@
         "home_scores": 70.9,
         "away_scores": 62.9
       },
-      "analysis": "La sfida tra Udinese e Lecce si preannuncia molto equilibrata, con il modello che assegna il 41.7% di probabilità al successo interno, il 28.6% al pareggio e il 29.6% alla vittoria ospite. I gol attesi sono bassi, stimati a 1.23 per la formazione di casa e 0.99 per quella in trasferta, in linea con l'Under 2.5 al 61.6%. I valori Elo sono quasi identici (1469.1 per i padroni di casa e 1477.6 per gli ospiti), mentre la forma recente mostra difficoltà analoghe. Il campione di sole 3 partite casalinghe e 3 esterne riduce l'affidabilità dell'analisi. Per questa data la copertura API non è disponibile, quindi infortuni e formazioni non risultano verificati.",
+      "analysis": "Udinese e Lecce si affrontano in un match molto equilibrato, dove il modello assegna il 41.7% di probabilità alla vittoria interna e il 29.6% a quella ospite. I gol attesi sono contenuti a 1.23 per i padroni di casa e 0.99 per gli ospiti, evidenziando un potenziale offensivo limitato. I valori Elo sono vicini, rispettivamente a 1469.1 e 1477.6, in linea con il pareggio stimato al 28.6%. Il campione casalingo di 3 gare e quello esterno di 3 sono ridotti e limitano la stima complessiva. Le informazioni sulla disponibilità non sono verificate per questa data e la copertura API risulta assente.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -2512,7 +2508,7 @@
         "home_scores": 55.4,
         "away_scores": 90.3
       },
-      "analysis": "Il Como brilla nei dati del modello contro la Fiorentina, conquistando il 71.5% di probabilità di vittoria e 2.33 gol attesi a fronte degli appena 0.81 dei viola. La forma recente premia ampiamente gli ospiti, reduci da 2.0 punti a partita nelle ultime cinque gare, superando anche nel ranking Elo (1522.9 contro 1467.1). Tuttavia, il campione casalingo di 3 incontri e quello esterno di 4 partite rimangono limitati e influenzano la solidità della previsione. La copertura API risulta assente per la data odierna, perciò non possiamo confermare eventuali indisponibili o formazioni ufficiali.",
+      "analysis": "Il Como brilla nei pronostici esterni con una probabilità di vittoria del 71.5% e ben 2.33 gol attesi dal modello, a fronte dell'11.3% della Fiorentina. La squadra ospite vanta anche un Elo superiore di 1522.9 punti contro i 1467.1 dei padroni di casa. Il campione di 3 partite in casa e 4 in trasferta è piuttosto ristretto, limitando la solidità statistica dell'analisi. Nelle ultime cinque uscite la Fiorentina ha raccolto 0.8 punti a match, mentre il Como viaggia a quota 2.0. La disponibilità dei giocatori non è confermata ufficialmente a causa dei limiti della copertura API attuale.",
       "suggested_markets": [
         "Over 1,5",
         "2"
@@ -2592,7 +2588,7 @@
         "home_scores": 90.6,
         "away_scores": 37.6
       },
-      "analysis": "Il Milan affronta l'Atalanta con un forte favore del pronostico, registrando una probabilità di vittoria interna del 79.8% e 2.37 gol attesi dal modello. I rossoneri vantano 1.8 punti di media nelle ultime cinque uscite e un Elo di 1534.2, superiore al 1495.2 degli ospiti. Il campione limitato a sole 2 partite casalinghe e 2 in trasferta rappresenta un vincolo importante per la stima complessiva. Trattandosi di una data fuori copertura API, non abbiamo dati ufficiali aggiornati su indisponibili o formazioni, e l'assenza di segnalazioni non esclude la presenza di assenze.",
+      "analysis": "Il Milan affronta l'Atalanta con solide probabilità di successo fissate al 79.8% e un attacco stimato a 2.37 gol dal modello. L'Atalanta insegna con il 5.7% di probabilità di vittoria e soli 0.47 gol attesi, frenata anche da un Elo di 1495.2 inferiore ai 1534.2 dei rossoneri. Il campione interno di 2 partite e quello esterno di 2 sono estremamente limitati, rendendo la stima preliminare e fragile. La forma recente vede il Milan a 1.8 punti per partita contro l'1.2 degli ospiti. La disponibilità della rosa non è verificata per questa data specifica per via della copertura API limitata.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -2669,7 +2665,7 @@
         "home_scores": 55.4,
         "away_scores": 61.5
       },
-      "analysis": "La sfida tra Juventus e Lazio si preannuncia molto equilibrata, con una leggera preferenza per gli ospiti che registrano il 37,5% di probabilità di vittoria contro il 29,3% dei bianconeri, mentre il pareggio si attesta al 33,2%. I gol attesi dal modello sono piuttosto bassi, pari a 0,81 per la casa e 0,96 per la trasferta, riflettendo una tendenza all'under 2,5 fissato al 74,1%. I dati Elo vedono la Lazio a quota 1549,4 e la Juventus a 1520,7, confermando l'equilibrio di forma recente. Il campione casa e trasferta si limita a sole 3 partite, un fattore che riduce l'affidabilità della stima. Ricordiamo che il piano API-Football attuale non consente di verificare questa data in anticipo; infortuni e formazioni non sono confermati, e nessuna segnalazione di assenze non significa che tutti siano disponibili.",
+      "analysis": "La sfida tra Juventus e Lazio si preannuncia molto equilibrata, con il modello che assegna il 37.5% di probabilità alla vittoria esterna, il 33.2% al pareggio e il 29.3% al successo di casa. I gol attesi sono bassi, stimati in 0.81 per la Juventus e 0.96 per la Lazio, orientando le previsioni verso l'Under 2.5 al 74.1%. I valori Elo di 1520.7 per i bianconeri e 1549.4 per i biancocelesti riflettono una forza simile, sebbene il campione di sole 3 partite casalinghe e 3 esterne limiti la precisione della stima. Nelle ultime cinque uscite la Lazio ha mostrato un ottimo passo con 2.6 punti di media, mentre la Juventus si attesta a 1.6. Attualmente il piano API non permette di verificare infortuni o formazioni.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -2746,7 +2742,7 @@
         "home_scores": 57.7,
         "away_scores": 82.3
       },
-      "analysis": "Il Cagliari parte con i favori del pronostico in trasferta contro il Monza, facendo registrare il 58,0% di probabilità di successo rispetto al 18,4% dei padroni di casa e al 23,5% del pareggio. Dal punto di vista offensivo, il modello assegna 0,86 gol attesi al Monza e 1,73 al Cagliari, evidenziando una maggiore pericolosità della formazione ospite. I valori Elo mostrano il Cagliari a 1531,4 e il Monza a 1474,1, coerentemente con i rispettivi momenti di forma. Tuttavia, il campione casalingo del Monza di 2 gare e quello esterno del Cagliari di 3 partite sono molto ridotti e limitano la precisione della stima. Precisiamo che per questa data le informazioni su infortuni e formazioni non sono verificate a causa della copertura API limitata.",
+      "analysis": "Il match tra Monza e Cagliari vede gli ospiti favoriti dal modello con una probabilità di vittoria del 58.0%, contro il 18.4% dei padroni di casa e il 23.5% della X. I gol attesi evidenziano una sproporzione a favore del Cagliari con 1.73 reti previste a fronte delle 0.86 del Monza, rendendo l'Under 2.5 probabile al 52.1%. Il ranking Elo assegna 1474.1 punti ai brianzoli e 1531.4 ai sardi, ma il campione casalingo di 2 gare e quello esterno di 3 partite sono troppo ridotti per una lettura definitiva. Nelle ultime cinque partite il Cagliari ha raccolto 2.0 punti di media, mentre il Monza è fermo a 0.8 con una difesa in difficoltà. Le informazioni su eventuali indisponibili non sono verificabili a causa della copertura API limitata.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -2823,7 +2819,7 @@
         "home_scores": 62.6,
         "away_scores": 70.9
       },
-      "analysis": "Il confronto tra Parma e Torino vede gli ospiti leggermente favoriti con il 41,9% di probabilità di vittoria, mentre il Parma ottiene il 29,4% e il pareggio si ferma al 28,7%. I gol attesi dal modello sono 0,98 per la squadra di casa e 1,23 per quella ospite, con una forte inclinazione verso l'under 2,5 stimato al 61,8%. Gli indici Elo confermano un sostanziale bilanciamento, con il Torino a 1490,0 e il Parma a 1471,0. Il campione casalingo e in trasferta si ferma a sole 3 partite per parte, rappresentando un limite importante per la stima. Segnaliamo che la copertura API attuale non permette di verificare la disponibilità dei calciatori o le formazioni ufficiali in anticipo.",
+      "analysis": "Parma e Torino si affrontano in un incontro che il modello inclina leggermente verso gli ospiti, accreditati del 41.9% di probabilità di successo rispetto al 29.4% del Parma e al 28.7% del pareggio. Sul fronte realizzativo ci si attende una gara da 0.98 gol per i ducali e 1.23 per i granata, con l'Under 2.5 dato al 61.8%. I punteggi Elo di 1471.0 per il Parma e 1490.0 per il Torino descrivono un sostanziale equilibrio, condizionato però da un campione limitato a sole 3 partite interne e 3 esterne. La forma recente vede il Torino a 1.4 punti per match e il Parma a 0.8 con soli 0.8 gol segnati a partita. Non risultano dati verificabili su formazioni e indisponibili per questa data.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -2900,7 +2896,7 @@
         "home_scores": 54.2,
         "away_scores": 40.9
       },
-      "analysis": "La partita di Eliteserien tra Sandefjord e Lillestrom presenta percentuali aperte, con il Sandefjord al 38,1% di probabilità di vittoria, il pareggio al 39,4% e la vittoria ospite al 22,5%. I gol attesi dal modello sono contenuti, pari a 0,78 per i padroni di casa e 0,53 per gli ospiti, spingendo l'under 2,5 all'85,6%. I valori Elo risultano molto vicini, con il Lillestrom a 1506,4 e il Sandefjord a 1493,3, supportati da un campione più solido di 14 gare interne e 11 esterne che offre una base dati più ampia. Ricordiamo che il piano API-Football attuale non consente di verificare in anticipo la disponibilità della rosa; l'assenza di segnalazioni di indisponibili non garantisce la totale disponibilità dei giocatori.",
+      "analysis": "La partita di Eliteserien tra Sandefjord e Lillestrom presenta percentuali vicine tra vittoria interna al 38.1% e pareggio al 39.4%, lasciando gli ospiti al 22.5%. I gol attesi sono molto bassi, rispettivamente 0.78 per il Sandefjord e 0.53 per il Lillestrom, spingendo l'Under 2.5 all'85.6% e l'Under 3.5 al 95.6%. Il rating Elo si equivale a quota 1493.3 per i padroni di casa e 1506.4 per gli ospiti, supportato stavolta da un campione più solido di 14 gare casalinghe e 11 esterne che rende la stima più affidabile. Nelle ultime cinque sfide entrambe le squadre viaggiano a una media di 1.4 punti. La copertura API non consente di confermare la lista degli indisponibili o le formazioni ufficiali.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -2977,7 +2973,7 @@
         "home_scores": 85.6,
         "away_scores": 58.4
       },
-      "analysis": "Il modello assegna al Tromso il 62,3% di probabilità di vittoria, contro il 16,3% per il KFUM Oslo e il 21,4% per il pareggio. I gol attesi delineano un divario marcato, stimati a 1,94 per i padroni di casa e a 0,88 per gli ospiti. Valutando la classifica Elo, il Tromso vanta 1547,5 punti a fronte dei 1469,1 del KFUM Oslo, mentre la forma recente mostra un rendimento altalenante per entrambe. Il campione di 14 partite casalinghe e 13 esterne è solido e permette una stima affidabile. La copertura API non ha verificato gli infortuni e nessuna segnalazione è presente, ma ciò non esclude assenze. Si ricorda che il modello è sperimentale.",
+      "analysis": "Il modello assegna al Tromso una probabilità di vittoria del 62,3%, contro il 16,3% per il KFUM Oslo e il 21,4% per il pareggio. I gol attesi delineano un divario netto: 1,94 per i padroni di casa e 0,88 per gli ospiti. Il ranking Elo premia il Tromso con 1547,5 punti rispetto ai 1469,1 degli avversari, mentre la forma recente vede il KFUM a quota 1,8 punti medi nelle ultime cinque gare a dispetto dell'1,0 dei locali. Con 14 partite casalinghe e 13 esterne analizzate, il campione di dati è solido ma va considerato con prudenza. Ricordiamo che la copertura per infortuni e formazioni non è disponibile.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -3056,7 +3052,7 @@
         "home_scores": 61.1,
         "away_scores": 78.5
       },
-      "analysis": "Per questa sfida di Eredivisie, il modello vede l'Excelsior favorito con il 51,2% di probabilità di successo, rispetto al 23,2% dell'Heerenveen e al 25,7% del pareggio. I gol attesi premiano gli ospiti a quota 1,54 contro i 0,94 dei padroni di casa. I dati Elo sono molto vicini, con 1489,7 punti per l'Heerenveen e 1497,0 per l'Excelsior, mentre nelle ultime cinque uscite entrambe registrano un punto a partita. Il campione di sole 4 partite casalinghe e 4 esterne è molto piccolo e limita fortemente la stima. La fonte segnala 2 indisponibilità, tra cui D. Proper e N. Naujoks, sebbene la copertura possa essere incompleta. Ricordiamo che il modello è sperimentale.",
+      "analysis": "Per questa sfida di Eredivisie, il modello vede l'Excelsior favorito con il 51,2% di probabilità di successo, mentre l'Heerenveen si ferma al 23,2% e il pareggio è stimato al 25,7%. Sul fronte realizzativo ci si attende 1,54 gol per gli ospiti e 0,94 per i padroni di casa. I valori Elo sono molto vicini, rispettivamente 1489,7 e 1497,0, e la forma recente indica un rendimento identico di 1,0 punti a partita per entrambe. Il campione di sole 4 gare casalinghe e 4 esterne è decisamente piccolo e limita l'affidabilità della stima. La fonte segnala 2 indisponibilità, ma l'elenco potrebbe non essere completo e le formazioni non sono pubblicate.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -7649,6 +7645,6 @@
     }
   ],
   "notice": "Le probabilità sono stime statistiche e non garantiscono risultati.",
-  "odds_updated_at": "2026-10-16T07:00:26+00:00",
+  "odds_updated_at": "2026-10-16T07:05:30+00:00",
   "odds_source_api_football": "API-Football"
 }
