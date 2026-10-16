@@ -19,7 +19,30 @@ AVAILABILITY_CACHE_FILE = Path("data/availability_cache.json")
 CACHE_FILE = Path("data/odds_cache.json")
 BASE_URL = "https://v3.football.api-sports.io/odds"
 MAX_NEW_REQUESTS_PER_DAY = 15
+MAX_ODDS_AGE_HOURS = 24
 USER_AGENT = "CalcioIntelligente/1.0"
+
+
+def quote_is_fresh(entry, now=None):
+    """Le quote API vengono riutilizzate solo per 24 ore dalla richiesta."""
+    fetched_at = str((entry or {}).get("fetched_at") or "")
+    try:
+        stamp = datetime.fromisoformat(fetched_at.replace("Z", "+00:00"))
+        if stamp.tzinfo is None:
+            stamp = stamp.replace(tzinfo=timezone.utc)
+    except (TypeError, ValueError):
+        return False
+    now = now or now_utc()
+    age = (now - stamp.astimezone(timezone.utc)).total_seconds()
+    return 0 <= age <= MAX_ODDS_AGE_HOURS * 3600
+
+
+def odds_payload_diagnostics(payload):
+    """Riassume copertura effettiva senza esporre chiavi o dati sensibili."""
+    response = payload.get("response", []) or []
+    bookmakers = [b for event in response for b in (event.get("bookmakers", []) or [])]
+    bet_names = sorted({str(bet.get("name") or "") for book in bookmakers for bet in (book.get("bets", []) or [])})
+    return {"events": len(response), "bookmakers": len(bookmakers), "bet_types": bet_names[:20]}
 
 
 def now_utc():
@@ -250,10 +273,12 @@ def main():
             }
             if available:
                 calculate_value(match, prices, markets)
+                match["odds_fetched_at"] = cache["entries"][fixture_id]["fetched_at"]
                 fetched += 1
                 print(f"Quote API-Football abbinate: {match.get('home_team')} - {match.get('away_team')} (1X2 completo: {complete_1x2}; mercati aggiuntivi: {len(markets)}).")
             else:
-                print(f"Nessuna quota 1X2 o mercato aggiuntivo completo per {match.get('home_team')} - {match.get('away_team')}; non invento valori.")
+                diagnostics = odds_payload_diagnostics(payload)
+                print(f"Nessuna quota per {match.get('home_team')} - {match.get('away_team')}: eventi={diagnostics['events']}, bookmaker={diagnostics['bookmakers']}, mercati={diagnostics['bet_types'] or 'nessuno'}. Possibile copertura/provider senza quote; non invento valori.")
         except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, OSError, ValueError) as error:
             print(f"AVVISO quote API-Football {fixture_id}: {error}")
             # Anche gli errori vengono registrati per evitare di martellare una fixture
@@ -277,6 +302,9 @@ def main():
         entry = cache["entries"].get(fixture_id) if fixture_id else None
         if not entry or entry.get("status") != "available":
             continue
+        if not quote_is_fresh(entry):
+            print(f"Cache quote scaduta per {match.get('home_team')} - {match.get('away_team')}: oltre {MAX_ODDS_AGE_HOURS} ore; non riutilizzo il prezzo.")
+            continue
         prices = entry.get("prices") if isinstance(entry.get("prices"), dict) else {}
         markets = entry.get("markets") if isinstance(entry.get("markets"), dict) else {}
         if not prices and not markets:
@@ -289,13 +317,16 @@ def main():
         # Se le quote API-Football sono già state assegnate, non ricalcolare.
         if match.get("odds_source") != "API-Football" or not match.get("odds_markets"):
             calculate_value(match, prices, markets)
+            match["odds_fetched_at"] = entry.get("fetched_at")
 
     data["odds_updated_at"] = now_utc().isoformat()
     data["odds_source_api_football"] = "API-Football"
     DATA_FILE.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     CACHE_FILE.parent.mkdir(parents=True, exist_ok=True)
     CACHE_FILE.write_text(json.dumps(cache, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"Quote API-Football complete: {fetched}; richieste quote oggi: {used}/{MAX_NEW_REQUESTS_PER_DAY}.")
+    available_entries = sum(1 for item in cache["entries"].values() if item.get("status") == "available" and quote_is_fresh(item))
+    no_market_entries = sum(1 for item in cache["entries"].values() if item.get("status") == "not_available" and str(item.get("fetched_at") or "")[:10] == today)
+    print(f"Quote API-Football complete: {fetched}; cache fresche: {available_entries}; risposte senza quote oggi: {no_market_entries}; richieste oggi: {used}/{MAX_NEW_REQUESTS_PER_DAY}.")
 
 
 if __name__ == "__main__":

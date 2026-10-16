@@ -362,6 +362,16 @@ def odds_from_row(row):
     return None
 
 
+def additional_odds_from_row(row):
+    """Quote Over/Under 2,5 da football-data quando presenti nel CSV."""
+    for keys in (("Avg>2.5", "Avg<2.5"), ("B365>2.5", "B365<2.5"),
+                 ("Max>2.5", "Max<2.5"), ("BFE>2.5", "BFE<2.5")):
+        values = [number(row.get(key)) for key in keys]
+        if all(value is not None and value > 1 for value in values):
+            return {"over_under_2_5": {"over": values[0], "under": values[1]}}
+    return {}
+
+
 
 def parse_date(value):
     value = (value or "").strip()
@@ -431,7 +441,7 @@ def classify_no_bet(home_sample, away_sample, data_quality_ok=True):
         return "stima_non_affidabile", "Partita non adatta a una stima affidabile: qualità o comparabilità dei dati insufficiente."
     if home_sample + away_sample == 0:
         return "dati_mancanti", "Dati mancanti: nessuna osservazione storica pertinente per casa o trasferta."
-    return "campione_insufficiente", "Campione insufficiente: servono almeno due gare casalinghe per la squadra di casa e due gare in trasferta per l’avversaria."
+    return "campione_insufficiente", "Campione insufficiente: servono almeno tre gare casalinghe per la squadra di casa e tre gare in trasferta per l’avversaria."
 
 
 def make_forecast(home, away, league, match_date, kickoff, history, league_home_avg, league_away_avg, elo_ratings=None, recent_form=None):
@@ -500,8 +510,9 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
     home_sample = hs["home_games"]
     away_sample = aws["away_games"]
     sample = min(home_sample, away_sample)
-    # Pubblica una stima solo con almeno due gare pertinenti per entrambe le squadre.
-    valid = home_sample >= 2 and away_sample >= 2
+    # Sotto tre gare pertinenti per lato il campione è troppo fragile: niente probabilità pubblicate.
+    # Da 3 a 7 gare la stima resta preliminare; la soglia per un candidato EV è 8 per lato.
+    valid = home_sample >= MIN_TEAM_MATCHES and away_sample >= MIN_TEAM_MATCHES
     no_bet_type, no_bet_reason = classify_no_bet(home_sample, away_sample)
     scorelines.sort(reverse=True)
     probabilities = {
@@ -527,7 +538,7 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
         summary = f"{outcome_text}; {goal_text}; {btts_text}. Commento automatico basato solo sul modello statistico, non su notizie o quote."
         # Le selezioni automatiche richiedono un campione minimo casa/trasferta
         # di almeno tre gare per lato; le stime preliminari restano descrittive.
-        if sample >= MIN_TEAM_MATCHES:
+        if home_sample >= 8 and away_sample >= 8:
             if over15 >= 0.70: suggested.append("Over 1,5")
             if btts >= 0.70: suggested.append("Goal")
             if best_probability >= 0.70: suggested.append(best_outcome)
@@ -549,7 +560,7 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
         "sample_matches": sample,
         "home_matches_sample": home_sample,
         "away_matches_sample": away_sample,
-        "status": ("Pronostico valutabile" if sample >= 3 else "Stima preliminare") if valid else "NO BET",
+        "status": ("Pronostico valutabile" if home_sample >= 8 and away_sample >= 8 else "Stima preliminare") if valid else "NO BET",
         "no_bet_type": "" if valid else no_bet_type,
         "reason": "" if valid else no_bet_reason,
         "confidence": "alta quantità di dati (non sinonimo di accuratezza verificata)" if sample >= 8 else "media quantità di dati" if sample >= 5 else "bassa quantità di dati",
@@ -573,6 +584,7 @@ def main():
     forecasts, downloaded, failed = [], 0, []
     historical_available = []
     fixture_odds = {}
+    fixture_markets = {}
 
     # Football-data pubblica le prossime partite in un CSV separato.
     try:
@@ -624,9 +636,13 @@ def main():
                 completed.append((home, away, int(hg), int(ag)))
             elif today <= match_date <= last_date and team_key(home) != team_key(away):
                 fixtures.append((home, away, match_date, str(row_value(row, "Time", "time", "kickoff") or "").strip()))
+                fixture_key = (match_date.isoformat(), team_key(home), team_key(away))
                 quote = odds_from_row(row)
                 if quote:
-                    fixture_odds[(match_date.isoformat(), team_key(home), team_key(away))] = quote
+                    fixture_odds[fixture_key] = quote
+                extra_quotes = additional_odds_from_row(row)
+                if extra_quotes:
+                    fixture_markets.setdefault(fixture_key, {}).update(extra_quotes)
 
         # All'inizio della stagione prova prima la stagione precedente della fonte primaria.
         history_season = season
@@ -688,9 +704,13 @@ def main():
             item = (home, away, match_date, kickoff)
             if item not in fixtures:
                 fixtures.append(item)
+            fixture_key = (match_date.isoformat(), team_key(home), team_key(away))
             quote = odds_from_row(row)
             if quote:
-                fixture_odds[(match_date.isoformat(), team_key(home), team_key(away))] = quote
+                fixture_odds[fixture_key] = quote
+            extra_quotes = additional_odds_from_row(row)
+            if extra_quotes:
+                fixture_markets.setdefault(fixture_key, {}).update(extra_quotes)
 
         # ESPN integra anche calendari parziali: una sola partita CSV non significa
         # che la copertura sia completa. Evita richieste aggiuntive quando il CSV ha
@@ -770,8 +790,15 @@ def main():
             away = normalized_history.get(team_key(away), away)
             forecast = make_forecast(home, away, league_name, match_date, kickoff, history, league_home_avg, league_away_avg, elo_ratings, recent_form)
             if forecast:
-                quote = fixture_odds.get((match_date.isoformat(), team_key(home), team_key(away)))
+                fixture_key = (match_date.isoformat(), team_key(home), team_key(away))
+                quote = fixture_odds.get(fixture_key)
+                extra_quotes = fixture_markets.get(fixture_key, {})
+                if extra_quotes:
+                    forecast["odds_markets"] = extra_quotes
+                    forecast["odds_markets_source"] = "football-data.co.uk"
+                    forecast["odds_fetched_at"] = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
                 if quote and forecast.get("probabilities"):
+                    forecast["odds_fetched_at"] = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
                     probs = forecast["probabilities"]
                     ev = {
                         "home": round(probs["home_win"] / 100 * quote["home"] - 1, 4),

@@ -5,6 +5,46 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 DATA_FILE = Path("data/predictions.json")
+MIN_VALUE_BET_SAMPLE = 8
+MAX_ODDS_AGE_HOURS = 24
+
+
+def value_assessment(match, now=None):
+    """Distingue EV matematico da candidato supportato da campione e quote fresche."""
+    now = now or datetime.now(timezone.utc)
+    reasons = []
+    home_n = int(match.get("home_matches_sample") or 0)
+    away_n = int(match.get("away_matches_sample") or 0)
+    if match.get("status") != "Pronostico valutabile":
+        reasons.append("pronostico non validato dal campione")
+    if home_n < MIN_VALUE_BET_SAMPLE or away_n < MIN_VALUE_BET_SAMPLE:
+        reasons.append(f"campione inferiore a {MIN_VALUE_BET_SAMPLE} gare per lato")
+    fetched_at = str(match.get("odds_fetched_at") or "")
+    try:
+        stamp = datetime.fromisoformat(fetched_at.replace("Z", "+00:00"))
+        if stamp.tzinfo is None:
+            stamp = stamp.replace(tzinfo=timezone.utc)
+        age = (now - stamp.astimezone(timezone.utc)).total_seconds()
+        fresh = 0 <= age <= MAX_ODDS_AGE_HOURS * 3600
+    except (TypeError, ValueError):
+        fresh = False
+    if not fresh:
+        reasons.append("data di aggiornamento quote assente o oltre 24 ore")
+    if match.get("data_quality") != "controllata":
+        reasons.append("qualità dati non verificata")
+    eligible = not reasons
+    match["value_assessment"] = {
+        "eligible_for_candidate": eligible,
+        "status": "candidato_teorico_da_verificare" if eligible else "solo_calcolo_teorico",
+        "minimum_sample_per_side": MIN_VALUE_BET_SAMPLE,
+        "home_sample": home_n,
+        "away_sample": away_n,
+        "reasons": reasons,
+        "historically_validated": False,
+    }
+    if not eligible:
+        match["value_bets"] = []
+    return eligible
 
 
 def market_analysis(match):
@@ -62,6 +102,8 @@ def market_analysis_additional(match):
             continue
         if price_a <= 1 or price_b <= 1 or not (0 <= model_a <= 1 and 0 <= model_b <= 1):
             continue
+        if abs((model_a + model_b) - 1) > 0.03:
+            continue
         raw_a, raw_b = 1 / price_a, 1 / price_b
         total = raw_a + raw_b
         market_a, market_b = raw_a / total, raw_b / total
@@ -111,15 +153,20 @@ def main():
             analyzed += 1
         if market_analysis_additional(match):
             additional_analyzed += 1
+        value_assessment(match)
     data["market_analysis"] = {
         "updated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
         "matches_analyzed": analyzed,
         "additional_markets_analyzed": additional_analyzed,
+        "value_candidates_eligible": sum(1 for match in data.get("matches", []) if (match.get("value_assessment") or {}).get("eligible_for_candidate")),
+        "quote_max_age_hours": MAX_ODDS_AGE_HOURS,
+        "minimum_sample_per_side_for_value_candidate": MIN_VALUE_BET_SAMPLE,
         "supported_additional_markets": ["Over/Under 1,5", "Over/Under 2,5", "Over/Under 3,5", "Gol/No Gol", "Doppia chance"],
         "method": "Probabilità implicite normalizzate per mercati binari; per doppia chance l'implied è 1/quota perché gli esiti si sovrappongono; EV teorico = probabilità modello × quota decimale − 1",
     }
     DATA_FILE.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"Analisi mercato completata: {analyzed} partite con quote 1X2; {additional_analyzed} con mercati aggiuntivi analizzati.")
+    eligible = data["market_analysis"]["value_candidates_eligible"]
+    print(f"Analisi mercato completata: {analyzed} partite con quote 1X2; {additional_analyzed} con mercati aggiuntivi; {eligible} candidati teorici con campione e quote fresche. Nessun candidato è storicamente validato per il solo EV.")
 
 
 if __name__ == "__main__":

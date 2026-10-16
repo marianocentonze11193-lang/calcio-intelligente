@@ -76,6 +76,20 @@ class PredictionModelTests(unittest.TestCase):
         self.assertEqual(parsed["markets"]["btts"], {"yes": 1.8, "no": 2.0})
         self.assertEqual(parsed["markets"]["double_chance"], {"1x": 1.25, "x2": 1.6, "12": 1.35})
 
+    def test_api_football_quote_cache_expires_after_24_hours(self):
+        from datetime import datetime, timezone, timedelta
+        now = datetime(2026, 10, 16, 12, 0, tzinfo=timezone.utc)
+        fresh = {"fetched_at": (now - timedelta(hours=23)).isoformat()}
+        stale = {"fetched_at": (now - timedelta(hours=25)).isoformat()}
+        self.assertTrue(api_odds_module.quote_is_fresh(fresh, now))
+        self.assertFalse(api_odds_module.quote_is_fresh(stale, now))
+        self.assertFalse(api_odds_module.quote_is_fresh({}, now))
+
+    def test_football_data_additional_odds_extracts_over_under_25(self):
+        row = {"Avg>2.5": "1.87", "Avg<2.5": "1.91"}
+        self.assertEqual(module.additional_odds_from_row(row), {"over_under_2_5": {"over": 1.87, "under": 1.91}})
+        self.assertEqual(module.additional_odds_from_row({"Avg>2.5": "", "Avg<2.5": "1.9"}), {})
+
     def test_api_football_odds_parser_ignores_incomplete_prices(self):
         payload = {"response": [{"bookmakers": [{"bets": [{"id": 1, "name": "Match Winner", "values": [
             {"value": "Home", "odd": "1.75"},
@@ -114,6 +128,24 @@ class PredictionModelTests(unittest.TestCase):
         self.assertEqual(totals["market_implied_probability"], {"over": 50.0, "under": 50.0})
         self.assertAlmostEqual(totals["expected_value"]["over"], 0.2, places=4)
         self.assertEqual(match["market_analysis_markets"]["double_chance"]["1x"]["expected_value"], 0.04)
+
+    def test_value_assessment_rejects_positive_ev_with_small_sample_or_stale_quotes(self):
+        from datetime import datetime, timezone
+        now = datetime(2026, 10, 16, 12, 0, tzinfo=timezone.utc)
+        match = {
+            "status": "Stima preliminare", "data_quality": "controllata",
+            "home_matches_sample": 4, "away_matches_sample": 4,
+            "odds_fetched_at": now.isoformat(), "value_bets": [{"market": "1"}],
+        }
+        self.assertFalse(market_module.value_assessment(match, now))
+        self.assertEqual(match["value_bets"], [])
+        self.assertFalse(match["value_assessment"]["eligible_for_candidate"])
+        match.update({
+            "status": "Pronostico valutabile", "home_matches_sample": 10,
+            "away_matches_sample": 10, "odds_fetched_at": "2026-10-15T10:00:00+00:00",
+        })
+        self.assertFalse(market_module.value_assessment(match, now))
+        self.assertIn("data di aggiornamento quote assente o oltre 24 ore", match["value_assessment"]["reasons"])
 
     def test_market_analysis_removes_margin_and_calculates_ev(self):
         match = {
@@ -474,7 +506,7 @@ class PredictionModelTests(unittest.TestCase):
         self.assertEqual(forecast["probabilities"], {})
         self.assertEqual(forecast["suggested_markets"], [])
 
-    def test_small_samples_get_preliminary_estimate_instead_of_false_no_bet(self):
+    def test_two_or_fewer_relevant_matches_per_side_are_no_bet(self):
         history = defaultdict(lambda: {
             "played": 20, "home_games": 0, "away_games": 0,
             "home_scored": 0, "home_conceded": 0,
@@ -492,8 +524,8 @@ class PredictionModelTests(unittest.TestCase):
             "Casa", "Trasferta", "Test League", date(2026, 10, 16), "18:00",
             history, 1.4, 1.1,
         )
-        self.assertEqual(forecast["status"], "Stima preliminare")
-        self.assertTrue(forecast["probabilities"])
+        self.assertEqual(forecast["status"], "NO BET")
+        self.assertEqual(forecast["probabilities"], {})
         self.assertEqual(forecast["home_matches_sample"], 3)
         self.assertEqual(forecast["away_matches_sample"], 2)
 
@@ -578,7 +610,7 @@ class PredictionModelTests(unittest.TestCase):
             "Casa", "Trasferta", "Test League", date(2026, 10, 16), "18:00",
             history, 1.4, 1.1,
         )
-        self.assertEqual(forecast["status"], "Pronostico valutabile")
+        self.assertEqual(forecast["status"], "Stima preliminare")
         self.assertTrue(forecast["probabilities"])
         self.assertTrue(all(0 <= p <= 100 for p in forecast["probabilities"].values()))
         self.assertFalse(any("Champions League" in name or "Europa League" in name or "Conference League" in name

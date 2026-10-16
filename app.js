@@ -313,7 +313,7 @@ function renderMatches(matches) {
       if (Array.isArray(match.value_bets) && match.value_bets.length) {
         const value = document.createElement("p");
         value.className = "market-chip market-green";
-        value.textContent = "Candidati teorici EV ≥ 5% (campione ≥ 8 gare per lato): " + match.value_bets.map(v =>
+        value.textContent = "Candidati teorici EV ≥ 5% (campione ≥ 8 gare per lato, quote fresche): " + match.value_bets.map(v =>
           v.market + " @ " + v.best_odds + " (EV " + (v.expected_value * 100).toFixed(1) + "%)"
         ).join(" · ");
         card.append(value);
@@ -345,7 +345,7 @@ function renderMatches(matches) {
             " · mercato " + percent(marketP) +
             (typeof ev === "number" ? " · EV " + (ev * 100).toFixed(1) + "%" : "");
         };
-        line.textContent = label + ": " + part(sideA) + " | " + part(sideB);
+        line.textContent = label + ": " + part(sideA) + " | " + part(sideB) + ". EV teorico non validato: non prova un vantaggio reale.";
         card.append(line);
       }
       const dc = match.market_analysis_markets.double_chance;
@@ -354,8 +354,8 @@ function renderMatches(matches) {
         dcLine.className = "match-meta";
         dcLine.textContent = "Doppia chance: " + Object.entries(dc).map(([key, item]) =>
           key.toUpperCase() + " quota " + item.odds + " · modello " + percent(item.model_probability) +
-          " · EV " + (item.expected_value * 100).toFixed(1) + "%"
-        ).join(" | ") + ". Probabilità implicita 1/quota non depurata: le selezioni si sovrappongono.";
+          " · EV teorico " + (item.expected_value * 100).toFixed(1) + "%"
+        ).join(" | ") + ". EV non validato; probabilità implicita 1/quota non depurata: le selezioni si sovrappongono.";
         card.append(dcLine);
       }
     }
