@@ -53,7 +53,7 @@ def main():
         "matches_analyzed": analyzed,
         "method": "Probabilità implicite normalizzate rimuovendo il margine 1X2; EV teorico = probabilità modello × quota decimale − 1",
     }
-    DATA_FILE.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+    DATA_FILE.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Analisi mercato completata: {analyzed} partite con quote 1X2 complete.")
 
 
