@@ -2898,7 +2898,7 @@
       "away_goals": null
     }
   ],
-  "updated_at": "2026-10-16T08:10:17.270320+00:00",
+  "updated_at": "2026-10-16T08:13:11.635940+00:00",
   "metrics": {
     "settled_matches": 0,
     "accuracy_1x2": null,
@@ -2948,5 +2948,18 @@
       "comparison": null,
       "note": "Servono almeno 30 partite concluse con quote e probabilità per questo mercato."
     }
+  },
+  "result_matching": {
+    "checked_at": "2026-10-16T08:13:11.635921+00:00",
+    "unresolved_past_matches": 1,
+    "examples": [
+      {
+        "date": "2026-10-15",
+        "league": "League One",
+        "home_team": "Mansfield",
+        "away_team": "Oxford"
+      }
+    ],
+    "note": "Le partite passate senza esito restano escluse dalle metriche finché il risultato non è associato con certezza."
   }
 }
