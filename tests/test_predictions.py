@@ -1,5 +1,6 @@
 import importlib.util
 import unittest
+from unittest.mock import MagicMock, patch
 from collections import defaultdict
 from datetime import date, datetime, timezone
 from pathlib import Path
@@ -75,6 +76,17 @@ class PredictionModelTests(unittest.TestCase):
         self.assertEqual(parsed["markets"]["over_under_2_5"], {"over": 1.9, "under": 1.95})
         self.assertEqual(parsed["markets"]["btts"], {"yes": 1.8, "no": 2.0})
         self.assertEqual(parsed["markets"]["double_chance"], {"1x": 1.25, "x2": 1.6, "12": 1.35})
+
+    def test_api_football_odds_request_supports_date_and_pagination(self):
+        response = MagicMock()
+        response.__enter__.return_value.read.return_value = b'{"errors": [], "response": []}'
+        with patch.object(api_odds_module.urllib.request, "urlopen", return_value=response) as mocked:
+            payload = api_odds_module.api_get_odds("test-key", date="2026-10-17", page=2)
+        self.assertEqual(payload["response"], [])
+        request = mocked.call_args.args[0]
+        self.assertIn("date=2026-10-17", request.full_url)
+        self.assertIn("page=2", request.full_url)
+        self.assertNotIn("test-key", request.full_url)
 
     def test_api_football_quote_cache_expires_after_24_hours(self):
         from datetime import datetime, timezone, timedelta
