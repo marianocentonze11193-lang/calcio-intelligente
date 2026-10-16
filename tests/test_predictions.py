@@ -1,7 +1,7 @@
 import importlib.util
 import unittest
 from collections import defaultdict
-from datetime import date
+from datetime import date, datetime, timezone
 from pathlib import Path
 
 GEMINI_SCRIPT = Path(__file__).resolve().parents[1] / "scripts" / "enrich_with_gemini.py"
@@ -112,6 +112,7 @@ class PredictionModelTests(unittest.TestCase):
 
     def test_additional_market_analysis_calculates_probabilities_and_ev(self):
         match = {
+            "odds_markets_fetched_at": datetime.now(timezone.utc).isoformat(),
             "odds_markets": {
                 "over_under_2_5": {"over": 2.0, "under": 2.0},
                 "btts": {"yes": 1.8, "no": 2.2},
@@ -150,6 +151,7 @@ class PredictionModelTests(unittest.TestCase):
     def test_market_analysis_removes_margin_and_calculates_ev(self):
         match = {
             "odds_1x2": {"home": 2.0, "draw": 3.5, "away": 4.0},
+            "odds_fetched_at": datetime.now(timezone.utc).isoformat(),
             "probabilities": {"home_win": 50, "draw": 30, "away_win": 20},
         }
         self.assertTrue(market_module.market_analysis(match))
@@ -458,6 +460,61 @@ class PredictionModelTests(unittest.TestCase):
             ],
         }
         self.assertEqual(odds_module.best_prices(event), {"home": 2.2, "draw": 3.2, "away": 3.7})
+
+    def test_odds_parser_supports_additional_markets(self):
+        event = {"bookmakers": [{"markets": [
+            {"key": "totals", "outcomes": [
+                {"name": "Over", "point": 2.5, "price": 1.91},
+                {"name": "Under", "point": 2.5, "price": 1.95},
+            ]},
+            {"key": "btts", "outcomes": [
+                {"name": "Yes", "price": 1.8}, {"name": "No", "price": 2.0},
+            ]},
+            {"key": "double_chance", "outcomes": [
+                {"name": "Home/Draw", "price": 1.35},
+                {"name": "Draw/Away", "price": 1.55},
+                {"name": "Home/Away", "price": 1.4},
+            ]},
+        ]}]}
+        parsed = odds_module.best_additional_markets(event)
+        self.assertEqual(parsed["over_under_2_5"], {"over": 1.91, "under": 1.95})
+        self.assertEqual(parsed["btts"], {"yes": 1.8, "no": 2.0})
+        self.assertEqual(parsed["double_chance"], {"1x": 1.35, "x2": 1.55, "12": 1.4})
+
+    def test_api_football_does_not_overwrite_other_provider_prices(self):
+        match = {
+            "status": "Pronostico valutabile", "home_matches_sample": 10, "away_matches_sample": 10,
+            "probabilities": {"home_win": 50, "draw": 25, "away_win": 25},
+            "odds_1x2": {"home": 2.2, "draw": 3.4, "away": 3.1},
+            "odds_source": "The Odds API",
+        }
+        api_odds_module.calculate_value(
+            match, {"home": 2.0, "draw": 3.0, "away": 3.5},
+            {"over_under_2_5": {"over": 1.9, "under": 1.9}},
+        )
+        self.assertEqual(match["odds_source"], "The Odds API")
+        self.assertEqual(match["odds_1x2"], {"home": 2.2, "draw": 3.4, "away": 3.1})
+        self.assertIn("over_under_2_5", match["odds_markets"])
+
+    def test_value_assessment_requires_complete_fresh_1x2_quotes(self):
+        now = datetime(2026, 10, 16, 12, 0, tzinfo=timezone.utc)
+        match = {
+            "status": "Pronostico valutabile", "home_matches_sample": 10, "away_matches_sample": 10,
+            "data_quality": "controllata", "odds_fetched_at": "2026-10-16T11:30:00+00:00",
+        }
+        self.assertFalse(market_module.value_assessment(match, now))
+        self.assertIn("quote 1X2 complete non disponibili", match["value_assessment"]["reasons"])
+        match["odds_1x2"] = {"home": 2.0, "draw": 3.4, "away": 3.8}
+        self.assertTrue(market_module.value_assessment(match, now))
+
+    def test_additional_market_analysis_rejects_stale_quotes(self):
+        match = {
+            "odds_markets": {"over_under_2_5": {"over": 1.9, "under": 1.9}},
+            "odds_markets_fetched_at": "2026-10-13T10:00:00+00:00",
+            "probabilities": {"over_2_5": 50, "under_2_5": 50},
+        }
+        self.assertFalse(market_module.market_analysis_additional(match))
+        self.assertNotIn("market_analysis_markets", match)
 
     def test_fixture_sources_merge_without_duplicates_and_fill_missing_kickoff(self):
         primary = [

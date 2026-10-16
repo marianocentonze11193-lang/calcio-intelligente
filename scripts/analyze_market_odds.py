@@ -9,6 +9,21 @@ MIN_VALUE_BET_SAMPLE = 8
 MAX_ODDS_AGE_HOURS = 24
 
 
+def timestamp_is_fresh(value, now=None):
+    """Valida un timestamp ISO: non futuro e non più vecchio di 24 ore."""
+    try:
+        stamp = datetime.fromisoformat(str(value or "").replace("Z", "+00:00"))
+        if stamp.tzinfo is None:
+            stamp = stamp.replace(tzinfo=timezone.utc)
+        current = now or datetime.now(timezone.utc)
+        if current.tzinfo is None:
+            current = current.replace(tzinfo=timezone.utc)
+        age = (current - stamp.astimezone(timezone.utc)).total_seconds()
+        return 0 <= age <= MAX_ODDS_AGE_HOURS * 3600
+    except (TypeError, ValueError, OverflowError):
+        return False
+
+
 def value_assessment(match, now=None):
     """Distingue EV matematico da candidato supportato da campione e quote fresche."""
     now = now or datetime.now(timezone.utc)
@@ -19,16 +34,10 @@ def value_assessment(match, now=None):
         reasons.append("pronostico non validato dal campione")
     if home_n < MIN_VALUE_BET_SAMPLE or away_n < MIN_VALUE_BET_SAMPLE:
         reasons.append(f"campione inferiore a {MIN_VALUE_BET_SAMPLE} gare per lato")
-    fetched_at = str(match.get("odds_fetched_at") or "")
-    try:
-        stamp = datetime.fromisoformat(fetched_at.replace("Z", "+00:00"))
-        if stamp.tzinfo is None:
-            stamp = stamp.replace(tzinfo=timezone.utc)
-        age = (now - stamp.astimezone(timezone.utc)).total_seconds()
-        fresh = 0 <= age <= MAX_ODDS_AGE_HOURS * 3600
-    except (TypeError, ValueError):
-        fresh = False
-    if not fresh:
+    prices = match.get("odds_1x2") if isinstance(match.get("odds_1x2"), dict) else {}
+    if not all(isinstance(prices.get(key), (int, float)) and prices[key] > 1 for key in ("home", "draw", "away")):
+        reasons.append("quote 1X2 complete non disponibili")
+    if not timestamp_is_fresh(match.get("odds_fetched_at"), now):
         reasons.append("data di aggiornamento quote assente o oltre 24 ore")
     if match.get("data_quality") != "controllata":
         reasons.append("qualità dati non verificata")
@@ -51,6 +60,16 @@ def market_analysis(match):
     odds = match.get("odds_1x2")
     probabilities = match.get("probabilities")
     if not isinstance(odds, dict) or not isinstance(probabilities, dict):
+        match.pop("market_implied_probability_1x2", None)
+        match.pop("market_overround_1x2", None)
+        match.pop("model_vs_market_delta_1x2", None)
+        match.pop("expected_value_1x2", None)
+        return False
+    if not timestamp_is_fresh(match.get("odds_fetched_at")):
+        match.pop("market_implied_probability_1x2", None)
+        match.pop("market_overround_1x2", None)
+        match.pop("model_vs_market_delta_1x2", None)
+        match.pop("expected_value_1x2", None)
         return False
     keys = ("home", "draw", "away")
     labels = ("home_win", "draw", "away_win")
@@ -85,6 +104,11 @@ def market_analysis_additional(match):
     odds_markets = match.get("odds_markets")
     probabilities = match.get("probabilities")
     if not isinstance(odds_markets, dict) or not isinstance(probabilities, dict):
+        match.pop("market_analysis_markets", None)
+        return False
+    market_timestamp = match.get("odds_markets_fetched_at") or match.get("odds_fetched_at")
+    if not timestamp_is_fresh(market_timestamp):
+        match.pop("market_analysis_markets", None)
         return False
     specs = {
         "over_under_1_5": ("over_1_5", "under_1_5", "over", "under"),
@@ -154,15 +178,39 @@ def main():
         if market_analysis_additional(match):
             additional_analyzed += 1
         value_assessment(match)
+    all_matches = [match for match in data.get("matches", []) if isinstance(match, dict)]
+    now = datetime.now(timezone.utc)
+    fresh_1x2 = sum(
+        1 for match in all_matches
+        if isinstance(match.get("odds_1x2"), dict)
+        and all(isinstance(match["odds_1x2"].get(key), (int, float)) and match["odds_1x2"][key] > 1 for key in ("home", "draw", "away"))
+        and timestamp_is_fresh(match.get("odds_fetched_at"), now)
+    )
+    fresh_additional = sum(
+        1 for match in all_matches
+        if isinstance(match.get("market_analysis_markets"), dict) and bool(match["market_analysis_markets"])
+    )
     data["market_analysis"] = {
-        "updated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
+        "updated_at": now.replace(microsecond=0).isoformat(),
         "matches_analyzed": analyzed,
         "additional_markets_analyzed": additional_analyzed,
-        "value_candidates_eligible": sum(1 for match in data.get("matches", []) if (match.get("value_assessment") or {}).get("eligible_for_candidate")),
+        "matches_total": len(all_matches),
+        "matches_with_1x2_quotes": sum(1 for match in all_matches if isinstance(match.get("odds_1x2"), dict) and all(isinstance(match["odds_1x2"].get(key), (int, float)) and match["odds_1x2"][key] > 1 for key in ("home", "draw", "away"))),
+        "matches_with_fresh_1x2_quotes": fresh_1x2,
+        "matches_with_fresh_additional_markets": fresh_additional,
+        "value_candidates_eligible": sum(1 for match in all_matches if (match.get("value_assessment") or {}).get("eligible_for_candidate")),
         "quote_max_age_hours": MAX_ODDS_AGE_HOURS,
         "minimum_sample_per_side_for_value_candidate": MIN_VALUE_BET_SAMPLE,
         "supported_additional_markets": ["Over/Under 1,5", "Over/Under 2,5", "Over/Under 3,5", "Gol/No Gol", "Doppia chance"],
         "method": "Probabilità implicite normalizzate per mercati binari; per doppia chance l'implied è 1/quota perché gli esiti si sovrappongono; EV teorico = probabilità modello × quota decimale − 1",
+    }
+    data["odds_status"] = {
+        "updated_at": now.replace(microsecond=0).isoformat(),
+        "matches_total": len(all_matches),
+        "matches_with_fresh_1x2": fresh_1x2,
+        "matches_with_fresh_additional_markets": fresh_additional,
+        "providers": data.get("odds_providers", {}),
+        "note": "La mancanza di quote indica copertura non disponibile/configurata; nessuna quota viene inventata.",
     }
     DATA_FILE.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     eligible = data["market_analysis"]["value_candidates_eligible"]

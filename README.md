@@ -75,6 +75,7 @@ Il progetto usa un modello statistico sperimentale (Poisson, prior di lega, Elo 
 - I calendari e i risultati provengono da fonti pubbliche gratuite quando disponibili; le coperture possono variare per competizione e stagione.
 - Gemini, quote bookmaker e dati su infortuni/formazioni sono integrazioni opzionali con chiavi personali e quote/limiti del rispettivo fornitore. Non sono necessarie per visualizzare le stime statistiche di base e non si deve presumere che ogni endpoint o piano resti gratuito per sempre.
 - Quando mancano dati, il sistema deve mostrare NO BET e spiegare il motivo, senza inventare probabilità, quote, infortuni o formazioni.
+- Il pannello di stato mostra la copertura delle quote 1X2 e dei mercati aggiuntivi. Se The Odds API non è configurata, impostare il secret ODDS_API_KEY in GitHub → Settings → Secrets and variables → Actions; non inserire mai la chiave nel codice.
 - Le statistiche storiche (accuratezza 1X2 e Brier score) sono mostrate solo dopo l'associazione a risultati finali verificati e almeno 30 valutazioni valide. Un campione piccolo non dimostra un vantaggio sulle quote o una redditività positiva.
 
 ### Aggiornamento e controllo
@@ -84,6 +85,6 @@ GitHub Actions tenta l'aggiornamento ogni ora. In caso di errore di una fonte, c
 
 ## Mercati quote aggiuntivi
 
-Quando API-Football restituisce i mercati per una partita, il flusso salva le migliori quote disponibili per Over/Under 1,5, 2,5 e 3,5, Gol/No Gol e doppia chance. La copertura dipende da campionato, partita, bookmaker e piano API: se il provider non restituisce un mercato, viene lasciato non disponibile senza valori inventati. Le probabilità modello per questi mercati derivano dalla matrice di punteggi Poisson già usata per il pronostico; le quote aggiuntive non modificano automaticamente il modello.
+Quando The Odds API o API-Football restituiscono i mercati per una partita, il flusso salva le migliori quote disponibili per Over/Under 1,5, 2,5 e 3,5, Gol/No Gol e doppia chance. The Odds API richiede h2h, totals, btts e double_chance quando supportati dal piano e dalla competizione; se alcuni mercati vengono rifiutati, il sistema riprova con un set più piccolo. La copertura dipende da campionato, partita, bookmaker e piano API: se il provider non restituisce un mercato, viene lasciato non disponibile senza valori inventati. Le probabilità modello per questi mercati derivano dalla matrice di punteggi Poisson già usata per il pronostico; le quote aggiuntive non modificano automaticamente il modello.
 
 Per Over/Under e Gol/No Gol si calcolano probabilità implicite normalizzate, scarto modello-mercato ed EV teorico. Per doppia chance le selezioni si sovrappongono: viene mostrata la probabilità grezza 1/quota, non una probabilità depurata dal margine. Lo storico valuta Over/Under e Gol/No Gol separatamente, dopo almeno 30 partite concluse con quote e probabilità archiviate. Le metriche sono descrittive e non provano redditività.

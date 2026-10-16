@@ -214,16 +214,26 @@ def available_sports(api_key):
 
 
 def fetch_odds(sport, api_key):
-    query = urllib.parse.urlencode({
-        "apiKey": api_key,
-        "regions": os.environ.get("ODDS_REGIONS", "uk,eu"),
-        "markets": "h2h",
-        "oddsFormat": "decimal",
-    })
-    request = urllib.request.Request(f"{BASE_URL}/{sport}/odds/?{query}",
-                                     headers={"User-Agent": "CalcioIntelligente/1.0"})
-    with urllib.request.urlopen(request, timeout=20) as response:
-        return json.loads(response.read().decode("utf-8"))
+    # Richiede anche mercati goal; se il piano li rifiuta, ripiega su un set più piccolo.
+    for requested_markets in ("h2h,totals,btts,double_chance", "h2h,totals", "h2h"):
+        query = urllib.parse.urlencode({
+            "apiKey": api_key,
+            "regions": os.environ.get("ODDS_REGIONS", "uk,eu"),
+            "markets": requested_markets,
+            "oddsFormat": "decimal",
+        })
+        request = urllib.request.Request(f"{BASE_URL}/{sport}/odds/?{query}",
+                                         headers={"User-Agent": "CalcioIntelligente/1.0"})
+        try:
+            with urllib.request.urlopen(request, timeout=20) as response:
+                payload = json.loads(response.read().decode("utf-8"))
+            print(f"Mercati richiesti per {sport}: {requested_markets}.")
+            return payload
+        except urllib.error.HTTPError as error:
+            if error.code not in (400, 422) or requested_markets == "h2h":
+                raise
+            print(f"Mercati {requested_markets} non supportati per {sport}; provo fallback.")
+    return []
 
 
 def best_prices(event):
@@ -245,14 +255,79 @@ def best_prices(event):
     return prices
 
 
+def best_additional_markets(event):
+    """Estrae Over/Under, Gol/No Gol e doppia chance dai mercati restituiti."""
+    markets = {
+        "over_under_1_5": {"over": None, "under": None},
+        "over_under_2_5": {"over": None, "under": None},
+        "over_under_3_5": {"over": None, "under": None},
+        "btts": {"yes": None, "no": None},
+        "double_chance": {},
+    }
+    for bookmaker in event.get("bookmakers", []):
+        for market in bookmaker.get("markets", []):
+            market_key = market.get("key")
+            for outcome in market.get("outcomes", []):
+                name = str(outcome.get("name") or "").strip()
+                normalized = team_key(name)
+                price = outcome.get("price")
+                if not isinstance(price, (int, float)) or price <= 1:
+                    continue
+                if market_key == "totals":
+                    point = outcome.get("point")
+                    if point is None:
+                        found = re.search(r"(?:over|under)\s*([0-9]+(?:[.,][0-9]+)?)", name, re.I)
+                        point = found.group(1).replace(",", ".") if found else None
+                    try:
+                        line = float(point)
+                    except (TypeError, ValueError):
+                        continue
+                    side = "over" if normalized.startswith("over") else "under" if normalized.startswith("under") else None
+                    target = {1.5: "over_under_1_5", 2.5: "over_under_2_5", 3.5: "over_under_3_5"}.get(line)
+                    if target and side and (markets[target][side] is None or price > markets[target][side]):
+                        markets[target][side] = float(price)
+                elif market_key == "btts":
+                    side = "yes" if normalized in {"yes", "y", "true"} else "no" if normalized in {"no", "n", "false"} else None
+                    if side and (markets["btts"][side] is None or price > markets["btts"][side]):
+                        markets["btts"][side] = float(price)
+                elif market_key == "double_chance":
+                    compact = normalized.replace("home", "1").replace("draw", "x").replace("away", "2")
+                    compact = compact.replace("or", "").replace("tie", "x")
+                    key = compact if compact in {"1x", "x2", "12"} else None
+                    if not key:
+                        if "1" in compact and "x" in compact:
+                            key = "1x"
+                        elif "x" in compact and "2" in compact:
+                            key = "x2"
+                        elif "1" in compact and "2" in compact:
+                            key = "12"
+                    if key and (key not in markets["double_chance"] or price > markets["double_chance"][key]):
+                        markets["double_chance"][key] = float(price)
+    result = {}
+    for key, values in markets.items():
+        if key == "double_chance":
+            if values:
+                result[key] = values
+        elif all(isinstance(values.get(side), (int, float)) for side in values):
+            result[key] = values
+    return result
+
+
 def main():
     api_key = os.environ.get("ODDS_API_KEY", "").strip()
     if not DATA_FILE.exists():
         raise SystemExit("File data/predictions.json non trovato.")
     data = json.loads(DATA_FILE.read_text(encoding="utf-8"))
+    data.setdefault("odds_providers", {})
     if not api_key:
-        print("ODDS_API_KEY non configurata: quote e value bet lasciate non disponibili.")
+        data["odds_providers"]["the_odds_api"] = {
+            "status": "chiave_non_configurata",
+            "message": "Fonte secondaria disattivata: manca il secret ODDS_API_KEY.",
+        }
+        print("ODDS_API_KEY non configurata: fonte quote secondaria disattivata; uso solo le altre fonti disponibili.")
+        DATA_FILE.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         return
+    data["odds_providers"]["the_odds_api"] = {"status": "configurata"}
 
     events_by_league = {}
     try:
@@ -288,34 +363,50 @@ def main():
         if not event:
             continue
         prices = best_prices(event)
+        extra_markets = best_additional_markets(event)
         probs = match.get("probabilities") or {}
-        model = {
-            "home": probs.get("home_win"),
-            "draw": probs.get("draw"),
-            "away": probs.get("away_win"),
-        }
-        if not all(prices[k] and isinstance(model[k], (int, float)) for k in prices):
+        model = {"home": probs.get("home_win"), "draw": probs.get("draw"), "away": probs.get("away_win")}
+        complete_1x2 = all(isinstance(prices[k], (int, float)) and prices[k] > 1 for k in prices)
+        if not complete_1x2 and not extra_markets:
             continue
-        matched += 1
-        match["value_bets"] = []
-        match["odds_1x2"] = prices
-        ev = {k: round((model[k] / 100) * prices[k] - 1, 4) for k in prices}
-        match["expected_value_1x2"] = ev
-        # Soglia conservativa solo indicativa; non equivale a redditività dimostrata.
-        if match.get("status") == "Pronostico valutabile" and match.get("home_matches_sample", 0) >= 8 and match.get("away_matches_sample", 0) >= 8:
-            for key, label in (("home", "1"), ("draw", "X"), ("away", "2")):
-                if ev[key] >= 0.05:
-                    match["value_bets"].append({
-                        "market": label, "model_probability": model[key],
-                        "best_odds": prices[key], "expected_value": ev[key],
-                    })
-                    value_count += 1
+        fetched_at = __import__("datetime").datetime.now(__import__("datetime").timezone.utc).replace(microsecond=0).isoformat()
+        if complete_1x2:
+            matched += 1
+            match["odds_1x2"] = prices
+            match["odds_source"] = "The Odds API"
+            match["odds_fetched_at"] = fetched_at
+            if all(isinstance(model[k], (int, float)) for k in prices):
+                ev = {k: round((model[k] / 100) * prices[k] - 1, 4) for k in prices}
+                match["expected_value_1x2"] = ev
+                match["value_bets"] = []
+                if match.get("status") == "Pronostico valutabile" and match.get("home_matches_sample", 0) >= 8 and match.get("away_matches_sample", 0) >= 8:
+                    for key, label in (("home", "1"), ("draw", "X"), ("away", "2")):
+                        if ev[key] >= 0.05:
+                            match["value_bets"].append({
+                                "market": label, "model_probability": model[key],
+                                "best_odds": prices[key], "expected_value": ev[key],
+                            })
+                            value_count += 1
+        if extra_markets:
+            merged = match.get("odds_markets") if isinstance(match.get("odds_markets"), dict) else {}
+            for key, values in extra_markets.items():
+                if isinstance(values, dict):
+                    previous = merged.get(key) if isinstance(merged.get(key), dict) else {}
+                    merged[key] = {**previous, **values}
+            match["odds_markets"] = merged
+            match["odds_markets_source"] = "The Odds API"
+            match["odds_markets_fetched_at"] = fetched_at
 
     data["odds_updated_at"] = __import__("datetime").datetime.now(
         __import__("datetime").timezone.utc).replace(microsecond=0).isoformat()
-    data["odds_source"] = "The Odds API" if matched else data.get("odds_source")
+    data["odds_providers"]["the_odds_api"] = {
+        "status": "configurata",
+        "events_downloaded": sum(len(items) for items in events_by_league.values()),
+        "matches_with_1x2": matched,
+        "matches_with_additional_markets": sum(1 for m in data.get("matches", []) if m.get("odds_markets_source") == "The Odds API"),
+    }
     DATA_FILE.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"Quote abbinate: {matched}; candidati value bet teorici (EV >= 5%, campione >= 8 gare per lato): {value_count}.")
+    print(f"Quote 1X2 abbinate: {matched}; partite con mercati aggiuntivi: {data['odds_providers']['the_odds_api']['matches_with_additional_markets']}; candidati EV teorici (non validati): {value_count}.")
 
 
 if __name__ == "__main__":

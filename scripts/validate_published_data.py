@@ -100,6 +100,18 @@ def validate():
                 if not isinstance(value, (int, float)) or not math.isfinite(value) or not 0 <= value <= 100:
                     errors.append(f"{label}: probabilità {key!r} non valida.")
                     break
+            value_bets = match.get("value_bets") or []
+            if value_bets:
+                odds = match.get("odds_1x2") if isinstance(match.get("odds_1x2"), dict) else {}
+                complete_odds = all(isinstance(odds.get(side), (int, float)) and odds[side] > 1 for side in ("home", "draw", "away"))
+                eligible = (match.get("status") == "Pronostico valutabile"
+                            and int(match.get("home_matches_sample") or 0) >= 8
+                            and int(match.get("away_matches_sample") or 0) >= 8
+                            and complete_odds
+                            and is_recent_timestamp(match.get("odds_fetched_at"), max_age_hours=24)
+                            and (match.get("value_assessment") or {}).get("eligible_for_candidate") is True)
+                if not eligible:
+                    errors.append(f"{label}: value bet pubblicata senza campione, quote fresche o controlli di idoneità sufficienti.")
             for key in ("expected_home_goals", "expected_away_goals"):
                 value = match.get(key)
                 if value is not None and (not isinstance(value, (int, float)) or not math.isfinite(value) or value < 0):

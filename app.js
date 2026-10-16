@@ -603,10 +603,22 @@ async function aggiornaDati() {
     const coverageWarning = Array.isArray(coverage.leagues_without_history) && coverage.leagues_without_history.length
       ? " Senza storico: " + coverage.leagues_without_history.join(", ") + "."
       : "";
+    const marketDiagnostics = dati.market_analysis || {};
+    const quoteTotal = Number(marketDiagnostics.matches_total || validMatches.length);
+    const quoteCount = Number(marketDiagnostics.matches_with_fresh_1x2_quotes || 0);
+    const extraQuoteCount = Number(marketDiagnostics.matches_with_fresh_additional_markets || 0);
+    const oddsProviders = dati.odds_providers || {};
+    const secondaryOddsMissing = oddsProviders.the_odds_api &&
+      oddsProviders.the_odds_api.status === "chiave_non_configurata";
+    const oddsNote = " Quote aggiornate: " + quoteCount + "/" + quoteTotal +
+      " partite con 1X2 e " + extraQuoteCount + " con mercati aggiuntivi.";
+    const oddsWarning = secondaryOddsMissing
+      ? " La fonte quote secondaria non è configurata; la copertura dipende dal piano API-Football e dai dati pubblici."
+      : "";
     stato.textContent = (validMatches.length
       ? "STIME DISPONIBILI · " + validMatches.length + " partite con probabilità; " + noBetMatches.length + " NO BET senza dati sufficienti. Le stime preliminari sono indicate come tali."
       : "NO BET · Nessuna partita ha dati sufficienti per stimare probabilità; il calendario mostra le partite disponibili.")
-      + coverageNote + coverageWarning;
+      + coverageNote + coverageWarning + oddsNote + oddsWarning;
     const parsedUpdate = dati.updated_at ? new Date(dati.updated_at) : null;
     const validUpdate = parsedUpdate && !Number.isNaN(parsedUpdate.getTime());
     const dataAgeHours = validUpdate ? (Date.now() - parsedUpdate.getTime()) / 3600000 : Infinity;

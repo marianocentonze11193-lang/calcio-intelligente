@@ -183,28 +183,42 @@ def api_get_odds(api_key, fixture_id):
 
 
 def calculate_value(match, prices, markets=None):
+    """Integra i mercati API-Football senza sovrascrivere quote di altre fonti."""
     probs = match.get("probabilities") or {}
     if isinstance(markets, dict) and markets:
-        match["odds_markets"] = markets
-        match["odds_markets_source"] = "API-Football"
+        merged = match.get("odds_markets") if isinstance(match.get("odds_markets"), dict) else {}
+        for key, values in markets.items():
+            if isinstance(values, dict):
+                previous = merged.get(key) if isinstance(merged.get(key), dict) else {}
+                merged[key] = {**previous, **values}
+        match["odds_markets"] = merged
+        previous_source = str(match.get("odds_markets_source") or "")
+        match["odds_markets_source"] = "API-Football" if not previous_source else previous_source + " + API-Football"
+        match["odds_markets_fetched_at"] = now_utc().isoformat()
+
     model = {"home": probs.get("home_win"), "draw": probs.get("draw"), "away": probs.get("away_win")}
-    complete_1x2 = all(isinstance((prices or {}).get(k), (int, float)) and isinstance(model.get(k), (int, float)) for k in model)
-    if complete_1x2:
-        match["odds_1x2"] = prices
+    existing = match.get("odds_1x2") if isinstance(match.get("odds_1x2"), dict) else {}
+    existing_complete = all(isinstance(existing.get(k), (int, float)) and existing[k] > 1 for k in model)
+    api_complete = all(isinstance((prices or {}).get(k), (int, float)) and prices[k] > 1 for k in model)
+    if not existing_complete and api_complete:
+        match["odds_1x2"] = {k: float(prices[k]) for k in model}
         match["odds_source"] = "API-Football"
-        match["expected_value_1x2"] = {k: round((model[k] / 100) * prices[k] - 1, 4) for k in model}
+        match["odds_fetched_at"] = now_utc().isoformat()
+        existing = match["odds_1x2"]
+        existing_complete = True
+    if existing_complete and all(isinstance(model.get(k), (int, float)) for k in model):
+        selected_prices = {k: float(existing[k]) for k in model}
+        match["expected_value_1x2"] = {k: round((model[k] / 100) * selected_prices[k] - 1, 4) for k in model}
         match["value_bets"] = []
         if match.get("status") == "Pronostico valutabile" and match.get("home_matches_sample", 0) >= 8 and match.get("away_matches_sample", 0) >= 8:
             for key, label in (("home", "1"), ("draw", "X"), ("away", "2")):
                 ev = match["expected_value_1x2"][key]
                 if ev >= 0.05:
                     match["value_bets"].append({
-                        "market": label,
-                        "model_probability": model[key],
-                        "best_odds": prices[key],
-                        "expected_value": ev,
+                        "market": label, "model_probability": model[key],
+                        "best_odds": selected_prices[key], "expected_value": ev,
                     })
-    if not complete_1x2 and not markets:
+    if not existing_complete and not markets:
         return
 
 
@@ -218,11 +232,18 @@ def main():
     today = now_utc().date().isoformat()
     api_key = os.environ.get("API_FOOTBALL_KEY", "").strip()
 
+    data.setdefault("odds_providers", {})
     if not api_key:
+        data["odds_providers"]["api_football"] = {
+            "status": "chiave_non_configurata",
+            "message": "Fonte API-Football non configurata.",
+        }
         print("API_FOOTBALL_KEY non configurata: quote API-Football saltate senza interrompere il calcolo.")
+        DATA_FILE.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         CACHE_FILE.parent.mkdir(parents=True, exist_ok=True)
         CACHE_FILE.write_text(json.dumps(cache, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         return
+    data["odds_providers"]["api_football"] = {"status": "configurata"}
 
     availability = read_json(AVAILABILITY_CACHE_FILE, {})
     fixture_index = {}
@@ -273,7 +294,10 @@ def main():
             }
             if available:
                 calculate_value(match, prices, markets)
-                match["odds_fetched_at"] = cache["entries"][fixture_id]["fetched_at"]
+                if match.get("odds_source") == "API-Football":
+                    match["odds_fetched_at"] = cache["entries"][fixture_id]["fetched_at"]
+                if markets:
+                    match["odds_markets_fetched_at"] = cache["entries"][fixture_id]["fetched_at"]
                 fetched += 1
                 print(f"Quote API-Football abbinate: {match.get('home_team')} - {match.get('away_team')} (1X2 completo: {complete_1x2}; mercati aggiuntivi: {len(markets)}).")
             else:
@@ -315,12 +339,21 @@ def main():
         if team_key(entry.get("home_team")) != team_key(match.get("home_team")) or team_key(entry.get("away_team")) != team_key(match.get("away_team")):
             continue
         # Se le quote API-Football sono già state assegnate, non ricalcolare.
-        if match.get("odds_source") != "API-Football" or not match.get("odds_markets"):
-            calculate_value(match, prices, markets)
+        calculate_value(match, prices, markets)
+        if match.get("odds_source") == "API-Football":
             match["odds_fetched_at"] = entry.get("fetched_at")
+        if markets:
+            match["odds_markets_fetched_at"] = entry.get("fetched_at")
 
     data["odds_updated_at"] = now_utc().isoformat()
     data["odds_source_api_football"] = "API-Football"
+    data["odds_providers"]["api_football"] = {
+        "status": "configurata",
+        "fresh_cache_entries": sum(1 for item in cache["entries"].values() if item.get("status") == "available" and quote_is_fresh(item)),
+        "responses_without_markets_today": sum(1 for item in cache["entries"].values() if item.get("status") == "not_available" and str(item.get("fetched_at") or "")[:10] == today),
+        "requests_today": used,
+        "daily_request_limit": MAX_NEW_REQUESTS_PER_DAY,
+    }
     DATA_FILE.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     CACHE_FILE.parent.mkdir(parents=True, exist_ok=True)
     CACHE_FILE.write_text(json.dumps(cache, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
