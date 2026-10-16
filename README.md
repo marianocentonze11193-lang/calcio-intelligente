@@ -10,7 +10,7 @@ Dashboard statica di pronostici calcistici con aggiornamento automatico tramite 
 - Probabilità 1X2, doppia chance, Over/Under, Goal/No Goal e risultati esatti stimati.
 - Commenti Gemini quando il secret `GEMINI_API_KEY` è configurato; l'AI non inventa informazioni non fornite.
 - Importazione delle quote 1X2 quando presenti nei CSV gratuiti football-data.co.uk; integrazione opzionale di The Odds API tramite `ODDS_API_KEY` e di API-Football tramite `API_FOOTBALL_KEY`; confronto con le probabilità del modello e stima del valore atteso teorico.
-- Archivio della prima stima e verifica dei risultati finali, con controlli su data, squadre, punteggi e coerenza delle probabilità. Accuratezza 1X2 e Brier score vengono pubblicati solo dopo almeno 30 partite valutate; anche le metriche per campionato richiedono almeno 30 esiti verificati.
+- Archivio della prima stima e verifica dei risultati finali, con controlli su data, squadre, punteggi e coerenza delle probabilità. Accuratezza 1X2 e Brier score vengono pubblicati solo dopo almeno 30 partite valutate; anche le metriche per campionato richiedono almeno 30 esiti verificati. Un confronto separato misura modello contro mercato sugli stessi match conclusi con quote archiviate, usando accuratezza, Brier score e log loss.
 - Filtri per nazione e competizione; partite ordinate per nazione, competizione, data e orario. Il filtro nazione viene popolato automaticamente dalle partite effettivamente caricate.
 - Aggiornamento pianificato ogni ora via GitHub Actions.
 
@@ -40,6 +40,12 @@ Per attivare le quote, crea una chiave secondo le condizioni del fornitore The O
 
 Questa applicazione è sperimentale e informativa. Le probabilità non costituiscono garanzia di esito.
 
+
+## Analisi probabilità modello vs mercato
+
+Lo script `scripts/analyze_market_odds.py` calcola per ogni match con quote 1X2 complete le probabilità implicite del mercato normalizzando gli inversi delle quote, una stima indicativa del margine grezzo, lo scarto in punti percentuali tra modello e mercato e l'EV teorico per ciascun esito (`probabilità modello × quota − 1`). Le quote migliori possono provenire da bookmaker diversi, quindi margine e probabilità depurate sono indicatori comparativi e non una quotazione di un singolo bookmaker. Un EV positivo è una stima teorica, non una garanzia di profitto.
+
+L'archivio salva la fotografia delle probabilità e delle quote. Lo storico calcola quindi, sulle stesse partite concluse con quote disponibili, accuratezza 1X2, Brier score e log loss sia per il modello sia per il mercato. Il confronto viene pubblicato solo dopo almeno 30 partite abbinate; Brier score e log loss più bassi indicano migliori probabilità previsionali. Per i vecchi record senza una quota archiviata al momento del pronostico non è possibile ricostruire in modo affidabile le quote storiche a posteriori; il confronto diventa significativo man mano che si accumulano nuovi risultati.
 
 ## Quote calcistiche da API-Football
 
