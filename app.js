@@ -555,9 +555,11 @@ async function aggiornaDati() {
 function populateFilters(matches) {
   const country = document.getElementById("country-filter");
   const league = document.getElementById("league-filter");
-  if (!country || !league) return;
+  const day = document.getElementById("date-filter");
+  if (!country || !league || !day) return;
   const selectedCountry = country.value;
   const selectedLeague = league.value;
+  const selectedDay = day.value;
   const countries = [...new Set(matches.map(m => m.country || "Altro"))].sort((a, b) => a.localeCompare(b, "it"));
   country.replaceChildren(new Option("Tutte le nazioni", ""));
   for (const value of countries) country.add(new Option(value, value));
@@ -567,18 +569,26 @@ function populateFilters(matches) {
   league.replaceChildren(new Option("Tutte le competizioni", ""));
   for (const value of leagues) league.add(new Option(value, value));
   league.value = leagues.includes(selectedLeague) ? selectedLeague : "";
+
+  const days = [...new Set(matches.map(m => m.date))].sort((a, b) => a.localeCompare(b));
+  day.replaceChildren(new Option("Tutti i giorni", ""));
+  for (const value of days) day.add(new Option(formatFullDate(value), value));
+  day.value = days.includes(selectedDay) ? selectedDay : "";
 }
 
 function applyFilters() {
   const country = document.getElementById("country-filter");
   const league = document.getElementById("league-filter");
+  const day = document.getElementById("date-filter");
   const dateOrder = document.getElementById("date-order-filter");
   const selectedCountry = country ? country.value : "";
   const selectedLeague = league ? league.value : "";
+  const selectedDay = day ? day.value : "";
   const orderMode = dateOrder ? dateOrder.value : "competition";
   const filtered = allLoadedMatches.filter(m =>
     (!selectedCountry || (m.country || "Altro") === selectedCountry) &&
-    (!selectedLeague || (m.league || "Competizione") === selectedLeague)
+    (!selectedLeague || (m.league || "Competizione") === selectedLeague) &&
+    (!selectedDay || m.date === selectedDay)
   );
   filtered.sort((a, b) => {
     if (orderMode === "date-asc" || orderMode === "date-desc") {
@@ -605,6 +615,8 @@ function initializeCalcioIntelligente() {
     const league = document.getElementById("league-filter");
     if (country) country.addEventListener("change", () => { populateFilters(allLoadedMatches); applyFilters(); });
     if (league) league.addEventListener("change", applyFilters);
+    const day = document.getElementById("date-filter");
+    if (day) day.addEventListener("change", applyFilters);
     const dateOrder = document.getElementById("date-order-filter");
     if (dateOrder) dateOrder.addEventListener("change", applyFilters);
     aggiornaDati();
