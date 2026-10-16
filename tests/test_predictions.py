@@ -60,6 +60,39 @@ class PredictionModelTests(unittest.TestCase):
         self.assertFalse(validator_module.is_recent_timestamp("not-a-date", now=now))
 
 
+    def test_german_team_aliases_reconcile_common_source_variants(self):
+        pairs = [
+            ("FC Cologne", "1. FC Köln"),
+            ("Cologne", "FC Köln"),
+            ("1. FC Union Berlin", "Union Berlin"),
+            ("SC Paderborn 07", "Paderborn"),
+            ("Mainz 05", "1. FSV Mainz 05"),
+            ("Hamburg SV", "Hamburger SV"),
+            ("VfB Stuttgart", "Stuttgart"),
+            ("Bayer Leverkusen", "Leverkusen"),
+            ("SC Freiburg", "Freiburg"),
+            ("TSG Hoffenheim", "Hoffenheim"),
+        ]
+        for first, second in pairs:
+            with self.subTest(first=first, second=second):
+                self.assertEqual(module.team_key(first), module.team_key(second))
+                self.assertEqual(archive_module.team_key(first), archive_module.team_key(second))
+                self.assertTrue(availability_module.same_team(first, second))
+                self.assertTrue(odds_module.same_team(first, second))
+
+    def test_extra_csv_row_parser_handles_schema_variants_and_zero_scores(self):
+        row = {
+            " Match Date ": "15/10/26",
+            "Home Team": "FC Cologne",
+            "away_team": "1. FC Union Berlin",
+            "home_score": "0",
+            "Away Score": "2",
+        }
+        self.assertEqual(module.parse_date(module.row_value(row, "date", "match_date")), date(2026, 10, 15))
+        self.assertEqual(module.row_value(row, "home_team"), "FC Cologne")
+        self.assertEqual(module.number(module.row_value(row, "FTHG", "home_goals", "home_score")), 0)
+        self.assertEqual(module.number(module.row_value(row, "FTAG", "away_goals", "away_score")), 2)
+
     def test_team_aliases_reconcile_espn_and_football_data_names(self):
         pairs = [
             ("Bologna", "Bologna FC 1909"),
