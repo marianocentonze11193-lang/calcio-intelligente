@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-15T23:43:49+00:00",
+  "updated_at": "2026-10-16T00:59:31+00:00",
   "source": "https://www.football-data.co.uk",
   "season": "2627",
   "model": "Poisson casa/trasferta con prior di lega e correzione Elo; stime sperimentali, non garanzie",
@@ -32,7 +32,7 @@
       "Veikkausliiga finlandese"
     ],
     "matches_with_estimates": 42,
-    "matches_no_bet": 66,
+    "matches_no_bet": 67,
     "failed_sources": []
   },
   "no_bet_notice": "Le partite NO BET sono mostrate perché i dati non bastano o non sono comparabili. Nessun esito consigliato.",
@@ -65,7 +65,7 @@
         "home_scores": 89.3,
         "away_scores": 89.0
       },
-      "analysis": "La sfida tra Le Mans e Toulouse si presenta particolarmente aperta, con probabilità di successo del 40.8% per i padroni di casa e del 39.6% per gli ospiti, affiancate da un 19.6% di pareggio. I gol attesi sono elevati, stimati a 2.24 per il Le Mans e 2.2 per il Toulouse, riflettendo un trend offensivo marcato. I valori Elo sono molto vicini, rispettivamente a 1489.8 e 1492.3, mentre la forma recente mostra medie di 1.0 punti per il Le Mans e 1.2 per il Toulouse nelle ultime cinque gare. Il campione casa e trasferta si limita a sole 3 partite, fattore che riduce la precisione della stima. Per quanto riguarda le indisponibilità, la fonte segnala una sola assenza per il Le Mans (A. Bourabaa per infortunio alla caviglia), ricordando che l'elenco potrebbe non essere completo.",
+      "analysis": "La sfida tra Le Mans e Toulouse si annuncia estremamente aperta e ricca di reti, con ben 2.24 gol attesi per i padroni di casa e 2.2 per gli ospiti. Le probabilità del modello indicano un perfetto equilibrio per l'esito 1X2, rispettivamente al 40.8% e 39.6%, mentre il mercato Entrambe le Squadre a Segno gode di una stima elevata al 79.4%. I punteggi Elo si equivalgono quasi del tutto (1489.8 contro 1492.3), inserendosi in un contesto di forma recente simile. Attenzione però al campione di sole 3 partite casalinghe e esterne, che limita la precisione della stima. La fonte segnala l'assenza di A. Bourabaa per il Le Mans, ricordando che la copertura delle indisponibilità potrebbe non essere completa.",
       "suggested_markets": [
         "Over 1,5",
         "Goal"
@@ -154,7 +154,7 @@
         "home_scores": 78.6,
         "away_scores": 64.1
       },
-      "analysis": "Il Lille parte favorito contro il Brest con una probabilità di vittoria del 49.3%, contro il 25.2% degli ospiti e il 25.5% di equilibrio. Il modello prevede 1.54 gol attesi per i padroni di casa e 1.02 per il Brest, delineando un incontro orientato verso un punteggio moderato. A livello di Elo, il Lille guida con 1528.0 punti contro i 1498.3 del Brest, supportato da una buona forma recente di 2.0 punti a partita nelle ultime cinque uscite rispetto all'1.4 degli avversari. Il campione casa e trasferta ristretto a sole 3 gare limita inevitabilmente la solidità complessiva della stima. La copertura API risulta attualmente non disponibile per questa data, dunque non vi sono conferme ufficiali su infortuni o formazioni, lasciando le probabilità indipendenti da tali dati.",
+      "analysis": "Il Lille parte favorito contro il Brest con una probabilità di vittoria casalinga stimata al 49.3% e 1.54 gol attesi, a fronte dei 1.02 della formazione ospite. Il modello assegna al pareggio il 25.5% delle chance e fissa l'over 1,5 al 72.6%. I dati Elo vedono il Lille leggermente avanti con 1528.0 punti contro i 1498.3 degli avversari, supportato da una buona media di 2.0 punti nelle ultime cinque uscite. Il campione casa e trasferta si ferma tuttavia a sole 3 partite, un fattore che riduce la profondità dell'analisi statistica. Non sono state trovate segnalazioni ufficiali di indisponibili o formazioni pubblicate per questo incontro.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -197,9 +197,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "fuori_copertura_api",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       },
@@ -233,7 +233,7 @@
         "home_scores": 65.4,
         "away_scores": 90.6
       },
-      "analysis": "Il Lens affronta la trasferta contro il Troyes con i favori del pronostico, vantando una probabilità di vittoria del 66.4% a fronte del 15.4% per la squadra di casa e del 18.2% per il pareggio. Gli attesi gol del modello premiano ampiamente gli ospiti con 2.37 reti previste, mentre il Troyes si ferma a 1.06. Nei valori Elo il Lens si attesta a 1491.2 punti e il Troyes a 1467.1, con una forma recente decisamente negativa per i padroni di casa (0.6 punti a partita) rispetto allo 0.8 degli ospiti. Il campione casa e trasferta limitato a sole 3 partite riduce la portata statistica di questa analisi. L'assenza di copertura API per la data odierna non permette di verificare la lista degli indisponibili o le formazioni ufficiali.",
+      "analysis": "Il Lens affronta la trasferta contro il Troyes con i favori del pronostico, forte di una probabilità di successo del 66.4% e di 2.37 gol attesi dal modello. Per i padroni di casa la stima di vittoria si ferma al 15.4%, con 1.06 reti previste e un over 1,5 calcolato all'85.7%. La classifica Elo mostra il Lens a 1491.2 punti e il Troyes a 1467.1, in un quadro di forma recente che vede i padroni di casa in difficoltà con soli 0.6 punti a partita. Il campione di soli 3 match interni ed esterni rappresenta un limite strutturale per l'affidabilità della proiezione. La copertura delle indisponibilità non è disponibile e non risultano dati ufficiali sugli infortunati.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -276,9 +276,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "fuori_copertura_api",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       },
@@ -312,7 +312,7 @@
         "home_scores": 64.9,
         "away_scores": 59.9
       },
-      "analysis": "La partita tra Angers e Marseille si annuncia molto equilibrata, con il modello che assegna il 38.0% di probabilità ai padroni di casa, il 30.9% al Marseille e il 31.1% al segno X. I gol attesi restano contenuti, con 1.05 per l'Angers e 0.91 per gli ospiti, delineando uno scenario tattico e bloccato. I punteggi Elo sono allineati a 1488.7 per l'Angers e 1480.6 per il Marseille, mentre la forma recente vede i padroni di casa a 1.4 punti per match contro lo 0.6 degli avversari. Il campione casa e trasferta basato su appena 3 partite rappresenta un limite strutturale per l'affidabilità della stima. La copertura API risulta non attiva per questa data, di conseguenza non ci sono dati certi su eventuali infortuni o sulle formazioni schierate.",
+      "analysis": "La partita tra Angers e Marseille si preannuncia equilibrata e orientata alla prudenza, con 1.05 gol attesi per i padroni di casa e 0.91 per gli ospiti. Le probabilità del modello vedono l'Angers al 38.0% e il Marseille al 30.9%, con il pareggio al 31.1% e l'under 2,5 favorito al 68.8%. I valori Elo sono molto vicini, rispettivamente 1488.7 e 1480.6, mentre la forma recente vede l'Angers leggermente più efficace in termini di punti. Il campione analizzato di 3 gare casalinghe e esterne resta ridotto e limita la portata della stima. La partita risulta fuori copertura API per la data odierna, pertanto non vi sono conferme su infortuni o formazioni.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -389,7 +389,7 @@
         "home_scores": 91.3,
         "away_scores": 36.7
       },
-      "analysis": "Il Lione affronta il Nizza con i favori del pronostico, supportato da un Elo casalingo di 1519.1 e una probabilità di successo interno dell'81.3%. Il modello prevede un divario netto nei gol attesi, pari a 2.45 per i padroni di casa contro i 0.46 degli ospiti. La forma recente mostra 1.6 punti a partita per il Lione e 1.4 per il Nizza. Tuttavia, il campione casalingo di 3 partite e quello esterno di 2 gare sono molto ridotti, limitando la precisione della stima. Nessuna informazione su infortuni o formazioni è disponibile per questa data.",
+      "analysis": "Il match di Ligue 1 tra Lyon e Nice vede i padroni di casa nettamente favoriti dal modello con una probabilità di successo dell'81.3% e gol attesi pari a 2.45, contro lo 0.46 della trasferta. L'Elo assegna un leggero vantaggio al Lyon (1519.1 contro 1498.2), confermato da una forma recente solida con 1.6 punti a partita. Il campione di sole 3 partite casalinghe e 2 esterne limita però la precisione della stima preliminare. Per quanto riguarda la disponibilità, la partita è attualmente fuori copertura API e non ci sono dati confermati su infortuni o formazioni.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -466,7 +466,7 @@
         "home_scores": 63.5,
         "away_scores": 81.2
       },
-      "analysis": "La sfida di Bundesliga tra Schalke 04 e Mainz vede gli ospiti favoriti con il 52.9% di probabilità di vittoria, a fronte del 22.8% per i padroni di casa. I gol attesi premiano il Mainz con 1.67 reti rispetto alle 1.01 dello Schalke, con un Elo quasi alla pari intorno a 1492 per i locali e 1496 per gli ospiti. Nelle ultime cinque uscite il Mainz ha realizzato 2.6 reti di media. Il campione casalingo di 2 partite e quello esterno di pari dimensione rappresentano un limite importante per la stima. Non sono disponibili dati ufficiali su indisponibili o formazioni.",
+      "analysis": "In Bundesliga, la sfida tra Schalke 04 e Mainz assegna i favori agli ospiti con il 52.9% di probabilità di vittoria e 1.67 gol attesi, a fronte dei 1.01 gol previsti per i padroni di casa. I valori Elo sono molto vicini (1492.4 per lo Schalke e 1496.6 per il Mainz), sebbene la forma recente mostri un Mainz più prolifico in fase offensiva (2.6 reti segnate nelle ultime 5). Il campione ridotto a sole 2 partite casalinghe e 2 esterne rende questa stima decisamente preliminare. Non sono stati trovati dati certi sulla disponibilità dei giocatori o sulle formazioni per questo incontro.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -507,9 +507,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "fuori_copertura_api",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       },
@@ -543,7 +543,7 @@
         "home_scores": 96.6,
         "away_scores": 51.2
       },
-      "analysis": "Il Bayern Monaco parte nettamente favorito contro il RB Leipzig, con una probabilità di successo interno dell'86.6% e un Elo di 1532.4 contro il 1508.0 degli avversari. Il modello stima ben 3.38 gol attesi per i bavaresi e 0.72 per gli ospiti, confermati da una forma recente da 3.2 reti segnate a partita per il Bayern. Il campione casalingo di 2 partite e quello esterno di 2 gare risultano però troppo piccoli per consolidare pienamente la proiezione. I dati su infortuni e formazioni non sono verificabili per limiti di copertura.",
+      "analysis": "Il pronostico per il match di Bundesliga tra Bayern Munich e RB Leipzig riflette una netta superiorità dei padroni di casa, accreditati dell'86.6% di probabilità di vittoria e di ben 3.38 gol attesi. Il punteggio Elo pende dalla parte del Bayern (1532.4 contro 1508.0), supportato da una media di 2.2 punti nelle ultime 5 uscite. Il campione esaminato di 2 partite in casa e 2 in trasferta rappresenta un limite strutturale per la robustezza della stima. La fonte segnala 5 indisponibilità complessive tra le due squadre, tra cui T. Buchmann e J. Musiala per i bavaresi e M. Guiu, A. Ouedraogo e C. Baumgartner per il Leipzig, sebbene l'elenco non sia necessariamente completo.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -584,11 +584,44 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "fuori_copertura_api",
+        "status": "segnalazioni_trovate",
         "source": "API-Football",
-        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
-        "injuries": [],
-        "lineups": null
+        "note": "La fonte segnala 5 indisponibilità; elenco non necessariamente completo.",
+        "fixture_id": "1575185",
+        "injuries": [
+          {
+            "team": "Bayern München",
+            "player": "T. Buchmann",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "team": "Bayern München",
+            "player": "J. Musiala",
+            "type": "Questionable",
+            "reason": "Muscle Injury"
+          },
+          {
+            "team": "RB Leipzig",
+            "player": "M. Guiu",
+            "type": "Missing Fixture",
+            "reason": "Hamstring Injury"
+          },
+          {
+            "team": "RB Leipzig",
+            "player": "A. Ouedraogo",
+            "type": "Missing Fixture",
+            "reason": "Shoulder Injury"
+          },
+          {
+            "team": "RB Leipzig",
+            "player": "C. Baumgartner",
+            "type": "Questionable",
+            "reason": "Thigh Injury"
+          }
+        ],
+        "lineups": null,
+        "lineup_status": "non_pubblicate"
       },
       "analysis_provider": "Gemini"
     },
@@ -620,7 +653,7 @@
         "home_scores": 80.8,
         "away_scores": 69.2
       },
-      "analysis": "Nel match di Super League greca tra Kalamata e OFI Crete, il modello assegna il 48.4% di probabilità alla vittoria casalinga e il 27.3% a quella esterna. I gol attesi indicano 1.65 per i padroni di casa e 1.18 per gli ospiti, con un Elo di 1493.1 per il Kalamata e 1510.2 per l'OFI. La forma recente mostra una media di 1.4 punti a incontro per entrambe le compagini. Il campione di 3 partite casalinghe e 3 esterne è ridotto e circoscrive la portata della stima. La copertura API non consente di verificare eventuali indisponibili o formazioni.",
+      "analysis": "Per la Super League greca, l'incontro tra Kalamata e OFI Crete mostra un sostanziale equilibrio con un leggero favore per i padroni di casa al 48.4% di probabilità e 1.65 gol attesi, mentre gli ospiti si fermano a 1.18 gol previsti. I valori Elo sono allineati attorno a 1493 per il Kalamata e 1510 per l'OFI Crete, con una media di 1.4 punti a partita per entrambe nelle ultime 5 gare. Il campione limitato a 3 partite casalinghe e 3 esterne riduce l'affidabilità statistica complessiva della stima. La partita risulta fuori copertura API e non sono disponibili informazioni ufficiali su infortuni o formazioni.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -699,7 +732,7 @@
         "home_scores": 84.6,
         "away_scores": 47.2
       },
-      "analysis": "Il Kifisia affronta l'Aris con favori di pronostico evidenti, registrando una probabilità di vittoria interna del 66,9% contro l'11,9% degli ospiti e un pareggio al 21,1%. I gol attesi premiano i padroni di casa con 1,87 reti a fronte dei 0,64 dell'Aris. Valori Elo molto vicini, rispettivamente a 1501,4 e 1509,5, descrivono un divario tecnico sottile che contrasta con le stime dei gol. La forma recente mostra una media di 1,4 punti a partita per entrambe nelle ultime cinque uscite. Il campione di sole tre partite casalinghe e tre esterne risulta ridotto e limita l'affidabilità della stima. Il piano API-Football attuale non consente di verificare questa data in anticipo; infortuni e formazioni non sono confermati, e nessuna segnalazione non significa che tutti siano disponibili.",
+      "analysis": "Il Kifisia affronta l'Aris in Super League greca con il favore dei pronostici, registrando una probabilità di vittoria interna del 66,9% contro l'11,9% degli ospiti. I gol attesi delineano un divario marcato, stimati a 1,87 per i padroni di casa e a 0,64 per la formazione in trasferta. Nei dati complessivi, la quota Elo vede le due squadre vicine (1501,4 a 1509,5), mentre la forma recente mostra per entrambe una media di 1,4 punti a partita. Tuttavia, il campione casalingo e esterno limitato a sole tre gare riduce la profondità statistica della stima. Per quanto riguarda la rosa, il piano API-Football attuale non consente di verificare questa data in anticipo e non vi sono indisponibilità segnalate, sebbene ciò non escluda assenze.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -778,7 +811,7 @@
         "home_scores": 76.3,
         "away_scores": 62.9
       },
-      "analysis": "La sfida tra PAOK e Iraklis si preannuncia equilibrata, con il modello che assegna il 47,4% di probabilità al successo interno, il 26,6% al pareggio e il 26,0% alla vittoria esterna. I gol attesi indicano 1,44 reti per il PAOK e 0,99 per l'Iraklis. L'indice Elo posiziona i padroni di casa a 1519,5 e gli ospiti a 1511,8, confermando un sostanziale equilibrio. Nelle ultime cinque partite entrambe le squadre hanno raccolto 1,4 punti a incontro, evidenziando un momento di forma simile. Il campione di tre gare interne e quattro esterne è piuttosto piccolo e vincola la precisione della proiezione. Il piano API-Football attuale non consente di verificare questa data in anticipo; infortuni e formazioni non sono confermati, e nessuna segnalazione non significa che tutti siano disponibili.",
+      "analysis": "La sfida tra PAOK e Iraklis si presenta piuttosto equilibrata, con il modello che assegna il 47,4% di probabilità al successo casalingo e il 26,0% a quello esterno, lasciando il 26,6% al pareggio. Gli indici di rete prevedono 1,44 gol per il PAOK e 0,99 per l'Iraklis, confermando un confronto potenzialmente combattuto. Osservando i valori Elo, i padroni di casa si attestano a 1519,5 punti e gli ospiti a 1511,8, mentre la forma recente evidenzia 1,8 punti a partita per ambedue le compagini. Va segnalato che il campione di riferimento casalingo e in trasferta è piuttosto piccolo, comprendendo rispettivamente tre e quattro incontri. La copertura attuale non permette di verificare le formazioni in anticipo e non risultano indisponibili segnalati, fermo restando che la lista potrebbe non essere completa.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -855,7 +888,7 @@
         "home_scores": 88.4,
         "away_scores": 66.1
       },
-      "analysis": "L'Everton parte favorito contro il Chelsea secondo il modello, che stima la vittoria di casa al 61,8%, il pareggio al 20,0% e l'affermazione esterna al 18,1%. I gol attesi sono fissati a 2,15 per l'Everton e 1,08 per il Chelsea, delineando un match potenzialmente vivace. I valori Elo mostrano un perfetto allineamento tra le due formazioni, con 1519,7 per i locali e 1510,3 per gli ospiti. Nelle ultime cinque gare entrambe hanno ottenuto 1,4 punti di media. Il campione ristretto a tre partite casalinghe e tre esterne rappresenta un limite strutturale per la stima. Il piano API-Football attuale non consente di verificare questa data in anticipo; infortuni e formazioni non sono confermati, e nessuna segnalazione non significa che tutti siano disponibili.",
+      "analysis": "In Premier League, l'Everton parte favorito contro il Chelsea con una probabilità di vittoria del 61,8%, a fronte del 18,1% attribuito agli ospiti e del 20,0% per il pareggio. Il potenziale offensivo calcolato dal modello prevede 2,15 gol attesi per i padroni di casa e 1,08 per il club londinese. Dal punto di vista della classifica Elo, l'Everton guida con 1519,7 punti contro i 1510,3 del Chelsea, mentre nelle ultime cinque uscite entrambe mantengono una media di 1,4 punti per match. Il campione interno ed esterno di appena tre partite riduce inevitabilmente l'accuratezza predittiva. La fonte segnala 3 indisponibilità tra cui V. Mykolenko e J. Gittens, un elenco non necessariamente esaustivo poiché la copertura può essere parziale.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -898,11 +931,32 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "fuori_copertura_api",
+        "status": "segnalazioni_trovate",
         "source": "API-Football",
-        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
-        "injuries": [],
-        "lineups": null
+        "note": "La fonte segnala 3 indisponibilità; elenco non necessariamente completo.",
+        "fixture_id": "1557430",
+        "injuries": [
+          {
+            "team": "Everton",
+            "player": "V. Mykolenko",
+            "type": "Questionable",
+            "reason": "Injury"
+          },
+          {
+            "team": "Chelsea",
+            "player": "J. Gittens",
+            "type": "Missing Fixture",
+            "reason": "Ankle Injury"
+          },
+          {
+            "team": "Chelsea",
+            "player": "E. Emegha",
+            "type": "Questionable",
+            "reason": "Muscle Injury"
+          }
+        ],
+        "lineups": null,
+        "lineup_status": "non_pubblicate"
       },
       "analysis_provider": "Gemini"
     },
@@ -934,7 +988,7 @@
         "home_scores": 71.0,
         "away_scores": 52.9
       },
-      "analysis": "Il confronto tra Brentford e Liverpool vede i padroni di casa leggermente favoriti con il 47,7% di probabilità di vittoria, mentre il pareggio si attesta al 29,7% e il successo ospite al 22,6%. I gol attesi dal modello sono 1,24 per il Brentford e 0,75 per il Liverpool. La classifica Elo vede il Brentford a 1520,1 e il Liverpool a 1509,4, evidenziando forze simili. Nelle cinque partite recenti il Brentford ha totalizzato 1,4 punti a incontro contro gli 1,6 del Liverpool. Il campione limitato a tre match interni e tre esterni riduce la portata predittiva dell'analisi. Il piano API-Football attuale non consente di verificare questa data in anticipo; infortuni e formazioni non sono confermati, e nessuna segnalazione non significa che tutti siano disponibili.",
+      "analysis": "Il confronto di Premier League tra Brentford e Liverpool vede i padroni di casa leggermente avanti al 47,7% nelle stime di successo, contro il 22,6% della squadra ospite e il 29,7% di X. I gol attesi dal modello si fermano a quota 1,24 per il Brentford e 0,75 per il Liverpool, delineando un match sulla carta poco prolifico. Il ranking Elo mostra un sostanziale equilibrio con 1520,1 per i locali e 1509,4 per gli ospiti, mentre i punti recenti per partita sono rispettivamente 1,4 e 1,6. L'analisi risente di un campione casalingo e in trasferta ridotto a sole tre partite per parte. La fonte segnala ben 14 indisponibilità complessive, tra cui nomi come C. Gakpo e D. Szoboszlai, ricordando che la copertura informativa potrebbe non essere completa.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -975,11 +1029,98 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "fuori_copertura_api",
+        "status": "segnalazioni_trovate",
         "source": "API-Football",
-        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
-        "injuries": [],
-        "lineups": null
+        "note": "La fonte segnala 14 indisponibilità; elenco non necessariamente completo.",
+        "fixture_id": "1557428",
+        "injuries": [
+          {
+            "team": "Brentford",
+            "player": "K. Furo",
+            "type": "Missing Fixture",
+            "reason": "Surgery"
+          },
+          {
+            "team": "Brentford",
+            "player": "A. Milambo",
+            "type": "Missing Fixture",
+            "reason": "Knock"
+          },
+          {
+            "team": "Brentford",
+            "player": "N. Collins",
+            "type": "Questionable",
+            "reason": "Calf Injury"
+          },
+          {
+            "team": "Brentford",
+            "player": "M. Damsgaard",
+            "type": "Questionable",
+            "reason": "Ankle Injury"
+          },
+          {
+            "team": "Brentford",
+            "player": "J. Dasilva",
+            "type": "Questionable",
+            "reason": "Muscle Injury"
+          },
+          {
+            "team": "Brentford",
+            "player": "K. Schade",
+            "type": "Questionable",
+            "reason": "Injury"
+          },
+          {
+            "team": "Liverpool",
+            "player": "C. Bradley",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "team": "Liverpool",
+            "player": "H. Ekitike",
+            "type": "Missing Fixture",
+            "reason": "Achilles Tendon Injury"
+          },
+          {
+            "team": "Liverpool",
+            "player": "C. Gakpo",
+            "type": "Missing Fixture",
+            "reason": "Ankle Injury"
+          },
+          {
+            "team": "Liverpool",
+            "player": "R. Gravenberch",
+            "type": "Missing Fixture",
+            "reason": "Red Card"
+          },
+          {
+            "team": "Liverpool",
+            "player": "A. Isak",
+            "type": "Missing Fixture",
+            "reason": "Thigh Injury"
+          },
+          {
+            "team": "Liverpool",
+            "player": "G. Leoni",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "team": "Liverpool",
+            "player": "D. Szoboszlai",
+            "type": "Missing Fixture",
+            "reason": "Hamstring Injury"
+          },
+          {
+            "team": "Liverpool",
+            "player": "R. Ngumoha",
+            "type": "Questionable",
+            "reason": "Injury"
+          }
+        ],
+        "lineups": null,
+        "lineup_status": "non_pubblicate"
       },
       "analysis_provider": "Gemini"
     },
@@ -1011,7 +1152,7 @@
         "home_scores": 86.6,
         "away_scores": 77.4
       },
-      "analysis": "La sfida di Premier League tra Newcastle e Aston Villa vede i padroni di casa favoriti al 49,8%, contro il 28,6% degli ospiti e un pareggio al 21,6%. I gol attesi del modello indicano 2,01 per il Newcastle e 1,49 per l'Aston Villa, evidenziando una spinta offensiva interessante. L'Elo assegna 1498,7 punti alla squadra di casa e 1481,5 agli ospiti, rispecchiando un equilibrio generale nei valori. Il campione di sole 3 partite casalinghe e 3 esterne risulta ridotto e limita la precisione della stima. La forma recente mostra 1,4 punti per match per i bianconeri e 1,0 per i Villans. Per quanto riguarda gli indisponibili, la copertura API non è disponibile in questa data e non risultano dati confermati.",
+      "analysis": "La sfida di Premier League tra Newcastle e Aston Villa vede i padroni di casa favoriti al 49.8% contro il 28.6% degli ospiti, con un pareggio al 21.6%. Il modello stima gol attesi pari a 2.01 per il Newcastle e 1.49 per l'Aston Villa, evidenziando una buona propensione offensiva. I valori Elo di 1498.7 per i padroni di casa e 1481.5 per gli ospiti riflettono un sostanziale equilibrio di forza. Tuttavia, il campione casa e trasferta ridotto a sole 3 partite limita la precisione della stima. La fonte segnala 11 indisponibilità complessive, un dato non necessariamente completo e senza formazioni ufficiali.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1054,11 +1195,80 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "fuori_copertura_api",
+        "status": "segnalazioni_trovate",
         "source": "API-Football",
-        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
-        "injuries": [],
-        "lineups": null
+        "note": "La fonte segnala 11 indisponibilità; elenco non necessariamente completo.",
+        "fixture_id": "1557434",
+        "injuries": [
+          {
+            "team": "Newcastle",
+            "player": "A. Elanga",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "team": "Newcastle",
+            "player": "E. Jaouen",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "team": "Newcastle",
+            "player": "V. Livramento",
+            "type": "Questionable",
+            "reason": "Injury"
+          },
+          {
+            "team": "Newcastle",
+            "player": "J. Ramsey",
+            "type": "Questionable",
+            "reason": "Injury"
+          },
+          {
+            "team": "Newcastle",
+            "player": "B. Toure",
+            "type": "Questionable",
+            "reason": "Injury"
+          },
+          {
+            "team": "Aston Villa",
+            "player": "G. Hemmings",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "team": "Aston Villa",
+            "player": "I. Maatsen",
+            "type": "Missing Fixture",
+            "reason": "Ankle Injury"
+          },
+          {
+            "team": "Aston Villa",
+            "player": "A. Onana",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "team": "Aston Villa",
+            "player": "M. Ruggeri",
+            "type": "Missing Fixture",
+            "reason": "Injury"
+          },
+          {
+            "team": "Aston Villa",
+            "player": "R. Barkley",
+            "type": "Questionable",
+            "reason": "Injury"
+          },
+          {
+            "team": "Aston Villa",
+            "player": "I. Mbaye",
+            "type": "Questionable",
+            "reason": "Injury"
+          }
+        ],
+        "lineups": null,
+        "lineup_status": "non_pubblicate"
       },
       "analysis_provider": "Gemini"
     },
@@ -1090,7 +1300,7 @@
         "home_scores": 88.2,
         "away_scores": 70.5
       },
-      "analysis": "In questo incontro di Serie A, il Frosinone parte con il favore del pronostico al 58,4%, mentre il Sassuolo si attesta al 21,1% e il pareggio al 20,5%. I gol attesi stimati dal modello sono 2,14 per i ciociari e 1,22 per i neroverdi. I punteggi Elo sono vicini, rispettivamente 1509,4 e 1499,6, indicando forze simili. Tuttavia, il campione casalingo e in trasferta di appena 3 partite per parte rende l'analisi preliminare. Nelle ultime 5 gare il Frosinone ha ottenuto 2,0 punti di media, contro l'1,6 degli ospiti. Le fonti segnalano 8 indisponibilità totali tra le due rose, un elenco che potrebbe non essere completo.",
+      "analysis": "In questo confronto di Serie A, il Frosinone gode di una probabilità di vittoria casalinga del 58.4%, mentre il Sassuolo si attesta al 21.1% e il pareggio al 20.5%. I gol attesi delineano un match da 2.14 per i padroni di casa e 1.22 per gli ospiti. La forma recente premia il Frosinone con 2.0 punti di media, a fronte dei 1.6 del Sassuolo, supportati da Elo vicini (1509.4 a 1499.6). L'analisi risente però di un campione casa/trasferta limitato a 3 gare. Vengono segnalate 8 indisponibilità totali, ricordando che la copertura potrebbe non essere esaustiva.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -1220,7 +1430,7 @@
         "home_scores": 56.8,
         "away_scores": 93.2
       },
-      "analysis": "Il match tra Venezia e Napoli pende nettamente dalla parte dei partenopei, favoriti al 76,3% contro il 9,2% dei lagunari e il 14,4% della X. Il modello prevede 2,68 gol attesi per gli ospiti e 0,84 per i padroni di casa. La classifica Elo premia il Napoli con 1510,8 punti rispetto ai 1438,8 del Venezia. Il campione di 3 partite in casa e 3 in trasferta è molto piccolo e limita la stima del modello. La forma recente vede il Venezia fermo a 0,0 punti per match nelle ultime 5 uscite, mentre il Napoli viaggia a 1,4. La copertura API non consente di verificare gli infortuni per questa data.",
+      "analysis": "Il Napoli parte ampiamente favorito in trasferta con il 76.3% di probabilità di successo, contrapposto al 9.2% del Venezia e al 14.4% del pari. Il divario si riflette nei gol attesi, pari a 2.68 per i partenopei e 0.84 per i lagunari, oltre che nei valori Elo di 1510.8 contro 1438.8. La forma recente evidenzia le difficoltà del Venezia, fermo a 0 punti nelle ultime 5 uscite. Il campione di 3 partite casalinghe e in trasferta risulta ridotto e frena la portata della stima. La fonte indica 13 indisponibili, ma la lista potrebbe non essere completa.",
       "suggested_markets": [
         "Over 1,5",
         "2"
@@ -1264,11 +1474,92 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "fuori_copertura_api",
+        "status": "segnalazioni_trovate",
         "source": "API-Football",
-        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
-        "injuries": [],
-        "lineups": null
+        "note": "La fonte segnala 13 indisponibilità; elenco non necessariamente completo.",
+        "fixture_id": "1550156",
+        "injuries": [
+          {
+            "team": "Venezia",
+            "player": "A. Adorante",
+            "type": "Missing Fixture",
+            "reason": "Hernia"
+          },
+          {
+            "team": "Venezia",
+            "player": "G. Busio",
+            "type": "Missing Fixture",
+            "reason": "Thigh Injury"
+          },
+          {
+            "team": "Venezia",
+            "player": "B. Franjic",
+            "type": "Missing Fixture",
+            "reason": "Shoulder Injury"
+          },
+          {
+            "team": "Venezia",
+            "player": "M. Sverko",
+            "type": "Missing Fixture",
+            "reason": "Hip Injury"
+          },
+          {
+            "team": "Venezia",
+            "player": "A. Bella-Kotchap",
+            "type": "Questionable",
+            "reason": "Thigh Injury"
+          },
+          {
+            "team": "Venezia",
+            "player": "T. Correia",
+            "type": "Questionable",
+            "reason": "Thigh Injury"
+          },
+          {
+            "team": "Venezia",
+            "player": "P. Mazzocchi",
+            "type": "Questionable",
+            "reason": "Calf Injury"
+          },
+          {
+            "team": "Napoli",
+            "player": "A. Buongiorno",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "team": "Napoli",
+            "player": "C. Favasuli",
+            "type": "Missing Fixture",
+            "reason": "Thigh Injury"
+          },
+          {
+            "team": "Napoli",
+            "player": "A. Vergara",
+            "type": "Missing Fixture",
+            "reason": "Calf Injury"
+          },
+          {
+            "team": "Napoli",
+            "player": "Alisson Santos",
+            "type": "Questionable",
+            "reason": "Muscle Injury"
+          },
+          {
+            "team": "Napoli",
+            "player": "F. Anguissa",
+            "type": "Questionable",
+            "reason": "Groin Injury"
+          },
+          {
+            "team": "Napoli",
+            "player": "M. Olivera",
+            "type": "Questionable",
+            "reason": "Groin Injury"
+          }
+        ],
+        "lineups": null,
+        "lineup_status": "non_pubblicate"
       },
       "analysis_provider": "Gemini"
     },
@@ -1300,7 +1591,7 @@
         "home_scores": 59.0,
         "away_scores": 81.0
       },
-      "analysis": "La partita di Serie A tra Bologna e Inter assegna il favore del pronostico agli ospiti con il 55,5%, lasciando il Bologna al 20,1% e il pareggio al 24,4%. I gol attesi calcolati dal modello sono 1,66 per l'Inter e 0,89 per i felsinei. I valori Elo riflettono il divario, con 1548,2 punti per i nerazzurri e 1480,8 per i rossoblù. Il campione di riferimento è ridotto a sole 3 partite interne per il Bologna e 2 esterne per l'Inter, limitando l'affidabilità della stima. La forma recente evidenzia 2,6 punti a partita per l'Inter e 1,0 per il Bologna. Gli infortuni non sono verificabili per mancanza di copertura API.",
+      "analysis": "Il match tra Bologna e Inter assegna agli ospiti il favore del pronostico con il 55.5% di probabilità di vittoria, rispetto al 20.1% dei padroni di casa e al 24.4% del pareggio. I gol attesi indicano 1.66 per l'Inter e 0.89 per il Bologna, coerentemente con i dati Elo di 1548.2 e 1480.8. La forma recente vede l'Inter a quota 2.6 punti a partita, nettamente avanti rispetto a 1.0 del Bologna. Il campione di sole 3 gare interne e 2 esterne costituisce una limitazione importante per la stima. Si registrano 8 indisponibilità totali, con una copertura che potrebbe non essere completa.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1341,11 +1632,62 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "fuori_copertura_api",
+        "status": "segnalazioni_trovate",
         "source": "API-Football",
-        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
-        "injuries": [],
-        "lineups": null
+        "note": "La fonte segnala 8 indisponibilità; elenco non necessariamente completo.",
+        "fixture_id": "1550149",
+        "injuries": [
+          {
+            "team": "Bologna",
+            "player": "E. Holm",
+            "type": "Missing Fixture",
+            "reason": "Thigh Injury"
+          },
+          {
+            "team": "Bologna",
+            "player": "R. Orsolini",
+            "type": "Missing Fixture",
+            "reason": "Thigh Injury"
+          },
+          {
+            "team": "Bologna",
+            "player": "S. Mbangula",
+            "type": "Questionable",
+            "reason": "Injury"
+          },
+          {
+            "team": "Bologna",
+            "player": "J. Odgaard",
+            "type": "Questionable",
+            "reason": "Thigh Injury"
+          },
+          {
+            "team": "Bologna",
+            "player": "A. Theate",
+            "type": "Questionable",
+            "reason": "Leg Injury"
+          },
+          {
+            "team": "Inter",
+            "player": "C. Jones",
+            "type": "Missing Fixture",
+            "reason": "Thigh Injury"
+          },
+          {
+            "team": "Inter",
+            "player": "L. Martinez",
+            "type": "Missing Fixture",
+            "reason": "Thigh Injury"
+          },
+          {
+            "team": "Inter",
+            "player": "J. Stones",
+            "type": "Questionable",
+            "reason": "Injury"
+          }
+        ],
+        "lineups": null,
+        "lineup_status": "non_pubblicate"
       },
       "analysis_provider": "Gemini"
     },
@@ -1377,7 +1719,7 @@
         "home_scores": 92.3,
         "away_scores": 49.5
       },
-      "analysis": "La Roma parte con netta preferenza nel modello, forte di una probabilità di successo interno del 78,0% e di un indice Elo pari a 1542,1 contro il 1467,4 del Genoa. I gol attesi pendono marcatamente verso i padroni di casa, stimati a 2,57 reti a fronte dei 0,68 degli ospiti. La recente marcia dei giallorossi mostra 2,2 punti di media nelle ultime cinque uscite, a differenza dei liguri fermi a 0,8. Il campione casalingo di 3 partite e quello esterno di 2 restano ridotti, limitando la precisione complessiva della stima. Le informazioni su infortuni e formazioni non sono verificate a causa della copertura API assente.",
+      "analysis": "La Roma parte nettamente favorita contro il Genoa, con una probabilità di vittoria interna del 78.0% e 2.57 gol attesi dal modello, a fronte dei 0.68 degli avversari. Il quadro Elo premia i giallorossi (1542 contro 1467), supportati da una forma recente solida da 2.2 punti a partita. Il campione casalingo di 3 partite e quello esterno di 2 sono tuttavia molto piccoli, limitando la precisione della stima. La fonte segnala 13 indisponibilità complessive tra le due squadre, sebbene l'elenco non sia necessariamente completo.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1418,11 +1760,92 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "fuori_copertura_api",
+        "status": "segnalazioni_trovate",
         "source": "API-Football",
-        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
-        "injuries": [],
-        "lineups": null
+        "note": "La fonte segnala 13 indisponibilità; elenco non necessariamente completo.",
+        "fixture_id": "1550148",
+        "injuries": [
+          {
+            "team": "AS Roma",
+            "player": "M. Bah",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "team": "AS Roma",
+            "player": "D. Malen",
+            "type": "Missing Fixture",
+            "reason": "Red Card"
+          },
+          {
+            "team": "AS Roma",
+            "player": "M. Svilar",
+            "type": "Missing Fixture",
+            "reason": "Toe Injury"
+          },
+          {
+            "team": "AS Roma",
+            "player": "B. Cristante",
+            "type": "Questionable",
+            "reason": "Knee Injury"
+          },
+          {
+            "team": "AS Roma",
+            "player": "P. Dybala",
+            "type": "Questionable",
+            "reason": "Injury"
+          },
+          {
+            "team": "AS Roma",
+            "player": "M. Kone",
+            "type": "Questionable",
+            "reason": "Injury"
+          },
+          {
+            "team": "Genoa",
+            "player": "L. Colombo",
+            "type": "Missing Fixture",
+            "reason": "Ankle Injury"
+          },
+          {
+            "team": "Genoa",
+            "player": "E. Havel",
+            "type": "Missing Fixture",
+            "reason": "Ankle Injury"
+          },
+          {
+            "team": "Genoa",
+            "player": "F. Meichtry",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "team": "Genoa",
+            "player": "D. Sow",
+            "type": "Missing Fixture",
+            "reason": "Injury"
+          },
+          {
+            "team": "Genoa",
+            "player": "L. Venturino",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "team": "Genoa",
+            "player": "Amorim",
+            "type": "Questionable",
+            "reason": "Inactive"
+          },
+          {
+            "team": "Genoa",
+            "player": "S. Otoa",
+            "type": "Questionable",
+            "reason": "Injury"
+          }
+        ],
+        "lineups": null,
+        "lineup_status": "non_pubblicate"
       },
       "analysis_provider": "Gemini"
     },
@@ -1454,7 +1877,7 @@
         "home_scores": 70.9,
         "away_scores": 62.9
       },
-      "analysis": "Udinese e Lecce presentano un quadro di equilibrio ravvicinato, con il segno 1 quotato al 41,7% dal modello, il pareggio al 28,6% e il 2 ospite al 29,6%. I gol attesi descrivono una gara da punteggio moderato, fissati a 1,23 per i friulani e 0,99 per i salentini. I valori Elo si equivalgono quasi del tutto, rispettivamente a quota 1469,1 e 1477,6, mentre la forma recente evidenzia difficoltà speculari con appena 0,6 punti a incontro per entrambe. Le analisi si basano su campioni casalinghi e esterni limitati a sole 3 partite, fattore che circoscrive la portata della proiezione. Non risultano dati disponibili su indisponibili o formazioni ufficiali.",
+      "analysis": "Udinese e Lecce si affrontano in una sfida molto equilibrata, fotografata dal 41.7% per l'uno casalingo, 28.6% per il pareggio e 29.6% per il colpo esterno. I gol attesi restano contenuti, stimati a 1.23 per i padroni di casa e 0.99 per gli ospiti. Le valutazioni Elo sono estremamente vicine (1469 a 1478) e riflettono un rendimento recente simile, con soli 0.6 punti medi a incontro per entrambe. Le 3 partite analizzate nel campione casa e trasferta sono ridotte e vincolano l'affidabilità predittiva. Gli infortuni non sono verificabili per questa data in anticipo.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1531,7 +1954,7 @@
         "home_scores": 55.4,
         "away_scores": 90.3
       },
-      "analysis": "Il Como riceve i favori del pronostico con un notevole 71,5% di probabilità di vittoria esterna, contrapposto all'11,3% assegnato alla Fiorentina. L'attacco ospite è trainato da 2,33 gol attesi dal modello, mentre i viola si fermano a 0,81. A livello di forma recente il Como brilla con 2,0 punti di media e un Elo pari a 1522,9, superiore al 1467,1 dei padroni di casa. Il campione di riferimento comprende 3 gare interne e 4 esterne, un volume ancora esiguo che incide sulla stabilità del modello. Gli aggiornamenti su eventuali assenze o schieramenti non sono verificabili per limiti di copertura.",
+      "analysis": "Il Como gode dei favori del pronostico in trasferta con il 71.5% di probabilità di successo e 2.33 gol attesi, mentre la Fiorentina si ferma all'11.3% con 0.81 reti previste. L'Elo degli ospiti a quota 1522 supera quello dei viola fermi a 1467, rispecchiando l'andamento recente con 2.0 punti di media per il Como. Il campione di 3 gare interne e 4 esterne è limitato e rende la stima preliminare. Le informazioni su eventuali indisponibili e formazioni non sono confermate dalla copertura API.",
       "suggested_markets": [
         "Over 1,5",
         "2"
@@ -1611,7 +2034,7 @@
         "home_scores": 90.6,
         "away_scores": 37.6
       },
-      "analysis": "Il Milan gode di una stima favorevole pari al 79,8% per l'esito 1, sostenuto da un indice Elo di 1534,2 a fronte del 1495,2 dell'Atalanta. Il potenziale offensivo casalingo raggiunge 2,37 gol attesi, mentre la produzione offensiva bergamasca si ferma a 0,47. Nelle ultime cinque uscite i rossoneri hanno ottenuto 1,8 punti di media, superando gli ospiti che registrano quota 1,2. La valutazione risente di un campione limitato a sole 2 partite sia per i rossoneri in casa che per la Dea in trasferta. Le informazioni su formazioni e indisponibili rimangono non verificate per assenza di dati API.",
+      "analysis": "Il Milan riceve l'Atalanta forte del 79.8% di probabilità di vittoria e di un indice di 2.37 gol attesi dal modello, contro lo 0.47 attribuito agli ospiti. La graduatoria Elo vede i rossoneri avanti a 1534 contro i 1495 bergamaschi, uniti a una buona media di 1.8 punti nelle ultime cinque uscite. Il campione di sole 2 partite interne per i rossoneri e 2 esterne per i nerazzurri è piccolo e circoscrive la portata della stima. Non sono disponibili dati ufficiali completi su infortuni o formazioni per questo incontro.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1688,7 +2111,7 @@
         "home_scores": 55.4,
         "away_scores": 61.5
       },
-      "analysis": "La sfida di Serie A tra Juventus e Lazio presenta probabilità di vittoria che premiano leggermente gli ospiti al 37.5%, contro il 29.3% dei bianconeri e il 33.2% di un eventuale pareggio. I gol attesi dal modello sono contenuti, con 0.81 per i padroni di casa e 0.96 per la formazione ospite, riflettendo una tendenza all'Under 2.5 stimata al 74.1%. Il campione di sole 3 partite casalinghe e 3 esterne risulta piuttosto ridotto, limitando la precisione complessiva della stima. L'Elo assegna 1520.7 alla Juventus e 1549.4 alla Lazio, mentre la forma recente vede gli ospiti brillare con 2.6 punti a partita nelle ultime 5 uscite rispetto ai 1.6 dei rivali. Non è stato possibile verificare le indisponibilità tramite API, pertanto non ci sono dati certi sugli infortunati.",
+      "analysis": "La sfida di Serie A tra Juventus e Lazio presenta probabilità vicine, con il 37,5% per gli ospiti, il 33,2% per il pareggio e il 29,3% per la vittoria di casa. Il modello stima gol attesi bassi, pari a 0,81 per i bianconeri e 0,96 per i biancocelesti, riflettendosi nel 74,1% dell'under 2,5. I dati Elo (1520,7 contro 1549,4) e la forma recente indicano grande equilibrio in campo. Il campione casa e trasferta si limita a sole 3 partite, riducendo l'affidabilità della stima. Ricordiamo che la disponibilità non è verificata per limiti API e non ci sono dati certi sugli indisponibili.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1765,7 +2188,7 @@
         "home_scores": 57.7,
         "away_scores": 82.3
       },
-      "analysis": "Il match tra Monza e Cagliari vede gli ospiti favoriti dal modello con una probabilità di successo del 58.0%, lasciando il pareggio al 23.5% e l'affermazione interna al 18.4%. Dal punto di vista realizzativo, ci si attende una gara vivace per i sardi con 1.73 gol attesi, mentre i brianzoli si fermano a 0.86. Il campione di sole 2 partite casalinghe per il Monza e 3 esterne per il Cagliari è molto limitato e riduce l'affidabilità statistica della proiezione. I valori Elo registrano 1474.1 per i padroni di casa e 1531.4 per gli ospiti, confermando il divario confermato dalla forma recente. Le informazioni sulle formazioni e sugli indisponibili non sono verificate a causa dei limiti della copertura attuale delle API.",
+      "analysis": "In Monza-Cagliari il pronostico pende verso la trasferta, accreditata del 58,0% di probabilità di successo, mentre il Monza registra il 18,4% e il pareggio il 23,5%. I gol attesi delineano un divario evidente, con 0,86 per i padroni di casa e 1,73 per i sardi. L'indice Elo premia leggermente gli ospiti (1531,4 a 1474,1), supportati da una forma recente migliore. Tuttavia, il campione casalingo di 2 gare e quello esterno di 3 sono molto ridotti e limitano la precisione della stima. La copertura API è incompleta e non fornisce alcuna certezza su eventuali assenze.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1842,7 +2265,7 @@
         "home_scores": 62.6,
         "away_scores": 70.9
       },
-      "analysis": "Parma e Torino si affrontano in un incontro di Serie A dove il modello assegna il 41.9% di probabilità di vittoria agli ospiti, il 29.4% ai crociati e il 28.7% al pareggio. I gol attesi dal modello sono pari a 0.98 per il Parma e 1.23 per il Torino, orientando le stime verso l'Under 2.5 al 61.8%. Il campione di appena 3 partite interne e 3 esterne è ridotto e limita la profondità dell'analisi statistica. A livello di Elo, i padroni di casa contano 1471.0 punti contro i 1490.0 degli avversari, mentre la forma recente evidenzia qualche difficoltà in più per i ducali. La copertura API risulta attualmente non disponibile per la verifica di infortuni e formazioni ufficiali.",
+      "analysis": "Il confronto tra Parma e Torino mostra un leggero favore per i granata al 41,9%, seguiti dai ducali al 29,4% e dal pareggio al 28,7%. Dal punto di vista realizzativo, il modello calcola 0,98 gol attesi per i padroni di casa e 1,23 per la formazione ospite. I punteggi Elo (1471,0 contro 1490,0) confermano l'equilibrio generale, coerente con le recenti prestazioni delle due squadre. Il campione limitato a 3 partite sia in casa che in trasferta rappresenta un limite oggettivo per la stima. Non sono disponibili dati ufficiali su formazioni e indisponibili a causa delle restrizioni della fonte.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1919,7 +2342,7 @@
         "home_scores": 61.1,
         "away_scores": 78.5
       },
-      "analysis": "La partita di Eredivisie tra Heerenveen ed Excelsior mostra un favore del modello per gli ospiti con una probabilità di vittoria del 51.2%, a fronte del 23.2% per la squadra di casa e del 25.7% per il pareggio. I gol attesi indicano 0.94 per i padroni di casa e 1.54 per gli ospiti, con l'Over 1.5 indicato al 70.9%. Entrambe le squadre presentano un campione limitato di 4 partite casalinghe e esterne, fattore che incide sulla stabilità della proiezione. L'Elo si attesta su 1489.7 per l'Heerenveen e 1497.0 per l'Excelsior, con una forma recente simile a quota 1.0 punti a incontro. La fonte segnala 2 indisponibilità, tra cui D. Proper e N. Naujoks, ma l'elenco potrebbe non essere completo.",
+      "analysis": "Per la gara di Eredivisie tra Heerenveen ed Excelsior, il modello assegna il 51,2% di probabilità alla vittoria esterna, contro il 23,2% dei padroni di casa e il 25,7% della parità. I gol attesi stimati sono 0,94 per l'Heerenveen e 1,54 per l'Excelsior, con l'over 1,5 al 70,9%. I valori Elo sono molto vicini (1489,7 e 1497,0), descrivendo un divario tecnico minimo. Il campione di 4 partite interne ed esterne resta comunque ridotto e vincola la portata della stima. La fonte segnala 2 indisponibilità tra le file delle due squadre, ma l'elenco potrebbe non essere completo.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -2013,7 +2436,7 @@
         "home_scores": 54.8,
         "away_scores": 98.5
       },
-      "analysis": "Il Feyenoord parte nettamente favorito con il 91.5% di probabilità di vittoria, sostenuto da un Elo di 1559.9 contro il 1468.4 del Telstar e da una forma recente eccellente. Il modello assegna ben 4.23 gol attesi agli ospiti e solo 0.79 ai padroni di casa, spingendo l'over 1,5 al 96.0%. Il campione casa e trasferta si limita a sole 4 partite, fattore che riduce la precisione della stima. La copertura API indica che le formazioni non sono pubblicate e gli indisponibili non sono verificati. Nessuna segnalazione al momento non garantisce l'assenza di infortuni.",
+      "analysis": "Il modello assegna al Feyenoord un netto favore con il 91,5% di probabilità di vittoria esterna e ben 4,23 gol attesi, mentre il Telstar si ferma a 0,79 reti. I dati Elo confermano la superiorità ospite (1559,9 contro 1468,4), sebbene il campione di appena 4 partite casalinghe e 4 esterne limiti la precisione della stima. Nelle ultime cinque uscite il Feyenoord ha impressionato con 3,8 gol fatti di media, a fronte di un Telstar in difficoltà con 0,6 punti a incontro. La fonte segnala 7 indisponibilità per gli ospiti, tra cui Beelen e Nelson, ricordando che la copertura può essere incompleta e l'assenza di segnalazioni non garantisce una rosa al completo.",
       "suggested_markets": [
         "Over 1,5",
         "2"
@@ -2057,11 +2480,56 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "fuori_copertura_api",
+        "status": "segnalazioni_trovate",
         "source": "API-Football",
-        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
-        "injuries": [],
-        "lineups": null
+        "note": "La fonte segnala 7 indisponibilità; elenco non necessariamente completo.",
+        "fixture_id": "1552192",
+        "injuries": [
+          {
+            "team": "Feyenoord",
+            "player": "T. Beelen",
+            "type": "Missing Fixture",
+            "reason": "Broken Leg"
+          },
+          {
+            "team": "Feyenoord",
+            "player": "J. Bos",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "team": "Feyenoord",
+            "player": "J. Moder",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "team": "Feyenoord",
+            "player": "R. Nelson",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "team": "Feyenoord",
+            "player": "B. Nieuwkoop",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "team": "Feyenoord",
+            "player": "G. Smal",
+            "type": "Missing Fixture",
+            "reason": "Ankle Injury"
+          },
+          {
+            "team": "Feyenoord",
+            "player": "S. van Persie",
+            "type": "Missing Fixture",
+            "reason": "Knock"
+          }
+        ],
+        "lineups": null,
+        "lineup_status": "non_pubblicate"
       },
       "analysis_provider": "Gemini"
     },
@@ -2093,7 +2561,7 @@
         "home_scores": 91.0,
         "away_scores": 72.8
       },
-      "analysis": "Lo Sparta Rotterdam gode del favore del pronostico con il 61.8% di probabilità di successo e 2.41 gol attesi, a fronte dell'1.9% attribuito al Willem II. I dati Elo vedono i padroni di casa a 1470.0 e gli ospiti a 1442.0, inseriti in un contesto di forma recente piuttosto difforme ma penalizzato da un campione limitato a 4 gare casalinghe ed esterne. Il mercato dell'over 1,5 gode di una stima robusta all'88.5%. Non risultano formazioni pubblicate né indisponibili segnalati a causa dei limiti della copertura API attuale, lasciando la situazione infortuni aperta.",
+      "analysis": "Lo Sparta Rotterdam parte con i galli di favorito grazie al 61,8% di probabilità di vittoria e a 2,41 gol attesi dal modello, contro l'1,3 preventivato per il Willem II. Il Rating Elo mostra un leggero vantaggio casalingo (1470,0 contro 1442,0), inserito però in un contesto di campioni ridotti a sole 4 gare interne ed esterne che riduce la portata statistica. La forma recente evidenzia grosse difficoltà per gli ospiti, fermi a 0,2 punti per partita nelle ultime cinque uscite. La fonte segnala 7 indisponibilità complessive tra le due squadre, inclusi i forfait di Mito e Didillon Hodl, ricordando che l'elenco potrebbe non essere esaustivo e non coprire l'intera rosa.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -2136,11 +2604,56 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "fuori_copertura_api",
+        "status": "segnalazioni_trovate",
         "source": "API-Football",
-        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
-        "injuries": [],
-        "lineups": null
+        "note": "La fonte segnala 7 indisponibilità; elenco non necessariamente completo.",
+        "fixture_id": "1552193",
+        "injuries": [
+          {
+            "team": "Sparta Rotterdam",
+            "player": "S. Mito",
+            "type": "Missing Fixture",
+            "reason": "Injury"
+          },
+          {
+            "team": "Sparta Rotterdam",
+            "player": "M. van Bergen",
+            "type": "Missing Fixture",
+            "reason": "Inactive"
+          },
+          {
+            "team": "Willem II",
+            "player": "A. Culum",
+            "type": "Missing Fixture",
+            "reason": "Foot Injury"
+          },
+          {
+            "team": "Willem II",
+            "player": "T. Didillon Hodl",
+            "type": "Missing Fixture",
+            "reason": "Hamstring Injury"
+          },
+          {
+            "team": "Willem II",
+            "player": "J. Hoogma",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "team": "Willem II",
+            "player": "A. Lachkar",
+            "type": "Missing Fixture",
+            "reason": "Groin Injury"
+          },
+          {
+            "team": "Willem II",
+            "player": "K. Boogaard",
+            "type": "Questionable",
+            "reason": "Knock"
+          }
+        ],
+        "lineups": null,
+        "lineup_status": "non_pubblicate"
       },
       "analysis_provider": "Gemini"
     },
@@ -2172,7 +2685,7 @@
         "home_scores": 75.3,
         "away_scores": 91.2
       },
-      "analysis": "L'Ajax affronta questa trasferta con il 60.2% di probabilità di vittoria e 2.43 gol attesi, contrapposti ai 1.4 gol previsti per il Groningen. Le valutazioni Elo sono molto vicine, rispettivamente a 1526.1 e 1520.7, mentre la forma recente mostra una media di 1.6 punti a partita per entrambe. Il campione di sole 4 gare interne e 3 esterne riduce inevitabilmente l'affidabilità statistica complessiva della stima. La copertura API non permette di verificare la disponibilità dei giocatori o le formazioni ufficiali, e l'assenza di segnalazioni non implica una rosa al completo.",
+      "analysis": "L'Ajax gode dei favori del pronostico con il 60,2% di probabilità di successo esterno e 2,43 gol attesi, rispetto ai 1,4 gol stimati per i padroni di casa del Groningen. I valori Elo sono molto vicini (1526,1 per gli ospiti e 1520,7 per i locali), ma il campione analizzato resta limitato a 4 partite casalinghe e 3 esterne, vincolando la robustezza della stima. Nelle ultime cinque giornate entrambe le compagini hanno viaggiato a una media di 1,6 punti, evidenziando un momento di forma simile. Per quanto riguarda le disponibilità, la verifica è fuori copertura API e non ci sono dati confermati su infortuni o formazioni, tenendo presente che l'assenza di segnalazioni non implica la totale disponibilità dei giocatori.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -2251,7 +2764,7 @@
         "home_scores": 96.4,
         "away_scores": 58.2
       },
-      "analysis": "Il Twente si presenta con un solido 83.6% di probabilità di vittoria e ben 3.33 gol attesi dal modello, a fronte dello 0.87 stimato per l'Utrecht. I padroni di casa vantano un Elo superiore di 1540.0 contro il 1484.4 degli avversari e una media di 2.2 punti nelle ultime cinque uscite. Il campione di sole 4 partite casalinghe e altrettante in trasferta impone tuttavia cautela nella lettura dei dati. Lo stato della verifica evidenzia che non ci sono formazioni pubblicate o indisponibili confermati tramite API, ricordando che la copertura informativa potrebbe essere incompleta.",
+      "analysis": "Il Twente domina le proiezioni del modello con l'83,6% di probabilità di vittoria casalinga e ben 3,33 gol attesi, mentre l'Utrecht si ferma a 0,87 reti previste. Il rating Elo premia i padroni di casa (1540,0 contro 1484,4), sebbene il campione di appena 4 partite interne e 4 esterne rappresenti una base limitata per la stima. La forma recente rafforza il pronostico dei locali, capaci di raccogliere 2,2 punti di media nelle ultime cinque uscite contro i 1,4 degli avversari. La verifica per questa data risulta fuori copertura API e non fornisce l'elenco di infortuni o formazioni, ribadendo che la copertura può essere incompleta e non vi è certezza sulla totale disponibilità delle rose.",
       "suggested_markets": [
         "Over 1,5",
         "1"
@@ -2331,7 +2844,7 @@
         "home_scores": 66.3,
         "away_scores": 45.4
       },
-      "analysis": "Per la sfida di Scottish Premiership tra Aberdeen e St Mirren, il modello assegna il favore del pronostico ai padroni di casa con una probabilità dell'47.0%, lasciando il pareggio al 32.6% e il successo esterno al 20.3%. I gol attesi delineano una gara contratta, stimati a 1.09 per l'Aberdeen e 0.6 per il St Mirren. Il campione di sole quattro partite interne ed esterne risulta decisamente piccolo, limitando la precisione complessiva della stima. Nelle ultime cinque uscite i padroni di casa mantengono una media di un punto a partita, mentre gli ospiti faticano a quota 0.6 con ben 2.2 reti subite di media. I valori Elo mostrano grande equilibrio, con 1478.3 per l'Aberdeen e 1487.0 per il St Mirren. La copertura per le indisponibilità risulta fuori copertura API, ricordando che l'assenza di segnalazioni non garantisce la totale disponibilità dei giocatori.",
+      "analysis": "Per la sfida di Scottish Premiership tra Aberdeen e St Mirren, il modello assegna il 47,0% di probabilità alla vittoria casalinga, contro il 32,6% per il pareggio e il 20,3% per il successo esterno. I gol attesi sono fissati a 1,09 per i padroni di casa e 0,6 per gli ospiti, delineando un incontro piuttosto chiuso. L'Elo casalingo di 1478,3 si confronta con il 1487,0 degli avversari, mentre la forma recente vede l'Aberdeen a 1,0 punti a partita e il St Mirren a 0,6. Il campione di sole 4 partite casalinghe e 4 esterne limita la precisione della stima. La fonte non segnala indisponibili, ma la copertura può essere incompleta.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -2372,11 +2885,13 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "fuori_copertura_api",
+        "status": "nessuna_segnalazione",
         "source": "API-Football",
-        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "note": "La fonte non riporta indisponibilità per questa partita; non è una conferma che tutti i giocatori siano disponibili.",
+        "fixture_id": "1556676",
         "injuries": [],
-        "lineups": null
+        "lineups": null,
+        "lineup_status": "non_pubblicate"
       },
       "analysis_provider": "Gemini"
     },
@@ -2408,7 +2923,7 @@
         "home_scores": 50.9,
         "away_scores": 71.1
       },
-      "analysis": "In questo incontro di Scottish Premiership l'Hibernian affronta il Falkirk in una situazione che vede gli ospiti favoriti dal modello con il 48.9% di probabilità di vittoria, contro il 21.3% dei padroni di casa e il 29.8% di pareggio. La previsione offensiva indica 0.71 gol attesi per l'Hibernian e 1.24 per il Falkirk. Il campione di soli quattro incontri casalinghi e in trasferta è molto ridotto e incide negativamente sull'affidabilità della stima. La forma recente evidenzia grosse difficoltà per l'Hibernian, fermo a 0.2 punti per match nelle ultime cinque gare, a fronte dei 1.0 punti del Falkirk. I punteggi Elo si equivalgono quasi perfettamente, attestandosi a 1467.3 per i padroni di casa e 1472.3 per gli ospiti. Lo stato delle indisponibilità non è verificabile tramite API, dunque non si hanno notizie ufficiali su eventuali assenze.",
+      "analysis": "Nel match di Scottish Premiership tra Hibernian e Falkirk, il modello indica un vantaggio esterno con il 48,9% di probabilità per il Falkirk, rispetto al 29,8% del pareggio e al 21,3% della vittoria interna. Sul fronte realizzativo, i gol attesi sono 0,71 per l'Hibernian e 1,24 per il Falkirk. L'Elo di 1467,3 per la squadra di casa e 1472,3 per la trasferta riflettono valori vicini, sebbene la forma recente mostri difficoltà per l'Hibernian con 0,2 punti a partita contro l'1,0 degli ospiti. Il campione limitato a 4 gare interne ed esterne riduce la robustezza del pronostico. Non risultano indisponibili segnalati, ma la copertura informativa potrebbe non essere totale.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -2449,11 +2964,13 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "fuori_copertura_api",
+        "status": "nessuna_segnalazione",
         "source": "API-Football",
-        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "note": "La fonte non riporta indisponibilità per questa partita; non è una conferma che tutti i giocatori siano disponibili.",
+        "fixture_id": "1556679",
         "injuries": [],
-        "lineups": null
+        "lineups": null,
+        "lineup_status": "non_pubblicate"
       },
       "analysis_provider": "Gemini"
     },
@@ -2528,11 +3045,13 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "fuori_copertura_api",
+        "status": "nessuna_segnalazione",
         "source": "API-Football",
-        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "note": "La fonte non riporta indisponibilità per questa partita; non è una conferma che tutti i giocatori siano disponibili.",
+        "fixture_id": "1556680",
         "injuries": [],
-        "lineups": null
+        "lineups": null,
+        "lineup_status": "non_pubblicate"
       }
     },
     {
@@ -2606,9 +3125,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "fuori_copertura_api",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -2682,11 +3201,13 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "fuori_copertura_api",
+        "status": "nessuna_segnalazione",
         "source": "API-Football",
-        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "note": "La fonte non riporta indisponibilità per questa partita; non è una conferma che tutti i giocatori siano disponibili.",
+        "fixture_id": "1556678",
         "injuries": [],
-        "lineups": null
+        "lineups": null,
+        "lineup_status": "non_pubblicate"
       }
     },
     {
@@ -2761,11 +3282,32 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "fuori_copertura_api",
+        "status": "segnalazioni_trovate",
         "source": "API-Football",
-        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
-        "injuries": [],
-        "lineups": null
+        "note": "La fonte segnala 3 indisponibilità; elenco non necessariamente completo.",
+        "fixture_id": "1570422",
+        "injuries": [
+          {
+            "team": "Villarreal",
+            "player": "T. Buchanan",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "team": "Villarreal",
+            "player": "N. Pepe",
+            "type": "Missing Fixture",
+            "reason": "Eye injury"
+          },
+          {
+            "team": "Villarreal",
+            "player": "P. Gulacsi",
+            "type": "Questionable",
+            "reason": "Personal Reasons"
+          }
+        ],
+        "lineups": null,
+        "lineup_status": "non_pubblicate"
       }
     },
     {
@@ -2839,11 +3381,50 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "fuori_copertura_api",
+        "status": "segnalazioni_trovate",
         "source": "API-Football",
-        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
-        "injuries": [],
-        "lineups": null
+        "note": "La fonte segnala 6 indisponibilità; elenco non necessariamente completo.",
+        "fixture_id": "1570413",
+        "injuries": [
+          {
+            "team": "Real Betis",
+            "player": "J. Firpo",
+            "type": "Missing Fixture",
+            "reason": "Groin Injury"
+          },
+          {
+            "team": "Real Betis",
+            "player": "I. Losada",
+            "type": "Questionable",
+            "reason": "Inactive"
+          },
+          {
+            "team": "Real Betis",
+            "player": "A. Ruibal",
+            "type": "Questionable",
+            "reason": "Knee Injury"
+          },
+          {
+            "team": "Barcelona",
+            "player": "R. Bardghji",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "team": "Barcelona",
+            "player": "A. Christensen",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "team": "Barcelona",
+            "player": "F. de Jong",
+            "type": "Questionable",
+            "reason": "Knee Injury"
+          }
+        ],
+        "lineups": null,
+        "lineup_status": "non_pubblicate"
       }
     },
     {
@@ -3149,9 +3730,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "fuori_copertura_api",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -3227,11 +3808,32 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "fuori_copertura_api",
+        "status": "segnalazioni_trovate",
         "source": "API-Football",
-        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
-        "injuries": [],
-        "lineups": null
+        "note": "La fonte segnala 3 indisponibilità; elenco non necessariamente completo.",
+        "fixture_id": "1584434",
+        "injuries": [
+          {
+            "team": "Fenerbahçe",
+            "player": "M. Muldur",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "team": "Fenerbahçe",
+            "player": "J. Oosterwolde",
+            "type": "Missing Fixture",
+            "reason": "Achilles Tendon Injury"
+          },
+          {
+            "team": "Alanyaspor",
+            "player": "Maestro",
+            "type": "Questionable",
+            "reason": "Thigh Injury"
+          }
+        ],
+        "lineups": null,
+        "lineup_status": "non_pubblicate"
       }
     },
     {
@@ -3478,11 +4080,13 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "fuori_copertura_api",
+        "status": "nessuna_segnalazione",
         "source": "API-Football",
-        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "note": "La fonte non riporta indisponibilità per questa partita; non è una conferma che tutti i giocatori siano disponibili.",
+        "fixture_id": "1561942",
         "injuries": [],
-        "lineups": null
+        "lineups": null,
+        "lineup_status": "non_pubblicate"
       }
     },
     {
@@ -3524,9 +4128,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "fuori_copertura_api",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -4024,11 +4628,50 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "fuori_copertura_api",
+        "status": "segnalazioni_trovate",
         "source": "API-Football",
-        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
-        "injuries": [],
-        "lineups": null
+        "note": "La fonte segnala 6 indisponibilità; elenco non necessariamente completo.",
+        "fixture_id": "1552790",
+        "injuries": [
+          {
+            "team": "Strasbourg",
+            "player": "I. Doukoure",
+            "type": "Missing Fixture",
+            "reason": "Inactive"
+          },
+          {
+            "team": "Strasbourg",
+            "player": "M. Godo",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "team": "Strasbourg",
+            "player": "S. Nanasi",
+            "type": "Missing Fixture",
+            "reason": "Injury"
+          },
+          {
+            "team": "Strasbourg",
+            "player": "J. Panichelli",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "team": "Paris Saint Germain",
+            "player": "S. Mayulu",
+            "type": "Missing Fixture",
+            "reason": "Groin Injury"
+          },
+          {
+            "team": "Paris Saint Germain",
+            "player": "A. Longoni",
+            "type": "Questionable",
+            "reason": "Injury"
+          }
+        ],
+        "lineups": null,
+        "lineup_status": "non_pubblicate"
       }
     },
     {
@@ -4219,9 +4862,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "fuori_copertura_api",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -4255,9 +4898,9 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "fuori_copertura_api",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -4291,11 +4934,68 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "fuori_copertura_api",
+        "status": "segnalazioni_trovate",
         "source": "API-Football",
-        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
-        "injuries": [],
-        "lineups": null
+        "note": "La fonte segnala 9 indisponibilità; elenco non necessariamente completo.",
+        "fixture_id": "1575193",
+        "injuries": [
+          {
+            "team": "SV Elversberg",
+            "player": "L. Seifert",
+            "type": "Missing Fixture",
+            "reason": "Ankle Injury"
+          },
+          {
+            "team": "SV Elversberg",
+            "player": "J. Gyamerah",
+            "type": "Questionable",
+            "reason": "Groin Injury"
+          },
+          {
+            "team": "SV Elversberg",
+            "player": "F. Onyeka",
+            "type": "Questionable",
+            "reason": "Foot Injury"
+          },
+          {
+            "team": "FC Augsburg",
+            "player": "N. Banks",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "team": "FC Augsburg",
+            "player": "A. Claude-Maurice",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "team": "FC Augsburg",
+            "player": "S. Mounie",
+            "type": "Missing Fixture",
+            "reason": "Injury"
+          },
+          {
+            "team": "FC Augsburg",
+            "player": "S. Suso",
+            "type": "Missing Fixture",
+            "reason": "Inactive"
+          },
+          {
+            "team": "FC Augsburg",
+            "player": "J. Bah",
+            "type": "Questionable",
+            "reason": "Calf Injury"
+          },
+          {
+            "team": "FC Augsburg",
+            "player": "T. Breithaupt",
+            "type": "Questionable",
+            "reason": "Toe Injury"
+          }
+        ],
+        "lineups": null,
+        "lineup_status": "non_pubblicate"
       }
     },
     {
@@ -4332,11 +5032,92 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "fuori_copertura_api",
+        "status": "segnalazioni_trovate",
         "source": "API-Football",
-        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
-        "injuries": [],
-        "lineups": null
+        "note": "La fonte segnala 13 indisponibilità; elenco non necessariamente completo.",
+        "fixture_id": "1575191",
+        "injuries": [
+          {
+            "team": "Werder Bremen",
+            "player": "F. Agu",
+            "type": "Missing Fixture",
+            "reason": "Calf Injury"
+          },
+          {
+            "team": "Werder Bremen",
+            "player": "S. Alvero",
+            "type": "Missing Fixture",
+            "reason": "Calf Injury"
+          },
+          {
+            "team": "Werder Bremen",
+            "player": "S. Lynen",
+            "type": "Missing Fixture",
+            "reason": "Hip Injury"
+          },
+          {
+            "team": "Werder Bremen",
+            "player": "S. Musah",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "team": "Werder Bremen",
+            "player": "M. N'Diaye",
+            "type": "Missing Fixture",
+            "reason": "Groin Injury"
+          },
+          {
+            "team": "Werder Bremen",
+            "player": "J. Njinmah",
+            "type": "Missing Fixture",
+            "reason": "Thigh Injury"
+          },
+          {
+            "team": "Werder Bremen",
+            "player": "J. Stage",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "team": "Werder Bremen",
+            "player": "K. Topp",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "team": "Werder Bremen",
+            "player": "Y. Regeer",
+            "type": "Questionable",
+            "reason": "Back Injury"
+          },
+          {
+            "team": "SC Paderborn 07",
+            "player": "N. Awortwie-Grant",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "team": "SC Paderborn 07",
+            "player": "T. Gayret",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "team": "SC Paderborn 07",
+            "player": "M. Hoffmeier",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "team": "SC Paderborn 07",
+            "player": "S. Klaas",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          }
+        ],
+        "lineups": null,
+        "lineup_status": "non_pubblicate"
       }
     },
     {
@@ -4445,11 +5226,13 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "fuori_copertura_api",
+        "status": "nessuna_segnalazione",
         "source": "API-Football",
-        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "note": "La fonte non riporta indisponibilità per questa partita; non è una conferma che tutti i giocatori siano disponibili.",
+        "fixture_id": "1593334",
         "injuries": [],
-        "lineups": null
+        "lineups": null,
+        "lineup_status": "non_pubblicate"
       }
     },
     {
@@ -4486,9 +5269,9 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "fuori_copertura_api",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -4609,11 +5392,74 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "fuori_copertura_api",
+        "status": "segnalazioni_trovate",
         "source": "API-Football",
-        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
-        "injuries": [],
-        "lineups": null
+        "note": "La fonte segnala 10 indisponibilità; elenco non necessariamente completo.",
+        "fixture_id": "1557431",
+        "injuries": [
+          {
+            "team": "Fulham",
+            "player": "T. Cairney",
+            "type": "Questionable",
+            "reason": "Knee Injury"
+          },
+          {
+            "team": "Fulham",
+            "player": "A. Robinson",
+            "type": "Questionable",
+            "reason": "Ankle Injury"
+          },
+          {
+            "team": "Hull City",
+            "player": "I. Ansah",
+            "type": "Missing Fixture",
+            "reason": "Back Injury"
+          },
+          {
+            "team": "Hull City",
+            "player": "J. Butland",
+            "type": "Missing Fixture",
+            "reason": "Arm Injury"
+          },
+          {
+            "team": "Hull City",
+            "player": "D. Gyabi",
+            "type": "Missing Fixture",
+            "reason": "Groin Injury"
+          },
+          {
+            "team": "Hull City",
+            "player": "C. Hughes",
+            "type": "Missing Fixture",
+            "reason": "Groin Injury"
+          },
+          {
+            "team": "Hull City",
+            "player": "E. Matazo",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "team": "Hull City",
+            "player": "M. Targett",
+            "type": "Missing Fixture",
+            "reason": "Ankle Injury"
+          },
+          {
+            "team": "Hull City",
+            "player": "M. Cho",
+            "type": "Questionable",
+            "reason": "Muscle Injury"
+          },
+          {
+            "team": "Hull City",
+            "player": "L. Gourna-Douath",
+            "type": "Questionable",
+            "reason": "Calf Injury"
+          }
+        ],
+        "lineups": null,
+        "lineup_status": "non_pubblicate"
       }
     },
     {
@@ -4650,9 +5496,9 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "fuori_copertura_api",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -4896,9 +5742,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "fuori_copertura_api",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -4942,11 +5788,68 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "fuori_copertura_api",
+        "status": "segnalazioni_trovate",
         "source": "API-Football",
-        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
-        "injuries": [],
-        "lineups": null
+        "note": "La fonte segnala 9 indisponibilità; elenco non necessariamente completo.",
+        "fixture_id": "1494781",
+        "injuries": [
+          {
+            "team": "Kristiansund BK",
+            "player": "I. H. Aalberg",
+            "type": "Missing Fixture",
+            "reason": "Groin Injury"
+          },
+          {
+            "team": "Kristiansund BK",
+            "player": "Z. Bytyqi",
+            "type": "Missing Fixture",
+            "reason": "Groin Injury"
+          },
+          {
+            "team": "Kristiansund BK",
+            "player": "S. Svendsen",
+            "type": "Questionable",
+            "reason": "Injury"
+          },
+          {
+            "team": "Aalesund",
+            "player": "I. Djantou",
+            "type": "Missing Fixture",
+            "reason": "Inactive"
+          },
+          {
+            "team": "Aalesund",
+            "player": "H. Hammer",
+            "type": "Missing Fixture",
+            "reason": "Injury"
+          },
+          {
+            "team": "Aalesund",
+            "player": "S. Haram",
+            "type": "Missing Fixture",
+            "reason": "Elbow Injury"
+          },
+          {
+            "team": "Aalesund",
+            "player": "A. Kjelsen",
+            "type": "Missing Fixture",
+            "reason": "Injury"
+          },
+          {
+            "team": "Aalesund",
+            "player": "J. Seehusen",
+            "type": "Missing Fixture",
+            "reason": "Injury"
+          },
+          {
+            "team": "Aalesund",
+            "player": "P. Aukland",
+            "type": "Questionable",
+            "reason": "Injury"
+          }
+        ],
+        "lineups": null,
+        "lineup_status": "non_pubblicate"
       }
     },
     {
@@ -4988,9 +5891,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "fuori_copertura_api",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -5259,11 +6162,80 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "fuori_copertura_api",
+        "status": "segnalazioni_trovate",
         "source": "API-Football",
-        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
-        "injuries": [],
-        "lineups": null
+        "note": "La fonte segnala 11 indisponibilità; elenco non necessariamente completo.",
+        "fixture_id": "1552190",
+        "injuries": [
+          {
+            "team": "ADO Den Haag",
+            "player": "M. Hokke",
+            "type": "Missing Fixture",
+            "reason": "Red Card"
+          },
+          {
+            "team": "ADO Den Haag",
+            "player": "C. Peupion",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "team": "ADO Den Haag",
+            "player": "L. Reischl",
+            "type": "Missing Fixture",
+            "reason": "Groin Injury"
+          },
+          {
+            "team": "PSV Eindhoven",
+            "player": "S. Lammers",
+            "type": "Missing Fixture",
+            "reason": "Lacking Match Fitness"
+          },
+          {
+            "team": "PSV Eindhoven",
+            "player": "A. Nagalo",
+            "type": "Missing Fixture",
+            "reason": "Injury"
+          },
+          {
+            "team": "PSV Eindhoven",
+            "player": "S. Ouaissa",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "team": "PSV Eindhoven",
+            "player": "R. Pepi",
+            "type": "Missing Fixture",
+            "reason": "Injury"
+          },
+          {
+            "team": "PSV Eindhoven",
+            "player": "A. Plea",
+            "type": "Missing Fixture",
+            "reason": "Surgery"
+          },
+          {
+            "team": "PSV Eindhoven",
+            "player": "J. Schouten",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "team": "PSV Eindhoven",
+            "player": "K. Sildillia",
+            "type": "Missing Fixture",
+            "reason": "Surgery"
+          },
+          {
+            "team": "PSV Eindhoven",
+            "player": "P. Wanner",
+            "type": "Missing Fixture",
+            "reason": "Foot Injury"
+          }
+        ],
+        "lineups": null,
+        "lineup_status": "non_pubblicate"
       }
     },
     {
@@ -5536,11 +6508,44 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "fuori_copertura_api",
+        "status": "segnalazioni_trovate",
         "source": "API-Football",
-        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
-        "injuries": [],
-        "lineups": null
+        "note": "La fonte segnala 5 indisponibilità; elenco non necessariamente completo.",
+        "fixture_id": "1570416",
+        "injuries": [
+          {
+            "team": "Espanyol",
+            "player": "K. Garcia",
+            "type": "Missing Fixture",
+            "reason": "Hamstring Injury"
+          },
+          {
+            "team": "Espanyol",
+            "player": "M. Dmitrovic",
+            "type": "Questionable",
+            "reason": "Back Injury"
+          },
+          {
+            "team": "Espanyol",
+            "player": "A. Gorosabel",
+            "type": "Questionable",
+            "reason": "Injury"
+          },
+          {
+            "team": "Espanyol",
+            "player": "Jofre",
+            "type": "Questionable",
+            "reason": "Groin Injury"
+          },
+          {
+            "team": "Atletico Madrid",
+            "player": "Koke",
+            "type": "Questionable",
+            "reason": "Personal Reasons"
+          }
+        ],
+        "lineups": null,
+        "lineup_status": "non_pubblicate"
       }
     },
     {
@@ -5577,11 +6582,74 @@
       "away_recent_form": null,
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "fuori_copertura_api",
+        "status": "segnalazioni_trovate",
         "source": "API-Football",
-        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
-        "injuries": [],
-        "lineups": null
+        "note": "La fonte segnala 10 indisponibilità; elenco non necessariamente completo.",
+        "fixture_id": "1570421",
+        "injuries": [
+          {
+            "team": "Valencia",
+            "player": "S. Canos",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "team": "Valencia",
+            "player": "D. Lopez",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "team": "Valencia",
+            "player": "U. Sadiq",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "team": "Valencia",
+            "player": "J. Copete",
+            "type": "Questionable",
+            "reason": "Knee Injury"
+          },
+          {
+            "team": "Valencia",
+            "player": "D. Foulquier",
+            "type": "Questionable",
+            "reason": "Injury"
+          },
+          {
+            "team": "Valencia",
+            "player": "L. Rioja",
+            "type": "Questionable",
+            "reason": "Heel Injury"
+          },
+          {
+            "team": "Athletic Club",
+            "player": "U. Egiluz",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "team": "Athletic Club",
+            "player": "O. Sancet",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "team": "Athletic Club",
+            "player": "N. Williams",
+            "type": "Missing Fixture",
+            "reason": "Thigh Injury"
+          },
+          {
+            "team": "Athletic Club",
+            "player": "A. Laporte",
+            "type": "Questionable",
+            "reason": "Illness"
+          }
+        ],
+        "lineups": null,
+        "lineup_status": "non_pubblicate"
       }
     },
     {
@@ -5654,6 +6722,47 @@
         "games": 5,
         "goals_for": 0.6,
         "goals_against": 1.2,
+        "points_per_match": 1.0
+      },
+      "away_recent_form": null,
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+      "availability_data": {
+        "status": "fuori_copertura_api",
+        "source": "API-Football",
+        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "injuries": [],
+        "lineups": null
+      }
+    },
+    {
+      "id": "2026-10-21-La Liga-Levante-Athletic Club",
+      "date": "2026-10-21",
+      "kickoff": "20:00",
+      "league": "La Liga",
+      "country": "Spagna",
+      "home_team": "Levante",
+      "away_team": "Athletic Club",
+      "expected_home_goals": 2.57,
+      "expected_away_goals": 2.14,
+      "probabilities": {},
+      "analysis": "",
+      "suggested_markets": [],
+      "value_bets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 3,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "no_bet_type": "campione_insufficiente",
+      "reason": "Campione insufficiente: servono almeno due gare casalinghe per la squadra di casa e due gare in trasferta per l’avversaria.",
+      "confidence": "bassa quantità di dati",
+      "data_quality": "controllata",
+      "elo_home": 1482.2,
+      "elo_away": 1500.0,
+      "home_recent_form": {
+        "games": 5,
+        "goals_for": 2.2,
+        "goals_against": 2.4,
         "points_per_match": 1.0
       },
       "away_recent_form": null,
@@ -5751,9 +6860,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "fuori_copertura_api",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -6104,9 +7213,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "fuori_copertura_api",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
@@ -6145,9 +7254,9 @@
       },
       "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
       "availability_data": {
-        "status": "fuori_copertura_api",
+        "status": "non_trovata",
         "source": "API-Football",
-        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
         "injuries": [],
         "lineups": null
       }
