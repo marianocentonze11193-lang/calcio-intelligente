@@ -168,8 +168,13 @@ def parse_odds_payload(payload, home, away):
     return parse_all_odds_payload(payload, home, away)["one_x_two"]
 
 
-def api_get_odds(api_key, fixture_id):
-    query = urllib.parse.urlencode({"fixture": fixture_id})
+def api_get_odds(api_key, fixture_id=None, date=None, page=1):
+    params = {"page": page}
+    if fixture_id:
+        params["fixture"] = fixture_id
+    if date:
+        params["date"] = date
+    query = urllib.parse.urlencode(params)
     request = urllib.request.Request(
         f"{BASE_URL}?{query}",
         headers={"x-apisports-key": api_key, "Accept": "application/json", "User-Agent": USER_AGENT},
@@ -254,68 +259,128 @@ def main():
                 fixture_index[fixture_id] = fixture
 
     matches = [m for m in data.get("matches", []) if isinstance(m, dict) and m.get("status") != "NO BET"]
-    candidates = []
+    matches_by_fixture = {}
+    candidates_by_date = {}
+    now = now_utc()
     for match in matches:
         availability_data = match.get("availability_data") or {}
         fixture_id = str(availability_data.get("fixture_id") or "")
         if not fixture_id or fixture_id not in fixture_index:
             continue
         fixture = fixture_index[fixture_id]
-        if str(fixture.get("date") or "")[:10] != str(match.get("date") or "")[:10]:
+        match_day = str(match.get("date") or "")[:10]
+        if str(fixture.get("date") or "")[:10] != match_day:
             continue
+        if team_key(fixture.get("home")) != team_key(match.get("home_team")) or team_key(fixture.get("away")) != team_key(match.get("away_team")):
+            continue
+        matches_by_fixture[fixture_id] = (match, fixture)
         entry = cache["entries"].get(fixture_id) or {}
         fetched_at = str(entry.get("fetched_at") or "")
-        # Una richiesta al giorno per partita, anche se la risposta non contiene quote.
-        if fetched_at[:10] == today:
+        if fetched_at[:10] == today and entry.get("status") in {"available", "not_available"}:
             continue
-        candidates.append((str(match.get("date") or ""), str(match.get("kickoff") or "99:99"), fixture_id, match, fixture))
+        if entry.get("status") == "error" and quote_is_fresh(entry):
+            # Evita di ripetere rapidamente una chiamata fallita; le altre fonti
+            # restano utilizzabili e l'errore sarà ritentato dopo il cooldown.
+            try:
+                error_age = (now - datetime.fromisoformat(fetched_at.replace("Z", "+00:00")).astimezone(timezone.utc)).total_seconds()
+            except (TypeError, ValueError):
+                error_age = MAX_ODDS_AGE_HOURS * 3600
+            if error_age < 6 * 3600:
+                continue
+        candidates_by_date.setdefault(match_day, []).append((str(match.get("kickoff") or "99:99"), fixture_id))
 
     used = int(cache["daily_usage"].get(today, 0) or 0)
     remaining = max(0, MAX_NEW_REQUESTS_PER_DAY - used)
-    # Prima le gare più vicine al calcio d'inizio; il limite giornaliero mantiene
-    # margine per calendario, indisponibilità e formazioni sul piano gratuito.
-    candidates.sort(key=lambda item: (item[0], item[1], item[2]))
     fetched = 0
-    for _, _, fixture_id, match, fixture in candidates[:remaining]:
-        try:
-            payload = api_get_odds(api_key, fixture_id)
-            parsed = parse_all_odds_payload(payload, match.get("home_team", ""), match.get("away_team", ""))
-            prices, markets = parsed["one_x_two"], parsed["markets"]
-            complete_1x2 = all(isinstance(prices.get(k), (int, float)) for k in ("home", "draw", "away"))
-            available = complete_1x2 or bool(markets)
-            cache["entries"][fixture_id] = {
-                "fetched_at": now_utc().isoformat(),
-                "date": str(match.get("date") or ""),
-                "home_team": match.get("home_team"),
-                "away_team": match.get("away_team"),
-                "prices": prices if complete_1x2 else None,
-                "markets": markets,
-                "status": "available" if available else "not_available",
-            }
-            if available:
-                calculate_value(match, prices, markets)
-                if match.get("odds_source") == "API-Football":
-                    match["odds_fetched_at"] = cache["entries"][fixture_id]["fetched_at"]
-                if markets:
-                    match["odds_markets_fetched_at"] = cache["entries"][fixture_id]["fetched_at"]
-                fetched += 1
-                print(f"Quote API-Football abbinate: {match.get('home_team')} - {match.get('away_team')} (1X2 completo: {complete_1x2}; mercati aggiuntivi: {len(markets)}).")
-            else:
-                diagnostics = odds_payload_diagnostics(payload)
-                print(f"Nessuna quota per {match.get('home_team')} - {match.get('away_team')}: eventi={diagnostics['events']}, bookmaker={diagnostics['bookmakers']}, mercati={diagnostics['bet_types'] or 'nessuno'}. Possibile copertura/provider senza quote; non invento valori.")
-        except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, OSError, ValueError) as error:
-            print(f"AVVISO quote API-Football {fixture_id}: {error}")
-            # Anche gli errori vengono registrati per evitare di martellare una fixture
-            # in caso di indisponibilità temporanea della fonte.
-            cache["entries"][fixture_id] = {
-                "fetched_at": now_utc().isoformat(),
-                "date": str(match.get("date") or ""),
-                "home_team": match.get("home_team"),
-                "away_team": match.get("away_team"),
-                "prices": None,
-                "status": "error",
-            }
-        used += 1
+    requests_made = 0
+    # /odds accetta una data e restituisce eventi paginati (10 per pagina).
+    # Una chiamata può quindi aggiornare più partite, invece di spendere una
+    # richiesta per ciascuna fixture.
+    for match_day in sorted(candidates_by_date):
+        if remaining <= 0:
+            break
+        target_ids = {fixture_id for _, fixture_id in candidates_by_date[match_day]}
+        found_ids = set()
+        page = 1
+        total_pages = 1
+        completed_date = False
+        while page <= total_pages and remaining > 0:
+            try:
+                payload = api_get_odds(api_key, date=match_day, page=page)
+                paging = payload.get("paging") or {}
+                try:
+                    total_pages = max(1, int(paging.get("total") or 1))
+                except (TypeError, ValueError):
+                    total_pages = 1
+                for event in payload.get("response", []) or []:
+                    event_fixture = event.get("fixture") or {}
+                    fixture_id = str(event_fixture.get("id") or "")
+                    if fixture_id not in target_ids or fixture_id not in matches_by_fixture:
+                        continue
+                    match, fixture = matches_by_fixture[fixture_id]
+                    parsed = parse_all_odds_payload({"response": [event]}, match.get("home_team", ""), match.get("away_team", ""))
+                    prices, markets = parsed["one_x_two"], parsed["markets"]
+                    complete_1x2 = all(isinstance(prices.get(k), (int, float)) for k in ("home", "draw", "away"))
+                    available = complete_1x2 or bool(markets)
+                    fetched_at = now_utc().isoformat()
+                    cache["entries"][fixture_id] = {
+                        "fetched_at": fetched_at,
+                        "date": str(match.get("date") or ""),
+                        "home_team": match.get("home_team"),
+                        "away_team": match.get("away_team"),
+                        "prices": prices if complete_1x2 else None,
+                        "markets": markets,
+                        "status": "available" if available else "not_available",
+                        "diagnostics": odds_payload_diagnostics({"response": [event]}),
+                    }
+                    found_ids.add(fixture_id)
+                    if available:
+                        calculate_value(match, prices, markets)
+                        if match.get("odds_source") == "API-Football":
+                            match["odds_fetched_at"] = fetched_at
+                        if markets:
+                            match["odds_markets_fetched_at"] = fetched_at
+                        fetched += 1
+                        print(f"Quote API-Football abbinate: {match.get('home_team')} - {match.get('away_team')} (1X2 completo: {complete_1x2}; mercati aggiuntivi: {len(markets)}).")
+                    else:
+                        diagnostics = odds_payload_diagnostics({"response": [event]})
+                        print(f"Nessuna quota per {match.get('home_team')} - {match.get('away_team')}: eventi={diagnostics['events']}, bookmaker={diagnostics['bookmakers']}, mercati={diagnostics['bet_types'] or 'nessuno'}.")
+                completed_date = page >= total_pages
+            except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, OSError, ValueError) as error:
+                message = str(error)[:300]
+                print(f"AVVISO quote API-Football data {match_day} pagina {page}: {message}")
+                for fixture_id in target_ids - found_ids:
+                    match, _fixture = matches_by_fixture[fixture_id]
+                    cache["entries"][fixture_id] = {
+                        "fetched_at": now_utc().isoformat(),
+                        "date": str(match.get("date") or ""),
+                        "home_team": match.get("home_team"),
+                        "away_team": match.get("away_team"),
+                        "prices": None,
+                        "markets": {},
+                        "status": "error",
+                        "error": message,
+                    }
+                break
+            used += 1
+            requests_made += 1
+            remaining -= 1
+            page += 1
+        if completed_date:
+            # Solo dopo aver visitato tutte le pagine possiamo concludere che
+            # una fixture non era presente nella risposta del provider.
+            for fixture_id in target_ids - found_ids:
+                match, _fixture = matches_by_fixture[fixture_id]
+                cache["entries"][fixture_id] = {
+                    "fetched_at": now_utc().isoformat(),
+                    "date": str(match.get("date") or ""),
+                    "home_team": match.get("home_team"),
+                    "away_team": match.get("away_team"),
+                    "prices": None,
+                    "markets": {},
+                    "status": "not_available",
+                    "error": "Fixture non presente nelle pagine quote restituite per la data.",
+                }
 
     cache["daily_usage"] = {today: used}
     cache["updated_at"] = now_utc().isoformat()
@@ -353,13 +418,14 @@ def main():
         "responses_without_markets_today": sum(1 for item in cache["entries"].values() if item.get("status") == "not_available" and str(item.get("fetched_at") or "")[:10] == today),
         "requests_today": used,
         "daily_request_limit": MAX_NEW_REQUESTS_PER_DAY,
+        "requests_made_this_run": requests_made,
     }
     DATA_FILE.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     CACHE_FILE.parent.mkdir(parents=True, exist_ok=True)
     CACHE_FILE.write_text(json.dumps(cache, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     available_entries = sum(1 for item in cache["entries"].values() if item.get("status") == "available" and quote_is_fresh(item))
     no_market_entries = sum(1 for item in cache["entries"].values() if item.get("status") == "not_available" and str(item.get("fetched_at") or "")[:10] == today)
-    print(f"Quote API-Football complete: {fetched}; cache fresche: {available_entries}; risposte senza quote oggi: {no_market_entries}; richieste oggi: {used}/{MAX_NEW_REQUESTS_PER_DAY}.")
+    print(f"Quote API-Football complete: {fetched}; cache fresche: {available_entries}; risposte senza quote oggi: {no_market_entries}; richieste in questo aggiornamento: {requests_made}; richieste oggi: {used}/{MAX_NEW_REQUESTS_PER_DAY}.")
 
 
 if __name__ == "__main__":
