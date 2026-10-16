@@ -2898,7 +2898,7 @@
       "away_goals": null
     }
   ],
-  "updated_at": "2026-10-16T07:13:18.883633+00:00",
+  "updated_at": "2026-10-16T07:21:47.377981+00:00",
   "metrics": {
     "settled_matches": 0,
     "accuracy_1x2": null,
@@ -2914,5 +2914,39 @@
     "market": null,
     "comparison": null,
     "note": "Confronto non conclusivo: servono almeno 30 partite concluse con probabilità modello e quote archiviate."
+  },
+  "additional_market_metrics": {
+    "over_under_1_5": {
+      "settled_matches_with_model_and_odds": 0,
+      "minimum_matches_required": 30,
+      "model": null,
+      "market": null,
+      "comparison": null,
+      "note": "Servono almeno 30 partite concluse con quote e probabilità per questo mercato."
+    },
+    "over_under_2_5": {
+      "settled_matches_with_model_and_odds": 0,
+      "minimum_matches_required": 30,
+      "model": null,
+      "market": null,
+      "comparison": null,
+      "note": "Servono almeno 30 partite concluse con quote e probabilità per questo mercato."
+    },
+    "over_under_3_5": {
+      "settled_matches_with_model_and_odds": 0,
+      "minimum_matches_required": 30,
+      "model": null,
+      "market": null,
+      "comparison": null,
+      "note": "Servono almeno 30 partite concluse con quote e probabilità per questo mercato."
+    },
+    "btts": {
+      "settled_matches_with_model_and_odds": 0,
+      "minimum_matches_required": 30,
+      "model": null,
+      "market": null,
+      "comparison": null,
+      "note": "Servono almeno 30 partite concluse con quote e probabilità per questo mercato."
+    }
   }
 }
