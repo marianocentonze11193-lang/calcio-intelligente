@@ -28,9 +28,51 @@ VALIDATOR_SCRIPT = Path(__file__).resolve().parents[1] / "scripts" / "validate_p
 VALIDATOR_SPEC = importlib.util.spec_from_file_location("validate_published_data", VALIDATOR_SCRIPT)
 validator_module = importlib.util.module_from_spec(VALIDATOR_SPEC)
 VALIDATOR_SPEC.loader.exec_module(validator_module)
+API_ODDS_SCRIPT = Path(__file__).resolve().parents[1] / "scripts" / "enrich_with_api_football_odds.py"
+API_ODDS_SPEC = importlib.util.spec_from_file_location("enrich_with_api_football_odds", API_ODDS_SCRIPT)
+api_odds_module = importlib.util.module_from_spec(API_ODDS_SPEC)
+API_ODDS_SPEC.loader.exec_module(api_odds_module)
 
 
 class PredictionModelTests(unittest.TestCase):
+    def test_api_football_odds_parser_extracts_best_1x2_prices(self):
+        payload = {"response": [{
+            "bookmakers": [
+                {"name": "Book A", "bets": [{"id": 1, "name": "Match Winner", "values": [
+                    {"value": "Home", "odd": "2.10"},
+                    {"value": "Draw", "odd": "3.20"},
+                    {"value": "Away", "odd": "3.80"},
+                ]}]},
+                {"name": "Book B", "bets": [{"id": 1, "name": "Match Winner", "values": [
+                    {"value": "Milan", "odd": "2.25"},
+                    {"value": "Draw", "odd": "3.10"},
+                    {"value": "Roma", "odd": "3.95"},
+                ]}]},
+            ]
+        }]}
+        prices = api_odds_module.parse_odds_payload(payload, "Milan", "Roma")
+        self.assertEqual(prices, {"home": 2.25, "draw": 3.2, "away": 3.95})
+
+    def test_api_football_odds_parser_ignores_incomplete_prices(self):
+        payload = {"response": [{"bookmakers": [{"bets": [{"id": 1, "name": "Match Winner", "values": [
+            {"value": "Home", "odd": "1.75"},
+            {"value": "Draw", "odd": "3.40"},
+        ]}]}]}]}
+        prices = api_odds_module.parse_odds_payload(payload, "Milan", "Roma")
+        self.assertEqual(prices, {"home": 1.75, "draw": 3.4, "away": None})
+
+    def test_api_football_odds_value_is_calculated_from_model_probability(self):
+        match = {
+            "status": "Pronostico valutabile",
+            "home_matches_sample": 10,
+            "away_matches_sample": 10,
+            "probabilities": {"home_win": 55, "draw": 25, "away_win": 20},
+        }
+        api_odds_module.calculate_value(match, {"home": 2.0, "draw": 4.0, "away": 5.5})
+        self.assertEqual(match["odds_source"], "API-Football")
+        self.assertEqual(match["expected_value_1x2"], {"home": 0.1, "draw": 0.0, "away": 0.1})
+        self.assertEqual({item["market"] for item in match["value_bets"]}, {"1", "2"})
+
     def test_extra_european_leagues_have_free_csv_fallback_configured(self):
         expected = {"AUT", "DNK", "FIN", "IRL", "NOK", "POL", "RO", "SWE", "SWZ"}
         self.assertEqual(module.EXTRA_FOOTBALL_DATA_LEAGUES, expected)
