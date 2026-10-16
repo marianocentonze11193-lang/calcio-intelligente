@@ -1,6 +1,6 @@
 {
   "cache_version": 2,
-  "last_full_refresh": "2026-10-16T13:04:08.676050+00:00",
+  "last_full_refresh": "2026-10-16T19:45:31.921160+00:00",
   "fixtures_by_date": {
     "2026-10-15": [
       {
@@ -1793,7 +1793,7 @@
         "kickoff_utc": "2026-10-16T10:00:00+00:00",
         "home": "Respublika FA",
         "away": "Olimpik-Mobiuz",
-        "status": "NS",
+        "status": "FT",
         "league": "Pro League A"
       },
       {
@@ -1919,7 +1919,7 @@
         "kickoff_utc": "2026-10-16T11:00:00+00:00",
         "home": "Iskra",
         "away": "FCM Ungheni",
-        "status": "NS",
+        "status": "FT",
         "league": "Liga 1"
       },
       {
@@ -1928,7 +1928,7 @@
         "kickoff_utc": "2026-10-16T11:00:00+00:00",
         "home": "FC National Ialoveni",
         "away": "Victoria Bardar",
-        "status": "NS",
+        "status": "FT",
         "league": "Liga 1"
       },
       {
@@ -1937,7 +1937,7 @@
         "kickoff_utc": "2026-10-16T11:00:00+00:00",
         "home": "Univer Comrat",
         "away": "Spartanii Selemet",
-        "status": "NS",
+        "status": "FT",
         "league": "Liga 1"
       },
       {
@@ -1946,7 +1946,7 @@
         "kickoff_utc": "2026-10-16T11:00:00+00:00",
         "home": "Zimbru II",
         "away": "Vulturii Cutezători",
-        "status": "NS",
+        "status": "FT",
         "league": "Liga 1"
       },
       {
@@ -2000,7 +2000,7 @@
         "kickoff_utc": "2026-10-16T11:30:00+00:00",
         "home": "Tanjong Pagar",
         "away": "Hougang United",
-        "status": "2H",
+        "status": "FT",
         "league": "Premier League"
       },
       {
@@ -2009,7 +2009,7 @@
         "kickoff_utc": "2026-10-16T11:30:00+00:00",
         "home": "FK Kukesi",
         "away": "Besa Kavajë",
-        "status": "2H",
+        "status": "FT",
         "league": "1st Division"
       },
       {
@@ -2018,7 +2018,7 @@
         "kickoff_utc": "2026-10-16T11:30:00+00:00",
         "home": "Oriku",
         "away": "Flamurtari",
-        "status": "2H",
+        "status": "FT",
         "league": "1st Division"
       },
       {
@@ -2027,7 +2027,7 @@
         "kickoff_utc": "2026-10-16T11:35:00+00:00",
         "home": "Henan Jianye",
         "away": "Tianjin Teda",
-        "status": "2H",
+        "status": "FT",
         "league": "Super League"
       },
       {
@@ -2036,7 +2036,7 @@
         "kickoff_utc": "2026-10-16T12:00:00+00:00",
         "home": "FC Iberia 1999 II",
         "away": "Didube 2014",
-        "status": "2H",
+        "status": "FT",
         "league": "Liga 3"
       },
       {
@@ -2045,7 +2045,7 @@
         "kickoff_utc": "2026-10-16T12:00:00+00:00",
         "home": "Krasnodar U19",
         "away": "Nizhny Novgorod U19",
-        "status": "2H",
+        "status": "FT",
         "league": "Youth Championship"
       },
       {
@@ -2054,7 +2054,7 @@
         "kickoff_utc": "2026-10-16T12:00:00+00:00",
         "home": "Rodina Moscow U19",
         "away": "Fakel U19",
-        "status": "2H",
+        "status": "FT",
         "league": "Youth Championship"
       },
       {
@@ -2063,7 +2063,7 @@
         "kickoff_utc": "2026-10-16T12:00:00+00:00",
         "home": "Rubin Kazan U20",
         "away": "Spartak Moskva U19",
-        "status": "HT",
+        "status": "FT",
         "league": "Youth Championship"
       },
       {
@@ -2090,7 +2090,7 @@
         "kickoff_utc": "2026-10-16T12:00:00+00:00",
         "home": "Turan Turkistan",
         "away": "Shakhter Karagandy",
-        "status": "2H",
+        "status": "FT",
         "league": "1. Division"
       },
       {
@@ -2099,7 +2099,7 @@
         "kickoff_utc": "2026-10-16T12:00:00+00:00",
         "home": "OFK Vršac",
         "away": "Teleoptik",
-        "status": "HT",
+        "status": "FT",
         "league": "Prva Liga"
       },
       {
@@ -2108,7 +2108,7 @@
         "kickoff_utc": "2026-10-16T12:00:00+00:00",
         "home": "Ayutthaya FC",
         "away": "Lamphun Warrior",
-        "status": "HT",
+        "status": "FT",
         "league": "Thai League 1"
       },
       {
@@ -2117,7 +2117,7 @@
         "kickoff_utc": "2026-10-16T12:00:00+00:00",
         "home": "Java United",
         "away": "Bali United",
-        "status": "HT",
+        "status": "FT",
         "league": "Liga 1"
       },
       {
@@ -2126,7 +2126,7 @@
         "kickoff_utc": "2026-10-16T12:00:00+00:00",
         "home": "Persepam Madura Utd",
         "away": "Bhayangkara FC",
-        "status": "HT",
+        "status": "FT",
         "league": "Liga 1"
       },
       {
@@ -2135,7 +2135,7 @@
         "kickoff_utc": "2026-10-16T12:00:00+00:00",
         "home": "Persijap",
         "away": "Isenmulang Kalteng",
-        "status": "HT",
+        "status": "FT",
         "league": "Liga 1"
       },
       {
@@ -2196,7 +2196,7 @@
         "id": "1629120",
         "date": "2026-10-16",
         "kickoff_utc": "2026-10-16T12:00:00+00:00",
-        "home": "Police",
+        "home": "Kenya Police",
         "away": "Posta Rangers FC",
         "status": "PST",
         "league": "FKF Premier League"
@@ -2441,7 +2441,7 @@
         "kickoff_utc": "2026-10-16T12:00:00+00:00",
         "home": "Persiba Balikpapan",
         "away": "Tornado Pekanbaru",
-        "status": "HT",
+        "status": "FT",
         "league": "Liga 2"
       },
       {
@@ -2450,7 +2450,7 @@
         "kickoff_utc": "2026-10-16T12:00:00+00:00",
         "home": "Mebrat Hayl",
         "away": "Negelle Arsi",
-        "status": "HT",
+        "status": "FT",
         "league": "Premier League"
       },
       {
@@ -2459,7 +2459,7 @@
         "kickoff_utc": "2026-10-16T12:00:00+00:00",
         "home": "Neftochimic Burgas",
         "away": "CSKA 1948",
-        "status": "2H",
+        "status": "FT",
         "league": "Cup"
       },
       {
@@ -2468,7 +2468,7 @@
         "kickoff_utc": "2026-10-16T12:00:00+00:00",
         "home": "Al Karama",
         "away": "Al Nawaeir",
-        "status": "HT",
+        "status": "FT",
         "league": "Premier League"
       },
       {
@@ -2477,7 +2477,7 @@
         "kickoff_utc": "2026-10-16T12:00:00+00:00",
         "home": "Damascus Al-Ahli",
         "away": "Shorta",
-        "status": "HT",
+        "status": "FT",
         "league": "Premier League"
       },
       {
@@ -2486,7 +2486,7 @@
         "kickoff_utc": "2026-10-16T12:05:00+00:00",
         "home": "Al Taraji",
         "away": "Arar",
-        "status": "NS",
+        "status": "FT",
         "league": "Division 2"
       },
       {
@@ -2504,7 +2504,7 @@
         "kickoff_utc": "2026-10-16T12:30:00+00:00",
         "home": "BATE II",
         "away": "FC Slutsk",
-        "status": "1H",
+        "status": "FT",
         "league": "1. Division"
       },
       {
@@ -2513,7 +2513,7 @@
         "kickoff_utc": "2026-10-16T12:30:00+00:00",
         "home": "El Seka El Hadid",
         "away": "Ismaily SC",
-        "status": "1H",
+        "status": "FT",
         "league": "Second League"
       },
       {
@@ -2522,7 +2522,7 @@
         "kickoff_utc": "2026-10-16T12:30:00+00:00",
         "home": "Baladiyyat Al Mehalla",
         "away": "Masar",
-        "status": "1H",
+        "status": "FT",
         "league": "Second League"
       },
       {
@@ -2531,7 +2531,7 @@
         "kickoff_utc": "2026-10-16T12:30:00+00:00",
         "home": "Pharco",
         "away": "Maleyet Kafr El Zayiat",
-        "status": "1H",
+        "status": "FT",
         "league": "Second League"
       },
       {
@@ -2540,7 +2540,7 @@
         "kickoff_utc": "2026-10-16T12:30:00+00:00",
         "home": "Proxy",
         "away": "El Entag EL Harby",
-        "status": "1H",
+        "status": "FT",
         "league": "Second League"
       },
       {
@@ -2549,7 +2549,7 @@
         "kickoff_utc": "2026-10-16T12:30:00+00:00",
         "home": "Tersana",
         "away": "Mega Sport",
-        "status": "1H",
+        "status": "FT",
         "league": "Second League"
       },
       {
@@ -2558,7 +2558,7 @@
         "kickoff_utc": "2026-10-16T12:30:00+00:00",
         "home": "Al Qwarah",
         "away": "Baish",
-        "status": "NS",
+        "status": "FT",
         "league": "Division 2"
       },
       {
@@ -2567,7 +2567,7 @@
         "kickoff_utc": "2026-10-16T12:35:00+00:00",
         "home": "Afif",
         "away": "Al Baten",
-        "status": "NS",
+        "status": "FT",
         "league": "Division 2"
       },
       {
@@ -2594,7 +2594,7 @@
         "kickoff_utc": "2026-10-16T12:45:00+00:00",
         "home": "Al-Wajj",
         "away": "Al Sahel",
-        "status": "NS",
+        "status": "FT",
         "league": "Division 2"
       },
       {
@@ -2603,7 +2603,7 @@
         "kickoff_utc": "2026-10-16T13:00:00+00:00",
         "home": "Iveria Khashuri",
         "away": "Betlemi",
-        "status": "1H",
+        "status": "FT",
         "league": "Liga 3"
       },
       {
@@ -2612,7 +2612,7 @@
         "kickoff_utc": "2026-10-16T13:00:00+00:00",
         "home": "Akademiya Konoplev U20",
         "away": "Dynamo Makhachkala U19",
-        "status": "1H",
+        "status": "FT",
         "league": "Youth Championship"
       },
       {
@@ -2621,7 +2621,7 @@
         "kickoff_utc": "2026-10-16T13:00:00+00:00",
         "home": "Hapoel Afula",
         "away": "Maccabi Herzliya",
-        "status": "1H",
+        "status": "FT",
         "league": "Liga Leumit"
       },
       {
@@ -2630,7 +2630,7 @@
         "kickoff_utc": "2026-10-16T13:00:00+00:00",
         "home": "Kiryat Yam SC",
         "away": "Kafr Qasim",
-        "status": "1H",
+        "status": "FT",
         "league": "Liga Leumit"
       },
       {
@@ -2639,7 +2639,7 @@
         "kickoff_utc": "2026-10-16T13:00:00+00:00",
         "home": "Maccabi Kabilio Jaffa",
         "away": "Ironi Modi'in",
-        "status": "1H",
+        "status": "FT",
         "league": "Liga Leumit"
       },
       {
@@ -2648,7 +2648,7 @@
         "kickoff_utc": "2026-10-16T13:00:00+00:00",
         "home": "Maccabi Ahi Nazareth",
         "away": "Hapoel Kfar Saba",
-        "status": "1H",
+        "status": "FT",
         "league": "Liga Leumit"
       },
       {
@@ -2657,7 +2657,7 @@
         "kickoff_utc": "2026-10-16T13:00:00+00:00",
         "home": "Ashdod",
         "away": "Maccabi Kiryat Gat",
-        "status": "1H",
+        "status": "FT",
         "league": "Liga Leumit"
       },
       {
@@ -2666,7 +2666,7 @@
         "kickoff_utc": "2026-10-16T13:00:00+00:00",
         "home": "Baník Ostrava II",
         "away": "Slavia Praha II",
-        "status": "1H",
+        "status": "FT",
         "league": "FNL"
       },
       {
@@ -2675,7 +2675,7 @@
         "kickoff_utc": "2026-10-16T13:00:00+00:00",
         "home": "Parma U20",
         "away": "Bologna U20",
-        "status": "1H",
+        "status": "FT",
         "league": "Campionato Primavera - 1"
       },
       {
@@ -2684,7 +2684,7 @@
         "kickoff_utc": "2026-10-16T13:00:00+00:00",
         "home": "Alashkert",
         "away": "Syunik",
-        "status": "1H",
+        "status": "FT",
         "league": "Premier League"
       },
       {
@@ -2693,7 +2693,7 @@
         "kickoff_utc": "2026-10-16T13:00:00+00:00",
         "home": "Grobničan Čavle",
         "away": "Uljanik",
-        "status": "1H",
+        "status": "FT",
         "league": "Second NL"
       },
       {
@@ -2702,7 +2702,7 @@
         "kickoff_utc": "2026-10-16T13:00:00+00:00",
         "home": "Fountain Gate",
         "away": "Pamba Jiji",
-        "status": "1H",
+        "status": "FT",
         "league": "Ligi kuu Bara"
       },
       {
@@ -2711,7 +2711,7 @@
         "kickoff_utc": "2026-10-16T13:00:00+00:00",
         "home": "Kelantan Red Warrior FC",
         "away": "Imigresen",
-        "status": "1H",
+        "status": "FT",
         "league": "Super League"
       },
       {
@@ -2720,7 +2720,7 @@
         "kickoff_utc": "2026-10-16T13:00:00+00:00",
         "home": "EL Merriekh Bentiu",
         "away": "Pyramids FC",
-        "status": "NS",
+        "status": "FT",
         "league": "CAF Champions League"
       },
       {
@@ -2729,7 +2729,7 @@
         "kickoff_utc": "2026-10-16T13:00:00+00:00",
         "home": "Halaba Ketema",
         "away": "Bahardar",
-        "status": "1H",
+        "status": "FT",
         "league": "Premier League"
       },
       {
@@ -2738,7 +2738,7 @@
         "kickoff_utc": "2026-10-16T13:00:00+00:00",
         "home": "Al Fujairah SC",
         "away": "Palm City",
-        "status": "1H",
+        "status": "FT",
         "league": "Division 1"
       },
       {
@@ -2747,7 +2747,7 @@
         "kickoff_utc": "2026-10-16T13:00:00+00:00",
         "home": "Al Urooba",
         "away": "Dibba Al Hisn",
-        "status": "1H",
+        "status": "FT",
         "league": "Division 1"
       },
       {
@@ -2756,7 +2756,7 @@
         "kickoff_utc": "2026-10-16T13:00:00+00:00",
         "home": "Gulf United",
         "away": "Emirates Club",
-        "status": "1H",
+        "status": "FT",
         "league": "Division 1"
       },
       {
@@ -2765,7 +2765,7 @@
         "kickoff_utc": "2026-10-16T13:00:00+00:00",
         "home": "Boston City U20",
         "away": "América Mineiro U20",
-        "status": "1H",
+        "status": "FT",
         "league": "Mineiro U20"
       },
       {
@@ -2774,7 +2774,7 @@
         "kickoff_utc": "2026-10-16T13:00:00+00:00",
         "home": "Bars",
         "away": "Dordoi Bishkek",
-        "status": "NS",
+        "status": "FT",
         "league": "Premier League"
       },
       {
@@ -2783,7 +2783,7 @@
         "kickoff_utc": "2026-10-16T13:00:00+00:00",
         "home": "Muras United",
         "away": "Talant",
-        "status": "NS",
+        "status": "FT",
         "league": "Premier League"
       },
       {
@@ -2792,7 +2792,7 @@
         "kickoff_utc": "2026-10-16T13:05:00+00:00",
         "home": "Al-Dhafra",
         "away": "Dubai United",
-        "status": "NS",
+        "status": "FT",
         "league": "Pro League"
       },
       {
@@ -2801,7 +2801,7 @@
         "kickoff_utc": "2026-10-16T13:15:00+00:00",
         "home": "Al-Qadisiyah FC",
         "away": "Abha",
-        "status": "NS",
+        "status": "FT",
         "league": "Pro League"
       },
       {
@@ -2810,7 +2810,7 @@
         "kickoff_utc": "2026-10-16T13:30:00+00:00",
         "home": "Ilirija",
         "away": "Tabor Sežana",
-        "status": "NS",
+        "status": "FT",
         "league": "2. SNL"
       },
       {
@@ -2819,7 +2819,7 @@
         "kickoff_utc": "2026-10-16T13:30:00+00:00",
         "home": "Dinamo Zagreb U21",
         "away": "Karlovac 1919",
-        "status": "NS",
+        "status": "FT",
         "league": "First NL"
       },
       {
@@ -2828,7 +2828,7 @@
         "kickoff_utc": "2026-10-16T13:30:00+00:00",
         "home": "Opatija",
         "away": "Sesvete",
-        "status": "NS",
+        "status": "FT",
         "league": "First NL"
       },
       {
@@ -2837,7 +2837,7 @@
         "kickoff_utc": "2026-10-16T13:30:00+00:00",
         "home": "Gomora United FC",
         "away": "Cape Town City",
-        "status": "NS",
+        "status": "FT",
         "league": "1st Division"
       },
       {
@@ -2846,7 +2846,7 @@
         "kickoff_utc": "2026-10-16T13:30:00+00:00",
         "home": "Highbury",
         "away": "Lerumo Lions",
-        "status": "NS",
+        "status": "FT",
         "league": "1st Division"
       },
       {
@@ -2855,7 +2855,7 @@
         "kickoff_utc": "2026-10-16T13:30:00+00:00",
         "home": "Brann U19",
         "away": "Fredrikstad FK U19",
-        "status": "NS",
+        "status": "FT",
         "league": "Nasjonal U19 Champions League"
       },
       {
@@ -2864,7 +2864,7 @@
         "kickoff_utc": "2026-10-16T14:00:00+00:00",
         "home": "Dinamo Tbilisi II",
         "away": "WIT Georgia",
-        "status": "NS",
+        "status": "FT",
         "league": "Liga 3"
       },
       {
@@ -2873,7 +2873,7 @@
         "kickoff_utc": "2026-10-16T14:00:00+00:00",
         "home": "Lokomotivi Tbilisi",
         "away": "Merani Tbilisi",
-        "status": "NS",
+        "status": "FT",
         "league": "Liga 3"
       },
       {
@@ -2882,7 +2882,7 @@
         "kickoff_utc": "2026-10-16T14:00:00+00:00",
         "home": "Bunyodkor",
         "away": "Sogdiana",
-        "status": "NS",
+        "status": "FT",
         "league": "Super League"
       },
       {
@@ -2891,7 +2891,7 @@
         "kickoff_utc": "2026-10-16T14:00:00+00:00",
         "home": "Kokand-1912",
         "away": "Neftchi",
-        "status": "NS",
+        "status": "FT",
         "league": "Super League"
       },
       {
@@ -2900,7 +2900,7 @@
         "kickoff_utc": "2026-10-16T14:00:00+00:00",
         "home": "Surkhon",
         "away": "Xorazm",
-        "status": "NS",
+        "status": "FT",
         "league": "Super League"
       },
       {
@@ -2909,7 +2909,7 @@
         "kickoff_utc": "2026-10-16T14:00:00+00:00",
         "home": "Zenit U19",
         "away": "Almaz Antey U19",
-        "status": "NS",
+        "status": "FT",
         "league": "Youth Championship"
       },
       {
@@ -2918,7 +2918,7 @@
         "kickoff_utc": "2026-10-16T14:00:00+00:00",
         "home": "Police",
         "away": "Gorilla",
-        "status": "NS",
+        "status": "FT",
         "league": "National Soccer League"
       },
       {
@@ -2927,7 +2927,7 @@
         "kickoff_utc": "2026-10-16T14:00:00+00:00",
         "home": "SC Delhi",
         "away": "ATK Mohun Bagan",
-        "status": "NS",
+        "status": "FT",
         "league": "Indian Super League"
       },
       {
@@ -2936,7 +2936,7 @@
         "kickoff_utc": "2026-10-16T14:00:00+00:00",
         "home": "Doqarah",
         "away": "Al Jazeera",
-        "status": "NS",
+        "status": "FT",
         "league": "League"
       },
       {
@@ -2945,7 +2945,7 @@
         "kickoff_utc": "2026-10-16T14:30:00+00:00",
         "home": "Be1 NFA",
         "away": "Neptūną Klaipėda",
-        "status": "NS",
+        "status": "FT",
         "league": "1 Lyga"
       },
       {
@@ -2954,7 +2954,7 @@
         "kickoff_utc": "2026-10-16T14:30:00+00:00",
         "home": "Al Ahli Doha",
         "away": "Al Wakrah",
-        "status": "NS",
+        "status": "FT",
         "league": "Stars League"
       },
       {
@@ -2963,7 +2963,7 @@
         "kickoff_utc": "2026-10-16T14:30:00+00:00",
         "home": "Olympique Akbou",
         "away": "Ben Aknoun",
-        "status": "NS",
+        "status": "FT",
         "league": "Ligue 1"
       },
       {
@@ -2972,7 +2972,7 @@
         "kickoff_utc": "2026-10-16T15:00:00+00:00",
         "home": "Gonio",
         "away": "Irao",
-        "status": "NS",
+        "status": "FT",
         "league": "Liga 3"
       },
       {
@@ -2981,7 +2981,7 @@
         "kickoff_utc": "2026-10-16T15:00:00+00:00",
         "home": "Radnik Surdulica",
         "away": "Radnicki NIS",
-        "status": "NS",
+        "status": "FT",
         "league": "Super Liga"
       },
       {
@@ -2990,7 +2990,7 @@
         "kickoff_utc": "2026-10-16T15:00:00+00:00",
         "home": "Vlašim",
         "away": "Hanácká",
-        "status": "NS",
+        "status": "FT",
         "league": "FNL"
       },
       {
@@ -2999,7 +2999,7 @@
         "kickoff_utc": "2026-10-16T15:00:00+00:00",
         "home": "Pohronie",
         "away": "Malženice",
-        "status": "NS",
+        "status": "FT",
         "league": "2. liga"
       },
       {
@@ -3008,7 +3008,7 @@
         "kickoff_utc": "2026-10-16T15:00:00+00:00",
         "home": "Liptovský Mikuláš",
         "away": "Baník Lehota p.Vtáčnikom",
-        "status": "NS",
+        "status": "FT",
         "league": "2. liga"
       },
       {
@@ -3017,7 +3017,7 @@
         "kickoff_utc": "2026-10-16T15:00:00+00:00",
         "home": "Oţelul",
         "away": "Csikszereda",
-        "status": "NS",
+        "status": "FT",
         "league": "Liga I"
       },
       {
@@ -3026,7 +3026,7 @@
         "kickoff_utc": "2026-10-16T15:00:00+00:00",
         "home": "Hranice",
         "away": "Vítkovice",
-        "status": "NS",
+        "status": "FT",
         "league": "3. liga - MSFL"
       },
       {
@@ -3035,7 +3035,7 @@
         "kickoff_utc": "2026-10-16T15:00:00+00:00",
         "home": "Gandzasar",
         "away": "Sardarapat",
-        "status": "NS",
+        "status": "FT",
         "league": "Premier League"
       },
       {
@@ -3044,7 +3044,7 @@
         "kickoff_utc": "2026-10-16T15:00:00+00:00",
         "home": "Necaxa U21",
         "away": "Atlas U21",
-        "status": "NS",
+        "status": "FT",
         "league": "Liga MX U21"
       },
       {
@@ -3053,7 +3053,7 @@
         "kickoff_utc": "2026-10-16T15:00:00+00:00",
         "home": "Sumqayıt",
         "away": "Araz",
-        "status": "NS",
+        "status": "FT",
         "league": "Premyer Liqa"
       },
       {
@@ -3062,7 +3062,7 @@
         "kickoff_utc": "2026-10-16T15:00:00+00:00",
         "home": "Al Riyadh",
         "away": "Al-Hilal Saudi FC",
-        "status": "NS",
+        "status": "PST",
         "league": "Pro League"
       },
       {
@@ -3098,7 +3098,7 @@
         "kickoff_utc": "2026-10-16T15:00:00+00:00",
         "home": "Karbala",
         "away": "Gharraf",
-        "status": "NS",
+        "status": "FT",
         "league": "Iraqi League"
       },
       {
@@ -3107,7 +3107,7 @@
         "kickoff_utc": "2026-10-16T15:00:00+00:00",
         "home": "Newroz",
         "away": "Al Minaa Basra",
-        "status": "NS",
+        "status": "FT",
         "league": "Iraqi League"
       },
       {
@@ -3134,7 +3134,7 @@
         "kickoff_utc": "2026-10-16T15:00:00+00:00",
         "home": "Adama Kenema",
         "away": "Sheger Ketema",
-        "status": "NS",
+        "status": "FT",
         "league": "Premier League"
       },
       {
@@ -3143,7 +3143,7 @@
         "kickoff_utc": "2026-10-16T15:30:00+00:00",
         "home": "Aluminij",
         "away": "Olimpija Ljubljana",
-        "status": "NS",
+        "status": "FT",
         "league": "1. SNL"
       },
       {
@@ -3152,7 +3152,7 @@
         "kickoff_utc": "2026-10-16T15:30:00+00:00",
         "home": "Karviná",
         "away": "Dukla Praha",
-        "status": "NS",
+        "status": "FT",
         "league": "FNL"
       },
       {
@@ -3170,7 +3170,7 @@
         "kickoff_utc": "2026-10-16T15:45:00+00:00",
         "home": "Baniyas SC",
         "away": "Al-Wasl FC",
-        "status": "NS",
+        "status": "FT",
         "league": "Pro League"
       },
       {
@@ -3197,7 +3197,7 @@
         "kickoff_utc": "2026-10-16T16:00:00+00:00",
         "home": "Dinamo Moskva U19",
         "away": "Rostov U19",
-        "status": "NS",
+        "status": "FT",
         "league": "Youth Championship"
       },
       {
@@ -3206,7 +3206,7 @@
         "kickoff_utc": "2026-10-16T16:00:00+00:00",
         "home": "Rudes",
         "away": "HNK Rijeka",
-        "status": "NS",
+        "status": "FT",
         "league": "HNL"
       },
       {
@@ -3215,7 +3215,7 @@
         "kickoff_utc": "2026-10-16T16:00:00+00:00",
         "home": "Wieczysta Kraków",
         "away": "Raków Częstochowa",
-        "status": "NS",
+        "status": "FT",
         "league": "Ekstraklasa"
       },
       {
@@ -3224,7 +3224,7 @@
         "kickoff_utc": "2026-10-16T16:00:00+00:00",
         "home": "Ekranas",
         "away": "Dainava",
-        "status": "NS",
+        "status": "FT",
         "league": "1 Lyga"
       },
       {
@@ -3233,7 +3233,7 @@
         "kickoff_utc": "2026-10-16T16:00:00+00:00",
         "home": "Hegelmann II",
         "away": "Tauras",
-        "status": "NS",
+        "status": "FT",
         "league": "1 Lyga"
       },
       {
@@ -3242,7 +3242,7 @@
         "kickoff_utc": "2026-10-16T16:00:00+00:00",
         "home": "Jonava",
         "away": "BFA",
-        "status": "NS",
+        "status": "FT",
         "league": "1 Lyga"
       },
       {
@@ -3251,7 +3251,7 @@
         "kickoff_utc": "2026-10-16T16:00:00+00:00",
         "home": "Kauno Žalgiris II",
         "away": "Transinvest 2",
-        "status": "NS",
+        "status": "FT",
         "league": "1 Lyga"
       },
       {
@@ -3260,7 +3260,7 @@
         "kickoff_utc": "2026-10-16T16:00:00+00:00",
         "home": "Warta Poznań",
         "away": "Unia Skierniewice",
-        "status": "NS",
+        "status": "FT",
         "league": "I Liga"
       },
       {
@@ -3269,7 +3269,7 @@
         "kickoff_utc": "2026-10-16T16:00:00+00:00",
         "home": "Dravinja",
         "away": "Jesenice",
-        "status": "NS",
+        "status": "FT",
         "league": "2. SNL"
       },
       {
@@ -3278,7 +3278,7 @@
         "kickoff_utc": "2026-10-16T16:00:00+00:00",
         "home": "Triglav",
         "away": "Dekani",
-        "status": "NS",
+        "status": "FT",
         "league": "2. SNL"
       },
       {
@@ -3287,7 +3287,7 @@
         "kickoff_utc": "2026-10-16T16:00:00+00:00",
         "home": "Opava",
         "away": "Vysočina Jihlava",
-        "status": "NS",
+        "status": "FT",
         "league": "FNL"
       },
       {
@@ -3296,7 +3296,7 @@
         "kickoff_utc": "2026-10-16T16:00:00+00:00",
         "home": "Příbram",
         "away": "Třinec",
-        "status": "NS",
+        "status": "FT",
         "league": "FNL"
       },
       {
@@ -3305,7 +3305,7 @@
         "kickoff_utc": "2026-10-16T16:00:00+00:00",
         "home": "Prostějov",
         "away": "Ústí nad Labem",
-        "status": "NS",
+        "status": "FT",
         "league": "FNL"
       },
       {
@@ -3314,7 +3314,7 @@
         "kickoff_utc": "2026-10-16T16:00:00+00:00",
         "home": "Rotor Volgograd",
         "away": "FC Sochi",
-        "status": "NS",
+        "status": "FT",
         "league": "First League"
       },
       {
@@ -3323,7 +3323,7 @@
         "kickoff_utc": "2026-10-16T16:00:00+00:00",
         "home": "Hlučín",
         "away": "Kravare",
-        "status": "NS",
+        "status": "FT",
         "league": "4. liga - Divizie F"
       },
       {
@@ -3332,7 +3332,7 @@
         "kickoff_utc": "2026-10-16T16:00:00+00:00",
         "home": "Geita Gold",
         "away": "Dodoma Jiji",
-        "status": "NS",
+        "status": "FT",
         "league": "Ligi kuu Bara"
       },
       {
@@ -3341,7 +3341,7 @@
         "kickoff_utc": "2026-10-16T16:00:00+00:00",
         "home": "Enosis",
         "away": "ASIL Lysi",
-        "status": "NS",
+        "status": "FT",
         "league": "2. Division"
       },
       {
@@ -3359,7 +3359,7 @@
         "kickoff_utc": "2026-10-16T16:00:00+00:00",
         "home": "Sloga Doboj",
         "away": "Siroki Brijeg",
-        "status": "NS",
+        "status": "FT",
         "league": "Premijer Liga"
       },
       {
@@ -3386,7 +3386,7 @@
         "kickoff_utc": "2026-10-16T16:00:00+00:00",
         "home": "APR",
         "away": "Zamalek SC",
-        "status": "NS",
+        "status": "FT",
         "league": "CAF Champions League"
       },
       {
@@ -3404,7 +3404,7 @@
         "kickoff_utc": "2026-10-16T16:00:00+00:00",
         "home": "A'Ali",
         "away": "Sitra",
-        "status": "NS",
+        "status": "FT",
         "league": "Premier League"
       },
       {
@@ -3413,7 +3413,7 @@
         "kickoff_utc": "2026-10-16T16:00:00+00:00",
         "home": "Al Ittifaq Maqaba",
         "away": "Manama",
-        "status": "NS",
+        "status": "FT",
         "league": "Premier League"
       },
       {
@@ -3422,7 +3422,7 @@
         "kickoff_utc": "2026-10-16T16:00:00+00:00",
         "home": "Yantra 2019",
         "away": "Lokomotiv Plovdiv",
-        "status": "NS",
+        "status": "FT",
         "league": "Cup"
       },
       {
@@ -3431,7 +3431,7 @@
         "kickoff_utc": "2026-10-16T16:00:00+00:00",
         "home": "Senegal U20",
         "away": "Mauritania U20",
-        "status": "NS",
+        "status": "FT",
         "league": "Africa Cup of Nations U20"
       },
       {
@@ -3449,7 +3449,7 @@
         "kickoff_utc": "2026-10-16T16:30:00+00:00",
         "home": "Hluboka nad Vltavou",
         "away": "Spartak Pribram",
-        "status": "NS",
+        "status": "FT",
         "league": "4. liga - Divizie A"
       },
       {
@@ -3467,7 +3467,7 @@
         "kickoff_utc": "2026-10-16T16:30:00+00:00",
         "home": "Voitsberg",
         "away": "First Vienna",
-        "status": "NS",
+        "status": "FT",
         "league": "2. Liga"
       },
       {
@@ -3476,7 +3476,7 @@
         "kickoff_utc": "2026-10-16T16:30:00+00:00",
         "home": "Austria Vienna (Am)",
         "away": "WSPG Wels",
-        "status": "NS",
+        "status": "FT",
         "league": "2. Liga"
       },
       {
@@ -3485,7 +3485,7 @@
         "kickoff_utc": "2026-10-16T16:30:00+00:00",
         "home": "SKN ST. Polten",
         "away": "Rapid Wien II",
-        "status": "NS",
+        "status": "FT",
         "league": "2. Liga"
       },
       {
@@ -3494,7 +3494,7 @@
         "kickoff_utc": "2026-10-16T16:30:00+00:00",
         "home": "Energie Cottbus",
         "away": "1. FC Nürnberg",
-        "status": "NS",
+        "status": "FT",
         "league": "2. Bundesliga"
       },
       {
@@ -3503,7 +3503,7 @@
         "kickoff_utc": "2026-10-16T16:30:00+00:00",
         "home": "Holstein Kiel",
         "away": "Hertha BSC",
-        "status": "NS",
+        "status": "FT",
         "league": "2. Bundesliga"
       },
       {
@@ -3512,7 +3512,7 @@
         "kickoff_utc": "2026-10-16T16:30:00+00:00",
         "home": "Dinamo Tirana",
         "away": "Teuta Durrës",
-        "status": "NS",
+        "status": "FT",
         "league": "Superliga"
       },
       {
@@ -3521,7 +3521,7 @@
         "kickoff_utc": "2026-10-16T16:30:00+00:00",
         "home": "SC Freiburg W",
         "away": "RB Leipzig W",
-        "status": "NS",
+        "status": "FT",
         "league": "Frauen Bundesliga"
       },
       {
@@ -3530,7 +3530,7 @@
         "kickoff_utc": "2026-10-16T16:30:00+00:00",
         "home": "Al Buqa'a",
         "away": "Al Salt",
-        "status": "NS",
+        "status": "FT",
         "league": "League"
       },
       {
@@ -3539,7 +3539,7 @@
         "kickoff_utc": "2026-10-16T16:45:00+00:00",
         "home": "Al Shahaniya",
         "away": "Al-Arabi SC",
-        "status": "NS",
+        "status": "FT",
         "league": "Stars League"
       },
       {
@@ -3548,7 +3548,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "IF Brommapojkarna",
         "away": "Djurgardens IF",
-        "status": "NS",
+        "status": "FT",
         "league": "Allsvenskan"
       },
       {
@@ -3557,7 +3557,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "Lund",
         "away": "Trelleborg",
-        "status": "NS",
+        "status": "FT",
         "league": "Ettan - Södra"
       },
       {
@@ -3566,7 +3566,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "AC Horsens",
         "away": "Randers FC",
-        "status": "NS",
+        "status": "FT",
         "league": "Superliga"
       },
       {
@@ -3575,7 +3575,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "Aarhus Fremad",
         "away": "Esbjerg",
-        "status": "NS",
+        "status": "FT",
         "league": "1. Division"
       },
       {
@@ -3584,7 +3584,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "HB Koge",
         "away": "AB Copenhagen",
-        "status": "NS",
+        "status": "FT",
         "league": "1. Division"
       },
       {
@@ -3593,7 +3593,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "Kolding IF",
         "away": "Vendsyssel FF",
-        "status": "NS",
+        "status": "FT",
         "league": "1. Division"
       },
       {
@@ -3602,7 +3602,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "Vorwärts-Wacker 04",
         "away": "Concordia",
-        "status": "NS",
+        "status": "FT",
         "league": "Oberliga - Hamburg"
       },
       {
@@ -3611,7 +3611,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "Kornburg",
         "away": "Neudrossenfeld",
-        "status": "NS",
+        "status": "FT",
         "league": "Oberliga - Bayern Nord"
       },
       {
@@ -3620,7 +3620,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "Großbardorf",
         "away": "DJK Bamberg",
-        "status": "NS",
+        "status": "FT",
         "league": "Oberliga - Bayern Nord"
       },
       {
@@ -3629,7 +3629,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "Polonia Nysa",
         "away": "Karkonosze Jelenia Góra",
-        "status": "NS",
+        "status": "FT",
         "league": "III Liga - Group 3"
       },
       {
@@ -3638,7 +3638,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "FC Cartagena",
         "away": "Europa Fc",
-        "status": "NS",
+        "status": "FT",
         "league": "Primera División RFEF - Group 2"
       },
       {
@@ -3647,7 +3647,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "Gloggnitz",
         "away": "Oberwart",
-        "status": "NS",
+        "status": "FT",
         "league": "Regionalliga - Ost"
       },
       {
@@ -3656,7 +3656,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "Scheiblingkirchen",
         "away": "Krems / Rehberg",
-        "status": "NS",
+        "status": "FT",
         "league": "Regionalliga - Ost"
       },
       {
@@ -3665,7 +3665,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "Fremad Amager",
         "away": "Nykobing FC",
-        "status": "NS",
+        "status": "FT",
         "league": "2. Division"
       },
       {
@@ -3674,7 +3674,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "Naestved",
         "away": "B 93",
-        "status": "NS",
+        "status": "FT",
         "league": "2. Division"
       },
       {
@@ -3683,7 +3683,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "Servette Chênois W",
         "away": "Luzern W",
-        "status": "NS",
+        "status": "FT",
         "league": "AXA Women’s Super League"
       },
       {
@@ -3692,7 +3692,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "Zürich W",
         "away": "St. Gallen W",
-        "status": "NS",
+        "status": "FT",
         "league": "AXA Women’s Super League"
       },
       {
@@ -3701,7 +3701,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "FC 08 Villingen",
         "away": "FV Ravensburg",
-        "status": "NS",
+        "status": "FT",
         "league": "Oberliga - Baden-Württemberg"
       },
       {
@@ -3710,7 +3710,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "FC Nöttingen",
         "away": "CFR Pforzheim",
-        "status": "NS",
+        "status": "FT",
         "league": "Oberliga - Baden-Württemberg"
       },
       {
@@ -3719,7 +3719,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "Fortuna Köln",
         "away": "Stuttgart II",
-        "status": "NS",
+        "status": "FT",
         "league": "3. Liga"
       },
       {
@@ -3728,7 +3728,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "Çorum FK",
         "away": "Rizespor",
-        "status": "NS",
+        "status": "FT",
         "league": "Süper Lig"
       },
       {
@@ -3737,7 +3737,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "Illertissen",
         "away": "Buchbach",
-        "status": "NS",
+        "status": "FT",
         "league": "Regionalliga - Bayern"
       },
       {
@@ -3746,7 +3746,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "Atlas Delmenhorst",
         "away": "Bremer SV",
-        "status": "NS",
+        "status": "FT",
         "league": "Regionalliga - Nord"
       },
       {
@@ -3755,7 +3755,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "FC Rot-Weiß Erfurt",
         "away": "FSV Zwickau",
-        "status": "NS",
+        "status": "FT",
         "league": "Regionalliga - Nordost"
       },
       {
@@ -3764,7 +3764,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "Hertha BSC II",
         "away": "RSV Eintracht",
-        "status": "NS",
+        "status": "FT",
         "league": "Regionalliga - Nordost"
       },
       {
@@ -3773,7 +3773,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "Tasmania Berlin",
         "away": "SV Babelsberg 03",
-        "status": "NS",
+        "status": "FT",
         "league": "Regionalliga - Nordost"
       },
       {
@@ -3782,7 +3782,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "SV Sandhausen",
         "away": "Kickers Offenbach",
-        "status": "NS",
+        "status": "FT",
         "league": "Regionalliga - SudWest"
       },
       {
@@ -3791,7 +3791,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "Schalke 04 II",
         "away": "Westfalia Rhynern",
-        "status": "NS",
+        "status": "FT",
         "league": "Regionalliga - West"
       },
       {
@@ -3800,7 +3800,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "SG Wattenscheid 09",
         "away": "FC Gutersloh",
-        "status": "NS",
+        "status": "FT",
         "league": "Regionalliga - West"
       },
       {
@@ -3809,7 +3809,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "Lippstadt 08",
         "away": "Eintracht Rheine",
-        "status": "NS",
+        "status": "FT",
         "league": "Oberliga - Westfalen"
       },
       {
@@ -3818,7 +3818,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "OSC Bremerhaven",
         "away": "Eiche Horn",
-        "status": "NS",
+        "status": "FT",
         "league": "Oberliga - Bremen"
       },
       {
@@ -3827,7 +3827,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "Allerheiligen",
         "away": "Hartberg (Am)",
-        "status": "NS",
+        "status": "FT",
         "league": "Regionalliga - South"
       },
       {
@@ -3836,7 +3836,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "Deutschlandsberger SC",
         "away": "Tillmitsch",
-        "status": "NS",
+        "status": "FT",
         "league": "Regionalliga - South"
       },
       {
@@ -3845,7 +3845,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "SV Lafnitz",
         "away": "Gleisdorf 09",
-        "status": "NS",
+        "status": "FT",
         "league": "Regionalliga - South"
       },
       {
@@ -3854,7 +3854,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "Weiz",
         "away": "Kalsdorf",
-        "status": "NS",
+        "status": "FT",
         "league": "Regionalliga - South"
       },
       {
@@ -3863,7 +3863,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "Wolfsberg",
         "away": "Treibach",
-        "status": "NS",
+        "status": "FT",
         "league": "Regionalliga - South"
       },
       {
@@ -3872,7 +3872,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "Velden",
         "away": "Donau Klagenfurt",
-        "status": "NS",
+        "status": "FT",
         "league": "Regionalliga - South"
       },
       {
@@ -3890,7 +3890,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "Kuchl",
         "away": "Grödig",
-        "status": "NS",
+        "status": "FT",
         "league": "Regionalliga - North"
       },
       {
@@ -3899,7 +3899,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "TSV St. Johann",
         "away": "Bad Schallerbach",
-        "status": "NS",
+        "status": "FT",
         "league": "Regionalliga - North"
       },
       {
@@ -3908,7 +3908,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "Wallern / Marienkirchen",
         "away": "Leonfelden",
-        "status": "NS",
+        "status": "FT",
         "league": "Regionalliga - North"
       },
       {
@@ -3917,7 +3917,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "Shooting Stars",
         "away": "Ranchers Bees",
-        "status": "NS",
+        "status": "FT",
         "league": "NPFL"
       },
       {
@@ -3926,7 +3926,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "Stade Lausanne-Ouchy",
         "away": "Étoile Carouge",
-        "status": "NS",
+        "status": "FT",
         "league": "Schweizer Cup"
       },
       {
@@ -3953,7 +3953,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "IBV Vestmannaeyjar",
         "away": "FH hafnarfjordur",
-        "status": "NS",
+        "status": "FT",
         "league": "Úrvalsdeild"
       },
       {
@@ -3971,7 +3971,7 @@
         "kickoff_utc": "2026-10-16T17:00:00+00:00",
         "home": "Masr",
         "away": "Azam",
-        "status": "NS",
+        "status": "FT",
         "league": "CAF Confederation Cup"
       },
       {
@@ -3980,7 +3980,7 @@
         "kickoff_utc": "2026-10-16T17:10:00+00:00",
         "home": "Favoritner AC",
         "away": "Traiskirchen",
-        "status": "NS",
+        "status": "FT",
         "league": "Regionalliga - Ost"
       },
       {
@@ -3989,7 +3989,7 @@
         "kickoff_utc": "2026-10-16T17:15:00+00:00",
         "home": "Seekirchen",
         "away": "UFC Hallein",
-        "status": "NS",
+        "status": "FT",
         "league": "Regionalliga - North"
       },
       {
@@ -3998,7 +3998,7 @@
         "kickoff_utc": "2026-10-16T17:30:00+00:00",
         "home": "Stocksund",
         "away": "Enköping",
-        "status": "NS",
+        "status": "FT",
         "league": "Ettan - Norra"
       },
       {
@@ -4007,7 +4007,7 @@
         "kickoff_utc": "2026-10-16T17:30:00+00:00",
         "home": "Rapid Vienna",
         "away": "TSV Hartberg",
-        "status": "NS",
+        "status": "FT",
         "league": "Bundesliga"
       },
       {
@@ -4034,7 +4034,7 @@
         "kickoff_utc": "2026-10-16T17:30:00+00:00",
         "home": "Sportfreunde Schwaig",
         "away": "1860 München II",
-        "status": "NS",
+        "status": "FT",
         "league": "Oberliga - Bayern Süd"
       },
       {
@@ -4043,7 +4043,7 @@
         "kickoff_utc": "2026-10-16T17:30:00+00:00",
         "home": "Wiener SC",
         "away": "Mannsdorf-Großenzersdorf",
-        "status": "NS",
+        "status": "FT",
         "league": "Regionalliga - Ost"
       },
       {
@@ -4079,7 +4079,7 @@
         "kickoff_utc": "2026-10-16T17:30:00+00:00",
         "home": "Weiche Flensburg",
         "away": "SV Drochtersen/Assel",
-        "status": "NS",
+        "status": "FT",
         "league": "Regionalliga - Nord"
       },
       {
@@ -4088,7 +4088,7 @@
         "kickoff_utc": "2026-10-16T17:30:00+00:00",
         "home": "SV Rodinghausen",
         "away": "Köln II",
-        "status": "NS",
+        "status": "FT",
         "league": "Regionalliga - West"
       },
       {
@@ -4106,7 +4106,7 @@
         "kickoff_utc": "2026-10-16T17:30:00+00:00",
         "home": "Germania Ratingen",
         "away": "Sonsbeck",
-        "status": "NS",
+        "status": "FT",
         "league": "Oberliga - Niederrhein"
       },
       {
@@ -4124,7 +4124,7 @@
         "kickoff_utc": "2026-10-16T17:30:00+00:00",
         "home": "Chateauroux",
         "away": "Rumilly Vallières",
-        "status": "NS",
+        "status": "FT",
         "league": "National 2 - Group C"
       },
       {
@@ -4133,7 +4133,7 @@
         "kickoff_utc": "2026-10-16T17:30:00+00:00",
         "home": "Al Kahrabaa",
         "away": "Al Talaba",
-        "status": "NS",
+        "status": "FT",
         "league": "Iraqi League"
       },
       {
@@ -4142,7 +4142,7 @@
         "kickoff_utc": "2026-10-16T17:30:00+00:00",
         "home": "Diyala",
         "away": "Naft Maysan",
-        "status": "NS",
+        "status": "FT",
         "league": "Iraqi League"
       },
       {
@@ -4151,7 +4151,7 @@
         "kickoff_utc": "2026-10-16T17:30:00+00:00",
         "home": "Bellinzona",
         "away": "Collina d'Oro",
-        "status": "NS",
+        "status": "FT",
         "league": "Friendlies Clubs"
       },
       {
@@ -4160,7 +4160,7 @@
         "kickoff_utc": "2026-10-16T18:00:00+00:00",
         "home": "Sport Huancayo",
         "away": "Cusco",
-        "status": "NS",
+        "status": "2H",
         "league": "Primera División"
       },
       {
@@ -4169,7 +4169,7 @@
         "kickoff_utc": "2026-10-16T18:00:00+00:00",
         "home": "Den Bosch",
         "away": "FC OSS",
-        "status": "NS",
+        "status": "2H",
         "league": "Eerste Divisie"
       },
       {
@@ -4178,7 +4178,7 @@
         "kickoff_utc": "2026-10-16T18:00:00+00:00",
         "home": "FC Eindhoven",
         "away": "Vitesse",
-        "status": "NS",
+        "status": "2H",
         "league": "Eerste Divisie"
       },
       {
@@ -4187,7 +4187,7 @@
         "kickoff_utc": "2026-10-16T18:00:00+00:00",
         "home": "Helmond Sport",
         "away": "NAC Breda",
-        "status": "NS",
+        "status": "2H",
         "league": "Eerste Divisie"
       },
       {
@@ -4196,7 +4196,7 @@
         "kickoff_utc": "2026-10-16T18:00:00+00:00",
         "home": "VVV Venlo",
         "away": "Jong AZ",
-        "status": "NS",
+        "status": "2H",
         "league": "Eerste Divisie"
       },
       {
@@ -4205,7 +4205,7 @@
         "kickoff_utc": "2026-10-16T18:00:00+00:00",
         "home": "Heerenveen",
         "away": "Excelsior",
-        "status": "NS",
+        "status": "2H",
         "league": "Eredivisie"
       },
       {
@@ -4214,7 +4214,7 @@
         "kickoff_utc": "2026-10-16T18:00:00+00:00",
         "home": "Annecy",
         "away": "Nancy",
-        "status": "NS",
+        "status": "2H",
         "league": "Ligue 2"
       },
       {
@@ -4223,7 +4223,7 @@
         "kickoff_utc": "2026-10-16T18:00:00+00:00",
         "home": "Grenoble",
         "away": "Boulogne",
-        "status": "NS",
+        "status": "2H",
         "league": "Ligue 2"
       },
       {
@@ -4232,7 +4232,7 @@
         "kickoff_utc": "2026-10-16T18:00:00+00:00",
         "home": "Guingamp",
         "away": "PAU",
-        "status": "NS",
+        "status": "2H",
         "league": "Ligue 2"
       },
       {
@@ -4241,7 +4241,7 @@
         "kickoff_utc": "2026-10-16T18:00:00+00:00",
         "home": "Laval",
         "away": "Clermont Foot",
-        "status": "NS",
+        "status": "2H",
         "league": "Ligue 2"
       },
       {
@@ -4250,7 +4250,7 @@
         "kickoff_utc": "2026-10-16T18:00:00+00:00",
         "home": "Reims",
         "away": "Dijon",
-        "status": "NS",
+        "status": "2H",
         "league": "Ligue 2"
       },
       {
@@ -4259,7 +4259,7 @@
         "kickoff_utc": "2026-10-16T18:00:00+00:00",
         "home": "RAAL La Louviere W",
         "away": "Club Brugge W",
-        "status": "NS",
+        "status": "2H",
         "league": "Super League Women"
       },
       {
@@ -4268,7 +4268,7 @@
         "kickoff_utc": "2026-10-16T18:00:00+00:00",
         "home": "MTK Budapest",
         "away": "Vasas",
-        "status": "NS",
+        "status": "2H",
         "league": "NB I"
       },
       {
@@ -4277,7 +4277,7 @@
         "kickoff_utc": "2026-10-16T18:00:00+00:00",
         "home": "Dinamo Bucuresti",
         "away": "FC Botosani",
-        "status": "NS",
+        "status": "2H",
         "league": "Liga I"
       },
       {
@@ -4295,7 +4295,7 @@
         "kickoff_utc": "2026-10-16T18:00:00+00:00",
         "home": "Marsaxlokk",
         "away": "Birkirkara",
-        "status": "NS",
+        "status": "2H",
         "league": "Premier League"
       },
       {
@@ -4331,7 +4331,7 @@
         "kickoff_utc": "2026-10-16T18:00:00+00:00",
         "home": "Artsul",
         "away": "Nova Cidade",
-        "status": "NS",
+        "status": "2H",
         "league": "Carioca - 2"
       },
       {
@@ -4340,7 +4340,7 @@
         "kickoff_utc": "2026-10-16T18:00:00+00:00",
         "home": "Al-Ittihad FC",
         "away": "Al Shabab",
-        "status": "NS",
+        "status": "TBD",
         "league": "Pro League"
       },
       {
@@ -4349,7 +4349,7 @@
         "kickoff_utc": "2026-10-16T18:00:00+00:00",
         "home": "K. Beerschot V.A. Reserve U21",
         "away": "Lierse K. U21",
-        "status": "NS",
+        "status": "2H",
         "league": "Reserve Pro League"
       },
       {
@@ -4358,7 +4358,7 @@
         "kickoff_utc": "2026-10-16T18:00:00+00:00",
         "home": "RWDM U21",
         "away": "Waasland-Beveren U21",
-        "status": "NS",
+        "status": "2H",
         "league": "Reserve Pro League"
       },
       {
@@ -4367,7 +4367,7 @@
         "kickoff_utc": "2026-10-16T18:00:00+00:00",
         "home": "Everton U21",
         "away": "Middlesbrough U21",
-        "status": "NS",
+        "status": "2H",
         "league": "Premier League 2 Division One"
       },
       {
@@ -4376,7 +4376,7 @@
         "kickoff_utc": "2026-10-16T18:00:00+00:00",
         "home": "Norwich City U21",
         "away": "West Ham United U21",
-        "status": "NS",
+        "status": "2H",
         "league": "Premier League 2 Division One"
       },
       {
@@ -4385,7 +4385,7 @@
         "kickoff_utc": "2026-10-16T18:00:00+00:00",
         "home": "Stoke City U21",
         "away": "Chelsea U21",
-        "status": "NS",
+        "status": "2H",
         "league": "Premier League 2 Division One"
       },
       {
@@ -4394,7 +4394,7 @@
         "kickoff_utc": "2026-10-16T18:00:00+00:00",
         "home": "Nottingham Forest U21",
         "away": "Manchester United U21",
-        "status": "NS",
+        "status": "2H",
         "league": "Premier League 2 Division One"
       },
       {
@@ -4403,7 +4403,7 @@
         "kickoff_utc": "2026-10-16T18:00:00+00:00",
         "home": "Rapperswil",
         "away": "FC ST. Gallen",
-        "status": "NS",
+        "status": "2H",
         "league": "Schweizer Cup"
       },
       {
@@ -4421,7 +4421,7 @@
         "kickoff_utc": "2026-10-16T18:00:00+00:00",
         "home": "San Antonio",
         "away": "Deportivo Cuenca Juniors",
-        "status": "NS",
+        "status": "2H",
         "league": "Liga Pro Serie B"
       },
       {
@@ -4430,7 +4430,7 @@
         "kickoff_utc": "2026-10-16T18:00:00+00:00",
         "home": "Corinthians U20",
         "away": "Portuguesa Santista U20",
-        "status": "NS",
+        "status": "2H",
         "league": "Paulista - U20"
       },
       {
@@ -4439,7 +4439,7 @@
         "kickoff_utc": "2026-10-16T18:00:00+00:00",
         "home": "Guarani U20",
         "away": "Sfera U20",
-        "status": "NS",
+        "status": "2H",
         "league": "Paulista - U20"
       },
       {
@@ -4448,7 +4448,7 @@
         "kickoff_utc": "2026-10-16T18:00:00+00:00",
         "home": "RB Bragantino U20",
         "away": "Flamengo SP U20",
-        "status": "NS",
+        "status": "2H",
         "league": "Paulista - U20"
       },
       {
@@ -4457,7 +4457,7 @@
         "kickoff_utc": "2026-10-16T18:15:00+00:00",
         "home": "Stade Nyonnais",
         "away": "FC Basel 1893",
-        "status": "NS",
+        "status": "2H",
         "league": "Schweizer Cup"
       },
       {
@@ -4466,7 +4466,7 @@
         "kickoff_utc": "2026-10-16T18:30:00+00:00",
         "home": "Widzew Łódź",
         "away": "Wisla Krakow",
-        "status": "NS",
+        "status": "2H",
         "league": "Ekstraklasa"
       },
       {
@@ -4475,7 +4475,7 @@
         "kickoff_utc": "2026-10-16T18:30:00+00:00",
         "home": "Ayr Utd",
         "away": "Partick",
-        "status": "NS",
+        "status": "2H",
         "league": "Championship"
       },
       {
@@ -4484,7 +4484,7 @@
         "kickoff_utc": "2026-10-16T18:30:00+00:00",
         "home": "Ruch Chorzów",
         "away": "Odra Opole",
-        "status": "NS",
+        "status": "2H",
         "league": "I Liga"
       },
       {
@@ -4493,7 +4493,7 @@
         "kickoff_utc": "2026-10-16T18:30:00+00:00",
         "home": "Wacker Innsbruck",
         "away": "Austria Salzburg",
-        "status": "NS",
+        "status": "2H",
         "league": "2. Liga"
       },
       {
@@ -4502,7 +4502,7 @@
         "kickoff_utc": "2026-10-16T18:30:00+00:00",
         "home": "Leganes",
         "away": "Cordoba",
-        "status": "NS",
+        "status": "2H",
         "league": "Segunda División"
       },
       {
@@ -4511,7 +4511,7 @@
         "kickoff_utc": "2026-10-16T18:30:00+00:00",
         "home": "Eintracht Frankfurt",
         "away": "1. FC Köln",
-        "status": "NS",
+        "status": "2H",
         "league": "Bundesliga"
       },
       {
@@ -4529,7 +4529,7 @@
         "kickoff_utc": "2026-10-16T18:30:00+00:00",
         "home": "Hellas Verona",
         "away": "Catanzaro",
-        "status": "NS",
+        "status": "2H",
         "league": "Serie B"
       },
       {
@@ -4538,7 +4538,7 @@
         "kickoff_utc": "2026-10-16T18:30:00+00:00",
         "home": "PRO Vercelli",
         "away": "Lecco",
-        "status": "NS",
+        "status": "2H",
         "league": "Serie C - Girone A"
       },
       {
@@ -4547,7 +4547,7 @@
         "kickoff_utc": "2026-10-16T18:30:00+00:00",
         "home": "Livorno",
         "away": "Grosseto",
-        "status": "NS",
+        "status": "2H",
         "league": "Serie C - Girone B"
       },
       {
@@ -4556,7 +4556,7 @@
         "kickoff_utc": "2026-10-16T18:30:00+00:00",
         "home": "Kortrijk U21",
         "away": "Francs Borains U21",
-        "status": "NS",
+        "status": "2H",
         "league": "Reserve Pro League"
       },
       {
@@ -4565,7 +4565,7 @@
         "kickoff_utc": "2026-10-16T18:30:00+00:00",
         "home": "RAAL La Louviere U21",
         "away": "Westerlo U21",
-        "status": "NS",
+        "status": "2H",
         "league": "Reserve Pro League"
       },
       {
@@ -4583,7 +4583,7 @@
         "kickoff_utc": "2026-10-16T18:30:00+00:00",
         "home": "SK Beveren",
         "away": "Habay-la-Neuve",
-        "status": "NS",
+        "status": "2H",
         "league": "Cup"
       },
       {
@@ -4592,7 +4592,7 @@
         "kickoff_utc": "2026-10-16T18:30:00+00:00",
         "home": "Sporting Hasselt",
         "away": "Cercle Brugge",
-        "status": "NS",
+        "status": "2H",
         "league": "Cup"
       },
       {
@@ -4601,7 +4601,7 @@
         "kickoff_utc": "2026-10-16T18:30:00+00:00",
         "home": "KVC Westerlo",
         "away": "Patro Eisden",
-        "status": "NS",
+        "status": "2H",
         "league": "Cup"
       },
       {
@@ -4619,7 +4619,7 @@
         "kickoff_utc": "2026-10-16T18:45:00+00:00",
         "home": "Bohemians",
         "away": "Waterford",
-        "status": "NS",
+        "status": "HT",
         "league": "Premier Division"
       },
       {
@@ -4628,7 +4628,7 @@
         "kickoff_utc": "2026-10-16T18:45:00+00:00",
         "home": "Drogheda United",
         "away": "Derry City",
-        "status": "NS",
+        "status": "HT",
         "league": "Premier Division"
       },
       {
@@ -4637,7 +4637,7 @@
         "kickoff_utc": "2026-10-16T18:45:00+00:00",
         "home": "Galway United",
         "away": "Shamrock Rovers",
-        "status": "NS",
+        "status": "HT",
         "league": "Premier Division"
       },
       {
@@ -4646,7 +4646,7 @@
         "kickoff_utc": "2026-10-16T18:45:00+00:00",
         "home": "Finn Harps",
         "away": "Bray Wanderers",
-        "status": "NS",
+        "status": "HT",
         "league": "First Division"
       },
       {
@@ -4655,7 +4655,7 @@
         "kickoff_utc": "2026-10-16T18:45:00+00:00",
         "home": "Kerry",
         "away": "Cork City",
-        "status": "NS",
+        "status": "HT",
         "league": "First Division"
       },
       {
@@ -4664,7 +4664,7 @@
         "kickoff_utc": "2026-10-16T18:45:00+00:00",
         "home": "Longford Town",
         "away": "Athlone Town",
-        "status": "NS",
+        "status": "HT",
         "league": "First Division"
       },
       {
@@ -4673,7 +4673,7 @@
         "kickoff_utc": "2026-10-16T18:45:00+00:00",
         "home": "Treaty United",
         "away": "Cobh Ramblers",
-        "status": "NS",
+        "status": "HT",
         "league": "First Division"
       },
       {
@@ -4682,7 +4682,7 @@
         "kickoff_utc": "2026-10-16T18:45:00+00:00",
         "home": "Wexford",
         "away": "UCD",
-        "status": "NS",
+        "status": "HT",
         "league": "First Division"
       },
       {
@@ -4691,7 +4691,7 @@
         "kickoff_utc": "2026-10-16T18:45:00+00:00",
         "home": "Frosinone",
         "away": "Sassuolo",
-        "status": "NS",
+        "status": "HT",
         "league": "Serie A"
       },
       {
@@ -4700,7 +4700,7 @@
         "kickoff_utc": "2026-10-16T18:45:00+00:00",
         "home": "Le Mans",
         "away": "Toulouse",
-        "status": "NS",
+        "status": "HT",
         "league": "Ligue 1"
       },
       {
@@ -4709,7 +4709,7 @@
         "kickoff_utc": "2026-10-16T18:45:00+00:00",
         "home": "Larne",
         "away": "Coleraine FC",
-        "status": "NS",
+        "status": "HT",
         "league": "Premiership"
       },
       {
@@ -4826,7 +4826,7 @@
         "kickoff_utc": "2026-10-16T19:00:00+00:00",
         "home": "St Patrick's Athl.",
         "away": "Shelbourne",
-        "status": "NS",
+        "status": "1H",
         "league": "Premier Division"
       },
       {
@@ -4844,7 +4844,7 @@
         "kickoff_utc": "2026-10-16T19:00:00+00:00",
         "home": "Burnley",
         "away": "Wolves",
-        "status": "NS",
+        "status": "1H",
         "league": "Championship"
       },
       {
@@ -4853,7 +4853,7 @@
         "kickoff_utc": "2026-10-16T19:00:00+00:00",
         "home": "Deportivo La Coruna",
         "away": "Levante",
-        "status": "NS",
+        "status": "1H",
         "league": "La Liga"
       },
       {
@@ -4862,7 +4862,7 @@
         "kickoff_utc": "2026-10-16T19:00:00+00:00",
         "home": "ABB",
         "away": "Real Potosí",
-        "status": "NS",
+        "status": "1H",
         "league": "Primera División"
       },
       {
@@ -4880,7 +4880,7 @@
         "kickoff_utc": "2026-10-16T19:00:00+00:00",
         "home": "Chaves",
         "away": "Os Marialvas",
-        "status": "NS",
+        "status": "1H",
         "league": "Taça de Portugal"
       },
       {
@@ -4889,7 +4889,7 @@
         "kickoff_utc": "2026-10-16T19:00:00+00:00",
         "home": "Standard Liege",
         "away": "Dender",
-        "status": "NS",
+        "status": "1H",
         "league": "Cup"
       },
       {
@@ -4907,7 +4907,7 @@
         "kickoff_utc": "2026-10-16T19:00:00+00:00",
         "home": "Virginia",
         "away": "Wilstermann Cooperativa",
-        "status": "NS",
+        "status": "HT",
         "league": "Nacional B"
       },
       {
@@ -4916,7 +4916,7 @@
         "kickoff_utc": "2026-10-16T19:15:00+00:00",
         "home": "Alcorcon",
         "away": "Huesca",
-        "status": "NS",
+        "status": "1H",
         "league": "Primera División RFEF - Group 2"
       },
       {
@@ -4925,7 +4925,7 @@
         "kickoff_utc": "2026-10-16T19:15:00+00:00",
         "home": "Breidablik",
         "away": "Vikingur Reykjavik",
-        "status": "NS",
+        "status": "1H",
         "league": "Úrvalsdeild"
       },
       {
@@ -7872,6 +7872,15 @@
         "away": "Slavia Praha W",
         "status": "NS",
         "league": "1. Liga Women"
+      },
+      {
+        "id": "1629072",
+        "date": "2026-10-17",
+        "kickoff_utc": "2026-10-17T11:00:00+00:00",
+        "home": "KCB",
+        "away": "Mathare United",
+        "status": "NS",
+        "league": "FKF Premier League"
       },
       {
         "id": "1630106",
@@ -12750,6 +12759,15 @@
         "away": "Al Hamriyah",
         "status": "NS",
         "league": "Division 1"
+      },
+      {
+        "id": "1629069",
+        "date": "2026-10-17",
+        "kickoff_utc": "2026-10-17T13:15:00+00:00",
+        "home": "APS Bomet",
+        "away": "GOR Mahia",
+        "status": "NS",
+        "league": "FKF Premier League"
       },
       {
         "id": "1632217",
