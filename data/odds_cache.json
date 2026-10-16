@@ -1,0 +1,153 @@
+{
+  "version": 1,
+  "entries": {
+    "1552189": {
+      "fetched_at": "2026-10-16T07:00:25+00:00",
+      "date": "2026-10-16",
+      "home_team": "Heerenveen",
+      "away_team": "Excelsior",
+      "prices": {
+        "home": 1.65,
+        "draw": 4.5,
+        "away": 5.6
+      },
+      "status": "available"
+    },
+    "1550151": {
+      "fetched_at": "2026-10-16T07:00:25+00:00",
+      "date": "2026-10-16",
+      "home_team": "Frosinone",
+      "away_team": "Sassuolo",
+      "prices": {
+        "home": 2.62,
+        "draw": 3.75,
+        "away": 2.76
+      },
+      "status": "available"
+    },
+    "1552785": {
+      "fetched_at": "2026-10-16T07:00:25+00:00",
+      "date": "2026-10-16",
+      "home_team": "Le Mans",
+      "away_team": "Toulouse",
+      "prices": {
+        "home": 3.11,
+        "draw": 3.6,
+        "away": 2.4
+      },
+      "status": "available"
+    },
+    "1557430": {
+      "fetched_at": "2026-10-16T07:00:25+00:00",
+      "date": "2026-10-17",
+      "home_team": "Everton",
+      "away_team": "Chelsea",
+      "prices": {
+        "home": 3.28,
+        "draw": 3.88,
+        "away": 2.23
+      },
+      "status": "available"
+    },
+    "1550156": {
+      "fetched_at": "2026-10-16T07:00:26+00:00",
+      "date": "2026-10-17",
+      "home_team": "Venezia",
+      "away_team": "Napoli",
+      "prices": {
+        "home": 4.89,
+        "draw": 4.22,
+        "away": 1.74
+      },
+      "status": "available"
+    },
+    "1556676": {
+      "fetched_at": "2026-10-16T07:00:26+00:00",
+      "date": "2026-10-17",
+      "home_team": "Aberdeen",
+      "away_team": "St Mirren",
+      "prices": {
+        "home": 1.88,
+        "draw": 3.85,
+        "away": 4.18
+      },
+      "status": "available"
+    },
+    "1556679": {
+      "fetched_at": "2026-10-16T07:00:26+00:00",
+      "date": "2026-10-17",
+      "home_team": "Hibernian",
+      "away_team": "Falkirk",
+      "prices": null,
+      "status": "error"
+    },
+    "1556680": {
+      "fetched_at": "2026-10-16T07:00:26+00:00",
+      "date": "2026-10-17",
+      "home_team": "Kilmarnock",
+      "away_team": "Motherwell",
+      "prices": null,
+      "status": "error"
+    },
+    "1557428": {
+      "fetched_at": "2026-10-16T07:00:26+00:00",
+      "date": "2026-10-17",
+      "home_team": "Brentford",
+      "away_team": "Liverpool",
+      "prices": null,
+      "status": "error"
+    },
+    "1575188": {
+      "fetched_at": "2026-10-16T07:00:26+00:00",
+      "date": "2026-10-17",
+      "home_team": "Union Berlin",
+      "away_team": "Dortmund",
+      "prices": null,
+      "status": "error"
+    },
+    "1575191": {
+      "fetched_at": "2026-10-16T07:00:26+00:00",
+      "date": "2026-10-17",
+      "home_team": "Werder Bremen",
+      "away_team": "Paderborn",
+      "prices": null,
+      "status": "error"
+    },
+    "1575193": {
+      "fetched_at": "2026-10-16T07:00:26+00:00",
+      "date": "2026-10-17",
+      "home_team": "Elversberg",
+      "away_team": "Augsburg",
+      "prices": null,
+      "status": "error"
+    },
+    "1570422": {
+      "fetched_at": "2026-10-16T07:00:26+00:00",
+      "date": "2026-10-17",
+      "home_team": "Villarreal",
+      "away_team": "Elche",
+      "prices": null,
+      "status": "error"
+    },
+    "1557434": {
+      "fetched_at": "2026-10-16T07:00:26+00:00",
+      "date": "2026-10-17",
+      "home_team": "Newcastle",
+      "away_team": "Aston Villa",
+      "prices": null,
+      "status": "error"
+    },
+    "1550149": {
+      "fetched_at": "2026-10-16T07:00:26+00:00",
+      "date": "2026-10-17",
+      "home_team": "Bologna",
+      "away_team": "Inter",
+      "prices": null,
+      "status": "error"
+    }
+  },
+  "daily_usage": {
+    "2026-10-16": 15
+  },
+  "updated_at": "2026-10-16T07:00:26+00:00"
+}
