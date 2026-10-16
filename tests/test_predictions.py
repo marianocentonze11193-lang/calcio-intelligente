@@ -32,6 +32,10 @@ API_ODDS_SCRIPT = Path(__file__).resolve().parents[1] / "scripts" / "enrich_with
 API_ODDS_SPEC = importlib.util.spec_from_file_location("enrich_with_api_football_odds", API_ODDS_SCRIPT)
 api_odds_module = importlib.util.module_from_spec(API_ODDS_SPEC)
 API_ODDS_SPEC.loader.exec_module(api_odds_module)
+MARKET_SCRIPT = Path(__file__).resolve().parents[1] / "scripts" / "analyze_market_odds.py"
+MARKET_SPEC = importlib.util.spec_from_file_location("analyze_market_odds", MARKET_SCRIPT)
+market_module = importlib.util.module_from_spec(MARKET_SPEC)
+MARKET_SPEC.loader.exec_module(market_module)
 
 
 class PredictionModelTests(unittest.TestCase):
@@ -72,6 +76,33 @@ class PredictionModelTests(unittest.TestCase):
         self.assertEqual(match["odds_source"], "API-Football")
         self.assertEqual(match["expected_value_1x2"], {"home": 0.1, "draw": 0.0, "away": 0.1})
         self.assertEqual({item["market"] for item in match["value_bets"]}, {"1", "2"})
+
+    def test_market_analysis_removes_margin_and_calculates_ev(self):
+        match = {
+            "odds_1x2": {"home": 2.0, "draw": 3.5, "away": 4.0},
+            "probabilities": {"home_win": 50, "draw": 30, "away_win": 20},
+        }
+        self.assertTrue(market_module.market_analysis(match))
+        self.assertAlmostEqual(sum(match["market_implied_probability_1x2"].values()), 100, delta=0.1)
+        self.assertAlmostEqual(match["expected_value_1x2"]["home"], 0.0, delta=0.0001)
+        self.assertIn("market_overround_1x2", match)
+        self.assertIn("model_vs_market_delta_1x2", match)
+
+    def test_historical_model_market_comparison_uses_same_settled_matches(self):
+        records = []
+        for i in range(30):
+            outcome = ("1", "X", "2")[i % 3]
+            model = {"home_win": 70, "draw": 20, "away_win": 10} if outcome == "1" else {"home_win": 20, "draw": 70, "away_win": 10} if outcome == "X" else {"home_win": 20, "draw": 20, "away_win": 60}
+            records.append({
+                "outcome": outcome,
+                "probabilities": model,
+                "market_implied_probability_1x2": {"home": 33.3, "draw": 33.3, "away": 33.4},
+            })
+        metrics = archive_module.calculate_model_market_metrics(records)
+        self.assertEqual(metrics["settled_matches_with_model_and_odds"], 30)
+        self.assertEqual(metrics["model"]["accuracy_1x2"], 100.0)
+        self.assertLess(metrics["model"]["brier_score_1x2"], metrics["market"]["brier_score_1x2"])
+        self.assertIsNotNone(metrics["comparison"])
 
     def test_extra_european_leagues_have_free_csv_fallback_configured(self):
         expected = {"AUT", "DNK", "FIN", "IRL", "NOK", "POL", "RO", "SWE", "SWZ"}
