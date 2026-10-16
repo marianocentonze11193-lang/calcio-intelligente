@@ -24496,9 +24496,55 @@
     "2026-10-16",
     "2026-10-17"
   ],
-  "lineups_by_fixture": {},
+  "lineups_by_fixture": {
+    "1549035": {
+      "updated_at": "2026-10-16T16:52:05.657004+00:00",
+      "home_starters": [
+        "M. Delač",
+        "V. Pálsson",
+        "M. Kupijbida",
+        "I. Miličević",
+        "A. Saine",
+        "A. Herdonsson",
+        "K. Lusavec",
+        "Jimi Weikko Tauriainen",
+        "J. Bonde",
+        "A. Justinussen",
+        "Kingsley Bimpong"
+      ],
+      "away_starters": [
+        "P. Izzo",
+        "S. Hansen",
+        "D. Høegh",
+        "N. Hopland",
+        "N. Dyhr",
+        "L. Pedersen",
+        "M. Sankoh",
+        "A. Henriksson",
+        "M. Greve",
+        "M. Themsen",
+        "K. Junker"
+      ],
+      "home_substitutes": [
+        "S. Doua",
+        "Diomande Valassina Solo",
+        "J. Batigi",
+        "K. Ehibhatiomhan",
+        "J. Körkkö",
+        "J. Madsen",
+        "A. Moro",
+        "A. Hoff",
+        "Y. Ouorou"
+      ],
+      "away_substitutes": [],
+      "home_formation": "4-2-3-1",
+      "away_formation": "4-2-3-1",
+      "home_coach": "Niki Zimling",
+      "away_coach": "R. Bertelsen"
+    }
+  },
   "lineup_attempts": {
-    "1549035": "2026-10-16T15:51:19.051702+00:00"
+    "1549035": "2026-10-16T16:52:05.657004+00:00"
   },
   "unavailable_dates": {}
 }
