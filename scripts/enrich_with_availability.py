@@ -85,6 +85,18 @@ ALIASES = [
     {"realbetis", "betis"},
     {"realsociedad", "sociedad"},
     {"celta", "celtavigo"},
+    {"cologne", "fccologne", "koln", "fckoln", "1fckoln", "1fccologne"},
+    {"unionberlin", "fcunionberlin", "1fcunionberlin"},
+    {"paderborn", "paderborn07", "scpaderborn", "scpaderborn07"},
+    {"mainz", "mainz05", "fsvmainz05", "1fsvmainz05"},
+    {"hamburgsv", "hamburgersv", "hsv"},
+    {"stuttgart", "vfbstuttgart", "vfbstuttgart1893"},
+    {"augsburg", "fcaugsburg"},
+    {"leverkusen", "bayerleverkusen"},
+    {"freiburg", "scfreiburg"},
+    {"hoffenheim", "tsghoffenheim"},
+    {"elversberg", "svelversberg"},
+    {"schalke", "schalke04", "fcs04"},
     {"internacional", "internacionalportoalegre"}
 ]
 
