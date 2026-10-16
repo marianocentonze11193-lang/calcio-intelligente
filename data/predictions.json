@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-16T14:52:46+00:00",
+  "updated_at": "2026-10-16T15:51:18+00:00",
   "source": "https://www.football-data.co.uk",
   "season": "2627",
   "model": "Poisson casa/trasferta con prior di lega e correzione Elo; stime sperimentali, non garanzie",
@@ -64,7 +64,7 @@
         "home_scores": 89.3,
         "away_scores": 89.0
       },
-      "analysis": "Le Mans leggermente favorito; scenario da almeno 2 gol; entrambe a segno plausibile. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Il match tra Le Mans e Toulouse si presenta molto equilibrato, con probabilità di vittoria che premiano leggermente i padroni di casa al 40.8% contro il 39.6% degli ospiti, mentre il pareggio si attesta al 19.6%. Dal punto di vista offensivo, il modello prevede 2.24 gol attesi per il Le Mans e 2.2 per il Toulouse, sostenendo una spiccata propensione per l'over 2.5 all'81.9% e il BTTS al 79.4%. I ratings Elo sono praticamente allineati intorno a quota 1490, riflettendo una forza generale molto simile. Il campione di sole 3 partite casalinghe e in trasferta risulta tuttavia molto piccolo, limitando la precisione della stima preliminare. La fonte segnala 5 indisponibilità tra le file del Le Mans, un elenco non necessariamente completo e basato su una copertura parziale.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -151,7 +151,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:15+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:43+00:00",
       "odds_1x2": {
         "home": 2.9,
         "draw": 3.51,
@@ -174,7 +174,7 @@
         "draw": -7.21,
         "away": -1.14
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -211,7 +211,8 @@
           "campione inferiore a 8 gare per lato"
         ],
         "historically_validated": false
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-17-Ligue 1-Lille-Brest",
@@ -241,7 +242,7 @@
         "home_scores": 78.6,
         "away_scores": 64.1
       },
-      "analysis": "Lille leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "La sfida tra Lille e Brest vede i padroni di casa favoriti dal modello con una probabilità di successo del 49.3%, a fronte del 25.2% per gli ospiti e del 25.5% per il pareggio. I gol attesi stimati sono 1.54 per il Lille e 1.02 per il Brest, delineando un incontro orientato verso punteggi moderati e un under 2.5 dato al 52.7%. Nelle ultime 5 uscite il Lille ha ottenuto una buona media di 2.0 punti a match, vantando anche un Elo leggermente superiore di 1528 contro il 1498 degli avversari. Il campione casalingo e esterno limitato a sole 3 gare riduce tuttavia l'affidabilità statistica di questa stima preliminare. Non sono stati reperiti dati specifici sulle formazioni o sulla disponibilità dei calciatori per questo incontro.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -295,7 +296,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:15+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:43+00:00",
       "odds_1x2": {
         "home": 1.84,
         "draw": 3.76,
@@ -318,7 +319,7 @@
         "draw": 0.58,
         "away": 1.05
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -355,7 +356,8 @@
           "campione inferiore a 8 gare per lato"
         ],
         "historically_validated": false
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-17-Ligue 1-Troyes-Lens",
@@ -385,7 +387,7 @@
         "home_scores": 65.4,
         "away_scores": 90.6
       },
-      "analysis": "Lens leggermente favorita; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Il Lens parte nettamente con i favori del pronostico in trasferta contro il Troyes, potendo contare su una probabilità di vittoria del 66.4% contro il 15.4% dei padroni di casa e il 18.2% della X. Il modello proietta 2.37 gol attesi per gli ospiti e 1.06 per i locali, spingendo l'over 1.5 all'85.7% e l'over 2.5 al 66.6%. La forma recente mostra un Troyes in difficoltà con 0.6 punti per partita nelle ultime 5, mentre l'Elo assegna un piccolo margine agli ospiti a quota 1491 contro 1467. Il campione di 3 partite casalinghe e in trasferta è però ridotto e limita la portata complessiva della stima. La disponibilità di dati sugli infortuni non è verificata e non sono segnalate assenze ufficiali.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -439,7 +441,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:15+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:43+00:00",
       "odds_1x2": {
         "home": 3.84,
         "draw": 3.89,
@@ -462,7 +464,7 @@
         "draw": -5.89,
         "away": 14.9
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -499,7 +501,8 @@
           "campione inferiore a 8 gare per lato"
         ],
         "historically_validated": false
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-18-Ligue 1-Angers-Marseille",
@@ -529,7 +532,7 @@
         "home_scores": 64.9,
         "away_scores": 59.9
       },
-      "analysis": "Angers leggermente favorito; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Angers e Marseille si affrontano in una gara che il modello prevede molto chiusa, con una stima di successo del 38.0% per i padroni di casa e del 30.9% per gli ospiti, lasciando il 31.1% al pareggio. I gol attesi sono bassi, rispettivamente 1.05 per l'Angers e 0.91 per il Marseille, confermati dall'under 2.5 al 68.8% e da un BTTS no al 61.2%. Gli indici Elo sono estremamente vicini, attestandosi a 1488.7 per l'Angers e 1480.6 per il Marseille. Il campione casalingo e in trasferta di appena 3 partite costituisce una base esigua che limita la robustezza della stima preliminare. Il piano API-Football attuale non consente di verificare infortuni o formazioni in anticipo, lasciando la copertura incompleta.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -583,7 +586,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:15+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:43+00:00",
       "odds_1x2": {
         "home": 3.16,
         "draw": 3.71,
@@ -606,7 +609,7 @@
         "draw": 5.89,
         "away": -14.29
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -643,7 +646,8 @@
           "campione inferiore a 8 gare per lato"
         ],
         "historically_validated": false
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-18-Ligue 1-Le Havre-Auxerre",
@@ -673,7 +677,7 @@
         "home_scores": 76.9,
         "away_scores": 67.1
       },
-      "analysis": "Il match di Ligue 1 tra Le Havre e Auxerre vede i padroni di casa leggermente favoriti con il 45,2% di probabilità di successo, contro il 28,7% degli ospiti e un 26,1% di pareggio. I gol attesi delineano una gara equilibrata, stimati a 1,46 per il Le Havre e 1,11 per l'Auxerre. Nelle ultime cinque uscite il Le Havre ha faticato molto raccogliendo appena 0,4 punti di media, mentre l'Auxerre viaggia a 1,2 punti. I valori Elo sono molto vicini (1459 contro 1481), ma il campione di appena tre partite casalinghe e esterne limita la precisione della stima. Ricordiamo che la copertura API è incompleta e non ci sono dati confermati su infortuni o formazioni.",
+      "analysis": "Il modello assegna al Le Havre il 45.2% di probabilità di vittoria e un indice di gol attesi pari a 1.46, mentre l'Auxerre si attesta al 28.7% con 1.11 reti previste. Nei dati recenti vediamo una media di 0.4 punti per i padroni di casa e 1.2 per gli ospiti, con valutazioni Elo molto vicine (1459 contro 1481). Il campione di sole tre partite interne ed esterne è piuttosto ridotto e limita la precisione della stima preliminare. La copertura API non permette di verificare la disponibilità attuale della rosa e non risultano infortuni segnalati.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -727,7 +731,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:15+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:43+00:00",
       "odds_1x2": {
         "home": 2.28,
         "draw": 3.36,
@@ -750,7 +754,7 @@
         "draw": -1.76,
         "away": -2.39
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -818,7 +822,7 @@
         "home_scores": 57.9,
         "away_scores": 76.7
       },
-      "analysis": "Per la sfida di Ligue 1 tra Lorient e Monaco, il modello assegna agli ospiti il favore del pronostico con il 51,0% di probabilità di vittoria, lasciando il Lorient al 22,3% e il pareggio al 26,7%. I gol attesi riflettono questo divario, indicando quota 1,46 per il Monaco e 0,86 per i padroni di casa. La forma recente premia nettamente il Monaco, capace di ottenere 2,2 punti di media nelle ultime cinque gare rispetto ai 1,4 del Lorient. Anche l'indice Elo sorride agli ospiti (1540 contro 1500), sebbene il campione di sole tre partite interne ed esterne riduca l'affidabilità statistica. I dati su formazioni e indisponibili non sono verificabili per limiti di copertura.",
+      "analysis": "Per questa sfida il Monaco parte favorito con il 51.0% di probabilità di successo e 1.46 gol attesi, rispetto al 22.3% e 0.86 reti assegnati al Lorient. La forma recente premia chiaramente gli ospiti con 2.2 punti a partita contro l'1.4 dei locali, rispecchiando anche i punteggi Elo di 1540 per il Monaco e 1500 per il Lorient. Il campione di sole tre gare casalinghe e esterne rimane limitato, rendendo questa stima puramente preliminare. Non sono disponibili dati ufficiali su formazioni e indisponibili a causa dei limiti della copertura API.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -872,7 +876,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:15+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:43+00:00",
       "odds_1x2": {
         "home": 3.48,
         "draw": 3.46,
@@ -895,7 +899,7 @@
         "draw": -0.34,
         "away": 4.92
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -963,7 +967,7 @@
         "home_scores": 58.8,
         "away_scores": 78.3
       },
-      "analysis": "In Super League greca il Volos NFC parte con i galloni di favorito esterno, registrando il 52,3% di probabilità di vittoria a fronte del 21,9% per il Levadeiakos e del 25,9% per il segno X. Il modello proietta 1,53 gol attesi per gli ospiti e 0,89 per i locali. La forma recente evidenzia grosse difficoltà per il Levadeiakos, fermo a 0,2 punti a partita nelle ultime cinque, mentre il Volos racimola 0,4 punti. I dati Elo si equivalgono intorno a quota 1450, ma il campione di tre partite casalinghe e esterne risulta troppo ridotto per stime solide. La partita non è stata abbinata con certezza e mancano informazioni ufficiali sugli indisponibili.",
+      "analysis": "Il Volos NFC gode dei favori del modello con una probabilità di vittoria del 52.3% e 1.53 gol attesi, a fronte del 21.9% e 0.89 reti previste per il Levadeiakos. Nelle ultime cinque uscite i padroni di casa hanno raccolto appena 0.2 punti di media, mentre gli ospiti sono fermi a 0.4, con un Elo di 1450 contro 1459. La stima soffre di un campione limitato a sole tre partite casalinghe e in trasferta, riducendo l'affidabilità del pronostico preliminare. La partita non è abbinata con certezza e non possediamo alcuna informazione verificata su formazioni o indisponibili.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1017,7 +1021,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:29+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:57+00:00",
       "odds_1x2": {
         "home": 2.13,
         "draw": 3.27,
@@ -1040,7 +1044,7 @@
         "draw": -1.98,
         "away": 22.98
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -1108,7 +1112,7 @@
         "home_scores": 80.8,
         "away_scores": 69.2
       },
-      "analysis": "La partita di Super League greca tra Kalamata e OFI Crete mostra un sostanziale equilibrio, con il Kalamata accreditato del 48,4% di probabilità di successo e l'OFI Crete al 27,3%, oltre al 24,4% per il pareggio. I gol attesi premiano i padroni di casa con 1,65 reti contro l'1,18 degli ospiti. Nelle ultime cinque giornate entrambe le squadre hanno mantenuto un passo simile, viaggiando a 1,4 punti di media. I punteggi Elo di 1493 e 1510 confermano l'equilibrio generale, sebbene il campione di appena tre gare interne ed esterne limiti la portata della stima. La copertura API è incompleta e non sono disponibili notizie ufficiali su eventuali assenze.",
+      "analysis": "Il Kalamata registra il 48.4% di probabilità di vittoria con 1.65 gol attesi stimati dal modello, mentre l'OFI Crete risponde con il 27.3% e 1.18 reti. La forma recente mostra una perfetta parità con 1.4 punti a partita per entrambe, supportata da valori Elo molto simili intorno a 1493 e 1510. L'analisi si basa su un campione casalingo e esterno ridotto a tre gare, fattore che circoscrive la portata di questa stima preliminare. Gli aggiornamenti su infortuni e formazioni non sono verificabili tramite le API, lasciando il quadro delle disponibilità incompleto.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1162,7 +1166,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:29+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:57+00:00",
       "odds_1x2": {
         "home": 2.59,
         "draw": 3.16,
@@ -1185,7 +1189,7 @@
         "draw": -4.47,
         "away": -8.61
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -1253,7 +1257,7 @@
         "home_scores": 59.2,
         "away_scores": 69.1
       },
-      "analysis": "Olympiakos leggermente favorita; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "La sfida vede l'Olympiakos leggermente favorito con una probabilità di successo del 42.2% contro il 28.0% del Panetolikos, mentre il pareggio si attesta al 29.8%. I gol attesi riflettono un match non particolarmente prolifico, stimati a 0.9 per i padroni di casa e 1.17 per gli ospiti. A livello di Elo, l'Olympiakos (1530.7) precede di poco il Panetolikos (1497.7), confermando il trend della forma recente dove gli ospiti viaggiano a 2.0 punti a partita. Il campione casalingo e in trasferta di sole 3 partite risulta ridotto e limita la precisione della stima. Ricordiamo che la copertura API è fuori servizio e non ci sono indisponibili segnalati, sebbene ciò non escluda assenze.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1307,7 +1311,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:29+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:57+00:00",
       "odds_1x2": {
         "home": 8.72,
         "draw": 4.73,
@@ -1330,7 +1334,7 @@
         "draw": 10.5,
         "away": -28.03
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -1367,7 +1371,8 @@
           "campione inferiore a 8 gare per lato"
         ],
         "historically_validated": false
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-18-Super League greca-Kifisia-Aris",
@@ -1397,7 +1402,7 @@
         "home_scores": 84.6,
         "away_scores": 47.2
       },
-      "analysis": "Kifisia leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Il modello assegna al Kifisia un netto favore con il 66.9% di probabilità di vittoria, lasciando l'Aris all'11.9% e il pareggio al 21.1%. Le aspettative offensive pendono nettamente verso i padroni di casa con 1.87 gol attesi rispetto ai 0.64 degli avversari. I dati Elo sono molto vicini, con 1501.4 per il Kifisia e 1509.5 per l'Aris, sebbene la forma recente mostri rendimenti simili a 1.4 punti a incontro. Il campione casalingo e esterno limitato a 3 gare rende la stima preliminare e da prendere con cautela. La verifica della disponibilità è fuori copertura, senza indisponibili segnalati in questo momento.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1451,7 +1456,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:29+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:57+00:00",
       "odds_1x2": {
         "home": 2.87,
         "draw": 3.24,
@@ -1474,7 +1479,7 @@
         "draw": -7.02,
         "away": -28.24
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -1511,7 +1516,8 @@
           "campione inferiore a 8 gare per lato"
         ],
         "historically_validated": false
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-18-Super League greca-PAOK-Iraklis",
@@ -1541,7 +1547,7 @@
         "home_scores": 76.3,
         "away_scores": 62.9
       },
-      "analysis": "PAOK leggermente favorito; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Il PAOK parte favorito con il 47.4% di probabilità di vittoria, mentre l'Iraklis si posiziona al 26.0% e il segno X al 26.6%. I gol attesi dal modello sono 1.44 per la squadra di casa e 0.99 per gli ospiti, delineando un incontro potenzialmente equilibrato. I punteggi Elo si equivalgono quasi perfettamente (1519.5 contro 1511.8), così come la media punti recente di 1.8 per entrambe nelle ultime cinque uscite. Il campione di 3 partite in casa e 4 in trasferta è piuttosto piccolo e vincola l'affidabilità della proiezione. La copertura API è incompleta e non sono presenti segnalazioni di giocatori indisponibili.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1595,7 +1601,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:29+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:57+00:00",
       "odds_1x2": {
         "home": 1.22,
         "draw": 5.53,
@@ -1618,7 +1624,7 @@
         "draw": 10.15,
         "away": 17.0
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -1655,7 +1661,8 @@
           "campione inferiore a 8 gare per lato"
         ],
         "historically_validated": false
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-17-Premier League-Everton-Chelsea",
@@ -1685,7 +1692,7 @@
         "home_scores": 88.4,
         "away_scores": 66.1
       },
-      "analysis": "Everton leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "L'Everton gode di un inatteso favore statistico dal modello con il 61.8% di probabilità di vittoria, contro il 18.1% del Chelsea e il 20.0% di pareggio. I gol attesi sono consistenti, pari a 2.15 per i Toffees e 1.08 per i Blues. I valori Elo sono allineati intorno a 1519 per l'Everton e 1510 per il Chelsea, malgrado gli ospiti vantino un attacco prolifico recente da 2.4 gol a partita. Il campione limitato a 3 incontri interni ed esterni riduce la solidità della stima. La fonte segnala 3 indisponibilità complessive tra cui Mykolenko, Gittens ed Emegha, ricordando che la copertura potrebbe non essere esaustiva.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1760,7 +1767,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:10+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:39+00:00",
       "odds_1x2": {
         "home": 3.13,
         "draw": 3.62,
@@ -1783,7 +1790,7 @@
         "draw": -5.88,
         "away": -26.09
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -1820,7 +1827,8 @@
           "campione inferiore a 8 gare per lato"
         ],
         "historically_validated": false
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-17-Premier League-Brentford-Liverpool",
@@ -1850,7 +1858,7 @@
         "home_scores": 71.0,
         "away_scores": 52.9
       },
-      "analysis": "Brentford leggermente favorito; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Per la sfida tra Brentford e Liverpool, il modello assegna il 47.7% di probabilità alla vittoria casalinga, il 29.7% al pareggio e il 22.6% al successo esterno, stimando 1.24 gol attesi per i padroni di casa e 0.75 per gli ospiti. I valori di Elo sono molto vicini (1520.1 per il Brentford e 1509.4 per il Liverpool), mentre la forma recente vede i Reds leggermente superiori nei punti per match (1.6 contro 1.4). Il campione casa e trasferta si limita a sole 3 partite, un fattore che riduce la precisione della stima. La fonte segnala 14 indisponibilità tra le due squadre, ma l'assenza di segnalazioni non garantisce una copertura completa.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1991,7 +1999,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:10+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:39+00:00",
       "odds_1x2": {
         "home": 2.34,
         "draw": 3.62,
@@ -2014,7 +2022,7 @@
         "draw": 3.78,
         "away": -11.39
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -2051,7 +2059,8 @@
           "campione inferiore a 8 gare per lato"
         ],
         "historically_validated": false
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-17-Premier League-Fulham-Hull",
@@ -2081,7 +2090,7 @@
         "home_scores": 70.7,
         "away_scores": 81.6
       },
-      "analysis": "Hull leggermente favorita; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Il match tra Fulham e Hull City vede gli ospiti favoriti dal modello con il 48.3% di probabilità di vittoria, contro il 27.8% dei padroni di casa e il 23.9% del pareggio. I gol attesi delineano una gara vivace, con 1.23 per il Fulham e 1.69 per l'Hull. L'Elo premia leggermente la formazione ospite (1508.6 a 1458.9), riflettendo una forma recente in cui l'Hull colleziona 1.2 punti a partita a fronte dei 0.4 del Fulham. Il campione casalingo e in trasferta è limitato a sole 3 gare, riducendo l'affidabilità statistica. Non sono disponibili dati verificati sulle indisponibilità per questo incontro.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -2135,7 +2144,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:10+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:39+00:00",
       "odds_1x2": {
         "home": 1.7,
         "draw": 3.89,
@@ -2158,7 +2167,7 @@
         "draw": -0.19,
         "away": 27.52
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -2195,7 +2204,8 @@
           "campione inferiore a 8 gare per lato"
         ],
         "historically_validated": false
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-17-Premier League-Man City-Ipswich",
@@ -2225,7 +2235,7 @@
         "home_scores": 96.9,
         "away_scores": 69.4
       },
-      "analysis": "Man City leggermente favorito; scenario da almeno 2 gol; entrambe a segno plausibile. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Manchester City nettamente favorito contro l'Ipswich secondo il modello, che stima una probabilità di vittoria interna dell'80.0%, un pareggio all'11.2% e un successo ospite all'8.7%. I gol attesi evidenziano un divario netto, con ben 3.48 reti stimate per i Citizens e 1.18 per l'Ipswich. L'Elo dei padroni di casa si attesta a 1560.9 contro il 1499.2 degli ospiti, confermato da una forma recente perfetta con 3.0 punti a partita. Il campione di 3 partite casalinghe e esterne rappresenta un limite strutturale per la stima. La fonte non riporta indisponibilità, ma questo dato non esclude assenze.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -2281,7 +2291,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:10+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:39+00:00",
       "odds_1x2": {
         "home": 1.24,
         "draw": 6.47,
@@ -2304,7 +2314,7 @@
         "draw": -3.38,
         "away": -0.66
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -2341,7 +2351,8 @@
           "campione inferiore a 8 gare per lato"
         ],
         "historically_validated": false
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-17-Premier League-Newcastle-Aston Villa",
@@ -2371,7 +2382,7 @@
         "home_scores": 86.6,
         "away_scores": 77.4
       },
-      "analysis": "Newcastle leggermente favorito; scenario da almeno 2 gol; entrambe a segno plausibile. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Newcastle e Aston Villa si presentano con probabilità del 49.8% per la vittoria di casa, 21.6% per il pareggio e 28.6% per gli ospiti, con gol attesi pari a 2.01 per il Newcastle e 1.49 per l'Aston Villa. I valori Elo sono vicini (1498.7 per i padroni di casa e 1481.5 per gli ospiti), così come la forma recente a livello di punti (1.4 a 1.0). Il campione di soli 3 incontri casalinghi e in trasferta costituisce un limite importante per la stima. La fonte segnala 11 indisponibilità complessive, ricordando che la copertura potrebbe non essere totale.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -2494,7 +2505,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:10+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:39+00:00",
       "odds_1x2": {
         "home": 2.22,
         "draw": 3.63,
@@ -2517,7 +2528,7 @@
         "draw": -4.21,
         "away": -3.38
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -2554,7 +2565,8 @@
           "campione inferiore a 8 gare per lato"
         ],
         "historically_validated": false
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-18-Premier League-Bournemouth-Sunderland",
@@ -2584,7 +2596,7 @@
         "home_scores": 82.9,
         "away_scores": 79.0
       },
-      "analysis": "Bournemouth leggermente favorito; scenario da almeno 2 gol; entrambe a segno plausibile. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Il Bournemouth affronta il Sunderland in una sfida di Premier League che promette gol e spettacolo, come evidenziato dai gol attesi del modello fissati a 1.77 per i padroni di casa e 1.56 per gli ospiti. Le probabilità premiano leggermente l'uno fisso al 43.0%, mentre il segno due si attesta al 34.2% e il pareggio al 22.8%. L'indice Elo è quasi identico, intorno a quota 1470, a testimonianza di un equilibrio generale sul lungo periodo. La forma recente mostra qualche difficoltà difensiva per entrambe, ma bisogna considerare che il campione di sole tre partite casalinghe e in trasferta limita la precisione della stima. La disponibilità degli atleti non è verificabile in anticipo tramite API e non ci sono infortuni segnalati, fattore che richiede cautela.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -2638,7 +2650,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:10+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:39+00:00",
       "odds_1x2": {
         "home": 2.04,
         "draw": 3.51,
@@ -2661,7 +2673,7 @@
         "draw": -3.93,
         "away": 6.92
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -2698,7 +2710,8 @@
           "campione inferiore a 8 gare per lato"
         ],
         "historically_validated": false
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-18-Premier League-Brighton-Crystal Palace",
@@ -2728,7 +2741,7 @@
         "home_scores": 90.7,
         "away_scores": 49.1
       },
-      "analysis": "Brighton leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Il Brighton parte nettamente favorito contro il Crystal Palace, con una probabilità di vittoria interna stimata dal modello al 75.4% e gol attesi pari a 2.38, a fronte dello 0.68 degli avversari. Il segno X si ferma al 15.9% e il colpo esterno degli ospiti al 8.7%, riflettendo una differenza evidente anche nei punteggi Elo di 1532.4 contro 1490.9. Nelle ultime cinque uscite i padroni di casa hanno mostrato un ottimo rendimento con 2.0 punti di media, sebbene il campione di appena tre gare interne pesi sulla solidità statistica complessiva. Mancano dati ufficiali sugli indisponibili per questa data futura e la copertura API risulta incompleta. Il modello resta sperimentale e non vincolante.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -2782,7 +2795,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:10+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:39+00:00",
       "odds_1x2": {
         "home": 1.53,
         "draw": 4.42,
@@ -2805,7 +2818,7 @@
         "draw": -5.31,
         "away": -8.82
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -2842,7 +2855,8 @@
           "campione inferiore a 8 gare per lato"
         ],
         "historically_validated": false
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-18-Premier League-Leeds-Man United",
@@ -2872,7 +2886,7 @@
         "home_scores": 78.8,
         "away_scores": 55.8
       },
-      "analysis": "Leeds leggermente favorito; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Il Leeds ospita il Manchester United in una gara in cui il modello assegna il favore del pronostico ai padroni di casa con il 54.6% di probabilità per l'uno, mentre il pareggio è al 25.6% e il successo esterno al 19.8%. I gol attesi delineano un incontro da 1.55 per il Leeds e 0.82 per lo United, supportati da valutazioni Elo molto vicine, rispettivamente a 1509.6 e 1489.3. La forma recente delle due squadre appare simile, ma il ristretto campione di tre partite casalinghe e esterne riduce l'affidabilità predittiva della proiezione. Attenzione al dato sulle assenze: la piattaforma non copre questo periodo in anticipo e non vi sono segnalazioni ufficiali di infortuni.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -2926,7 +2940,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:10+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:39+00:00",
       "odds_1x2": {
         "home": 2.32,
         "draw": 3.55,
@@ -2949,7 +2963,7 @@
         "draw": -0.79,
         "away": -13.42
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -2986,7 +3000,8 @@
           "campione inferiore a 8 gare per lato"
         ],
         "historically_validated": false
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-18-Premier League-Nott'm Forest-Arsenal",
@@ -3016,7 +3031,7 @@
         "home_scores": 41.4,
         "away_scores": 58.4
       },
-      "analysis": "Arsenal leggermente favorita; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Il Nottingham Forest riceve l'Arsenal in un match in cui gli ospiti partono con i galloni di favoriti, registrando il 41.7% di probabilità di vittoria contro il 21.1% dei padroni di casa e il 37.2% di സാധ്യത per il pareggio. I gol attesi premiano l'Arsenal con 0.88 rispetto ai 0.53 della formazione di casa, confermando il divario visibile anche nei punteggi Elo di 1541.1 contro 1476.5. La forma recente evidenzia il solido cammino dell'Arsenal con 2.4 punti a partita, mentre il Forest fatica a trovare continuità. Il campione limitato a tre incontri casalinghi e esterni e l'assenza di dati verificati sugli indisponibili impongono prudenza nell'analisi.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -3070,7 +3085,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:10+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:39+00:00",
       "odds_1x2": {
         "home": 5.59,
         "draw": 3.82,
@@ -3093,7 +3108,7 @@
         "draw": 12.64,
         "away": -16.95
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -3130,7 +3145,8 @@
           "campione inferiore a 8 gare per lato"
         ],
         "historically_validated": false
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-19-Premier League-Tottenham-Coventry",
@@ -3160,7 +3176,7 @@
         "home_scores": 57.9,
         "away_scores": 53.2
       },
-      "analysis": "Il match di Premier League vede il Tottenham favorito con una probabilità di vittoria del 35.5%, contro il 29.5% del Coventry e il 34.9% di pareggio. I gol attesi sono bassi, stimati a 0.86 per i padroni di casa e 0.76 per gli ospiti, riflettendo una gara potenzialmente bloccata. Il campione casa e trasferta si limita a sole 3 partite, un fattore che riduce l'affidabilità statistica della stima. Nei valori Elo troviamo i padroni di casa a 1468.9 punti e gli ospiti a 1483.1, mentre la forma recente mostra medie di 0.6 punti a partita per il Tottenham e 1.2 per il Coventry. Per le indisponibilità, la copertura API risulta attualmente non disponibile.",
+      "analysis": "Tottenham leggermente favorito; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -3214,7 +3230,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:10+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:39+00:00",
       "odds_1x2": {
         "home": 1.46,
         "draw": 4.55,
@@ -3237,7 +3253,7 @@
         "draw": 14.27,
         "away": 14.43
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -3274,8 +3290,7 @@
           "campione inferiore a 8 gare per lato"
         ],
         "historically_validated": false
-      },
-      "analysis_provider": "Gemini"
+      }
     },
     {
       "id": "2026-10-16-Serie A-Frosinone-Sassuolo",
@@ -3305,7 +3320,7 @@
         "home_scores": 88.2,
         "away_scores": 70.5
       },
-      "analysis": "In questa sfida di Serie A il Frosinone gode del favore del pronostico con il 58.4% di probabilità di successo, mentre il Sassuolo si attesta al 21.1% e il pareggio al 20.5%. Il modello assegna 2.14 gol attesi alla formazione di casa e 1.22 a quella ospite, delineando uno scenario offensivo vivace. L'analisi si basa su un campione ridotto di sole 3 gare casalinghe ed esterne, limitando la precisione complessiva del modello. Dal punto di vista Elo il Frosinone quota 1509.4 punti contro i 1499.6 del Sassuolo, con una forma recente rispettivamente di 2.0 e 1.6 punti per match. Le fonti segnalano 7 indisponibilità totali, un elenco parziale che non esclude ulteriori assenze.",
+      "analysis": "Frosinone leggermente favorito; scenario da almeno 2 gol; entrambe a segno plausibile. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -3404,7 +3419,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:14+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:42+00:00",
       "odds_1x2": {
         "home": 2.31,
         "draw": 3.78,
@@ -3427,7 +3442,7 @@
         "draw": -4.37,
         "away": -13.33
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -3464,8 +3479,7 @@
           "campione inferiore a 8 gare per lato"
         ],
         "historically_validated": false
-      },
-      "analysis_provider": "Gemini"
+      }
     },
     {
       "id": "2026-10-17-Serie A-Venezia-Napoli",
@@ -3495,7 +3509,7 @@
         "home_scores": 56.8,
         "away_scores": 93.2
       },
-      "analysis": "Il pronostico per il match di Serie A assegna un netto vantaggio al Napoli con il 76.3% di probabilità di vittoria, lasciando il Venezia al 9.2% e il pareggio al 14.4%. I gol attesi delineano una forte supremazia esterna con 2.68 reti per gli ospiti a fronte dei 0.84 dei padroni di casa. Il campione di sole 3 partite interne ed esterne rappresenta un limite strutturale per la profondità della stima. Nei dati Elo il Venezia registra 1438.8 punti e il Napoli 1510.8, mentre la forma recente evidenzia difficoltà per i lagunari con 0 punti medi e 1.4 per i partenopei. Sono state segnalate 13 indisponibilità complessive, dato suscettibile di variazioni.",
+      "analysis": "Napoli leggermente favorita; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -3630,7 +3644,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:14+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:42+00:00",
       "odds_1x2": {
         "home": 4.67,
         "draw": 4.0,
@@ -3653,7 +3667,7 @@
         "draw": -9.2,
         "away": 20.11
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -3690,8 +3704,7 @@
           "campione inferiore a 8 gare per lato"
         ],
         "historically_validated": false
-      },
-      "analysis_provider": "Gemini"
+      }
     },
     {
       "id": "2026-10-18-Serie A-Udinese-Lecce",
@@ -3721,7 +3734,7 @@
         "home_scores": 70.9,
         "away_scores": 62.9
       },
-      "analysis": "La partita di Serie A tra Udinese e Lecce mostra un equilibrio relativo, con il 41.7% di probabilità per la vittoria casalinga, il 29.6% per quella ospite e il 28.6% per il pareggio. I gol attesi dal modello sono 1.23 per i friulani e 0.99 per i salentini, indicando un incontro tendenzialmente prudente. Il campione limitato a 3 partite casalinghe e altrettante in trasferta riduce la portata predittiva della stima preliminare. L'indice Elo posiziona l'Udinese a 1469.1 e il Lecce a 1477.6, con una forma recente identica e non brillante pari a 0.6 punti per match per entrambe. La copertura API corrente non consente di verificare infortuni o formazioni ufficiali.",
+      "analysis": "Udinese leggermente favorito; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -3775,7 +3788,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:14+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:42+00:00",
       "odds_1x2": {
         "home": 1.87,
         "draw": 3.45,
@@ -3798,7 +3811,7 @@
         "draw": 1.41,
         "away": 6.94
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -3835,8 +3848,7 @@
           "campione inferiore a 8 gare per lato"
         ],
         "historically_validated": false
-      },
-      "analysis_provider": "Gemini"
+      }
     },
     {
       "id": "2026-10-18-Serie A-Fiorentina-Como",
@@ -3866,7 +3878,7 @@
         "home_scores": 55.4,
         "away_scores": 90.3
       },
-      "analysis": "Analizzando la sfida di Serie A tra Fiorentina e Como, il modello assegna una netta preferenza alla trasferta con il 71.5% di probabilità di vittoria, a fronte dell'11.3% per i padroni di casa e del 17.2% per il pareggio. I gol attesi delineano un divario marcato, stimati in 0.81 per la Fiorentina e 2.33 per il Como. I dati recenti mostrano una forma opposta, con i toscani a 0.8 punti per match e i lariani a 2.0, supportati da un Elo leggermente superiore (1522.9 contro 1467.1). Attenzione però al campione casa di appena 3 partite e trasferta di 4, un limite che riduce la stima. Non risultano dati verificati su infortuni o formazioni a causa della copertura API limitata.",
+      "analysis": "La Fiorentina affronta il Como in questa sfida di Serie A con il favore del pronostico per gli ospiti, che registrano il 71,5% di probabilità di vittoria e 2,33 gol attesi contro gli 0,81 dei padroni di casa. I dati recenti mostrano una squadra di casa in difficoltà con 0,8 punti per match, a fronte dei 2,0 punti degli ospiti. L'Elo premia leggermente il Como con 1522,9 punti contro 1467,1 della Fiorentina. Il campione casalingo di sole 3 partite e quello esterno di 4 limitano l'affidabilità della stima. La disponibilità non è verificabile dal piano API attuale e non ci sono indisponibili segnalati o formazioni pubblicate.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -3920,7 +3932,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:14+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:42+00:00",
       "odds_1x2": {
         "home": 3.28,
         "draw": 3.61,
@@ -3943,7 +3955,7 @@
         "draw": -8.75,
         "away": 26.02
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -4011,7 +4023,7 @@
         "home_scores": 55.4,
         "away_scores": 61.5
       },
-      "analysis": "Juventus e Lazio si presentano con percentuali di modello molto equilibrate: 29.3% per la vittoria interna, 33.2% per il pareggio e 37.5% per il successo esterno. I gol attesi sono bassi e vicini tra loro, rispettivamente 0.81 e 0.96. Nelle ultime cinque uscite la Lazio viaggia a 2.6 punti di media contro l'1.6 della Juventus, mentre l'Elo vede i biancocelesti a 1549.4 e i bianconeri a 1520.7. Le indicazioni si basano su un campione ridotto di sole 3 gare casalinghe e 3 esterne, fattore che vincola l'affidabilità della stima preliminare. La disponibilità di spogliatoio non è verificabile per limiti di piano API e le formazioni non sono confermate.",
+      "analysis": "Juventus e Lazio si presentano con quote ed Elo molto vicini, rispettivamente 1520,7 e 1549,4 punti. Le probabilità del modello vedono la Lazio leggermente avanti con il 37,5% per il successo esterno, contro il 29,3% dei bianconeri e il 33,2% di un eventuale pareggio. I gol attesi sono bassi, stimati a 0,81 per la casa e 0,96 per la trasferta. La forma recente vede la Lazio a 2,6 punti per partita rispetto ai 1,6 della Juventus. Il campione di 3 gare interne ed esterne è molto ridotto e limita la precisione della stima. Non sono disponibili dati ufficiali su formazioni e infortuni per questa data.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -4065,7 +4077,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:14+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:42+00:00",
       "odds_1x2": {
         "home": 1.66,
         "draw": 3.76,
@@ -4088,7 +4100,7 @@
         "draw": 8.28,
         "away": 18.87
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -4156,7 +4168,7 @@
         "home_scores": 62.6,
         "away_scores": 70.9
       },
-      "analysis": "Per la gara di campionato tra Parma e Torino, il pronostico vede avanti gli ospiti con il 41.9% di probabilità, mentre i padroni di casa registrano il 29.4% e il pareggio il 28.7%. L'attacco modellato produce 0.98 gol attesi per il Parma e 1.23 per il Torino. Nelle ultime cinque partite i granata hanno ottenuto 1.4 punti medi rispetto agli 0.8 dei ducali, con un Elo quasi alla pari (1490.0 a 1471.0). Il campione di appena 3 partite interne e 3 esterne limita la precisione della lettura preliminare. Ricordiamo che la copertura API è incompleta: non ci sono segnalazioni ufficiali su indisponibili o formazioni pubblicate.",
+      "analysis": "Il Parma ospita il Torino in un match che vede gli ospiti favoriti al 41,9% secondo il modello, mentre i padroni di casa si fermano al 29,4% e il pareggio è quotato al 28,7%. I gol attesi sono contenuti, con 0,98 per il Parma e 1,23 per il Torino, rispecchiando una forma recente non brillantissima per i ducali con 0,8 punti medi. L'Elo evidenzia un sostanziale equilibrio tra 1471,0 e 1490,0 punti. Attenzione al campione di sole 3 partite casalinghe ed esterne, che rende la stima preliminare e limitata. Le informazioni su indisponibili e formazioni non sono verificabili tramite l'API.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -4210,7 +4222,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:14+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:42+00:00",
       "odds_1x2": {
         "home": 2.99,
         "draw": 3.05,
@@ -4233,7 +4245,7 @@
         "draw": -1.98,
         "away": 3.87
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -4301,7 +4313,7 @@
         "home_scores": 54.2,
         "away_scores": 40.9
       },
-      "analysis": "In Eliteserien norvegese il match tra Sandefjord e Lillestrom offre probabilità del 38.1% per l'affermazione interna, del 39.4% per il segno X e del 22.5% per gli ospiti. I gol attesi rimangono contenuti a quota 0.78 per i padroni di casa e 0.53 per la formazione in trasferta. La forma recente evidenzia 1.2 punti a partita per il Sandefjord e 1.4 per il Lillestrom, con un Elo di 1493.3 contro 1506.4. A differenza di altri incontri, qui il campione di 14 gare interne e 11 esterne garantisce una quantità di dati elevata per il pronostico valutabile. Mancano comunque riscontri ufficiali su formazioni e indisponibili per restrizioni della sorgente dati.",
+      "analysis": "In Eliteserien il Sandefjord riceve il Lillestrom con probabilità di vittoria casalinga al 38,1% e il pareggio al 39,4%, mentre gli ospiti scendono al 22,5%. I gol attesi sono molto bassi, fermi a 0,78 per il Sandefjord e 0,53 per il Lillestrom, con una forte tendenza all'under. L'Elo si equivale quasi perfettamente attorno a 1493 e 1506 punti, mentre la forma recente è simile con 1,2 e 1,4 punti a incontro. A differenza di altri match, il campione di 14 gare casalinghe e 11 esterne è ampio e offre una base solida. Non si hanno conferme su formazioni o indisponibili per questa data.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -4390,7 +4402,7 @@
         "home_scores": 85.6,
         "away_scores": 58.4
       },
-      "analysis": "Il Tromso parte nettamente favorito in questa sfida di Eliteserien norvegese, forte di una probabilità di vittoria casalinga stimata al 62,3% e di un Elo di 1547,5 contro il 1469,1 degli avversari. I gol attesi dal modello premiano i padroni di casa con 1,94 reti rispetto agli 0,88 ospiti, mentre il mercato dell'Over 1,5 gode del 77,2% di stima. Con un campione di 14 partite interne e 13 esterne, la base statistica è solida ma non assoluta. La copertura API corrente non verifica gli indisponibili: l'assenza di segnalazioni non garantisce rose al completo. Il nostro modello resta sperimentale.",
+      "analysis": "Il Tromso parte nettamente favorito in questa sfida di Eliteserien norvegese, forte di una probabilità di successo stimata al 62.3% contro il 16.3% assegnato al KFUM Oslo, mentre il pareggio si attesta al 21.4%. I gol attesi dal modello premiano i padroni di casa con 1.94 reti a fronte delle 0.88 degli ospiti, riflettendo anche il divario nei dati Elo di 1547.5 a 1469.1. La forma recente vede il Tromso a 1 punto di media nelle ultime cinque gare e il KFUM a 1.8. Le analisi poggiano su campioni discreti di 14 partite interne e 13 esterne. Per le indisponibilità, la copertura API non è disponibile e nessuna segnalazione è presente, ma questo non esclude assenze. Ricordiamo che il modello è sperimentale.",
       "suggested_markets": [
         "Over 1,5"
       ],
@@ -4481,7 +4493,7 @@
         "home_scores": 61.1,
         "away_scores": 78.5
       },
-      "analysis": "In Eredivisie l'Excelsior fa visita all'Heerenveen partendo con i favori del pronostico, registrando una probabilità di vittoria esterna del 51,2% a fronte del 23,2% dei padroni di casa e valori Elo molto vicini (1489,7 a 1497,0). I gol attesi vedono gli ospiti a quota 1,54 contro lo 0,94 casalingo, mentre l'Under 2,5 si attesta al 54,8%. Attenzione però al campione casa e trasferta, limitato a sole 4 partite per parte, fattore che rende questa stima decisamente preliminare. Le fonti segnalano 2 indisponibilità, ma la copertura incompleta impone cautela. Ricordiamo che il modello è sperimentale.",
+      "analysis": "Per la sfida di Eredivisie tra Heerenveen ed Excelsior, le stime del modello assegnano agli ospiti il favore del pronostico con il 51.2% di probabilità di vittoria, rispetto al 23.2% dei padroni di casa e al 25.7% per il pareggio. I gol attesi indicano 1.54 reti per la trasferta e 0.94 per ilvartheta casalingo, con valori Elo quasi allineati attorno a 1490. Tuttavia, il campione casalingo e in trasferta si limita a sole 4 partite, rendendo questa stima preliminare e limitata nella precisione. Nelle ultime cinque uscite entrambe le squadre viaggiano a 1 punto di media. La fonte segnala 2 indisponibilità, tra cui D. Proper e N. Naujoks, sebbene la copertura possa essere incompleta. Il modello resta sperimentale.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -4550,7 +4562,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:17+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:45+00:00",
       "odds_1x2": {
         "home": 1.51,
         "draw": 4.54,
@@ -4573,7 +4585,7 @@
         "draw": 5.25,
         "away": 33.14
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -4695,7 +4707,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:17+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:45+00:00",
       "odds_1x2": {
         "home": 8.37,
         "draw": 6.53,
@@ -4718,7 +4730,7 @@
         "draw": -4.78,
         "away": 9.12
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -4884,7 +4896,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:17+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:45+00:00",
       "odds_1x2": {
         "home": 7.53,
         "draw": 5.62,
@@ -4907,7 +4919,7 @@
         "draw": -10.87,
         "away": 20.43
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -5073,7 +5085,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:17+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:45+00:00",
       "odds_1x2": {
         "home": 1.6,
         "draw": 4.31,
@@ -5096,7 +5108,7 @@
         "draw": -2.85,
         "away": -0.91
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -5217,7 +5229,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:17+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:45+00:00",
       "odds_1x2": {
         "home": 3.31,
         "draw": 3.83,
@@ -5240,7 +5252,7 @@
         "draw": -12.66,
         "away": 32.94
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -5361,7 +5373,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:17+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:45+00:00",
       "odds_1x2": {
         "home": 5.8,
         "draw": 4.83,
@@ -5384,7 +5396,7 @@
         "draw": -1.88,
         "away": 2.83
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -5505,7 +5517,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:17+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:45+00:00",
       "odds_1x2": {
         "home": 3.4,
         "draw": 4.06,
@@ -5528,7 +5540,7 @@
         "draw": -4.05,
         "away": 10.33
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -5649,7 +5661,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:17+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:45+00:00",
       "odds_1x2": {
         "home": 1.58,
         "draw": 4.38,
@@ -5672,7 +5684,7 @@
         "draw": -0.41,
         "away": 39.42
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -5793,7 +5805,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:17+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:45+00:00",
       "odds_1x2": {
         "home": 1.31,
         "draw": 5.61,
@@ -5816,7 +5828,7 @@
         "draw": -6.34,
         "away": -6.44
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -5937,7 +5949,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:19+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:48+00:00",
       "odds_1x2": {
         "home": 1.57,
         "draw": 3.78,
@@ -5960,7 +5972,7 @@
         "draw": 11.11,
         "away": 11.74
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -6083,7 +6095,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:16+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:44+00:00",
       "odds_1x2": {
         "home": 1.83,
         "draw": 3.66,
@@ -6106,7 +6118,7 @@
         "draw": 7.15,
         "away": -3.34
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -6229,7 +6241,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:16+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:44+00:00",
       "odds_1x2": {
         "home": 1.64,
         "draw": 3.91,
@@ -6252,7 +6264,7 @@
         "draw": 5.97,
         "away": 29.53
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -6375,7 +6387,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:16+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:44+00:00",
       "odds_1x2": {
         "home": 3.18,
         "draw": 3.59,
@@ -6398,7 +6410,7 @@
         "draw": -3.89,
         "away": 16.81
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -6519,7 +6531,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:16+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:44+00:00",
       "odds_1x2": {
         "home": 2.59,
         "draw": 3.46,
@@ -6542,7 +6554,7 @@
         "draw": -3.08,
         "away": 0.09
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -6665,7 +6677,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:16+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:44+00:00",
       "odds_1x2": {
         "home": 7.12,
         "draw": 4.91,
@@ -6688,7 +6700,7 @@
         "draw": 10.14,
         "away": -19.1
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -6809,7 +6821,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:16+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:44+00:00",
       "odds_1x2": {
         "home": 1.57,
         "draw": 4.32,
@@ -6832,7 +6844,7 @@
         "draw": 3.39,
         "away": -2.32
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -6953,7 +6965,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:12+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:40+00:00",
       "odds_1x2": {
         "home": 2.06,
         "draw": 3.46,
@@ -6976,7 +6988,7 @@
         "draw": -1.58,
         "away": -9.79
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -7097,7 +7109,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:12+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:40+00:00",
       "odds_1x2": {
         "home": 4.68,
         "draw": 3.84,
@@ -7120,7 +7132,7 @@
         "draw": -4.71,
         "away": 6.83
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -7262,7 +7274,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:12+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:40+00:00",
       "odds_1x2": {
         "home": 1.44,
         "draw": 4.84,
@@ -7285,7 +7297,7 @@
         "draw": 1.17,
         "away": 30.75
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -7445,7 +7457,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:12+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:40+00:00",
       "odds_1x2": {
         "home": 6.0,
         "draw": 5.42,
@@ -7468,7 +7480,7 @@
         "draw": 1.88,
         "away": -3.64
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -7589,7 +7601,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:12+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:40+00:00",
       "odds_1x2": {
         "home": 1.98,
         "draw": 3.61,
@@ -7612,7 +7624,7 @@
         "draw": -5.66,
         "away": -10.08
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -7733,7 +7745,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:12+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:40+00:00",
       "odds_1x2": {
         "home": 2.1,
         "draw": 3.22,
@@ -7756,7 +7768,7 @@
         "draw": 1.34,
         "away": -2.44
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -7877,7 +7889,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:12+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:40+00:00",
       "odds_1x2": {
         "home": 3.14,
         "draw": 3.48,
@@ -7900,7 +7912,7 @@
         "draw": -1.53,
         "away": 3.77
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -8021,7 +8033,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:12+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:40+00:00",
       "odds_1x2": {
         "home": 1.23,
         "draw": 6.27,
@@ -8044,7 +8056,7 @@
         "draw": 4.8,
         "away": 6.87
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -8165,7 +8177,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:12+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:40+00:00",
       "odds_1x2": {
         "home": 2.85,
         "draw": 2.98,
@@ -8188,7 +8200,7 @@
         "draw": -5.82,
         "away": -15.43
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -8309,7 +8321,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:22+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:51+00:00",
       "odds_1x2": {
         "home": 2.02,
         "draw": 3.54,
@@ -8332,7 +8344,7 @@
         "draw": -0.26,
         "away": 13.46
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -8453,7 +8465,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:22+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:51+00:00",
       "odds_1x2": {
         "home": 1.58,
         "draw": 3.7,
@@ -8476,7 +8488,7 @@
         "draw": -5.23,
         "away": -8.01
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -8597,7 +8609,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:22+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:51+00:00",
       "odds_1x2": {
         "home": 1.89,
         "draw": 3.44,
@@ -8620,7 +8632,7 @@
         "draw": -9.99,
         "away": -16.15
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -8741,7 +8753,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:22+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:51+00:00",
       "odds_1x2": {
         "home": 6.69,
         "draw": 4.93,
@@ -8764,7 +8776,7 @@
         "draw": 0.75,
         "away": -9.51
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -8906,7 +8918,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:22+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:51+00:00",
       "odds_1x2": {
         "home": 1.27,
         "draw": 5.27,
@@ -8929,7 +8941,7 @@
         "draw": -0.74,
         "away": 3.19
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -9050,7 +9062,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:22+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:51+00:00",
       "odds_1x2": {
         "home": 2.45,
         "draw": 3.33,
@@ -9073,7 +9085,7 @@
         "draw": 5.18,
         "away": -11.34
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -9194,7 +9206,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:22+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:51+00:00",
       "odds_1x2": {
         "home": 2.81,
         "draw": 3.36,
@@ -9217,7 +9229,7 @@
         "draw": -6.05,
         "away": -20.75
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -9338,7 +9350,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:22+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:51+00:00",
       "odds_1x2": {
         "home": 1.64,
         "draw": 3.96,
@@ -9361,7 +9373,7 @@
         "draw": -0.63,
         "away": 4.53
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -9482,7 +9494,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:22+00:00",
+      "odds_fetched_at": "2026-10-16T15:50:51+00:00",
       "odds_1x2": {
         "home": 2.8,
         "draw": 3.65,
@@ -9505,7 +9517,7 @@
         "draw": -14.59,
         "away": -36.3
       },
-      "market_analysis_updated_at": "2026-10-16T14:52:46+00:00",
+      "market_analysis_updated_at": "2026-10-16T15:51:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -10094,7 +10106,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:15+00:00"
+      "odds_fetched_at": "2026-10-16T15:50:43+00:00"
     },
     {
       "id": "2026-10-18-Ligue 1-Paris FC-Rennes",
@@ -10148,7 +10160,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:15+00:00"
+      "odds_fetched_at": "2026-10-16T15:50:43+00:00"
     },
     {
       "id": "2026-10-18-Ligue 1-Lyon-Nice",
@@ -10202,7 +10214,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:15+00:00"
+      "odds_fetched_at": "2026-10-16T15:50:43+00:00"
     },
     {
       "id": "2026-10-16-Bundesliga-Ein Frankfurt-FC Koln",
@@ -10256,7 +10268,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:13+00:00"
+      "odds_fetched_at": "2026-10-16T15:50:41+00:00"
     },
     {
       "id": "2026-10-17-Bundesliga-Elversberg-Augsburg",
@@ -10367,7 +10379,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:13+00:00"
+      "odds_fetched_at": "2026-10-16T15:50:41+00:00"
     },
     {
       "id": "2026-10-17-Bundesliga-Hamburg-Stuttgart",
@@ -10421,7 +10433,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:13+00:00"
+      "odds_fetched_at": "2026-10-16T15:50:41+00:00"
     },
     {
       "id": "2026-10-17-Bundesliga-Schalke 04-Mainz",
@@ -10475,7 +10487,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:13+00:00"
+      "odds_fetched_at": "2026-10-16T15:50:41+00:00"
     },
     {
       "id": "2026-10-17-Bundesliga-Union Berlin-Dortmund",
@@ -10580,7 +10592,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:13+00:00"
+      "odds_fetched_at": "2026-10-16T15:50:41+00:00"
     },
     {
       "id": "2026-10-17-Bundesliga-Werder Bremen-Paderborn",
@@ -10715,7 +10727,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:13+00:00"
+      "odds_fetched_at": "2026-10-16T15:50:41+00:00"
     },
     {
       "id": "2026-10-17-Bundesliga-Bayern Munich-RB Leipzig",
@@ -10802,7 +10814,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:13+00:00"
+      "odds_fetched_at": "2026-10-16T15:50:41+00:00"
     },
     {
       "id": "2026-10-18-Bundesliga-Leverkusen-Freiburg",
@@ -10856,7 +10868,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:13+00:00"
+      "odds_fetched_at": "2026-10-16T15:50:41+00:00"
     },
     {
       "id": "2026-10-18-Bundesliga-M'gladbach-Hoffenheim",
@@ -10910,7 +10922,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:13+00:00"
+      "odds_fetched_at": "2026-10-16T15:50:41+00:00"
     },
     {
       "id": "2026-10-18-Super League greca-Panathinaikos-Asteras Tripolis",
@@ -10964,7 +10976,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:29+00:00"
+      "odds_fetched_at": "2026-10-16T15:50:57+00:00"
     },
     {
       "id": "2026-10-17-Serie A-Bologna-Inter",
@@ -11069,7 +11081,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:14+00:00"
+      "odds_fetched_at": "2026-10-16T15:50:42+00:00"
     },
     {
       "id": "2026-10-17-Serie A-Roma-Genoa",
@@ -11204,7 +11216,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:14+00:00"
+      "odds_fetched_at": "2026-10-16T15:50:42+00:00"
     },
     {
       "id": "2026-10-18-Serie A-Milan-Atalanta",
@@ -11258,7 +11270,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:14+00:00"
+      "odds_fetched_at": "2026-10-16T15:50:42+00:00"
     },
     {
       "id": "2026-10-19-Serie A-Monza-Cagliari",
@@ -11312,7 +11324,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:14+00:00"
+      "odds_fetched_at": "2026-10-16T15:50:42+00:00"
     },
     {
       "id": "2026-10-17-Eliteserien norvegese-Hamarkameratene-Bodo/Glimt",
@@ -11710,7 +11722,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-16T14:52:12+00:00"
+      "odds_fetched_at": "2026-10-16T15:50:40+00:00"
     },
     {
       "id": "2026-10-16-Allsvenskan svedese-IF Brommapojkarna-Djurgarden",
@@ -12041,10 +12053,10 @@
       "requests_made_this_run": 0
     }
   },
-  "odds_updated_at": "2026-10-16T14:52:46+00:00",
+  "odds_updated_at": "2026-10-16T15:51:20+00:00",
   "odds_source_api_football": "API-Football",
   "market_analysis": {
-    "updated_at": "2026-10-16T14:52:46+00:00",
+    "updated_at": "2026-10-16T15:51:20+00:00",
     "matches_analyzed": 61,
     "additional_markets_analyzed": 61,
     "matches_total": 63,
@@ -12064,7 +12076,7 @@
     "method": "Probabilità implicite normalizzate per mercati binari; per doppia chance l'implied è 1/quota perché gli esiti si sovrappongono; EV teorico = probabilità modello × quota decimale − 1"
   },
   "odds_status": {
-    "updated_at": "2026-10-16T14:52:46+00:00",
+    "updated_at": "2026-10-16T15:51:20+00:00",
     "matches_total": 63,
     "matches_with_fresh_1x2": 61,
     "matches_with_fresh_additional_markets": 61,

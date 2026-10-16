@@ -24497,6 +24497,8 @@
     "2026-10-17"
   ],
   "lineups_by_fixture": {},
-  "lineup_attempts": {},
+  "lineup_attempts": {
+    "1549035": "2026-10-16T15:51:19.051702+00:00"
+  },
   "unavailable_dates": {}
 }
