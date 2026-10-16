@@ -305,6 +305,10 @@ def main():
         total_pages = 1
         completed_date = False
         while page <= total_pages and remaining > 0:
+            # Anche una risposta HTTP fallita consuma una richiesta del provider.
+            used += 1
+            requests_made += 1
+            remaining -= 1
             try:
                 payload = api_get_odds(api_key, date=match_day, page=page)
                 paging = payload.get("paging") or {}
@@ -362,9 +366,6 @@ def main():
                         "error": message,
                     }
                 break
-            used += 1
-            requests_made += 1
-            remaining -= 1
             page += 1
         if completed_date:
             # Solo dopo aver visitato tutte le pagine possiamo concludere che
