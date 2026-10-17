@@ -41,6 +41,12 @@ ESPN_LEAGUES = {
     "Premier Division irlandese": "irl.1", "Eliteserien norvegese": "nor.1",
     "Ekstraklasa polacca": "pol.1", "Liga I rumena": "rou.1",
     "Allsvenskan svedese": "swe.1", "Super League svizzera": "sui.1",
+    "Champions League": "uefa.champions", "Europa League": "uefa.europa",
+    "Conference League": "uefa.europa.conf", "Coppa Italia": "ita.coppa_italia",
+    "FA Cup": "eng.fa", "Copa del Rey": "esp.copa_del_rey",
+    "DFB-Pokal": "ger.dfb_pokal", "Coupe de France": "fra.coupe_de_france",
+    "KNVB Beker": "ned.knvb_cup", "Taça de Portugal": "por.taca_de_portugal",
+    "Scottish Cup": "sco.fa_cup", "Coppa di Turchia": "tur.turkiye_kupasi",
 }
 ESPN_TIMEZONES = {
     "Premier League": "Europe/London", "Championship": "Europe/London",
