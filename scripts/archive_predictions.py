@@ -7,7 +7,7 @@ import re
 import unicodedata
 import urllib.error
 import urllib.request
-from datetime import date, datetime, timezone
+from datetime import date, datetime, time, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -260,6 +260,69 @@ def fetch_espn_results(league, dates):
     return found
 
 
+def is_pre_match_forecast(match, now=None):
+    """Consente snapshot solo prima del kickoff; senza orario, nello stesso giorno è escluso."""
+    raw_date = parse_date(match.get("date"))
+    if not raw_date:
+        return False
+    try:
+        match_date = date.fromisoformat(raw_date)
+    except ValueError:
+        return False
+    current = now or datetime.now(timezone.utc)
+    if current.tzinfo is None:
+        current = current.replace(tzinfo=timezone.utc)
+    league = str(match.get("league") or match.get("competition") or "")
+    tz = ZoneInfo(ESPN_TIMEZONES.get(league, "Europe/Rome"))
+    local_now = current.astimezone(tz)
+    if match_date < local_now.date():
+        return False
+    if match_date > local_now.date():
+        return True
+    try:
+        hour, minute = (int(part) for part in str(match.get("kickoff") or "").strip().split(":", 1))
+        if not (0 <= hour <= 23 and 0 <= minute <= 59):
+            return False
+        kickoff_at = datetime.combine(match_date, time(hour, minute), tzinfo=tz)
+    except (ValueError, TypeError):
+        return False
+    return current.astimezone(timezone.utc) < kickoff_at.astimezone(timezone.utc)
+
+
+def calculate_calibration(records):
+    """Affidabilità 1/X/2: probabilità media contro frequenza osservata per fascia."""
+    evaluated = []
+    for item in records:
+        if item.get("outcome") not in ("1", "X", "2"):
+            continue
+        probs = item.get("probabilities")
+        if not isinstance(probs, dict):
+            continue
+        try:
+            values = [float(probs[key]) / 100 for key in ("home_win", "draw", "away_win")]
+        except (KeyError, TypeError, ValueError):
+            continue
+        if any(not 0 <= value <= 1 for value in values) or abs(sum(values) - 1) > 0.015:
+            continue
+        evaluated.append((values, ("1", "X", "2").index(item["outcome"])))
+    if len(evaluated) < MIN_METRIC_MATCHES:
+        return {"evaluated_matches": len(evaluated), "minimum_matches_required": MIN_METRIC_MATCHES,
+                "by_outcome": None, "note": "Calibrazione non pubblicata: campione inferiore alla soglia minima."}
+    output = {}
+    for class_index, label in enumerate(("1", "X", "2")):
+        buckets = []
+        for bucket_index in range(5):
+            lower, upper = bucket_index * 0.2, (bucket_index + 1) * 0.2
+            rows = [(values[class_index], int(actual == class_index)) for values, actual in evaluated
+                    if lower <= values[class_index] < upper or (bucket_index == 4 and values[class_index] == 1.0)]
+            if rows:
+                buckets.append({"range": f"{int(lower * 100)}-{int(upper * 100)}%", "matches": len(rows),
+                                "mean_predicted_probability": round(sum(row[0] for row in rows) * 100 / len(rows), 2),
+                                "observed_frequency": round(sum(row[1] for row in rows) * 100 / len(rows), 2)})
+        output[label] = buckets
+    return {"evaluated_matches": len(evaluated), "minimum_matches_required": MIN_METRIC_MATCHES,
+            "by_outcome": output, "note": "Confrontare probabilità media e frequenza osservata; fasce con pochi casi sono instabili."}
+
 def calculate_metrics(records):
     evaluated = []
     for item in records:
@@ -276,6 +339,7 @@ def calculate_metrics(records):
         return {
             "settled_matches": len(evaluated), "accuracy_1x2": None, "brier_score_1x2": None,
             "minimum_matches_required": MIN_METRIC_MATCHES,
+            "calibration_1x2": calculate_calibration(evaluated),
             "note": f"Metriche non pubblicate: servono almeno {MIN_METRIC_MATCHES} partite concluse con probabilità archiviate.",
         }
     import math
@@ -297,6 +361,7 @@ def calculate_metrics(records):
         "accuracy_1x2": round(correct / len(evaluated) * 100, 2),
         "brier_score_1x2": round(brier_total / len(evaluated), 4),
         "log_loss_1x2": round(logloss_total / len(evaluated), 4),
+        "calibration_1x2": calculate_calibration(evaluated),
         "note": "Metriche descrittive su pronostici archiviati; Brier e log loss più bassi sono migliori. Non dimostrano redditività o affidabilità futura.",
     }
 
@@ -514,14 +579,17 @@ def main():
     records = history.get("records", [])
     known_ids = {item.get("id") for item in records}
 
-    today = datetime.now(timezone.utc).date()
+    snapshot_time = datetime.now(timezone.utc)
     for match in data.get("matches", []):
         match_date = parse_date(match.get("date"))
         match_id = match.get("id")
-        if not match_id or match_id in known_ids or not match_date or match_date < today.isoformat():
+        if not match_id or match_id in known_ids or not match_date or not is_pre_match_forecast(match, snapshot_time):
             continue
         records.append({
             "id": match_id, "date": match_date, "league": match.get("league", ""),
+            "kickoff": match.get("kickoff"),
+            "model_version": data.get("model", "versione_non_dichiarata"),
+            "forecast_generated_at": data.get("updated_at"),
             "home_team": match.get("home_team", ""), "away_team": match.get("away_team", ""),
             "status_at_archive": match.get("status", "NO BET"),
             "probabilities": match.get("probabilities") or {},
