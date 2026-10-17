@@ -556,6 +556,16 @@ def fetch_standings(code, meta, season_year):
     return rows, {"status": "available", "teams": len(rows), "groups": groups, "source": "ESPN", "season": season_year}
 
 
+def cup_calendar_cache_is_healthy(coverage):
+    """La cache non è riutilizzabile se una coppa non è stata sincronizzata correttamente."""
+    required = set(EUROPEAN) | set(CUPS)
+    return all(
+        isinstance(coverage.get(code), dict)
+        and coverage[code].get("status") in ("complete_window", "loaded")
+        for code in required
+    )
+
+
 def main():
     now = datetime.now(timezone.utc)
     today = now.astimezone(ZoneInfo("Europe/Rome")).date()
@@ -575,9 +585,17 @@ def main():
     except (ValueError, TypeError):
         cache_fresh = False
         cache_recent = False
-    if cache_recent and os.environ.get("FORCE_COMPETITION_SYNC", "").strip() != "1":
-        print(f"Calendario coppe/campionati aggiornato da meno di 6 ore ({old.get('updated_at')}); sincronizzazione saltata.")
+    cup_cache_healthy = cup_calendar_cache_is_healthy(old_coverage)
+    if cache_recent and cup_cache_healthy and os.environ.get("FORCE_COMPETITION_SYNC", "").strip() != "1":
+        print(f"Calendario coppe/campionati aggiornato da meno di 6 ore ({old.get('updated_at')}) e coppe verificate; sincronizzazione saltata.")
         return
+    if cache_recent and not cup_cache_healthy:
+        missing = sorted(
+            code for code in (set(EUROPEAN) | set(CUPS))
+            if not isinstance(old_coverage.get(code), dict)
+            or old_coverage[code].get("status") not in ("complete_window", "loaded")
+        )
+        print(f"Cache recente ma calendario coppe incompleto/non affidabile ({', '.join(missing)}); forzo la risincronizzazione.")
     jobs = {}
     for code, meta in COMPETITIONS.items():
         start, end = season_range(today, LEAGUES[code][2]) if code in LEAGUES else season_range(today, "summer")
