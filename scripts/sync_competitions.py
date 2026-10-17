@@ -15,7 +15,7 @@ from zoneinfo import ZoneInfo
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "data" / "competition_data.json"
 BASE = "https://site.api.espn.com/apis"
-TIMEOUT = 12
+TIMEOUT = 8
 USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
 FOOTBALL_DATA = "https://www.football-data.co.uk"
 FOOTBALL_CODES = {
@@ -84,20 +84,29 @@ COMPETITIONS = {
 }
 
 
-def fetch_json(url, retries=2):
+def fetch_json(url, retries=1):
     last_error = None
+    candidates = [url]
+    alternate = url.replace("https://site.api.espn.com", "https://site.web.api.espn.com")
+    if alternate != url:
+        candidates.append(alternate)
     for attempt in range(retries + 1):
-        try:
-            request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept": "application/json", "Referer": "https://www.espn.com/soccer/"})
-            with urllib.request.urlopen(request, timeout=TIMEOUT) as response:
-                payload = json.loads(response.read().decode("utf-8"))
-            if not isinstance(payload, dict):
-                raise ValueError("Risposta JSON non è un oggetto")
-            return payload
-        except (urllib.error.URLError, TimeoutError, OSError, ValueError) as error:
-            last_error = error
-            if attempt < retries:
-                time.sleep(0.4 * (attempt + 1))
+        for candidate in candidates:
+            try:
+                request = urllib.request.Request(candidate, headers={
+                    "User-Agent": USER_AGENT, "Accept": "application/json",
+                    "Referer": "https://www.espn.com/soccer/",
+                    "Origin": "https://www.espn.com",
+                })
+                with urllib.request.urlopen(request, timeout=TIMEOUT) as response:
+                    payload = json.loads(response.read().decode("utf-8"))
+                if not isinstance(payload, dict):
+                    raise ValueError("Risposta JSON non è un oggetto")
+                return payload
+            except (urllib.error.URLError, TimeoutError, OSError, ValueError) as error:
+                last_error = error
+        if attempt < retries:
+            time.sleep(0.5)
     raise RuntimeError(str(last_error))
 
 
