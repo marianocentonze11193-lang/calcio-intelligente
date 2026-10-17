@@ -444,7 +444,137 @@ def classify_no_bet(home_sample, away_sample, data_quality_ok=True):
     return "campione_insufficiente", "Campione insufficiente: servono almeno tre gare casalinghe per la squadra di casa e tre gare in trasferta per l’avversaria."
 
 
-def make_forecast(home, away, league, match_date, kickoff, history, league_home_avg, league_away_avg, elo_ratings=None, recent_form=None):
+EUROPEAN_ESPN_COMPETITIONS = {
+    "uefa.champions": "Champions League",
+    "uefa.europa": "Europa League",
+    "uefa.europa.conf": "Conference League",
+}
+
+
+def fetch_european_matches(start_date, end_date):
+    """Recupera da ESPN partite UEFA recenti/concluse; dati incompleti non vengono inventati."""
+    days = []
+    cursor = start_date
+    while cursor <= end_date:
+        days.append(cursor)
+        cursor += timedelta(days=1)
+
+    def fetch_day(day, sport_code, competition_name):
+        url = (
+            "https://site.api.espn.com/apis/site/v2/sports/soccer/"
+            f"{sport_code}/scoreboard?dates={day:%Y%m%d}&limit=100"
+        )
+        try:
+            request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+            with urllib.request.urlopen(request, timeout=8) as response:
+                payload = json.loads(response.read().decode("utf-8"))
+        except (urllib.error.URLError, TimeoutError, OSError, ValueError) as error:
+            print(f"AVVISO: calendario europeo {competition_name} {day}: {error}")
+            return []
+        found = []
+        for event in payload.get("events", []):
+            competitions = event.get("competitions") or []
+            if not competitions:
+                continue
+            competition = competitions[0]
+            status = (competition.get("status") or {}).get("type") or {}
+            if not status.get("completed"):
+                continue
+            raw_date = event.get("date", "")
+            try:
+                event_dt = datetime.fromisoformat(raw_date.replace("Z", "+00:00"))
+                event_date = event_dt.astimezone(ZoneInfo("Europe/Rome")).date()
+            except (ValueError, TypeError):
+                event_date = parse_date(raw_date)
+            if not event_date:
+                continue
+            home = away = None
+            for competitor in competition.get("competitors", []):
+                team = (competitor.get("team") or {}).get("displayName", "").strip()
+                score = number(competitor.get("score"))
+                if competitor.get("homeAway") == "home":
+                    home = (team, score)
+                elif competitor.get("homeAway") == "away":
+                    away = (team, score)
+            if not home or not away or not home[0] or not away[0]:
+                continue
+            if home[1] is None or away[1] is None:
+                continue
+            if team_key(home[0]) == team_key(away[0]):
+                continue
+            found.append({
+                "date": event_date.isoformat(), "home_team": home[0], "away_team": away[0],
+                "home_goals": int(home[1]), "away_goals": int(away[1]),
+                "competition": competition_name, "status": "completed",
+                "source": "ESPN",
+            })
+        return found
+
+    tasks = []
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        for day in days:
+            for sport_code, competition_name in EUROPEAN_ESPN_COMPETITIONS.items():
+                tasks.append(pool.submit(fetch_day, day, sport_code, competition_name))
+        results = []
+        for task in as_completed(tasks):
+            results.extend(task.result())
+    unique = {}
+    for item in results:
+        key = (item["date"], team_key(item["home_team"]), team_key(item["away_team"]))
+        unique[key] = item
+    ordered = sorted(unique.values(), key=lambda item: item["date"])
+    print(f"Calendario UEFA ESPN: {len(ordered)} risultati europei conclusi recuperati.")
+    return ordered
+
+
+def european_fatigue_context(home, away, match_date, european_matches):
+    """Contesto riposo UEFA: correzione prudente e sperimentale, limitata ai risultati verificati."""
+    try:
+        target_date = match_date if isinstance(match_date, date) else date.fromisoformat(str(match_date))
+    except (TypeError, ValueError):
+        return []
+    context = []
+    for team in (home, away):
+        recent = []
+        for item in european_matches or []:
+            try:
+                played_date = date.fromisoformat(item.get("date", ""))
+            except (TypeError, ValueError):
+                continue
+            days_before = (target_date - played_date).days
+            if not 1 <= days_before <= 4:
+                continue
+            if team_key(team) == team_key(item.get("home_team")):
+                venue = "casa"
+            elif team_key(team) == team_key(item.get("away_team")):
+                venue = "trasferta"
+            else:
+                continue
+            recent.append((played_date, days_before, venue, item))
+        if not recent:
+            continue
+        played_date, days_before, venue, item = max(recent, key=lambda row: row[0])
+        # Penalità minima e dichiaratamente sperimentale. Le partite UEFA non
+        # forniscono sempre minuti giocati/tempi supplementari: non si inventano.
+        if days_before <= 2:
+            factor = 0.92 if venue == "trasferta" else 0.95
+        elif days_before == 3:
+            factor = 0.95 if venue == "trasferta" else 0.97
+        else:
+            factor = 0.98 if venue == "trasferta" else 0.99
+        context.append({
+            "team": team, "competition": item.get("competition", "Coppa europea"),
+            "match_date": item.get("date"), "days_before": days_before,
+            "venue": venue, "home_goals": item.get("home_goals"),
+            "away_goals": item.get("away_goals"), "attack_factor": factor,
+            "adjustment_pct": round((1 - factor) * 100, 1),
+            "source": item.get("source", "ESPN"),
+            "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati.",
+        })
+    return context
+
+
+def make_forecast(home, away, league, match_date, kickoff, history, league_home_avg, league_away_avg, elo_ratings=None, recent_form=None, european_matches=None):
     hs, aws = history[home], history[away]
 
     def smooth(goals, games, prior):
@@ -477,6 +607,12 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
         away_form_factor = max(0.82, min(1.18, math.sqrt(away_attack_form * away_defence_form)))
         expected_home = max(0.15, min(4.5, expected_home * home_form_factor))
         expected_away = max(0.15, min(4.5, expected_away * away_form_factor))
+    european_context = european_fatigue_context(home, away, match_date, european_matches)
+    for item in european_context:
+        if team_key(item["team"]) == team_key(home):
+            expected_home = max(0.15, expected_home * item["attack_factor"])
+        elif team_key(item["team"]) == team_key(away):
+            expected_away = max(0.15, expected_away * item["attack_factor"])
     hp, ap = poisson_probs(expected_home), poisson_probs(expected_away)
 
     home_win = draw = away_win = over15 = over25 = over35 = btts = 0.0
@@ -538,7 +674,7 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
         summary = f"{outcome_text}; {goal_text}; {btts_text}. Commento automatico basato solo sul modello statistico, non su notizie o quote."
         # Le selezioni automatiche richiedono un campione minimo casa/trasferta
         # di almeno tre gare per lato; le stime preliminari restano descrittive.
-        if home_sample >= 8 and away_sample >= 8:
+        if home_sample >= 8 and away_sample >= 8 and not european_context:
             if over15 >= 0.70: suggested.append("Over 1,5")
             if btts >= 0.70: suggested.append("Goal")
             if best_probability >= 0.70: suggested.append(best_outcome)
@@ -560,7 +696,7 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
         "sample_matches": sample,
         "home_matches_sample": home_sample,
         "away_matches_sample": away_sample,
-        "status": ("Pronostico valutabile" if home_sample >= 8 and away_sample >= 8 else "Stima preliminare") if valid else "NO BET",
+        "status": ("Pronostico valutabile" if home_sample >= 8 and away_sample >= 8 and not european_context else "Stima preliminare") if valid else "NO BET",
         "no_bet_type": "" if valid else no_bet_type,
         "reason": "" if valid else no_bet_reason,
         "confidence": "alta quantità di dati (non sinonimo di accuratezza verificata)" if sample >= 8 else "media quantità di dati" if sample >= 5 else "bassa quantità di dati",
@@ -569,7 +705,9 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
         "elo_away": round((elo_ratings or {}).get(away, 1500.0), 1),
         "home_recent_form": (recent_form or {}).get(home),
         "away_recent_form": (recent_form or {}).get(away),
-        "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare; sperimentale non ancora validato",
+        "european_context": european_context,
+        "european_fatigue_status": "rilevato" if european_context else "nessuna gara europea recente verificata",
+        "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto coppe UEFA sperimentale; non ancora validato",
         "availability_data": {
             "status": "non_integrata",
             "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
@@ -585,6 +723,7 @@ def main():
     historical_available = []
     fixture_odds = {}
     fixture_markets = {}
+    european_matches = fetch_european_matches(today - timedelta(days=7), last_date)
 
     # Football-data pubblica le prossime partite in un CSV separato.
     try:
@@ -788,7 +927,7 @@ def main():
         for home, away, match_date, kickoff in fixtures:
             home = normalized_history.get(team_key(home), home)
             away = normalized_history.get(team_key(away), away)
-            forecast = make_forecast(home, away, league_name, match_date, kickoff, history, league_home_avg, league_away_avg, elo_ratings, recent_form)
+            forecast = make_forecast(home, away, league_name, match_date, kickoff, history, league_home_avg, league_away_avg, elo_ratings, recent_form, european_matches)
             if forecast:
                 fixture_key = (match_date.isoformat(), team_key(home), team_key(away))
                 quote = fixture_odds.get(fixture_key)
@@ -821,8 +960,8 @@ def main():
                 skipped += 1
         print(f"{league_name}: pronostici creati {len(fixtures) - skipped}; scartate per storico insufficiente {skipped}.")
 
-    # Il calendario si concentra sulle massime divisioni nazionali selezionate.
-    # Le coppe UEFA restano escluse finché non è disponibile uno storico inter-lega verificato.
+    # Il calendario dei campionati resta separato; i risultati UEFA verificati sono usati solo per il contesto di riposo.
+    # Le correzioni da coppe sono sperimentali e non rendono una stima automaticamente valutabile.
 
     if downloaded == 0:
         raise SystemExit("Nessuna fonte dati raggiungibile: il file precedente è stato mantenuto.")
