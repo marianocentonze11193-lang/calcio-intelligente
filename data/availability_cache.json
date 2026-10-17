@@ -39679,13 +39679,76 @@
       "away_formation": "4-3-3",
       "home_coach": "R. Veldeman",
       "away_coach": "R. den Uil"
+    },
+    "1550156": {
+      "updated_at": "2026-10-17T12:54:30.029189+00:00",
+      "home_starters": [
+        "F. Stanković",
+        "R. Halhal",
+        "Juan Jesus",
+        "M. Moreno",
+        "A. Hainaut",
+        "Kike Pérez",
+        "T. Bašić",
+        "S. Sohm",
+        "R. Haps",
+        "J. Yeboah",
+        "A. Adams"
+      ],
+      "away_starters": [
+        "A. Meret",
+        "S. Beukema",
+        "Amir Rrahmani",
+        "B. Badiashile",
+        "G. Di Lorenzo",
+        "S. Lobotka",
+        "B. Gilmour",
+        "L. Spinazzola",
+        "Giovane",
+        "S. McTominay",
+        "L. Lucca"
+      ],
+      "home_substitutes": [
+        "Toni Fernández",
+        "L. Montipò",
+        "R. Mohammed",
+        "Lamine Dabo",
+        "R. Sagrado",
+        "M. Dagasso",
+        "K. Lisman",
+        "Lorenzo Berardi",
+        "J. Schingtienne",
+        "S. Panada",
+        "Þ. Helgason",
+        "P. Mazzocchi",
+        "A. Rrahmani",
+        "L. Lauberbach",
+        "A. Gomes"
+      ],
+      "away_substitutes": [
+        "Luca Marianucci",
+        "Rafa Marín",
+        "M. Olivera",
+        "M. Politano",
+        "K. De Bruyne",
+        "A. Zambo Anguissa",
+        "Alisson Santos",
+        "R. Højlund",
+        "N. Lang",
+        "N. Contini",
+        "V. Milinković-Savić"
+      ],
+      "home_formation": "3-5-2",
+      "away_formation": "3-4-2-1",
+      "home_coach": "D. Nicola",
+      "away_coach": "M. Allegri"
     }
   },
   "lineup_attempts": {
     "1549035": "2026-10-16T16:52:05.657004+00:00",
     "1552189": "2026-10-16T17:48:12.151719+00:00",
     "1557430": "2026-10-17T10:45:40.213124+00:00",
-    "1550156": "2026-10-17T11:44:04.152598+00:00"
+    "1550156": "2026-10-17T12:54:30.029189+00:00"
   },
   "unavailable_dates": {}
 }

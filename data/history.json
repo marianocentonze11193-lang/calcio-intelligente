@@ -3198,9 +3198,10 @@
       "expected_away_goals": 0.62,
       "sample_matches": 0,
       "archived_at": "2026-10-15T10:09:22.995028+00:00",
-      "outcome": null,
-      "home_goals": null,
-      "away_goals": null
+      "outcome": "1",
+      "home_goals": 2,
+      "away_goals": 0,
+      "settled_at": "2026-10-17T12:55:07.905893+00:00"
     },
     {
       "id": "2026-10-17-Super Lig turca-Amed SFK-Konyaspor",
@@ -6728,9 +6729,9 @@
       "away_goals": null
     }
   ],
-  "updated_at": "2026-10-17T11:44:45.503404+00:00",
+  "updated_at": "2026-10-17T12:55:07.906226+00:00",
   "metrics": {
-    "settled_matches": 4,
+    "settled_matches": 5,
     "accuracy_1x2": null,
     "brier_score_1x2": null,
     "minimum_matches_required": 30,
@@ -6780,7 +6781,7 @@
     }
   },
   "result_matching": {
-    "checked_at": "2026-10-17T11:44:45.503383+00:00",
+    "checked_at": "2026-10-17T12:55:07.906210+00:00",
     "unresolved_past_matches": 3,
     "examples": [
       {
