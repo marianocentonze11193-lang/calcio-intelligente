@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-10-17T17:41:02.004708+00:00",
+  "updated_at": "2026-10-17T17:49:52.094536+00:00",
   "source_policy": "Fonte prioritaria: API-Football se la chiave è configurata; fallback football-data.co.uk per i campionati ed ESPN per le coppe. Classifiche ufficiali API-Football per Premier League, La Liga, Serie A e Champions League; altre classifiche ricalcolate dai risultati, con possibili differenze per penalizzazioni o regole speciali. Date, squadre e punteggi sono controllati.",
   "fixtures": [
     {
@@ -10020,6 +10020,22 @@
       "source": "football-data.co.uk"
     },
     {
+      "id": "401918758",
+      "date": "2026-10-11",
+      "kickoff": "13:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Atlético Unión Güímar",
+      "away_team": "Sporting Hortaleza",
+      "status": "completed",
+      "home_goals": 3,
+      "away_goals": 3,
+      "competition_code": "esp.copa_del_rey",
+      "competition": "Copa del Rey",
+      "country": "Spagna",
+      "kind": "Coppa nazionale",
+      "source": "ESPN"
+    },
+    {
       "id": "fd-esp.1-2026-10-11-elche-celta",
       "date": "2026-10-11",
       "kickoff": "13:00",
@@ -10290,6 +10306,22 @@
       "country": "Paesi Bassi",
       "kind": "Campionato",
       "source": "football-data.co.uk"
+    },
+    {
+      "id": "401918752",
+      "date": "2026-10-11",
+      "kickoff": "16:00",
+      "timezone": "Europe/Rome",
+      "home_team": "AE Prat",
+      "away_team": "CF San Rafael",
+      "status": "completed",
+      "home_goals": 5,
+      "away_goals": 0,
+      "competition_code": "esp.copa_del_rey",
+      "competition": "Copa del Rey",
+      "country": "Spagna",
+      "kind": "Coppa nazionale",
+      "source": "ESPN"
     },
     {
       "id": "fd-fra.1-2026-10-11-rennes-auxerre",
@@ -10642,6 +10674,870 @@
       "country": "Portogallo",
       "kind": "Campionato",
       "source": "football-data.co.uk"
+    },
+    {
+      "id": "401915418",
+      "date": "2026-10-13",
+      "kickoff": "18:45",
+      "timezone": "Europe/Rome",
+      "home_team": "Lens",
+      "away_team": "Sporting CP",
+      "status": "completed",
+      "home_goals": 0,
+      "away_goals": 2,
+      "competition_code": "uefa.champions",
+      "competition": "Champions League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915436",
+      "date": "2026-10-13",
+      "kickoff": "18:45",
+      "timezone": "Europe/Rome",
+      "home_team": "Sabah FK",
+      "away_team": "Slavia Prague",
+      "status": "completed",
+      "home_goals": 2,
+      "away_goals": 0,
+      "competition_code": "uefa.champions",
+      "competition": "Champions League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915417",
+      "date": "2026-10-13",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Arsenal",
+      "away_team": "Lille",
+      "status": "completed",
+      "home_goals": 3,
+      "away_goals": 0,
+      "competition_code": "uefa.champions",
+      "competition": "Champions League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915412",
+      "date": "2026-10-13",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Atlético Madrid",
+      "away_team": "Manchester United",
+      "status": "completed",
+      "home_goals": 2,
+      "away_goals": 0,
+      "competition_code": "uefa.champions",
+      "competition": "Champions League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915435",
+      "date": "2026-10-13",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Galatasaray",
+      "away_team": "Barcelona",
+      "status": "completed",
+      "home_goals": 1,
+      "away_goals": 4,
+      "competition_code": "uefa.champions",
+      "competition": "Champions League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915413",
+      "date": "2026-10-13",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Internazionale",
+      "away_team": "Club Brugge",
+      "status": "completed",
+      "home_goals": 3,
+      "away_goals": 4,
+      "competition_code": "uefa.champions",
+      "competition": "Champions League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915434",
+      "date": "2026-10-13",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "RB Leipzig",
+      "away_team": "PSV Eindhoven",
+      "status": "completed",
+      "home_goals": 1,
+      "away_goals": 0,
+      "competition_code": "uefa.champions",
+      "competition": "Champions League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915411",
+      "date": "2026-10-13",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "VIKING FK",
+      "away_team": "Bayern Munich",
+      "status": "completed",
+      "home_goals": 3,
+      "away_goals": 3,
+      "competition_code": "uefa.champions",
+      "competition": "Champions League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915410",
+      "date": "2026-10-13",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Villarreal",
+      "away_team": "Napoli",
+      "status": "completed",
+      "home_goals": 3,
+      "away_goals": 1,
+      "competition_code": "uefa.champions",
+      "competition": "Champions League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915416",
+      "date": "2026-10-14",
+      "kickoff": "18:45",
+      "timezone": "Europe/Rome",
+      "home_team": "Feyenoord Rotterdam",
+      "away_team": "Como",
+      "status": "completed",
+      "home_goals": 3,
+      "away_goals": 2,
+      "competition_code": "uefa.champions",
+      "competition": "Champions League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915415",
+      "date": "2026-10-14",
+      "kickoff": "18:45",
+      "timezone": "Europe/Rome",
+      "home_team": "LASK Linz",
+      "away_team": "Liverpool",
+      "status": "completed",
+      "home_goals": 3,
+      "away_goals": 6,
+      "competition_code": "uefa.champions",
+      "competition": "Champions League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915414",
+      "date": "2026-10-14",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "AS Roma",
+      "away_team": "Real Madrid",
+      "status": "completed",
+      "home_goals": 3,
+      "away_goals": 4,
+      "competition_code": "uefa.champions",
+      "competition": "Champions League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915409",
+      "date": "2026-10-14",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Aston Villa",
+      "away_team": "Fenerbahce",
+      "status": "completed",
+      "home_goals": 6,
+      "away_goals": 0,
+      "competition_code": "uefa.champions",
+      "competition": "Champions League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915393",
+      "date": "2026-10-14",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Bodo/Glimt",
+      "away_team": "Borussia Dortmund",
+      "status": "completed",
+      "home_goals": 1,
+      "away_goals": 0,
+      "competition_code": "uefa.champions",
+      "competition": "Champions League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915407",
+      "date": "2026-10-14",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Manchester City",
+      "away_team": "Paris Saint-Germain",
+      "status": "completed",
+      "home_goals": 2,
+      "away_goals": 4,
+      "competition_code": "uefa.champions",
+      "competition": "Champions League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915408",
+      "date": "2026-10-14",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Real Betis",
+      "away_team": "FC Porto",
+      "status": "completed",
+      "home_goals": 3,
+      "away_goals": 2,
+      "competition_code": "uefa.champions",
+      "competition": "Champions League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915406",
+      "date": "2026-10-14",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Shakhtar Donetsk",
+      "away_team": "AEK Athens",
+      "status": "completed",
+      "home_goals": 3,
+      "away_goals": 1,
+      "competition_code": "uefa.champions",
+      "competition": "Champions League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915405",
+      "date": "2026-10-14",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Slovan Bratislava",
+      "away_team": "VfB Stuttgart",
+      "status": "completed",
+      "home_goals": 0,
+      "away_goals": 3,
+      "competition_code": "uefa.champions",
+      "competition": "Champions League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915855",
+      "date": "2026-10-15",
+      "kickoff": "18:45",
+      "timezone": "Europe/Rome",
+      "home_team": "CSKA Sofia",
+      "away_team": "AS Monaco",
+      "status": "completed",
+      "home_goals": 1,
+      "away_goals": 2,
+      "competition_code": "uefa.europa.conf",
+      "competition": "Conference League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915854",
+      "date": "2026-10-15",
+      "kickoff": "18:45",
+      "timezone": "Europe/Rome",
+      "home_team": "CSU Craiova",
+      "away_team": "Getafe",
+      "status": "completed",
+      "home_goals": 1,
+      "away_goals": 1,
+      "competition_code": "uefa.europa.conf",
+      "competition": "Conference League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915859",
+      "date": "2026-10-15",
+      "kickoff": "18:45",
+      "timezone": "Europe/Rome",
+      "home_team": "Egnatia",
+      "away_team": "FC Midtjylland",
+      "status": "completed",
+      "home_goals": 1,
+      "away_goals": 1,
+      "competition_code": "uefa.europa.conf",
+      "competition": "Conference League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915748",
+      "date": "2026-10-15",
+      "kickoff": "18:45",
+      "timezone": "Europe/Rome",
+      "home_team": "FC Lugano",
+      "away_team": "Red Star Belgrade",
+      "status": "completed",
+      "home_goals": 3,
+      "away_goals": 2,
+      "competition_code": "uefa.europa.conf",
+      "competition": "Conference League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915861",
+      "date": "2026-10-15",
+      "kickoff": "18:45",
+      "timezone": "Europe/Rome",
+      "home_team": "Hajduk Split",
+      "away_team": "Ajax Amsterdam",
+      "status": "completed",
+      "home_goals": 2,
+      "away_goals": 1,
+      "competition_code": "uefa.europa.conf",
+      "competition": "Conference League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915860",
+      "date": "2026-10-15",
+      "kickoff": "18:45",
+      "timezone": "Europe/Rome",
+      "home_team": "KAA Gent",
+      "away_team": "AGF",
+      "status": "completed",
+      "home_goals": 1,
+      "away_goals": 0,
+      "competition_code": "uefa.europa.conf",
+      "competition": "Conference League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915858",
+      "date": "2026-10-15",
+      "kickoff": "18:45",
+      "timezone": "Europe/Rome",
+      "home_team": "KuPS Kuopio",
+      "away_team": "Trabzonspor",
+      "status": "completed",
+      "home_goals": 2,
+      "away_goals": 4,
+      "competition_code": "uefa.europa.conf",
+      "competition": "Conference League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915857",
+      "date": "2026-10-15",
+      "kickoff": "18:45",
+      "timezone": "Europe/Rome",
+      "home_team": "Mjällby AIF",
+      "away_team": "Inter D'Escaldes",
+      "status": "completed",
+      "home_goals": 2,
+      "away_goals": 0,
+      "competition_code": "uefa.europa.conf",
+      "competition": "Conference League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915856",
+      "date": "2026-10-15",
+      "kickoff": "18:45",
+      "timezone": "Europe/Rome",
+      "home_team": "Panathinaikos",
+      "away_team": "Borac Banja Luka",
+      "status": "completed",
+      "home_goals": 2,
+      "away_goals": 1,
+      "competition_code": "uefa.europa.conf",
+      "competition": "Conference League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915747",
+      "date": "2026-10-15",
+      "kickoff": "18:45",
+      "timezone": "Europe/Rome",
+      "home_team": "Riga FC",
+      "away_team": "Kairat Almaty",
+      "status": "completed",
+      "home_goals": 1,
+      "away_goals": 1,
+      "competition_code": "uefa.europa.conf",
+      "competition": "Conference League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915573",
+      "date": "2026-10-15",
+      "kickoff": "18:45",
+      "timezone": "Europe/Rome",
+      "home_team": "AZ Alkmaar",
+      "away_team": "Hapoel Be'er",
+      "status": "completed",
+      "home_goals": 2,
+      "away_goals": 1,
+      "competition_code": "uefa.europa",
+      "competition": "Europa League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915576",
+      "date": "2026-10-15",
+      "kickoff": "18:45",
+      "timezone": "Europe/Rome",
+      "home_team": "Lech Poznan",
+      "away_team": "Bayer Leverkusen",
+      "status": "completed",
+      "home_goals": 0,
+      "away_goals": 4,
+      "competition_code": "uefa.europa",
+      "competition": "Europa League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915566",
+      "date": "2026-10-15",
+      "kickoff": "18:45",
+      "timezone": "Europe/Rome",
+      "home_team": "Lyon",
+      "away_team": "Crystal Palace",
+      "status": "completed",
+      "home_goals": 3,
+      "away_goals": 2,
+      "competition_code": "uefa.europa",
+      "competition": "Europa League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915577",
+      "date": "2026-10-15",
+      "kickoff": "18:45",
+      "timezone": "Europe/Rome",
+      "home_team": "NK Celje",
+      "away_team": "Omonia Nicosia",
+      "status": "completed",
+      "home_goals": 0,
+      "away_goals": 3,
+      "competition_code": "uefa.europa",
+      "competition": "Europa League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915568",
+      "date": "2026-10-15",
+      "kickoff": "18:45",
+      "timezone": "Europe/Rome",
+      "home_team": "RB Salzburg",
+      "away_team": "AC Milan",
+      "status": "completed",
+      "home_goals": 0,
+      "away_goals": 4,
+      "competition_code": "uefa.europa",
+      "competition": "Europa League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915567",
+      "date": "2026-10-15",
+      "kickoff": "18:45",
+      "timezone": "Europe/Rome",
+      "home_team": "Sparta Prague",
+      "away_team": "Lillestrom",
+      "status": "completed",
+      "home_goals": 1,
+      "away_goals": 1,
+      "competition_code": "uefa.europa",
+      "competition": "Europa League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915575",
+      "date": "2026-10-15",
+      "kickoff": "18:45",
+      "timezone": "Europe/Rome",
+      "home_team": "Torreense",
+      "away_team": "Sunderland",
+      "status": "completed",
+      "home_goals": 1,
+      "away_goals": 2,
+      "competition_code": "uefa.europa",
+      "competition": "Europa League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915574",
+      "date": "2026-10-15",
+      "kickoff": "18:45",
+      "timezone": "Europe/Rome",
+      "home_team": "Union St.-Gilloise",
+      "away_team": "Real Sociedad",
+      "status": "completed",
+      "home_goals": 1,
+      "away_goals": 1,
+      "competition_code": "uefa.europa",
+      "competition": "Europa League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915746",
+      "date": "2026-10-15",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Atalanta",
+      "away_team": "Pafos",
+      "status": "completed",
+      "home_goals": 3,
+      "away_goals": 1,
+      "competition_code": "uefa.europa.conf",
+      "competition": "Conference League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915853",
+      "date": "2026-10-15",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Brighton & Hove Albion",
+      "away_team": "Kauno Zalgiris",
+      "status": "completed",
+      "home_goals": 4,
+      "away_goals": 0,
+      "competition_code": "uefa.europa.conf",
+      "competition": "Conference League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915852",
+      "date": "2026-10-15",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "F.C. København",
+      "away_team": "Braga",
+      "status": "completed",
+      "home_goals": 3,
+      "away_goals": 0,
+      "competition_code": "uefa.europa.conf",
+      "competition": "Conference League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915851",
+      "date": "2026-10-15",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "FC Twente",
+      "away_team": "FC Thun",
+      "status": "completed",
+      "home_goals": 1,
+      "away_goals": 0,
+      "competition_code": "uefa.europa.conf",
+      "competition": "Conference League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915850",
+      "date": "2026-10-15",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Heart of Midlothian",
+      "away_team": "FC Nordsjælland",
+      "status": "completed",
+      "home_goals": 1,
+      "away_goals": 1,
+      "competition_code": "uefa.europa.conf",
+      "competition": "Conference League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915848",
+      "date": "2026-10-15",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "SC Freiburg",
+      "away_team": "Jablonec",
+      "status": "completed",
+      "home_goals": 3,
+      "away_goals": 2,
+      "competition_code": "uefa.europa.conf",
+      "competition": "Conference League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915849",
+      "date": "2026-10-15",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Sint-Truidense",
+      "away_team": "Iberia 1999",
+      "status": "completed",
+      "home_goals": 2,
+      "away_goals": 0,
+      "competition_code": "uefa.europa.conf",
+      "competition": "Conference League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915847",
+      "date": "2026-10-15",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "SK Brann",
+      "away_team": "Lincoln Red Imps",
+      "status": "completed",
+      "home_goals": 2,
+      "away_goals": 1,
+      "competition_code": "uefa.europa.conf",
+      "competition": "Conference League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915571",
+      "date": "2026-10-15",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "AFC Bournemouth",
+      "away_team": "SK Sturm Graz",
+      "status": "completed",
+      "home_goals": 3,
+      "away_goals": 0,
+      "competition_code": "uefa.europa",
+      "competition": "Europa League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915562",
+      "date": "2026-10-15",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Benfica",
+      "away_team": "Celtic",
+      "status": "completed",
+      "home_goals": 4,
+      "away_goals": 1,
+      "competition_code": "uefa.europa",
+      "competition": "Europa League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915560",
+      "date": "2026-10-15",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Celta Vigo",
+      "away_team": "Juventus",
+      "status": "completed",
+      "home_goals": 1,
+      "away_goals": 2,
+      "competition_code": "uefa.europa",
+      "competition": "Europa League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915549",
+      "date": "2026-10-15",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Dinamo Zagreb",
+      "away_team": "Anderlecht",
+      "status": "completed",
+      "home_goals": 1,
+      "away_goals": 0,
+      "competition_code": "uefa.europa",
+      "competition": "Europa League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915564",
+      "date": "2026-10-15",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Ferencvaros",
+      "away_team": "Viktoria Plzen",
+      "status": "completed",
+      "home_goals": 2,
+      "away_goals": 1,
+      "competition_code": "uefa.europa",
+      "competition": "Europa League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915561",
+      "date": "2026-10-15",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Jagiellonia Bialystok",
+      "away_team": "Ararat-Armenia",
+      "status": "completed",
+      "home_goals": 3,
+      "away_goals": 1,
+      "competition_code": "uefa.europa",
+      "competition": "Europa League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915550",
+      "date": "2026-10-15",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Marseille",
+      "away_team": "Olympiacos",
+      "status": "completed",
+      "home_goals": 0,
+      "away_goals": 1,
+      "competition_code": "uefa.europa",
+      "competition": "Europa League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915565",
+      "date": "2026-10-15",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "NEC Nijmegen",
+      "away_team": "Levski Sofia",
+      "status": "completed",
+      "home_goals": 1,
+      "away_goals": 1,
+      "competition_code": "uefa.europa",
+      "competition": "Europa League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915572",
+      "date": "2026-10-15",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Stade Rennais",
+      "away_team": "OFI Crete",
+      "status": "completed",
+      "home_goals": 2,
+      "away_goals": 1,
+      "competition_code": "uefa.europa",
+      "competition": "Europa League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915563",
+      "date": "2026-10-15",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "TSG Hoffenheim",
+      "away_team": "Besiktas",
+      "status": "completed",
+      "home_goals": 2,
+      "away_goals": 3,
+      "competition_code": "uefa.europa",
+      "competition": "Europa League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
     },
     {
       "id": "fd-tur.1-2026-10-17-erzurumspor-eyupspor",
@@ -11810,6 +12706,1126 @@
       "country": "Portogallo",
       "kind": "Campionato",
       "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "401915403",
+      "date": "2026-10-20",
+      "kickoff": "18:45",
+      "timezone": "Europe/Rome",
+      "home_team": "Fenerbahce",
+      "away_team": "Slavia Prague",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.champions",
+      "competition": "Champions League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915404",
+      "date": "2026-10-20",
+      "kickoff": "18:45",
+      "timezone": "Europe/Rome",
+      "home_team": "Sabah FK",
+      "away_team": "Borussia Dortmund",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.champions",
+      "competition": "Champions League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915402",
+      "date": "2026-10-20",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "AS Roma",
+      "away_team": "Slovan Bratislava",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.champions",
+      "competition": "Champions League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915398",
+      "date": "2026-10-20",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "FC Porto",
+      "away_team": "PSV Eindhoven",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.champions",
+      "competition": "Champions League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915397",
+      "date": "2026-10-20",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Liverpool",
+      "away_team": "Villarreal",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.champions",
+      "competition": "Champions League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915401",
+      "date": "2026-10-20",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Manchester City",
+      "away_team": "AEK Athens",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.champions",
+      "competition": "Champions League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915400",
+      "date": "2026-10-20",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Napoli",
+      "away_team": "Bodo/Glimt",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.champions",
+      "competition": "Champions League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915399",
+      "date": "2026-10-20",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Paris Saint-Germain",
+      "away_team": "Barcelona",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.champions",
+      "competition": "Champions League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915392",
+      "date": "2026-10-20",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "VfB Stuttgart",
+      "away_team": "Atlético Madrid",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.champions",
+      "competition": "Champions League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915395",
+      "date": "2026-10-21",
+      "kickoff": "18:45",
+      "timezone": "Europe/Rome",
+      "home_team": "Como",
+      "away_team": "Manchester United",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.champions",
+      "competition": "Champions League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915396",
+      "date": "2026-10-21",
+      "kickoff": "18:45",
+      "timezone": "Europe/Rome",
+      "home_team": "Lille",
+      "away_team": "Galatasaray",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.champions",
+      "competition": "Champions League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915394",
+      "date": "2026-10-21",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Aston Villa",
+      "away_team": "VIKING FK",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.champions",
+      "competition": "Champions League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915312",
+      "date": "2026-10-21",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Bayern Munich",
+      "away_team": "Arsenal",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.champions",
+      "competition": "Champions League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915388",
+      "date": "2026-10-21",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Club Brugge",
+      "away_team": "Lens",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.champions",
+      "competition": "Champions League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915390",
+      "date": "2026-10-21",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Internazionale",
+      "away_team": "Shakhtar Donetsk",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.champions",
+      "competition": "Champions League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915389",
+      "date": "2026-10-21",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Real Betis",
+      "away_team": "Feyenoord Rotterdam",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.champions",
+      "competition": "Champions League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915313",
+      "date": "2026-10-21",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Real Madrid",
+      "away_team": "RB Leipzig",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.champions",
+      "competition": "Champions League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915391",
+      "date": "2026-10-21",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Sporting CP",
+      "away_team": "LASK Linz",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.champions",
+      "competition": "Champions League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915846",
+      "date": "2026-10-22",
+      "kickoff": "16:30",
+      "timezone": "Europe/Rome",
+      "home_team": "Kairat Almaty",
+      "away_team": "Panathinaikos",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.europa.conf",
+      "competition": "Conference League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915844",
+      "date": "2026-10-22",
+      "kickoff": "18:45",
+      "timezone": "Europe/Rome",
+      "home_team": "FC Nordsjælland",
+      "away_team": "CSKA Sofia",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.europa.conf",
+      "competition": "Conference League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915840",
+      "date": "2026-10-22",
+      "kickoff": "18:45",
+      "timezone": "Europe/Rome",
+      "home_team": "Getafe",
+      "away_team": "FC Lugano",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.europa.conf",
+      "competition": "Conference League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915845",
+      "date": "2026-10-22",
+      "kickoff": "18:45",
+      "timezone": "Europe/Rome",
+      "home_team": "Iberia 1999",
+      "away_team": "Mjällby AIF",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.europa.conf",
+      "competition": "Conference League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915839",
+      "date": "2026-10-22",
+      "kickoff": "18:45",
+      "timezone": "Europe/Rome",
+      "home_team": "Inter D'Escaldes",
+      "away_team": "CSU Craiova",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.europa.conf",
+      "competition": "Conference League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915842",
+      "date": "2026-10-22",
+      "kickoff": "18:45",
+      "timezone": "Europe/Rome",
+      "home_team": "Jablonec",
+      "away_team": "Brighton & Hove Albion",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.europa.conf",
+      "competition": "Conference League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915841",
+      "date": "2026-10-22",
+      "kickoff": "18:45",
+      "timezone": "Europe/Rome",
+      "home_team": "Kauno Zalgiris",
+      "away_team": "SK Brann",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.europa.conf",
+      "competition": "Conference League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915838",
+      "date": "2026-10-22",
+      "kickoff": "18:45",
+      "timezone": "Europe/Rome",
+      "home_team": "Pafos",
+      "away_team": "Riga FC",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.europa.conf",
+      "competition": "Conference League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915843",
+      "date": "2026-10-22",
+      "kickoff": "18:45",
+      "timezone": "Europe/Rome",
+      "home_team": "Red Star Belgrade",
+      "away_team": "F.C. København",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.europa.conf",
+      "competition": "Conference League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915745",
+      "date": "2026-10-22",
+      "kickoff": "18:45",
+      "timezone": "Europe/Rome",
+      "home_team": "Trabzonspor",
+      "away_team": "Heart of Midlothian",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.europa.conf",
+      "competition": "Conference League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915548",
+      "date": "2026-10-22",
+      "kickoff": "18:45",
+      "timezone": "Europe/Rome",
+      "home_team": "Ararat-Armenia",
+      "away_team": "AZ Alkmaar",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.europa",
+      "competition": "Europa League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915556",
+      "date": "2026-10-22",
+      "kickoff": "18:45",
+      "timezone": "Europe/Rome",
+      "home_team": "Dinamo Zagreb",
+      "away_team": "NEC Nijmegen",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.europa",
+      "competition": "Europa League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915558",
+      "date": "2026-10-22",
+      "kickoff": "18:45",
+      "timezone": "Europe/Rome",
+      "home_team": "Ferencvaros",
+      "away_team": "Torreense",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.europa",
+      "competition": "Europa League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915547",
+      "date": "2026-10-22",
+      "kickoff": "18:45",
+      "timezone": "Europe/Rome",
+      "home_team": "Juventus",
+      "away_team": "Stade Rennais",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.europa",
+      "competition": "Europa League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915546",
+      "date": "2026-10-22",
+      "kickoff": "18:45",
+      "timezone": "Europe/Rome",
+      "home_team": "Lech Poznan",
+      "away_team": "Sunderland",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.europa",
+      "competition": "Europa League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915559",
+      "date": "2026-10-22",
+      "kickoff": "18:45",
+      "timezone": "Europe/Rome",
+      "home_team": "OFI Crete",
+      "away_team": "Bayer Leverkusen",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.europa",
+      "competition": "Europa League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915557",
+      "date": "2026-10-22",
+      "kickoff": "18:45",
+      "timezone": "Europe/Rome",
+      "home_team": "SK Sturm Graz",
+      "away_team": "Marseille",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.europa",
+      "competition": "Europa League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915545",
+      "date": "2026-10-22",
+      "kickoff": "18:45",
+      "timezone": "Europe/Rome",
+      "home_team": "Union St.-Gilloise",
+      "away_team": "Hapoel Be'er",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.europa",
+      "competition": "Europa League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915744",
+      "date": "2026-10-22",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "AGF",
+      "away_team": "Egnatia",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.europa.conf",
+      "competition": "Conference League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915837",
+      "date": "2026-10-22",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Ajax Amsterdam",
+      "away_team": "Atalanta",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.europa.conf",
+      "competition": "Conference League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915836",
+      "date": "2026-10-22",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "AS Monaco",
+      "away_team": "SC Freiburg",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.europa.conf",
+      "competition": "Conference League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915743",
+      "date": "2026-10-22",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Borac Banja Luka",
+      "away_team": "KuPS Kuopio",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.europa.conf",
+      "competition": "Conference League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915832",
+      "date": "2026-10-22",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Braga",
+      "away_team": "KAA Gent",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.europa.conf",
+      "competition": "Conference League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915835",
+      "date": "2026-10-22",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "FC Midtjylland",
+      "away_team": "Sint-Truidense",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.europa.conf",
+      "competition": "Conference League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915834",
+      "date": "2026-10-22",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "FC Thun",
+      "away_team": "Hajduk Split",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.europa.conf",
+      "competition": "Conference League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915833",
+      "date": "2026-10-22",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Lincoln Red Imps",
+      "away_team": "FC Twente",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.europa.conf",
+      "competition": "Conference League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915552",
+      "date": "2026-10-22",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "AFC Bournemouth",
+      "away_team": "AC Milan",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.europa",
+      "competition": "Europa League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915553",
+      "date": "2026-10-22",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Besiktas",
+      "away_team": "Crystal Palace",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.europa",
+      "competition": "Europa League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915555",
+      "date": "2026-10-22",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Celtic",
+      "away_team": "Celta Vigo",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.europa",
+      "competition": "Europa League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915542",
+      "date": "2026-10-22",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Jagiellonia Bialystok",
+      "away_team": "Anderlecht",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.europa",
+      "competition": "Europa League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915540",
+      "date": "2026-10-22",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Lillestrom",
+      "away_team": "Real Sociedad",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.europa",
+      "competition": "Europa League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915541",
+      "date": "2026-10-22",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "NK Celje",
+      "away_team": "RB Salzburg",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.europa",
+      "competition": "Europa League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915554",
+      "date": "2026-10-22",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Olympiacos",
+      "away_team": "Sparta Prague",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.europa",
+      "competition": "Europa League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915544",
+      "date": "2026-10-22",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Omonia Nicosia",
+      "away_team": "Benfica",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.europa",
+      "competition": "Europa League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915543",
+      "date": "2026-10-22",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "TSG Hoffenheim",
+      "away_team": "Lyon",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.europa",
+      "competition": "Europa League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401915539",
+      "date": "2026-10-22",
+      "kickoff": "21:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Viktoria Plzen",
+      "away_team": "Levski Sofia",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "uefa.europa",
+      "competition": "Europa League",
+      "country": "Europa",
+      "kind": "Coppa europea",
+      "source": "ESPN"
+    },
+    {
+      "id": "401916920",
+      "date": "2026-10-27",
+      "kickoff": "18:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Hamburg SV",
+      "away_team": "Eintracht Frankfurt",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "ger.dfb_pokal",
+      "competition": "DFB-Pokal",
+      "country": "Germania",
+      "kind": "Coppa nazionale",
+      "source": "ESPN"
+    },
+    {
+      "id": "401917027",
+      "date": "2026-10-27",
+      "kickoff": "18:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Rot-Weiss Essen",
+      "away_team": "RB Leipzig",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "ger.dfb_pokal",
+      "competition": "DFB-Pokal",
+      "country": "Germania",
+      "kind": "Coppa nazionale",
+      "source": "ESPN"
+    },
+    {
+      "id": "401917028",
+      "date": "2026-10-27",
+      "kickoff": "18:00",
+      "timezone": "Europe/Rome",
+      "home_team": "SG Sonnenhof Großaspach",
+      "away_team": "FC Augsburg",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "ger.dfb_pokal",
+      "competition": "DFB-Pokal",
+      "country": "Germania",
+      "kind": "Coppa nazionale",
+      "source": "ESPN"
+    },
+    {
+      "id": "401917029",
+      "date": "2026-10-27",
+      "kickoff": "18:00",
+      "timezone": "Europe/Rome",
+      "home_team": "VfL Bochum",
+      "away_team": "Mainz",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "ger.dfb_pokal",
+      "competition": "DFB-Pokal",
+      "country": "Germania",
+      "kind": "Coppa nazionale",
+      "source": "ESPN"
+    },
+    {
+      "id": "401917030",
+      "date": "2026-10-27",
+      "kickoff": "20:45",
+      "timezone": "Europe/Rome",
+      "home_team": "Borussia Dortmund",
+      "away_team": "Werder Bremen",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "ger.dfb_pokal",
+      "competition": "DFB-Pokal",
+      "country": "Germania",
+      "kind": "Coppa nazionale",
+      "source": "ESPN"
+    },
+    {
+      "id": "401917031",
+      "date": "2026-10-27",
+      "kickoff": "20:45",
+      "timezone": "Europe/Rome",
+      "home_team": "Borussia Mönchengladbach",
+      "away_team": "Karlsruher SC",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "ger.dfb_pokal",
+      "competition": "DFB-Pokal",
+      "country": "Germania",
+      "kind": "Coppa nazionale",
+      "source": "ESPN"
+    },
+    {
+      "id": "401917026",
+      "date": "2026-10-27",
+      "kickoff": "20:45",
+      "timezone": "Europe/Rome",
+      "home_team": "FC Cologne",
+      "away_team": "1. FC Union Berlin",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "ger.dfb_pokal",
+      "competition": "DFB-Pokal",
+      "country": "Germania",
+      "kind": "Coppa nazionale",
+      "source": "ESPN"
+    },
+    {
+      "id": "401916923",
+      "date": "2026-10-27",
+      "kickoff": "20:45",
+      "timezone": "Europe/Rome",
+      "home_team": "SV Elversberg",
+      "away_team": "SV Darmstadt 98",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "ger.dfb_pokal",
+      "competition": "DFB-Pokal",
+      "country": "Germania",
+      "kind": "Coppa nazionale",
+      "source": "ESPN"
+    },
+    {
+      "id": "401916921",
+      "date": "2026-10-28",
+      "kickoff": "18:00",
+      "timezone": "Europe/Rome",
+      "home_team": "Dynamo Dresden",
+      "away_team": "Schalke 04",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "ger.dfb_pokal",
+      "competition": "DFB-Pokal",
+      "country": "Germania",
+      "kind": "Coppa nazionale",
+      "source": "ESPN"
+    },
+    {
+      "id": "401917036",
+      "date": "2026-10-28",
+      "kickoff": "18:00",
+      "timezone": "Europe/Rome",
+      "home_team": "SC Freiburg",
+      "away_team": "VfL Wolfsburg",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "ger.dfb_pokal",
+      "competition": "DFB-Pokal",
+      "country": "Germania",
+      "kind": "Coppa nazionale",
+      "source": "ESPN"
+    },
+    {
+      "id": "401917032",
+      "date": "2026-10-28",
+      "kickoff": "18:00",
+      "timezone": "Europe/Rome",
+      "home_team": "SC Paderborn 07",
+      "away_team": "VfB Stuttgart",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "ger.dfb_pokal",
+      "competition": "DFB-Pokal",
+      "country": "Germania",
+      "kind": "Coppa nazionale",
+      "source": "ESPN"
+    },
+    {
+      "id": "401916919",
+      "date": "2026-10-28",
+      "kickoff": "18:00",
+      "timezone": "Europe/Rome",
+      "home_team": "SSV Jeddeloh II",
+      "away_team": "Hertha Berlin",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "ger.dfb_pokal",
+      "competition": "DFB-Pokal",
+      "country": "Germania",
+      "kind": "Coppa nazionale",
+      "source": "ESPN"
+    },
+    {
+      "id": "401917033",
+      "date": "2026-10-28",
+      "kickoff": "20:45",
+      "timezone": "Europe/Rome",
+      "home_team": "Bayer Leverkusen",
+      "away_team": "1. FC Nürnberg",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "ger.dfb_pokal",
+      "competition": "DFB-Pokal",
+      "country": "Germania",
+      "kind": "Coppa nazionale",
+      "source": "ESPN"
+    },
+    {
+      "id": "401917035",
+      "date": "2026-10-28",
+      "kickoff": "20:45",
+      "timezone": "Europe/Rome",
+      "home_team": "Bayern Munich",
+      "away_team": "1. FC Magdeburg",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "ger.dfb_pokal",
+      "competition": "DFB-Pokal",
+      "country": "Germania",
+      "kind": "Coppa nazionale",
+      "source": "ESPN"
+    },
+    {
+      "id": "401916922",
+      "date": "2026-10-28",
+      "kickoff": "20:45",
+      "timezone": "Europe/Rome",
+      "home_team": "Hannover 96",
+      "away_team": "Kaiserslautern",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "ger.dfb_pokal",
+      "competition": "DFB-Pokal",
+      "country": "Germania",
+      "kind": "Coppa nazionale",
+      "source": "ESPN"
+    },
+    {
+      "id": "401917034",
+      "date": "2026-10-28",
+      "kickoff": "20:45",
+      "timezone": "Europe/Rome",
+      "home_team": "Holstein Kiel",
+      "away_team": "TSG Hoffenheim",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "ger.dfb_pokal",
+      "competition": "DFB-Pokal",
+      "country": "Germania",
+      "kind": "Coppa nazionale",
+      "source": "ESPN"
     }
   ],
   "standings": {
@@ -11818,7 +13834,7 @@
       "country": "Inghilterra",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T17:41:02.004708+00:00",
+      "updated_at": "2026-10-17T17:49:52.094536+00:00",
       "rows": [
         {
           "team_id": "",
@@ -12154,7 +14170,7 @@
       "country": "Spagna",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T17:41:02.004708+00:00",
+      "updated_at": "2026-10-17T17:49:52.094536+00:00",
       "rows": [
         {
           "team_id": "",
@@ -12490,7 +14506,7 @@
       "country": "Germania",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T17:41:02.004708+00:00",
+      "updated_at": "2026-10-17T17:49:52.094536+00:00",
       "rows": [
         {
           "team_id": "",
@@ -12794,7 +14810,7 @@
       "country": "Italia",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T17:41:02.004708+00:00",
+      "updated_at": "2026-10-17T17:49:52.094536+00:00",
       "rows": [
         {
           "team_id": "",
@@ -13130,7 +15146,7 @@
       "country": "Francia",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T17:41:02.004708+00:00",
+      "updated_at": "2026-10-17T17:49:52.094536+00:00",
       "rows": [
         {
           "team_id": "",
@@ -13434,7 +15450,7 @@
       "country": "Scozia",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T17:41:02.004708+00:00",
+      "updated_at": "2026-10-17T17:49:52.094536+00:00",
       "rows": [
         {
           "team_id": "",
@@ -13642,7 +15658,7 @@
       "country": "Paesi Bassi",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T17:41:02.004708+00:00",
+      "updated_at": "2026-10-17T17:49:52.094536+00:00",
       "rows": [
         {
           "team_id": "",
@@ -13946,7 +15962,7 @@
       "country": "Portogallo",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T17:41:02.004708+00:00",
+      "updated_at": "2026-10-17T17:49:52.094536+00:00",
       "rows": [
         {
           "team_id": "",
@@ -14250,7 +16266,7 @@
       "country": "Belgio",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T17:41:02.004708+00:00",
+      "updated_at": "2026-10-17T17:49:52.094536+00:00",
       "rows": [
         {
           "team_id": "",
@@ -14554,7 +16570,7 @@
       "country": "Turchia",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T17:41:02.004708+00:00",
+      "updated_at": "2026-10-17T17:49:52.094536+00:00",
       "rows": [
         {
           "team_id": "",
@@ -14858,7 +16874,7 @@
       "country": "Grecia",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T17:41:02.004708+00:00",
+      "updated_at": "2026-10-17T17:49:52.094536+00:00",
       "rows": [
         {
           "team_id": "",
@@ -15095,10 +17111,10 @@
     }
   },
   "coverage": {
-    "tur.1": {
+    "fra.1": {
       "status": "loaded",
-      "events": 71,
-      "completed": 63,
+      "events": 62,
+      "completed": 54,
       "source": "football-data.co.uk",
       "range_start": "2026-07-01",
       "range_end": "2027-06-30",
@@ -15113,6 +17129,16 @@
       "range_start": "2026-07-01",
       "range_end": "2027-06-30",
       "future_fixtures": 1,
+      "future_source": "football-data.co.uk fixtures.csv"
+    },
+    "eng.1": {
+      "status": "loaded",
+      "events": 70,
+      "completed": 60,
+      "source": "football-data.co.uk",
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "future_fixtures": 10,
       "future_source": "football-data.co.uk fixtures.csv"
     },
     "aut.1": {
@@ -15146,15 +17172,7 @@
       "range_end": "2027-06-30",
       "events": 0
     },
-    "bel.1": {
-      "status": "loaded",
-      "events": 72,
-      "completed": 72,
-      "source": "football-data.co.uk",
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30"
-    },
-    "sui.1": {
+    "den.1": {
       "status": "unavailable",
       "source": "ESPN",
       "error": "nessuna partita valida nel CSV stagionale",
@@ -15184,6 +17202,118 @@
       "range_start": "2026-07-01",
       "range_end": "2027-06-30",
       "events": 0
+    },
+    "ger.1": {
+      "status": "loaded",
+      "events": 53,
+      "completed": 45,
+      "source": "football-data.co.uk",
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "future_fixtures": 8,
+      "future_source": "football-data.co.uk fixtures.csv"
+    },
+    "tur.1": {
+      "status": "loaded",
+      "events": 71,
+      "completed": 63,
+      "source": "football-data.co.uk",
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "future_fixtures": 8,
+      "future_source": "football-data.co.uk fixtures.csv"
+    },
+    "swe.1": {
+      "status": "unavailable",
+      "source": "ESPN",
+      "error": "nessuna partita valida nel CSV stagionale",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-01-01",
+          "to": "2026-03-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-04-01",
+          "to": "2026-06-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-07-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 400: Bad Request"
+        }
+      ],
+      "range_start": "2026-01-01",
+      "range_end": "2026-12-31",
+      "events": 0
+    },
+    "fin.1": {
+      "status": "unavailable",
+      "source": "ESPN",
+      "error": "nessuna partita valida nel CSV stagionale",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-01-01",
+          "to": "2026-03-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-04-01",
+          "to": "2026-06-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-07-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 400: Bad Request"
+        }
+      ],
+      "range_start": "2026-01-01",
+      "range_end": "2026-12-31",
+      "events": 0
+    },
+    "ned.1": {
+      "status": "loaded",
+      "events": 80,
+      "completed": 72,
+      "source": "football-data.co.uk",
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "future_fixtures": 8,
+      "future_source": "football-data.co.uk fixtures.csv"
+    },
+    "gre.1": {
+      "status": "loaded",
+      "events": 48,
+      "completed": 42,
+      "source": "football-data.co.uk",
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "future_fixtures": 6,
+      "future_source": "football-data.co.uk fixtures.csv"
+    },
+    "esp.1": {
+      "status": "loaded",
+      "events": 87,
+      "completed": 78,
+      "source": "football-data.co.uk",
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "future_fixtures": 9,
+      "future_source": "football-data.co.uk fixtures.csv"
     },
     "irl.1": {
       "status": "unavailable",
@@ -15278,32 +17408,30 @@
       "range_end": "2027-06-30",
       "events": 0
     },
-    "eng.1": {
+    "sco.1": {
       "status": "loaded",
-      "events": 70,
-      "completed": 60,
+      "events": 54,
+      "completed": 48,
       "source": "football-data.co.uk",
       "range_start": "2026-07-01",
       "range_end": "2027-06-30",
-      "future_fixtures": 10,
+      "future_fixtures": 6,
       "future_source": "football-data.co.uk fixtures.csv"
     },
-    "fin.1": {
+    "bel.1": {
+      "status": "loaded",
+      "events": 72,
+      "completed": 72,
+      "source": "football-data.co.uk",
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30"
+    },
+    "sui.1": {
       "status": "unavailable",
       "source": "ESPN",
       "error": "nessuna partita valida nel CSV stagionale",
       "chunks_ok": 0,
       "chunks_failed": [
-        {
-          "from": "2026-01-01",
-          "to": "2026-03-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-04-01",
-          "to": "2026-06-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
         {
           "from": "2026-07-01",
           "to": "2026-09-30",
@@ -15313,31 +17441,21 @@
           "from": "2026-10-01",
           "to": "2026-12-31",
           "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 400: Bad Request"
         }
       ],
-      "range_start": "2026-01-01",
-      "range_end": "2026-12-31",
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
       "events": 0
-    },
-    "ned.1": {
-      "status": "loaded",
-      "events": 80,
-      "completed": 72,
-      "source": "football-data.co.uk",
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30",
-      "future_fixtures": 8,
-      "future_source": "football-data.co.uk fixtures.csv"
-    },
-    "ger.1": {
-      "status": "loaded",
-      "events": 53,
-      "completed": 45,
-      "source": "football-data.co.uk",
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30",
-      "future_fixtures": 8,
-      "future_source": "football-data.co.uk fixtures.csv"
     },
     "nor.1": {
       "status": "unavailable",
@@ -15370,108 +17488,6 @@
       "range_end": "2026-12-31",
       "events": 0
     },
-    "fra.1": {
-      "status": "loaded",
-      "events": 62,
-      "completed": 54,
-      "source": "football-data.co.uk",
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30",
-      "future_fixtures": 8,
-      "future_source": "football-data.co.uk fixtures.csv"
-    },
-    "swe.1": {
-      "status": "unavailable",
-      "source": "ESPN",
-      "error": "nessuna partita valida nel CSV stagionale",
-      "chunks_ok": 0,
-      "chunks_failed": [
-        {
-          "from": "2026-01-01",
-          "to": "2026-03-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-04-01",
-          "to": "2026-06-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-07-01",
-          "to": "2026-09-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-10-01",
-          "to": "2026-12-31",
-          "error": "HTTP Error 400: Bad Request"
-        }
-      ],
-      "range_start": "2026-01-01",
-      "range_end": "2026-12-31",
-      "events": 0
-    },
-    "esp.1": {
-      "status": "loaded",
-      "events": 87,
-      "completed": 78,
-      "source": "football-data.co.uk",
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30",
-      "future_fixtures": 9,
-      "future_source": "football-data.co.uk fixtures.csv"
-    },
-    "gre.1": {
-      "status": "loaded",
-      "events": 48,
-      "completed": 42,
-      "source": "football-data.co.uk",
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30",
-      "future_fixtures": 6,
-      "future_source": "football-data.co.uk fixtures.csv"
-    },
-    "sco.1": {
-      "status": "loaded",
-      "events": 54,
-      "completed": 48,
-      "source": "football-data.co.uk",
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30",
-      "future_fixtures": 6,
-      "future_source": "football-data.co.uk fixtures.csv"
-    },
-    "den.1": {
-      "status": "unavailable",
-      "source": "ESPN",
-      "error": "nessuna partita valida nel CSV stagionale",
-      "chunks_ok": 0,
-      "chunks_failed": [
-        {
-          "from": "2026-07-01",
-          "to": "2026-09-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-10-01",
-          "to": "2026-12-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-01-01",
-          "to": "2027-03-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-04-01",
-          "to": "2027-06-30",
-          "error": "HTTP Error 400: Bad Request"
-        }
-      ],
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30",
-      "events": 0
-    },
     "ita.1": {
       "status": "loaded",
       "events": 69,
@@ -15482,423 +17498,168 @@
       "future_fixtures": 9,
       "future_source": "football-data.co.uk fixtures.csv"
     },
-    "ita.coppa_italia": {
-      "status": "unavailable",
-      "chunks_ok": 0,
-      "chunks_failed": [
-        {
-          "from": "2026-07-01",
-          "to": "2026-07-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-08-01",
-          "to": "2026-08-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-09-01",
-          "to": "2026-09-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-10-01",
-          "to": "2026-10-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-11-01",
-          "to": "2026-11-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-12-01",
-          "to": "2026-12-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-01-01",
-          "to": "2027-01-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-02-01",
-          "to": "2027-02-28",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-03-01",
-          "to": "2027-03-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-04-01",
-          "to": "2027-04-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-05-01",
-          "to": "2027-05-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-06-01",
-          "to": "2027-06-30",
-          "error": "HTTP Error 400: Bad Request"
-        }
-      ],
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30",
-      "events": 0,
-      "source": "ESPN"
-    },
-    "esp.copa_del_rey": {
-      "status": "unavailable",
-      "chunks_ok": 0,
-      "chunks_failed": [
-        {
-          "from": "2026-07-01",
-          "to": "2026-07-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-08-01",
-          "to": "2026-08-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-09-01",
-          "to": "2026-09-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-10-01",
-          "to": "2026-10-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-11-01",
-          "to": "2026-11-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-12-01",
-          "to": "2026-12-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-01-01",
-          "to": "2027-01-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-02-01",
-          "to": "2027-02-28",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-03-01",
-          "to": "2027-03-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-04-01",
-          "to": "2027-04-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-05-01",
-          "to": "2027-05-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-06-01",
-          "to": "2027-06-30",
-          "error": "HTTP Error 400: Bad Request"
-        }
-      ],
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30",
-      "events": 0,
-      "source": "ESPN"
-    },
-    "uefa.europa.conf": {
-      "status": "unavailable",
-      "chunks_ok": 0,
-      "chunks_failed": [
-        {
-          "from": "2026-07-01",
-          "to": "2026-07-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-08-01",
-          "to": "2026-08-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-09-01",
-          "to": "2026-09-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-10-01",
-          "to": "2026-10-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-11-01",
-          "to": "2026-11-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-12-01",
-          "to": "2026-12-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-01-01",
-          "to": "2027-01-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-02-01",
-          "to": "2027-02-28",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-03-01",
-          "to": "2027-03-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-04-01",
-          "to": "2027-04-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-05-01",
-          "to": "2027-05-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-06-01",
-          "to": "2027-06-30",
-          "error": "HTTP Error 400: Bad Request"
-        }
-      ],
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30",
+    "fra.coupe_de_france": {
+      "status": "complete_window",
+      "chunks_ok": 22,
+      "chunks_failed": [],
+      "range_start": "2026-10-10",
+      "range_end": "2026-10-31",
       "events": 0,
       "source": "ESPN"
     },
     "uefa.europa": {
-      "status": "unavailable",
-      "chunks_ok": 0,
-      "chunks_failed": [
-        {
-          "from": "2026-07-01",
-          "to": "2026-07-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-08-01",
-          "to": "2026-08-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-09-01",
-          "to": "2026-09-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-10-01",
-          "to": "2026-10-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-11-01",
-          "to": "2026-11-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-12-01",
-          "to": "2026-12-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-01-01",
-          "to": "2027-01-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-02-01",
-          "to": "2027-02-28",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-03-01",
-          "to": "2027-03-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-04-01",
-          "to": "2027-04-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-05-01",
-          "to": "2027-05-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-06-01",
-          "to": "2027-06-30",
-          "error": "HTTP Error 400: Bad Request"
-        }
-      ],
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30",
-      "events": 0,
+      "status": "complete_window",
+      "chunks_ok": 22,
+      "chunks_failed": [],
+      "range_start": "2026-10-10",
+      "range_end": "2026-10-31",
+      "events": 36,
       "source": "ESPN"
     },
-    "por.taca_de_portugal": {
-      "status": "unavailable",
-      "chunks_ok": 0,
-      "chunks_failed": [
-        {
-          "from": "2026-07-01",
-          "to": "2026-07-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-08-01",
-          "to": "2026-08-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-09-01",
-          "to": "2026-09-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-10-01",
-          "to": "2026-10-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-11-01",
-          "to": "2026-11-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-12-01",
-          "to": "2026-12-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-01-01",
-          "to": "2027-01-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-02-01",
-          "to": "2027-02-28",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-03-01",
-          "to": "2027-03-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-04-01",
-          "to": "2027-04-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-05-01",
-          "to": "2027-05-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-06-01",
-          "to": "2027-06-30",
-          "error": "HTTP Error 400: Bad Request"
-        }
-      ],
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30",
-      "events": 0,
+    "ger.dfb_pokal": {
+      "status": "complete_window",
+      "chunks_ok": 22,
+      "chunks_failed": [],
+      "range_start": "2026-10-10",
+      "range_end": "2026-10-31",
+      "events": 16,
       "source": "ESPN"
     },
     "uefa.champions": {
+      "status": "complete_window",
+      "chunks_ok": 22,
+      "chunks_failed": [],
+      "range_start": "2026-10-10",
+      "range_end": "2026-10-31",
+      "events": 36,
+      "source": "ESPN"
+    },
+    "ned.knvb_cup": {
       "status": "unavailable",
       "chunks_ok": 0,
       "chunks_failed": [
         {
-          "from": "2026-07-01",
-          "to": "2026-07-31",
+          "from": "2026-10-10",
+          "to": "2026-10-10",
           "error": "HTTP Error 400: Bad Request"
         },
         {
-          "from": "2026-08-01",
-          "to": "2026-08-31",
+          "from": "2026-10-11",
+          "to": "2026-10-11",
           "error": "HTTP Error 400: Bad Request"
         },
         {
-          "from": "2026-09-01",
-          "to": "2026-09-30",
+          "from": "2026-10-12",
+          "to": "2026-10-12",
           "error": "HTTP Error 400: Bad Request"
         },
         {
-          "from": "2026-10-01",
+          "from": "2026-10-13",
+          "to": "2026-10-13",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-14",
+          "to": "2026-10-14",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-15",
+          "to": "2026-10-15",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-16",
+          "to": "2026-10-16",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-17",
+          "to": "2026-10-17",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-18",
+          "to": "2026-10-18",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-19",
+          "to": "2026-10-19",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-20",
+          "to": "2026-10-20",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-21",
+          "to": "2026-10-21",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-22",
+          "to": "2026-10-22",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-23",
+          "to": "2026-10-23",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-24",
+          "to": "2026-10-24",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-25",
+          "to": "2026-10-25",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-26",
+          "to": "2026-10-26",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-27",
+          "to": "2026-10-27",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-28",
+          "to": "2026-10-28",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-29",
+          "to": "2026-10-29",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-30",
+          "to": "2026-10-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-31",
           "to": "2026-10-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-11-01",
-          "to": "2026-11-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-12-01",
-          "to": "2026-12-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-01-01",
-          "to": "2027-01-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-02-01",
-          "to": "2027-02-28",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-03-01",
-          "to": "2027-03-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-04-01",
-          "to": "2027-04-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-05-01",
-          "to": "2027-05-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-06-01",
-          "to": "2027-06-30",
           "error": "HTTP Error 400: Bad Request"
         }
       ],
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30",
+      "range_start": "2026-10-10",
+      "range_end": "2026-10-31",
+      "events": 0,
+      "source": "ESPN"
+    },
+    "ita.coppa_italia": {
+      "status": "complete_window",
+      "chunks_ok": 22,
+      "chunks_failed": [],
+      "range_start": "2026-10-10",
+      "range_end": "2026-10-31",
       "events": 0,
       "source": "ESPN"
     },
@@ -15907,208 +17668,118 @@
       "chunks_ok": 0,
       "chunks_failed": [
         {
-          "from": "2026-07-01",
-          "to": "2026-07-31",
+          "from": "2026-10-10",
+          "to": "2026-10-10",
           "error": "HTTP Error 400: Bad Request"
         },
         {
-          "from": "2026-08-01",
-          "to": "2026-08-31",
+          "from": "2026-10-11",
+          "to": "2026-10-11",
           "error": "HTTP Error 400: Bad Request"
         },
         {
-          "from": "2026-09-01",
-          "to": "2026-09-30",
+          "from": "2026-10-12",
+          "to": "2026-10-12",
           "error": "HTTP Error 400: Bad Request"
         },
         {
-          "from": "2026-10-01",
+          "from": "2026-10-13",
+          "to": "2026-10-13",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-14",
+          "to": "2026-10-14",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-15",
+          "to": "2026-10-15",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-16",
+          "to": "2026-10-16",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-17",
+          "to": "2026-10-17",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-18",
+          "to": "2026-10-18",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-19",
+          "to": "2026-10-19",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-20",
+          "to": "2026-10-20",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-21",
+          "to": "2026-10-21",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-22",
+          "to": "2026-10-22",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-23",
+          "to": "2026-10-23",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-24",
+          "to": "2026-10-24",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-25",
+          "to": "2026-10-25",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-26",
+          "to": "2026-10-26",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-27",
+          "to": "2026-10-27",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-28",
+          "to": "2026-10-28",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-29",
+          "to": "2026-10-29",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-30",
+          "to": "2026-10-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-31",
           "to": "2026-10-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-11-01",
-          "to": "2026-11-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-12-01",
-          "to": "2026-12-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-01-01",
-          "to": "2027-01-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-02-01",
-          "to": "2027-02-28",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-03-01",
-          "to": "2027-03-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-04-01",
-          "to": "2027-04-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-05-01",
-          "to": "2027-05-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-06-01",
-          "to": "2027-06-30",
           "error": "HTTP Error 400: Bad Request"
         }
       ],
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30",
-      "events": 0,
-      "source": "ESPN"
-    },
-    "eng.fa": {
-      "status": "unavailable",
-      "chunks_ok": 0,
-      "chunks_failed": [
-        {
-          "from": "2026-07-01",
-          "to": "2026-07-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-08-01",
-          "to": "2026-08-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-09-01",
-          "to": "2026-09-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-10-01",
-          "to": "2026-10-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-11-01",
-          "to": "2026-11-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-12-01",
-          "to": "2026-12-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-01-01",
-          "to": "2027-01-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-02-01",
-          "to": "2027-02-28",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-03-01",
-          "to": "2027-03-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-04-01",
-          "to": "2027-04-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-05-01",
-          "to": "2027-05-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-06-01",
-          "to": "2027-06-30",
-          "error": "HTTP Error 400: Bad Request"
-        }
-      ],
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30",
-      "events": 0,
-      "source": "ESPN"
-    },
-    "ger.dfb_pokal": {
-      "status": "unavailable",
-      "chunks_ok": 0,
-      "chunks_failed": [
-        {
-          "from": "2026-07-01",
-          "to": "2026-07-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-08-01",
-          "to": "2026-08-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-09-01",
-          "to": "2026-09-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-10-01",
-          "to": "2026-10-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-11-01",
-          "to": "2026-11-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-12-01",
-          "to": "2026-12-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-01-01",
-          "to": "2027-01-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-02-01",
-          "to": "2027-02-28",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-03-01",
-          "to": "2027-03-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-04-01",
-          "to": "2027-04-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-05-01",
-          "to": "2027-05-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-06-01",
-          "to": "2027-06-30",
-          "error": "HTTP Error 400: Bad Request"
-        }
-      ],
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30",
+      "range_start": "2026-10-10",
+      "range_end": "2026-10-31",
       "events": 0,
       "source": "ESPN"
     },
@@ -16117,218 +17788,275 @@
       "chunks_ok": 0,
       "chunks_failed": [
         {
-          "from": "2026-07-01",
-          "to": "2026-07-31",
+          "from": "2026-10-10",
+          "to": "2026-10-10",
           "error": "HTTP Error 400: Bad Request"
         },
         {
-          "from": "2026-08-01",
-          "to": "2026-08-31",
+          "from": "2026-10-11",
+          "to": "2026-10-11",
           "error": "HTTP Error 400: Bad Request"
         },
         {
-          "from": "2026-09-01",
-          "to": "2026-09-30",
+          "from": "2026-10-12",
+          "to": "2026-10-12",
           "error": "HTTP Error 400: Bad Request"
         },
         {
-          "from": "2026-10-01",
+          "from": "2026-10-13",
+          "to": "2026-10-13",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-14",
+          "to": "2026-10-14",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-15",
+          "to": "2026-10-15",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-16",
+          "to": "2026-10-16",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-17",
+          "to": "2026-10-17",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-18",
+          "to": "2026-10-18",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-19",
+          "to": "2026-10-19",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-20",
+          "to": "2026-10-20",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-21",
+          "to": "2026-10-21",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-22",
+          "to": "2026-10-22",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-23",
+          "to": "2026-10-23",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-24",
+          "to": "2026-10-24",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-25",
+          "to": "2026-10-25",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-26",
+          "to": "2026-10-26",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-27",
+          "to": "2026-10-27",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-28",
+          "to": "2026-10-28",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-29",
+          "to": "2026-10-29",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-30",
+          "to": "2026-10-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-31",
           "to": "2026-10-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-11-01",
-          "to": "2026-11-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-12-01",
-          "to": "2026-12-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-01-01",
-          "to": "2027-01-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-02-01",
-          "to": "2027-02-28",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-03-01",
-          "to": "2027-03-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-04-01",
-          "to": "2027-04-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-05-01",
-          "to": "2027-05-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-06-01",
-          "to": "2027-06-30",
           "error": "HTTP Error 400: Bad Request"
         }
       ],
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30",
+      "range_start": "2026-10-10",
+      "range_end": "2026-10-31",
       "events": 0,
       "source": "ESPN"
     },
-    "fra.coupe_de_france": {
+    "por.taca_de_portugal": {
       "status": "unavailable",
       "chunks_ok": 0,
       "chunks_failed": [
         {
-          "from": "2026-07-01",
-          "to": "2026-07-31",
+          "from": "2026-10-10",
+          "to": "2026-10-10",
           "error": "HTTP Error 400: Bad Request"
         },
         {
-          "from": "2026-08-01",
-          "to": "2026-08-31",
+          "from": "2026-10-11",
+          "to": "2026-10-11",
           "error": "HTTP Error 400: Bad Request"
         },
         {
-          "from": "2026-09-01",
-          "to": "2026-09-30",
+          "from": "2026-10-12",
+          "to": "2026-10-12",
           "error": "HTTP Error 400: Bad Request"
         },
         {
-          "from": "2026-10-01",
+          "from": "2026-10-13",
+          "to": "2026-10-13",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-14",
+          "to": "2026-10-14",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-15",
+          "to": "2026-10-15",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-16",
+          "to": "2026-10-16",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-17",
+          "to": "2026-10-17",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-18",
+          "to": "2026-10-18",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-19",
+          "to": "2026-10-19",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-20",
+          "to": "2026-10-20",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-21",
+          "to": "2026-10-21",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-22",
+          "to": "2026-10-22",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-23",
+          "to": "2026-10-23",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-24",
+          "to": "2026-10-24",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-25",
+          "to": "2026-10-25",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-26",
+          "to": "2026-10-26",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-27",
+          "to": "2026-10-27",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-28",
+          "to": "2026-10-28",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-29",
+          "to": "2026-10-29",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-30",
+          "to": "2026-10-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-31",
           "to": "2026-10-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-11-01",
-          "to": "2026-11-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-12-01",
-          "to": "2026-12-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-01-01",
-          "to": "2027-01-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-02-01",
-          "to": "2027-02-28",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-03-01",
-          "to": "2027-03-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-04-01",
-          "to": "2027-04-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-05-01",
-          "to": "2027-05-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-06-01",
-          "to": "2027-06-30",
           "error": "HTTP Error 400: Bad Request"
         }
       ],
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30",
+      "range_start": "2026-10-10",
+      "range_end": "2026-10-31",
       "events": 0,
       "source": "ESPN"
     },
-    "ned.knvb_cup": {
-      "status": "unavailable",
-      "chunks_ok": 0,
-      "chunks_failed": [
-        {
-          "from": "2026-07-01",
-          "to": "2026-07-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-08-01",
-          "to": "2026-08-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-09-01",
-          "to": "2026-09-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-10-01",
-          "to": "2026-10-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-11-01",
-          "to": "2026-11-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-12-01",
-          "to": "2026-12-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-01-01",
-          "to": "2027-01-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-02-01",
-          "to": "2027-02-28",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-03-01",
-          "to": "2027-03-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-04-01",
-          "to": "2027-04-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-05-01",
-          "to": "2027-05-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-06-01",
-          "to": "2027-06-30",
-          "error": "HTTP Error 400: Bad Request"
-        }
-      ],
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30",
+    "eng.fa": {
+      "status": "complete_window",
+      "chunks_ok": 22,
+      "chunks_failed": [],
+      "range_start": "2026-10-10",
+      "range_end": "2026-10-31",
       "events": 0,
+      "source": "ESPN"
+    },
+    "uefa.europa.conf": {
+      "status": "complete_window",
+      "chunks_ok": 22,
+      "chunks_failed": [],
+      "range_start": "2026-10-10",
+      "range_end": "2026-10-31",
+      "events": 36,
+      "source": "ESPN"
+    },
+    "esp.copa_del_rey": {
+      "status": "complete_window",
+      "chunks_ok": 22,
+      "chunks_failed": [],
+      "range_start": "2026-10-10",
+      "range_end": "2026-10-31",
+      "events": 2,
       "source": "ESPN"
     }
   },
   "summary": {
     "competitions_configured": 32,
-    "competitions_with_fixtures": 11,
-    "fixtures_total": 738,
-    "fixtures_completed": 665,
-    "fixtures_scheduled": 73,
+    "competitions_with_fixtures": 16,
+    "fixtures_total": 864,
+    "fixtures_completed": 721,
+    "fixtures_scheduled": 143,
     "standings_available": 11,
     "validation_errors": []
   }
