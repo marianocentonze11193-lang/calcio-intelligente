@@ -39979,6 +39979,67 @@
       "away_formation": "4-2-3-1",
       "home_coach": "M. Jaissle",
       "away_coach": "Unai Emery"
+    },
+    "1570413": {
+      "updated_at": "2026-10-17T16:19:40.278750+00:00",
+      "home_starters": [
+        "Álvaro Vallés",
+        "Héctor Bellerín",
+        "Diego Llorente",
+        "V. Gómez",
+        "Fran García",
+        "F. Bernal",
+        "Dani Ceballos",
+        "Pablo Fornals",
+        "G. Lo Celso",
+        "A. Ezzalzouli",
+        "C. Hernández"
+      ],
+      "away_starters": [
+        "Joan García",
+        "J. Koundé",
+        "Pau Cubarsí Paredes",
+        "Gerard Martín",
+        "X. Espart",
+        "Rodri",
+        "Pedri",
+        "Lamine Yamal",
+        "Fermín",
+        "K. Adeyemi",
+        "Gabriel Jesus"
+      ],
+      "home_substitutes": [
+        "Marc Bartra",
+        "Marc Roca",
+        "Diego Conde",
+        "N. Deossa",
+        "Álvaro Fidalgo",
+        "Isco",
+        "J. A. Morante",
+        "Natan",
+        "Ángel Ortiz",
+        "T. Parrott",
+        "Rodrigo Riquelme",
+        "Antony"
+      ],
+      "away_substitutes": [
+        "B. Farinas",
+        "Alejandro Balde",
+        "Marc Bernal",
+        "João Cancelo",
+        "F. de Jong",
+        "Eric García",
+        "Gavi",
+        "A. Gordon",
+        "D. Livaković",
+        "Dani Olmo",
+        "Raphinha",
+        "W. Szczęsny"
+      ],
+      "home_formation": "4-2-3-1",
+      "away_formation": "4-2-3-1",
+      "home_coach": "M. Pellegrini",
+      "away_coach": "H. Flick"
     }
   },
   "lineup_attempts": {
@@ -39989,7 +40050,8 @@
     "1494781": "2026-10-17T13:45:06.569900+00:00",
     "1561942": "2026-10-17T14:44:45.397902+00:00",
     "1550149": "2026-10-17T15:44:52.605484+00:00",
-    "1557434": "2026-10-17T16:18:07.153596+00:00"
+    "1557434": "2026-10-17T16:18:07.153596+00:00",
+    "1570413": "2026-10-17T16:19:40.278750+00:00"
   },
   "unavailable_dates": {}
 }
