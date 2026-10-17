@@ -415,6 +415,14 @@
       "resolved_name": "Coimbra",
       "country": "Portugal",
       "cached_at": "2026-10-17T20:32:29.423736+00:00"
+    },
+    "olhão,portugal": {
+      "latitude": 37.0286,
+      "longitude": -7.8411,
+      "timezone": "Europe/Lisbon",
+      "resolved_name": "Olhão",
+      "country": "Portugal",
+      "cached_at": "2026-10-17T20:43:57.132731+00:00"
     }
   },
   "forecasts": {
@@ -1351,6 +1359,23 @@
       "cached_at": "2026-10-17T20:32:29.423736+00:00",
       "note": "Contesto orientativo: il meteo non modifica le probabilità del modello.",
       "venue": "Estádio Cidade de Coimbra",
+      "source_fixture": "ESPN"
+    },
+    "37.0286,-7.8411:2026-10-18T15": {
+      "status": "disponibile",
+      "provider": "Open-Meteo",
+      "location": "Olhão",
+      "timezone": "Europe/Lisbon",
+      "kickoff_local": "2026-10-18T15:00",
+      "temperature_c": 21.9,
+      "precipitation_probability_pct": 5,
+      "precipitation_mm": 0.1,
+      "wind_speed_kmh": 18.5,
+      "weather_code": 2,
+      "description": "parzialmente nuvoloso",
+      "cached_at": "2026-10-17T20:43:57.132731+00:00",
+      "note": "Contesto orientativo: il meteo non modifica le probabilità del modello.",
+      "venue": "Estadio José Arcanjo",
       "source_fixture": "ESPN"
     }
   }
