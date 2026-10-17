@@ -1,0 +1,2386 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-17T16:45:17.655415+00:00",
+  "source_policy": "ESPN public endpoints; schema and internal consistency validated. Coverage depends on upstream availability; see per-competition diagnostics.",
+  "fixtures": [],
+  "standings": {},
+  "coverage": {
+    "esp.copa_del_rey": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-07-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-08-01",
+          "to": "2026-08-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-09-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-10-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-11-01",
+          "to": "2026-11-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-12-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-01-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-02-01",
+          "to": "2027-02-28",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-03-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-04-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-05-01",
+          "to": "2027-05-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-06-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 403: Forbidden"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0,
+      "source": "ESPN",
+      "standings": {
+        "status": "unavailable",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    "uefa.champions": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-07-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-08-01",
+          "to": "2026-08-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-09-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-10-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-11-01",
+          "to": "2026-11-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-12-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-01-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-02-01",
+          "to": "2027-02-28",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-03-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-04-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-05-01",
+          "to": "2027-05-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-06-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 400: Bad Request"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0,
+      "source": "ESPN",
+      "standings": {
+        "status": "unavailable",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    "uefa.europa.conf": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-07-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-08-01",
+          "to": "2026-08-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-09-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-10-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-11-01",
+          "to": "2026-11-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-12-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-01-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-02-01",
+          "to": "2027-02-28",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-03-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-04-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-05-01",
+          "to": "2027-05-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-06-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 403: Forbidden"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0,
+      "source": "ESPN",
+      "standings": {
+        "status": "unavailable",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    "eng.fa": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-07-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-08-01",
+          "to": "2026-08-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-09-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-10-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-11-01",
+          "to": "2026-11-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-12-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-01-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-02-01",
+          "to": "2027-02-28",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-03-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-04-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-05-01",
+          "to": "2027-05-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-06-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 400: Bad Request"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0,
+      "source": "ESPN",
+      "standings": {
+        "status": "unavailable",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    "uefa.europa": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-07-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-08-01",
+          "to": "2026-08-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-09-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-10-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-11-01",
+          "to": "2026-11-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-12-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-01-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-02-01",
+          "to": "2027-02-28",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-03-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-04-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-05-01",
+          "to": "2027-05-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-06-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 400: Bad Request"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0,
+      "source": "ESPN",
+      "standings": {
+        "status": "unavailable",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    "ita.coppa_italia": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-07-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-08-01",
+          "to": "2026-08-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-09-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-10-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-11-01",
+          "to": "2026-11-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-12-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-01-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-02-01",
+          "to": "2027-02-28",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-03-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-04-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-05-01",
+          "to": "2027-05-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-06-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 400: Bad Request"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0,
+      "source": "ESPN",
+      "standings": {
+        "status": "unavailable",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    "ned.knvb_cup": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-07-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-08-01",
+          "to": "2026-08-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-09-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-10-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-11-01",
+          "to": "2026-11-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-12-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-01-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-02-01",
+          "to": "2027-02-28",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-03-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-04-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-05-01",
+          "to": "2027-05-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-06-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 403: Forbidden"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0,
+      "source": "ESPN",
+      "standings": {
+        "status": "unavailable",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    "por.taca_de_portugal": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-07-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-08-01",
+          "to": "2026-08-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-09-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-10-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-11-01",
+          "to": "2026-11-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-12-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-01-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-02-01",
+          "to": "2027-02-28",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-03-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-04-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-05-01",
+          "to": "2027-05-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-06-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 400: Bad Request"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0,
+      "source": "ESPN",
+      "standings": {
+        "status": "unavailable",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    "tur.turkiye_kupasi": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-07-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-08-01",
+          "to": "2026-08-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-09-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-10-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-11-01",
+          "to": "2026-11-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-12-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-01-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-02-01",
+          "to": "2027-02-28",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-03-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-04-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-05-01",
+          "to": "2027-05-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-06-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 403: Forbidden"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0,
+      "source": "ESPN",
+      "standings": {
+        "status": "unavailable",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    "fra.coupe_de_france": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-07-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-08-01",
+          "to": "2026-08-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-09-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-10-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-11-01",
+          "to": "2026-11-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-12-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-01-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-02-01",
+          "to": "2027-02-28",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-03-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-04-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-05-01",
+          "to": "2027-05-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-06-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 400: Bad Request"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0,
+      "source": "ESPN",
+      "standings": {
+        "status": "unavailable",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    "sco.fa_cup": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-07-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-08-01",
+          "to": "2026-08-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-09-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-10-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-11-01",
+          "to": "2026-11-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-12-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-01-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-02-01",
+          "to": "2027-02-28",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-03-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-04-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-05-01",
+          "to": "2027-05-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-06-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 400: Bad Request"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0,
+      "source": "ESPN",
+      "standings": {
+        "status": "unavailable",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    "ger.dfb_pokal": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-07-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-08-01",
+          "to": "2026-08-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-09-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-10-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-11-01",
+          "to": "2026-11-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-12-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-01-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-02-01",
+          "to": "2027-02-28",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-03-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-04-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-05-01",
+          "to": "2027-05-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-06-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 403: Forbidden"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0,
+      "source": "ESPN",
+      "standings": {
+        "status": "unavailable",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    "eng.1": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-07-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-08-01",
+          "to": "2026-08-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-09-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-10-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-11-01",
+          "to": "2026-11-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-12-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-01-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-02-01",
+          "to": "2027-02-28",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-03-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-04-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-05-01",
+          "to": "2027-05-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-06-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 403: Forbidden"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0,
+      "source": "ESPN",
+      "standings": {
+        "status": "unavailable",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    "esp.1": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-07-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-08-01",
+          "to": "2026-08-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-09-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-10-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-11-01",
+          "to": "2026-11-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-12-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-01-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-02-01",
+          "to": "2027-02-28",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-03-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-04-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-05-01",
+          "to": "2027-05-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-06-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 403: Forbidden"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0,
+      "source": "ESPN",
+      "standings": {
+        "status": "unavailable",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    "ger.1": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-07-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-08-01",
+          "to": "2026-08-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-09-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-10-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-11-01",
+          "to": "2026-11-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-12-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-01-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-02-01",
+          "to": "2027-02-28",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-03-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-04-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-05-01",
+          "to": "2027-05-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-06-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 403: Forbidden"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0,
+      "source": "ESPN",
+      "standings": {
+        "status": "unavailable",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    "ita.1": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-07-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-08-01",
+          "to": "2026-08-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-09-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-10-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-11-01",
+          "to": "2026-11-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-12-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-01-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-02-01",
+          "to": "2027-02-28",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-03-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-04-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-05-01",
+          "to": "2027-05-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-06-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 403: Forbidden"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0,
+      "source": "ESPN",
+      "standings": {
+        "status": "unavailable",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    "fra.1": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-07-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-08-01",
+          "to": "2026-08-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-09-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-10-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-11-01",
+          "to": "2026-11-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-12-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-01-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-02-01",
+          "to": "2027-02-28",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-03-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-04-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-05-01",
+          "to": "2027-05-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-06-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 403: Forbidden"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0,
+      "source": "ESPN",
+      "standings": {
+        "status": "unavailable",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    "sco.1": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-07-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-08-01",
+          "to": "2026-08-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-09-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-10-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-11-01",
+          "to": "2026-11-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-12-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-01-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-02-01",
+          "to": "2027-02-28",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-03-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-04-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-05-01",
+          "to": "2027-05-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-06-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 403: Forbidden"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0,
+      "source": "ESPN",
+      "standings": {
+        "status": "unavailable",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    "ned.1": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-07-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-08-01",
+          "to": "2026-08-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-09-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-10-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-11-01",
+          "to": "2026-11-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-12-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-01-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-02-01",
+          "to": "2027-02-28",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-03-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-04-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-05-01",
+          "to": "2027-05-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-06-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 403: Forbidden"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0,
+      "source": "ESPN",
+      "standings": {
+        "status": "unavailable",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    "por.1": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-07-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-08-01",
+          "to": "2026-08-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-09-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-10-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-11-01",
+          "to": "2026-11-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-12-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-01-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-02-01",
+          "to": "2027-02-28",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-03-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-04-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-05-01",
+          "to": "2027-05-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-06-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 403: Forbidden"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0,
+      "source": "ESPN",
+      "standings": {
+        "status": "unavailable",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    "bel.1": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-07-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-08-01",
+          "to": "2026-08-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-09-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-10-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-11-01",
+          "to": "2026-11-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-12-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-01-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-02-01",
+          "to": "2027-02-28",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-03-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-04-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-05-01",
+          "to": "2027-05-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-06-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 403: Forbidden"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0,
+      "source": "ESPN",
+      "standings": {
+        "status": "unavailable",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    "tur.1": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-07-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-08-01",
+          "to": "2026-08-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-09-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-10-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-11-01",
+          "to": "2026-11-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-12-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-01-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-02-01",
+          "to": "2027-02-28",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-03-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-04-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-05-01",
+          "to": "2027-05-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-06-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 403: Forbidden"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0,
+      "source": "ESPN",
+      "standings": {
+        "status": "unavailable",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    "aut.1": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-07-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-08-01",
+          "to": "2026-08-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-09-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-10-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-11-01",
+          "to": "2026-11-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-12-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-01-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-02-01",
+          "to": "2027-02-28",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-03-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-04-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-05-01",
+          "to": "2027-05-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-06-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 403: Forbidden"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0,
+      "source": "ESPN",
+      "standings": {
+        "status": "unavailable",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    "den.1": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-07-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-08-01",
+          "to": "2026-08-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-09-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-10-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-11-01",
+          "to": "2026-11-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-12-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-01-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-02-01",
+          "to": "2027-02-28",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-03-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-04-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-05-01",
+          "to": "2027-05-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-06-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 403: Forbidden"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0,
+      "source": "ESPN",
+      "standings": {
+        "status": "unavailable",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    "gre.1": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-07-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-08-01",
+          "to": "2026-08-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-09-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-10-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-11-01",
+          "to": "2026-11-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-12-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-01-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-02-01",
+          "to": "2027-02-28",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-03-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-04-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-05-01",
+          "to": "2027-05-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-06-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 403: Forbidden"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0,
+      "source": "ESPN",
+      "standings": {
+        "status": "unavailable",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    "irl.1": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-01-01",
+          "to": "2026-01-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-02-01",
+          "to": "2026-02-28",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-03-01",
+          "to": "2026-03-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-04-01",
+          "to": "2026-04-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-05-01",
+          "to": "2026-05-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-06-01",
+          "to": "2026-06-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-07-01",
+          "to": "2026-07-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-08-01",
+          "to": "2026-08-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-09-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-10-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-11-01",
+          "to": "2026-11-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-12-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 403: Forbidden"
+        }
+      ],
+      "range_start": "2026-01-01",
+      "range_end": "2026-12-31",
+      "events": 0,
+      "source": "ESPN",
+      "standings": {
+        "status": "unavailable",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    "fin.1": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-01-01",
+          "to": "2026-01-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-02-01",
+          "to": "2026-02-28",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-03-01",
+          "to": "2026-03-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-04-01",
+          "to": "2026-04-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-05-01",
+          "to": "2026-05-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-06-01",
+          "to": "2026-06-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-07-01",
+          "to": "2026-07-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-08-01",
+          "to": "2026-08-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-09-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-10-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-11-01",
+          "to": "2026-11-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-12-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 403: Forbidden"
+        }
+      ],
+      "range_start": "2026-01-01",
+      "range_end": "2026-12-31",
+      "events": 0,
+      "source": "ESPN",
+      "standings": {
+        "status": "unavailable",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    "nor.1": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-01-01",
+          "to": "2026-01-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-02-01",
+          "to": "2026-02-28",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-03-01",
+          "to": "2026-03-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-04-01",
+          "to": "2026-04-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-05-01",
+          "to": "2026-05-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-06-01",
+          "to": "2026-06-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-07-01",
+          "to": "2026-07-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-08-01",
+          "to": "2026-08-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-09-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-10-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-11-01",
+          "to": "2026-11-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-12-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 403: Forbidden"
+        }
+      ],
+      "range_start": "2026-01-01",
+      "range_end": "2026-12-31",
+      "events": 0,
+      "source": "ESPN",
+      "standings": {
+        "status": "unavailable",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    "pol.1": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-07-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-08-01",
+          "to": "2026-08-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-09-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-10-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-11-01",
+          "to": "2026-11-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-12-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-01-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-02-01",
+          "to": "2027-02-28",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-03-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-04-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-05-01",
+          "to": "2027-05-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-06-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 403: Forbidden"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0,
+      "source": "ESPN",
+      "standings": {
+        "status": "unavailable",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    "rou.1": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-07-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-08-01",
+          "to": "2026-08-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-09-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-10-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-11-01",
+          "to": "2026-11-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-12-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-01-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-02-01",
+          "to": "2027-02-28",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-03-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-04-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-05-01",
+          "to": "2027-05-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-06-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 403: Forbidden"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0,
+      "source": "ESPN",
+      "standings": {
+        "status": "unavailable",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    "swe.1": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-01-01",
+          "to": "2026-01-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-02-01",
+          "to": "2026-02-28",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-03-01",
+          "to": "2026-03-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-04-01",
+          "to": "2026-04-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-05-01",
+          "to": "2026-05-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-06-01",
+          "to": "2026-06-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-07-01",
+          "to": "2026-07-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-08-01",
+          "to": "2026-08-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-09-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-10-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-11-01",
+          "to": "2026-11-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-12-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 403: Forbidden"
+        }
+      ],
+      "range_start": "2026-01-01",
+      "range_end": "2026-12-31",
+      "events": 0,
+      "source": "ESPN",
+      "standings": {
+        "status": "unavailable",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    "sui.1": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-07-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-08-01",
+          "to": "2026-08-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-09-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-10-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-11-01",
+          "to": "2026-11-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2026-12-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-01-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-02-01",
+          "to": "2027-02-28",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-03-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-04-30",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-05-01",
+          "to": "2027-05-31",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "from": "2027-06-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 403: Forbidden"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0,
+      "source": "ESPN",
+      "standings": {
+        "status": "unavailable",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    }
+  },
+  "summary": {
+    "competitions_configured": 32,
+    "competitions_with_fixtures": 0,
+    "fixtures_total": 0,
+    "fixtures_completed": 0,
+    "fixtures_scheduled": 0,
+    "standings_available": 0,
+    "validation_errors": []
+  }
+}
