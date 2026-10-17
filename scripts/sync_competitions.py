@@ -438,11 +438,19 @@ def parse_event(event, code, meta):
     completed = bool(status_obj.get("completed")) and home[1] is not None and away[1] is not None
     if completed and not (0 <= home[1] <= 15 and 0 <= away[1] <= 15):
         return None
+    venue = comp.get("venue") or event.get("venue") or {}
+    venue_address = venue.get("address") or {}
+    venue_city = str(venue_address.get("city") or venue.get("city") or "").strip()
+    venue_country = str(venue_address.get("country") or venue.get("country") or meta.get("country") or "").strip()
     return {
         "id": str(event.get("id") or ""),
         "date": event_date.isoformat(),
         "kickoff": kickoff,
+        "kickoff_utc": parsed.astimezone(timezone.utc).isoformat(),
         "timezone": "Europe/Rome",
+        "venue_name": str(venue.get("fullName") or venue.get("name") or "").strip(),
+        "venue_city": venue_city,
+        "venue_country": venue_country,
         "home_team": home[0],
         "away_team": away[0],
         "status": "completed" if completed else ("in_progress" if status_obj.get("inProgress") else "scheduled"),
