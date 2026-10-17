@@ -279,6 +279,20 @@ function renderMatches(matches) {
       : "";
 
     card.append(meta, teams, expected, grid, confidence);
+    const motivation = match.motivation_context;
+    if (motivation && motivation.status === "indizi_classifica") {
+      const motivationNote = document.createElement("p");
+      motivationNote.className = "match-meta";
+      const describeTeam = (teamName, context) => {
+        if (!context) return "";
+        const signals = Array.isArray(context.signals) ? context.signals.join(", ") : "";
+        return teamName + " " + context.position + "ª (" + context.points + " punti): " + signals;
+      };
+      motivationNote.textContent = "MOTIVAZIONI DI CLASSIFICA · " +
+        [describeTeam(match.home_team, motivation.home), describeTeam(match.away_team, motivation.away)].filter(Boolean).join(" · ") +
+        ". Indicazioni orientative basate sui risultati disponibili: non confermano obiettivi già raggiunti né verdetti matematici.";
+      card.append(motivationNote);
+    }
     if (Array.isArray(match.recent_competition_context) && match.recent_competition_context.length) {
       const europe = document.createElement("p");
       europe.className = "market-no-pick";
