@@ -266,7 +266,15 @@ function renderMatches(matches) {
       analysis.textContent = match.analysis;
       card.append(analysis);
     }
-    if (match.betting_advice) {
+    // Evita di mostrare due volte lo stesso messaggio descrittivo.
+    const normalizeAdvice = value => String(value || "")
+      .normalize("NFD").replace(/[\\u0300-\\u036f]/g, "")
+      .toLocaleLowerCase("it")
+      .replace(/[^a-z0-9]+/g, " ")
+      .trim();
+    const sameAsAnalysis = match.analysis && match.betting_advice &&
+      normalizeAdvice(match.analysis) === normalizeAdvice(match.betting_advice);
+    if (match.betting_advice && !sameAsAnalysis) {
       const advice = document.createElement("section");
       advice.className = "betting-advice";
       const heading = document.createElement("strong");
