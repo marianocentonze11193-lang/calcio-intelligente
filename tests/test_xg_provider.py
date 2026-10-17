@@ -13,8 +13,7 @@ class UnderstatXgTests(unittest.TestCase):
     def test_parses_real_xg_without_substituting_goals(self):
         payload = [{
             "datetime": "1792195200",
-            "team_h_xg": "1.42",
-            "team_a_xg": "0.63",
+            "xG": {"h": "1.42", "a": "0.63"},
             "h": {"title": "Home FC"},
             "a": {"title": "Away FC"},
         }]
@@ -35,7 +34,7 @@ class UnderstatXgTests(unittest.TestCase):
 
     def test_rejects_implausible_xg(self):
         payload = [{
-            "datetime": "1792195200", "team_h_xg": "99", "team_a_xg": "0.5",
+            "datetime": "1792195200", "xG": {"h": "99", "a": "0.5"},
             "h": {"title": "Home FC"}, "a": {"title": "Away FC"},
         }]
         encoded = json.dumps(payload).replace("\\", "\\\\").replace("'", "\\'")

@@ -8,6 +8,7 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 import update_predictions as model
+import xg_provider_understat as xg_provider
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "data" / "backtest_report.json"
@@ -195,7 +196,67 @@ def load_league_results(code, today):
     return rows_to_results(rows, code, START_DATE, today - timedelta(days=1))
 
 
-def walk_forward_league(league_name, results):
+
+def load_league_xg(league_name, today):
+    """Carica xG storici per le leghe coperte, senza fabbricare valori mancanti."""
+    if league_name not in xg_provider.LEAGUES:
+        return {}
+    lookup = {}
+    for season in range(START_DATE.year, today.year + 1):
+        try:
+            rows = xg_provider.fetch_league_xg(league_name, season)
+        except (urllib.error.URLError, TimeoutError, OSError, ValueError, TypeError) as error:
+            print(f"AVVISO Understat {league_name}/{season}: {error}")
+            rows = []
+        print(f"Understat {league_name}/{season}: {len(rows)} osservazioni xG valide.")
+        for row in rows:
+            try:
+                match_date = date.fromisoformat(row["date"])
+                home = model.team_key(row["home_team"])
+                away = model.team_key(row["away_team"])
+                home_xg, away_xg = float(row["home_xg"]), float(row["away_xg"])
+            except (KeyError, TypeError, ValueError):
+                continue
+            if match_date < START_DATE or match_date >= today or not home or not away or home == away:
+                continue
+            if not (math.isfinite(home_xg) and math.isfinite(away_xg)
+                    and 0 <= home_xg <= 10 and 0 <= away_xg <= 10):
+                continue
+            lookup[(match_date.isoformat(), home, away)] = (home_xg, away_xg)
+    return lookup
+
+
+def history_for_xg(prior_results, xg_lookup):
+    """Statistiche xG di casa/trasferta calcolate solo da partite precedenti abbinate."""
+    history = defaultdict(lambda: {
+        "played": 0, "home_games": 0, "away_games": 0,
+        "home_scored": 0.0, "home_conceded": 0.0,
+        "away_scored": 0.0, "away_conceded": 0.0,
+    })
+    matched = []
+    for row in prior_results:
+        match_date, home, away = row[:3]
+        xg = xg_lookup.get((match_date.isoformat(), home, away))
+        if not xg:
+            continue
+        home_xg, away_xg = xg
+        hs, aws = history[home], history[away]
+        hs["played"] += 1
+        hs["home_games"] += 1
+        hs["home_scored"] += home_xg
+        hs["home_conceded"] += away_xg
+        aws["played"] += 1
+        aws["away_games"] += 1
+        aws["away_scored"] += away_xg
+        aws["away_conceded"] += home_xg
+        matched.append((home_xg, away_xg))
+    if not matched:
+        return history, None, None, 0
+    home_avg = sum(item[0] for item in matched) / len(matched)
+    away_avg = sum(item[1] for item in matched) / len(matched)
+    return history, home_avg, away_avg, len(matched)
+
+def walk_forward_league(league_name, results, xg_lookup=None):
     results.sort(key=lambda row: row[0])
     predictions = []
     prior_results = []
@@ -209,6 +270,7 @@ def walk_forward_league(league_name, results):
         # Tutte le gare della stessa data sono previste prima di aggiungere qualunque risultato del giorno.
         if len(prior_results) >= MIN_PRIOR_MATCHES:
             history, completed = history_for(prior_results)
+            xg_history, xg_home_avg, xg_away_avg, xg_prior_matches = history_for_xg(prior_results, xg_lookup or {})
             home_avg = sum(row[2] for row in completed) / len(completed)
             away_avg = sum(row[3] for row in completed) / len(completed)
             if home_avg > 0 and away_avg > 0:
@@ -243,6 +305,17 @@ def walk_forward_league(league_name, results):
                             variants[variant] = score_probabilities(probs, outcome)
                             if variant == "model":
                                 model_probabilities = probs
+                    xg_model_probabilities = None
+                    if xg_prior_matches >= MIN_PRIOR_MATCHES and xg_home_avg and xg_away_avg:
+                        xg_forecast = model.make_forecast(
+                            home, away, league_name, match_day, "", xg_history,
+                            xg_home_avg, xg_away_avg, None, {}, [], {},
+                            apply_form_adjustment=False, apply_competition_adjustment=False,
+                        )
+                        xg_probs = xg_forecast.get("probabilities") or {}
+                        if all(key in xg_probs for key in ("home_win", "draw", "away_win")):
+                            xg_model_probabilities = xg_probs
+                            variants["xg_model"] = score_probabilities(xg_probs, outcome)
                     if "model" not in variants:
                         continue
                     baseline = {key: baseline_probs[label] * 100 for key, label in zip(("home_win", "draw", "away_win"), ("1", "X", "2"))}
@@ -253,6 +326,7 @@ def walk_forward_league(league_name, results):
                     predictions.append({
                         "date": match_day.isoformat(), "outcome": outcome,
                         "model_probabilities": model_probabilities,
+                        "xg_model_probabilities": xg_model_probabilities,
                         "variants": variants, "baseline": score_probabilities(baseline, outcome),
                         "market_baseline": scored_market,
                     })
@@ -269,6 +343,7 @@ def main():
     all_market = []
     all_variants = defaultdict(list)
     all_evaluated = []
+    all_xg_evaluated = []
     errors = []
     for code in sorted(model.FOOTBALL_DATA_LEAGUES):
         league = model.LEAGUES[code]
@@ -277,12 +352,26 @@ def main():
             if not results:
                 errors.append(f"{league}: nessun risultato storico valido")
                 continue
-            evaluated = walk_forward_league(league, results)
+            xg_lookup = load_league_xg(league, today)
+            xg_matched_source_matches = sum(
+                1 for item in results
+                if (item[0].isoformat(), item[1], item[2]) in xg_lookup
+            )
+            evaluated = walk_forward_league(league, results, xg_lookup)
             all_evaluated.extend(evaluated)
+            xg_evaluated = [item for item in evaluated if item.get("xg_model_probabilities")]
+            all_xg_evaluated.extend(xg_evaluated)
             all_by_league[league] = {
                 "source_matches": len(results),
+                "xg_source_matches_matched": xg_matched_source_matches,
+                "xg_validation": {
+                    "matched_predictions": len(xg_evaluated),
+                    "model_on_same_matches": metric_summary([item["variants"]["model"] for item in xg_evaluated]),
+                    "xg_only_candidate": metric_summary([item["variants"]["xg_model"] for item in xg_evaluated]),
+                    "market_on_same_matches": metric_summary([item["market_baseline"] for item in xg_evaluated if item.get("market_baseline")]),
+                },
                 "variants": {name: metric_summary([item["variants"][name] for item in evaluated if name in item["variants"]])
-                             for name in ("poisson_only", "poisson_elo", "poisson_form", "model", "poisson_elo_form", "market_blend_50_50")},
+                             for name in ("poisson_only", "poisson_elo", "poisson_form", "model", "poisson_elo_form", "market_blend_50_50", "xg_model")},
                 "prior_frequency_baseline": metric_summary([item["baseline"] for item in evaluated]),
                 "market_baseline": metric_summary([item["market_baseline"] for item in evaluated if item.get("market_baseline")]),
                 "market_coverage_matches": sum(1 for item in evaluated if item.get("market_baseline")),
@@ -316,6 +405,12 @@ def main():
             "market_baseline": metric_summary(all_market),
             "market_coverage_matches": len(all_market),
             "outcome_calibration": outcome_calibration_summary(all_evaluated),
+            "xg_validation": {
+                "matched_predictions": len(all_xg_evaluated),
+                "model_on_same_matches": metric_summary([item["variants"]["model"] for item in all_xg_evaluated]),
+                "xg_only_candidate": metric_summary([item["variants"]["xg_model"] for item in all_xg_evaluated]),
+                "market_on_same_matches": metric_summary([item["market_baseline"] for item in all_xg_evaluated if item.get("market_baseline")]),
+            },
             "comparison_note": "Confronto su identiche partite; per Brier score e log loss un valore più basso è migliore. Il mercato è confrontato solo sulle partite con quote storiche complete.",
         },
         "leagues": all_by_league,
@@ -329,11 +424,13 @@ def main():
             "Il benchmark di mercato usa AvgH/AvgD/AvgA, con fallback B365H/D/A e PSH/PSD/PSA, solo quando le quote storiche sono complete; le probabilità sono normalizzate per rimuovere il margine.",
             "La miscela 50/50 modello-mercato è sperimentale e resta esclusa dai pronostici pubblicati finché non supera una validazione fuori campione.",
             "La calibrazione top-class confronta la probabilità dell'esito più probabile con la frequenza di correttezza nella stessa fascia.",
+            "La variante xG è sperimentale: usa solo xG storici abbinati per data e squadre, disponibili prima della partita; i confronti sono riportati sulle stesse partite con copertura xG.",
         ],
     }
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Report walk-forward scritto in {OUTPUT}; leghe: {len(all_by_league)}; errori: {len(errors)}")
+    print("XG_VALIDATION_SUMMARY=" + json.dumps(report["overall"]["xg_validation"], ensure_ascii=False, sort_keys=True))
 
 
 if __name__ == "__main__":
