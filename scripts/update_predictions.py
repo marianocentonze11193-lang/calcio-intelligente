@@ -691,6 +691,11 @@ def declassify_cup_forecast(forecast, competition_name):
     forecast["competition_type"] = "europea" if is_european else "coppa_nazionale"
     forecast["status"] = "Stima preliminare" if forecast.get("probabilities") else "NO BET"
     forecast["suggested_markets"] = []
+    forecast["suggested_market_details"] = []
+    forecast["betting_advice"] = (
+        "Per le coppe non fornisco una giocata automatica: il modello non è ancora validato "
+        "su uno storico specifico della competizione. Meglio attendere dati più solidi."
+    )
     forecast["value_bets"] = []
     forecast["expected_value_1x2"] = {}
     if isinstance(forecast.get("value_assessment"), dict):
@@ -768,6 +773,81 @@ def motivation_for_match(home, away, table):
         "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati.",
     }
 
+
+
+def build_betting_recommendations(probabilities, home_sample, away_sample, recent_context=None):
+    """Seleziona pochi mercati da valutare e indica una quota-obiettivo prudente."""
+    if not probabilities or home_sample < 8 or away_sample < 8:
+        return [], [], (
+            "Qui non forzerei una giocata: lo storico specifico è ancora troppo corto. "
+            "Meglio aspettare dati più solidi che riempire la schedina per forza."
+        )
+    if recent_context:
+        teams = ", ".join(dict.fromkeys(
+            str(item.get("team", "")).strip() for item in recent_context if item.get("team")
+        ))
+        detail = f" ({teams} hanno un impegno ravvicinato)" if teams else ""
+        return [], [], (
+            "Partita da prendere con le pinze" + detail +
+            ": il calendario può pesare e il modello non lo misura abbastanza bene. "
+            "Per ora passerei, senza inventare una giocata."
+        )
+
+    candidates = [
+        ("1", probabilities.get("home_win"), "esito"),
+        ("X", probabilities.get("draw"), "esito"),
+        ("2", probabilities.get("away_win"), "esito"),
+        ("1X", probabilities.get("double_chance_1x"), "esito"),
+        ("X2", probabilities.get("double_chance_x2"), "esito"),
+        ("12", probabilities.get("double_chance_12"), "esito"),
+        ("Over 1,5", probabilities.get("over_1_5"), "gol"),
+        ("Over 2,5", probabilities.get("over_2_5"), "gol"),
+        ("Under 2,5", probabilities.get("under_2_5"), "gol"),
+        ("Under 3,5", probabilities.get("under_3_5"), "gol"),
+        ("Goal", probabilities.get("btts_yes"), "entrambe"),
+        ("No Goal", probabilities.get("btts_no"), "entrambe"),
+    ]
+    thresholds = {"esito": 70.0, "gol": 70.0, "entrambe": 70.0}
+    # Una sola scelta per famiglia: evita di proporre mercati ridondanti sulla stessa partita.
+    ranked = sorted(
+        ({"market": name, "probability": float(prob), "family": family}
+         for name, prob, family in candidates
+         if isinstance(prob, (int, float)) and prob >= thresholds[family]),
+        key=lambda item: item["probability"], reverse=True,
+    )
+    chosen, families = [], set()
+    for item in ranked:
+        if item["family"] in families:
+            continue
+        p = item["probability"] / 100.0
+        fair_odds = 1.0 / p if p > 0 else None
+        item["fair_odds"] = round(fair_odds, 2) if fair_odds else None
+        item["target_odds"] = round(fair_odds * 1.05, 2) if fair_odds else None
+        chosen.append(item)
+        families.add(item["family"])
+        if len(chosen) == 2:
+            break
+
+    if not chosen:
+        return [], [], (
+            "Non vedo un esito abbastanza netto da meritare una giocata automatica. "
+            "Meglio lasciarla stare e conservare il budget per una partita più leggibile."
+        )
+    labels = [item["market"] for item in chosen]
+    first = chosen[0]
+    advice = (
+        f"Prima scelta da valutare: {first['market']} "
+        f"(stima {first['probability']:.1f}%). Cercherei una quota almeno "
+        f"{first['target_odds']:.2f}: è una soglia orientativa con un piccolo margine, "
+        "non una garanzia. Se il prezzo è più basso, meglio non inseguirla."
+    )
+    if len(chosen) > 1:
+        second = chosen[1]
+        advice += (
+            f" In alternativa: {second['market']} (stima {second['probability']:.1f}%), "
+            f"da considerare solo intorno a quota {second['target_odds']:.2f} o superiore."
+        )
+    return labels, chosen, advice
 
 def make_forecast(home, away, league, match_date, kickoff, history, league_home_avg, league_away_avg, elo_ratings=None, recent_form=None, european_matches=None, motivation_table=None):
     hs, aws = history[home], history[away]
@@ -859,21 +939,10 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
         "btts_yes": percent(btts), "btts_no": percent(1 - btts),
         "home_scores": percent(home_scores), "away_scores": percent(away_scores),
     } if valid else {}
-    summary = ""
-    suggested = []
-    if valid:
-        probs_1x2 = [(home_win / total, "1"), (draw / total, "X"), (away_win / total, "2")]
-        best_probability, best_outcome = max(probs_1x2)
-        outcome_text = {"1": f"{home} leggermente favorito", "X": "pareggio da considerare", "2": f"{away} leggermente favorita"}[best_outcome]
-        goal_text = "scenario da almeno 2 gol" if over15 >= 0.70 else "totale gol incerto"
-        btts_text = "entrambe a segno plausibile" if btts >= 0.60 else "Goal/No Goal non netto"
-        summary = f"{outcome_text}; {goal_text}; {btts_text}. Commento automatico basato solo sul modello statistico, non su notizie o quote."
-        # Le selezioni automatiche richiedono un campione minimo casa/trasferta
-        # di almeno tre gare per lato; le stime preliminari restano descrittive.
-        if home_sample >= 8 and away_sample >= 8 and not recent_competition_context:
-            if over15 >= 0.70: suggested.append("Over 1,5")
-            if btts >= 0.70: suggested.append("Goal")
-            if best_probability >= 0.70: suggested.append(best_outcome)
+    suggested, suggested_details, betting_advice = build_betting_recommendations(
+        probabilities, home_sample, away_sample, recent_competition_context
+    ) if valid else ([], [], "Qui mancano basi sufficienti per consigliare una giocata: meglio passare.")
+    summary = betting_advice
     return {
         "id": f"{match_date.isoformat()}-{league}-{home}-{away}",
         "date": match_date.isoformat(), "kickoff": kickoff or "", "league": league,
@@ -884,6 +953,8 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
         "probabilities": probabilities,
         "analysis": summary,
         "suggested_markets": suggested,
+        "suggested_market_details": suggested_details,
+        "betting_advice": betting_advice,
         "value_bets": [],
         "top_scorelines": [
             {"score": f"{h}-{a}", "probability": percent(p)}
