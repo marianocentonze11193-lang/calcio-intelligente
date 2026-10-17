@@ -279,10 +279,10 @@ function renderMatches(matches) {
       : "";
 
     card.append(meta, teams, expected, grid, confidence);
-    if (Array.isArray(match.european_context) && match.european_context.length) {
+    if (Array.isArray(match.recent_competition_context) && match.recent_competition_context.length) {
       const europe = document.createElement("p");
       europe.className = "market-no-pick";
-      europe.textContent = "ATTENZIONE COPPE EUROPEE · " + match.european_context.map(item =>
+      europe.textContent = "ATTENZIONE IMPEGNI RAVVICINATI · " + match.recent_competition_context.map(item =>
         item.team + ": " + item.competition + " il " + item.match_date +
         " (" + item.days_before + " giorni prima, " + item.venue + ")" +
         " · correzione sperimentale " + item.adjustment_pct + "%"
