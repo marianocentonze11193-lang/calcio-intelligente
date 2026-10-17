@@ -291,6 +291,41 @@ def calculate_metrics(records):
     }
 
 
+def calculate_value_bet_metrics(records):
+    """Valuta i candidati 1X2 archiviati con quota al momento della previsione."""
+    settled = []
+    for item in records:
+        outcome = item.get("outcome")
+        if outcome not in ("1", "X", "2"):
+            continue
+        bets = item.get("value_bets")
+        if not isinstance(bets, list):
+            continue
+        for bet in bets:
+            if not isinstance(bet, dict) or bet.get("market") not in ("1", "X", "2"):
+                continue
+            try:
+                odds = float(bet.get("best_odds"))
+            except (TypeError, ValueError):
+                continue
+            if odds <= 1 or odds > 100:
+                continue
+            profit = odds - 1 if bet["market"] == outcome else -1.0
+            settled.append({"won": bet["market"] == outcome, "profit": profit})
+    count = len(settled)
+    wins = sum(1 for bet in settled if bet["won"])
+    profit_units = sum(bet["profit"] for bet in settled)
+    return {
+        "settled_bets": count,
+        "wins": wins,
+        "losses": count - wins,
+        "net_units_per_one_unit_stake": round(profit_units, 4),
+        "roi_percent": round(profit_units / count * 100, 2) if count >= MIN_METRIC_MATCHES else None,
+        "minimum_bets_required_for_roi": MIN_METRIC_MATCHES,
+        "note": "Solo candidati 1X2 archiviati con quota registrata. ROI pubblicato da almeno 30 selezioni concluse; simulazione teorica, non risultato delle schedine personali.",
+    }
+
+
 def calculate_metrics_by_league(records):
     """Metriche descrittive separate per competizione, solo su esiti già noti."""
     grouped = {}
@@ -605,6 +640,7 @@ def main():
     history["records"] = records
     history["updated_at"] = datetime.now(timezone.utc).isoformat()
     history["metrics"] = calculate_metrics(records)
+    history["value_bet_metrics"] = calculate_value_bet_metrics(records)
     history["metrics_by_league"] = calculate_metrics_by_league(records)
     history["metrics_by_european_context"] = calculate_metrics_by_european_context(records)
     history["model_vs_market_metrics"] = calculate_model_market_metrics(records)
