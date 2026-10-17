@@ -29,7 +29,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Verifica parser e controlli
-        run: python -m unittest tests.test_competitions -v
+        run: python -m unittest discover -s tests -p "test_competitions.py" -v
       - name: Scarica calendari stagionali e classifiche
         run: python scripts/sync_competitions.py
       - name: Controlla archivio prodotto
