@@ -341,6 +341,7 @@ def main():
     all_market = []
     all_variants = defaultdict(list)
     all_evaluated = []
+    all_xg_evaluated = []
     errors = []
     for code in sorted(model.FOOTBALL_DATA_LEAGUES):
         league = model.LEAGUES[code]
@@ -349,12 +350,26 @@ def main():
             if not results:
                 errors.append(f"{league}: nessun risultato storico valido")
                 continue
-            evaluated = walk_forward_league(league, results)
+            xg_lookup = load_league_xg(league, today)
+            xg_matched_source_matches = sum(
+                1 for item in results
+                if (item[0].isoformat(), item[1], item[2]) in xg_lookup
+            )
+            evaluated = walk_forward_league(league, results, xg_lookup)
             all_evaluated.extend(evaluated)
+            xg_evaluated = [item for item in evaluated if item.get("xg_model_probabilities")]
+            all_xg_evaluated.extend(xg_evaluated)
             all_by_league[league] = {
                 "source_matches": len(results),
+                "xg_source_matches_matched": xg_matched_source_matches,
+                "xg_validation": {
+                    "matched_predictions": len(xg_evaluated),
+                    "model_on_same_matches": metric_summary([item["variants"]["model"] for item in xg_evaluated]),
+                    "xg_only_candidate": metric_summary([item["variants"]["xg_model"] for item in xg_evaluated]),
+                    "market_on_same_matches": metric_summary([item["market_baseline"] for item in xg_evaluated if item.get("market_baseline")]),
+                },
                 "variants": {name: metric_summary([item["variants"][name] for item in evaluated if name in item["variants"]])
-                             for name in ("poisson_only", "poisson_elo", "poisson_form", "model", "poisson_elo_form", "market_blend_50_50")},
+                             for name in ("poisson_only", "poisson_elo", "poisson_form", "model", "poisson_elo_form", "market_blend_50_50", "xg_model")},
                 "prior_frequency_baseline": metric_summary([item["baseline"] for item in evaluated]),
                 "market_baseline": metric_summary([item["market_baseline"] for item in evaluated if item.get("market_baseline")]),
                 "market_coverage_matches": sum(1 for item in evaluated if item.get("market_baseline")),
@@ -388,6 +403,12 @@ def main():
             "market_baseline": metric_summary(all_market),
             "market_coverage_matches": len(all_market),
             "outcome_calibration": outcome_calibration_summary(all_evaluated),
+            "xg_validation": {
+                "matched_predictions": len(all_xg_evaluated),
+                "model_on_same_matches": metric_summary([item["variants"]["model"] for item in all_xg_evaluated]),
+                "xg_only_candidate": metric_summary([item["variants"]["xg_model"] for item in all_xg_evaluated]),
+                "market_on_same_matches": metric_summary([item["market_baseline"] for item in all_xg_evaluated if item.get("market_baseline")]),
+            },
             "comparison_note": "Confronto su identiche partite; per Brier score e log loss un valore più basso è migliore. Il mercato è confrontato solo sulle partite con quote storiche complete.",
         },
         "leagues": all_by_league,
@@ -401,6 +422,7 @@ def main():
             "Il benchmark di mercato usa AvgH/AvgD/AvgA, con fallback B365H/D/A e PSH/PSD/PSA, solo quando le quote storiche sono complete; le probabilità sono normalizzate per rimuovere il margine.",
             "La miscela 50/50 modello-mercato è sperimentale e resta esclusa dai pronostici pubblicati finché non supera una validazione fuori campione.",
             "La calibrazione top-class confronta la probabilità dell'esito più probabile con la frequenza di correttezza nella stessa fascia.",
+            "La variante xG è sperimentale: usa solo xG storici abbinati per data e squadre, disponibili prima della partita; i confronti sono riportati sulle stesse partite con copertura xG.",
         ],
     }
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
