@@ -1022,11 +1022,19 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
         "european_fatigue_status": "rilevato" if european_context else "nessuna gara europea recente verificata",
         "recent_competition_status": "impegno ravvicinato rilevato" if recent_competition_context else "nessun impegno recente verificato",
         "competition_type": "europea" if league in EUROPEAN_ESPN_COMPETITIONS.values() else "nazionale" if league in NATIONAL_CUP_ESPN_COMPETITIONS.values() else "campionato",
-        "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+        "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
         "availability_data": {
             "status": "non_integrata",
             "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
         },
+    }
+
+
+def published_forecast_lists(forecasts):
+    """Pubblica tutte le partite NO BET e fino a 120 stime, senza nascondere record conteggiati."""
+    return {
+        "matches": [item for item in forecasts if item.get("status") in ("Pronostico valutabile", "Stima preliminare")][:120],
+        "no_bet_matches": [item for item in forecasts if item.get("status") == "NO BET"],
     }
 
 
@@ -1396,8 +1404,7 @@ def main():
             "failed_sources": failed,
         },
         "no_bet_notice": "Le partite NO BET sono mostrate perché i dati non bastano o non sono comparabili. Nessun esito consigliato.",
-        "matches": [item for item in forecasts if item.get("status") in ("Pronostico valutabile", "Stima preliminare")][:120],
-        "no_bet_matches": [item for item in forecasts if item.get("status") == "NO BET"][:80],
+        **published_forecast_lists(forecasts),
         "notice": "Le probabilità sono stime statistiche e non garantiscono risultati.",
     }
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
