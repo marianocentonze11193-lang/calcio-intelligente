@@ -584,6 +584,8 @@ def european_fatigue_context(home, away, match_date, european_matches):
     for team in (home, away):
         recent = []
         for item in european_matches or []:
+            if item.get("status") not in (None, "completed"):
+                continue
             try:
                 played_date = date.fromisoformat(item.get("date", ""))
             except (TypeError, ValueError):
