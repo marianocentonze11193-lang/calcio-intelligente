@@ -1,6 +1,6 @@
 {
   "cache_version": 2,
-  "last_full_refresh": "2026-10-17T01:47:03.704191+00:00",
+  "last_full_refresh": "2026-10-17T08:48:08.181034+00:00",
   "fixtures_by_date": {
     "2026-10-15": [
       {
@@ -5161,17 +5161,8 @@
         "kickoff_utc": "2026-10-17T00:00:00+00:00",
         "home": "Atletico DE Rafaela",
         "away": "Quilmes",
-        "status": "2H",
+        "status": "FT",
         "league": "Primera Nacional"
-      },
-      {
-        "id": "1508572",
-        "date": "2026-10-17",
-        "kickoff_utc": "2026-10-17T00:00:00+00:00",
-        "home": "Boston Legacy W",
-        "away": "Racing Louisville W",
-        "status": "1H",
-        "league": "NWSL Women"
       },
       {
         "id": "1619329",
@@ -5179,7 +5170,7 @@
         "kickoff_utc": "2026-10-17T00:00:00+00:00",
         "home": "Real Tomayapo",
         "away": "Gualberto Villarroel SJ",
-        "status": "2H",
+        "status": "FT",
         "league": "Primera División"
       },
       {
@@ -5188,7 +5179,7 @@
         "kickoff_utc": "2026-10-17T00:00:00+00:00",
         "home": "Chapulineros",
         "away": "Montañeses",
-        "status": "2H",
+        "status": "FT",
         "league": "Primera Premier"
       },
       {
@@ -5197,7 +5188,7 @@
         "kickoff_utc": "2026-10-17T00:00:00+00:00",
         "home": "Miramar",
         "away": "Auckland City",
-        "status": "2H",
+        "status": "FT",
         "league": "National League - National"
       },
       {
@@ -5224,7 +5215,7 @@
         "kickoff_utc": "2026-10-17T00:30:00+00:00",
         "home": "Boca Juniors",
         "away": "Talleres Cordoba",
-        "status": "2H",
+        "status": "FT",
         "league": "Liga Profesional Argentina"
       },
       {
@@ -5233,7 +5224,7 @@
         "kickoff_utc": "2026-10-17T01:00:00+00:00",
         "home": "Gimnasia Y Tiro",
         "away": "Atlanta",
-        "status": "1H",
+        "status": "FT",
         "league": "Primera Nacional"
       },
       {
@@ -5242,7 +5233,7 @@
         "kickoff_utc": "2026-10-17T01:00:00+00:00",
         "home": "Necaxa",
         "away": "Atlas",
-        "status": "1H",
+        "status": "FT",
         "league": "Liga MX"
       },
       {
@@ -5251,7 +5242,7 @@
         "kickoff_utc": "2026-10-17T01:00:00+00:00",
         "home": "Correcaminos Uat",
         "away": "Dorados",
-        "status": "1H",
+        "status": "FT",
         "league": "Liga de Expansión MX"
       },
       {
@@ -5260,7 +5251,7 @@
         "kickoff_utc": "2026-10-17T01:00:00+00:00",
         "home": "Inter",
         "away": "Municipal Limeño",
-        "status": "1H",
+        "status": "FT",
         "league": "Primera Division"
       },
       {
@@ -5269,8 +5260,17 @@
         "kickoff_utc": "2026-10-17T01:00:00+00:00",
         "home": "Guadalupe FC",
         "away": "Cariari Pococi",
-        "status": "HT",
+        "status": "FT",
         "league": "Liga de Ascenso"
+      },
+      {
+        "id": "1508572",
+        "date": "2026-10-17",
+        "kickoff_utc": "2026-10-17T01:05:00+00:00",
+        "home": "Boston Legacy W",
+        "away": "Racing Louisville W",
+        "status": "FT",
+        "league": "NWSL Women"
       },
       {
         "id": "1583783",
@@ -5278,7 +5278,7 @@
         "kickoff_utc": "2026-10-17T01:30:00+00:00",
         "home": "San Francisco FC",
         "away": "Deportivo Universitario",
-        "status": "1H",
+        "status": "FT",
         "league": "Liga Panameña de Fútbol"
       },
       {
@@ -5291,21 +5291,12 @@
         "league": "Liga Panameña de Fútbol"
       },
       {
-        "id": "1635999",
-        "date": "2026-10-17",
-        "kickoff_utc": "2026-10-17T01:30:00+00:00",
-        "home": "Tigres de Alica",
-        "away": "Reboceros La Piedad",
-        "status": "NS",
-        "league": "Primera Premier"
-      },
-      {
         "id": "1517367",
         "date": "2026-10-17",
         "kickoff_utc": "2026-10-17T02:00:00+00:00",
         "home": "Vancouver FC",
         "away": "HFX Wanderers FC",
-        "status": "NS",
+        "status": "FT",
         "league": "Canadian Premier League"
       },
       {
@@ -5314,7 +5305,7 @@
         "kickoff_utc": "2026-10-17T02:00:00+00:00",
         "home": "Wellington Olympic",
         "away": "Eastern Suburbs",
-        "status": "NS",
+        "status": "FT",
         "league": "National League - National"
       },
       {
@@ -5323,7 +5314,7 @@
         "kickoff_utc": "2026-10-17T02:00:00+00:00",
         "home": "Portland Timbers II",
         "away": "St. Louis City II",
-        "status": "NS",
+        "status": "FT",
         "league": "MLS Next Pro"
       },
       {
@@ -5332,8 +5323,17 @@
         "kickoff_utc": "2026-10-17T02:00:00+00:00",
         "home": "Ventura County",
         "away": "Minnesota United II",
-        "status": "NS",
+        "status": "AET",
         "league": "MLS Next Pro"
+      },
+      {
+        "id": "1635999",
+        "date": "2026-10-17",
+        "kickoff_utc": "2026-10-17T02:30:00+00:00",
+        "home": "Tigres de Alica",
+        "away": "Reboceros La Piedad",
+        "status": "FT",
+        "league": "Primera Premier"
       },
       {
         "id": "1550995",
@@ -5341,7 +5341,7 @@
         "kickoff_utc": "2026-10-17T03:00:00+00:00",
         "home": "Atlante FC",
         "away": "U.N.A.M. - Pumas",
-        "status": "NS",
+        "status": "FT",
         "league": "Liga MX"
       },
       {
@@ -5350,7 +5350,7 @@
         "kickoff_utc": "2026-10-17T03:00:00+00:00",
         "home": "CA La Paz",
         "away": "Tlaxcala",
-        "status": "NS",
+        "status": "FT",
         "league": "Liga de Expansión MX"
       },
       {
@@ -5368,7 +5368,7 @@
         "kickoff_utc": "2026-10-17T03:05:00+00:00",
         "home": "Club Tijuana",
         "away": "Puebla",
-        "status": "NS",
+        "status": "FT",
         "league": "Liga MX"
       },
       {
@@ -5377,7 +5377,7 @@
         "kickoff_utc": "2026-10-17T04:00:00+00:00",
         "home": "Shimizu S-pulse",
         "away": "Gamba Osaka",
-        "status": "NS",
+        "status": "FT",
         "league": "J1 League"
       },
       {
@@ -5386,7 +5386,7 @@
         "kickoff_utc": "2026-10-17T04:00:00+00:00",
         "home": "Albirex Niigata W",
         "away": "Parceiro Nagano W",
-        "status": "NS",
+        "status": "FT",
         "league": "WE League"
       },
       {
@@ -5395,7 +5395,7 @@
         "kickoff_utc": "2026-10-17T04:00:00+00:00",
         "home": "Auckland",
         "away": "Melbourne City",
-        "status": "NS",
+        "status": "FT",
         "league": "A-League"
       },
       {
@@ -5422,7 +5422,7 @@
         "kickoff_utc": "2026-10-17T04:00:00+00:00",
         "home": "Broadmeadow Magic",
         "away": "Wests APIA",
-        "status": "NS",
+        "status": "PEN",
         "league": "Australian Championship"
       },
       {
@@ -5431,7 +5431,7 @@
         "kickoff_utc": "2026-10-17T04:00:00+00:00",
         "home": "Sutherland Sharks",
         "away": "South Melbourne",
-        "status": "NS",
+        "status": "FT",
         "league": "Australian Championship"
       },
       {
@@ -5440,7 +5440,7 @@
         "kickoff_utc": "2026-10-17T05:00:00+00:00",
         "home": "Daegu FC",
         "away": "Cheongju",
-        "status": "NS",
+        "status": "FT",
         "league": "K League 2"
       },
       {
@@ -5449,7 +5449,7 @@
         "kickoff_utc": "2026-10-17T05:00:00+00:00",
         "home": "Seongnam FC",
         "away": "Suwon City FC",
-        "status": "NS",
+        "status": "FT",
         "league": "K League 2"
       },
       {
@@ -5458,7 +5458,7 @@
         "kickoff_utc": "2026-10-17T05:00:00+00:00",
         "home": "Gainare Tottori",
         "away": "Thespakusatsu Gunma",
-        "status": "NS",
+        "status": "FT",
         "league": "J3 League"
       },
       {
@@ -5467,7 +5467,7 @@
         "kickoff_utc": "2026-10-17T05:00:00+00:00",
         "home": "FC Gifu",
         "away": "Fukushima United",
-        "status": "NS",
+        "status": "FT",
         "league": "J3 League"
       },
       {
@@ -5476,7 +5476,7 @@
         "kickoff_utc": "2026-10-17T05:00:00+00:00",
         "home": "Kitakyushu",
         "away": "Osaka",
-        "status": "NS",
+        "status": "FT",
         "league": "J3 League"
       },
       {
@@ -5485,7 +5485,7 @@
         "kickoff_utc": "2026-10-17T05:00:00+00:00",
         "home": "JEF United Chiba",
         "away": "Yokohama F. Marinos",
-        "status": "NS",
+        "status": "FT",
         "league": "J1 League"
       },
       {
@@ -5494,7 +5494,7 @@
         "kickoff_utc": "2026-10-17T05:00:00+00:00",
         "home": "Sanfrecce Hiroshima",
         "away": "Kyoto Sanga",
-        "status": "NS",
+        "status": "FT",
         "league": "J1 League"
       },
       {
@@ -5503,7 +5503,7 @@
         "kickoff_utc": "2026-10-17T05:00:00+00:00",
         "home": "Tokyo Verdy",
         "away": "FC Tokyo",
-        "status": "NS",
+        "status": "FT",
         "league": "J1 League"
       },
       {
@@ -5512,7 +5512,7 @@
         "kickoff_utc": "2026-10-17T05:00:00+00:00",
         "home": "Geoje Citizen",
         "away": "Haman",
-        "status": "NS",
+        "status": "FT",
         "league": "K4 League"
       },
       {
@@ -5521,7 +5521,7 @@
         "kickoff_utc": "2026-10-17T05:00:00+00:00",
         "home": "Consadole Sapporo",
         "away": "Blaublitz Akita",
-        "status": "NS",
+        "status": "FT",
         "league": "J2 League"
       },
       {
@@ -5530,7 +5530,7 @@
         "kickoff_utc": "2026-10-17T05:00:00+00:00",
         "home": "Fujieda MYFC",
         "away": "Montedio Yamagata",
-        "status": "NS",
+        "status": "FT",
         "league": "J2 League"
       },
       {
@@ -5539,7 +5539,7 @@
         "kickoff_utc": "2026-10-17T05:00:00+00:00",
         "home": "Vegalta Sendai",
         "away": "Tokushima Vortis",
-        "status": "NS",
+        "status": "FT",
         "league": "J2 League"
       },
       {
@@ -5548,7 +5548,7 @@
         "kickoff_utc": "2026-10-17T05:00:00+00:00",
         "home": "Imabari",
         "away": "Vanraure Hachinohe",
-        "status": "NS",
+        "status": "FT",
         "league": "J2 League"
       },
       {
@@ -5557,7 +5557,7 @@
         "kickoff_utc": "2026-10-17T05:00:00+00:00",
         "home": "Oita Trinita",
         "away": "Albirex Niigata",
-        "status": "NS",
+        "status": "FT",
         "league": "J2 League"
       },
       {
@@ -5566,7 +5566,7 @@
         "kickoff_utc": "2026-10-17T05:00:00+00:00",
         "home": "Sagan Tosu",
         "away": "Omiya Ardija",
-        "status": "NS",
+        "status": "FT",
         "league": "J2 League"
       },
       {
@@ -5575,7 +5575,7 @@
         "kickoff_utc": "2026-10-17T05:00:00+00:00",
         "home": "Tochigi City",
         "away": "Yokohama FC",
-        "status": "NS",
+        "status": "FT",
         "league": "J2 League"
       },
       {
@@ -5584,7 +5584,7 @@
         "kickoff_utc": "2026-10-17T06:00:00+00:00",
         "home": "Cerezo Osaka",
         "away": "Kawasaki Frontale",
-        "status": "NS",
+        "status": "FT",
         "league": "J1 League"
       },
       {
@@ -5593,7 +5593,7 @@
         "kickoff_utc": "2026-10-17T06:00:00+00:00",
         "home": "Kashima",
         "away": "V-varen Nagasaki",
-        "status": "NS",
+        "status": "FT",
         "league": "J1 League"
       },
       {
@@ -5602,7 +5602,7 @@
         "kickoff_utc": "2026-10-17T06:00:00+00:00",
         "home": "Macarthur",
         "away": "Perth Glory",
-        "status": "NS",
+        "status": "FT",
         "league": "A-League"
       },
       {
@@ -5620,7 +5620,7 @@
         "kickoff_utc": "2026-10-17T07:00:00+00:00",
         "home": "Yanbian Longding",
         "away": "Dongguan United",
-        "status": "NS",
+        "status": "2H",
         "league": "League One"
       },
       {
@@ -5629,7 +5629,7 @@
         "kickoff_utc": "2026-10-17T07:00:00+00:00",
         "home": "Mito Hollyhock",
         "away": "Urawa",
-        "status": "NS",
+        "status": "2H",
         "league": "J1 League"
       },
       {
@@ -5638,7 +5638,7 @@
         "kickoff_utc": "2026-10-17T07:00:00+00:00",
         "home": "Pretoria U. W",
         "away": "Copperbelt Ladies W",
-        "status": "NS",
+        "status": "2H",
         "league": "Super League Women"
       },
       {
@@ -5647,7 +5647,7 @@
         "kickoff_utc": "2026-10-17T07:00:00+00:00",
         "home": "Xi'an Ronghai",
         "away": "Shenzhen 2028",
-        "status": "NS",
+        "status": "2H",
         "league": "League Two"
       },
       {
@@ -5656,7 +5656,7 @@
         "kickoff_utc": "2026-10-17T07:00:00+00:00",
         "home": "Rizhao Yuqi",
         "away": "Guangzhou Dandelion",
-        "status": "NS",
+        "status": "2H",
         "league": "League Two"
       },
       {
@@ -5665,7 +5665,7 @@
         "kickoff_utc": "2026-10-17T07:30:00+00:00",
         "home": "Ulsan Hyundai FC",
         "away": "Bucheon FC 1995",
-        "status": "NS",
+        "status": "2H",
         "league": "K League 1"
       },
       {
@@ -5674,7 +5674,7 @@
         "kickoff_utc": "2026-10-17T07:30:00+00:00",
         "home": "Gimpo Citizen",
         "away": "Paju Citizen",
-        "status": "NS",
+        "status": "2H",
         "league": "K League 2"
       },
       {
@@ -5683,7 +5683,7 @@
         "kickoff_utc": "2026-10-17T07:30:00+00:00",
         "home": "Gyeongnam FC",
         "away": "Asan Mugunghwa",
-        "status": "NS",
+        "status": "2H",
         "league": "K League 2"
       },
       {
@@ -5692,7 +5692,7 @@
         "kickoff_utc": "2026-10-17T07:30:00+00:00",
         "home": "Yongin City",
         "away": "Ansan Greeners",
-        "status": "NS",
+        "status": "2H",
         "league": "K League 2"
       },
       {
@@ -5701,7 +5701,7 @@
         "kickoff_utc": "2026-10-17T07:30:00+00:00",
         "home": "Shanghai Second",
         "away": "Guangdong Mingtu",
-        "status": "NS",
+        "status": "2H",
         "league": "League Two"
       },
       {
@@ -5710,7 +5710,7 @@
         "kickoff_utc": "2026-10-17T08:00:00+00:00",
         "home": "Viktoriya Mykolaivka",
         "away": "Chernihiv",
-        "status": "NS",
+        "status": "HT",
         "league": "Persha Liga"
       },
       {
@@ -5719,7 +5719,7 @@
         "kickoff_utc": "2026-10-17T08:00:00+00:00",
         "home": "Concordia",
         "away": "Viitorul Şelimbăr",
-        "status": "NS",
+        "status": "HT",
         "league": "Liga II"
       },
       {
@@ -5728,7 +5728,7 @@
         "kickoff_utc": "2026-10-17T08:00:00+00:00",
         "home": "Dumbrăviţa",
         "away": "Bihor Oradea",
-        "status": "NS",
+        "status": "1H",
         "league": "Liga II"
       },
       {
@@ -5737,7 +5737,7 @@
         "kickoff_utc": "2026-10-17T08:00:00+00:00",
         "home": "CSM Reşiţa",
         "away": "Cetatea Suceava",
-        "status": "NS",
+        "status": "1H",
         "league": "Liga II"
       },
       {
@@ -5746,7 +5746,7 @@
         "kickoff_utc": "2026-10-17T08:00:00+00:00",
         "home": "Slatina",
         "away": "Unirea Slobozia",
-        "status": "NS",
+        "status": "HT",
         "league": "Liga II"
       },
       {
@@ -5755,7 +5755,7 @@
         "kickoff_utc": "2026-10-17T08:00:00+00:00",
         "home": "Popești-Leordeni",
         "away": "CS Afumati",
-        "status": "NS",
+        "status": "1H",
         "league": "Liga II"
       },
       {
@@ -5764,7 +5764,7 @@
         "kickoff_utc": "2026-10-17T08:00:00+00:00",
         "home": "CSA Steaua Bucureşti",
         "away": "Metaloglobus",
-        "status": "NS",
+        "status": "1H",
         "league": "Liga II"
       },
       {
@@ -5773,7 +5773,7 @@
         "kickoff_utc": "2026-10-17T08:00:00+00:00",
         "home": "Ştefăneşti",
         "away": "CS Dinamo București",
-        "status": "NS",
+        "status": "1H",
         "league": "Liga II"
       },
       {
@@ -5782,7 +5782,7 @@
         "kickoff_utc": "2026-10-17T08:00:00+00:00",
         "home": "Eastern District",
         "away": "Eastern",
-        "status": "NS",
+        "status": "1H",
         "league": "Premier League"
       },
       {
@@ -5791,7 +5791,7 @@
         "kickoff_utc": "2026-10-17T08:00:00+00:00",
         "home": "CSM Satu Mare",
         "away": "Metalul Buzău",
-        "status": "NS",
+        "status": "1H",
         "league": "Liga II"
       },
       {
@@ -5800,7 +5800,7 @@
         "kickoff_utc": "2026-10-17T08:00:00+00:00",
         "home": "Dalian Kewei",
         "away": "Guizhou Zhucheng",
-        "status": "NS",
+        "status": "1H",
         "league": "League Two"
       },
       {
@@ -5809,7 +5809,7 @@
         "kickoff_utc": "2026-10-17T08:00:00+00:00",
         "home": "Sekhukhune United U23",
         "away": "Chippa United U23",
-        "status": "NS",
+        "status": "HT",
         "league": "Diski Challenge"
       },
       {
@@ -5818,7 +5818,7 @@
         "kickoff_utc": "2026-10-17T08:00:00+00:00",
         "home": "Polokwane City U23",
         "away": "AmaZulu U23",
-        "status": "NS",
+        "status": "1H",
         "league": "Diski Challenge"
       },
       {
@@ -5827,7 +5827,7 @@
         "kickoff_utc": "2026-10-17T08:00:00+00:00",
         "home": "Richards Bay U23",
         "away": "Golden Arrows U23",
-        "status": "NS",
+        "status": "1H",
         "league": "Diski Challenge"
       },
       {
@@ -5836,7 +5836,7 @@
         "kickoff_utc": "2026-10-17T08:15:00+00:00",
         "home": "Petřín Plzeň",
         "away": "Rokycany",
-        "status": "NS",
+        "status": "1H",
         "league": "4. liga - Divizie A"
       },
       {
@@ -5845,7 +5845,7 @@
         "kickoff_utc": "2026-10-17T08:15:00+00:00",
         "home": "Táborsko II",
         "away": "Křimice",
-        "status": "NS",
+        "status": "1H",
         "league": "4. liga - Divizie A"
       },
       {
@@ -5854,7 +5854,7 @@
         "kickoff_utc": "2026-10-17T08:15:00+00:00",
         "home": "Brandýs nad Labem",
         "away": "Baník Sokolov",
-        "status": "NS",
+        "status": "1H",
         "league": "4. liga - Divizie B"
       },
       {
@@ -5863,7 +5863,7 @@
         "kickoff_utc": "2026-10-17T08:15:00+00:00",
         "home": "Újezd Praha 4",
         "away": "Rapid Psáry",
-        "status": "NS",
+        "status": "1H",
         "league": "4. liga - Divizie B"
       },
       {
@@ -5872,7 +5872,7 @@
         "kickoff_utc": "2026-10-17T08:15:00+00:00",
         "home": "Motorlet Praha",
         "away": "Sparta Praha II",
-        "status": "NS",
+        "status": "1H",
         "league": "3. liga - CFL A"
       },
       {
@@ -5881,7 +5881,7 @@
         "kickoff_utc": "2026-10-17T08:15:00+00:00",
         "home": "Chrudim",
         "away": "Horní Ředice",
-        "status": "NS",
+        "status": "1H",
         "league": "3. liga - CFL B"
       },
       {
@@ -5890,7 +5890,7 @@
         "kickoff_utc": "2026-10-17T08:15:00+00:00",
         "home": "Vratimov",
         "away": "Pustá Polom",
-        "status": "NS",
+        "status": "1H",
         "league": "4. liga - Divizie F"
       },
       {
@@ -5899,7 +5899,7 @@
         "kickoff_utc": "2026-10-17T08:30:00+00:00",
         "home": "Přepeře",
         "away": "Ústí nad Orlicí",
-        "status": "NS",
+        "status": "1H",
         "league": "4. liga - Divizie C"
       },
       {
@@ -5908,7 +5908,7 @@
         "kickoff_utc": "2026-10-17T08:30:00+00:00",
         "home": "Enisey",
         "away": "Torpedo Moskva",
-        "status": "NS",
+        "status": "1H",
         "league": "First League"
       },
       {
@@ -5917,8 +5917,17 @@
         "kickoff_utc": "2026-10-17T08:30:00+00:00",
         "home": "Sparta Brno",
         "away": "Velké Meziříčí",
-        "status": "NS",
+        "status": "1H",
         "league": "4. liga - Divizie D"
+      },
+      {
+        "id": "1581937",
+        "date": "2026-10-17",
+        "kickoff_utc": "2026-10-17T08:30:00+00:00",
+        "home": "Ahrobiznes Volochysk",
+        "away": "Metal Kharkiv",
+        "status": "1H",
+        "league": "Persha Liga"
       },
       {
         "id": "1593046",
@@ -5935,7 +5944,7 @@
         "kickoff_utc": "2026-10-17T08:30:00+00:00",
         "home": "Garudayaksa",
         "away": "Arema FC",
-        "status": "NS",
+        "status": "1H",
         "league": "Liga 1"
       },
       {
@@ -5944,7 +5953,7 @@
         "kickoff_utc": "2026-10-17T08:30:00+00:00",
         "home": "Lam Dong",
         "away": "Văn Hiến",
-        "status": "NS",
+        "status": "1H",
         "league": "V.League 2"
       },
       {
@@ -5962,7 +5971,7 @@
         "kickoff_utc": "2026-10-17T08:30:00+00:00",
         "home": "Semen Padang",
         "away": "PSMS Medan",
-        "status": "NS",
+        "status": "1H",
         "league": "Liga 2"
       },
       {
@@ -5971,7 +5980,7 @@
         "kickoff_utc": "2026-10-17T08:30:00+00:00",
         "home": "RANS Nusantara",
         "away": "Persela Lamongan",
-        "status": "NS",
+        "status": "1H",
         "league": "Liga 2"
       },
       {
@@ -5980,7 +5989,7 @@
         "kickoff_utc": "2026-10-17T08:30:00+00:00",
         "home": "Bayswater City",
         "away": "Marconi Stallions",
-        "status": "NS",
+        "status": "1H",
         "league": "Australian Championship"
       },
       {
@@ -5989,7 +5998,7 @@
         "kickoff_utc": "2026-10-17T08:30:00+00:00",
         "home": "Ezra",
         "away": "Lao Army",
-        "status": "NS",
+        "status": "1H",
         "league": "Lao League"
       },
       {
@@ -6016,7 +6025,7 @@
         "kickoff_utc": "2026-10-17T08:40:00+00:00",
         "home": "Central Coast Mariners",
         "away": "Newcastle Jets",
-        "status": "NS",
+        "status": "1H",
         "league": "A-League"
       },
       {
@@ -6025,7 +6034,7 @@
         "kickoff_utc": "2026-10-17T08:45:00+00:00",
         "home": "Kirivong Sok Sen Chey",
         "away": "Visakha",
-        "status": "NS",
+        "status": "1H",
         "league": "C-League"
       },
       {
@@ -6043,7 +6052,7 @@
         "kickoff_utc": "2026-10-17T08:45:00+00:00",
         "home": "Bangladesh Police",
         "away": "Arambagh",
-        "status": "NS",
+        "status": "1H",
         "league": "Premier League"
       },
       {
@@ -6052,7 +6061,7 @@
         "kickoff_utc": "2026-10-17T08:45:00+00:00",
         "home": "Rahmatgonj MFS",
         "away": "Brothers Union",
-        "status": "NS",
+        "status": "1H",
         "league": "Premier League"
       },
       {
@@ -6261,6 +6270,15 @@
         "away": "Sparta Praha W",
         "status": "NS",
         "league": "1. Liga Women"
+      },
+      {
+        "id": "1629446",
+        "date": "2026-10-17",
+        "kickoff_utc": "2026-10-17T09:00:00+00:00",
+        "home": "Amedspor U19",
+        "away": "Konyaspor U19",
+        "status": "NS",
+        "league": "U19 league"
       },
       {
         "id": "1634842",
@@ -6774,6 +6792,24 @@
         "away": "Ascoli U19",
         "status": "NS",
         "league": "Campionato Primavera - 2"
+      },
+      {
+        "id": "1629449",
+        "date": "2026-10-17",
+        "kickoff_utc": "2026-10-17T10:00:00+00:00",
+        "home": "Erzurumspor U19",
+        "away": "Eyupspor U19",
+        "status": "NS",
+        "league": "U19 league"
+      },
+      {
+        "id": "1629451",
+        "date": "2026-10-17",
+        "kickoff_utc": "2026-10-17T10:00:00+00:00",
+        "home": "Genclerbirligi U19",
+        "away": "Galatasaray U19",
+        "status": "NS",
+        "league": "U19 league"
       },
       {
         "id": "1633907",
@@ -7474,7 +7510,7 @@
         "kickoff_utc": "2026-10-17T11:00:00+00:00",
         "home": "Yeni Malatyaspor",
         "away": "Mazıdağı Fosfatspor",
-        "status": "NS",
+        "status": "AWD",
         "league": "3. Lig - Group 3"
       },
       {
@@ -9438,6 +9474,15 @@
         "away": "Mathare United",
         "status": "NS",
         "league": "FKF Premier League"
+      },
+      {
+        "id": "1629450",
+        "date": "2026-10-17",
+        "kickoff_utc": "2026-10-17T12:00:00+00:00",
+        "home": "Fenerbahce U19",
+        "away": "Alanyaspor U19",
+        "status": "NS",
+        "league": "U19 league"
       },
       {
         "id": "1629705",
@@ -15817,7 +15862,7 @@
         "kickoff_utc": "2026-10-17T14:30:00+00:00",
         "home": "Bala Azul",
         "away": "Santa Cruz",
-        "status": "NS",
+        "status": "PST",
         "league": "Tercera División RFEF - Group 13"
       },
       {
@@ -16766,15 +16811,6 @@
         "league": "Taça de Portugal"
       },
       {
-        "id": "1644171",
-        "date": "2026-10-17",
-        "kickoff_utc": "2026-10-17T15:00:00+00:00",
-        "home": "15 de Agosto",
-        "away": "Simba",
-        "status": "NS",
-        "league": "CAF Champions League"
-      },
-      {
         "id": "1644238",
         "date": "2026-10-17",
         "kickoff_utc": "2026-10-17T15:00:00+00:00",
@@ -17621,6 +17657,15 @@
         "league": "Erste Liga Cup"
       },
       {
+        "id": "1639341",
+        "date": "2026-10-17",
+        "kickoff_utc": "2026-10-17T16:00:00+00:00",
+        "home": "Star Sport Academy",
+        "away": "Renaissance Berkane",
+        "status": "NS",
+        "league": "CAF Champions League"
+      },
+      {
         "id": "1639350",
         "date": "2026-10-17",
         "kickoff_utc": "2026-10-17T16:00:00+00:00",
@@ -18175,7 +18220,7 @@
         "kickoff_utc": "2026-10-17T17:00:00+00:00",
         "home": "AC Douane",
         "away": "CR Belouizdad",
-        "status": "NS",
+        "status": "PST",
         "league": "CAF Confederation Cup"
       },
       {
@@ -18863,15 +18908,6 @@
         "league": "Pernambucano - 1"
       },
       {
-        "id": "1643430",
-        "date": "2026-10-17",
-        "kickoff_utc": "2026-10-17T18:00:00+00:00",
-        "home": "Nautico U20",
-        "away": "Ipojuca U20",
-        "status": "NS",
-        "league": "Pernambucano - U20"
-      },
-      {
         "id": "1643431",
         "date": "2026-10-17",
         "kickoff_utc": "2026-10-17T18:00:00+00:00",
@@ -19196,15 +19232,6 @@
         "league": "Primera División RFEF - Group 2"
       },
       {
-        "id": "1580942",
-        "date": "2026-10-17",
-        "kickoff_utc": "2026-10-17T19:00:00+00:00",
-        "home": "Paris Saint Germain W",
-        "away": "Lyon W",
-        "status": "NS",
-        "league": "Feminine Division 1"
-      },
-      {
         "id": "1619330",
         "date": "2026-10-17",
         "kickoff_utc": "2026-10-17T19:00:00+00:00",
@@ -19311,6 +19338,15 @@
         "away": "Chaco",
         "status": "NS",
         "league": "Nacional B"
+      },
+      {
+        "id": "1580942",
+        "date": "2026-10-17",
+        "kickoff_utc": "2026-10-17T19:05:00+00:00",
+        "home": "Paris Saint Germain W",
+        "away": "Lyon W",
+        "status": "NS",
+        "league": "Feminine Division 1"
       },
       {
         "id": "1641803",
@@ -19626,6 +19662,15 @@
         "away": "Defensores de Vilelas",
         "status": "NS",
         "league": "Torneo Federal A"
+      },
+      {
+        "id": "1646442",
+        "date": "2026-10-17",
+        "kickoff_utc": "2026-10-17T21:00:00+00:00",
+        "home": "Garden Stars",
+        "away": "All Saints United",
+        "status": "NS",
+        "league": "Premier Division"
       },
       {
         "id": "1619331",
@@ -19997,6 +20042,15 @@
         "away": "San Marcos",
         "status": "NS",
         "league": "Primera Division"
+      },
+      {
+        "id": "1646443",
+        "date": "2026-10-18",
+        "kickoff_utc": "2026-10-17T23:00:00+00:00",
+        "home": "Potters Tigers",
+        "away": "Aston Villa",
+        "status": "NS",
+        "league": "Premier Division"
       },
       {
         "id": "1550996",
@@ -22150,6 +22204,24 @@
         "league": "Gamma Ethniki - Group 5"
       },
       {
+        "id": "1629452",
+        "date": "2026-10-18",
+        "kickoff_utc": "2026-10-18T10:00:00+00:00",
+        "home": "Kasimpasa U19",
+        "away": "Samsunspor U19",
+        "status": "NS",
+        "league": "U19 league"
+      },
+      {
+        "id": "1629453",
+        "date": "2026-10-18",
+        "kickoff_utc": "2026-10-18T10:00:00+00:00",
+        "home": "Kocaelispor U19",
+        "away": "Goztepe U19",
+        "status": "NS",
+        "league": "U19 league"
+      },
+      {
         "id": "1634035",
         "date": "2026-10-18",
         "kickoff_utc": "2026-10-18T10:00:00+00:00",
@@ -23572,15 +23644,6 @@
         "league": "Vysshaya Liga"
       },
       {
-        "id": "1527753",
-        "date": "2026-10-18",
-        "kickoff_utc": "2026-10-18T12:00:00+00:00",
-        "home": "Istaravshan",
-        "away": "Ravshan",
-        "status": "NS",
-        "league": "Vysshaya Liga"
-      },
-      {
         "id": "1530018",
         "date": "2026-10-18",
         "kickoff_utc": "2026-10-18T12:00:00+00:00",
@@ -24274,15 +24337,6 @@
         "league": "FKF Premier League"
       },
       {
-        "id": "1629446",
-        "date": "2026-10-18",
-        "kickoff_utc": "2026-10-18T12:00:00+00:00",
-        "home": "Amedspor U19",
-        "away": "Konyaspor U19",
-        "status": "NS",
-        "league": "U19 league"
-      },
-      {
         "id": "1629447",
         "date": "2026-10-18",
         "kickoff_utc": "2026-10-18T12:00:00+00:00",
@@ -24297,60 +24351,6 @@
         "kickoff_utc": "2026-10-18T12:00:00+00:00",
         "home": "Corum U19",
         "away": "Rizespor U19",
-        "status": "NS",
-        "league": "U19 league"
-      },
-      {
-        "id": "1629449",
-        "date": "2026-10-18",
-        "kickoff_utc": "2026-10-18T12:00:00+00:00",
-        "home": "Erzurumspor U19",
-        "away": "Eyupspor U19",
-        "status": "NS",
-        "league": "U19 league"
-      },
-      {
-        "id": "1629450",
-        "date": "2026-10-18",
-        "kickoff_utc": "2026-10-18T12:00:00+00:00",
-        "home": "Fenerbahce U19",
-        "away": "Alanyaspor U19",
-        "status": "NS",
-        "league": "U19 league"
-      },
-      {
-        "id": "1629451",
-        "date": "2026-10-18",
-        "kickoff_utc": "2026-10-18T12:00:00+00:00",
-        "home": "Genclerbirligi U19",
-        "away": "Galatasaray U19",
-        "status": "NS",
-        "league": "U19 league"
-      },
-      {
-        "id": "1629452",
-        "date": "2026-10-18",
-        "kickoff_utc": "2026-10-18T12:00:00+00:00",
-        "home": "Kasimpasa U19",
-        "away": "Samsunspor U19",
-        "status": "NS",
-        "league": "U19 league"
-      },
-      {
-        "id": "1629453",
-        "date": "2026-10-18",
-        "kickoff_utc": "2026-10-18T12:00:00+00:00",
-        "home": "Kocaelispor U19",
-        "away": "Goztepe U19",
-        "status": "NS",
-        "league": "U19 league"
-      },
-      {
-        "id": "1629454",
-        "date": "2026-10-18",
-        "kickoff_utc": "2026-10-18T12:00:00+00:00",
-        "home": "Trabzonspor U19",
-        "away": "Beşiktaş U19",
         "status": "NS",
         "league": "U19 league"
       },
@@ -30934,6 +30934,15 @@
         "league": "Pernambucano - 1"
       },
       {
+        "id": "1643430",
+        "date": "2026-10-18",
+        "kickoff_utc": "2026-10-18T18:00:00+00:00",
+        "home": "Nautico U20",
+        "away": "Ipojuca U20",
+        "status": "NS",
+        "league": "Pernambucano - U20"
+      },
+      {
         "id": "1644216",
         "date": "2026-10-18",
         "kickoff_utc": "2026-10-18T18:00:00+00:00",
@@ -31258,15 +31267,6 @@
         "league": "Nacional B"
       },
       {
-        "id": "1638632",
-        "date": "2026-10-18",
-        "kickoff_utc": "2026-10-18T19:15:00+00:00",
-        "home": "Fram Reykjavik",
-        "away": "IA Akranes",
-        "status": "NS",
-        "league": "Úrvalsdeild"
-      },
-      {
         "id": "1641296",
         "date": "2026-10-18",
         "kickoff_utc": "2026-10-18T19:15:00+00:00",
@@ -31528,6 +31528,15 @@
         "league": "Primera División"
       },
       {
+        "id": "1549669",
+        "date": "2026-10-18",
+        "kickoff_utc": "2026-10-18T20:30:00+00:00",
+        "home": "Envigado",
+        "away": "Barranquilla",
+        "status": "NS",
+        "league": "Primera B"
+      },
+      {
         "id": "1490555",
         "date": "2026-10-18",
         "kickoff_utc": "2026-10-18T21:00:00+00:00",
@@ -31670,6 +31679,15 @@
         "away": "Jalapa",
         "status": "NS",
         "league": "Primera Division"
+      },
+      {
+        "id": "1646444",
+        "date": "2026-10-18",
+        "kickoff_utc": "2026-10-18T21:00:00+00:00",
+        "home": "Hoppers",
+        "away": "Grenades",
+        "status": "NS",
+        "league": "Premier Division"
       },
       {
         "id": "1619334",
@@ -34007,21 +34025,27 @@
     "1492417": [
       {
         "team": "Mirassol",
-        "player": "Negueba",
+        "player": "Jose Aldo",
         "type": "Missing Fixture",
-        "reason": "Knee Injury"
+        "reason": "Muscle Injury"
       },
       {
         "team": "Mirassol",
-        "player": "Jose Aldo",
-        "type": "Questionable",
-        "reason": "Muscle Injury"
+        "player": "Negueba",
+        "type": "Missing Fixture",
+        "reason": "Knee Injury"
       },
       {
         "team": "Internacional",
         "player": "Alan Patrick",
         "type": "Missing Fixture",
         "reason": "Muscle Injury"
+      },
+      {
+        "team": "Internacional",
+        "player": "Allex",
+        "type": "Missing Fixture",
+        "reason": "Inactive"
       },
       {
         "team": "Internacional",
@@ -34049,14 +34073,8 @@
       },
       {
         "team": "Internacional",
-        "player": "Allex",
-        "type": "Questionable",
-        "reason": "Inactive"
-      },
-      {
-        "team": "Internacional",
         "player": "A. Sanabria",
-        "type": "Questionable",
+        "type": "Missing Fixture",
         "reason": "Inactive"
       }
     ],
@@ -34128,6 +34146,12 @@
     ],
     "1584433": [
       {
+        "team": "Erzurumspor FK",
+        "player": "G. Kerk",
+        "type": "Questionable",
+        "reason": "Injury"
+      },
+      {
         "team": "Eyüpspor",
         "player": "A. Abdullahi",
         "type": "Missing Fixture",
@@ -34150,7 +34174,7 @@
       {
         "team": "Krylia Sovetov",
         "player": "S. Pesjakov",
-        "type": "Questionable",
+        "type": "Missing Fixture",
         "reason": "Injury"
       }
     ],
@@ -34191,19 +34215,13 @@
         "team": "Middlesbrough",
         "player": "R. Pukstas",
         "type": "Missing Fixture",
-        "reason": "Inactive"
+        "reason": "Injury"
       },
       {
         "team": "Middlesbrough",
         "player": "D. Strelec",
         "type": "Missing Fixture",
-        "reason": "Inactive"
-      },
-      {
-        "team": "Cardiff",
-        "player": "K. Bielik",
-        "type": "Missing Fixture",
-        "reason": "Suspended"
+        "reason": "Injury"
       },
       {
         "team": "Cardiff",
@@ -34214,8 +34232,14 @@
       {
         "team": "Cardiff",
         "player": "R. Colwill",
-        "type": "Questionable",
-        "reason": "Health problems"
+        "type": "Missing Fixture",
+        "reason": "Ankle Injury"
+      },
+      {
+        "team": "Cardiff",
+        "player": "D. Lawlor",
+        "type": "Missing Fixture",
+        "reason": "Hamstring Injury"
       },
       {
         "team": "Cardiff",
@@ -34268,6 +34292,12 @@
         "reason": "Inactive"
       },
       {
+        "team": "Millwall",
+        "player": "T. Arconte",
+        "type": "Questionable",
+        "reason": "Ankle Injury"
+      },
+      {
         "team": "Lincoln",
         "player": "T. Darikwa",
         "type": "Missing Fixture",
@@ -34301,18 +34331,6 @@
     "1563212": [
       {
         "team": "Watford",
-        "player": "K. Baah",
-        "type": "Missing Fixture",
-        "reason": "Knock"
-      },
-      {
-        "team": "Watford",
-        "player": "E. Bove",
-        "type": "Missing Fixture",
-        "reason": "Knee Injury"
-      },
-      {
-        "team": "Watford",
         "player": "T. Akomeah",
         "type": "Questionable",
         "reason": "Lacking Match Fitness"
@@ -34325,27 +34343,45 @@
       },
       {
         "team": "Watford",
+        "player": "K. Baah",
+        "type": "Questionable",
+        "reason": "Knock"
+      },
+      {
+        "team": "Watford",
+        "player": "E. Bove",
+        "type": "Questionable",
+        "reason": "Knee Injury"
+      },
+      {
+        "team": "Watford",
         "player": "J. Ngakia",
         "type": "Questionable",
         "reason": "Thigh Injury"
       },
       {
         "team": "Charlton",
-        "player": "N. Chalobah",
+        "player": "R. Apter",
         "type": "Missing Fixture",
-        "reason": "Muscle Injury"
-      },
-      {
-        "team": "Charlton",
-        "player": "M. Godden",
-        "type": "Missing Fixture",
-        "reason": "Muscle Injury"
+        "reason": "Knee Injury"
       },
       {
         "team": "Charlton",
         "player": "C. Sichenje",
         "type": "Missing Fixture",
         "reason": "Knee Injury"
+      },
+      {
+        "team": "Charlton",
+        "player": "N. Chalobah",
+        "type": "Questionable",
+        "reason": "Muscle Injury"
+      },
+      {
+        "team": "Charlton",
+        "player": "M. Godden",
+        "type": "Questionable",
+        "reason": "Muscle Injury"
       }
     ],
     "1570416": [
@@ -34371,7 +34407,7 @@
         "team": "Atletico Madrid",
         "player": "Koke",
         "type": "Missing Fixture",
-        "reason": "Personal Reasons"
+        "reason": "Muscle Injury"
       }
     ],
     "1494780": [
@@ -34416,12 +34452,6 @@
         "player": "I. Sjong",
         "type": "Missing Fixture",
         "reason": "Injury"
-      },
-      {
-        "team": "Bodo/Glimt",
-        "player": "J. Kitolano",
-        "type": "Questionable",
-        "reason": "Knee Injury"
       }
     ],
     "1550156": [
@@ -34433,7 +34463,19 @@
       },
       {
         "team": "Venezia",
+        "player": "A. Bella-Kotchap",
+        "type": "Missing Fixture",
+        "reason": "Thigh Injury"
+      },
+      {
+        "team": "Venezia",
         "player": "G. Busio",
+        "type": "Missing Fixture",
+        "reason": "Thigh Injury"
+      },
+      {
+        "team": "Venezia",
+        "player": "T. Correia",
         "type": "Missing Fixture",
         "reason": "Thigh Injury"
       },
@@ -34448,24 +34490,6 @@
         "player": "M. Sverko",
         "type": "Missing Fixture",
         "reason": "Hip Injury"
-      },
-      {
-        "team": "Venezia",
-        "player": "A. Bella-Kotchap",
-        "type": "Questionable",
-        "reason": "Thigh Injury"
-      },
-      {
-        "team": "Venezia",
-        "player": "T. Correia",
-        "type": "Questionable",
-        "reason": "Thigh Injury"
-      },
-      {
-        "team": "Venezia",
-        "player": "P. Mazzocchi",
-        "type": "Questionable",
-        "reason": "Calf Injury"
       },
       {
         "team": "Napoli",
@@ -34490,27 +34514,15 @@
         "player": "A. Vergara",
         "type": "Missing Fixture",
         "reason": "Calf Injury"
-      },
-      {
-        "team": "Napoli",
-        "player": "Alisson Santos",
-        "type": "Questionable",
-        "reason": "Muscle Injury"
-      },
-      {
-        "team": "Napoli",
-        "player": "F. Anguissa",
-        "type": "Questionable",
-        "reason": "Groin Injury"
-      },
-      {
-        "team": "Napoli",
-        "player": "M. Olivera",
-        "type": "Questionable",
-        "reason": "Groin Injury"
       }
     ],
     "1584430": [
+      {
+        "team": "Amed",
+        "player": "L. Dellova",
+        "type": "Missing Fixture",
+        "reason": "Muscle Injury"
+      },
       {
         "team": "Amed",
         "player": "M. Yildirim",
@@ -34531,18 +34543,36 @@
       },
       {
         "team": "Konyaspor",
-        "player": "M. Ibrahimoglu",
+        "player": "A. Demirbag",
         "type": "Missing Fixture",
-        "reason": "Muscle Injury"
+        "reason": "Injury"
       },
       {
         "team": "Konyaspor",
         "player": "E. Destan",
-        "type": "Questionable",
+        "type": "Missing Fixture",
         "reason": "Knee Injury"
+      },
+      {
+        "team": "Konyaspor",
+        "player": "J. Dompe",
+        "type": "Questionable",
+        "reason": "Inactive"
+      },
+      {
+        "team": "Konyaspor",
+        "player": "U. Yazgili",
+        "type": "Questionable",
+        "reason": "Injury"
       }
     ],
     "1584435": [
+      {
+        "team": "Gençlerbirliği S.K.",
+        "player": "P. Etebo",
+        "type": "Missing Fixture",
+        "reason": "Inactive"
+      },
       {
         "team": "Gençlerbirliği S.K.",
         "player": "C. Niasse",
@@ -34554,6 +34584,18 @@
         "player": "K. Rodrigues",
         "type": "Missing Fixture",
         "reason": "Muscle Injury"
+      },
+      {
+        "team": "Gençlerbirliği S.K.",
+        "player": "S. Koita",
+        "type": "Questionable",
+        "reason": "Inactive"
+      },
+      {
+        "team": "Gençlerbirliği S.K.",
+        "player": "P. Pereira",
+        "type": "Questionable",
+        "reason": "Injury"
       },
       {
         "team": "Gençlerbirliği S.K.",
@@ -34571,13 +34613,13 @@
         "team": "Galatasaray",
         "player": "L. Torreira",
         "type": "Missing Fixture",
-        "reason": "Red Card"
+        "reason": "Injury"
       },
       {
         "team": "Galatasaray",
         "player": "L. Torreira",
-        "type": "Questionable",
-        "reason": "Injury"
+        "type": "Missing Fixture",
+        "reason": "Red Card"
       }
     ],
     "1575193": [
@@ -34857,6 +34899,12 @@
     "1561412": [
       {
         "team": "Dinamo Makhachkala",
+        "player": "A. Sandrachuk",
+        "type": "Missing Fixture",
+        "reason": "Injury"
+      },
+      {
+        "team": "Dinamo Makhachkala",
         "player": "I. Shumakhov",
         "type": "Missing Fixture",
         "reason": "Knee Injury"
@@ -34869,8 +34917,20 @@
       },
       {
         "team": "Akron",
-        "player": "Y. Zheleznov",
+        "player": "K. Maradishvili",
         "type": "Missing Fixture",
+        "reason": "Inactive"
+      },
+      {
+        "team": "Akron",
+        "player": "Benchimol",
+        "type": "Questionable",
+        "reason": "Inactive"
+      },
+      {
+        "team": "Akron",
+        "player": "Y. Zheleznov",
+        "type": "Questionable",
         "reason": "Injury"
       }
     ],
@@ -35075,6 +35135,18 @@
       },
       {
         "team": "QPR",
+        "player": "A. S. Mbengue",
+        "type": "Missing Fixture",
+        "reason": "Knee Injury"
+      },
+      {
+        "team": "QPR",
+        "player": "J. Obikwu",
+        "type": "Missing Fixture",
+        "reason": "Health problems"
+      },
+      {
+        "team": "QPR",
         "player": "K. Saito",
         "type": "Missing Fixture",
         "reason": "Inactive"
@@ -35096,7 +35168,7 @@
       {
         "team": "Bristol City",
         "player": "N. Eile",
-        "type": "Questionable",
+        "type": "Missing Fixture",
         "reason": "Illness"
       },
       {
@@ -35122,6 +35194,12 @@
         "player": "F. Seriki",
         "type": "Missing Fixture",
         "reason": "Knee Injury"
+      },
+      {
+        "team": "Sheffield Utd",
+        "player": "J. Shackleton",
+        "type": "Missing Fixture",
+        "reason": "Health problems"
       }
     ],
     "1563206": [
@@ -35151,6 +35229,12 @@
       },
       {
         "team": "Derby",
+        "player": "S. Langas",
+        "type": "Missing Fixture",
+        "reason": "Injury"
+      },
+      {
+        "team": "Derby",
         "player": "D. Murkin",
         "type": "Missing Fixture",
         "reason": "Hamstring Injury"
@@ -35177,7 +35261,7 @@
         "team": "Stoke City",
         "player": "A. Ampah",
         "type": "Missing Fixture",
-        "reason": "Inactive"
+        "reason": "Knee Injury"
       },
       {
         "team": "Stoke City",
@@ -35189,7 +35273,7 @@
         "team": "Stoke City",
         "player": "S. Gallagher",
         "type": "Missing Fixture",
-        "reason": "Inactive"
+        "reason": "Injury"
       },
       {
         "team": "Stoke City",
@@ -35213,6 +35297,12 @@
       },
       {
         "team": "Norwich",
+        "player": "V. Kovacevic",
+        "type": "Missing Fixture",
+        "reason": "Concussion"
+      },
+      {
+        "team": "Norwich",
         "player": "K. McLean",
         "type": "Missing Fixture",
         "reason": "Injury"
@@ -35228,6 +35318,24 @@
         "player": "M. Toure",
         "type": "Missing Fixture",
         "reason": "Shoulder Injury"
+      },
+      {
+        "team": "Norwich",
+        "player": "A. Crnac",
+        "type": "Questionable",
+        "reason": "Rest"
+      },
+      {
+        "team": "Norwich",
+        "player": "K. Fisher",
+        "type": "Questionable",
+        "reason": "Health problems"
+      },
+      {
+        "team": "Portsmouth",
+        "player": "B. Arthur",
+        "type": "Missing Fixture",
+        "reason": "Back Injury"
       },
       {
         "team": "Portsmouth",
@@ -35255,12 +35363,6 @@
       },
       {
         "team": "Portsmouth",
-        "player": "C. Shaughnessy",
-        "type": "Missing Fixture",
-        "reason": "Injury"
-      },
-      {
-        "team": "Portsmouth",
         "player": "F. Umeh",
         "type": "Missing Fixture",
         "reason": "Hamstring Injury"
@@ -35270,9 +35372,27 @@
         "player": "T. Waddingham",
         "type": "Missing Fixture",
         "reason": "Ankle Injury"
+      },
+      {
+        "team": "Portsmouth",
+        "player": "K. Anderson",
+        "type": "Questionable",
+        "reason": "Overload"
+      },
+      {
+        "team": "Portsmouth",
+        "player": "C. Shaughnessy",
+        "type": "Questionable",
+        "reason": "Injury"
       }
     ],
     "1563210": [
+      {
+        "team": "Southampton",
+        "player": "F. Downes",
+        "type": "Missing Fixture",
+        "reason": "Ankle Injury"
+      },
       {
         "team": "Bolton",
         "player": "C. Forino-Joseph",
@@ -35289,12 +35409,6 @@
       },
       {
         "team": "Swansea",
-        "player": "S. Eustaquio",
-        "type": "Missing Fixture",
-        "reason": "Shoulder Injury"
-      },
-      {
-        "team": "Swansea",
         "player": "J. Key",
         "type": "Missing Fixture",
         "reason": "Muscle Injury"
@@ -35304,6 +35418,12 @@
         "player": "F. Lissah",
         "type": "Missing Fixture",
         "reason": "Yellow Cards"
+      },
+      {
+        "team": "Swansea",
+        "player": "S. Eustaquio",
+        "type": "Questionable",
+        "reason": "Shoulder Injury"
       },
       {
         "team": "West Ham",
@@ -35383,6 +35503,12 @@
       },
       {
         "team": "Wrexham",
+        "player": "M. James",
+        "type": "Missing Fixture",
+        "reason": "Back Injury"
+      },
+      {
+        "team": "Wrexham",
         "player": "B. Sheaf",
         "type": "Missing Fixture",
         "reason": "Injury"
@@ -35395,15 +35521,27 @@
       },
       {
         "team": "Wrexham",
-        "player": "M. James",
-        "type": "Questionable",
-        "reason": "Back Injury"
+        "player": "J. Windass",
+        "type": "Missing Fixture",
+        "reason": "Ankle Injury"
       },
       {
         "team": "Wrexham",
         "player": "S. Revan",
         "type": "Questionable",
         "reason": "Hamstring Injury"
+      },
+      {
+        "team": "Preston",
+        "player": "H. Clarke",
+        "type": "Missing Fixture",
+        "reason": "Knee Injury"
+      },
+      {
+        "team": "Preston",
+        "player": "L. Gibbs",
+        "type": "Missing Fixture",
+        "reason": "Muscle Injury"
       },
       {
         "team": "Preston",
@@ -35431,12 +35569,6 @@
       },
       {
         "team": "Preston",
-        "player": "H. Clarke",
-        "type": "Questionable",
-        "reason": "Inactive"
-      },
-      {
-        "team": "Preston",
         "player": "J. Kenny",
         "type": "Questionable",
         "reason": "Inactive"
@@ -35456,24 +35588,6 @@
         "reason": "Groin Injury"
       },
       {
-        "team": "Kristiansund BK",
-        "player": "Z. Bytyqi",
-        "type": "Missing Fixture",
-        "reason": "Groin Injury"
-      },
-      {
-        "team": "Kristiansund BK",
-        "player": "S. Svendsen",
-        "type": "Questionable",
-        "reason": "Injury"
-      },
-      {
-        "team": "Aalesund",
-        "player": "I. Djantou",
-        "type": "Missing Fixture",
-        "reason": "Inactive"
-      },
-      {
         "team": "Aalesund",
         "player": "H. Hammer",
         "type": "Missing Fixture",
@@ -35487,12 +35601,6 @@
       },
       {
         "team": "Aalesund",
-        "player": "A. Kjelsen",
-        "type": "Missing Fixture",
-        "reason": "Injury"
-      },
-      {
-        "team": "Aalesund",
         "player": "J. Seehusen",
         "type": "Missing Fixture",
         "reason": "Injury"
@@ -35500,6 +35608,12 @@
       {
         "team": "Aalesund",
         "player": "P. Aukland",
+        "type": "Questionable",
+        "reason": "Injury"
+      },
+      {
+        "team": "Aalesund",
+        "player": "A. Kjelsen",
         "type": "Questionable",
         "reason": "Injury"
       }
@@ -35527,15 +35641,15 @@
       },
       {
         "team": "ADO Den Haag",
-        "player": "C. Peupion",
-        "type": "Missing Fixture",
-        "reason": "Knee Injury"
-      },
-      {
-        "team": "ADO Den Haag",
         "player": "L. Reischl",
         "type": "Missing Fixture",
         "reason": "Groin Injury"
+      },
+      {
+        "team": "ADO Den Haag",
+        "player": "D. Barany",
+        "type": "Questionable",
+        "reason": "Thigh Injury"
       },
       {
         "team": "PSV Eindhoven",
@@ -35800,6 +35914,12 @@
       {
         "team": "Fredrikstad",
         "player": "J. Nysveen",
+        "type": "Questionable",
+        "reason": "Injury"
+      },
+      {
+        "team": "Fredrikstad",
+        "player": "S. Owusu",
         "type": "Questionable",
         "reason": "Injury"
       }
@@ -36229,6 +36349,18 @@
       },
       {
         "team": "Valencia",
+        "player": "J. Copete",
+        "type": "Missing Fixture",
+        "reason": "Knee Injury"
+      },
+      {
+        "team": "Valencia",
+        "player": "D. Foulquier",
+        "type": "Missing Fixture",
+        "reason": "Injury"
+      },
+      {
+        "team": "Valencia",
         "player": "D. Lopez",
         "type": "Missing Fixture",
         "reason": "Knee Injury"
@@ -36240,22 +36372,10 @@
         "reason": "Muscle Injury"
       },
       {
-        "team": "Valencia",
-        "player": "J. Copete",
-        "type": "Questionable",
-        "reason": "Knee Injury"
-      },
-      {
-        "team": "Valencia",
-        "player": "D. Foulquier",
-        "type": "Questionable",
-        "reason": "Injury"
-      },
-      {
-        "team": "Valencia",
-        "player": "L. Rioja",
-        "type": "Questionable",
-        "reason": "Heel Injury"
+        "team": "Athletic Club",
+        "player": "A. Djalo",
+        "type": "Missing Fixture",
+        "reason": "Illness"
       },
       {
         "team": "Athletic Club",
@@ -36274,12 +36394,6 @@
         "player": "N. Williams",
         "type": "Missing Fixture",
         "reason": "Thigh Injury"
-      },
-      {
-        "team": "Athletic Club",
-        "player": "A. Laporte",
-        "type": "Questionable",
-        "reason": "Illness"
       }
     ],
     "1552193": [
@@ -36376,12 +36490,6 @@
         "player": "Kaio Pantaleao",
         "type": "Missing Fixture",
         "reason": "Knee Injury"
-      },
-      {
-        "team": "Botafogo",
-        "player": "Marcal",
-        "type": "Missing Fixture",
-        "reason": "Yellow Cards"
       },
       {
         "team": "Botafogo",
@@ -37937,12 +38045,6 @@
       },
       {
         "team": "Bayer Leverkusen",
-        "player": "M. Culbreath",
-        "type": "Missing Fixture",
-        "reason": "Foot Injury"
-      },
-      {
-        "team": "Bayer Leverkusen",
         "player": "G. Doue",
         "type": "Missing Fixture",
         "reason": "Calf Injury"
@@ -37962,8 +38064,14 @@
       {
         "team": "Bayer Leverkusen",
         "player": "M. Terrier",
+        "type": "Missing Fixture",
+        "reason": "Muscle Injury"
+      },
+      {
+        "team": "Bayer Leverkusen",
+        "player": "M. Culbreath",
         "type": "Questionable",
-        "reason": "Injury"
+        "reason": "Foot Injury"
       },
       {
         "team": "SC Freiburg",
@@ -37973,9 +38081,9 @@
       },
       {
         "team": "SC Freiburg",
-        "player": "J. Beste",
+        "player": "B. Yilmaz",
         "type": "Questionable",
-        "reason": "Injury"
+        "reason": "Lacking Match Fitness"
       }
     ],
     "1549037": [
@@ -38625,13 +38733,25 @@
       },
       {
         "team": "Borussia Mönchengladbach",
+        "player": "F. Fleck",
+        "type": "Missing Fixture",
+        "reason": "Muscle Injury"
+      },
+      {
+        "team": "Borussia Mönchengladbach",
         "player": "F. Honorat",
         "type": "Missing Fixture",
         "reason": "Muscle Injury"
       },
       {
         "team": "Borussia Mönchengladbach",
-        "player": "N. Kuhn",
+        "player": "K. Itakura",
+        "type": "Missing Fixture",
+        "reason": "Ankle Injury"
+      },
+      {
+        "team": "Borussia Mönchengladbach",
+        "player": "T. Kleindienst",
         "type": "Missing Fixture",
         "reason": "Muscle Injury"
       },
@@ -38643,15 +38763,15 @@
       },
       {
         "team": "Borussia Mönchengladbach",
-        "player": "K. Itakura",
-        "type": "Questionable",
-        "reason": "Ankle Injury"
+        "player": "J. Leszczynski",
+        "type": "Missing Fixture",
+        "reason": "Knee Injury"
       },
       {
         "team": "Borussia Mönchengladbach",
-        "player": "T. Kleindienst",
+        "player": "N. Kuhn",
         "type": "Questionable",
-        "reason": "Injury"
+        "reason": "Muscle Injury"
       },
       {
         "team": "1899 Hoffenheim",
@@ -38663,7 +38783,7 @@
         "team": "1899 Hoffenheim",
         "player": "A. Hajdari",
         "type": "Missing Fixture",
-        "reason": "Muscle Injury"
+        "reason": "Foot Injury"
       },
       {
         "team": "1899 Hoffenheim",
@@ -38743,6 +38863,12 @@
       },
       {
         "team": "Atalanta",
+        "player": "F. Kessie",
+        "type": "Missing Fixture",
+        "reason": "Calf Injury"
+      },
+      {
+        "team": "Atalanta",
         "player": "O. Kossounou",
         "type": "Missing Fixture",
         "reason": "Thigh Injury"
@@ -38758,12 +38884,6 @@
         "player": "R. Bellanova",
         "type": "Questionable",
         "reason": "Thigh Injury"
-      },
-      {
-        "team": "Atalanta",
-        "player": "F. Kessie",
-        "type": "Questionable",
-        "reason": "Calf Injury"
       },
       {
         "team": "Atalanta",
@@ -38902,12 +39022,6 @@
         "player": "A. Odriozola",
         "type": "Missing Fixture",
         "reason": "Knee Injury"
-      },
-      {
-        "team": "Real Sociedad",
-        "player": "I. Ropero",
-        "type": "Questionable",
-        "reason": "Injury"
       }
     ],
     "1494785": [
@@ -39136,12 +39250,6 @@
         "reason": "Foot Injury"
       },
       {
-        "team": "Juventus",
-        "player": "J. Boga",
-        "type": "Questionable",
-        "reason": "Muscle Injury"
-      },
-      {
         "team": "Lazio",
         "player": "A. Furlanetto",
         "type": "Missing Fixture",
@@ -39152,12 +39260,6 @@
         "player": "A. Gudmundsson",
         "type": "Missing Fixture",
         "reason": "Shoulder Injury"
-      },
-      {
-        "team": "Lazio",
-        "player": "L. Pellegrini",
-        "type": "Missing Fixture",
-        "reason": "Inactive"
       },
       {
         "team": "Lazio",
