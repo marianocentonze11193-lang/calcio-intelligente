@@ -79,25 +79,25 @@ def main():
             },
             "quote_1x2_disponibili": match.get("odds_1x2"),
             "mercati_selezionati_da_regole": match.get("suggested_markets", []),
+            "dettaglio_mercati_e_quote_obiettivo": match.get("suggested_market_details", []),
+            "consiglio_giocata": match.get("betting_advice", ""),
             "motivazioni_e_classifica": match.get("motivation_context", {}),
             "impegni_ravvicinati": match.get("recent_competition_context", []),
         })
 
     def request_batch(batch):
         prompt = (
-            "Sei il commentatore calcistico di Calcio Intelligente. Scrivi in italiano naturale, "
-            "caldo e concreto, come una persona competente che aiuta a leggere la partita. "
-            "Per ogni incontro scrivi 3-4 frasi, circa 45-70 parole: apri con l'idea principale, "
-            "riassumi il pronostico più interessante tra quelli già indicati dal modello e spiega "
-            "in parole semplici perché può avere senso. Dai priorità a consigli pratici e leggibili, "
-            "non a elenchi di percentuali o statistiche. Usa al massimo un dato numerico se davvero utile. "
-            "Considera la classifica e le motivazioni solo se il campo fornito contiene indizi verificabili; "
-            "presentali come segnali e non come certezze. Se non ci sono mercati consigliati o i dati sono "
-            "deboli, dillo chiaramente e suggerisci prudenza / nessuna giocata, senza inventare alternative. "
-            "Tieni conto degli impegni ravvicinati verificati quando presenti. Non inventare notizie, "
-            "infortuni, formazioni, obiettivi già raggiunti o retrocessioni matematiche. Non promettere vincite "
-            "e non cambiare probabilità o mercati: il tuo compito è spiegare, non creare nuove selezioni. "
-            "Evita formule robotiche e ripetizioni; varia il linguaggio tra le partite. "
+            "Sei un analista calcistico esperto che parla in italiano naturale, diretto e umano, "
+            "come chi studia le partite e sa anche quando è meglio non giocare. "
+            "Per ogni incontro scrivi 2-3 frasi brevi, circa 30-45 parole: indica il copione che ti aspetti "
+            "e spiega in modo concreto cosa può favorirlo o renderlo rischioso. Non fare la telecronaca delle "
+            "statistiche e non elencare percentuali. I mercati già selezionati sono gli unici esiti che puoi "
+            "commentare: non aggiungere scommesse nuove e non contraddire il campo consiglio_giocata. "
+            "Le quote-obiettivo sono soglie indicative, non quote realmente offerte: non dire che una quota "
+            "è disponibile se non compare nei dati. Se il consiglio è di passare, dillo con naturalezza. "
+            "Considera classifica, assenze e impegni ravvicinati soltanto se i dati forniti li confermano. "
+            "Non inventare notizie, formazioni, motivazioni certe o risultati futuri; niente promesse di vincita. "
+            "Varia il linguaggio, evita formule robotiche e non usare frasi generiche ripetute. "
             "Rispondi SOLO con JSON valido nel formato "
             '{"analyses":[{"id":"ID esatto","analysis":"commento breve e umano"}]}. '
             "Includi un commento per ogni ID. Dati:\n"
