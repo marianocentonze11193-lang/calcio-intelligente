@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T19:43:33+00:00",
+  "updated_at": "2026-10-17T19:48:16+00:00",
   "source": "https://www.football-data.co.uk",
   "season": "2627",
   "model": "Poisson con statistiche nazionali club, prior di lega, Elo, forma recente e contesto impegni UEFA/coppe nazionali sperimentale; non validato per coppe",
@@ -103,7 +103,7 @@
         "home_scores": 58.7,
         "away_scores": 76.0
       },
-      "analysis": "Partita di Champions League delicata dove il modello mostra prudenza. Meglio passare senza esitazioni visto che non ci sono dati sufficienti per validare lo storico di questa specifica competizione europea.",
+      "analysis": "Partita da coppa europea dove è saggio stare alla larga. Il modello non è validato su questo storico e mancano dati certi: meglio passare e non rischiare.",
       "suggested_markets": [],
       "suggested_market_details": [],
       "betting_advice": "Per le coppe non fornisco una giocata automatica: il modello non è ancora validato su uno storico specifico della competizione. Meglio attendere dati più solidi.",
@@ -169,7 +169,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "europea",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "fuori_copertura_api",
         "source": "API-Football",
@@ -228,7 +228,7 @@
         "home_scores": 73.0,
         "away_scores": 83.7
       },
-      "analysis": "Ci troviamo di fronte a un incrocio europeo insidioso e difficile da decifrare in anticipo. Conviene decisamente stare alla larga e non forzare alcuna giocata automatica.",
+      "analysis": "Incontro europeo complesso e imprevedibile. Mancando riscontri affidabili sullo storico specifico di questa competizione, la scelta migliore è decisamente quella di astenersi.",
       "suggested_markets": [],
       "suggested_market_details": [],
       "betting_advice": "Per le coppe non fornisco una giocata automatica: il modello non è ancora validato su uno storico specifico della competizione. Meglio attendere dati più solidi.",
@@ -294,7 +294,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "europea",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "fuori_copertura_api",
         "source": "API-Football",
@@ -353,7 +353,7 @@
         "home_scores": 85.0,
         "away_scores": 71.7
       },
-      "analysis": "Il contesto di coppa richiede grande cautela e un approccio conservativo. Visto che il modello non è validato su questo torneo, la scelta più saggia è rimanere a guardare.",
+      "analysis": "Sfida internazionale che presenta troppe incognite. L'assenza di un modello validato per le coppe rende ogni pronostico prematuro: molto meglio guardare da spettatori.",
       "suggested_markets": [],
       "suggested_market_details": [],
       "betting_advice": "Per le coppe non fornisco una giocata automatica: il modello non è ancora validato su uno storico specifico della competizione. Meglio attendere dati più solidi.",
@@ -419,7 +419,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "europea",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "fuori_copertura_api",
         "source": "API-Football",
@@ -478,7 +478,7 @@
         "home_scores": 65.3,
         "away_scores": 83.9
       },
-      "analysis": "Una sfida internazionale affascinante ma priva di indicazioni abbastanza solide per rischiare denaro. Saggio fermarsi e attendere incontri con uno storico di dati più affidabile.",
+      "analysis": "Contesto di coppa europeo privo di uno storico solido per il nostro algoritmo. Non essendoci certezze sui dati, la mossa più saggia è decisamente passare la mano.",
       "suggested_markets": [],
       "suggested_market_details": [],
       "betting_advice": "Per le coppe non fornisco una giocata automatica: il modello non è ancora validato su uno storico specifico della competizione. Meglio attendere dati più solidi.",
@@ -544,7 +544,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "europea",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "fuori_copertura_api",
         "source": "API-Football",
@@ -603,7 +603,7 @@
         "home_scores": 94.4,
         "away_scores": 42.6
       },
-      "analysis": "Trattandosi di una sfida di coppa con dati ancora da consolidare, la scelta più saggia è decisamente quella di passare la mano. Meglio osservare da lontano senza rischiare nulla.",
+      "analysis": "Trattandosi di una sfida di coppa con uno storico limitato per il nostro modello, è saggio non forzare alcuna giocata. Meglio restare a guardare e attendere dati più solidi prima di rischiare sui mercati.",
       "suggested_markets": [],
       "suggested_market_details": [],
       "betting_advice": "Per le coppe non fornisco una giocata automatica: il modello non è ancora validato su uno storico specifico della competizione. Meglio attendere dati più solidi.",
@@ -669,7 +669,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "europea",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "fuori_copertura_api",
         "source": "API-Football",
@@ -728,7 +728,7 @@
         "home_scores": 98.3,
         "away_scores": 67.1
       },
-      "analysis": "Il contesto europeo richiede massima prudenza e questo incontro non fa eccezione, visto che il modello non è ancora validato sulle coppe. Conviene decisamente stare alla larga e non forzare giocate.",
+      "analysis": "Il contesto europeo richiede massima prudenza e al momento non ci sono le condizioni ideali per esporsi. Ti consiglio di passare la mano e saltare questo match in attesa di indicazioni più affidabili.",
       "suggested_markets": [],
       "suggested_market_details": [],
       "betting_advice": "Per le coppe non fornisco una giocata automatica: il modello non è ancora validato su uno storico specifico della competizione. Meglio attendere dati più solidi.",
@@ -794,7 +794,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "europea",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "fuori_copertura_api",
         "source": "API-Football",
@@ -853,7 +853,7 @@
         "home_scores": 85.6,
         "away_scores": 82.6
       },
-      "analysis": "Le incognite legate alle competizioni internazionali consigliano di non esporsi con pronostici affrettati. Senza uno storico affidabile sulla competizione, la cosa migliore da fare è restare a guardare.",
+      "analysis": "Le incognite legate alle competizioni internazionali rendono questo incrocio poco decifrabile con i dati attuali. Senza un riscontro consolidato sullo storico europeo, la scelta migliore è decisamente quella di astenersi.",
       "suggested_markets": [],
       "suggested_market_details": [],
       "betting_advice": "Per le coppe non fornisco una giocata automatica: il modello non è ancora validato su uno storico specifico della competizione. Meglio attendere dati più solidi.",
@@ -919,7 +919,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "europea",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "fuori_copertura_api",
         "source": "API-Football",
@@ -978,7 +978,7 @@
         "home_scores": 93.1,
         "away_scores": 62.0
       },
-      "analysis": "Anche qui la prudenza deve guidare ogni scelta, vista la mancanza di dati consolidati specifici per il torneo. Senza certezze sui valori in campo, è preferibile evitare qualsiasi scommessa.",
+      "analysis": "Anche qui la natura della competizione ci impone di frenare gli entusiasmi e di non prendere rischi non necessari. È preferibile saltare il turno e rimandare le valutazioni a quando il quadro statistico sarà più maturo.",
       "suggested_markets": [],
       "suggested_market_details": [],
       "betting_advice": "Per le coppe non fornisco una giocata automatica: il modello non è ancora validato su uno storico specifico della competizione. Meglio attendere dati più solidi.",
@@ -1044,7 +1044,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "europea",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "fuori_copertura_api",
         "source": "API-Football",
@@ -1103,7 +1103,7 @@
         "home_scores": 48.9,
         "away_scores": 30.2
       },
-      "analysis": "Partita di coppa molto bloccata, con due squadre che rischiano di concedere pochissimo spazio. Il modello non è ancora validato su questo torneo, perciò la scelta più saggia resta quella di passare la mano.",
+      "analysis": "Partita di coppa da maneggiare con le molle e senza forzature. Il contesto europeo e la mancanza di uno storico solido ci consigliano caldamente di passare la mano.",
       "suggested_markets": [],
       "suggested_market_details": [],
       "betting_advice": "Per le coppe non fornisco una giocata automatica: il modello non è ancora validato su uno storico specifico della competizione. Meglio attendere dati più solidi.",
@@ -1169,7 +1169,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "europea",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "fuori_copertura_api",
         "source": "API-Football",
@@ -1228,7 +1228,7 @@
         "home_scores": 66.5,
         "away_scores": 84.9
       },
-      "analysis": "Ci si aspetta una gara aperta e vivace, ma trattandosi di un match europeo senza uno storico affidabile del modello, preferisco non forzare alcuna giocata. Meglio restare a guardare.",
+      "analysis": "Sfida internazionale complessa e imprevedibile. Trattandosi di Europa League, preferiamo restare alla finestra in attesa di indicazioni più affidabili.",
       "suggested_markets": [],
       "suggested_market_details": [],
       "betting_advice": "Per le coppe non fornisco una giocata automatica: il modello non è ancora validato su uno storico specifico della competizione. Meglio attendere dati più solidi.",
@@ -1294,7 +1294,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "europea",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "fuori_copertura_api",
         "source": "API-Football",
@@ -1353,7 +1353,7 @@
         "home_scores": 84.6,
         "away_scores": 86.9
       },
-      "analysis": "Le premesse parlano di una sfida potenzialmente ricca di reti, ma il contesto delle coppe europee consiglia prudenza. Senza dati storici solidi su cui fare affidamento, è decisamente meglio astenersi.",
+      "analysis": "Ci aspettiamo una gara aperta ma le coppe europee offrono spesso letture ingannevoli. Meglio evitare scommesse avventate e passare oltre.",
       "suggested_markets": [],
       "suggested_market_details": [],
       "betting_advice": "Per le coppe non fornisco una giocata automatica: il modello non è ancora validato su uno storico specifico della competizione. Meglio attendere dati più solidi.",
@@ -1419,7 +1419,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "europea",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "fuori_copertura_api",
         "source": "API-Football",
@@ -1478,7 +1478,7 @@
         "home_scores": 77.9,
         "away_scores": 64.1
       },
-      "analysis": "Il Lille cerca conferme nelle zone alte della classifica, ma la mole di dati a disposizione è ancora troppo limitata per rischiare una puntata. È preferibile saltare l'incontro ed evitare forzature.",
+      "analysis": "Il Lille parte favorito davanti al proprio pubblico, ma lo storico ridotto e gli impegni ravvicinati consigliano prudenza. Quando il quadro non è limpido, è saggio non forzare la giocata.",
       "suggested_markets": [],
       "suggested_market_details": [],
       "betting_advice": "Qui non forzerei una giocata: lo storico specifico è ancora troppo corto. Meglio aspettare dati più solidi che riempire la schedina per forza.",
@@ -1589,7 +1589,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "non_trovata",
         "source": "API-Football",
@@ -1604,7 +1604,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:43:00+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:52+00:00",
       "odds_1x2": {
         "home": 1.84,
         "draw": 3.76,
@@ -1627,7 +1627,7 @@
         "draw": 0.88,
         "away": 1.55
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -1695,7 +1695,7 @@
         "home_scores": 65.4,
         "away_scores": 90.4
       },
-      "analysis": "Ci aspettiamo una gara in cui il Lens proverà a fare la partita, sfruttando la maggiore qualità complessiva. Tuttavia, i troppi impegni ravvicinati e la coperta corta dei dati consigliano prudenza. Meglio passare la mano.",
+      "analysis": "Mi aspetto una gara a favore degli ospiti, favoriti dalla maggiore qualità generale. Qui non forzerei una giocata: lo storico specifico è ancora troppo corto. Meglio aspettare dati più solidi che riempire la schedina per forza.",
       "suggested_markets": [],
       "suggested_market_details": [],
       "betting_advice": "Qui non forzerei una giocata: lo storico specifico è ancora troppo corto. Meglio aspettare dati più solidi che riempire la schedina per forza.",
@@ -1805,7 +1805,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "non_trovata",
         "source": "API-Football",
@@ -1820,7 +1820,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:43:00+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:52+00:00",
       "odds_1x2": {
         "home": 3.84,
         "draw": 3.89,
@@ -1843,7 +1843,7 @@
         "draw": -5.69,
         "away": 14.5
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -1911,7 +1911,7 @@
         "home_scores": 64.9,
         "away_scores": 58.8
       },
-      "analysis": "Il Marsiglia arriva con le fatiche europee nelle gambe e qualche assenza di troppo a pesare sulla rotazione. L'Angers proverà a chiudersi e ripartire, rendendo l'esito troppo incerto. Saggio restare alla finestra.",
+      "analysis": "Prevedo una partita bloccata e tattica, con pochi spazi puliti per sbloccare il punteggio. Qui non forzerei una giocata: lo storico specifico è ancora troppo corto. Meglio aspettare dati più solidi che riempire la schedina per forza.",
       "suggested_markets": [],
       "suggested_market_details": [],
       "betting_advice": "Qui non forzerei una giocata: lo storico specifico è ancora troppo corto. Meglio aspettare dati più solidi che riempire la schedina per forza.",
@@ -2021,7 +2021,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "segnalazioni_trovate",
         "source": "API-Football",
@@ -2075,7 +2075,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:43:00+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:52+00:00",
       "odds_1x2": {
         "home": 3.16,
         "draw": 3.71,
@@ -2098,7 +2098,7 @@
         "draw": 6.19,
         "away": -15.09
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -2166,7 +2166,7 @@
         "home_scores": 76.9,
         "away_scores": 67.1
       },
-      "analysis": "Scontro salvezza segnato da un'infermeria particolarmente affollata per entrambe le squadre, un fattore che abbassa l'affidabilità della lettura. Con queste premesse e una posta in palio così pesante, è preferibile non rischiare nulla.",
+      "analysis": "Sarà un duello nervoso e spigoloso, condizionato da parecchie assenze pesanti in entrambe le rose. Qui non forzerei una giocata: lo storico specifico è ancora troppo corto. Meglio aspettare dati più solidi che riempire la schedina per forza.",
       "suggested_markets": [],
       "suggested_market_details": [],
       "betting_advice": "Qui non forzerei una giocata: lo storico specifico è ancora troppo corto. Meglio aspettare dati più solidi che riempire la schedina per forza.",
@@ -2248,7 +2248,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "segnalazioni_trovate",
         "source": "API-Football",
@@ -2362,7 +2362,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:43:00+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:52+00:00",
       "odds_1x2": {
         "home": 2.28,
         "draw": 3.36,
@@ -2385,7 +2385,7 @@
         "draw": -1.76,
         "away": -2.39
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -2453,7 +2453,7 @@
         "home_scores": 57.9,
         "away_scores": 76.7
       },
-      "analysis": "Il Monaco parte favorito forte della vetta della classifica e di un ottimo momento di forma. Ciononostante, il Lorient in casa sa essere ostico e lo storico ridotto non dà garanzie assolute. Decisione saggia: niente scommessa.",
+      "analysis": "Immagino gli ospiti determinati a fare la partita per difendere la vetta della classifica. Qui non forzerei una giocata: lo storico specifico è ancora troppo corto. Meglio aspettare dati più solidi che riempire la schedina per forza.",
       "suggested_markets": [],
       "suggested_market_details": [],
       "betting_advice": "Qui non forzerei una giocata: lo storico specifico è ancora troppo corto. Meglio aspettare dati più solidi che riempire la schedina per forza.",
@@ -2535,7 +2535,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "segnalazioni_trovate",
         "source": "API-Football",
@@ -2577,7 +2577,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:43:00+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:52+00:00",
       "odds_1x2": {
         "home": 3.48,
         "draw": 3.46,
@@ -2600,7 +2600,7 @@
         "draw": -0.34,
         "away": 4.92
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -2668,7 +2668,7 @@
         "home_scores": 58.8,
         "away_scores": 78.3
       },
-      "analysis": "Ci aspetta una sfida bloccata tra due formazioni in difficoltà nella zona bassa della classifica. Con un campione di dati ancora ridotto e poche certezze realizzative, la scelta migliore resta quella di passare la mano.",
+      "analysis": "Ci aspetta una sfida bloccata tra due formazioni nei bassifondi della classifica. La scarsità di dati e il rendimento recente molto basso rendono difficile individuare un chiaro vincitore, quindi è saggio passare la mano.",
       "suggested_markets": [],
       "suggested_market_details": [],
       "betting_advice": "Qui non forzerei una giocata: lo storico specifico è ancora troppo corto. Meglio aspettare dati più solidi che riempire la schedina per forza.",
@@ -2750,7 +2750,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "non_trovata",
         "source": "API-Football",
@@ -2765,7 +2765,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:43:14+00:00",
+      "odds_fetched_at": "2026-10-17T19:48:03+00:00",
       "odds_1x2": {
         "home": 2.13,
         "draw": 3.27,
@@ -2788,7 +2788,7 @@
         "draw": -1.98,
         "away": 22.98
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -2856,7 +2856,7 @@
         "home_scores": 80.8,
         "away_scores": 67.3
       },
-      "analysis": "Il Kalamata proverà a sfruttare il fattore campo, ma gli ospiti arrivano da impegni ravvicinati in Europa League che potrebbero pesare sulle gambe. La situazione è fluida e priva di chiari margini di vantaggio, quindi conviene non rischiare.",
+      "analysis": "Il Kalamata proverà a sfruttare il fattore casalingo contro un OFI Crete reduce da impegni ravvicinati in Europa League. Tuttavia, la tenuta difensiva degli ospiti e le incertezze del periodo consigliano di evitare rischi inutili.",
       "suggested_markets": [],
       "suggested_market_details": [],
       "betting_advice": "Qui non forzerei una giocata: lo storico specifico è ancora troppo corto. Meglio aspettare dati più solidi che riempire la schedina per forza.",
@@ -2966,7 +2966,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "non_trovata",
         "source": "API-Football",
@@ -2981,7 +2981,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:43:14+00:00",
+      "odds_fetched_at": "2026-10-17T19:48:03+00:00",
       "odds_1x2": {
         "home": 2.59,
         "draw": 3.16,
@@ -3004,7 +3004,7 @@
         "draw": -4.47,
         "away": -10.11
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -3072,7 +3072,7 @@
         "home_scores": 59.2,
         "away_scores": 69.1
       },
-      "analysis": "L'Olympiakos parte favorito per qualità e posizione in classifica, ma i padroni di casa cercheranno di chiudere gli spazi per arginare il divario tecnico. Senza mercati di valore evidente, è saggio evitare di forzare la giocata.",
+      "analysis": "L'Olympiakos parte chiaramente favorito grazie alla maggiore qualità e alla posizione d'alta classifica. Nonostante i favori del pronostico esterno, il campione ridotto e le quote sbilanciate suggeriscono di restare a guardare.",
       "suggested_markets": [],
       "suggested_market_details": [],
       "betting_advice": "Qui non forzerei una giocata: lo storico specifico è ancora troppo corto. Meglio aspettare dati più solidi che riempire la schedina per forza.",
@@ -3154,7 +3154,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "non_trovata",
         "source": "API-Football",
@@ -3169,7 +3169,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:43:14+00:00",
+      "odds_fetched_at": "2026-10-17T19:48:03+00:00",
       "odds_1x2": {
         "home": 8.72,
         "draw": 4.73,
@@ -3192,7 +3192,7 @@
         "draw": 10.5,
         "away": -28.03
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -3260,7 +3260,7 @@
         "home_scores": 84.6,
         "away_scores": 47.2
       },
-      "analysis": "Il Kifisia cerca conferme casalinghe contro un Aris discontinuo ma insidioso fuori casa. Le premesse non offrono spunti sufficientemente robusti per esporsi, ed è preferibile restare a guardare senza riempire la schedina per forza.",
+      "analysis": "Il Kifisia affronta l'Aris in una gara dove i numeri interni dei padroni di casa si scontrano con la discontinuità esterna degli avversari. Lo storico ridotto non offre garanzie sufficienti, meglio non forzare alcuna giocata.",
       "suggested_markets": [],
       "suggested_market_details": [],
       "betting_advice": "Qui non forzerei una giocata: lo storico specifico è ancora troppo corto. Meglio aspettare dati più solidi che riempire la schedina per forza.",
@@ -3342,7 +3342,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "non_trovata",
         "source": "API-Football",
@@ -3357,7 +3357,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:43:14+00:00",
+      "odds_fetched_at": "2026-10-17T19:48:03+00:00",
       "odds_1x2": {
         "home": 2.87,
         "draw": 3.24,
@@ -3380,7 +3380,7 @@
         "draw": -7.02,
         "away": -28.24
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -3448,7 +3448,7 @@
         "home_scores": 76.3,
         "away_scores": 62.9
       },
-      "analysis": "Ci aspettiamo una gara piuttosto bloccata, con il PAOK che proverà a fare la partita e l'Iraklis pronto a chiudere gli spazi. Lo storico ridotto e la prudenza iniziale rendono saggio passare la mano senza rischi inutili.",
+      "analysis": "Ci aspettiamo una gara bloccata, con il PAOK che proverà a fare la partita e l'Iraklis pronto a chiudere gli spazi. La scarsità di dati storici affidabili rende però ogni pronostico particolarmente azzardato. Meglio passare la mano.",
       "suggested_markets": [],
       "suggested_market_details": [],
       "betting_advice": "Qui non forzerei una giocata: lo storico specifico è ancora troppo corto. Meglio aspettare dati più solidi che riempire la schedina per forza.",
@@ -3530,7 +3530,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "non_trovata",
         "source": "API-Football",
@@ -3545,7 +3545,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:43:14+00:00",
+      "odds_fetched_at": "2026-10-17T19:48:03+00:00",
       "odds_1x2": {
         "home": 1.22,
         "draw": 5.53,
@@ -3568,7 +3568,7 @@
         "draw": 10.15,
         "away": 17.0
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -3636,7 +3636,7 @@
         "home_scores": 88.4,
         "away_scores": 66.1
       },
-      "analysis": "Il copione promette ritmi alti e occasioni da entrambe le parti, viste le caratteristiche delle due squadre. Tuttavia, vista la mole di incognite e l'esiguo campione di dati, la scelta migliore resta quella di stare a guardare.",
+      "analysis": "Il copione promette ritmi intensi e possibili spazi in avanti, viste le caratteristiche delle due squadre in questa fase. Le diverse assenze pesanti tra i reparti aumentano però l'imprevedibilità del match. Saggio restare alla finestra senza forzare giocate.",
       "suggested_markets": [],
       "suggested_market_details": [],
       "betting_advice": "Qui non forzerei una giocata: lo storico specifico è ancora troppo corto. Meglio aspettare dati più solidi che riempire la schedina per forza.",
@@ -3718,7 +3718,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "segnalazioni_trovate",
         "source": "API-Football",
@@ -3760,7 +3760,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:42:55+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:48+00:00",
       "odds_1x2": {
         "home": 3.13,
         "draw": 3.62,
@@ -3783,7 +3783,7 @@
         "draw": -5.88,
         "away": -26.09
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -3851,7 +3851,7 @@
         "home_scores": 71.0,
         "away_scores": 51.1
       },
-      "analysis": "Il Liverpool arriva con diverse assenze e le fatiche europee recenti, fattore che potrebbe frenare la manovra offensiva. Meglio evitare forzature in schedina e lasciare perdere questa partita.",
+      "analysis": "Il Liverpool arriva con diversi acciacchi e le fatiche recenti in Europa tra le gambe, fattore che potrebbe frenare la manovra offensiva. Il Brentford proverà a difendere con ordine ma il quadro generale resta troppo incerto. Meglio evitare scommesse.",
       "suggested_markets": [],
       "suggested_market_details": [],
       "betting_advice": "Qui non forzerei una giocata: lo storico specifico è ancora troppo corto. Meglio aspettare dati più solidi che riempire la schedina per forza.",
@@ -3961,7 +3961,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "segnalazioni_trovate",
         "source": "API-Football",
@@ -4063,7 +4063,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:42:55+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:48+00:00",
       "odds_1x2": {
         "home": 2.34,
         "draw": 3.62,
@@ -4086,7 +4086,7 @@
         "draw": 3.88,
         "away": -12.49
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -4154,7 +4154,7 @@
         "home_scores": 70.7,
         "away_scores": 81.6
       },
-      "analysis": "L'Hull potrebbe approfittare delle difficoltà casalinghe del Fulham per trovare spazi in ripartenza. Nonostante qualche spunto interessante, i dati preliminari suggeriscono di non forzare alcuna giocata e passare.",
+      "analysis": "Il Fulham cerca disperatamente punti salvezza davanti al proprio pubblico, affrontando un Hull in discreta salute. La situazione di classifica delicata dei padroni di casa e la volatilità dei dati suggeriscono prudenza. Non vale la pena rischiare la giocata.",
       "suggested_markets": [],
       "suggested_market_details": [],
       "betting_advice": "Qui non forzerei una giocata: lo storico specifico è ancora troppo corto. Meglio aspettare dati più solidi che riempire la schedina per forza.",
@@ -4236,7 +4236,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "non_trovata",
         "source": "API-Football",
@@ -4251,7 +4251,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:42:55+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:48+00:00",
       "odds_1x2": {
         "home": 1.7,
         "draw": 3.89,
@@ -4274,7 +4274,7 @@
         "draw": -0.19,
         "away": 27.52
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -4342,7 +4342,7 @@
         "home_scores": 96.6,
         "away_scores": 69.4
       },
-      "analysis": "Ci aspettiamo una partita a senso unico, con il Manchester City a fare la partita e l'Ipswich chiuso in difesa. Conviene passare la mano e non forzare la giocata, visto che i dati a disposizione sono davvero troppo pochi.",
+      "analysis": "Mi aspetto una gara a senso unico, con i padroni di casa costantemente nella trequarti avversaria. Gli impegni ravvicinati pesano un minimo, ma la differenza tecnica resta troppo netta per rischiare sorprese. Visto il campione ridotto, saggiamente conviene passare la mano.",
       "suggested_markets": [],
       "suggested_market_details": [],
       "betting_advice": "Qui non forzerei una giocata: lo storico specifico è ancora troppo corto. Meglio aspettare dati più solidi che riempire la schedina per forza.",
@@ -4452,7 +4452,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "segnalazioni_trovate",
         "source": "API-Football",
@@ -4476,7 +4476,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:42:55+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:48+00:00",
       "odds_1x2": {
         "home": 1.24,
         "draw": 6.47,
@@ -4499,7 +4499,7 @@
         "draw": -2.78,
         "away": 0.04
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -4567,7 +4567,7 @@
         "home_scores": 86.6,
         "away_scores": 76.3
       },
-      "analysis": "Sarà una sfida aperta e combattuta, dove entrambe le squadre cercheranno di fare il match. Meglio evitare scommesse affrettate in questo momento e restare alla finestra in attesa di indicazioni più chiare dal campo.",
+      "analysis": "Prevedo una sfida intensa e aperta a qualsiasi esito, condizionata da diverse assenze pesanti e fatiche europee recenti per gli ospiti. Il quadro generale è troppo incerto e frammentato, perciò è decisamente meglio non forzare alcuna giocata.",
       "suggested_markets": [],
       "suggested_market_details": [],
       "betting_advice": "Qui non forzerei una giocata: lo storico specifico è ancora troppo corto. Meglio aspettare dati più solidi che riempire la schedina per forza.",
@@ -4677,7 +4677,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "segnalazioni_trovate",
         "source": "API-Football",
@@ -4803,7 +4803,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:42:55+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:48+00:00",
       "odds_1x2": {
         "home": 2.22,
         "draw": 3.63,
@@ -4826,7 +4826,7 @@
         "draw": -4.21,
         "away": -4.38
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -4894,7 +4894,7 @@
         "home_scores": 82.9,
         "away_scores": 77.3
       },
-      "analysis": "Un match salvezza molto tirato, caratterizzato da grande tensione e possibili errori da una parte e dall'altra. Lo storico ridotto ci consiglia di non rischiare e passare la mano senza rimpianti.",
+      "analysis": "Sarà probabilmente un match nervoso, giocato sui nervi tra due formazioni impantanate nei bassifondi della classifica. Le scorie dell'impegno europeo infrasettimanale degli ospiti aumentano i rischi: meglio osservare da lontano senza puntare.",
       "suggested_markets": [],
       "suggested_market_details": [],
       "betting_advice": "Qui non forzerei una giocata: lo storico specifico è ancora troppo corto. Meglio aspettare dati più solidi che riempire la schedina per forza.",
@@ -5004,7 +5004,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "segnalazioni_trovate",
         "source": "API-Football",
@@ -5070,7 +5070,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:42:55+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:48+00:00",
       "odds_1x2": {
         "home": 2.04,
         "draw": 3.51,
@@ -5093,7 +5093,7 @@
         "draw": -3.73,
         "away": 5.12
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -5161,7 +5161,7 @@
         "home_scores": 90.7,
         "away_scores": 47.4
       },
-      "analysis": "Il Brighton parte chiaramente favorito per prendere in mano il controllo del gioco, mentre gli ospiti cercheranno di arginare le offensive. Data la mole di assenze pesanti, la scelta migliore resta quella di non giocare.",
+      "analysis": "Immagino un copione in cui i padroni di casa proveranno a fare la partita, pur fronteggiando un'infermeria decisamente affollata. Gli ospiti arrivano da una trasferta europea dispendiosa, ma lo storico limitato consiglia prudenza e totale astensione.",
       "suggested_markets": [],
       "suggested_market_details": [],
       "betting_advice": "Qui non forzerei una giocata: lo storico specifico è ancora troppo corto. Meglio aspettare dati più solidi che riempire la schedina per forza.",
@@ -5271,7 +5271,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "segnalazioni_trovate",
         "source": "API-Football",
@@ -5379,7 +5379,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:42:55+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:48+00:00",
       "odds_1x2": {
         "home": 1.53,
         "draw": 4.42,
@@ -5402,7 +5402,7 @@
         "draw": -5.51,
         "away": -9.32
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -5470,7 +5470,7 @@
         "home_scores": 78.8,
         "away_scores": 55.8
       },
-      "analysis": "Mi aspetto una gara bloccata e con pochi spunti offensivi concreti. I dati a disposizione sono troppo scarsi per rischiare una scommessa: molto meglio passare la mano ed evitare giocate forzate.",
+      "analysis": "Mi aspetto una gara bloccata e di difficile lettura tattica, visti i campioni di dati ancora troppo limitati. Meglio passare la mano e non rischiare la giocata su questa sfida.",
       "suggested_markets": [],
       "suggested_market_details": [],
       "betting_advice": "Qui non forzerei una giocata: lo storico specifico è ancora troppo corto. Meglio aspettare dati più solidi che riempire la schedina per forza.",
@@ -5552,7 +5552,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "non_trovata",
         "source": "API-Football",
@@ -5567,7 +5567,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:42:55+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:48+00:00",
       "odds_1x2": {
         "home": 2.32,
         "draw": 3.55,
@@ -5590,7 +5590,7 @@
         "draw": -0.79,
         "away": -13.42
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -5658,7 +5658,7 @@
         "home_scores": 41.4,
         "away_scores": 58.4
       },
-      "analysis": "Prevedo un match chiuso, condizionato dalla prudenza degli ospiti e da ritmi non eccelsi. Mancano elementi solidi su cui costruire una scelta sensata, quindi la cosa più saggia è restare alla finestra.",
+      "analysis": "Ci sono pochi elementi concreti per orientarsi con sicurezza su questo match. Conviene decisamente evitare forzature e aspettare indicazioni più solide prima di puntare.",
       "suggested_markets": [],
       "suggested_market_details": [],
       "betting_advice": "Qui non forzerei una giocata: lo storico specifico è ancora troppo corto. Meglio aspettare dati più solidi che riempire la schedina per forza.",
@@ -5740,7 +5740,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "non_trovata",
         "source": "API-Football",
@@ -5755,7 +5755,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:42:55+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:48+00:00",
       "odds_1x2": {
         "home": 5.59,
         "draw": 3.82,
@@ -5778,7 +5778,7 @@
         "draw": 12.64,
         "away": -16.95
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -5928,7 +5928,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "fuori_copertura_api",
         "source": "API-Football",
@@ -5943,7 +5943,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:42:55+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:48+00:00",
       "odds_1x2": {
         "home": 1.46,
         "draw": 4.55,
@@ -5966,7 +5966,7 @@
         "draw": 14.27,
         "away": 14.43
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -6143,7 +6143,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "segnalazioni_trovate",
         "source": "API-Football",
@@ -6283,7 +6283,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:42:59+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:52+00:00",
       "odds_1x2": {
         "home": 4.67,
         "draw": 4.0,
@@ -6306,7 +6306,7 @@
         "draw": -8.7,
         "away": 19.41
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -6455,7 +6455,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "segnalazioni_trovate",
         "source": "API-Football",
@@ -6527,7 +6527,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:42:59+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:52+00:00",
       "odds_1x2": {
         "home": 1.87,
         "draw": 3.45,
@@ -6550,7 +6550,7 @@
         "draw": 1.41,
         "away": 6.94
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -6727,7 +6727,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "segnalazioni_trovate",
         "source": "API-Football",
@@ -6787,7 +6787,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:42:59+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:52+00:00",
       "odds_1x2": {
         "home": 3.28,
         "draw": 3.61,
@@ -6810,7 +6810,7 @@
         "draw": -8.25,
         "away": 25.22
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -6988,7 +6988,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "segnalazioni_trovate",
         "source": "API-Football",
@@ -7072,7 +7072,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:42:59+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:52+00:00",
       "odds_1x2": {
         "home": 1.66,
         "draw": 3.76,
@@ -7095,7 +7095,7 @@
         "draw": 8.68,
         "away": 19.77
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -7244,7 +7244,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "fuori_copertura_api",
         "source": "API-Football",
@@ -7259,7 +7259,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:42:59+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:52+00:00",
       "odds_1x2": {
         "home": 2.99,
         "draw": 3.05,
@@ -7282,7 +7282,7 @@
         "draw": -1.98,
         "away": 3.87
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -7459,7 +7459,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "segnalazioni_trovate",
         "source": "API-Football",
@@ -7654,7 +7654,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "segnalazioni_trovate",
         "source": "API-Football",
@@ -7870,7 +7870,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "non_trovata",
         "source": "API-Football",
@@ -7885,7 +7885,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:43:03+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:54+00:00",
       "odds_1x2": {
         "home": 8.37,
         "draw": 6.53,
@@ -7908,7 +7908,7 @@
         "draw": -4.48,
         "away": 8.42
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -8085,7 +8085,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "segnalazioni_trovate",
         "source": "API-Football",
@@ -8205,7 +8205,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:43:03+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:54+00:00",
       "odds_1x2": {
         "home": 7.53,
         "draw": 5.62,
@@ -8228,7 +8228,7 @@
         "draw": -10.47,
         "away": 19.73
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -8377,7 +8377,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "segnalazioni_trovate",
         "source": "API-Football",
@@ -8437,7 +8437,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:43:03+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:54+00:00",
       "odds_1x2": {
         "home": 1.6,
         "draw": 4.31,
@@ -8460,7 +8460,7 @@
         "draw": -2.85,
         "away": -0.91
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -8609,7 +8609,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "non_trovata",
         "source": "API-Football",
@@ -8624,7 +8624,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:43:03+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:54+00:00",
       "odds_1x2": {
         "home": 3.31,
         "draw": 3.83,
@@ -8647,7 +8647,7 @@
         "draw": -12.66,
         "away": 32.94
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -8824,7 +8824,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "segnalazioni_trovate",
         "source": "API-Football",
@@ -8878,7 +8878,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:43:03+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:54+00:00",
       "odds_1x2": {
         "home": 5.8,
         "draw": 4.83,
@@ -8901,7 +8901,7 @@
         "draw": -1.38,
         "away": 1.43
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -9078,7 +9078,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "segnalazioni_trovate",
         "source": "API-Football",
@@ -9150,7 +9150,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:43:03+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:54+00:00",
       "odds_1x2": {
         "home": 3.4,
         "draw": 4.06,
@@ -9173,7 +9173,7 @@
         "draw": -3.25,
         "away": 7.93
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -9322,7 +9322,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "non_trovata",
         "source": "API-Football",
@@ -9337,7 +9337,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:43:03+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:54+00:00",
       "odds_1x2": {
         "home": 1.58,
         "draw": 4.38,
@@ -9360,7 +9360,7 @@
         "draw": -0.41,
         "away": 39.42
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -9537,7 +9537,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "segnalazioni_trovate",
         "source": "API-Football",
@@ -9609,7 +9609,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:43:03+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:54+00:00",
       "odds_1x2": {
         "home": 1.31,
         "draw": 5.61,
@@ -9632,7 +9632,7 @@
         "draw": -5.74,
         "away": -6.04
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -9781,7 +9781,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "fuori_copertura_api",
         "source": "API-Football",
@@ -9796,7 +9796,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:43:05+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:56+00:00",
       "odds_1x2": {
         "home": 1.57,
         "draw": 3.78,
@@ -9819,7 +9819,7 @@
         "draw": 11.11,
         "away": 11.74
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -9968,7 +9968,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "nessuna_segnalazione",
         "source": "API-Football",
@@ -9985,7 +9985,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:43:02+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:53+00:00",
       "odds_1x2": {
         "home": 1.83,
         "draw": 3.66,
@@ -10008,7 +10008,7 @@
         "draw": 7.15,
         "away": -3.34
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -10157,7 +10157,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "nessuna_segnalazione",
         "source": "API-Football",
@@ -10174,7 +10174,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:43:02+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:53+00:00",
       "odds_1x2": {
         "home": 1.64,
         "draw": 3.91,
@@ -10197,7 +10197,7 @@
         "draw": 5.97,
         "away": 29.53
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -10346,7 +10346,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "nessuna_segnalazione",
         "source": "API-Football",
@@ -10363,7 +10363,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:43:02+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:53+00:00",
       "odds_1x2": {
         "home": 3.18,
         "draw": 3.59,
@@ -10386,7 +10386,7 @@
         "draw": -3.89,
         "away": 16.81
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -10535,7 +10535,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "non_trovata",
         "source": "API-Football",
@@ -10550,7 +10550,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:43:02+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:53+00:00",
       "odds_1x2": {
         "home": 2.59,
         "draw": 3.46,
@@ -10573,7 +10573,7 @@
         "draw": -3.08,
         "away": 0.09
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -10722,7 +10722,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "nessuna_segnalazione",
         "source": "API-Football",
@@ -10739,7 +10739,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:43:02+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:53+00:00",
       "odds_1x2": {
         "home": 7.12,
         "draw": 4.91,
@@ -10762,7 +10762,7 @@
         "draw": 10.14,
         "away": -19.1
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -10939,7 +10939,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "non_trovata",
         "source": "API-Football",
@@ -10954,7 +10954,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:43:02+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:53+00:00",
       "odds_1x2": {
         "home": 1.57,
         "draw": 4.32,
@@ -10977,7 +10977,7 @@
         "draw": 4.49,
         "away": -1.32
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -11126,7 +11126,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "non_trovata",
         "source": "API-Football",
@@ -11141,7 +11141,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:42:56+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:49+00:00",
       "odds_1x2": {
         "home": 4.68,
         "draw": 3.84,
@@ -11164,7 +11164,7 @@
         "draw": -4.71,
         "away": 6.83
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -11341,7 +11341,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "segnalazioni_trovate",
         "source": "API-Football",
@@ -11371,7 +11371,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:42:56+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:49+00:00",
       "odds_1x2": {
         "home": 1.44,
         "draw": 4.84,
@@ -11394,7 +11394,7 @@
         "draw": 1.17,
         "away": 31.15
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -11597,7 +11597,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "segnalazioni_trovate",
         "source": "API-Football",
@@ -11705,7 +11705,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:42:56+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:49+00:00",
       "odds_1x2": {
         "home": 6.0,
         "draw": 5.42,
@@ -11728,7 +11728,7 @@
         "draw": 2.18,
         "away": -3.74
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -11877,7 +11877,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "non_trovata",
         "source": "API-Football",
@@ -11892,7 +11892,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:42:56+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:49+00:00",
       "odds_1x2": {
         "home": 1.98,
         "draw": 3.61,
@@ -11915,7 +11915,7 @@
         "draw": -5.66,
         "away": -10.08
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -12092,7 +12092,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "segnalazioni_trovate",
         "source": "API-Football",
@@ -12158,7 +12158,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:42:56+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:49+00:00",
       "odds_1x2": {
         "home": 2.1,
         "draw": 3.22,
@@ -12181,7 +12181,7 @@
         "draw": 1.74,
         "away": -1.84
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -12358,7 +12358,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "segnalazioni_trovate",
         "source": "API-Football",
@@ -12424,7 +12424,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:42:56+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:49+00:00",
       "odds_1x2": {
         "home": 3.14,
         "draw": 3.48,
@@ -12447,7 +12447,7 @@
         "draw": -0.93,
         "away": 1.87
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -12624,7 +12624,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "segnalazioni_trovate",
         "source": "API-Football",
@@ -12702,7 +12702,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:42:56+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:49+00:00",
       "odds_1x2": {
         "home": 1.23,
         "draw": 6.27,
@@ -12725,7 +12725,7 @@
         "draw": 5.2,
         "away": 7.27
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -12902,7 +12902,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "fuori_copertura_api",
         "source": "API-Football",
@@ -12917,7 +12917,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:42:56+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:49+00:00",
       "odds_1x2": {
         "home": 2.85,
         "draw": 2.98,
@@ -12940,7 +12940,7 @@
         "draw": -5.42,
         "away": -15.03
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -13089,7 +13089,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "non_trovata",
         "source": "API-Football",
@@ -13104,7 +13104,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:43:08+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:58+00:00",
       "odds_1x2": {
         "home": 1.58,
         "draw": 3.7,
@@ -13127,7 +13127,7 @@
         "draw": -5.23,
         "away": -8.01
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -13276,7 +13276,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "non_trovata",
         "source": "API-Football",
@@ -13291,7 +13291,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:43:08+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:58+00:00",
       "odds_1x2": {
         "home": 1.89,
         "draw": 3.44,
@@ -13314,7 +13314,7 @@
         "draw": -9.99,
         "away": -16.15
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -13491,7 +13491,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "non_trovata",
         "source": "API-Football",
@@ -13506,7 +13506,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:43:08+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:58+00:00",
       "odds_1x2": {
         "home": 6.69,
         "draw": 4.93,
@@ -13529,7 +13529,7 @@
         "draw": 0.95,
         "away": -9.91
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -13706,7 +13706,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "segnalazioni_trovate",
         "source": "API-Football",
@@ -13742,7 +13742,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:43:08+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:58+00:00",
       "odds_1x2": {
         "home": 1.27,
         "draw": 5.27,
@@ -13765,7 +13765,7 @@
         "draw": 0.26,
         "away": 4.39
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -13914,7 +13914,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "non_trovata",
         "source": "API-Football",
@@ -13929,7 +13929,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:43:08+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:58+00:00",
       "odds_1x2": {
         "home": 2.45,
         "draw": 3.33,
@@ -13952,7 +13952,7 @@
         "draw": 5.18,
         "away": -11.34
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -14101,7 +14101,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "non_trovata",
         "source": "API-Football",
@@ -14116,7 +14116,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:43:08+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:58+00:00",
       "odds_1x2": {
         "home": 2.81,
         "draw": 3.36,
@@ -14139,7 +14139,7 @@
         "draw": -6.05,
         "away": -20.75
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -14288,7 +14288,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "non_trovata",
         "source": "API-Football",
@@ -14303,7 +14303,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:43:08+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:58+00:00",
       "odds_1x2": {
         "home": 1.64,
         "draw": 3.96,
@@ -14326,7 +14326,7 @@
         "draw": -0.63,
         "away": 4.53
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -14530,7 +14530,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "fuori_copertura_api",
         "source": "API-Football",
@@ -14545,7 +14545,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:43:08+00:00",
+      "odds_fetched_at": "2026-10-17T19:47:58+00:00",
       "odds_1x2": {
         "home": 2.8,
         "draw": 3.65,
@@ -14568,7 +14568,7 @@
         "draw": -14.29,
         "away": -36.2
       },
-      "market_analysis_updated_at": "2026-10-17T19:43:34+00:00",
+      "market_analysis_updated_at": "2026-10-17T19:48:17+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -14691,7 +14691,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "non_trovata",
         "source": "API-Football",
@@ -14754,7 +14754,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "non_trovata",
         "source": "API-Football",
@@ -14850,7 +14850,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "non_trovata",
         "source": "API-Football",
@@ -14941,7 +14941,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "non_trovata",
         "source": "API-Football",
@@ -15004,7 +15004,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "non_trovata",
         "source": "API-Football",
@@ -15067,7 +15067,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "non_trovata",
         "source": "API-Football",
@@ -15184,7 +15184,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "non_trovata",
         "source": "API-Football",
@@ -15275,7 +15275,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "fuori_copertura_api",
         "source": "API-Football",
@@ -15663,7 +15663,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "europea",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "fuori_copertura_api",
         "source": "API-Football",
@@ -15778,7 +15778,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "europea",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "fuori_copertura_api",
         "source": "API-Football",
@@ -16313,7 +16313,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "europea",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "fuori_copertura_api",
         "source": "API-Football",
@@ -16703,7 +16703,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "europea",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "fuori_copertura_api",
         "source": "API-Football",
@@ -17044,7 +17044,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "non_trovata",
         "source": "API-Football",
@@ -17059,7 +17059,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:43:00+00:00"
+      "odds_fetched_at": "2026-10-17T19:47:52+00:00"
     },
     {
       "id": "2026-10-18-Ligue 1-Paris FC-Rennes",
@@ -17141,7 +17141,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "segnalazioni_trovate",
         "source": "API-Football",
@@ -17183,7 +17183,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:43:00+00:00"
+      "odds_fetched_at": "2026-10-17T19:47:52+00:00"
     },
     {
       "id": "2026-10-18-Ligue 1-Lyon-Nice",
@@ -17293,7 +17293,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "segnalazioni_trovate",
         "source": "API-Football",
@@ -17359,7 +17359,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:43:00+00:00"
+      "odds_fetched_at": "2026-10-17T19:47:52+00:00"
     },
     {
       "id": "2026-10-17-Bundesliga-Elversberg-Augsburg",
@@ -17441,7 +17441,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "segnalazioni_trovate",
         "source": "API-Football",
@@ -17507,7 +17507,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:42:58+00:00"
+      "odds_fetched_at": "2026-10-17T19:47:50+00:00"
     },
     {
       "id": "2026-10-17-Bundesliga-Hamburg-Stuttgart",
@@ -17617,7 +17617,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "non_trovata",
         "source": "API-Football",
@@ -17632,7 +17632,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:42:58+00:00"
+      "odds_fetched_at": "2026-10-17T19:47:50+00:00"
     },
     {
       "id": "2026-10-17-Bundesliga-Schalke 04-Mainz",
@@ -17714,7 +17714,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "non_trovata",
         "source": "API-Football",
@@ -17729,7 +17729,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:42:58+00:00"
+      "odds_fetched_at": "2026-10-17T19:47:50+00:00"
     },
     {
       "id": "2026-10-17-Bundesliga-Union Berlin-Dortmund",
@@ -17839,7 +17839,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "segnalazioni_trovate",
         "source": "API-Football",
@@ -17905,7 +17905,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:42:58+00:00"
+      "odds_fetched_at": "2026-10-17T19:47:50+00:00"
     },
     {
       "id": "2026-10-17-Bundesliga-Werder Bremen-Paderborn",
@@ -17987,7 +17987,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "segnalazioni_trovate",
         "source": "API-Football",
@@ -18071,7 +18071,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:42:58+00:00"
+      "odds_fetched_at": "2026-10-17T19:47:50+00:00"
     },
     {
       "id": "2026-10-17-Bundesliga-Bayern Munich-RB Leipzig",
@@ -18207,7 +18207,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "segnalazioni_trovate",
         "source": "API-Football",
@@ -18315,7 +18315,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:42:58+00:00"
+      "odds_fetched_at": "2026-10-17T19:47:50+00:00"
     },
     {
       "id": "2026-10-18-Bundesliga-Leverkusen-Freiburg",
@@ -18451,7 +18451,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "segnalazioni_trovate",
         "source": "API-Football",
@@ -18517,7 +18517,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:42:58+00:00"
+      "odds_fetched_at": "2026-10-17T19:47:50+00:00"
     },
     {
       "id": "2026-10-18-Bundesliga-M'gladbach-Hoffenheim",
@@ -18627,7 +18627,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "non_trovata",
         "source": "API-Football",
@@ -18642,7 +18642,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:42:58+00:00"
+      "odds_fetched_at": "2026-10-17T19:47:50+00:00"
     },
     {
       "id": "2026-10-18-Super League greca-Panathinaikos-Asteras Tripolis",
@@ -18752,7 +18752,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "nessuna_segnalazione",
         "source": "API-Football",
@@ -18769,7 +18769,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:43:14+00:00"
+      "odds_fetched_at": "2026-10-17T19:48:03+00:00"
     },
     {
       "id": "2026-10-17-Serie A-Bologna-Inter",
@@ -18879,7 +18879,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "segnalazioni_trovate",
         "source": "API-Football",
@@ -18995,7 +18995,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:42:59+00:00"
+      "odds_fetched_at": "2026-10-17T19:47:52+00:00"
     },
     {
       "id": "2026-10-17-Serie A-Roma-Genoa",
@@ -19105,7 +19105,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "segnalazioni_trovate",
         "source": "API-Football",
@@ -19262,7 +19262,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:42:59+00:00"
+      "odds_fetched_at": "2026-10-17T19:47:52+00:00"
     },
     {
       "id": "2026-10-18-Serie A-Milan-Atalanta",
@@ -19398,7 +19398,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "segnalazioni_trovate",
         "source": "API-Football",
@@ -19476,7 +19476,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:42:59+00:00"
+      "odds_fetched_at": "2026-10-17T19:47:52+00:00"
     },
     {
       "id": "2026-10-19-Serie A-Monza-Cagliari",
@@ -19558,7 +19558,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "fuori_copertura_api",
         "source": "API-Football",
@@ -19573,7 +19573,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T19:42:59+00:00"
+      "odds_fetched_at": "2026-10-17T19:47:52+00:00"
     },
     {
       "id": "2026-10-18-Eliteserien norvegese-Sarpsborg FK-Rosenborg",
@@ -19634,7 +19634,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "non_trovata",
         "source": "API-Football",
@@ -19702,7 +19702,7 @@
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "non_trovata",
         "source": "API-Football",
@@ -19798,7 +19798,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "non_trovata",
         "source": "API-Football",
@@ -19894,7 +19894,7 @@
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto riposo coppe UEFA/nazionali + correzione motivazionale massima 1,5% sperimentale; non ancora validato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
       "availability_data": {
         "status": "fuori_copertura_api",
         "source": "API-Football",
@@ -20225,6 +20225,882 @@
       "competition_type": "coppa_nazionale",
       "cup_model_note": "Nessuna stima affidabile: lo storico nazionale non è abbinabile a entrambe le squadre.",
       "source_calendar": "ESPN"
+    },
+    {
+      "id": "2026-10-18-Taça de Portugal-Olhanense-Oliveira Hospital",
+      "date": "2026-10-18",
+      "kickoff": "16:00",
+      "league": "Taça de Portugal",
+      "country": "Portogallo",
+      "home_team": "Olhanense",
+      "away_team": "Oliveira Hospital",
+      "expected_home_goals": null,
+      "expected_away_goals": null,
+      "probabilities": {},
+      "analysis": "",
+      "suggested_markets": [],
+      "value_bets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 0,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Storico nazionale non abbinabile a entrambe le squadre: la partita è mostrata ma non viene stimata.",
+      "confidence": "non stimabile",
+      "data_quality": "storico_assente",
+      "method": "Nessuna stima: storico club non disponibile o nome squadra non riconciliato",
+      "availability_data": {
+        "status": "nessuna_segnalazione",
+        "source": "API-Football",
+        "note": "La fonte non riporta indisponibilità per questa partita; non è una conferma che tutti i giocatori siano disponibili.",
+        "fixture_id": "1641818",
+        "injuries": [],
+        "lineups": null,
+        "lineup_status": "non_pubblicate"
+      },
+      "competition_type": "coppa_nazionale",
+      "cup_model_note": "Nessuna stima affidabile: lo storico nazionale non è abbinabile a entrambe le squadre.",
+      "source_calendar": "ESPN"
+    },
+    {
+      "id": "2026-10-18-Taça de Portugal-Sagueiros-Estoril",
+      "date": "2026-10-18",
+      "kickoff": "16:00",
+      "league": "Taça de Portugal",
+      "country": "Portogallo",
+      "home_team": "Sagueiros",
+      "away_team": "Estoril",
+      "expected_home_goals": null,
+      "expected_away_goals": null,
+      "probabilities": {},
+      "analysis": "",
+      "suggested_markets": [],
+      "value_bets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 0,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Storico nazionale non abbinabile a entrambe le squadre: la partita è mostrata ma non viene stimata.",
+      "confidence": "non stimabile",
+      "data_quality": "storico_assente",
+      "method": "Nessuna stima: storico club non disponibile o nome squadra non riconciliato",
+      "availability_data": {
+        "status": "non_trovata",
+        "source": "API-Football",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
+        "injuries": [],
+        "lineups": null
+      },
+      "competition_type": "coppa_nazionale",
+      "cup_model_note": "Nessuna stima affidabile: lo storico nazionale non è abbinabile a entrambe le squadre.",
+      "source_calendar": "ESPN"
+    },
+    {
+      "id": "2026-10-18-Taça de Portugal-Tondela-Alverca",
+      "date": "2026-10-18",
+      "kickoff": "16:00",
+      "league": "Taça de Portugal",
+      "country": "Portogallo",
+      "home_team": "Tondela",
+      "away_team": "Alverca",
+      "expected_home_goals": null,
+      "expected_away_goals": null,
+      "probabilities": {},
+      "analysis": "",
+      "suggested_markets": [],
+      "value_bets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 0,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Storico nazionale non abbinabile a entrambe le squadre: la partita è mostrata ma non viene stimata.",
+      "confidence": "non stimabile",
+      "data_quality": "storico_assente",
+      "method": "Nessuna stima: storico club non disponibile o nome squadra non riconciliato",
+      "availability_data": {
+        "status": "nessuna_segnalazione",
+        "source": "API-Football",
+        "note": "La fonte non riporta indisponibilità per questa partita; non è una conferma che tutti i giocatori siano disponibili.",
+        "fixture_id": "1641827",
+        "injuries": [],
+        "lineups": null,
+        "lineup_status": "non_pubblicate"
+      },
+      "competition_type": "coppa_nazionale",
+      "cup_model_note": "Nessuna stima affidabile: lo storico nazionale non è abbinabile a entrambe le squadre.",
+      "source_calendar": "ESPN"
+    },
+    {
+      "id": "2026-10-18-Taça de Portugal-Vitoria Setubal-Uniao da Serra",
+      "date": "2026-10-18",
+      "kickoff": "16:00",
+      "league": "Taça de Portugal",
+      "country": "Portogallo",
+      "home_team": "Vitoria Setubal",
+      "away_team": "Uniao da Serra",
+      "expected_home_goals": null,
+      "expected_away_goals": null,
+      "probabilities": {},
+      "analysis": "",
+      "suggested_markets": [],
+      "value_bets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 0,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Storico nazionale non abbinabile a entrambe le squadre: la partita è mostrata ma non viene stimata.",
+      "confidence": "non stimabile",
+      "data_quality": "storico_assente",
+      "method": "Nessuna stima: storico club non disponibile o nome squadra non riconciliato",
+      "availability_data": {
+        "status": "non_trovata",
+        "source": "API-Football",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
+        "injuries": [],
+        "lineups": null
+      },
+      "competition_type": "coppa_nazionale",
+      "cup_model_note": "Nessuna stima affidabile: lo storico nazionale non è abbinabile a entrambe le squadre.",
+      "source_calendar": "ESPN"
+    },
+    {
+      "id": "2026-10-18-Taça de Portugal-Paredes-FC Famalicao",
+      "date": "2026-10-18",
+      "kickoff": "20:30",
+      "league": "Taça de Portugal",
+      "country": "Portogallo",
+      "home_team": "Paredes",
+      "away_team": "FC Famalicao",
+      "expected_home_goals": null,
+      "expected_away_goals": null,
+      "probabilities": {},
+      "analysis": "",
+      "suggested_markets": [],
+      "value_bets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 0,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Storico nazionale non abbinabile a entrambe le squadre: la partita è mostrata ma non viene stimata.",
+      "confidence": "non stimabile",
+      "data_quality": "storico_assente",
+      "method": "Nessuna stima: storico club non disponibile o nome squadra non riconciliato",
+      "availability_data": {
+        "status": "non_trovata",
+        "source": "API-Football",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
+        "injuries": [],
+        "lineups": null
+      },
+      "competition_type": "coppa_nazionale",
+      "cup_model_note": "Nessuna stima affidabile: lo storico nazionale non è abbinabile a entrambe le squadre.",
+      "source_calendar": "ESPN"
+    },
+    {
+      "id": "2026-10-18-Taça de Portugal-Os Belenenses-Arouca",
+      "date": "2026-10-18",
+      "kickoff": "20:45",
+      "league": "Taça de Portugal",
+      "country": "Portogallo",
+      "home_team": "Os Belenenses",
+      "away_team": "Arouca",
+      "expected_home_goals": null,
+      "expected_away_goals": null,
+      "probabilities": {},
+      "analysis": "",
+      "suggested_markets": [],
+      "value_bets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 0,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Storico nazionale non abbinabile a entrambe le squadre: la partita è mostrata ma non viene stimata.",
+      "confidence": "non stimabile",
+      "data_quality": "storico_assente",
+      "method": "Nessuna stima: storico club non disponibile o nome squadra non riconciliato",
+      "availability_data": {
+        "status": "non_trovata",
+        "source": "API-Football",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
+        "injuries": [],
+        "lineups": null
+      },
+      "competition_type": "coppa_nazionale",
+      "cup_model_note": "Nessuna stima affidabile: lo storico nazionale non è abbinabile a entrambe le squadre.",
+      "source_calendar": "ESPN"
+    },
+    {
+      "id": "2026-10-17-La Liga-Valencia-Ath Bilbao",
+      "date": "2026-10-17",
+      "kickoff": "20:00",
+      "league": "La Liga",
+      "country": "Spagna",
+      "home_team": "Valencia",
+      "away_team": "Ath Bilbao",
+      "expected_home_goals": 0.71,
+      "expected_away_goals": 1.88,
+      "probabilities": {},
+      "analysis": "Qui mancano basi sufficienti per consigliare una giocata: meglio passare.",
+      "suggested_markets": [],
+      "suggested_market_details": [],
+      "betting_advice": "Qui mancano basi sufficienti per consigliare una giocata: meglio passare.",
+      "value_bets": [],
+      "top_scorelines": [],
+      "sample_matches": 2,
+      "home_matches_sample": 4,
+      "away_matches_sample": 2,
+      "status": "NO BET",
+      "no_bet_type": "campione_insufficiente",
+      "reason": "Campione insufficiente: servono almeno tre gare casalinghe per la squadra di casa e tre gare in trasferta per l’avversaria.",
+      "confidence": "bassa quantità di dati",
+      "data_quality": "controllata",
+      "elo_home": 1462.7,
+      "elo_away": 1497.9,
+      "home_recent_form": {
+        "games": 5,
+        "goals_for": 1.0,
+        "goals_against": 2.2,
+        "points_per_match": 0.8
+      },
+      "away_recent_form": {
+        "games": 5,
+        "goals_for": 1.2,
+        "goals_against": 0.6,
+        "points_per_match": 1.6
+      },
+      "european_context": [],
+      "recent_competition_context": [],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 19,
+          "points": 5,
+          "played": 8,
+          "signals": [
+            "zona bassa / possibile lotta salvezza"
+          ]
+        },
+        "away": {
+          "position": 10,
+          "points": 8,
+          "played": 6,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati.",
+        "model_adjustment": {
+          "home_factor": 1.0,
+          "away_factor": 1.0,
+          "applied": false,
+          "adjustment_pct": 0.0,
+          "status": "solo_informativa",
+          "note": "Motivazioni di classifica mostrate solo come contesto informativo: non modificano gol attesi o probabilità finché l'effetto non è calibrato e verificato con backtest fuori campione."
+        }
+      },
+      "motivation_adjustment": {
+        "home_factor": 1.0,
+        "away_factor": 1.0,
+        "applied": false,
+        "adjustment_pct": 0.0,
+        "status": "solo_informativa",
+        "note": "Motivazioni di classifica mostrate solo come contesto informativo: non modificano gol attesi o probabilità finché l'effetto non è calibrato e verificato con backtest fuori campione."
+      },
+      "european_fatigue_status": "nessuna gara europea recente verificata",
+      "recent_competition_status": "nessun impegno recente verificato",
+      "competition_type": "campionato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
+      "availability_data": {
+        "status": "non_trovata",
+        "source": "API-Football",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
+        "injuries": [],
+        "lineups": null
+      },
+      "odds_markets": {
+        "over_under_2_5": {
+          "over": 2.03,
+          "under": 1.73
+        }
+      },
+      "odds_markets_source": "football-data.co.uk",
+      "odds_fetched_at": "2026-10-17T19:47:49+00:00"
+    },
+    {
+      "id": "2026-10-18-Allsvenskan svedese-IK Sirius-IF Elfsborg",
+      "date": "2026-10-18",
+      "kickoff": "14:00",
+      "league": "Allsvenskan svedese",
+      "country": "Svezia",
+      "home_team": "IK Sirius",
+      "away_team": "IF Elfsborg",
+      "expected_home_goals": 1.63,
+      "expected_away_goals": 1.32,
+      "probabilities": {},
+      "analysis": "Qui mancano basi sufficienti per consigliare una giocata: meglio passare.",
+      "suggested_markets": [],
+      "suggested_market_details": [],
+      "betting_advice": "Qui mancano basi sufficienti per consigliare una giocata: meglio passare.",
+      "value_bets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 0,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: nessuna osservazione storica pertinente per casa o trasferta.",
+      "confidence": "bassa quantità di dati",
+      "data_quality": "controllata",
+      "elo_home": 1500.0,
+      "elo_away": 1500.0,
+      "home_recent_form": null,
+      "away_recent_form": null,
+      "european_context": [],
+      "recent_competition_context": [],
+      "motivation_context": {
+        "status": "dati_insufficienti",
+        "note": "Poche partite concluse per valutare con prudenza gli obiettivi di classifica.",
+        "model_adjustment": {
+          "home_factor": 1.0,
+          "away_factor": 1.0,
+          "applied": false,
+          "adjustment_pct": 0.0,
+          "status": "non_verificabile",
+          "note": "Motivazioni non verificabili con i dati disponibili; nessuna modifica a gol attesi o probabilità."
+        }
+      },
+      "motivation_adjustment": {
+        "home_factor": 1.0,
+        "away_factor": 1.0,
+        "applied": false,
+        "adjustment_pct": 0.0,
+        "status": "non_verificabile",
+        "note": "Motivazioni non verificabili con i dati disponibili; nessuna modifica a gol attesi o probabilità."
+      },
+      "european_fatigue_status": "nessuna gara europea recente verificata",
+      "recent_competition_status": "nessun impegno recente verificato",
+      "competition_type": "campionato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
+      "availability_data": {
+        "status": "non_trovata",
+        "source": "API-Football",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
+        "injuries": [],
+        "lineups": null
+      }
+    },
+    {
+      "id": "2026-10-18-Allsvenskan svedese-Vasteras SK-Mjällby AIF",
+      "date": "2026-10-18",
+      "kickoff": "14:00",
+      "league": "Allsvenskan svedese",
+      "country": "Svezia",
+      "home_team": "Vasteras SK",
+      "away_team": "Mjällby AIF",
+      "expected_home_goals": 1.6,
+      "expected_away_goals": 1.15,
+      "probabilities": {},
+      "analysis": "Qui mancano basi sufficienti per consigliare una giocata: meglio passare.",
+      "suggested_markets": [],
+      "suggested_market_details": [],
+      "betting_advice": "Qui mancano basi sufficienti per consigliare una giocata: meglio passare.",
+      "value_bets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 11,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "no_bet_type": "campione_insufficiente",
+      "reason": "Campione insufficiente: servono almeno tre gare casalinghe per la squadra di casa e tre gare in trasferta per l’avversaria.",
+      "confidence": "bassa quantità di dati",
+      "data_quality": "controllata",
+      "elo_home": 1524.7,
+      "elo_away": 1500.0,
+      "home_recent_form": {
+        "games": 5,
+        "goals_for": 1.8,
+        "goals_against": 0.8,
+        "points_per_match": 1.8
+      },
+      "away_recent_form": null,
+      "european_context": [
+        {
+          "team": "Mjällby AIF",
+          "competition": "Conference League",
+          "match_date": "2026-10-15",
+          "days_before": 3,
+          "venue": "casa",
+          "home_goals": 2,
+          "away_goals": 0,
+          "attack_factor": 0.97,
+          "adjustment_pct": 3.0,
+          "source": "ESPN",
+          "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
+        }
+      ],
+      "recent_competition_context": [
+        {
+          "team": "Mjällby AIF",
+          "competition": "Conference League",
+          "match_date": "2026-10-15",
+          "days_before": 3,
+          "venue": "casa",
+          "home_goals": 2,
+          "away_goals": 0,
+          "attack_factor": 0.97,
+          "adjustment_pct": 3.0,
+          "source": "ESPN",
+          "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
+        }
+      ],
+      "motivation_context": {
+        "status": "dati_insufficienti",
+        "note": "Poche partite concluse per valutare con prudenza gli obiettivi di classifica.",
+        "model_adjustment": {
+          "home_factor": 1.0,
+          "away_factor": 1.0,
+          "applied": false,
+          "adjustment_pct": 0.0,
+          "status": "non_verificabile",
+          "note": "Motivazioni non verificabili con i dati disponibili; nessuna modifica a gol attesi o probabilità."
+        }
+      },
+      "motivation_adjustment": {
+        "home_factor": 1.0,
+        "away_factor": 1.0,
+        "applied": false,
+        "adjustment_pct": 0.0,
+        "status": "non_verificabile",
+        "note": "Motivazioni non verificabili con i dati disponibili; nessuna modifica a gol attesi o probabilità."
+      },
+      "european_fatigue_status": "rilevato",
+      "recent_competition_status": "impegno ravvicinato rilevato",
+      "competition_type": "campionato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
+      "availability_data": {
+        "status": "non_trovata",
+        "source": "API-Football",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
+        "injuries": [],
+        "lineups": null
+      }
+    },
+    {
+      "id": "2026-10-18-Allsvenskan svedese-Halmstads BK-Hammarby IF",
+      "date": "2026-10-18",
+      "kickoff": "16:30",
+      "league": "Allsvenskan svedese",
+      "country": "Svezia",
+      "home_team": "Halmstads BK",
+      "away_team": "Hammarby IF",
+      "expected_home_goals": 1.63,
+      "expected_away_goals": 1.32,
+      "probabilities": {},
+      "analysis": "Qui mancano basi sufficienti per consigliare una giocata: meglio passare.",
+      "suggested_markets": [],
+      "suggested_market_details": [],
+      "betting_advice": "Qui mancano basi sufficienti per consigliare una giocata: meglio passare.",
+      "value_bets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 0,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: nessuna osservazione storica pertinente per casa o trasferta.",
+      "confidence": "bassa quantità di dati",
+      "data_quality": "controllata",
+      "elo_home": 1500.0,
+      "elo_away": 1500.0,
+      "home_recent_form": null,
+      "away_recent_form": null,
+      "european_context": [],
+      "recent_competition_context": [],
+      "motivation_context": {
+        "status": "dati_insufficienti",
+        "note": "Poche partite concluse per valutare con prudenza gli obiettivi di classifica.",
+        "model_adjustment": {
+          "home_factor": 1.0,
+          "away_factor": 1.0,
+          "applied": false,
+          "adjustment_pct": 0.0,
+          "status": "non_verificabile",
+          "note": "Motivazioni non verificabili con i dati disponibili; nessuna modifica a gol attesi o probabilità."
+        }
+      },
+      "motivation_adjustment": {
+        "home_factor": 1.0,
+        "away_factor": 1.0,
+        "applied": false,
+        "adjustment_pct": 0.0,
+        "status": "non_verificabile",
+        "note": "Motivazioni non verificabili con i dati disponibili; nessuna modifica a gol attesi o probabilità."
+      },
+      "european_fatigue_status": "nessuna gara europea recente verificata",
+      "recent_competition_status": "nessun impegno recente verificato",
+      "competition_type": "campionato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
+      "availability_data": {
+        "status": "non_trovata",
+        "source": "API-Football",
+        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
+        "injuries": [],
+        "lineups": null
+      }
+    },
+    {
+      "id": "2026-10-18-Allsvenskan svedese-Malmo FF-BK Häcken",
+      "date": "2026-10-18",
+      "kickoff": "16:30",
+      "league": "Allsvenskan svedese",
+      "country": "Svezia",
+      "home_team": "Malmo FF",
+      "away_team": "BK Häcken",
+      "expected_home_goals": 1.98,
+      "expected_away_goals": 1.61,
+      "probabilities": {},
+      "analysis": "Qui mancano basi sufficienti per consigliare una giocata: meglio passare.",
+      "suggested_markets": [],
+      "suggested_market_details": [],
+      "betting_advice": "Qui mancano basi sufficienti per consigliare una giocata: meglio passare.",
+      "value_bets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 14,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "no_bet_type": "campione_insufficiente",
+      "reason": "Campione insufficiente: servono almeno tre gare casalinghe per la squadra di casa e tre gare in trasferta per l’avversaria.",
+      "confidence": "bassa quantità di dati",
+      "data_quality": "controllata",
+      "elo_home": 1523.4,
+      "elo_away": 1500.0,
+      "home_recent_form": {
+        "games": 5,
+        "goals_for": 1.2,
+        "goals_against": 0.6,
+        "points_per_match": 2.0
+      },
+      "away_recent_form": null,
+      "european_context": [],
+      "recent_competition_context": [],
+      "motivation_context": {
+        "status": "dati_insufficienti",
+        "note": "Poche partite concluse per valutare con prudenza gli obiettivi di classifica.",
+        "model_adjustment": {
+          "home_factor": 1.0,
+          "away_factor": 1.0,
+          "applied": false,
+          "adjustment_pct": 0.0,
+          "status": "non_verificabile",
+          "note": "Motivazioni non verificabili con i dati disponibili; nessuna modifica a gol attesi o probabilità."
+        }
+      },
+      "motivation_adjustment": {
+        "home_factor": 1.0,
+        "away_factor": 1.0,
+        "applied": false,
+        "adjustment_pct": 0.0,
+        "status": "non_verificabile",
+        "note": "Motivazioni non verificabili con i dati disponibili; nessuna modifica a gol attesi o probabilità."
+      },
+      "european_fatigue_status": "nessuna gara europea recente verificata",
+      "recent_competition_status": "nessun impegno recente verificato",
+      "competition_type": "campionato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
+      "availability_data": {
+        "status": "segnalazioni_trovate",
+        "source": "API-Football",
+        "note": "La fonte segnala 12 indisponibilità; elenco non necessariamente completo.",
+        "fixture_id": "1494301",
+        "injuries": [
+          {
+            "team": "Malmo FF",
+            "player": "I. Assibu",
+            "type": "Missing Fixture",
+            "reason": "Inactive"
+          },
+          {
+            "team": "Malmo FF",
+            "player": "K. Busuladzic",
+            "type": "Missing Fixture",
+            "reason": "Injury"
+          },
+          {
+            "team": "Malmo FF",
+            "player": "A. Djuric",
+            "type": "Missing Fixture",
+            "reason": "Yellow Cards"
+          },
+          {
+            "team": "Malmo FF",
+            "player": "D. Garcia",
+            "type": "Missing Fixture",
+            "reason": "Inactive"
+          },
+          {
+            "team": "Malmo FF",
+            "player": "P. Jansson",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "team": "Malmo FF",
+            "player": "N. John",
+            "type": "Missing Fixture",
+            "reason": "Inactive"
+          },
+          {
+            "team": "Malmo FF",
+            "player": "W. Kamanzi",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "team": "Malmo FF",
+            "player": "O. Sjostrand",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "team": "Malmo FF",
+            "player": "M. Lahdo",
+            "type": "Questionable",
+            "reason": "Injury"
+          },
+          {
+            "team": "BK Hacken",
+            "player": "B. Engdahl",
+            "type": "Missing Fixture",
+            "reason": "Lower-Body Injury"
+          },
+          {
+            "team": "BK Hacken",
+            "player": "F. Ohman",
+            "type": "Missing Fixture",
+            "reason": "Shoulder Injury"
+          },
+          {
+            "team": "BK Hacken",
+            "player": "A. Svanback",
+            "type": "Questionable",
+            "reason": "Injury"
+          }
+        ],
+        "lineups": null,
+        "lineup_status": "non_pubblicate"
+      }
+    },
+    {
+      "id": "2026-10-18-Allsvenskan svedese-Örgryte IS-GAIS",
+      "date": "2026-10-18",
+      "kickoff": "16:30",
+      "league": "Allsvenskan svedese",
+      "country": "Svezia",
+      "home_team": "Örgryte IS",
+      "away_team": "GAIS",
+      "expected_home_goals": 1.45,
+      "expected_away_goals": 1.17,
+      "probabilities": {},
+      "analysis": "Qui mancano basi sufficienti per consigliare una giocata: meglio passare.",
+      "suggested_markets": [],
+      "suggested_market_details": [],
+      "betting_advice": "Qui mancano basi sufficienti per consigliare una giocata: meglio passare.",
+      "value_bets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 0,
+      "away_matches_sample": 13,
+      "status": "NO BET",
+      "no_bet_type": "campione_insufficiente",
+      "reason": "Campione insufficiente: servono almeno tre gare casalinghe per la squadra di casa e tre gare in trasferta per l’avversaria.",
+      "confidence": "bassa quantità di dati",
+      "data_quality": "controllata",
+      "elo_home": 1500.0,
+      "elo_away": 1503.2,
+      "home_recent_form": null,
+      "away_recent_form": {
+        "games": 5,
+        "goals_for": 1.4,
+        "goals_against": 0.6,
+        "points_per_match": 1.4
+      },
+      "european_context": [],
+      "recent_competition_context": [],
+      "motivation_context": {
+        "status": "dati_insufficienti",
+        "note": "Poche partite concluse per valutare con prudenza gli obiettivi di classifica.",
+        "model_adjustment": {
+          "home_factor": 1.0,
+          "away_factor": 1.0,
+          "applied": false,
+          "adjustment_pct": 0.0,
+          "status": "non_verificabile",
+          "note": "Motivazioni non verificabili con i dati disponibili; nessuna modifica a gol attesi o probabilità."
+        }
+      },
+      "motivation_adjustment": {
+        "home_factor": 1.0,
+        "away_factor": 1.0,
+        "applied": false,
+        "adjustment_pct": 0.0,
+        "status": "non_verificabile",
+        "note": "Motivazioni non verificabili con i dati disponibili; nessuna modifica a gol attesi o probabilità."
+      },
+      "european_fatigue_status": "nessuna gara europea recente verificata",
+      "recent_competition_status": "nessun impegno recente verificato",
+      "competition_type": "campionato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
+      "availability_data": {
+        "status": "segnalazioni_trovate",
+        "source": "API-Football",
+        "note": "La fonte segnala 11 indisponibilità; elenco non necessariamente completo.",
+        "fixture_id": "1494302",
+        "injuries": [
+          {
+            "team": "Orgryte IS",
+            "player": "A. Abukar",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "team": "Orgryte IS",
+            "player": "R. Alm",
+            "type": "Missing Fixture",
+            "reason": "Injury"
+          },
+          {
+            "team": "Orgryte IS",
+            "player": "V. Ekblom",
+            "type": "Missing Fixture",
+            "reason": "Thigh Injury"
+          },
+          {
+            "team": "Orgryte IS",
+            "player": "W. Svensson",
+            "type": "Missing Fixture",
+            "reason": "Foot Injury"
+          },
+          {
+            "team": "Orgryte IS",
+            "player": "J. Tibbling",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "team": "Gais",
+            "player": "B. Asumang",
+            "type": "Missing Fixture",
+            "reason": "Illness"
+          },
+          {
+            "team": "Gais",
+            "player": "D. Collander",
+            "type": "Missing Fixture",
+            "reason": "Inactive"
+          },
+          {
+            "team": "Gais",
+            "player": "K. Holmen",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "team": "Gais",
+            "player": "G. Lundgren",
+            "type": "Missing Fixture",
+            "reason": "Achilles Tendon Injury"
+          },
+          {
+            "team": "Gais",
+            "player": "W. Milovanovic",
+            "type": "Missing Fixture",
+            "reason": "Illness"
+          },
+          {
+            "team": "Gais",
+            "player": "R. Thorkelsson",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          }
+        ],
+        "lineups": null,
+        "lineup_status": "non_pubblicate"
+      }
+    },
+    {
+      "id": "2026-10-19-Allsvenskan svedese-Degerfors IF-Kalmar FF",
+      "date": "2026-10-19",
+      "kickoff": "19:00",
+      "league": "Allsvenskan svedese",
+      "country": "Svezia",
+      "home_team": "Degerfors IF",
+      "away_team": "Kalmar FF",
+      "expected_home_goals": 1.63,
+      "expected_away_goals": 1.32,
+      "probabilities": {},
+      "analysis": "Qui mancano basi sufficienti per consigliare una giocata: meglio passare.",
+      "suggested_markets": [],
+      "suggested_market_details": [],
+      "betting_advice": "Qui mancano basi sufficienti per consigliare una giocata: meglio passare.",
+      "value_bets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 0,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: nessuna osservazione storica pertinente per casa o trasferta.",
+      "confidence": "bassa quantità di dati",
+      "data_quality": "controllata",
+      "elo_home": 1500.0,
+      "elo_away": 1500.0,
+      "home_recent_form": null,
+      "away_recent_form": null,
+      "european_context": [],
+      "recent_competition_context": [],
+      "motivation_context": {
+        "status": "dati_insufficienti",
+        "note": "Poche partite concluse per valutare con prudenza gli obiettivi di classifica.",
+        "model_adjustment": {
+          "home_factor": 1.0,
+          "away_factor": 1.0,
+          "applied": false,
+          "adjustment_pct": 0.0,
+          "status": "non_verificabile",
+          "note": "Motivazioni non verificabili con i dati disponibili; nessuna modifica a gol attesi o probabilità."
+        }
+      },
+      "motivation_adjustment": {
+        "home_factor": 1.0,
+        "away_factor": 1.0,
+        "applied": false,
+        "adjustment_pct": 0.0,
+        "status": "non_verificabile",
+        "note": "Motivazioni non verificabili con i dati disponibili; nessuna modifica a gol attesi o probabilità."
+      },
+      "european_fatigue_status": "nessuna gara europea recente verificata",
+      "recent_competition_status": "nessun impegno recente verificato",
+      "competition_type": "campionato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
+      "availability_data": {
+        "status": "fuori_copertura_api",
+        "source": "API-Football",
+        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "injuries": [],
+        "lineups": null
+      }
     }
   ],
   "notice": "Le probabilità sono stime statistiche e non garantiscono risultati.",
@@ -20242,10 +21118,10 @@
       "requests_made_this_run": 0
     }
   },
-  "odds_updated_at": "2026-10-17T19:43:34+00:00",
+  "odds_updated_at": "2026-10-17T19:48:17+00:00",
   "odds_source_api_football": "API-Football",
   "market_analysis": {
-    "updated_at": "2026-10-17T19:43:34+00:00",
+    "updated_at": "2026-10-17T19:48:17+00:00",
     "matches_analyzed": 56,
     "additional_markets_analyzed": 56,
     "matches_total": 69,
@@ -20265,7 +21141,7 @@
     "method": "Probabilità implicite normalizzate per mercati binari; per doppia chance l'implied è 1/quota perché gli esiti si sovrappongono; EV teorico = probabilità modello × quota decimale − 1"
   },
   "odds_status": {
-    "updated_at": "2026-10-17T19:43:34+00:00",
+    "updated_at": "2026-10-17T19:48:17+00:00",
     "matches_total": 69,
     "matches_with_fresh_1x2": 56,
     "matches_with_fresh_additional_markets": 56,
