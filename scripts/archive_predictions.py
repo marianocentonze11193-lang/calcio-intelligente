@@ -530,7 +530,11 @@ def main():
             "expected_away_goals": match.get("expected_away_goals"),
             "sample_matches": match.get("sample_matches", 0),
             "european_context": match.get("european_context") or [],
+            "recent_competition_context": match.get("recent_competition_context") or [],
             "european_fatigue_status": match.get("european_fatigue_status"),
+            "recent_competition_status": match.get("recent_competition_status"),
+            "competition_type": match.get("competition_type", "campionato"),
+            "historical_sources": match.get("historical_sources") or [],
             "suggested_markets": match.get("suggested_markets") or [],
             "value_bets": match.get("value_bets") or [],
             "odds_fetched_at": match.get("odds_fetched_at"),
@@ -558,6 +562,11 @@ def main():
         if not item.get("european_context") and current.get("european_context"):
             item["european_context"] = current.get("european_context")
             item["european_fatigue_status"] = current.get("european_fatigue_status")
+        if not item.get("recent_competition_context") and current.get("recent_competition_context"):
+            item["recent_competition_context"] = current.get("recent_competition_context")
+            item["recent_competition_status"] = current.get("recent_competition_status")
+            item["competition_type"] = current.get("competition_type", item.get("competition_type", "campionato"))
+            item["historical_sources"] = current.get("historical_sources") or item.get("historical_sources", [])
         if not item.get("suggested_markets") and current.get("suggested_markets"):
             item["suggested_markets"] = current.get("suggested_markets")
         if not item.get("market_analysis_markets") and current.get("market_analysis_markets"):
