@@ -222,6 +222,46 @@ function renderMatches(matches) {
       continue;
     }
 
+    if (match.analysis) {
+      const analysis = document.createElement("p");
+      analysis.className = "match-analysis";
+      analysis.textContent = match.analysis;
+      card.append(analysis);
+    }
+    if (match.betting_advice) {
+      const advice = document.createElement("section");
+      advice.className = "betting-advice";
+      const heading = document.createElement("strong");
+      heading.textContent = "Consiglio pratico";
+      const copy = document.createElement("p");
+      copy.textContent = match.betting_advice;
+      advice.append(heading, copy);
+      card.append(advice);
+    }
+    if (Array.isArray(match.suggested_markets) && match.suggested_markets.length) {
+      const suggested = document.createElement("div");
+      suggested.className = "suggested-markets";
+      const title = document.createElement("p");
+      title.className = "match-meta";
+      title.textContent = "Esiti da valutare · gioca solo se la quota è interessante";
+      suggested.append(title);
+      const details = Array.isArray(match.suggested_market_details) ? match.suggested_market_details : [];
+      for (const market of match.suggested_markets) {
+        const detail = details.find(item => item.market === market);
+        const chip = document.createElement("span");
+        chip.className = "market-chip market-green";
+        chip.textContent = "✓ " + market +
+          (detail ? " · " + percent(detail.probability) + " · quota-obiettivo " +
+            Number(detail.target_odds).toLocaleString("it-IT", {minimumFractionDigits: 2, maximumFractionDigits: 2}) : "");
+        suggested.append(chip);
+      }
+      const note = document.createElement("p");
+      note.className = "match-meta";
+      note.textContent = "La quota-obiettivo è una soglia teorica prudenziale, non una quota realmente disponibile.";
+      suggested.append(note);
+      card.append(suggested);
+    }
+
     const expected = document.createElement("p");
     expected.className = "match-meta";
     expected.textContent = "Gol attesi (modello): " + match.expected_home_goals + " — " + match.expected_away_goals;
@@ -277,8 +317,15 @@ function renderMatches(matches) {
     score.textContent = match.top_scorelines && match.top_scorelines.length
       ? "Risultati esatti più probabili (stime): " + match.top_scorelines.map(s => s.score + " (" + percent(s.probability) + ")").join(" · ")
       : "";
+    if (score.textContent) technical.append(score);
+    card.append(technical);
 
-    card.append(meta, teams, expected, grid, confidence);
+    card.append(meta, teams);
+    const technical = document.createElement("details");
+    technical.className = "technical-details";
+    const technicalSummary = document.createElement("summary");
+    technicalSummary.textContent = "Apri probabilità e dati tecnici";
+    technical.append(technicalSummary, expected, grid, confidence);
     const motivation = match.motivation_context;
     if (motivation && motivation.status === "indizi_classifica") {
       const motivationNote = document.createElement("p");
@@ -392,32 +439,6 @@ function renderMatches(matches) {
         ).join(" | ") + ". EV non validato; probabilità implicita 1/quota non depurata: le selezioni si sovrappongono.";
         card.append(dcLine);
       }
-    }
-    if (match.analysis) {
-      const analysis = document.createElement("p");
-      analysis.className = "match-analysis";
-      analysis.textContent = (match.analysis_provider === "Gemini" ? "Analisi assistita da Gemini: " : "Analisi sintetica: ") + match.analysis;
-      card.append(analysis);
-    }
-    if (Array.isArray(match.suggested_markets) && match.suggested_markets.length) {
-      const suggested = document.createElement("div");
-      suggested.className = "suggested-markets";
-      const title = document.createElement("p");
-      title.className = "match-meta";
-      title.textContent = "ESITI DA VALUTARE · probabilità modello ≥70% (controllare le quote)";
-      suggested.append(title);
-      for (const market of match.suggested_markets) {
-        const chip = document.createElement("span");
-        chip.className = "market-chip market-green";
-        chip.textContent = "✓ " + market;
-        suggested.append(chip);
-      }
-      card.append(suggested);
-    } else {
-      const noPick = document.createElement("p");
-      noPick.className = "market-no-pick";
-      noPick.textContent = "NESSUN ESITO SELEZIONATO · nessun mercato supera la soglia automatica del 70%.";
-      card.append(noPick);
     }
     if (score.textContent) card.append(score);
     container.append(card);
