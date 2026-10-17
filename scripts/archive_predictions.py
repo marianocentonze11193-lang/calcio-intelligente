@@ -14,6 +14,7 @@ from zoneinfo import ZoneInfo
 ROOT = Path(__file__).resolve().parents[1]
 PREDICTIONS_FILE = ROOT / "data" / "predictions.json"
 HISTORY_FILE = ROOT / "data" / "history.json"
+COMPETITION_FILE = ROOT / "data" / "competition_data.json"
 SOURCE = "https://www.football-data.co.uk"
 USER_AGENT = "CalcioIntelligente/1.0"
 MIN_METRIC_MATCHES = 30
@@ -568,6 +569,34 @@ def unresolved_past_matches(records, today=None):
     ]
 
 
+def competition_result_index(fixtures):
+    """Esiti verificati di coppe/campionati dal calendario ESPN, separati per competizione."""
+    index = {}
+    if not isinstance(fixtures, list):
+        return index
+    for fixture in fixtures:
+        if not isinstance(fixture, dict) or fixture.get("status") != "completed":
+            continue
+        match_date = parse_date(fixture.get("date"))
+        competition = str(fixture.get("competition") or "").strip()
+        home = str(fixture.get("home_team") or "").strip()
+        away = str(fixture.get("away_team") or "").strip()
+        hg, ag = fixture.get("home_goals"), fixture.get("away_goals")
+        if (not match_date or not competition or not home or not away or
+                not isinstance(hg, int) or not isinstance(ag, int) or
+                not (0 <= hg <= 15 and 0 <= ag <= 15)):
+            continue
+        home_key, away_key = team_key(home), team_key(away)
+        if not home_key or not away_key or home_key == away_key:
+            continue
+        key = (match_date, competition.casefold(), home_key, away_key)
+        if key in index and index[key] != (hg, ag):
+            index[key] = None
+        else:
+            index[key] = (hg, ag)
+    return {key: score for key, score in index.items() if score is not None}
+
+
 def main():
     if not PREDICTIONS_FILE.exists():
         raise SystemExit("File data/predictions.json non trovato.")
@@ -690,13 +719,27 @@ def main():
             indexes.setdefault(league, {}).update(fallback)
             print(f"Risultati alternativi ESPN per {league}: {len(fallback)} risultati verificati.")
 
+    # Il calendario contiene anche esiti verificati di coppe UEFA e nazionali:
+    # i CSV dei campionati non coprono queste competizioni.
+    cup_results = {}
+    try:
+        if COMPETITION_FILE.exists():
+            competition_archive = json.loads(COMPETITION_FILE.read_text(encoding="utf-8"))
+            cup_results = competition_result_index(competition_archive.get("fixtures", []))
+    except (OSError, ValueError, TypeError) as error:
+        print(f"AVVISO: archivio competizioni non disponibile per il regolamento: {error}")
+
     settled = 0
     for item in records:
         if item.get("outcome") is not None:
             continue
-        league_results = indexes.get(item.get("league"), {})
+        league = str(item.get("league") or "").strip()
+        league_results = indexes.get(league, {})
         key = (item.get("date"), team_key(item.get("home_team")), team_key(item.get("away_team")))
         score = league_results.get(key)
+        if score is None:
+            cup_key = (item.get("date"), league.casefold(), key[1], key[2])
+            score = cup_results.get(cup_key)
         if score is None:
             continue
         hg, ag = score
