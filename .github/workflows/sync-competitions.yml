@@ -35,8 +35,6 @@ jobs:
       - name: Verifica parser e controlli
         run: python -m unittest discover -s tests -p "test_competitions.py" -v
       - name: Scarica calendari stagionali e classifiche
-        env:
-          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
         run: python scripts/sync_competitions.py
       - name: Controlla archivio prodotto
         run: python -c "import json; d=json.load(open('data/competition_data.json', encoding='utf-8')); assert isinstance(d.get('fixtures'), list); assert isinstance(d.get('standings'), dict); assert d.get('summary', {}).get('competitions_configured', 0) >= 20; print(d['summary'])"
