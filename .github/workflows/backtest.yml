@@ -1,0 +1,44 @@
+name: Backtest cronologico pronostici
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "scripts/backtest_walk_forward.py"
+      - ".github/workflows/backtest.yml"
+  schedule:
+    - cron: "37 4 * * 0"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: backtest-pronostici
+  cancel-in-progress: false
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Scarica il repository
+        uses: actions/checkout@v4
+      - name: Configura Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verifica la sintassi del modello
+        run: python -m py_compile scripts/update_predictions.py scripts/backtest_walk_forward.py
+      - name: Esegue il backtest walk-forward
+        run: python scripts/backtest_walk_forward.py
+      - name: Pubblica il report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/backtest_report.json
+          if git diff --cached --quiet; then
+            echo "Report invariato."
+            exit 0
+          fi
+          git commit -m "Aggiorna report backtest cronologico"
+          git push origin HEAD:main
