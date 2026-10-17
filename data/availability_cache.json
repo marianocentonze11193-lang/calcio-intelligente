@@ -40156,6 +40156,68 @@
       "away_formation": "4-2-3-1",
       "home_coach": "H. Brugge",
       "away_coach": "G. van Bronckhorst"
+    },
+    "1550148": {
+      "updated_at": "2026-10-17T18:49:02.534547+00:00",
+      "home_starters": [
+        "P. Gollini",
+        "L. Balerdi",
+        "E. Ndicka",
+        "K. Koulierakis",
+        "E. Lulli",
+        "M. de Roon",
+        "N. Pisilli",
+        "D. Rensch",
+        "M. Soulé",
+        "Rodrigo Mora",
+        "S. Castro"
+      ],
+      "away_starters": [
+        "J. Bijlow",
+        "A. Marcandalli",
+        "L. Østigård",
+        "J. Vásquez",
+        "M. Ellertsson",
+        "S. Wiafe",
+        "M. Frendrup",
+        "D. Puczka",
+        "Junior Messias",
+        "S. El Shaarawy",
+        "M. Osmajić"
+      ],
+      "home_substitutes": [
+        "Mandjou Camara",
+        "A. Arena",
+        "G. De Marzi",
+        "D. Ghilardi",
+        "Hermoso",
+        "G. Mancini",
+        "N. Molina",
+        "L. Pellegrini",
+        "D. Vásquez",
+        "Wesley",
+        "Alessandro Di Nunzio",
+        "L. Paratici"
+      ],
+      "away_substitutes": [
+        "T. Baldanzi",
+        "C. Drameh",
+        "M. Mitaj",
+        "S. Sabelli",
+        "D. Sommariva",
+        "F. Stolz",
+        "H. Traorè",
+        "M. Vaz",
+        "Vítinha",
+        "Alexsandro Amorim",
+        "Nikita Solodchenko",
+        "Lukas Klišys",
+        "S. Otoa"
+      ],
+      "home_formation": "3-4-2-1",
+      "away_formation": "3-4-2-1",
+      "home_coach": "G. Gasperini",
+      "away_coach": "D. De Rossi"
     }
   },
   "lineup_attempts": {
@@ -40170,7 +40232,7 @@
     "1570413": "2026-10-17T16:19:40.278750+00:00",
     "1575185": "2026-10-17T16:29:27.929896+00:00",
     "1552192": "2026-10-17T17:32:26.021705+00:00",
-    "1550148": "2026-10-17T17:12:31.204605+00:00",
+    "1550148": "2026-10-17T18:49:02.534547+00:00",
     "1552193": "2026-10-17T17:42:36.514647+00:00",
     "1556678": "2026-10-17T17:51:14.931032+00:00"
   },

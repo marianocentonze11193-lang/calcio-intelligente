@@ -2783,9 +2783,10 @@
       "expected_away_goals": 0.72,
       "sample_matches": 2,
       "archived_at": "2026-10-15T10:09:22.994539+00:00",
-      "outcome": null,
-      "home_goals": null,
-      "away_goals": null
+      "outcome": "1",
+      "home_goals": 6,
+      "away_goals": 1,
+      "settled_at": "2026-10-17T18:49:33.843396+00:00"
     },
     {
       "id": "2026-10-17-Premier League-Fulham-Hull City",
@@ -2850,9 +2851,10 @@
       "expected_away_goals": 1.14,
       "sample_matches": 0,
       "archived_at": "2026-10-15T10:09:22.994592+00:00",
-      "outcome": null,
-      "home_goals": null,
-      "away_goals": null
+      "outcome": "2",
+      "home_goals": 0,
+      "away_goals": 1,
+      "settled_at": "2026-10-17T18:49:33.843470+00:00"
     },
     {
       "id": "2026-10-18-Premier League-AFC Bournemouth-Sunderland",
@@ -3348,9 +3350,10 @@
       "expected_away_goals": 3.03,
       "sample_matches": 0,
       "archived_at": "2026-10-15T10:09:22.994938+00:00",
-      "outcome": null,
-      "home_goals": null,
-      "away_goals": null
+      "outcome": "2",
+      "home_goals": 2,
+      "away_goals": 5,
+      "settled_at": "2026-10-17T18:49:33.843602+00:00"
     },
     {
       "id": "2026-10-17-La Liga-Valencia-Athletic Club",
@@ -4064,9 +4067,9 @@
       "expected_away_goals": 1.49,
       "sample_matches": 3,
       "archived_at": "2026-10-15T19:59:46.525892+00:00",
-      "outcome": null,
-      "home_goals": null,
-      "away_goals": null,
+      "outcome": "2",
+      "home_goals": 0,
+      "away_goals": 1,
       "odds_markets": {
         "over_under_2_5": {
           "over": 1.58,
@@ -4150,7 +4153,8 @@
       ],
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "historical_sources": []
+      "historical_sources": [],
+      "settled_at": "2026-10-17T18:49:33.843680+00:00"
     },
     {
       "id": "2026-10-17-Serie A-Bologna-Inter",
@@ -4285,9 +4289,9 @@
       "expected_away_goals": 2.26,
       "sample_matches": 4,
       "archived_at": "2026-10-15T19:59:46.526224+00:00",
-      "outcome": null,
-      "home_goals": null,
-      "away_goals": null,
+      "outcome": "2",
+      "home_goals": 2,
+      "away_goals": 5,
       "odds_markets": {
         "over_under_2_5": {
           "over": 1.24,
@@ -4397,7 +4401,8 @@
       ],
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "historical_sources": []
+      "historical_sources": [],
+      "settled_at": "2026-10-17T18:49:33.843701+00:00"
     },
     {
       "id": "2026-10-18-La Liga-Celta-Alaves",
@@ -8261,17 +8266,17 @@
       "away_goals": null
     }
   ],
-  "updated_at": "2026-10-17T17:56:48.101229+00:00",
+  "updated_at": "2026-10-17T18:49:33.843976+00:00",
   "metrics": {
-    "settled_matches": 29,
-    "accuracy_1x2": null,
-    "brier_score_1x2": null,
-    "minimum_matches_required": 30,
-    "note": "Metriche non pubblicate: servono almeno 30 partite concluse con probabilità archiviate."
+    "settled_matches": 34,
+    "accuracy_1x2": 44.12,
+    "brier_score_1x2": 0.6912,
+    "log_loss_1x2": 1.1236,
+    "note": "Metriche descrittive su pronostici archiviati; Brier e log loss più bassi sono migliori. Non dimostrano redditività o affidabilità futura."
   },
   "metrics_by_league": {},
   "model_vs_market_metrics": {
-    "settled_matches_with_model_and_odds": 13,
+    "settled_matches_with_model_and_odds": 15,
     "minimum_matches_required": 30,
     "model": null,
     "market": null,
@@ -8288,7 +8293,7 @@
       "note": "Servono almeno 30 partite concluse con quote e probabilità per questo mercato."
     },
     "over_under_2_5": {
-      "settled_matches_with_model_and_odds": 13,
+      "settled_matches_with_model_and_odds": 15,
       "minimum_matches_required": 30,
       "model": null,
       "market": null,
@@ -8313,7 +8318,7 @@
     }
   },
   "result_matching": {
-    "checked_at": "2026-10-17T17:56:48.101222+00:00",
+    "checked_at": "2026-10-17T18:49:33.843964+00:00",
     "unresolved_past_matches": 3,
     "examples": [
       {
@@ -8349,7 +8354,7 @@
   "metrics_by_european_context": {
     "groups": {
       "recent_european_match": {
-        "settled_matches": 3,
+        "settled_matches": 5,
         "accuracy_1x2": null,
         "brier_score_1x2": null,
         "minimum_matches_required": 30,
@@ -8357,7 +8362,7 @@
         "context_matches_archived": 26
       },
       "no_recent_european_match": {
-        "settled_matches": 26,
+        "settled_matches": 29,
         "accuracy_1x2": null,
         "brier_score_1x2": null,
         "minimum_matches_required": 30,
