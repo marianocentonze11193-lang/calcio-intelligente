@@ -1068,7 +1068,11 @@ def main():
     fixture_odds = {}
     fixture_markets = {}
     competition_calendar = load_competition_calendar(today - timedelta(days=4), last_date)
-    european_matches = [item for item in competition_calendar if item.get("status") == "completed" and item.get("competition") in EUROPEAN_ESPN_COMPETITIONS.values()]
+    recent_competition_matches = [
+        item for item in competition_calendar
+        if item.get("status") == "completed"
+        and item.get("competition") in set(EUROPEAN_ESPN_COMPETITIONS.values()) | set(NATIONAL_CUP_ESPN_COMPETITIONS.values())
+    ]
 
     # Football-data pubblica le prossime partite in un CSV separato.
     try:
@@ -1279,7 +1283,7 @@ def main():
         for home, away, match_date, kickoff in fixtures:
             home = normalized_history.get(team_key(home), home)
             away = normalized_history.get(team_key(away), away)
-            forecast = make_forecast(home, away, league_name, match_date, kickoff, history, league_home_avg, league_away_avg, elo_ratings, recent_form, competition_calendar, motivation_table)
+            forecast = make_forecast(home, away, league_name, match_date, kickoff, history, league_home_avg, league_away_avg, elo_ratings, recent_form, recent_competition_matches, motivation_table)
             if forecast:
                 fixture_key = (match_date.isoformat(), team_key(home), team_key(away))
                 quote = fixture_odds.get(fixture_key)
