@@ -439,10 +439,19 @@ def fetch_calendar_competition(code, meta, start, end):
     successful_chunks = 0
     failed_chunks = []
     base = f"{BASE}/site/v2/sports/soccer/{code}/scoreboard"
-    # ESPN rifiuta alcune richieste su intervalli trimestrali per le coppe.
-    # I calendari UEFA e nazionali vengono quindi interrogati per mese, mentre
-    # i campionati mantengono blocchi trimestrali per contenere il numero di richieste.
-    chunks = month_chunks(start, end) if code in EUROPEAN or code in CUPS else quarter_chunks(start, end)
+    # ESPN rifiuta gli intervalli di date per queste coppe: il suo scoreboard
+    # funziona con una singola data. Per limitare il carico, sincronizziamo per
+    # le coppe solo i risultati recenti e il calendario utile alle previsioni.
+    # Il modello consulta i 4 giorni precedenti e pubblica le prossime 5 giornate.
+    if code in EUROPEAN or code in CUPS:
+        today = datetime.now(timezone.utc).astimezone(ZoneInfo("Europe/Rome")).date()
+        query_start = max(start, today - timedelta(days=7))
+        query_end = min(end, today + timedelta(days=14))
+        chunks = ((query_start + timedelta(days=offset), query_start + timedelta(days=offset))
+                  for offset in range((query_end - query_start).days + 1))
+    else:
+        query_start, query_end = start, end
+        chunks = quarter_chunks(start, end)
     for chunk_start, chunk_end in chunks:
         url = f"{base}?dates={chunk_start:%Y%m%d}-{chunk_end:%Y%m%d}&limit=100"
         try:
@@ -463,7 +472,7 @@ def fetch_calendar_competition(code, meta, start, end):
     return code, list(matches.values()), {
         "status": "complete_window" if not failed_chunks else ("partial" if successful_chunks else "unavailable"),
         "chunks_ok": successful_chunks, "chunks_failed": failed_chunks,
-        "range_start": start.isoformat(), "range_end": end.isoformat(),
+        "range_start": query_start.isoformat(), "range_end": query_end.isoformat(),
         "events": len(matches), "source": "ESPN",
     }
 
