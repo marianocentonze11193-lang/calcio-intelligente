@@ -293,6 +293,15 @@ function renderMatches(matches) {
         ". Indicazioni orientative basate sui risultati disponibili: non confermano obiettivi già raggiunti né verdetti matematici.";
       card.append(motivationNote);
     }
+    if (match.competition_type === "europea" || match.competition_type === "coppa_nazionale") {
+      const cupNote = document.createElement("p");
+      cupNote.className = "market-no-pick";
+      cupNote.textContent = "COPPA · STIMA PRELIMINARE NON VALIDATA · " +
+        (match.cup_model_note || "Il modello usa dati dei campionati nazionali, non uno storico specifico della coppa.") +
+        " I mercati automatici e le value bet sono disattivati per prudenza.";
+      card.append(cupNote);
+    }
+
     if (Array.isArray(match.recent_competition_context) && match.recent_competition_context.length) {
       const europe = document.createElement("p");
       europe.className = "market-no-pick";
