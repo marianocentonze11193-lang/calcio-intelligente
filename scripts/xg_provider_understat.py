@@ -9,7 +9,7 @@ import json
 import re
 import urllib.error
 import urllib.request
-from datetime import date
+from datetime import datetime, timezone
 
 LEAGUES = {
     "Premier League": "EPL",
@@ -53,7 +53,7 @@ def parse_match_rows(html, league_name):
         if not isinstance(match, dict):
             continue
         try:
-            match_date = date.fromtimestamp(int(match["datetime"])).isoformat()
+            match_date = datetime.fromtimestamp(int(match["datetime"]), tz=timezone.utc).date().isoformat()
             home_xg = float(match["team_h_xg"])
             away_xg = float(match["team_a_xg"])
         except (KeyError, TypeError, ValueError, OverflowError, OSError):
