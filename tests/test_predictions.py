@@ -463,6 +463,20 @@ class PredictionModelTests(unittest.TestCase):
         self.assertEqual(len(unresolved), 1)
         self.assertEqual(unresolved[0]["home_team"], "Casa")
 
+    def test_value_bet_metrics_settle_archived_1x2_candidates(self):
+        records = []
+        for i in range(30):
+            records.append({
+                "outcome": "1" if i < 15 else "X",
+                "value_bets": [{"market": "1", "best_odds": 2.0}],
+            })
+        metrics = archive_module.calculate_value_bet_metrics(records)
+        self.assertEqual(metrics["settled_bets"], 30)
+        self.assertEqual(metrics["wins"], 15)
+        self.assertEqual(metrics["losses"], 15)
+        self.assertEqual(metrics["net_units_per_one_unit_stake"], 0.0)
+        self.assertEqual(metrics["roi_percent"], 0.0)
+
     def test_metrics_can_be_split_by_european_context(self):
         records = []
         for i in range(30):
