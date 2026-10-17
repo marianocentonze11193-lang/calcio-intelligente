@@ -279,6 +279,17 @@ function renderMatches(matches) {
       : "";
 
     card.append(meta, teams, expected, grid, confidence);
+    if (Array.isArray(match.european_context) && match.european_context.length) {
+      const europe = document.createElement("p");
+      europe.className = "market-no-pick";
+      europe.textContent = "ATTENZIONE COPPE EUROPEE · " + match.european_context.map(item =>
+        item.team + ": " + item.competition + " il " + item.match_date +
+        " (" + item.days_before + " giorni prima, " + item.venue + ")" +
+        " · correzione sperimentale " + item.adjustment_pct + "%"
+      ).join(" | ") +
+        ". Stima declassata a preliminare; minuti giocati, viaggio e supplementari non sono verificati.";
+      card.append(europe);
+    }
     appendAvailability(match, card);
     if (match.odds_1x2) {
       const odds = document.createElement("p");
@@ -401,7 +412,8 @@ function renderHistory(history) {
   const metricItems = [
     ["Partite verificate", Number(metrics.settled_matches || 0).toLocaleString("it-IT")],
     ["Accuratezza 1X2", typeof metrics.accuracy_1x2 === "number" ? percent(metrics.accuracy_1x2) : "Non ancora pubblicabile"],
-    ["Brier score", typeof metrics.brier_score_1x2 === "number" ? metrics.brier_score_1x2.toLocaleString("it-IT", { maximumFractionDigits: 4 }) : "Non ancora pubblicabile"]
+    ["Brier score", typeof metrics.brier_score_1x2 === "number" ? metrics.brier_score_1x2.toLocaleString("it-IT", { maximumFractionDigits: 4 }) : "Non ancora pubblicabile"],
+    ["Log loss", typeof metrics.log_loss_1x2 === "number" ? metrics.log_loss_1x2.toLocaleString("it-IT", { maximumFractionDigits: 4 }) : "Non ancora pubblicabile"]
   ];
   for (const [label, value] of metricItems) {
     const item = document.createElement("div");
@@ -428,6 +440,27 @@ function renderHistory(history) {
     unresolved.textContent = resultMatching.unresolved_past_matches +
       " partite con data passata non hanno ancora un risultato associato. Sono escluse dalle metriche finché l'esito non viene verificato.";
     metricsNode.append(unresolved);
+  }
+
+  const europeanMetrics = history && history.metrics_by_european_context;
+  if (europeanMetrics && europeanMetrics.groups) {
+    const heading = document.createElement("h3");
+    heading.textContent = "Validazione: partite dopo le coppe europee";
+    metricsNode.append(heading);
+    const note = document.createElement("p");
+    note.className = "match-meta";
+    note.textContent = europeanMetrics.note || "Confronto descrittivo; non dimostra causalità.";
+    metricsNode.append(note);
+    for (const [key, values] of Object.entries(europeanMetrics.groups)) {
+      const row = document.createElement("p");
+      row.className = "match-meta";
+      const label = key === "recent_european_match" ? "Con impegno europeo recente" : "Senza impegno europeo recente";
+      row.textContent = label + ": " + (values.context_matches_archived || 0) + " archiviate · " +
+        (values.settled_matches || 0) + " risultati verificati · accuratezza " +
+        (typeof values.accuracy_1x2 === "number" ? percent(values.accuracy_1x2) : "campione insufficiente") +
+        " · Brier " + (typeof values.brier_score_1x2 === "number" ? values.brier_score_1x2 : "—");
+      metricsNode.append(row);
+    }
   }
 
   const comparison = history && history.model_vs_market_metrics;
