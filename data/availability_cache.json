@@ -40095,6 +40095,67 @@
       "away_formation": "4-5-1",
       "home_coach": "V. Kompany",
       "away_coach": "M. Demichelis"
+    },
+    "1552192": {
+      "updated_at": "2026-10-17T17:32:26.021705+00:00",
+      "home_starters": [
+        "R. Koeman",
+        "Gerald Alders",
+        "S. Valk",
+        "A. Soualhia",
+        "M. Peersman",
+        "N. Shenkman",
+        "T. Owusu",
+        "N. Rossen",
+        "A. Martha",
+        "N. Þórisson",
+        "P. Brouwer"
+      ],
+      "away_starters": [
+        "T. Ernst",
+        "G. Read",
+        "T. Watanabe",
+        "T. Kraaijeveld",
+        "Mika Màrmol",
+        "G. Zechiël",
+        "C. Vanhoutte",
+        "A. Hadj-Moussa",
+        "S. Steijn",
+        "G. Diarra",
+        "Nacho Ferri"
+      ],
+      "home_substitutes": [
+        "F. Rust",
+        "D. Reiziger",
+        "F. Turay",
+        "Isaiah Ahmed",
+        "P. Aning",
+        "G. Caschili",
+        "E. Demircan",
+        "J. Hardeveld",
+        "H. Kuster",
+        "Finn Mulder",
+        "R. Oudsten",
+        "Jelani Seedorf"
+      ],
+      "away_substitutes": [
+        "J. St. Juste",
+        "T. Wessels",
+        "T. van den Elshout",
+        "L. Valente",
+        "O. Targhalline",
+        "J. Schaken",
+        "Javi López",
+        "F. Kastenmeier",
+        "Theodoros Delianidis",
+        "M. Deijl",
+        "L. Bossin",
+        "Gonçalo Borges"
+      ],
+      "home_formation": "4-3-3",
+      "away_formation": "4-2-3-1",
+      "home_coach": "H. Brugge",
+      "away_coach": "G. van Bronckhorst"
     }
   },
   "lineup_attempts": {
@@ -40108,7 +40169,7 @@
     "1557434": "2026-10-17T16:18:07.153596+00:00",
     "1570413": "2026-10-17T16:19:40.278750+00:00",
     "1575185": "2026-10-17T16:29:27.929896+00:00",
-    "1552192": "2026-10-17T16:39:36.335834+00:00",
+    "1552192": "2026-10-17T17:32:26.021705+00:00",
     "1550148": "2026-10-17T17:12:31.204605+00:00"
   },
   "unavailable_dates": {}
