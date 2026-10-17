@@ -3,7 +3,9 @@
 import csv
 import io
 import json
+import os
 import re
+import threading
 import time
 import urllib.error
 import urllib.request
@@ -18,6 +20,20 @@ BASE = "https://site.api.espn.com/apis"
 TIMEOUT = 8
 USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
 FOOTBALL_DATA = "https://www.football-data.co.uk"
+API_FOOTBALL_BASE = "https://v3.football.api-sports.io"
+API_FOOTBALL_LEAGUE_IDS = {
+ "eng.1":39,"esp.1":140,"ger.1":78,"ita.1":135,"fra.1":61,"sco.1":179,
+ "ned.1":88,"por.1":94,"bel.1":144,"tur.1":203,"aut.1":218,"den.1":119,
+ "gre.1":197,"fin.1":244,"irl.1":357,"nor.1":103,"pol.1":106,"rou.1":283,
+ "swe.1":113,"sui.1":207,"uefa.champions":2,"uefa.europa":3,"uefa.europa.conf":848,
+ "ita.coppa_italia":137,"eng.fa":45,"esp.copa_del_rey":143,"ger.dfb_pokal":81,
+ "fra.coupe_de_france":66,"ned.knvb_cup":90,"por.taca_de_portugal":96,
+ "sco.fa_cup":181,"tur.turkiye_kupasi":206,
+}
+_API_CALL_LOCK = threading.Lock()
+_API_NEXT_CALL = 0.0
+API_CALL_INTERVAL_SECONDS = 6.2
+
 FOOTBALL_CODES = {
  "eng.1":("E0","E0","season"),"esp.1":("SP1","SP1","season"),"ger.1":("D1","D1","season"),
  "ita.1":("I1","I1","season"),"fra.1":("F1","F1","season"),"sco.1":("SC0","SC0","season"),
@@ -226,6 +242,144 @@ def calculate_domestic_table(fixtures, code, meta, season, updated_at):
              "note":"Classifica calcolata dai risultati acquisiti; può differire dalla classifica ufficiale per penalizzazioni o regole particolari."}}
 
 
+def api_football_get(api_key, endpoint, params):
+    global _API_NEXT_CALL
+    query = urllib.parse.urlencode(params)
+    url = f"{API_FOOTBALL_BASE}/{endpoint}?{query}"
+    # API-Football free tiers have a per-minute limit. Pace requests to avoid
+    # burst failures and keep the daily sync below the published quota.
+    with _API_CALL_LOCK:
+        wait = max(0.0, _API_NEXT_CALL - time.monotonic())
+        if wait:
+            time.sleep(wait)
+        _API_NEXT_CALL = time.monotonic() + API_CALL_INTERVAL_SECONDS
+    request = urllib.request.Request(url, headers={
+        "x-apisports-key": api_key, "Accept": "application/json",
+        "User-Agent": USER_AGENT,
+    })
+    with urllib.request.urlopen(request, timeout=20) as response:
+        payload = json.loads(response.read().decode("utf-8"))
+    if not isinstance(payload, dict) or payload.get("errors"):
+        raise ValueError(f"API-Football error: {str(payload.get('errors') if isinstance(payload,dict) else 'JSON non valido')[:180]}")
+    rows = payload.get("response")
+    if not isinstance(rows, list):
+        raise ValueError("API-Football: campo response non valido")
+    return rows
+
+
+def fetch_api_football_fixtures(api_key, code, meta, season):
+    league_id = API_FOOTBALL_LEAGUE_IDS[code]
+    response = api_football_get(api_key, "fixtures", {
+        "league": league_id, "season": season, "timezone": "Europe/Rome"
+    })
+    events = []
+    for item in response:
+        fixture = item.get("fixture") or {}
+        teams = item.get("teams") or {}
+        home_obj, away_obj = teams.get("home") or {}, teams.get("away") or {}
+        home, away = str(home_obj.get("name") or "").strip(), str(away_obj.get("name") or "").strip()
+        raw_date = fixture.get("date")
+        if not home or not away or home.casefold() == away.casefold() or not raw_date:
+            continue
+        try:
+            parsed = datetime.fromisoformat(str(raw_date).replace("Z", "+00:00"))
+            local = parsed.astimezone(ZoneInfo("Europe/Rome"))
+        except (ValueError, TypeError):
+            continue
+        status_obj = fixture.get("status") or {}
+        short = str(status_obj.get("short") or "").upper()
+        goals = item.get("goals") or {}
+        try:
+            hg = int(goals["home"]) if goals.get("home") is not None else None
+            ag = int(goals["away"]) if goals.get("away") is not None else None
+        except (TypeError, ValueError):
+            hg = ag = None
+        completed = short in {"FT", "AET", "PEN"} and hg is not None and ag is not None and 0 <= hg <= 15 and 0 <= ag <= 15
+        live = short in {"1H", "HT", "2H", "ET", "BT", "P", "LIVE"}
+        state = "completed" if completed else "in_progress" if live else "scheduled"
+        events.append({
+            "id": str(fixture.get("id") or ""),
+            "date": local.date().isoformat(), "kickoff": local.strftime("%H:%M"),
+            "timezone": "Europe/Rome", "home_team": home, "away_team": away,
+            "status": state, "home_goals": hg if completed else None, "away_goals": ag if completed else None,
+            "competition_code": code, "competition": meta["name"], "country": meta["country"],
+            "kind": meta["kind"], "source": "API-Football",
+        })
+    if not events:
+        raise ValueError("API-Football non ha restituito partite per questa competizione/stagione")
+    return events, {
+        "status": "loaded", "events": len(events),
+        "completed": sum(x["status"] == "completed" for x in events),
+        "scheduled": sum(x["status"] == "scheduled" for x in events),
+        "source": "API-Football", "season": season,
+        "range_start": min(x["date"] for x in events), "range_end": max(x["date"] for x in events),
+    }
+
+
+def fetch_api_football_standings(api_key, code, meta, season):
+    response = api_football_get(api_key, "standings", {"league": API_FOOTBALL_LEAGUE_IDS[code], "season": season})
+    rows = []
+    for league in response:
+        league_data = league.get("league") or {}
+        groups = league_data.get("standings") or []
+        for group_rows in groups:
+            for item in group_rows or []:
+                team = item.get("team") or {}
+                overall = item.get("all") or {}
+                goals = overall.get("goals") or {}
+                name = str(team.get("name") or "").strip()
+                if not name:
+                    continue
+                rows.append({
+                    "team_id": str(team.get("id") or ""), "team": name,
+                    "group": str(item.get("group") or league_data.get("name") or meta["name"]),
+                    "played": overall.get("played"), "wins": overall.get("win"),
+                    "draws": overall.get("draw"), "losses": overall.get("lose"),
+                    "goals_for": goals.get("for"), "goals_against": goals.get("against"),
+                    "goal_difference": item.get("goalsDiff"), "points": item.get("points"),
+                    "position": item.get("rank"), "record": item.get("form") or "",
+                    "source": "API-Football",
+                })
+    if len(rows) < 4:
+        raise ValueError(f"API-Football non ha restituito una classifica valida ({len(rows)} squadre)")
+    return {
+        "competition": meta["name"], "country": meta["country"], "kind": meta["kind"],
+        "season": season, "updated_at": datetime.now(timezone.utc).isoformat(), "rows": rows,
+        "diagnostics": {"status": "available", "teams": len(rows), "source": "API-Football",
+                        "note": "Classifica fornita dal provider API-Football."},
+    }
+
+
+def fetch_global_fixtures(today, jobs):
+    url = "https://www.football-data.co.uk/fixtures.csv"
+    request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Referer": "https://www.football-data.co.uk/"})
+    with urllib.request.urlopen(request, timeout=20) as response:
+        text = response.read().decode("cp1252", errors="replace").lstrip("\\ufeffï»¿")
+    reader = csv.DictReader(io.StringIO(text))
+    source_to_code = {values[1]: code for code, values in FOOTBALL_CODES.items()}
+    found = {code: [] for code in LEAGUES}
+    for row in reader:
+        code = source_to_code.get(csv_field(row, "Div", "Division"))
+        if code not in LEAGUES:
+            continue
+        match_date = csv_date(csv_field(row, "Date"))
+        meta, start, end, _ = jobs[code]
+        if not match_date or match_date < today or match_date > end:
+            continue
+        home, away = csv_field(row, "HomeTeam"), csv_field(row, "AwayTeam")
+        if not home or not away or home.casefold() == away.casefold():
+            continue
+        found[code].append({
+            "id": f"fd-{code}-{match_date.isoformat()}-{home.casefold()}-{away.casefold()}",
+            "date": match_date.isoformat(), "kickoff": csv_field(row, "Time"),
+            "timezone": "fuso orario non specificato dalla fonte", "home_team": home, "away_team": away,
+            "status": "scheduled", "home_goals": None, "away_goals": None,
+            "competition_code": code, "competition": meta["name"], "country": meta["country"],
+            "kind": meta["kind"], "source": "football-data.co.uk fixtures.csv",
+        })
+    return found
+
+
 def parse_event(event, code, meta):
     comps = event.get("competitions") or []
     if not comps:
@@ -398,23 +552,61 @@ def main():
         start, end = season_range(today, LEAGUES[code][2]) if code in LEAGUES else season_range(today, "summer")
         jobs[code] = (meta, start, end, start.year)
 
-    fresh, coverage, success, failed = {}, {}, set(), set()
-    # Calendari nazionali: CSV stagionali di football-data.co.uk, già usati dal modello.
+    fresh, coverage, success, failed = {}, {}, set(), set(jobs)
+    api_key = os.environ.get("API_FOOTBALL_KEY", "").strip()
+    if api_key:
+        # Un'unica richiesta fixtures per competizione recupera tutta la stagione.
+        with ThreadPoolExecutor(max_workers=4) as pool:
+            futures = {pool.submit(fetch_api_football_fixtures, api_key, code, jobs[code][0], jobs[code][3]): code for code in jobs}
+            for future in as_completed(futures):
+                code = futures[future]
+                try:
+                    events, diag = future.result()
+                    fresh[code] = events; coverage[code] = diag
+                    success.add(code); failed.discard(code)
+                    print(f"API-Football {code}: {len(events)} partite")
+                except Exception as error:
+                    coverage[code] = {"status":"unavailable","source":"API-Football","error":str(error)[:180]}
+                    print(f"AVVISO API-Football {code}: {error}")
+
+    # Fonte di riserva per i campionati: risultati storici e calendario eventualmente incluso nei CSV.
+    domestic_fallback = set(LEAGUES) - success
     with ThreadPoolExecutor(max_workers=6) as pool:
-        futures = {pool.submit(fetch_domestic_csv, code, jobs[code][0], jobs[code][1], jobs[code][2]): code for code in LEAGUES}
+        futures = {pool.submit(fetch_domestic_csv, code, jobs[code][0], jobs[code][1], jobs[code][2]): code for code in domestic_fallback}
         for future in as_completed(futures):
             code = futures[future]
             try:
                 events, diag = future.result()
-                fresh[code] = events; coverage[code] = diag; success.add(code)
+                fresh[code] = events; coverage[code] = {**coverage.get(code, {}), **diag}
+                success.add(code); failed.discard(code)
                 print(f"football-data {code}: {len(events)} gare, {diag['completed']} risultati")
             except Exception as error:
-                failed.add(code)
-                coverage[code] = {"status":"unavailable","source":"football-data.co.uk","error":str(error)[:160]}
-                print(f"AVVISO football-data {code}: {error}; provo ESPN.")
+                coverage.setdefault(code, {}).update({"status":"unavailable","source":"football-data.co.uk","error":str(error)[:160]})
+                print(f"AVVISO football-data {code}: {error}")
 
-    # ESPN per coppe UEFA/nazionali e solo come fallback per i CSV nazionali mancanti.
-    espn_codes = set(EUROPEAN) | set(CUPS) | (failed & set(LEAGUES))
+    # Integra le partite future presenti nel feed generale di football-data.
+    try:
+        global_fixtures = fetch_global_fixtures(today, jobs)
+        for code, events in global_fixtures.items():
+            if not events:
+                continue
+            existing = {(x["date"], x["home_team"].casefold(), x["away_team"].casefold()) for x in fresh.get(code, [])}
+            additions = [x for x in events if (x["date"], x["home_team"].casefold(), x["away_team"].casefold()) not in existing]
+            if additions:
+                fresh.setdefault(code, []).extend(additions)
+                success.add(code); failed.discard(code)
+                diag = coverage.setdefault(code, {"source":"football-data.co.uk"})
+                diag["future_fixtures"] = len(additions)
+                diag["future_source"] = "football-data.co.uk fixtures.csv"
+                diag["events"] = len(fresh[code])
+        print("Feed generale football-data: integrazione completata.")
+    except Exception as error:
+        coverage["global_fixtures"] = {"status":"unavailable","source":"football-data.co.uk","error":str(error)[:160]}
+        print(f"AVVISO fixtures.csv: {error}")
+
+    # ESPN rimane un fallback per coppe quando API-Football non è disponibile.
+    espn_codes = (set(EUROPEAN) | set(CUPS)) - success
+    espn_codes.update((set(LEAGUES) - success))
     with ThreadPoolExecutor(max_workers=4) as pool:
         futures = {pool.submit(fetch_calendar_competition, code, jobs[code][0], jobs[code][1], jobs[code][2]): code for code in espn_codes}
         for future in as_completed(futures):
@@ -432,7 +624,6 @@ def main():
                 coverage.setdefault(code, {}).update({"status":"unavailable","source":"ESPN","error":str(error)[:160]})
                 print(f"ERRORE ESPN {code}: {error}")
 
-    # Non cancellare mai l'ultimo calendario noto quando una fonte è irraggiungibile.
     fixture_map = {}
     for item in old_fixtures:
         if isinstance(item, dict) and item.get("competition_code") in failed:
@@ -445,7 +636,20 @@ def main():
     fixtures=sorted(fixture_map.values(),key=lambda x:(x.get("date",""),x.get("kickoff",""),x.get("competition","")))
 
     tables={}
+    if api_key:
+        eligible_tables = (set(LEAGUES) | set(EUROPEAN)) & success
+        with ThreadPoolExecutor(max_workers=4) as pool:
+            futures = {pool.submit(fetch_api_football_standings, api_key, code, jobs[code][0], jobs[code][3]): code for code in eligible_tables}
+            for future in as_completed(futures):
+                code=futures[future]
+                try:
+                    tables[code]=future.result()
+                    coverage.setdefault(code,{})["standings"]={"status":"available","source":"API-Football","teams":len(tables[code]["rows"])}
+                except Exception as error:
+                    coverage.setdefault(code,{})["standings"]={"status":"unavailable","source":"API-Football","error":str(error)[:160]}
     for code,(meta,start,end,season) in jobs.items():
+        if code in tables:
+            continue
         if code in LEAGUES and code in success:
             tables[code]=calculate_domestic_table(fixtures,code,meta,season,now.isoformat())
         elif code in old_tables:
@@ -469,14 +673,14 @@ def main():
         if key in seen: continue
         seen.add(key); valid.append(item)
 
-    result={"schema_version":2,"updated_at":now.isoformat(),
-      "source_policy":"Campionati: football-data.co.uk; coppe e fallback: ESPN. Date, nomi e punteggi sono controllati. La classifica nazionale è ricalcolata dai risultati e può differire dall'ufficiale per penalizzazioni o regole speciali.",
+    result={"schema_version":3,"updated_at":now.isoformat(),
+      "source_policy":"Fonte prioritaria: API-Football se la chiave è configurata; fallback football-data.co.uk per i campionati ed ESPN per le coppe. Date, squadre e punteggi sono controllati. La copertura e gli errori sono esposti per competizione.",
       "fixtures":valid,"standings":tables,"coverage":coverage,
       "summary":{"competitions_configured":len(jobs),
         "competitions_with_fixtures":sum(1 for code in jobs if coverage.get(code,{}).get("events",0)>0),
         "fixtures_total":len(valid),"fixtures_completed":sum(1 for x in valid if x.get("status")=="completed"),
         "fixtures_scheduled":sum(1 for x in valid if x.get("status")=="scheduled"),
-        "standings_available":sum(1 for x in tables.values() if x.get("diagnostics",{}).get("status") in ("computed_from_results","partial")),
+        "standings_available":sum(1 for x in tables.values() if x.get("diagnostics",{}).get("status") in ("available","computed_from_results","partial")),
         "validation_errors":errors[:20]}}
     OUTPUT.parent.mkdir(parents=True,exist_ok=True)
     OUTPUT.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
