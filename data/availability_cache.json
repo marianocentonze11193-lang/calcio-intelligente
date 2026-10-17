@@ -39797,6 +39797,61 @@
       "away_formation": "",
       "home_coach": "A. Skiri",
       "away_coach": "K. Rekdal"
+    },
+    "1561942": {
+      "updated_at": "2026-10-17T14:44:45.397902+00:00",
+      "home_starters": [
+        "D. Schierl",
+        "Anilson",
+        "M. Maak",
+        "N. Pertlwieser",
+        "R. Voisine",
+        "D. Kacuri",
+        "D. Weixelbraun",
+        "L. Afrifa",
+        "Alieu Conateh",
+        "Danilo Soares",
+        "A. Verinac"
+      ],
+      "away_starters": [
+        "L. Jungwirth",
+        "Daniel Elfadli",
+        "Alemão",
+        "M. Freckleton",
+        "F. Flecker",
+        "M. Bogarde",
+        "S. Horvath",
+        "Y. Dibango",
+        "R. Ljubičić",
+        "S. Kalajdzic",
+        "S. Adeniran"
+      ],
+      "home_substitutes": [
+        "P. Benjamin",
+        "P. Böhm",
+        "E. Chukwu",
+        "S. Diarra",
+        "A. Gashi",
+        "F. Gmeiner",
+        "P. Grabher",
+        "L. Ibertsberger",
+        "L. Jastremski"
+      ],
+      "away_substitutes": [
+        "T. Schützenauer",
+        "A. Schöpf",
+        "K. Jørgensen",
+        "X. Mbuyamba",
+        "C. Lang",
+        "N. Kane",
+        "K. Daněk",
+        "A. Andrade",
+        "M. Verhaeghe"
+      ],
+      "home_formation": "4-1-4-1",
+      "away_formation": "3-4-1-2",
+      "home_coach": "M. Mader",
+      "away_coach": "D. Kühbauer"
     }
   },
   "lineup_attempts": {
@@ -39804,7 +39859,8 @@
     "1552189": "2026-10-16T17:48:12.151719+00:00",
     "1557430": "2026-10-17T10:45:40.213124+00:00",
     "1550156": "2026-10-17T12:54:30.029189+00:00",
-    "1494781": "2026-10-17T13:45:06.569900+00:00"
+    "1494781": "2026-10-17T13:45:06.569900+00:00",
+    "1561942": "2026-10-17T14:44:45.397902+00:00"
   },
   "unavailable_dates": {}
 }
