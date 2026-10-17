@@ -63,6 +63,12 @@ class PredictionModelTests(unittest.TestCase):
         self.assertEqual(context["status"], "non_verificabile")
         self.assertIn("non dedotte", context["note"])
 
+    def test_number_preserves_zero_as_a_valid_numeric_value(self):
+        self.assertEqual(module.number(0), 0.0)
+        self.assertEqual(module.number("0"), 0.0)
+        self.assertIsNone(module.number(None))
+        self.assertIsNone(module.number(""))
+
     def test_load_competition_calendar_uses_fresh_cache_for_european_and_national_cups(self):
         now = datetime(2026, 10, 17, 12, tzinfo=timezone.utc)
         payload = {
