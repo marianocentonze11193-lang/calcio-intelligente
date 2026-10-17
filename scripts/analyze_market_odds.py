@@ -57,6 +57,22 @@ def value_assessment(match, now=None):
 
 
 def market_analysis(match):
+    # Le quote possono essere mostrate a scopo informativo, ma il modello non è
+    # validato per le coppe: non pubblicare EV o candidati automatici in questi casi.
+    if match.get("competition_type") in ("europea", "coppa_nazionale"):
+        match["suggested_markets"] = []
+        match["value_bets"] = []
+        match.pop("expected_value_1x2", None)
+        match.pop("market_implied_probability_1x2", None)
+        match.pop("market_overround_1x2", None)
+        match.pop("model_vs_market_delta_1x2", None)
+        match["value_assessment"] = {
+            "eligible_for_candidate": False,
+            "status": "non_validato_per_coppe",
+            "historically_validated": False,
+            "reasons": ["modello statistico non validato per questa competizione"],
+        }
+        return False
     odds = match.get("odds_1x2")
     probabilities = match.get("probabilities")
     if not isinstance(odds, dict) or not isinstance(probabilities, dict):
