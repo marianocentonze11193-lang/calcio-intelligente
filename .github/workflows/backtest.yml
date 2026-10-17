@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - "scripts/backtest_walk_forward.py"
+      - "tests/test_backtest.py"
       - ".github/workflows/backtest.yml"
   schedule:
     - cron: "37 4 * * 0"
@@ -33,6 +34,8 @@ jobs:
           git reset --hard origin/main
       - name: Verifica la sintassi del modello
         run: python -m py_compile scripts/update_predictions.py scripts/backtest_walk_forward.py
+      - name: Verifica i test locali del backtest
+        run: python -m unittest discover -s tests -p 'test_backtest.py' -v
       - name: Esegue il backtest walk-forward
         run: python scripts/backtest_walk_forward.py
       - name: Pubblica il report

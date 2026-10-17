@@ -34,7 +34,21 @@ def rows_to_results(rows, code, start_date, end_date):
             continue
         if not (0 <= hg <= 15 and 0 <= ag <= 15 and float(hg).is_integer() and float(ag).is_integer()):
             continue
-        results.append((parsed_date, home_key, away_key, int(hg), int(ag)))
+        market_probabilities = None
+        for names in (("AvgH", "AvgD", "AvgA"), ("B365H", "B365D", "B365A"),
+                      ("PSH", "PSD", "PSA")):
+            odds = [model.number(model.row_value(row, name)) for name in names]
+            if all(value is not None and value > 1 for value in odds):
+                inverse = [1.0 / value for value in odds]
+                total = sum(inverse)
+                if total > 0:
+                    market_probabilities = {
+                        "home_win": inverse[0] / total * 100,
+                        "draw": inverse[1] / total * 100,
+                        "away_win": inverse[2] / total * 100,
+                    }
+                break
+        results.append((parsed_date, home_key, away_key, int(hg), int(ag), market_probabilities))
     return results
 
 
@@ -44,7 +58,8 @@ def history_for(results):
         "home_scored": 0, "home_conceded": 0, "away_scored": 0, "away_conceded": 0,
     })
     completed = []
-    for _, home, away, hg, ag in results:
+    for row in results:
+        _, home, away, hg, ag = row[:5]
         hs, aws = history[home], history[away]
         hs["played"] += 1
         hs["home_games"] += 1
@@ -63,22 +78,58 @@ def score_probabilities(probabilities, outcome):
     values = [float(probabilities[key]) / 100 for key in ("home_win", "draw", "away_win")]
     actual_index = labels.index(outcome)
     actual = [1.0 if i == actual_index else 0.0 for i in range(3)]
+    predicted_index = max(range(3), key=lambda i: values[i])
     return {
-        "correct": int(max(range(3), key=lambda i: values[i]) == actual_index),
+        "correct": int(predicted_index == actual_index),
         "brier": sum((values[i] - actual[i]) ** 2 for i in range(3)),
         "log_loss": -math.log(max(1e-15, values[actual_index])),
+        "predicted_confidence": values[predicted_index],
     }
+
+
+def blend_probabilities(model_probabilities, market_probabilities, model_weight=0.5):
+    """Miscela sperimentale modello/mercato; non viene usata nelle previsioni pubblicate."""
+    if not isinstance(model_probabilities, dict) or not isinstance(market_probabilities, dict):
+        return None
+    keys = ("home_win", "draw", "away_win")
+    try:
+        model_values = [float(model_probabilities[key]) for key in keys]
+        market_values = [float(market_probabilities[key]) for key in keys]
+    except (KeyError, TypeError, ValueError):
+        return None
+    if any(value < 0 or value > 100 for value in model_values + market_values):
+        return None
+    if abs(sum(model_values) - 100) > 1.5 or abs(sum(market_values) - 100) > 1.5:
+        return None
+    blended = [model_weight * m + (1 - model_weight) * p for m, p in zip(model_values, market_values)]
+    total = sum(blended)
+    if total <= 0:
+        return None
+    return {key: value * 100 / total for key, value in zip(keys, blended)}
 
 
 def metric_summary(rows):
     if not rows:
-        return {"matches": 0, "accuracy_1x2": None, "brier_score_1x2": None, "log_loss_1x2": None}
+        return {"matches": 0, "accuracy_1x2": None, "brier_score_1x2": None, "log_loss_1x2": None,
+                "top_class_calibration": []}
     n = len(rows)
+    bins = [(0.0, 0.4), (0.4, 0.5), (0.5, 0.6), (0.6, 0.7), (0.7, 0.8), (0.8, 1.01)]
+    calibration = []
+    for lower, upper in bins:
+        selected = [r for r in rows if lower <= r.get("predicted_confidence", 0) < upper]
+        if selected:
+            calibration.append({
+                "confidence_range": f"{int(lower * 100)}-{min(100, int(upper * 100))}%",
+                "matches": len(selected),
+                "mean_predicted_confidence_pct": round(sum(r["predicted_confidence"] for r in selected) * 100 / len(selected), 2),
+                "observed_accuracy_pct": round(sum(r["correct"] for r in selected) * 100 / len(selected), 2),
+            })
     return {
         "matches": n,
         "accuracy_1x2": round(sum(r["correct"] for r in rows) * 100 / n, 2),
         "brier_score_1x2": round(sum(r["brier"] for r in rows) / n, 4),
         "log_loss_1x2": round(sum(r["log_loss"] for r in rows) / n, 4),
+        "top_class_calibration": calibration,
     }
 
 
@@ -117,34 +168,45 @@ def walk_forward_league(league_name, results):
                 elo = model.calculate_elo(completed)
                 recent = model.calculate_recent_form(completed)
                 motivation = model.build_motivation_table(completed)
-                outcomes = [("1" if hg > ag else "X" if hg == ag else "2") for _, _, _, hg, ag in prior_results]
+                outcomes = [("1" if row[3] > row[4] else "X" if row[3] == row[4] else "2") for row in prior_results]
                 baseline_counts = {label: outcomes.count(label) + 1 for label in ("1", "X", "2")}
                 baseline_total = sum(baseline_counts.values())
                 baseline_probs = {label: baseline_counts[label] / baseline_total for label in baseline_counts}
-                for _, home, away, hg, ag in day_fixtures:
+                for fixture in day_fixtures:
+                    _, home, away, hg, ag = fixture[:5]
+                    market_probabilities = fixture[5] if len(fixture) > 5 else None
                     outcome = "1" if hg > ag else "X" if hg == ag else "2"
                     variants = {}
+                    model_probabilities = None
                     variant_args = {
-                        "poisson_only": (None, {}),
-                        "poisson_elo": (elo, {}),
-                        "poisson_form": (None, recent),
-                        "model": (elo, {}),
-                        "poisson_elo_form": (elo, recent),
+                        "poisson_only": (None, False),
+                        "poisson_elo": (elo, False),
+                        "poisson_form": (None, True),
+                        "model": (elo, False),
+                        "poisson_elo_form": (elo, True),
                     }
-                    for variant, (variant_elo, variant_form) in variant_args.items():
+                    for variant, (variant_elo, use_form) in variant_args.items():
                         forecast = model.make_forecast(
                             home, away, league_name, match_day, "", history, home_avg, away_avg,
-                            variant_elo, variant_form, [], motivation,
+                            variant_elo, recent if use_form else {}, [], motivation,
+                            apply_form_adjustment=use_form, apply_competition_adjustment=False,
                         )
                         probs = forecast.get("probabilities") or {}
                         if all(key in probs for key in ("home_win", "draw", "away_win")):
                             variants[variant] = score_probabilities(probs, outcome)
+                            if variant == "model":
+                                model_probabilities = probs
                     if "model" not in variants:
                         continue
                     baseline = {key: baseline_probs[label] * 100 for key, label in zip(("home_win", "draw", "away_win"), ("1", "X", "2"))}
+                    scored_market = score_probabilities(market_probabilities, outcome) if market_probabilities else None
+                    blended = blend_probabilities(model_probabilities, market_probabilities) if market_probabilities else None
+                    if blended:
+                        variants["market_blend_50_50"] = score_probabilities(blended, outcome)
                     predictions.append({
                         "date": match_day.isoformat(), "outcome": outcome,
                         "variants": variants, "baseline": score_probabilities(baseline, outcome),
+                        "market_baseline": scored_market,
                     })
         prior_results.extend(day_fixtures)
         cursor = end
@@ -156,6 +218,7 @@ def main():
     all_by_league = {}
     all_model = []
     all_baseline = []
+    all_market = []
     all_variants = defaultdict(list)
     errors = []
     for code in sorted(model.FOOTBALL_DATA_LEAGUES):
@@ -169,14 +232,17 @@ def main():
             all_by_league[league] = {
                 "source_matches": len(results),
                 "variants": {name: metric_summary([item["variants"][name] for item in evaluated if name in item["variants"]])
-                             for name in ("poisson_only", "poisson_elo", "poisson_form", "model", "poisson_elo_form")},
+                             for name in ("poisson_only", "poisson_elo", "poisson_form", "model", "poisson_elo_form", "market_blend_50_50")},
                 "prior_frequency_baseline": metric_summary([item["baseline"] for item in evaluated]),
+                "market_baseline": metric_summary([item["market_baseline"] for item in evaluated if item.get("market_baseline")]),
+                "market_coverage_matches": sum(1 for item in evaluated if item.get("market_baseline")),
                 "period_start": min((item["date"] for item in evaluated), default=None),
                 "period_end": max((item["date"] for item in evaluated), default=None),
             }
             all_model.extend(item["variants"]["model"] for item in evaluated if "model" in item["variants"])
             all_baseline.extend(item["baseline"] for item in evaluated)
-            for name in ("poisson_only", "poisson_elo", "poisson_form", "poisson_elo_form"):
+            all_market.extend(item["market_baseline"] for item in evaluated if item.get("market_baseline"))
+            for name in ("poisson_only", "poisson_elo", "poisson_form", "poisson_elo_form", "market_blend_50_50"):
                 all_variants[name].extend(item["variants"][name] for item in evaluated if name in item["variants"])
             print(f"{league}: {len(results)} risultati sorgente, {len(evaluated)} previsioni walk-forward.")
         except (urllib.error.URLError, TimeoutError, OSError, ValueError, KeyError, TypeError) as error:
@@ -196,7 +262,9 @@ def main():
             "walk_forward": metric_summary(all_model),
             "ablations": {name: metric_summary(rows) for name, rows in all_variants.items()},
             "prior_frequency_baseline": metric_summary(all_baseline),
-            "comparison_note": "Confronto su identiche partite; per Brier score e log loss un valore più basso è migliore.",
+            "market_baseline": metric_summary(all_market),
+            "market_coverage_matches": len(all_market),
+            "comparison_note": "Confronto su identiche partite; per Brier score e log loss un valore più basso è migliore. Il mercato è confrontato solo sulle partite con quote storiche complete.",
         },
         "leagues": all_by_league,
         "leagues_with_results": len(all_by_league),
@@ -206,6 +274,9 @@ def main():
             "Le gare dello stesso giorno vengono tutte previste prima di aggiungere i risultati di quel giorno, per evitare leakage intra-giornaliero.",
             "Le coppe, gli infortuni, le squalifiche e le formazioni ufficiali non sono inclusi in questo backtest.",
             "Il risultato è un test storico ricostruito con il modello corrente e non prova da solo prestazioni future o redditività.",
+            "Il benchmark di mercato usa AvgH/AvgD/AvgA, con fallback B365H/D/A e PSH/PSD/PSA, solo quando le quote storiche sono complete; le probabilità sono normalizzate per rimuovere il margine.",
+            "La miscela 50/50 modello-mercato è sperimentale e resta esclusa dai pronostici pubblicati finché non supera una validazione fuori campione.",
+            "La calibrazione top-class confronta la probabilità dell'esito più probabile con la frequenza di correttezza nella stessa fascia.",
         ],
     }
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
