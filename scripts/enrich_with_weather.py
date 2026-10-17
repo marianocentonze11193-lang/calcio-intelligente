@@ -14,6 +14,15 @@ CACHE = ROOT / "data" / "weather_cache.json"
 USER_AGENT = "CalcioIntelligente/1.0"
 CACHE_TTL_HOURS = 3
 
+COUNTRY_ALIASES = {
+    "inghilterra": "united kingdom", "scozia": "united kingdom", "galles": "united kingdom",
+    "irlanda": "ireland", "paesi bassi": "netherlands", "germania": "germany",
+    "italia": "italy", "spagna": "spain", "francia": "france", "portogallo": "portugal",
+    "belgio": "belgium", "turchia": "turkey", "austria": "austria", "danimarca": "denmark",
+    "grecia": "greece", "finlandia": "finland", "norvegia": "norway", "polonia": "poland",
+    "romania": "romania", "svezia": "sweden", "svizzera": "switzerland",
+}
+
 WEATHER_CODES = {
     0: "sereno", 1: "prevalentemente sereno", 2: "parzialmente nuvoloso", 3: "coperto",
     45: "nebbia", 48: "nebbia con brina", 51: "pioviggine debole", 53: "pioviggine moderata",
@@ -54,10 +63,12 @@ def get_location(city, country, cache, now):
     query = urllib.parse.urlencode({"name": city, "count": 10, "language": "en", "format": "json"})
     payload = fetch_json("https://geocoding-api.open-meteo.com/v1/search?" + query)
     results = payload.get("results") or []
-    country_norm = team_key(country)
+    country_norm = team_key(COUNTRY_ALIASES.get(team_key(country), country))
     selected = next((item for item in results if country_norm and country_norm in team_key(item.get("country"))), None)
-    if selected is None and len(results) == 1:
-        selected = results[0]
+    if selected is None and results:
+        # La geocodifica resta solo approssimativa se il paese della fonte è ambiguo;
+        # preferisce il primo risultato del servizio anziché inventare coordinate.
+        selected = results[0] if len(results) == 1 else None
     if not selected:
         return None
     result = {
