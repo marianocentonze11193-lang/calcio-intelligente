@@ -787,6 +787,58 @@ def motivation_for_match(home, away, table):
 
 
 
+
+def apply_motivation_adjustment(expected_home, expected_away, motivation_context):
+    """Applica una correzione minima e trasparente solo con segnali di classifica verificabili.
+
+    È una feature sperimentale: non presume che la pressione migliori sempre la prestazione.
+    Corregge al massimo dell'1.5% l'attacco stimato della squadra con un segnale competitivo
+    forte quando l'avversaria non ne presenta uno. Se entrambe hanno segnali, o i dati
+    sono incompleti, non modifica le attese.
+    """
+    result = {
+        "home_factor": 1.0,
+        "away_factor": 1.0,
+        "applied": False,
+        "adjustment_pct": 0.0,
+        "status": "nessuna_correzione",
+        "note": "Nessuna correzione motivazionale: segnali insufficienti o pressione competitiva simile.",
+    }
+    if not isinstance(motivation_context, dict) or motivation_context.get("status") != "indizi_classifica":
+        result["status"] = "non_verificabile"
+        result["note"] = "Motivazioni non applicate: classifica o campione insufficiente."
+        return expected_home, expected_away, result
+
+    high_stakes_labels = ("possibile corsa al titolo", "zona obiettivi europei", "possibile lotta salvezza")
+    def has_stakes(side):
+        signals = side.get("signals", []) if isinstance(side, dict) else []
+        return any(any(label in str(signal).casefold() for label in high_stakes_labels)
+                   for signal in signals)
+
+    home_stakes = has_stakes(motivation_context.get("home"))
+    away_stakes = has_stakes(motivation_context.get("away"))
+    if home_stakes == away_stakes:
+        result["status"] = "pressione_simile"
+        result["note"] = "Nessuna correzione: entrambe le squadre hanno segnali competitivi simili, oppure nessuna ne ha."
+        return expected_home, expected_away, result
+
+    factor = 1.015
+    if home_stakes:
+        expected_home = max(0.15, min(4.5, expected_home * factor))
+        result.update({"home_factor": factor, "applied": True, "adjustment_pct": 1.5})
+        team = "squadra di casa"
+    else:
+        expected_away = max(0.15, min(4.5, expected_away * factor))
+        result.update({"away_factor": factor, "applied": True, "adjustment_pct": 1.5})
+        team = "squadra ospite"
+    result["status"] = "sperimentale_applicata"
+    result["note"] = (
+        f"Correzione sperimentale +1,5% ai gol attesi della {team} per segnali di classifica; "
+        "effetto prudenziale, non prova di maggiore probabilità di vittoria. Da validare su dati storici."
+    )
+    return expected_home, expected_away, result
+
+
 def build_betting_recommendations(probabilities, home_sample, away_sample, recent_context=None):
     """Seleziona pochi mercati da valutare e indica una quota-obiettivo prudente."""
     if not probabilities or home_sample < 8 or away_sample < 8:
@@ -901,6 +953,10 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
             expected_home = max(0.15, expected_home * item["attack_factor"])
         elif team_key(item["team"]) == team_key(away):
             expected_away = max(0.15, expected_away * item["attack_factor"])
+    motivation_context = motivation_for_match(home, away, motivation_table or {})
+    expected_home, expected_away, motivation_adjustment = apply_motivation_adjustment(
+        expected_home, expected_away, motivation_context
+    )
     hp, ap = poisson_probs(expected_home), poisson_probs(expected_away)
 
     home_win = draw = away_win = over15 = over25 = over35 = btts = 0.0
@@ -986,7 +1042,11 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
         "away_recent_form": (recent_form or {}).get(away),
         "european_context": european_context,
         "recent_competition_context": recent_competition_context,
-        "motivation_context": motivation_for_match(home, away, motivation_table or {}),
+        "motivation_context": {
+            **motivation_context,
+            "model_adjustment": motivation_adjustment,
+        },
+        "motivation_adjustment": motivation_adjustment,
         "european_fatigue_status": "rilevato" if european_context else "nessuna gara europea recente verificata",
         "recent_competition_status": "impegno ravvicinato rilevato" if recent_competition_context else "nessun impegno recente verificato",
         "competition_type": "europea" if league in EUROPEAN_ESPN_COMPETITIONS.values() else "nazionale" if league in NATIONAL_CUP_ESPN_COMPETITIONS.values() else "campionato",
