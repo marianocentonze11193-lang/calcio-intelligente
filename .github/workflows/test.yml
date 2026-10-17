@@ -24,5 +24,7 @@ jobs:
           python-version: "3.12"
       - name: Test automatici Python
         run: python -m unittest discover -s tests -v
+      - name: Controllo sintassi di tutti gli script Python
+        run: python -m py_compile scripts/*.py
       - name: Controllo sintassi JavaScript
         run: node --check app.js
