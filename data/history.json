@@ -2581,9 +2581,10 @@
       "expected_away_goals": 1.13,
       "sample_matches": 0,
       "archived_at": "2026-10-15T10:09:22.994384+00:00",
-      "outcome": null,
-      "home_goals": null,
-      "away_goals": null
+      "outcome": "2",
+      "home_goals": 1,
+      "away_goals": 3,
+      "settled_at": "2026-10-17T17:13:00.160040+00:00"
     },
     {
       "id": "2026-10-18-Ligue 1-Lorient-AS Monaco",
@@ -8257,9 +8258,9 @@
       "away_goals": null
     }
   ],
-  "updated_at": "2026-10-17T16:55:48.515709+00:00",
+  "updated_at": "2026-10-17T17:13:00.160486+00:00",
   "metrics": {
-    "settled_matches": 25,
+    "settled_matches": 26,
     "accuracy_1x2": null,
     "brier_score_1x2": null,
     "minimum_matches_required": 30,
@@ -8309,7 +8310,7 @@
     }
   },
   "result_matching": {
-    "checked_at": "2026-10-17T16:55:48.515695+00:00",
+    "checked_at": "2026-10-17T17:13:00.160475+00:00",
     "unresolved_past_matches": 3,
     "examples": [
       {
@@ -8353,7 +8354,7 @@
         "context_matches_archived": 26
       },
       "no_recent_european_match": {
-        "settled_matches": 23,
+        "settled_matches": 24,
         "accuracy_1x2": null,
         "brier_score_1x2": null,
         "minimum_matches_required": 30,
