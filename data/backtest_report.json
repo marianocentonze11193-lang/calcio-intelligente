@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T20:04:33.276535+00:00",
+  "updated_at": "2026-10-17T20:29:02.220868+00:00",
   "method": "walk-forward cronologico per data, con baseline di frequenza 1/X/2 calcolata solo sui risultati precedenti e smoothing di Laplace",
   "period_start_requested": "2024-07-01",
   "period_end_requested": "2026-10-16",
@@ -8,41 +8,340 @@
       "matches": 6616,
       "accuracy_1x2": 51.51,
       "brier_score_1x2": 0.5995,
-      "log_loss_1x2": 1.005
+      "log_loss_1x2": 1.005,
+      "top_class_calibration": [
+        {
+          "confidence_range": "0-40%",
+          "matches": 826,
+          "mean_predicted_confidence_pct": 37.92,
+          "observed_accuracy_pct": 37.65
+        },
+        {
+          "confidence_range": "40-50%",
+          "matches": 2064,
+          "mean_predicted_confidence_pct": 44.73,
+          "observed_accuracy_pct": 43.07
+        },
+        {
+          "confidence_range": "50-60%",
+          "matches": 1568,
+          "mean_predicted_confidence_pct": 54.77,
+          "observed_accuracy_pct": 49.04
+        },
+        {
+          "confidence_range": "60-70%",
+          "matches": 1117,
+          "mean_predicted_confidence_pct": 64.35,
+          "observed_accuracy_pct": 61.59
+        },
+        {
+          "confidence_range": "70-80%",
+          "matches": 671,
+          "mean_predicted_confidence_pct": 74.43,
+          "observed_accuracy_pct": 67.96
+        },
+        {
+          "confidence_range": "80-100%",
+          "matches": 370,
+          "mean_predicted_confidence_pct": 85.05,
+          "observed_accuracy_pct": 79.73
+        }
+      ]
     },
     "ablations": {
       "poisson_only": {
         "matches": 6616,
         "accuracy_1x2": 51.28,
         "brier_score_1x2": 0.6003,
-        "log_loss_1x2": 1.0057
+        "log_loss_1x2": 1.0057,
+        "top_class_calibration": [
+          {
+            "confidence_range": "0-40%",
+            "matches": 904,
+            "mean_predicted_confidence_pct": 37.91,
+            "observed_accuracy_pct": 39.05
+          },
+          {
+            "confidence_range": "40-50%",
+            "matches": 2233,
+            "mean_predicted_confidence_pct": 44.71,
+            "observed_accuracy_pct": 43.13
+          },
+          {
+            "confidence_range": "50-60%",
+            "matches": 1673,
+            "mean_predicted_confidence_pct": 54.75,
+            "observed_accuracy_pct": 50.69
+          },
+          {
+            "confidence_range": "60-70%",
+            "matches": 1017,
+            "mean_predicted_confidence_pct": 64.4,
+            "observed_accuracy_pct": 64.01
+          },
+          {
+            "confidence_range": "70-80%",
+            "matches": 571,
+            "mean_predicted_confidence_pct": 74.38,
+            "observed_accuracy_pct": 71.63
+          },
+          {
+            "confidence_range": "80-100%",
+            "matches": 218,
+            "mean_predicted_confidence_pct": 84.61,
+            "observed_accuracy_pct": 77.52
+          }
+        ]
       },
       "poisson_elo": {
         "matches": 6616,
         "accuracy_1x2": 51.51,
         "brier_score_1x2": 0.5995,
-        "log_loss_1x2": 1.005
+        "log_loss_1x2": 1.005,
+        "top_class_calibration": [
+          {
+            "confidence_range": "0-40%",
+            "matches": 826,
+            "mean_predicted_confidence_pct": 37.92,
+            "observed_accuracy_pct": 37.65
+          },
+          {
+            "confidence_range": "40-50%",
+            "matches": 2064,
+            "mean_predicted_confidence_pct": 44.73,
+            "observed_accuracy_pct": 43.07
+          },
+          {
+            "confidence_range": "50-60%",
+            "matches": 1568,
+            "mean_predicted_confidence_pct": 54.77,
+            "observed_accuracy_pct": 49.04
+          },
+          {
+            "confidence_range": "60-70%",
+            "matches": 1117,
+            "mean_predicted_confidence_pct": 64.35,
+            "observed_accuracy_pct": 61.59
+          },
+          {
+            "confidence_range": "70-80%",
+            "matches": 671,
+            "mean_predicted_confidence_pct": 74.43,
+            "observed_accuracy_pct": 67.96
+          },
+          {
+            "confidence_range": "80-100%",
+            "matches": 370,
+            "mean_predicted_confidence_pct": 85.05,
+            "observed_accuracy_pct": 79.73
+          }
+        ]
       },
       "poisson_form": {
         "matches": 6616,
         "accuracy_1x2": 50.94,
         "brier_score_1x2": 0.6045,
-        "log_loss_1x2": 1.0134
+        "log_loss_1x2": 1.0134,
+        "top_class_calibration": [
+          {
+            "confidence_range": "0-40%",
+            "matches": 879,
+            "mean_predicted_confidence_pct": 37.68,
+            "observed_accuracy_pct": 39.25
+          },
+          {
+            "confidence_range": "40-50%",
+            "matches": 1920,
+            "mean_predicted_confidence_pct": 44.87,
+            "observed_accuracy_pct": 41.77
+          },
+          {
+            "confidence_range": "50-60%",
+            "matches": 1493,
+            "mean_predicted_confidence_pct": 54.79,
+            "observed_accuracy_pct": 46.82
+          },
+          {
+            "confidence_range": "60-70%",
+            "matches": 1102,
+            "mean_predicted_confidence_pct": 64.68,
+            "observed_accuracy_pct": 58.98
+          },
+          {
+            "confidence_range": "70-80%",
+            "matches": 701,
+            "mean_predicted_confidence_pct": 74.62,
+            "observed_accuracy_pct": 67.62
+          },
+          {
+            "confidence_range": "80-100%",
+            "matches": 521,
+            "mean_predicted_confidence_pct": 85.88,
+            "observed_accuracy_pct": 76.78
+          }
+        ]
       },
       "poisson_elo_form": {
         "matches": 6616,
         "accuracy_1x2": 51.0,
         "brier_score_1x2": 0.6053,
-        "log_loss_1x2": 1.0159
+        "log_loss_1x2": 1.0159,
+        "top_class_calibration": [
+          {
+            "confidence_range": "0-40%",
+            "matches": 821,
+            "mean_predicted_confidence_pct": 37.71,
+            "observed_accuracy_pct": 38.61
+          },
+          {
+            "confidence_range": "40-50%",
+            "matches": 1791,
+            "mean_predicted_confidence_pct": 44.89,
+            "observed_accuracy_pct": 41.26
+          },
+          {
+            "confidence_range": "50-60%",
+            "matches": 1445,
+            "mean_predicted_confidence_pct": 54.86,
+            "observed_accuracy_pct": 45.61
+          },
+          {
+            "confidence_range": "60-70%",
+            "matches": 1076,
+            "mean_predicted_confidence_pct": 64.74,
+            "observed_accuracy_pct": 57.81
+          },
+          {
+            "confidence_range": "70-80%",
+            "matches": 775,
+            "mean_predicted_confidence_pct": 74.33,
+            "observed_accuracy_pct": 65.68
+          },
+          {
+            "confidence_range": "80-100%",
+            "matches": 708,
+            "mean_predicted_confidence_pct": 86.46,
+            "observed_accuracy_pct": 74.58
+          }
+        ]
+      },
+      "market_blend_50_50": {
+        "matches": 6616,
+        "accuracy_1x2": 53.2,
+        "brier_score_1x2": 0.5812,
+        "log_loss_1x2": 0.9769,
+        "top_class_calibration": [
+          {
+            "confidence_range": "0-40%",
+            "matches": 983,
+            "mean_predicted_confidence_pct": 37.92,
+            "observed_accuracy_pct": 37.74
+          },
+          {
+            "confidence_range": "40-50%",
+            "matches": 2183,
+            "mean_predicted_confidence_pct": 44.68,
+            "observed_accuracy_pct": 45.4
+          },
+          {
+            "confidence_range": "50-60%",
+            "matches": 1599,
+            "mean_predicted_confidence_pct": 54.57,
+            "observed_accuracy_pct": 51.03
+          },
+          {
+            "confidence_range": "60-70%",
+            "matches": 1042,
+            "mean_predicted_confidence_pct": 64.52,
+            "observed_accuracy_pct": 68.52
+          },
+          {
+            "confidence_range": "70-80%",
+            "matches": 582,
+            "mean_predicted_confidence_pct": 74.34,
+            "observed_accuracy_pct": 75.26
+          },
+          {
+            "confidence_range": "80-100%",
+            "matches": 227,
+            "mean_predicted_confidence_pct": 83.65,
+            "observed_accuracy_pct": 83.7
+          }
+        ]
       }
     },
     "prior_frequency_baseline": {
       "matches": 6616,
       "accuracy_1x2": 43.32,
       "brier_score_1x2": 0.6517,
-      "log_loss_1x2": 1.0767
+      "log_loss_1x2": 1.0767,
+      "top_class_calibration": [
+        {
+          "confidence_range": "0-40%",
+          "matches": 978,
+          "mean_predicted_confidence_pct": 39.04,
+          "observed_accuracy_pct": 42.74
+        },
+        {
+          "confidence_range": "40-50%",
+          "matches": 5588,
+          "mean_predicted_confidence_pct": 44.28,
+          "observed_accuracy_pct": 43.45
+        },
+        {
+          "confidence_range": "50-60%",
+          "matches": 50,
+          "mean_predicted_confidence_pct": 50.41,
+          "observed_accuracy_pct": 40.0
+        }
+      ]
     },
-    "comparison_note": "Confronto su identiche partite; per Brier score e log loss un valore più basso è migliore."
+    "market_baseline": {
+      "matches": 6616,
+      "accuracy_1x2": 53.75,
+      "brier_score_1x2": 0.574,
+      "log_loss_1x2": 0.9659,
+      "top_class_calibration": [
+        {
+          "confidence_range": "0-40%",
+          "matches": 1168,
+          "mean_predicted_confidence_pct": 37.72,
+          "observed_accuracy_pct": 38.18
+        },
+        {
+          "confidence_range": "40-50%",
+          "matches": 2174,
+          "mean_predicted_confidence_pct": 44.68,
+          "observed_accuracy_pct": 44.94
+        },
+        {
+          "confidence_range": "50-60%",
+          "matches": 1507,
+          "mean_predicted_confidence_pct": 54.64,
+          "observed_accuracy_pct": 56.2
+        },
+        {
+          "confidence_range": "60-70%",
+          "matches": 973,
+          "mean_predicted_confidence_pct": 64.7,
+          "observed_accuracy_pct": 66.8
+        },
+        {
+          "confidence_range": "70-80%",
+          "matches": 605,
+          "mean_predicted_confidence_pct": 74.48,
+          "observed_accuracy_pct": 77.36
+        },
+        {
+          "confidence_range": "80-100%",
+          "matches": 189,
+          "mean_predicted_confidence_pct": 83.39,
+          "observed_accuracy_pct": 88.89
+        }
+      ]
+    },
+    "market_coverage_matches": 6616,
+    "comparison_note": "Confronto su identiche partite; per Brier score e log loss un valore più basso è migliore. Il mercato è confrontato solo sulle partite con quote storiche complete."
   },
   "leagues": {
     "Belgian Pro League": {
@@ -52,39 +351,332 @@
           "matches": 608,
           "accuracy_1x2": 47.2,
           "brier_score_1x2": 0.6277,
-          "log_loss_1x2": 1.0435
+          "log_loss_1x2": 1.0435,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 98,
+              "mean_predicted_confidence_pct": 37.79,
+              "observed_accuracy_pct": 41.84
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 219,
+              "mean_predicted_confidence_pct": 44.53,
+              "observed_accuracy_pct": 40.18
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 160,
+              "mean_predicted_confidence_pct": 54.67,
+              "observed_accuracy_pct": 46.88
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 78,
+              "mean_predicted_confidence_pct": 64.03,
+              "observed_accuracy_pct": 58.97
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 39,
+              "mean_predicted_confidence_pct": 73.83,
+              "observed_accuracy_pct": 66.67
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 14,
+              "mean_predicted_confidence_pct": 83.99,
+              "observed_accuracy_pct": 78.57
+            }
+          ]
         },
         "poisson_elo": {
           "matches": 608,
           "accuracy_1x2": 47.86,
           "brier_score_1x2": 0.6277,
-          "log_loss_1x2": 1.0438
+          "log_loss_1x2": 1.0438,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 94,
+              "mean_predicted_confidence_pct": 37.83,
+              "observed_accuracy_pct": 42.55
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 205,
+              "mean_predicted_confidence_pct": 44.82,
+              "observed_accuracy_pct": 40.0
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 145,
+              "mean_predicted_confidence_pct": 54.91,
+              "observed_accuracy_pct": 45.52
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 94,
+              "mean_predicted_confidence_pct": 64.04,
+              "observed_accuracy_pct": 56.38
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 50,
+              "mean_predicted_confidence_pct": 74.66,
+              "observed_accuracy_pct": 70.0
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 20,
+              "mean_predicted_confidence_pct": 85.27,
+              "observed_accuracy_pct": 75.0
+            }
+          ]
         },
         "poisson_form": {
           "matches": 608,
           "accuracy_1x2": 48.19,
           "brier_score_1x2": 0.6275,
-          "log_loss_1x2": 1.0447
+          "log_loss_1x2": 1.0447,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 92,
+              "mean_predicted_confidence_pct": 37.68,
+              "observed_accuracy_pct": 39.13
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 200,
+              "mean_predicted_confidence_pct": 44.69,
+              "observed_accuracy_pct": 41.5
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 142,
+              "mean_predicted_confidence_pct": 54.63,
+              "observed_accuracy_pct": 46.48
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 97,
+              "mean_predicted_confidence_pct": 64.66,
+              "observed_accuracy_pct": 59.79
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 47,
+              "mean_predicted_confidence_pct": 73.69,
+              "observed_accuracy_pct": 55.32
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 30,
+              "mean_predicted_confidence_pct": 86.04,
+              "observed_accuracy_pct": 80.0
+            }
+          ]
         },
         "model": {
           "matches": 608,
           "accuracy_1x2": 47.86,
           "brier_score_1x2": 0.6277,
-          "log_loss_1x2": 1.0438
+          "log_loss_1x2": 1.0438,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 94,
+              "mean_predicted_confidence_pct": 37.83,
+              "observed_accuracy_pct": 42.55
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 205,
+              "mean_predicted_confidence_pct": 44.82,
+              "observed_accuracy_pct": 40.0
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 145,
+              "mean_predicted_confidence_pct": 54.91,
+              "observed_accuracy_pct": 45.52
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 94,
+              "mean_predicted_confidence_pct": 64.04,
+              "observed_accuracy_pct": 56.38
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 50,
+              "mean_predicted_confidence_pct": 74.66,
+              "observed_accuracy_pct": 70.0
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 20,
+              "mean_predicted_confidence_pct": 85.27,
+              "observed_accuracy_pct": 75.0
+            }
+          ]
         },
         "poisson_elo_form": {
           "matches": 608,
           "accuracy_1x2": 47.7,
           "brier_score_1x2": 0.6286,
-          "log_loss_1x2": 1.0473
+          "log_loss_1x2": 1.0473,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 85,
+              "mean_predicted_confidence_pct": 37.64,
+              "observed_accuracy_pct": 35.29
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 186,
+              "mean_predicted_confidence_pct": 44.6,
+              "observed_accuracy_pct": 40.32
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 140,
+              "mean_predicted_confidence_pct": 54.58,
+              "observed_accuracy_pct": 46.43
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 94,
+              "mean_predicted_confidence_pct": 64.55,
+              "observed_accuracy_pct": 60.64
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 64,
+              "mean_predicted_confidence_pct": 73.8,
+              "observed_accuracy_pct": 53.12
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 39,
+              "mean_predicted_confidence_pct": 86.91,
+              "observed_accuracy_pct": 74.36
+            }
+          ]
+        },
+        "market_blend_50_50": {
+          "matches": 608,
+          "accuracy_1x2": 50.0,
+          "brier_score_1x2": 0.6052,
+          "log_loss_1x2": 1.011,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 100,
+              "mean_predicted_confidence_pct": 37.69,
+              "observed_accuracy_pct": 37.0
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 242,
+              "mean_predicted_confidence_pct": 44.76,
+              "observed_accuracy_pct": 45.04
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 143,
+              "mean_predicted_confidence_pct": 54.79,
+              "observed_accuracy_pct": 49.65
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 76,
+              "mean_predicted_confidence_pct": 64.17,
+              "observed_accuracy_pct": 67.11
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 40,
+              "mean_predicted_confidence_pct": 73.44,
+              "observed_accuracy_pct": 77.5
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 7,
+              "mean_predicted_confidence_pct": 82.57,
+              "observed_accuracy_pct": 71.43
+            }
+          ]
         }
       },
       "prior_frequency_baseline": {
         "matches": 608,
         "accuracy_1x2": 42.27,
         "brier_score_1x2": 0.6558,
-        "log_loss_1x2": 1.0828
+        "log_loss_1x2": 1.0828,
+        "top_class_calibration": [
+          {
+            "confidence_range": "40-50%",
+            "matches": 601,
+            "mean_predicted_confidence_pct": 44.22,
+            "observed_accuracy_pct": 42.26
+          },
+          {
+            "confidence_range": "50-60%",
+            "matches": 7,
+            "mean_predicted_confidence_pct": 50.0,
+            "observed_accuracy_pct": 42.86
+          }
+        ]
       },
+      "market_baseline": {
+        "matches": 608,
+        "accuracy_1x2": 50.99,
+        "brier_score_1x2": 0.5927,
+        "log_loss_1x2": 0.9941,
+        "top_class_calibration": [
+          {
+            "confidence_range": "0-40%",
+            "matches": 114,
+            "mean_predicted_confidence_pct": 37.94,
+            "observed_accuracy_pct": 34.21
+          },
+          {
+            "confidence_range": "40-50%",
+            "matches": 234,
+            "mean_predicted_confidence_pct": 44.6,
+            "observed_accuracy_pct": 43.59
+          },
+          {
+            "confidence_range": "50-60%",
+            "matches": 161,
+            "mean_predicted_confidence_pct": 54.1,
+            "observed_accuracy_pct": 60.87
+          },
+          {
+            "confidence_range": "60-70%",
+            "matches": 67,
+            "mean_predicted_confidence_pct": 64.41,
+            "observed_accuracy_pct": 70.15
+          },
+          {
+            "confidence_range": "70-80%",
+            "matches": 30,
+            "mean_predicted_confidence_pct": 73.52,
+            "observed_accuracy_pct": 73.33
+          },
+          {
+            "confidence_range": "80-100%",
+            "matches": 2,
+            "mean_predicted_confidence_pct": 82.32,
+            "observed_accuracy_pct": 100.0
+          }
+        ]
+      },
+      "market_coverage_matches": 608,
       "period_start": "2024-09-26",
       "period_end": "2026-10-11",
       "note": "Validazione cronologica: ogni previsione usa solo gare con data strettamente precedente; coppe e indisponibilità non sono incluse."
@@ -96,39 +688,332 @@
           "matches": 570,
           "accuracy_1x2": 49.65,
           "brier_score_1x2": 0.6142,
-          "log_loss_1x2": 1.0276
+          "log_loss_1x2": 1.0276,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 61,
+              "mean_predicted_confidence_pct": 38.32,
+              "observed_accuracy_pct": 39.34
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 206,
+              "mean_predicted_confidence_pct": 44.85,
+              "observed_accuracy_pct": 40.78
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 132,
+              "mean_predicted_confidence_pct": 54.81,
+              "observed_accuracy_pct": 49.24
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 95,
+              "mean_predicted_confidence_pct": 64.23,
+              "observed_accuracy_pct": 58.95
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 53,
+              "mean_predicted_confidence_pct": 74.41,
+              "observed_accuracy_pct": 69.81
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 23,
+              "mean_predicted_confidence_pct": 85.06,
+              "observed_accuracy_pct": 73.91
+            }
+          ]
         },
         "poisson_elo": {
           "matches": 570,
           "accuracy_1x2": 49.3,
           "brier_score_1x2": 0.6134,
-          "log_loss_1x2": 1.0276
+          "log_loss_1x2": 1.0276,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 60,
+              "mean_predicted_confidence_pct": 38.24,
+              "observed_accuracy_pct": 33.33
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 178,
+              "mean_predicted_confidence_pct": 44.71,
+              "observed_accuracy_pct": 38.76
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 133,
+              "mean_predicted_confidence_pct": 54.46,
+              "observed_accuracy_pct": 50.38
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 103,
+              "mean_predicted_confidence_pct": 64.54,
+              "observed_accuracy_pct": 57.28
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 58,
+              "mean_predicted_confidence_pct": 74.43,
+              "observed_accuracy_pct": 60.34
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 38,
+              "mean_predicted_confidence_pct": 85.39,
+              "observed_accuracy_pct": 81.58
+            }
+          ]
         },
         "poisson_form": {
           "matches": 570,
           "accuracy_1x2": 50.35,
           "brier_score_1x2": 0.6175,
-          "log_loss_1x2": 1.0355
+          "log_loss_1x2": 1.0355,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 66,
+              "mean_predicted_confidence_pct": 37.55,
+              "observed_accuracy_pct": 39.39
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 154,
+              "mean_predicted_confidence_pct": 44.69,
+              "observed_accuracy_pct": 41.56
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 133,
+              "mean_predicted_confidence_pct": 54.88,
+              "observed_accuracy_pct": 48.12
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 93,
+              "mean_predicted_confidence_pct": 64.61,
+              "observed_accuracy_pct": 53.76
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 74,
+              "mean_predicted_confidence_pct": 74.72,
+              "observed_accuracy_pct": 60.81
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 50,
+              "mean_predicted_confidence_pct": 86.44,
+              "observed_accuracy_pct": 76.0
+            }
+          ]
         },
         "model": {
           "matches": 570,
           "accuracy_1x2": 49.3,
           "brier_score_1x2": 0.6134,
-          "log_loss_1x2": 1.0276
+          "log_loss_1x2": 1.0276,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 60,
+              "mean_predicted_confidence_pct": 38.24,
+              "observed_accuracy_pct": 33.33
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 178,
+              "mean_predicted_confidence_pct": 44.71,
+              "observed_accuracy_pct": 38.76
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 133,
+              "mean_predicted_confidence_pct": 54.46,
+              "observed_accuracy_pct": 50.38
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 103,
+              "mean_predicted_confidence_pct": 64.54,
+              "observed_accuracy_pct": 57.28
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 58,
+              "mean_predicted_confidence_pct": 74.43,
+              "observed_accuracy_pct": 60.34
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 38,
+              "mean_predicted_confidence_pct": 85.39,
+              "observed_accuracy_pct": 81.58
+            }
+          ]
         },
         "poisson_elo_form": {
           "matches": 570,
           "accuracy_1x2": 50.18,
           "brier_score_1x2": 0.6188,
-          "log_loss_1x2": 1.0391
+          "log_loss_1x2": 1.0391,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 60,
+              "mean_predicted_confidence_pct": 37.62,
+              "observed_accuracy_pct": 41.67
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 148,
+              "mean_predicted_confidence_pct": 44.66,
+              "observed_accuracy_pct": 39.19
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 124,
+              "mean_predicted_confidence_pct": 55.08,
+              "observed_accuracy_pct": 47.58
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 91,
+              "mean_predicted_confidence_pct": 64.4,
+              "observed_accuracy_pct": 52.75
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 76,
+              "mean_predicted_confidence_pct": 74.26,
+              "observed_accuracy_pct": 59.21
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 71,
+              "mean_predicted_confidence_pct": 86.64,
+              "observed_accuracy_pct": 71.83
+            }
+          ]
+        },
+        "market_blend_50_50": {
+          "matches": 570,
+          "accuracy_1x2": 52.46,
+          "brier_score_1x2": 0.59,
+          "log_loss_1x2": 0.9911,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 79,
+              "mean_predicted_confidence_pct": 38.41,
+              "observed_accuracy_pct": 40.51
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 206,
+              "mean_predicted_confidence_pct": 44.85,
+              "observed_accuracy_pct": 44.66
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 122,
+              "mean_predicted_confidence_pct": 54.33,
+              "observed_accuracy_pct": 46.72
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 88,
+              "mean_predicted_confidence_pct": 64.17,
+              "observed_accuracy_pct": 69.32
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 51,
+              "mean_predicted_confidence_pct": 74.69,
+              "observed_accuracy_pct": 72.55
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 24,
+              "mean_predicted_confidence_pct": 85.01,
+              "observed_accuracy_pct": 83.33
+            }
+          ]
         }
       },
       "prior_frequency_baseline": {
         "matches": 570,
         "accuracy_1x2": 41.75,
         "brier_score_1x2": 0.6556,
-        "log_loss_1x2": 1.082
+        "log_loss_1x2": 1.082,
+        "top_class_calibration": [
+          {
+            "confidence_range": "0-40%",
+            "matches": 120,
+            "mean_predicted_confidence_pct": 39.14,
+            "observed_accuracy_pct": 44.17
+          },
+          {
+            "confidence_range": "40-50%",
+            "matches": 450,
+            "mean_predicted_confidence_pct": 42.26,
+            "observed_accuracy_pct": 41.11
+          }
+        ]
       },
+      "market_baseline": {
+        "matches": 570,
+        "accuracy_1x2": 52.98,
+        "brier_score_1x2": 0.5798,
+        "log_loss_1x2": 0.9755,
+        "top_class_calibration": [
+          {
+            "confidence_range": "0-40%",
+            "matches": 91,
+            "mean_predicted_confidence_pct": 38.07,
+            "observed_accuracy_pct": 28.57
+          },
+          {
+            "confidence_range": "40-50%",
+            "matches": 209,
+            "mean_predicted_confidence_pct": 44.46,
+            "observed_accuracy_pct": 48.8
+          },
+          {
+            "confidence_range": "50-60%",
+            "matches": 120,
+            "mean_predicted_confidence_pct": 54.82,
+            "observed_accuracy_pct": 56.67
+          },
+          {
+            "confidence_range": "60-70%",
+            "matches": 82,
+            "mean_predicted_confidence_pct": 64.37,
+            "observed_accuracy_pct": 64.63
+          },
+          {
+            "confidence_range": "70-80%",
+            "matches": 44,
+            "mean_predicted_confidence_pct": 74.71,
+            "observed_accuracy_pct": 72.73
+          },
+          {
+            "confidence_range": "80-100%",
+            "matches": 24,
+            "mean_predicted_confidence_pct": 84.81,
+            "observed_accuracy_pct": 87.5
+          }
+        ]
+      },
+      "market_coverage_matches": 570,
       "period_start": "2024-10-20",
       "period_end": "2026-10-11",
       "note": "Validazione cronologica: ogni previsione usa solo gare con data strettamente precedente; coppe e indisponibilità non sono incluse."
@@ -140,39 +1025,332 @@
           "matches": 732,
           "accuracy_1x2": 48.5,
           "brier_score_1x2": 0.6204,
-          "log_loss_1x2": 1.0324
+          "log_loss_1x2": 1.0324,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 103,
+              "mean_predicted_confidence_pct": 38.21,
+              "observed_accuracy_pct": 41.75
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 291,
+              "mean_predicted_confidence_pct": 44.68,
+              "observed_accuracy_pct": 41.24
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 190,
+              "mean_predicted_confidence_pct": 54.48,
+              "observed_accuracy_pct": 49.47
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 92,
+              "mean_predicted_confidence_pct": 64.12,
+              "observed_accuracy_pct": 65.22
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 48,
+              "mean_predicted_confidence_pct": 74.18,
+              "observed_accuracy_pct": 66.67
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 8,
+              "mean_predicted_confidence_pct": 83.36,
+              "observed_accuracy_pct": 75.0
+            }
+          ]
         },
         "poisson_elo": {
           "matches": 732,
           "accuracy_1x2": 49.18,
           "brier_score_1x2": 0.6196,
-          "log_loss_1x2": 1.0312
+          "log_loss_1x2": 1.0312,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 91,
+              "mean_predicted_confidence_pct": 38.25,
+              "observed_accuracy_pct": 39.56
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 278,
+              "mean_predicted_confidence_pct": 44.87,
+              "observed_accuracy_pct": 43.53
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 177,
+              "mean_predicted_confidence_pct": 54.71,
+              "observed_accuracy_pct": 47.46
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 110,
+              "mean_predicted_confidence_pct": 64.49,
+              "observed_accuracy_pct": 62.73
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 54,
+              "mean_predicted_confidence_pct": 73.96,
+              "observed_accuracy_pct": 62.96
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 22,
+              "mean_predicted_confidence_pct": 83.27,
+              "observed_accuracy_pct": 72.73
+            }
+          ]
         },
         "poisson_form": {
           "matches": 732,
           "accuracy_1x2": 47.81,
           "brier_score_1x2": 0.6269,
-          "log_loss_1x2": 1.0419
+          "log_loss_1x2": 1.0419,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 93,
+              "mean_predicted_confidence_pct": 37.81,
+              "observed_accuracy_pct": 36.56
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 232,
+              "mean_predicted_confidence_pct": 44.92,
+              "observed_accuracy_pct": 41.81
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 188,
+              "mean_predicted_confidence_pct": 54.48,
+              "observed_accuracy_pct": 45.74
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 120,
+              "mean_predicted_confidence_pct": 64.65,
+              "observed_accuracy_pct": 55.0
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 60,
+              "mean_predicted_confidence_pct": 74.41,
+              "observed_accuracy_pct": 66.67
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 39,
+              "mean_predicted_confidence_pct": 84.35,
+              "observed_accuracy_pct": 69.23
+            }
+          ]
         },
         "model": {
           "matches": 732,
           "accuracy_1x2": 49.18,
           "brier_score_1x2": 0.6196,
-          "log_loss_1x2": 1.0312
+          "log_loss_1x2": 1.0312,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 91,
+              "mean_predicted_confidence_pct": 38.25,
+              "observed_accuracy_pct": 39.56
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 278,
+              "mean_predicted_confidence_pct": 44.87,
+              "observed_accuracy_pct": 43.53
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 177,
+              "mean_predicted_confidence_pct": 54.71,
+              "observed_accuracy_pct": 47.46
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 110,
+              "mean_predicted_confidence_pct": 64.49,
+              "observed_accuracy_pct": 62.73
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 54,
+              "mean_predicted_confidence_pct": 73.96,
+              "observed_accuracy_pct": 62.96
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 22,
+              "mean_predicted_confidence_pct": 83.27,
+              "observed_accuracy_pct": 72.73
+            }
+          ]
         },
         "poisson_elo_form": {
           "matches": 732,
           "accuracy_1x2": 47.68,
           "brier_score_1x2": 0.6279,
-          "log_loss_1x2": 1.044
+          "log_loss_1x2": 1.044,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 89,
+              "mean_predicted_confidence_pct": 37.88,
+              "observed_accuracy_pct": 32.58
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 215,
+              "mean_predicted_confidence_pct": 45.0,
+              "observed_accuracy_pct": 41.4
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 188,
+              "mean_predicted_confidence_pct": 54.9,
+              "observed_accuracy_pct": 45.21
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 112,
+              "mean_predicted_confidence_pct": 64.85,
+              "observed_accuracy_pct": 56.25
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 79,
+              "mean_predicted_confidence_pct": 74.61,
+              "observed_accuracy_pct": 64.56
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 49,
+              "mean_predicted_confidence_pct": 85.58,
+              "observed_accuracy_pct": 65.31
+            }
+          ]
+        },
+        "market_blend_50_50": {
+          "matches": 732,
+          "accuracy_1x2": 50.41,
+          "brier_score_1x2": 0.6051,
+          "log_loss_1x2": 1.0096,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 91,
+              "mean_predicted_confidence_pct": 38.34,
+              "observed_accuracy_pct": 31.87
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 259,
+              "mean_predicted_confidence_pct": 44.55,
+              "observed_accuracy_pct": 47.1
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 210,
+              "mean_predicted_confidence_pct": 54.15,
+              "observed_accuracy_pct": 49.05
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 114,
+              "mean_predicted_confidence_pct": 64.97,
+              "observed_accuracy_pct": 64.91
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 43,
+              "mean_predicted_confidence_pct": 74.0,
+              "observed_accuracy_pct": 67.44
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 15,
+              "mean_predicted_confidence_pct": 82.55,
+              "observed_accuracy_pct": 80.0
+            }
+          ]
         }
       },
       "prior_frequency_baseline": {
         "matches": 732,
         "accuracy_1x2": 41.67,
         "brier_score_1x2": 0.6571,
-        "log_loss_1x2": 1.0844
+        "log_loss_1x2": 1.0844,
+        "top_class_calibration": [
+          {
+            "confidence_range": "0-40%",
+            "matches": 121,
+            "mean_predicted_confidence_pct": 38.92,
+            "observed_accuracy_pct": 43.8
+          },
+          {
+            "confidence_range": "40-50%",
+            "matches": 611,
+            "mean_predicted_confidence_pct": 41.84,
+            "observed_accuracy_pct": 41.24
+          }
+        ]
       },
+      "market_baseline": {
+        "matches": 732,
+        "accuracy_1x2": 51.37,
+        "brier_score_1x2": 0.6016,
+        "log_loss_1x2": 1.0029,
+        "top_class_calibration": [
+          {
+            "confidence_range": "0-40%",
+            "matches": 114,
+            "mean_predicted_confidence_pct": 37.98,
+            "observed_accuracy_pct": 44.74
+          },
+          {
+            "confidence_range": "40-50%",
+            "matches": 232,
+            "mean_predicted_confidence_pct": 44.95,
+            "observed_accuracy_pct": 44.4
+          },
+          {
+            "confidence_range": "50-60%",
+            "matches": 191,
+            "mean_predicted_confidence_pct": 55.05,
+            "observed_accuracy_pct": 47.64
+          },
+          {
+            "confidence_range": "60-70%",
+            "matches": 128,
+            "mean_predicted_confidence_pct": 64.97,
+            "observed_accuracy_pct": 63.28
+          },
+          {
+            "confidence_range": "70-80%",
+            "matches": 54,
+            "mean_predicted_confidence_pct": 74.3,
+            "observed_accuracy_pct": 70.37
+          },
+          {
+            "confidence_range": "80-100%",
+            "matches": 13,
+            "mean_predicted_confidence_pct": 84.07,
+            "observed_accuracy_pct": 92.31
+          }
+        ]
+      },
+      "market_coverage_matches": 732,
       "period_start": "2024-10-05",
       "period_end": "2026-10-11",
       "note": "Validazione cronologica: ogni previsione usa solo gare con data strettamente precedente; coppe e indisponibilità non sono incluse."
@@ -184,39 +1362,326 @@
           "matches": 574,
           "accuracy_1x2": 53.31,
           "brier_score_1x2": 0.6,
-          "log_loss_1x2": 1.0059
+          "log_loss_1x2": 1.0059,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 66,
+              "mean_predicted_confidence_pct": 38.21,
+              "observed_accuracy_pct": 36.36
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 178,
+              "mean_predicted_confidence_pct": 44.54,
+              "observed_accuracy_pct": 50.56
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 165,
+              "mean_predicted_confidence_pct": 55.05,
+              "observed_accuracy_pct": 51.52
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 96,
+              "mean_predicted_confidence_pct": 63.89,
+              "observed_accuracy_pct": 63.54
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 56,
+              "mean_predicted_confidence_pct": 74.98,
+              "observed_accuracy_pct": 62.5
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 13,
+              "mean_predicted_confidence_pct": 84.64,
+              "observed_accuracy_pct": 84.62
+            }
+          ]
         },
         "poisson_elo": {
           "matches": 574,
           "accuracy_1x2": 53.31,
           "brier_score_1x2": 0.5999,
-          "log_loss_1x2": 1.0064
+          "log_loss_1x2": 1.0064,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 53,
+              "mean_predicted_confidence_pct": 38.0,
+              "observed_accuracy_pct": 26.42
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 174,
+              "mean_predicted_confidence_pct": 44.54,
+              "observed_accuracy_pct": 51.15
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 149,
+              "mean_predicted_confidence_pct": 55.24,
+              "observed_accuracy_pct": 51.68
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 111,
+              "mean_predicted_confidence_pct": 64.13,
+              "observed_accuracy_pct": 63.06
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 57,
+              "mean_predicted_confidence_pct": 74.56,
+              "observed_accuracy_pct": 54.39
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 30,
+              "mean_predicted_confidence_pct": 84.07,
+              "observed_accuracy_pct": 83.33
+            }
+          ]
         },
         "poisson_form": {
           "matches": 574,
           "accuracy_1x2": 51.39,
           "brier_score_1x2": 0.6111,
-          "log_loss_1x2": 1.0227
+          "log_loss_1x2": 1.0227,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 63,
+              "mean_predicted_confidence_pct": 37.76,
+              "observed_accuracy_pct": 39.68
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 154,
+              "mean_predicted_confidence_pct": 45.03,
+              "observed_accuracy_pct": 43.51
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 150,
+              "mean_predicted_confidence_pct": 55.15,
+              "observed_accuracy_pct": 50.67
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 118,
+              "mean_predicted_confidence_pct": 64.9,
+              "observed_accuracy_pct": 60.17
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 48,
+              "mean_predicted_confidence_pct": 74.83,
+              "observed_accuracy_pct": 54.17
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 41,
+              "mean_predicted_confidence_pct": 85.18,
+              "observed_accuracy_pct": 73.17
+            }
+          ]
         },
         "model": {
           "matches": 574,
           "accuracy_1x2": 53.31,
           "brier_score_1x2": 0.5999,
-          "log_loss_1x2": 1.0064
+          "log_loss_1x2": 1.0064,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 53,
+              "mean_predicted_confidence_pct": 38.0,
+              "observed_accuracy_pct": 26.42
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 174,
+              "mean_predicted_confidence_pct": 44.54,
+              "observed_accuracy_pct": 51.15
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 149,
+              "mean_predicted_confidence_pct": 55.24,
+              "observed_accuracy_pct": 51.68
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 111,
+              "mean_predicted_confidence_pct": 64.13,
+              "observed_accuracy_pct": 63.06
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 57,
+              "mean_predicted_confidence_pct": 74.56,
+              "observed_accuracy_pct": 54.39
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 30,
+              "mean_predicted_confidence_pct": 84.07,
+              "observed_accuracy_pct": 83.33
+            }
+          ]
         },
         "poisson_elo_form": {
           "matches": 574,
           "accuracy_1x2": 52.09,
           "brier_score_1x2": 0.6121,
-          "log_loss_1x2": 1.026
+          "log_loss_1x2": 1.026,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 54,
+              "mean_predicted_confidence_pct": 37.89,
+              "observed_accuracy_pct": 44.44
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 150,
+              "mean_predicted_confidence_pct": 44.98,
+              "observed_accuracy_pct": 44.0
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 131,
+              "mean_predicted_confidence_pct": 55.04,
+              "observed_accuracy_pct": 48.09
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 121,
+              "mean_predicted_confidence_pct": 64.75,
+              "observed_accuracy_pct": 57.85
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 67,
+              "mean_predicted_confidence_pct": 73.87,
+              "observed_accuracy_pct": 62.69
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 51,
+              "mean_predicted_confidence_pct": 86.21,
+              "observed_accuracy_pct": 66.67
+            }
+          ]
+        },
+        "market_blend_50_50": {
+          "matches": 574,
+          "accuracy_1x2": 54.7,
+          "brier_score_1x2": 0.5834,
+          "log_loss_1x2": 0.9807,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 63,
+              "mean_predicted_confidence_pct": 37.99,
+              "observed_accuracy_pct": 39.68
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 190,
+              "mean_predicted_confidence_pct": 44.73,
+              "observed_accuracy_pct": 49.47
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 154,
+              "mean_predicted_confidence_pct": 54.85,
+              "observed_accuracy_pct": 50.65
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 111,
+              "mean_predicted_confidence_pct": 64.32,
+              "observed_accuracy_pct": 68.47
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 44,
+              "mean_predicted_confidence_pct": 74.68,
+              "observed_accuracy_pct": 68.18
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 12,
+              "mean_predicted_confidence_pct": 83.43,
+              "observed_accuracy_pct": 91.67
+            }
+          ]
         }
       },
       "prior_frequency_baseline": {
         "matches": 574,
         "accuracy_1x2": 45.99,
         "brier_score_1x2": 0.6408,
-        "log_loss_1x2": 1.0603
+        "log_loss_1x2": 1.0603,
+        "top_class_calibration": [
+          {
+            "confidence_range": "40-50%",
+            "matches": 574,
+            "mean_predicted_confidence_pct": 46.67,
+            "observed_accuracy_pct": 45.99
+          }
+        ]
       },
+      "market_baseline": {
+        "matches": 574,
+        "accuracy_1x2": 54.01,
+        "brier_score_1x2": 0.5791,
+        "log_loss_1x2": 0.9743,
+        "top_class_calibration": [
+          {
+            "confidence_range": "0-40%",
+            "matches": 88,
+            "mean_predicted_confidence_pct": 38.12,
+            "observed_accuracy_pct": 39.77
+          },
+          {
+            "confidence_range": "40-50%",
+            "matches": 197,
+            "mean_predicted_confidence_pct": 45.24,
+            "observed_accuracy_pct": 45.69
+          },
+          {
+            "confidence_range": "50-60%",
+            "matches": 140,
+            "mean_predicted_confidence_pct": 54.84,
+            "observed_accuracy_pct": 57.86
+          },
+          {
+            "confidence_range": "60-70%",
+            "matches": 91,
+            "mean_predicted_confidence_pct": 64.92,
+            "observed_accuracy_pct": 64.84
+          },
+          {
+            "confidence_range": "70-80%",
+            "matches": 48,
+            "mean_predicted_confidence_pct": 73.95,
+            "observed_accuracy_pct": 72.92
+          },
+          {
+            "confidence_range": "80-100%",
+            "matches": 10,
+            "mean_predicted_confidence_pct": 83.44,
+            "observed_accuracy_pct": 100.0
+          }
+        ]
+      },
+      "market_coverage_matches": 574,
       "period_start": "2024-10-18",
       "period_end": "2026-10-11",
       "note": "Validazione cronologica: ogni previsione usa solo gare con data strettamente precedente; coppe e indisponibilità non sono incluse."
@@ -228,39 +1693,332 @@
           "matches": 426,
           "accuracy_1x2": 54.93,
           "brier_score_1x2": 0.579,
-          "log_loss_1x2": 0.9756
+          "log_loss_1x2": 0.9756,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 81,
+              "mean_predicted_confidence_pct": 37.42,
+              "observed_accuracy_pct": 37.04
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 151,
+              "mean_predicted_confidence_pct": 44.52,
+              "observed_accuracy_pct": 51.66
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 110,
+              "mean_predicted_confidence_pct": 54.85,
+              "observed_accuracy_pct": 58.18
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 54,
+              "mean_predicted_confidence_pct": 63.35,
+              "observed_accuracy_pct": 77.78
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 26,
+              "mean_predicted_confidence_pct": 73.43,
+              "observed_accuracy_pct": 65.38
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 4,
+              "mean_predicted_confidence_pct": 82.8,
+              "observed_accuracy_pct": 75.0
+            }
+          ]
         },
         "poisson_elo": {
           "matches": 426,
           "accuracy_1x2": 55.16,
           "brier_score_1x2": 0.5748,
-          "log_loss_1x2": 0.9696
+          "log_loss_1x2": 0.9696,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 79,
+              "mean_predicted_confidence_pct": 37.57,
+              "observed_accuracy_pct": 35.44
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 142,
+              "mean_predicted_confidence_pct": 44.7,
+              "observed_accuracy_pct": 50.7
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 91,
+              "mean_predicted_confidence_pct": 54.64,
+              "observed_accuracy_pct": 57.14
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 76,
+              "mean_predicted_confidence_pct": 63.63,
+              "observed_accuracy_pct": 75.0
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 29,
+              "mean_predicted_confidence_pct": 74.58,
+              "observed_accuracy_pct": 65.52
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 9,
+              "mean_predicted_confidence_pct": 83.41,
+              "observed_accuracy_pct": 77.78
+            }
+          ]
         },
         "poisson_form": {
           "matches": 426,
           "accuracy_1x2": 54.69,
           "brier_score_1x2": 0.585,
-          "log_loss_1x2": 0.9847
+          "log_loss_1x2": 0.9847,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 79,
+              "mean_predicted_confidence_pct": 37.57,
+              "observed_accuracy_pct": 48.1
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 116,
+              "mean_predicted_confidence_pct": 44.17,
+              "observed_accuracy_pct": 41.38
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 102,
+              "mean_predicted_confidence_pct": 54.8,
+              "observed_accuracy_pct": 55.88
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 73,
+              "mean_predicted_confidence_pct": 65.09,
+              "observed_accuracy_pct": 67.12
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 37,
+              "mean_predicted_confidence_pct": 74.06,
+              "observed_accuracy_pct": 72.97
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 19,
+              "mean_predicted_confidence_pct": 83.88,
+              "observed_accuracy_pct": 73.68
+            }
+          ]
         },
         "model": {
           "matches": 426,
           "accuracy_1x2": 55.16,
           "brier_score_1x2": 0.5748,
-          "log_loss_1x2": 0.9696
+          "log_loss_1x2": 0.9696,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 79,
+              "mean_predicted_confidence_pct": 37.57,
+              "observed_accuracy_pct": 35.44
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 142,
+              "mean_predicted_confidence_pct": 44.7,
+              "observed_accuracy_pct": 50.7
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 91,
+              "mean_predicted_confidence_pct": 54.64,
+              "observed_accuracy_pct": 57.14
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 76,
+              "mean_predicted_confidence_pct": 63.63,
+              "observed_accuracy_pct": 75.0
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 29,
+              "mean_predicted_confidence_pct": 74.58,
+              "observed_accuracy_pct": 65.52
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 9,
+              "mean_predicted_confidence_pct": 83.41,
+              "observed_accuracy_pct": 77.78
+            }
+          ]
         },
         "poisson_elo_form": {
           "matches": 426,
           "accuracy_1x2": 53.99,
           "brier_score_1x2": 0.5827,
-          "log_loss_1x2": 0.9821
+          "log_loss_1x2": 0.9821,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 76,
+              "mean_predicted_confidence_pct": 37.64,
+              "observed_accuracy_pct": 43.42
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 116,
+              "mean_predicted_confidence_pct": 44.38,
+              "observed_accuracy_pct": 42.24
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 89,
+              "mean_predicted_confidence_pct": 55.16,
+              "observed_accuracy_pct": 52.81
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 69,
+              "mean_predicted_confidence_pct": 64.72,
+              "observed_accuracy_pct": 65.22
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 48,
+              "mean_predicted_confidence_pct": 73.62,
+              "observed_accuracy_pct": 77.08
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 28,
+              "mean_predicted_confidence_pct": 85.07,
+              "observed_accuracy_pct": 67.86
+            }
+          ]
+        },
+        "market_blend_50_50": {
+          "matches": 426,
+          "accuracy_1x2": 57.04,
+          "brier_score_1x2": 0.5555,
+          "log_loss_1x2": 0.94,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 100,
+              "mean_predicted_confidence_pct": 37.78,
+              "observed_accuracy_pct": 43.0
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 121,
+              "mean_predicted_confidence_pct": 44.41,
+              "observed_accuracy_pct": 45.45
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 84,
+              "mean_predicted_confidence_pct": 54.87,
+              "observed_accuracy_pct": 64.29
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 74,
+              "mean_predicted_confidence_pct": 64.59,
+              "observed_accuracy_pct": 72.97
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 40,
+              "mean_predicted_confidence_pct": 73.96,
+              "observed_accuracy_pct": 77.5
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 7,
+              "mean_predicted_confidence_pct": 83.48,
+              "observed_accuracy_pct": 85.71
+            }
+          ]
         }
       },
       "prior_frequency_baseline": {
         "matches": 426,
         "accuracy_1x2": 41.31,
         "brier_score_1x2": 0.6542,
-        "log_loss_1x2": 1.0793
+        "log_loss_1x2": 1.0793,
+        "top_class_calibration": [
+          {
+            "confidence_range": "0-40%",
+            "matches": 131,
+            "mean_predicted_confidence_pct": 38.39,
+            "observed_accuracy_pct": 40.46
+          },
+          {
+            "confidence_range": "40-50%",
+            "matches": 295,
+            "mean_predicted_confidence_pct": 40.91,
+            "observed_accuracy_pct": 41.69
+          }
+        ]
       },
+      "market_baseline": {
+        "matches": 426,
+        "accuracy_1x2": 55.16,
+        "brier_score_1x2": 0.5504,
+        "log_loss_1x2": 0.9298,
+        "top_class_calibration": [
+          {
+            "confidence_range": "0-40%",
+            "matches": 75,
+            "mean_predicted_confidence_pct": 37.31,
+            "observed_accuracy_pct": 32.0
+          },
+          {
+            "confidence_range": "40-50%",
+            "matches": 138,
+            "mean_predicted_confidence_pct": 44.69,
+            "observed_accuracy_pct": 44.2
+          },
+          {
+            "confidence_range": "50-60%",
+            "matches": 71,
+            "mean_predicted_confidence_pct": 55.1,
+            "observed_accuracy_pct": 60.56
+          },
+          {
+            "confidence_range": "60-70%",
+            "matches": 65,
+            "mean_predicted_confidence_pct": 64.73,
+            "observed_accuracy_pct": 69.23
+          },
+          {
+            "confidence_range": "70-80%",
+            "matches": 59,
+            "mean_predicted_confidence_pct": 74.29,
+            "observed_accuracy_pct": 77.97
+          },
+          {
+            "confidence_range": "80-100%",
+            "matches": 18,
+            "mean_predicted_confidence_pct": 82.46,
+            "observed_accuracy_pct": 88.89
+          }
+        ]
+      },
+      "market_coverage_matches": 426,
       "period_start": "2024-11-02",
       "period_end": "2026-10-11",
       "note": "Validazione cronologica: ogni previsione usa solo gare con data strettamente precedente; coppe e indisponibilità non sono incluse."
@@ -272,39 +2030,332 @@
           "matches": 732,
           "accuracy_1x2": 52.87,
           "brier_score_1x2": 0.5965,
-          "log_loss_1x2": 1.0005
+          "log_loss_1x2": 1.0005,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 99,
+              "mean_predicted_confidence_pct": 37.9,
+              "observed_accuracy_pct": 39.39
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 260,
+              "mean_predicted_confidence_pct": 45.01,
+              "observed_accuracy_pct": 45.77
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 182,
+              "mean_predicted_confidence_pct": 54.6,
+              "observed_accuracy_pct": 54.95
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 137,
+              "mean_predicted_confidence_pct": 64.43,
+              "observed_accuracy_pct": 64.96
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 46,
+              "mean_predicted_confidence_pct": 73.61,
+              "observed_accuracy_pct": 73.91
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 8,
+              "mean_predicted_confidence_pct": 82.96,
+              "observed_accuracy_pct": 75.0
+            }
+          ]
         },
         "poisson_elo": {
           "matches": 732,
           "accuracy_1x2": 53.69,
           "brier_score_1x2": 0.5946,
-          "log_loss_1x2": 0.9978
+          "log_loss_1x2": 0.9978,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 83,
+              "mean_predicted_confidence_pct": 37.77,
+              "observed_accuracy_pct": 43.37
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 237,
+              "mean_predicted_confidence_pct": 44.79,
+              "observed_accuracy_pct": 47.26
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 183,
+              "mean_predicted_confidence_pct": 54.54,
+              "observed_accuracy_pct": 50.82
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 135,
+              "mean_predicted_confidence_pct": 64.64,
+              "observed_accuracy_pct": 60.0
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 78,
+              "mean_predicted_confidence_pct": 73.79,
+              "observed_accuracy_pct": 74.36
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 16,
+              "mean_predicted_confidence_pct": 83.51,
+              "observed_accuracy_pct": 81.25
+            }
+          ]
         },
         "poisson_form": {
           "matches": 732,
           "accuracy_1x2": 53.83,
           "brier_score_1x2": 0.5942,
-          "log_loss_1x2": 0.9985
+          "log_loss_1x2": 0.9985,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 91,
+              "mean_predicted_confidence_pct": 37.56,
+              "observed_accuracy_pct": 45.05
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 217,
+              "mean_predicted_confidence_pct": 45.13,
+              "observed_accuracy_pct": 45.16
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 171,
+              "mean_predicted_confidence_pct": 54.78,
+              "observed_accuracy_pct": 51.46
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 124,
+              "mean_predicted_confidence_pct": 64.45,
+              "observed_accuracy_pct": 60.48
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 93,
+              "mean_predicted_confidence_pct": 74.7,
+              "observed_accuracy_pct": 68.82
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 36,
+              "mean_predicted_confidence_pct": 83.88,
+              "observed_accuracy_pct": 77.78
+            }
+          ]
         },
         "model": {
           "matches": 732,
           "accuracy_1x2": 53.69,
           "brier_score_1x2": 0.5946,
-          "log_loss_1x2": 0.9978
+          "log_loss_1x2": 0.9978,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 83,
+              "mean_predicted_confidence_pct": 37.77,
+              "observed_accuracy_pct": 43.37
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 237,
+              "mean_predicted_confidence_pct": 44.79,
+              "observed_accuracy_pct": 47.26
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 183,
+              "mean_predicted_confidence_pct": 54.54,
+              "observed_accuracy_pct": 50.82
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 135,
+              "mean_predicted_confidence_pct": 64.64,
+              "observed_accuracy_pct": 60.0
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 78,
+              "mean_predicted_confidence_pct": 73.79,
+              "observed_accuracy_pct": 74.36
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 16,
+              "mean_predicted_confidence_pct": 83.51,
+              "observed_accuracy_pct": 81.25
+            }
+          ]
         },
         "poisson_elo_form": {
           "matches": 732,
           "accuracy_1x2": 53.96,
           "brier_score_1x2": 0.5941,
-          "log_loss_1x2": 0.9994
+          "log_loss_1x2": 0.9994,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 91,
+              "mean_predicted_confidence_pct": 37.64,
+              "observed_accuracy_pct": 46.15
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 188,
+              "mean_predicted_confidence_pct": 45.29,
+              "observed_accuracy_pct": 43.62
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 171,
+              "mean_predicted_confidence_pct": 54.74,
+              "observed_accuracy_pct": 50.29
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 126,
+              "mean_predicted_confidence_pct": 64.79,
+              "observed_accuracy_pct": 61.11
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 97,
+              "mean_predicted_confidence_pct": 74.78,
+              "observed_accuracy_pct": 64.95
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 59,
+              "mean_predicted_confidence_pct": 84.46,
+              "observed_accuracy_pct": 76.27
+            }
+          ]
+        },
+        "market_blend_50_50": {
+          "matches": 732,
+          "accuracy_1x2": 54.78,
+          "brier_score_1x2": 0.5745,
+          "log_loss_1x2": 0.9671,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 111,
+              "mean_predicted_confidence_pct": 37.64,
+              "observed_accuracy_pct": 34.23
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 231,
+              "mean_predicted_confidence_pct": 44.41,
+              "observed_accuracy_pct": 48.48
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 193,
+              "mean_predicted_confidence_pct": 54.63,
+              "observed_accuracy_pct": 57.51
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 134,
+              "mean_predicted_confidence_pct": 65.09,
+              "observed_accuracy_pct": 67.91
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 56,
+              "mean_predicted_confidence_pct": 73.77,
+              "observed_accuracy_pct": 78.57
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 7,
+              "mean_predicted_confidence_pct": 82.35,
+              "observed_accuracy_pct": 71.43
+            }
+          ]
         }
       },
       "prior_frequency_baseline": {
         "matches": 732,
         "accuracy_1x2": 40.3,
         "brier_score_1x2": 0.6597,
-        "log_loss_1x2": 1.0882
+        "log_loss_1x2": 1.0882,
+        "top_class_calibration": [
+          {
+            "confidence_range": "0-40%",
+            "matches": 568,
+            "mean_predicted_confidence_pct": 39.25,
+            "observed_accuracy_pct": 42.08
+          },
+          {
+            "confidence_range": "40-50%",
+            "matches": 164,
+            "mean_predicted_confidence_pct": 40.86,
+            "observed_accuracy_pct": 34.15
+          }
+        ]
       },
+      "market_baseline": {
+        "matches": 732,
+        "accuracy_1x2": 55.05,
+        "brier_score_1x2": 0.5646,
+        "log_loss_1x2": 0.9516,
+        "top_class_calibration": [
+          {
+            "confidence_range": "0-40%",
+            "matches": 145,
+            "mean_predicted_confidence_pct": 37.4,
+            "observed_accuracy_pct": 33.1
+          },
+          {
+            "confidence_range": "40-50%",
+            "matches": 217,
+            "mean_predicted_confidence_pct": 44.78,
+            "observed_accuracy_pct": 49.77
+          },
+          {
+            "confidence_range": "50-60%",
+            "matches": 169,
+            "mean_predicted_confidence_pct": 54.52,
+            "observed_accuracy_pct": 57.99
+          },
+          {
+            "confidence_range": "60-70%",
+            "matches": 132,
+            "mean_predicted_confidence_pct": 64.28,
+            "observed_accuracy_pct": 73.48
+          },
+          {
+            "confidence_range": "70-80%",
+            "matches": 62,
+            "mean_predicted_confidence_pct": 74.19,
+            "observed_accuracy_pct": 72.58
+          },
+          {
+            "confidence_range": "80-100%",
+            "matches": 7,
+            "mean_predicted_confidence_pct": 82.21,
+            "observed_accuracy_pct": 100.0
+          }
+        ]
+      },
+      "market_coverage_matches": 732,
       "period_start": "2024-10-04",
       "period_end": "2026-10-12",
       "note": "Validazione cronologica: ogni previsione usa solo gare con data strettamente precedente; coppe e indisponibilità non sono incluse."
@@ -316,39 +2367,326 @@
           "matches": 594,
           "accuracy_1x2": 51.52,
           "brier_score_1x2": 0.5949,
-          "log_loss_1x2": 0.9949
+          "log_loss_1x2": 0.9949,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 53,
+              "mean_predicted_confidence_pct": 38.59,
+              "observed_accuracy_pct": 47.17
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 168,
+              "mean_predicted_confidence_pct": 44.77,
+              "observed_accuracy_pct": 40.48
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 152,
+              "mean_predicted_confidence_pct": 54.99,
+              "observed_accuracy_pct": 45.39
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 119,
+              "mean_predicted_confidence_pct": 64.91,
+              "observed_accuracy_pct": 56.3
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 70,
+              "mean_predicted_confidence_pct": 74.4,
+              "observed_accuracy_pct": 71.43
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 32,
+              "mean_predicted_confidence_pct": 85.3,
+              "observed_accuracy_pct": 84.38
+            }
+          ]
         },
         "poisson_elo": {
           "matches": 594,
           "accuracy_1x2": 52.02,
           "brier_score_1x2": 0.5963,
-          "log_loss_1x2": 0.9963
+          "log_loss_1x2": 0.9963,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 47,
+              "mean_predicted_confidence_pct": 38.58,
+              "observed_accuracy_pct": 51.06
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 154,
+              "mean_predicted_confidence_pct": 44.67,
+              "observed_accuracy_pct": 37.01
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 137,
+              "mean_predicted_confidence_pct": 54.79,
+              "observed_accuracy_pct": 44.53
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 126,
+              "mean_predicted_confidence_pct": 64.7,
+              "observed_accuracy_pct": 57.14
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 81,
+              "mean_predicted_confidence_pct": 74.32,
+              "observed_accuracy_pct": 65.43
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 49,
+              "mean_predicted_confidence_pct": 85.95,
+              "observed_accuracy_pct": 85.71
+            }
+          ]
         },
         "poisson_form": {
           "matches": 594,
           "accuracy_1x2": 50.51,
           "brier_score_1x2": 0.6005,
-          "log_loss_1x2": 1.003
+          "log_loss_1x2": 1.003,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 65,
+              "mean_predicted_confidence_pct": 38.2,
+              "observed_accuracy_pct": 38.46
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 149,
+              "mean_predicted_confidence_pct": 45.16,
+              "observed_accuracy_pct": 37.58
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 112,
+              "mean_predicted_confidence_pct": 55.08,
+              "observed_accuracy_pct": 37.5
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 116,
+              "mean_predicted_confidence_pct": 65.35,
+              "observed_accuracy_pct": 56.9
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 92,
+              "mean_predicted_confidence_pct": 74.56,
+              "observed_accuracy_pct": 64.13
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 60,
+              "mean_predicted_confidence_pct": 87.14,
+              "observed_accuracy_pct": 86.67
+            }
+          ]
         },
         "model": {
           "matches": 594,
           "accuracy_1x2": 52.02,
           "brier_score_1x2": 0.5963,
-          "log_loss_1x2": 0.9963
+          "log_loss_1x2": 0.9963,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 47,
+              "mean_predicted_confidence_pct": 38.58,
+              "observed_accuracy_pct": 51.06
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 154,
+              "mean_predicted_confidence_pct": 44.67,
+              "observed_accuracy_pct": 37.01
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 137,
+              "mean_predicted_confidence_pct": 54.79,
+              "observed_accuracy_pct": 44.53
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 126,
+              "mean_predicted_confidence_pct": 64.7,
+              "observed_accuracy_pct": 57.14
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 81,
+              "mean_predicted_confidence_pct": 74.32,
+              "observed_accuracy_pct": 65.43
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 49,
+              "mean_predicted_confidence_pct": 85.95,
+              "observed_accuracy_pct": 85.71
+            }
+          ]
         },
         "poisson_elo_form": {
           "matches": 594,
           "accuracy_1x2": 50.67,
           "brier_score_1x2": 0.6035,
-          "log_loss_1x2": 1.0078
+          "log_loss_1x2": 1.0078,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 57,
+              "mean_predicted_confidence_pct": 38.06,
+              "observed_accuracy_pct": 40.35
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 142,
+              "mean_predicted_confidence_pct": 45.14,
+              "observed_accuracy_pct": 39.44
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 107,
+              "mean_predicted_confidence_pct": 54.92,
+              "observed_accuracy_pct": 34.58
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 99,
+              "mean_predicted_confidence_pct": 64.95,
+              "observed_accuracy_pct": 51.52
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 107,
+              "mean_predicted_confidence_pct": 74.03,
+              "observed_accuracy_pct": 61.68
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 82,
+              "mean_predicted_confidence_pct": 87.14,
+              "observed_accuracy_pct": 82.93
+            }
+          ]
+        },
+        "market_blend_50_50": {
+          "matches": 594,
+          "accuracy_1x2": 52.53,
+          "brier_score_1x2": 0.5802,
+          "log_loss_1x2": 0.973,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 58,
+              "mean_predicted_confidence_pct": 38.54,
+              "observed_accuracy_pct": 43.1
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 179,
+              "mean_predicted_confidence_pct": 44.72,
+              "observed_accuracy_pct": 38.55
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 137,
+              "mean_predicted_confidence_pct": 54.63,
+              "observed_accuracy_pct": 46.72
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 120,
+              "mean_predicted_confidence_pct": 64.15,
+              "observed_accuracy_pct": 65.0
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 70,
+              "mean_predicted_confidence_pct": 74.07,
+              "observed_accuracy_pct": 70.0
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 30,
+              "mean_predicted_confidence_pct": 84.01,
+              "observed_accuracy_pct": 90.0
+            }
+          ]
         }
       },
       "prior_frequency_baseline": {
         "matches": 594,
         "accuracy_1x2": 43.77,
         "brier_score_1x2": 0.6525,
-        "log_loss_1x2": 1.0783
+        "log_loss_1x2": 1.0783,
+        "top_class_calibration": [
+          {
+            "confidence_range": "40-50%",
+            "matches": 594,
+            "mean_predicted_confidence_pct": 45.55,
+            "observed_accuracy_pct": 43.77
+          }
+        ]
       },
+      "market_baseline": {
+        "matches": 594,
+        "accuracy_1x2": 53.54,
+        "brier_score_1x2": 0.5782,
+        "log_loss_1x2": 0.9711,
+        "top_class_calibration": [
+          {
+            "confidence_range": "0-40%",
+            "matches": 89,
+            "mean_predicted_confidence_pct": 38.08,
+            "observed_accuracy_pct": 41.57
+          },
+          {
+            "confidence_range": "40-50%",
+            "matches": 173,
+            "mean_predicted_confidence_pct": 44.51,
+            "observed_accuracy_pct": 38.73
+          },
+          {
+            "confidence_range": "50-60%",
+            "matches": 139,
+            "mean_predicted_confidence_pct": 55.08,
+            "observed_accuracy_pct": 57.55
+          },
+          {
+            "confidence_range": "60-70%",
+            "matches": 107,
+            "mean_predicted_confidence_pct": 64.89,
+            "observed_accuracy_pct": 63.55
+          },
+          {
+            "confidence_range": "70-80%",
+            "matches": 63,
+            "mean_predicted_confidence_pct": 74.68,
+            "observed_accuracy_pct": 71.43
+          },
+          {
+            "confidence_range": "80-100%",
+            "matches": 23,
+            "mean_predicted_confidence_pct": 83.91,
+            "observed_accuracy_pct": 91.3
+          }
+        ]
+      },
+      "market_coverage_matches": 594,
       "period_start": "2024-10-04",
       "period_end": "2026-10-11",
       "note": "Validazione cronologica: ogni previsione usa solo gare con data strettamente precedente; coppe e indisponibilità non sono incluse."
@@ -360,39 +2698,332 @@
           "matches": 599,
           "accuracy_1x2": 53.59,
           "brier_score_1x2": 0.5734,
-          "log_loss_1x2": 0.9631
+          "log_loss_1x2": 0.9631,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 93,
+              "mean_predicted_confidence_pct": 37.69,
+              "observed_accuracy_pct": 43.01
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 166,
+              "mean_predicted_confidence_pct": 44.84,
+              "observed_accuracy_pct": 38.55
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 142,
+              "mean_predicted_confidence_pct": 54.93,
+              "observed_accuracy_pct": 50.0
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 83,
+              "mean_predicted_confidence_pct": 64.38,
+              "observed_accuracy_pct": 65.06
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 64,
+              "mean_predicted_confidence_pct": 74.46,
+              "observed_accuracy_pct": 78.12
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 51,
+              "mean_predicted_confidence_pct": 84.75,
+              "observed_accuracy_pct": 82.35
+            }
+          ]
         },
         "poisson_elo": {
           "matches": 599,
           "accuracy_1x2": 53.59,
           "brier_score_1x2": 0.5731,
-          "log_loss_1x2": 0.9626
+          "log_loss_1x2": 0.9626,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 87,
+              "mean_predicted_confidence_pct": 37.74,
+              "observed_accuracy_pct": 37.93
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 149,
+              "mean_predicted_confidence_pct": 44.75,
+              "observed_accuracy_pct": 43.62
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 133,
+              "mean_predicted_confidence_pct": 54.71,
+              "observed_accuracy_pct": 44.36
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 96,
+              "mean_predicted_confidence_pct": 64.07,
+              "observed_accuracy_pct": 59.38
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 64,
+              "mean_predicted_confidence_pct": 74.97,
+              "observed_accuracy_pct": 75.0
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 70,
+              "mean_predicted_confidence_pct": 86.12,
+              "observed_accuracy_pct": 84.29
+            }
+          ]
         },
         "poisson_form": {
           "matches": 599,
           "accuracy_1x2": 52.25,
           "brier_score_1x2": 0.5723,
-          "log_loss_1x2": 0.9642
+          "log_loss_1x2": 0.9642,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 74,
+              "mean_predicted_confidence_pct": 37.32,
+              "observed_accuracy_pct": 33.78
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 170,
+              "mean_predicted_confidence_pct": 44.93,
+              "observed_accuracy_pct": 40.0
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 110,
+              "mean_predicted_confidence_pct": 55.05,
+              "observed_accuracy_pct": 41.82
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 85,
+              "mean_predicted_confidence_pct": 65.16,
+              "observed_accuracy_pct": 56.47
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 72,
+              "mean_predicted_confidence_pct": 74.54,
+              "observed_accuracy_pct": 76.39
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 88,
+              "mean_predicted_confidence_pct": 87.13,
+              "observed_accuracy_pct": 80.68
+            }
+          ]
         },
         "model": {
           "matches": 599,
           "accuracy_1x2": 53.59,
           "brier_score_1x2": 0.5731,
-          "log_loss_1x2": 0.9626
+          "log_loss_1x2": 0.9626,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 87,
+              "mean_predicted_confidence_pct": 37.74,
+              "observed_accuracy_pct": 37.93
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 149,
+              "mean_predicted_confidence_pct": 44.75,
+              "observed_accuracy_pct": 43.62
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 133,
+              "mean_predicted_confidence_pct": 54.71,
+              "observed_accuracy_pct": 44.36
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 96,
+              "mean_predicted_confidence_pct": 64.07,
+              "observed_accuracy_pct": 59.38
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 64,
+              "mean_predicted_confidence_pct": 74.97,
+              "observed_accuracy_pct": 75.0
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 70,
+              "mean_predicted_confidence_pct": 86.12,
+              "observed_accuracy_pct": 84.29
+            }
+          ]
         },
         "poisson_elo_form": {
           "matches": 599,
           "accuracy_1x2": 52.42,
           "brier_score_1x2": 0.5738,
-          "log_loss_1x2": 0.9679
+          "log_loss_1x2": 0.9679,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 68,
+              "mean_predicted_confidence_pct": 37.26,
+              "observed_accuracy_pct": 33.82
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 160,
+              "mean_predicted_confidence_pct": 45.0,
+              "observed_accuracy_pct": 38.12
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 109,
+              "mean_predicted_confidence_pct": 55.1,
+              "observed_accuracy_pct": 44.95
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 82,
+              "mean_predicted_confidence_pct": 64.91,
+              "observed_accuracy_pct": 50.0
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 69,
+              "mean_predicted_confidence_pct": 74.11,
+              "observed_accuracy_pct": 71.01
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 111,
+              "mean_predicted_confidence_pct": 87.88,
+              "observed_accuracy_pct": 81.98
+            }
+          ]
+        },
+        "market_blend_50_50": {
+          "matches": 599,
+          "accuracy_1x2": 54.76,
+          "brier_score_1x2": 0.5595,
+          "log_loss_1x2": 0.9421,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 93,
+              "mean_predicted_confidence_pct": 37.59,
+              "observed_accuracy_pct": 41.94
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 177,
+              "mean_predicted_confidence_pct": 44.63,
+              "observed_accuracy_pct": 44.07
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 129,
+              "mean_predicted_confidence_pct": 54.75,
+              "observed_accuracy_pct": 44.19
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 73,
+              "mean_predicted_confidence_pct": 63.69,
+              "observed_accuracy_pct": 68.49
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 72,
+              "mean_predicted_confidence_pct": 74.98,
+              "observed_accuracy_pct": 77.78
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 55,
+              "mean_predicted_confidence_pct": 83.75,
+              "observed_accuracy_pct": 87.27
+            }
+          ]
         }
       },
       "prior_frequency_baseline": {
         "matches": 599,
         "accuracy_1x2": 41.07,
         "brier_score_1x2": 0.6601,
-        "log_loss_1x2": 1.0891
+        "log_loss_1x2": 1.0891,
+        "top_class_calibration": [
+          {
+            "confidence_range": "40-50%",
+            "matches": 556,
+            "mean_predicted_confidence_pct": 43.13,
+            "observed_accuracy_pct": 41.19
+          },
+          {
+            "confidence_range": "50-60%",
+            "matches": 43,
+            "mean_predicted_confidence_pct": 50.48,
+            "observed_accuracy_pct": 39.53
+          }
+        ]
       },
+      "market_baseline": {
+        "matches": 599,
+        "accuracy_1x2": 54.76,
+        "brier_score_1x2": 0.5548,
+        "log_loss_1x2": 0.9353,
+        "top_class_calibration": [
+          {
+            "confidence_range": "0-40%",
+            "matches": 118,
+            "mean_predicted_confidence_pct": 37.31,
+            "observed_accuracy_pct": 38.98
+          },
+          {
+            "confidence_range": "40-50%",
+            "matches": 180,
+            "mean_predicted_confidence_pct": 44.47,
+            "observed_accuracy_pct": 43.89
+          },
+          {
+            "confidence_range": "50-60%",
+            "matches": 105,
+            "mean_predicted_confidence_pct": 54.49,
+            "observed_accuracy_pct": 49.52
+          },
+          {
+            "confidence_range": "60-70%",
+            "matches": 73,
+            "mean_predicted_confidence_pct": 65.02,
+            "observed_accuracy_pct": 64.38
+          },
+          {
+            "confidence_range": "70-80%",
+            "matches": 88,
+            "mean_predicted_confidence_pct": 75.01,
+            "observed_accuracy_pct": 85.23
+          },
+          {
+            "confidence_range": "80-100%",
+            "matches": 35,
+            "mean_predicted_confidence_pct": 83.43,
+            "observed_accuracy_pct": 82.86
+          }
+        ]
+      },
+      "market_coverage_matches": 599,
       "period_start": "2024-09-30",
       "period_end": "2026-10-12",
       "note": "Validazione cronologica: ogni previsione usa solo gare con data strettamente precedente; coppe e indisponibilità non sono incluse."
@@ -404,39 +3035,326 @@
           "matches": 431,
           "accuracy_1x2": 50.58,
           "brier_score_1x2": 0.6021,
-          "log_loss_1x2": 1.0164
+          "log_loss_1x2": 1.0164,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 45,
+              "mean_predicted_confidence_pct": 38.33,
+              "observed_accuracy_pct": 31.11
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 148,
+              "mean_predicted_confidence_pct": 44.62,
+              "observed_accuracy_pct": 38.51
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 107,
+              "mean_predicted_confidence_pct": 54.41,
+              "observed_accuracy_pct": 53.27
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 58,
+              "mean_predicted_confidence_pct": 64.76,
+              "observed_accuracy_pct": 68.97
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 38,
+              "mean_predicted_confidence_pct": 74.93,
+              "observed_accuracy_pct": 63.16
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 35,
+              "mean_predicted_confidence_pct": 85.61,
+              "observed_accuracy_pct": 74.29
+            }
+          ]
         },
         "poisson_elo": {
           "matches": 431,
           "accuracy_1x2": 50.35,
           "brier_score_1x2": 0.6033,
-          "log_loss_1x2": 1.0201
+          "log_loss_1x2": 1.0201,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 39,
+              "mean_predicted_confidence_pct": 38.19,
+              "observed_accuracy_pct": 33.33
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 132,
+              "mean_predicted_confidence_pct": 44.43,
+              "observed_accuracy_pct": 37.88
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 111,
+              "mean_predicted_confidence_pct": 54.65,
+              "observed_accuracy_pct": 49.55
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 59,
+              "mean_predicted_confidence_pct": 64.72,
+              "observed_accuracy_pct": 64.41
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 44,
+              "mean_predicted_confidence_pct": 74.75,
+              "observed_accuracy_pct": 56.82
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 46,
+              "mean_predicted_confidence_pct": 86.41,
+              "observed_accuracy_pct": 78.26
+            }
+          ]
         },
         "poisson_form": {
           "matches": 431,
           "accuracy_1x2": 50.35,
           "brier_score_1x2": 0.6091,
-          "log_loss_1x2": 1.0314
+          "log_loss_1x2": 1.0314,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 54,
+              "mean_predicted_confidence_pct": 37.98,
+              "observed_accuracy_pct": 35.19
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 124,
+              "mean_predicted_confidence_pct": 44.88,
+              "observed_accuracy_pct": 43.55
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 101,
+              "mean_predicted_confidence_pct": 54.85,
+              "observed_accuracy_pct": 39.6
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 58,
+              "mean_predicted_confidence_pct": 64.19,
+              "observed_accuracy_pct": 62.07
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 42,
+              "mean_predicted_confidence_pct": 74.79,
+              "observed_accuracy_pct": 78.57
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 52,
+              "mean_predicted_confidence_pct": 87.29,
+              "observed_accuracy_pct": 67.31
+            }
+          ]
         },
         "model": {
           "matches": 431,
           "accuracy_1x2": 50.35,
           "brier_score_1x2": 0.6033,
-          "log_loss_1x2": 1.0201
+          "log_loss_1x2": 1.0201,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 39,
+              "mean_predicted_confidence_pct": 38.19,
+              "observed_accuracy_pct": 33.33
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 132,
+              "mean_predicted_confidence_pct": 44.43,
+              "observed_accuracy_pct": 37.88
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 111,
+              "mean_predicted_confidence_pct": 54.65,
+              "observed_accuracy_pct": 49.55
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 59,
+              "mean_predicted_confidence_pct": 64.72,
+              "observed_accuracy_pct": 64.41
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 44,
+              "mean_predicted_confidence_pct": 74.75,
+              "observed_accuracy_pct": 56.82
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 46,
+              "mean_predicted_confidence_pct": 86.41,
+              "observed_accuracy_pct": 78.26
+            }
+          ]
         },
         "poisson_elo_form": {
           "matches": 431,
           "accuracy_1x2": 50.81,
           "brier_score_1x2": 0.6113,
-          "log_loss_1x2": 1.0385
+          "log_loss_1x2": 1.0385,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 47,
+              "mean_predicted_confidence_pct": 37.9,
+              "observed_accuracy_pct": 31.91
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 115,
+              "mean_predicted_confidence_pct": 44.6,
+              "observed_accuracy_pct": 42.61
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 98,
+              "mean_predicted_confidence_pct": 54.96,
+              "observed_accuracy_pct": 42.86
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 68,
+              "mean_predicted_confidence_pct": 64.57,
+              "observed_accuracy_pct": 57.35
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 40,
+              "mean_predicted_confidence_pct": 75.4,
+              "observed_accuracy_pct": 77.5
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 63,
+              "mean_predicted_confidence_pct": 87.97,
+              "observed_accuracy_pct": 68.25
+            }
+          ]
+        },
+        "market_blend_50_50": {
+          "matches": 431,
+          "accuracy_1x2": 52.9,
+          "brier_score_1x2": 0.5835,
+          "log_loss_1x2": 0.9843,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 61,
+              "mean_predicted_confidence_pct": 38.31,
+              "observed_accuracy_pct": 40.98
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 131,
+              "mean_predicted_confidence_pct": 44.82,
+              "observed_accuracy_pct": 37.4
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 109,
+              "mean_predicted_confidence_pct": 54.25,
+              "observed_accuracy_pct": 56.88
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 61,
+              "mean_predicted_confidence_pct": 65.05,
+              "observed_accuracy_pct": 63.93
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 37,
+              "mean_predicted_confidence_pct": 74.28,
+              "observed_accuracy_pct": 75.68
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 32,
+              "mean_predicted_confidence_pct": 84.43,
+              "observed_accuracy_pct": 78.12
+            }
+          ]
         }
       },
       "prior_frequency_baseline": {
         "matches": 431,
         "accuracy_1x2": 45.71,
         "brier_score_1x2": 0.643,
-        "log_loss_1x2": 1.0639
+        "log_loss_1x2": 1.0639,
+        "top_class_calibration": [
+          {
+            "confidence_range": "40-50%",
+            "matches": 431,
+            "mean_predicted_confidence_pct": 45.8,
+            "observed_accuracy_pct": 45.71
+          }
+        ]
       },
+      "market_baseline": {
+        "matches": 431,
+        "accuracy_1x2": 52.67,
+        "brier_score_1x2": 0.5735,
+        "log_loss_1x2": 0.9677,
+        "top_class_calibration": [
+          {
+            "confidence_range": "0-40%",
+            "matches": 73,
+            "mean_predicted_confidence_pct": 37.7,
+            "observed_accuracy_pct": 34.25
+          },
+          {
+            "confidence_range": "40-50%",
+            "matches": 133,
+            "mean_predicted_confidence_pct": 44.7,
+            "observed_accuracy_pct": 37.59
+          },
+          {
+            "confidence_range": "50-60%",
+            "matches": 104,
+            "mean_predicted_confidence_pct": 54.19,
+            "observed_accuracy_pct": 64.42
+          },
+          {
+            "confidence_range": "60-70%",
+            "matches": 60,
+            "mean_predicted_confidence_pct": 64.72,
+            "observed_accuracy_pct": 60.0
+          },
+          {
+            "confidence_range": "70-80%",
+            "matches": 39,
+            "mean_predicted_confidence_pct": 74.5,
+            "observed_accuracy_pct": 76.92
+          },
+          {
+            "confidence_range": "80-100%",
+            "matches": 22,
+            "mean_predicted_confidence_pct": 82.9,
+            "observed_accuracy_pct": 86.36
+          }
+        ]
+      },
+      "market_coverage_matches": 431,
       "period_start": "2024-11-02",
       "period_end": "2026-10-11",
       "note": "Validazione cronologica: ogni previsione usa solo gare con data strettamente precedente; coppe e indisponibilità non sono incluse."
@@ -448,39 +3366,326 @@
           "matches": 739,
           "accuracy_1x2": 49.8,
           "brier_score_1x2": 0.5947,
-          "log_loss_1x2": 0.9977
+          "log_loss_1x2": 0.9977,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 141,
+              "mean_predicted_confidence_pct": 37.66,
+              "observed_accuracy_pct": 33.33
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 247,
+              "mean_predicted_confidence_pct": 44.53,
+              "observed_accuracy_pct": 41.3
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 170,
+              "mean_predicted_confidence_pct": 54.78,
+              "observed_accuracy_pct": 50.0
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 100,
+              "mean_predicted_confidence_pct": 64.55,
+              "observed_accuracy_pct": 67.0
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 62,
+              "mean_predicted_confidence_pct": 74.82,
+              "observed_accuracy_pct": 83.87
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 19,
+              "mean_predicted_confidence_pct": 83.26,
+              "observed_accuracy_pct": 78.95
+            }
+          ]
         },
         "poisson_elo": {
           "matches": 739,
           "accuracy_1x2": 49.8,
           "brier_score_1x2": 0.5931,
-          "log_loss_1x2": 0.9957
+          "log_loss_1x2": 0.9957,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 132,
+              "mean_predicted_confidence_pct": 37.76,
+              "observed_accuracy_pct": 32.58
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 232,
+              "mean_predicted_confidence_pct": 44.56,
+              "observed_accuracy_pct": 39.22
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 160,
+              "mean_predicted_confidence_pct": 54.92,
+              "observed_accuracy_pct": 51.25
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 102,
+              "mean_predicted_confidence_pct": 64.16,
+              "observed_accuracy_pct": 61.76
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 72,
+              "mean_predicted_confidence_pct": 74.42,
+              "observed_accuracy_pct": 76.39
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 41,
+              "mean_predicted_confidence_pct": 83.77,
+              "observed_accuracy_pct": 82.93
+            }
+          ]
         },
         "poisson_form": {
           "matches": 739,
           "accuracy_1x2": 49.93,
           "brier_score_1x2": 0.6022,
-          "log_loss_1x2": 1.0102
+          "log_loss_1x2": 1.0102,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 118,
+              "mean_predicted_confidence_pct": 37.54,
+              "observed_accuracy_pct": 38.98
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 235,
+              "mean_predicted_confidence_pct": 44.51,
+              "observed_accuracy_pct": 39.15
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 160,
+              "mean_predicted_confidence_pct": 54.7,
+              "observed_accuracy_pct": 45.62
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 98,
+              "mean_predicted_confidence_pct": 64.3,
+              "observed_accuracy_pct": 62.24
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 72,
+              "mean_predicted_confidence_pct": 75.05,
+              "observed_accuracy_pct": 73.61
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 56,
+              "mean_predicted_confidence_pct": 85.29,
+              "observed_accuracy_pct": 78.57
+            }
+          ]
         },
         "model": {
           "matches": 739,
           "accuracy_1x2": 49.8,
           "brier_score_1x2": 0.5931,
-          "log_loss_1x2": 0.9957
+          "log_loss_1x2": 0.9957,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 132,
+              "mean_predicted_confidence_pct": 37.76,
+              "observed_accuracy_pct": 32.58
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 232,
+              "mean_predicted_confidence_pct": 44.56,
+              "observed_accuracy_pct": 39.22
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 160,
+              "mean_predicted_confidence_pct": 54.92,
+              "observed_accuracy_pct": 51.25
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 102,
+              "mean_predicted_confidence_pct": 64.16,
+              "observed_accuracy_pct": 61.76
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 72,
+              "mean_predicted_confidence_pct": 74.42,
+              "observed_accuracy_pct": 76.39
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 41,
+              "mean_predicted_confidence_pct": 83.77,
+              "observed_accuracy_pct": 82.93
+            }
+          ]
         },
         "poisson_elo_form": {
           "matches": 739,
           "accuracy_1x2": 49.93,
           "brier_score_1x2": 0.602,
-          "log_loss_1x2": 1.0111
+          "log_loss_1x2": 1.0111,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 113,
+              "mean_predicted_confidence_pct": 37.64,
+              "observed_accuracy_pct": 34.51
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 226,
+              "mean_predicted_confidence_pct": 44.75,
+              "observed_accuracy_pct": 41.59
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 151,
+              "mean_predicted_confidence_pct": 54.88,
+              "observed_accuracy_pct": 41.06
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 104,
+              "mean_predicted_confidence_pct": 64.82,
+              "observed_accuracy_pct": 63.46
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 61,
+              "mean_predicted_confidence_pct": 74.79,
+              "observed_accuracy_pct": 70.49
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 84,
+              "mean_predicted_confidence_pct": 85.74,
+              "observed_accuracy_pct": 77.38
+            }
+          ]
+        },
+        "market_blend_50_50": {
+          "matches": 739,
+          "accuracy_1x2": 52.1,
+          "brier_score_1x2": 0.5756,
+          "log_loss_1x2": 0.9706,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 146,
+              "mean_predicted_confidence_pct": 37.54,
+              "observed_accuracy_pct": 32.88
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 248,
+              "mean_predicted_confidence_pct": 44.63,
+              "observed_accuracy_pct": 45.97
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 163,
+              "mean_predicted_confidence_pct": 54.57,
+              "observed_accuracy_pct": 48.47
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 87,
+              "mean_predicted_confidence_pct": 64.3,
+              "observed_accuracy_pct": 72.41
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 72,
+              "mean_predicted_confidence_pct": 74.67,
+              "observed_accuracy_pct": 83.33
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 23,
+              "mean_predicted_confidence_pct": 82.95,
+              "observed_accuracy_pct": 91.3
+            }
+          ]
         }
       },
       "prior_frequency_baseline": {
         "matches": 739,
         "accuracy_1x2": 46.82,
         "brier_score_1x2": 0.6411,
-        "log_loss_1x2": 1.0623
+        "log_loss_1x2": 1.0623,
+        "top_class_calibration": [
+          {
+            "confidence_range": "40-50%",
+            "matches": 739,
+            "mean_predicted_confidence_pct": 45.42,
+            "observed_accuracy_pct": 46.82
+          }
+        ]
       },
+      "market_baseline": {
+        "matches": 739,
+        "accuracy_1x2": 54.67,
+        "brier_score_1x2": 0.567,
+        "log_loss_1x2": 0.9584,
+        "top_class_calibration": [
+          {
+            "confidence_range": "0-40%",
+            "matches": 164,
+            "mean_predicted_confidence_pct": 37.57,
+            "observed_accuracy_pct": 43.29
+          },
+          {
+            "confidence_range": "40-50%",
+            "matches": 238,
+            "mean_predicted_confidence_pct": 44.31,
+            "observed_accuracy_pct": 45.8
+          },
+          {
+            "confidence_range": "50-60%",
+            "matches": 167,
+            "mean_predicted_confidence_pct": 54.58,
+            "observed_accuracy_pct": 53.89
+          },
+          {
+            "confidence_range": "60-70%",
+            "matches": 85,
+            "mean_predicted_confidence_pct": 64.74,
+            "observed_accuracy_pct": 65.88
+          },
+          {
+            "confidence_range": "70-80%",
+            "matches": 63,
+            "mean_predicted_confidence_pct": 74.8,
+            "observed_accuracy_pct": 92.06
+          },
+          {
+            "confidence_range": "80-100%",
+            "matches": 22,
+            "mean_predicted_confidence_pct": 82.7,
+            "observed_accuracy_pct": 90.91
+          }
+        ]
+      },
+      "market_coverage_matches": 739,
       "period_start": "2024-09-24",
       "period_end": "2026-10-12",
       "note": "Validazione cronologica: ogni previsione usa solo gare con data strettamente precedente; coppe e indisponibilità non sono incluse."
@@ -492,39 +3697,332 @@
           "matches": 611,
           "accuracy_1x2": 53.68,
           "brier_score_1x2": 0.5923,
-          "log_loss_1x2": 0.9966
+          "log_loss_1x2": 0.9966,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 64,
+              "mean_predicted_confidence_pct": 37.62,
+              "observed_accuracy_pct": 40.62
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 199,
+              "mean_predicted_confidence_pct": 44.8,
+              "observed_accuracy_pct": 46.73
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 163,
+              "mean_predicted_confidence_pct": 54.67,
+              "observed_accuracy_pct": 50.92
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 105,
+              "mean_predicted_confidence_pct": 65.09,
+              "observed_accuracy_pct": 65.71
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 69,
+              "mean_predicted_confidence_pct": 74.42,
+              "observed_accuracy_pct": 75.36
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 11,
+              "mean_predicted_confidence_pct": 83.7,
+              "observed_accuracy_pct": 45.45
+            }
+          ]
         },
         "poisson_elo": {
           "matches": 611,
           "accuracy_1x2": 53.52,
           "brier_score_1x2": 0.5913,
-          "log_loss_1x2": 0.996
+          "log_loss_1x2": 0.996,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 61,
+              "mean_predicted_confidence_pct": 37.8,
+              "observed_accuracy_pct": 39.34
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 183,
+              "mean_predicted_confidence_pct": 45.0,
+              "observed_accuracy_pct": 44.26
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 149,
+              "mean_predicted_confidence_pct": 54.83,
+              "observed_accuracy_pct": 48.99
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 105,
+              "mean_predicted_confidence_pct": 64.5,
+              "observed_accuracy_pct": 65.71
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 84,
+              "mean_predicted_confidence_pct": 74.56,
+              "observed_accuracy_pct": 75.0
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 29,
+              "mean_predicted_confidence_pct": 83.76,
+              "observed_accuracy_pct": 58.62
+            }
+          ]
         },
         "poisson_form": {
           "matches": 611,
           "accuracy_1x2": 52.21,
           "brier_score_1x2": 0.5975,
-          "log_loss_1x2": 1.0059
+          "log_loss_1x2": 1.0059,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 84,
+              "mean_predicted_confidence_pct": 37.69,
+              "observed_accuracy_pct": 35.71
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 169,
+              "mean_predicted_confidence_pct": 45.34,
+              "observed_accuracy_pct": 44.38
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 124,
+              "mean_predicted_confidence_pct": 54.44,
+              "observed_accuracy_pct": 49.19
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 120,
+              "mean_predicted_confidence_pct": 64.13,
+              "observed_accuracy_pct": 58.33
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 64,
+              "mean_predicted_confidence_pct": 75.08,
+              "observed_accuracy_pct": 71.88
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 50,
+              "mean_predicted_confidence_pct": 84.72,
+              "observed_accuracy_pct": 74.0
+            }
+          ]
         },
         "model": {
           "matches": 611,
           "accuracy_1x2": 53.52,
           "brier_score_1x2": 0.5913,
-          "log_loss_1x2": 0.996
+          "log_loss_1x2": 0.996,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 61,
+              "mean_predicted_confidence_pct": 37.8,
+              "observed_accuracy_pct": 39.34
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 183,
+              "mean_predicted_confidence_pct": 45.0,
+              "observed_accuracy_pct": 44.26
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 149,
+              "mean_predicted_confidence_pct": 54.83,
+              "observed_accuracy_pct": 48.99
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 105,
+              "mean_predicted_confidence_pct": 64.5,
+              "observed_accuracy_pct": 65.71
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 84,
+              "mean_predicted_confidence_pct": 74.56,
+              "observed_accuracy_pct": 75.0
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 29,
+              "mean_predicted_confidence_pct": 83.76,
+              "observed_accuracy_pct": 58.62
+            }
+          ]
         },
         "poisson_elo_form": {
           "matches": 611,
           "accuracy_1x2": 52.7,
           "brier_score_1x2": 0.5976,
-          "log_loss_1x2": 1.0079
+          "log_loss_1x2": 1.0079,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 81,
+              "mean_predicted_confidence_pct": 37.79,
+              "observed_accuracy_pct": 41.98
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 145,
+              "mean_predicted_confidence_pct": 45.24,
+              "observed_accuracy_pct": 41.38
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 137,
+              "mean_predicted_confidence_pct": 54.39,
+              "observed_accuracy_pct": 46.72
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 110,
+              "mean_predicted_confidence_pct": 64.69,
+              "observed_accuracy_pct": 59.09
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 67,
+              "mean_predicted_confidence_pct": 74.5,
+              "observed_accuracy_pct": 71.64
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 71,
+              "mean_predicted_confidence_pct": 85.58,
+              "observed_accuracy_pct": 71.83
+            }
+          ]
+        },
+        "market_blend_50_50": {
+          "matches": 611,
+          "accuracy_1x2": 55.16,
+          "brier_score_1x2": 0.5722,
+          "log_loss_1x2": 0.9648,
+          "top_class_calibration": [
+            {
+              "confidence_range": "0-40%",
+              "matches": 81,
+              "mean_predicted_confidence_pct": 38.08,
+              "observed_accuracy_pct": 37.04
+            },
+            {
+              "confidence_range": "40-50%",
+              "matches": 199,
+              "mean_predicted_confidence_pct": 44.94,
+              "observed_accuracy_pct": 48.74
+            },
+            {
+              "confidence_range": "50-60%",
+              "matches": 155,
+              "mean_predicted_confidence_pct": 54.66,
+              "observed_accuracy_pct": 51.61
+            },
+            {
+              "confidence_range": "60-70%",
+              "matches": 104,
+              "mean_predicted_confidence_pct": 64.89,
+              "observed_accuracy_pct": 74.04
+            },
+            {
+              "confidence_range": "70-80%",
+              "matches": 57,
+              "mean_predicted_confidence_pct": 74.64,
+              "observed_accuracy_pct": 75.44
+            },
+            {
+              "confidence_range": "80-100%",
+              "matches": 15,
+              "mean_predicted_confidence_pct": 82.21,
+              "observed_accuracy_pct": 66.67
+            }
+          ]
         }
       },
       "prior_frequency_baseline": {
         "matches": 611,
         "accuracy_1x2": 46.15,
         "brier_score_1x2": 0.6461,
-        "log_loss_1x2": 1.0694
+        "log_loss_1x2": 1.0694,
+        "top_class_calibration": [
+          {
+            "confidence_range": "0-40%",
+            "matches": 38,
+            "mean_predicted_confidence_pct": 38.18,
+            "observed_accuracy_pct": 52.63
+          },
+          {
+            "confidence_range": "40-50%",
+            "matches": 573,
+            "mean_predicted_confidence_pct": 46.01,
+            "observed_accuracy_pct": 45.72
+          }
+        ]
       },
+      "market_baseline": {
+        "matches": 611,
+        "accuracy_1x2": 56.14,
+        "brier_score_1x2": 0.5639,
+        "log_loss_1x2": 0.952,
+        "top_class_calibration": [
+          {
+            "confidence_range": "0-40%",
+            "matches": 97,
+            "mean_predicted_confidence_pct": 37.75,
+            "observed_accuracy_pct": 45.36
+          },
+          {
+            "confidence_range": "40-50%",
+            "matches": 223,
+            "mean_predicted_confidence_pct": 44.82,
+            "observed_accuracy_pct": 47.53
+          },
+          {
+            "confidence_range": "50-60%",
+            "matches": 140,
+            "mean_predicted_confidence_pct": 54.39,
+            "observed_accuracy_pct": 56.43
+          },
+          {
+            "confidence_range": "60-70%",
+            "matches": 83,
+            "mean_predicted_confidence_pct": 64.66,
+            "observed_accuracy_pct": 73.49
+          },
+          {
+            "confidence_range": "70-80%",
+            "matches": 55,
+            "mean_predicted_confidence_pct": 74.58,
+            "observed_accuracy_pct": 76.36
+          },
+          {
+            "confidence_range": "80-100%",
+            "matches": 13,
+            "mean_predicted_confidence_pct": 83.13,
+            "observed_accuracy_pct": 84.62
+          }
+        ]
+      },
+      "market_coverage_matches": 611,
       "period_start": "2024-10-04",
       "period_end": "2026-10-12",
       "note": "Validazione cronologica: ogni previsione usa solo gare con data strettamente precedente; coppe e indisponibilità non sono incluse."
@@ -536,6 +4034,9 @@
     "Copertura limitata alle 11 leghe con CSV stagionali diretti di football-data.co.uk.",
     "Le gare dello stesso giorno vengono tutte previste prima di aggiungere i risultati di quel giorno, per evitare leakage intra-giornaliero.",
     "Le coppe, gli infortuni, le squalifiche e le formazioni ufficiali non sono inclusi in questo backtest.",
-    "Il risultato è un test storico ricostruito con il modello corrente e non prova da solo prestazioni future o redditività."
+    "Il risultato è un test storico ricostruito con il modello corrente e non prova da solo prestazioni future o redditività.",
+    "Il benchmark di mercato usa AvgH/AvgD/AvgA, con fallback B365H/D/A e PSH/PSD/PSA, solo quando le quote storiche sono complete; le probabilità sono normalizzate per rimuovere il margine.",
+    "La miscela 50/50 modello-mercato è sperimentale e resta esclusa dai pronostici pubblicati finché non supera una validazione fuori campione.",
+    "La calibrazione top-class confronta la probabilità dell'esito più probabile con la frequenza di correttezza nella stessa fascia."
   ]
 }
