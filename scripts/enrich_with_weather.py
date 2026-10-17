@@ -43,7 +43,25 @@ def fetch_json(url):
 
 
 def team_key(value):
-    return " ".join(str(value or "").casefold().split())
+    """Chiave tollerante ad accenti, punteggiatura e varianti note dei nomi."""
+    import re
+    import unicodedata
+    value = unicodedata.normalize("NFKD", str(value or ""))
+    value = "".join(char for char in value if not unicodedata.combining(char)).casefold()
+    value = re.sub(r"[^a-z0-9]", "", value)
+    aliases = {
+        "athmadrid": "atleticodemadrid", "atleticomadrid": "atleticodemadrid",
+        "athleticbilbao": "athleticclub", "espanyol": "espanol", "rcdespanyol": "espanol",
+        "intermilan": "inter", "fcinternazionale": "inter", "internazionale": "inter",
+        "acmilan": "milan", "juve": "juventus", "parissaintgermain": "psg",
+        "manutd": "manchesterunited", "manchesterutd": "manchesterunited",
+        "mancity": "manchestercity", "bayernmunchen": "bayernmunich", "fcbayern": "bayernmunich",
+        "koln": "cologne", "fckoln": "cologne", "1fckoln": "cologne",
+        "dortmund": "borussiadortmund", "gladbach": "borussiamonchengladbach",
+        "monchengladbach": "borussiamonchengladbach", "psveindhoven": "psv",
+        "sportinglisbon": "sportingcp", "redbullsalzburg": "salzburg",
+    }
+    return aliases.get(value, value)
 
 
 def load_json(path, default):
@@ -65,10 +83,7 @@ def get_location(city, country, cache, now):
     results = payload.get("results") or []
     country_norm = team_key(COUNTRY_ALIASES.get(team_key(country), country))
     selected = next((item for item in results if country_norm and country_norm in team_key(item.get("country"))), None)
-    if selected is None and results:
-        # La geocodifica resta solo approssimativa se il paese della fonte è ambiguo;
-        # preferisce il primo risultato del servizio anziché inventare coordinate.
-        selected = results[0] if len(results) == 1 else None
+    # Non indovinare quando la città non coincide con il paese atteso.
     if not selected:
         return None
     result = {
@@ -133,47 +148,76 @@ def get_weather(location, kickoff_utc, now, cache):
     return result
 
 
+def weather_unavailable_reason(fixture):
+    if not fixture:
+        return "Partita non abbinata con certezza al calendario con dati dello stadio."
+    if not fixture.get("kickoff_utc"):
+        return "Orario ufficiale con fuso orario non verificato."
+    if not str(fixture.get("venue_city") or "").strip():
+        return "Città dello stadio non disponibile nella fonte."
+    return "Previsione oraria non restituita dalla fonte meteo per questa sede e data."
+
+
 def enrich():
     now = datetime.now(timezone.utc)
     predictions = load_json(PREDICTIONS, {})
     competitions = load_json(COMPETITIONS, {})
     cache = load_json(CACHE, {"locations": {}, "forecasts": {}})
+    if not isinstance(cache, dict):
+        cache = {"locations": {}, "forecasts": {}}
+    cache.setdefault("locations", {})
+    cache.setdefault("forecasts", {})
     fixtures = competitions.get("fixtures", []) if isinstance(competitions, dict) else []
     index = {}
     for fixture in fixtures:
         key = (fixture.get("date"), team_key(fixture.get("home_team")), team_key(fixture.get("away_team")))
-        if all(key) and fixture.get("venue_city"):
-            index[key] = fixture
-    total = 0
-    failures = 0
+        if all(key):
+            existing = index.get(key)
+            score = int(bool(fixture.get("venue_city"))) + int(bool(fixture.get("kickoff_utc")))
+            old_score = int(bool((existing or {}).get("venue_city"))) + int(bool((existing or {}).get("kickoff_utc")))
+            if existing is None or score > old_score:
+                index[key] = fixture
+    total = unavailable = failures = 0
     for group in ("matches", "no_bet_matches"):
-        for match in predictions.get(group, []) if isinstance(predictions.get(group), list) else []:
+        records = predictions.get(group, [])
+        for match in records if isinstance(records, list) else []:
             match.pop("weather_context", None)
             key = (match.get("date"), team_key(match.get("home_team")), team_key(match.get("away_team")))
             fixture = index.get(key)
-            if not fixture or not fixture.get("kickoff_utc"):
-                continue
-            city = str(fixture.get("venue_city") or "").strip()
-            country = str(fixture.get("venue_country") or "").strip()
-            if not city:
-                continue
-            try:
-                location = get_location(city, country, cache, now)
-                if not location:
-                    continue
-                weather = get_weather(location, fixture["kickoff_utc"], now, cache)
-                if weather:
-                    weather["venue"] = fixture.get("venue_name") or ""
-                    weather["source_fixture"] = fixture.get("source", "ESPN")
-                    match["weather_context"] = weather
-                    total += 1
-            except (OSError, ValueError, KeyError, TimeoutError) as error:
-                failures += 1
-                print(f"AVVISO meteo {match.get('home_team')} - {match.get('away_team')}: {error}")
+            reason = weather_unavailable_reason(fixture)
+            if fixture and fixture.get("kickoff_utc") and str(fixture.get("venue_city") or "").strip():
+                city = str(fixture["venue_city"]).strip()
+                country = str(fixture.get("venue_country") or "").strip()
+                try:
+                    location = get_location(city, country, cache, now)
+                    if location:
+                        weather = get_weather(location, fixture["kickoff_utc"], now, cache)
+                        if weather:
+                            weather["venue"] = fixture.get("venue_name") or ""
+                            weather["source_fixture"] = fixture.get("source", "calendario")
+                            match["weather_context"] = weather
+                            total += 1
+                            continue
+                        reason = "La fonte meteo non ha una previsione oraria disponibile per questa data."
+                    else:
+                        reason = "Città non geolocalizzata in modo univoco: previsione omessa per evitare una sede errata."
+                except (OSError, ValueError, KeyError, TimeoutError) as error:
+                    failures += 1
+                    reason = "Servizio meteo temporaneamente non disponibile."
+                    print(f"AVVISO meteo {match.get('home_team')} - {match.get('away_team')}: {error}")
+            match["weather_context"] = {
+                "status": "non_disponibile", "reason": reason, "provider": "Open-Meteo",
+                "note": "Il meteo è solo informativo e non modifica le probabilità del modello.",
+            }
+            unavailable += 1
     predictions["weather_updated_at"] = now.isoformat()
+    predictions["weather_summary"] = {
+        "available": total, "unavailable": unavailable, "failures": failures,
+        "note": "Il meteo è solo informativo e non modifica le probabilità.",
+    }
     PREDICTIONS.write_text(json.dumps(predictions, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     CACHE.write_text(json.dumps(cache, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"Meteo: {total} partite arricchite; {failures} richieste non riuscite. Le probabilità restano invariate.")
+    print(f"Meteo: {total} disponibili, {unavailable} non disponibili, {failures} errori di servizio. Probabilità invariate.")
 
 
 if __name__ == "__main__":
