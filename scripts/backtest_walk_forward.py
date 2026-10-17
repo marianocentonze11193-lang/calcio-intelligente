@@ -128,7 +128,8 @@ def walk_forward_league(league_name, results):
                         "poisson_only": (None, {}),
                         "poisson_elo": (elo, {}),
                         "poisson_form": (None, recent),
-                        "model": (elo, recent),
+                        "model": (elo, {}),
+                        "poisson_elo_form": (elo, recent),
                     }
                     for variant, (variant_elo, variant_form) in variant_args.items():
                         forecast = model.make_forecast(
@@ -168,7 +169,7 @@ def main():
             all_by_league[league] = {
                 "source_matches": len(results),
                 "variants": {name: metric_summary([item["variants"][name] for item in evaluated if name in item["variants"]])
-                             for name in ("poisson_only", "poisson_elo", "poisson_form", "model")},
+                             for name in ("poisson_only", "poisson_elo", "poisson_form", "model", "poisson_elo_form")},
                 "prior_frequency_baseline": metric_summary([item["baseline"] for item in evaluated]),
                 "period_start": min((item["date"] for item in evaluated), default=None),
                 "period_end": max((item["date"] for item in evaluated), default=None),
