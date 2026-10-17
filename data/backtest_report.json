@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T20:52:04.064736+00:00",
+  "updated_at": "2026-10-17T20:53:02.516645+00:00",
   "method": "walk-forward cronologico per data, con baseline di frequenza 1/X/2 calcolata solo sui risultati precedenti e smoothing di Laplace",
   "period_start_requested": "2024-07-01",
   "period_end_requested": "2026-10-16",
@@ -341,6 +341,110 @@
       ]
     },
     "market_coverage_matches": 6616,
+    "outcome_calibration": {
+      "1": {
+        "matches": 6616,
+        "brier_score": 0.21869,
+        "log_loss": 0.62779,
+        "reliability_bins": [
+          {
+            "probability_range": "0-20%",
+            "matches": 698,
+            "mean_predicted_pct": 13.55,
+            "observed_frequency_pct": 16.05
+          },
+          {
+            "probability_range": "20-40%",
+            "matches": 2054,
+            "mean_predicted_pct": 30.8,
+            "observed_frequency_pct": 31.69
+          },
+          {
+            "probability_range": "40-60%",
+            "matches": 2249,
+            "mean_predicted_pct": 49.46,
+            "observed_frequency_pct": 45.62
+          },
+          {
+            "probability_range": "60-80%",
+            "matches": 1315,
+            "mean_predicted_pct": 68.21,
+            "observed_frequency_pct": 63.8
+          },
+          {
+            "probability_range": "80-100%",
+            "matches": 300,
+            "mean_predicted_pct": 85.12,
+            "observed_frequency_pct": 82.67
+          }
+        ],
+        "note": "Brier/log-loss binari one-vs-rest; punteggi più bassi sono migliori."
+      },
+      "X": {
+        "matches": 6616,
+        "brier_score": 0.18831,
+        "log_loss": 0.56408,
+        "reliability_bins": [
+          {
+            "probability_range": "0-20%",
+            "matches": 1587,
+            "mean_predicted_pct": 15.46,
+            "observed_frequency_pct": 18.59
+          },
+          {
+            "probability_range": "20-40%",
+            "matches": 5015,
+            "mean_predicted_pct": 25.44,
+            "observed_frequency_pct": 27.28
+          },
+          {
+            "probability_range": "40-60%",
+            "matches": 14,
+            "mean_predicted_pct": 41.86,
+            "observed_frequency_pct": 21.43
+          }
+        ],
+        "note": "Brier/log-loss binari one-vs-rest; punteggi più bassi sono migliori."
+      },
+      "2": {
+        "matches": 6616,
+        "brier_score": 0.1925,
+        "log_loss": 0.56824,
+        "reliability_bins": [
+          {
+            "probability_range": "0-20%",
+            "matches": 1988,
+            "mean_predicted_pct": 12.64,
+            "observed_frequency_pct": 14.99
+          },
+          {
+            "probability_range": "20-40%",
+            "matches": 2716,
+            "mean_predicted_pct": 29.51,
+            "observed_frequency_pct": 29.27
+          },
+          {
+            "probability_range": "40-60%",
+            "matches": 1369,
+            "mean_predicted_pct": 48.48,
+            "observed_frequency_pct": 45.95
+          },
+          {
+            "probability_range": "60-80%",
+            "matches": 473,
+            "mean_predicted_pct": 67.91,
+            "observed_frequency_pct": 64.48
+          },
+          {
+            "probability_range": "80-100%",
+            "matches": 70,
+            "mean_predicted_pct": 84.78,
+            "observed_frequency_pct": 67.14
+          }
+        ],
+        "note": "Brier/log-loss binari one-vs-rest; punteggi più bassi sono migliori."
+      }
+    },
     "comparison_note": "Confronto su identiche partite; per Brier score e log loss un valore più basso è migliore. Il mercato è confrontato solo sulle partite con quote storiche complete."
   },
   "leagues": {
@@ -677,6 +781,104 @@
         ]
       },
       "market_coverage_matches": 608,
+      "outcome_calibration": {
+        "1": {
+          "matches": 608,
+          "brier_score": 0.22826,
+          "log_loss": 0.64835,
+          "reliability_bins": [
+            {
+              "probability_range": "0-20%",
+              "matches": 28,
+              "mean_predicted_pct": 16.21,
+              "observed_frequency_pct": 21.43
+            },
+            {
+              "probability_range": "20-40%",
+              "matches": 188,
+              "mean_predicted_pct": 31.69,
+              "observed_frequency_pct": 30.85
+            },
+            {
+              "probability_range": "40-60%",
+              "matches": 243,
+              "mean_predicted_pct": 49.53,
+              "observed_frequency_pct": 40.74
+            },
+            {
+              "probability_range": "60-80%",
+              "matches": 129,
+              "mean_predicted_pct": 68.1,
+              "observed_frequency_pct": 61.24
+            },
+            {
+              "probability_range": "80-100%",
+              "matches": 20,
+              "mean_predicted_pct": 85.27,
+              "observed_frequency_pct": 75.0
+            }
+          ],
+          "note": "Brier/log-loss binari one-vs-rest; punteggi più bassi sono migliori."
+        },
+        "X": {
+          "matches": 608,
+          "brier_score": 0.19717,
+          "log_loss": 0.58556,
+          "reliability_bins": [
+            {
+              "probability_range": "0-20%",
+              "matches": 112,
+              "mean_predicted_pct": 16.0,
+              "observed_frequency_pct": 23.21
+            },
+            {
+              "probability_range": "20-40%",
+              "matches": 494,
+              "mean_predicted_pct": 25.93,
+              "observed_frequency_pct": 27.33
+            },
+            {
+              "probability_range": "40-60%",
+              "matches": 2,
+              "mean_predicted_pct": 40.9,
+              "observed_frequency_pct": 50.0
+            }
+          ],
+          "note": "Brier/log-loss binari one-vs-rest; punteggi più bassi sono migliori."
+        },
+        "2": {
+          "matches": 608,
+          "brier_score": 0.20227,
+          "log_loss": 0.59069,
+          "reliability_bins": [
+            {
+              "probability_range": "0-20%",
+              "matches": 195,
+              "mean_predicted_pct": 13.21,
+              "observed_frequency_pct": 16.92
+            },
+            {
+              "probability_range": "20-40%",
+              "matches": 293,
+              "mean_predicted_pct": 29.37,
+              "observed_frequency_pct": 33.79
+            },
+            {
+              "probability_range": "40-60%",
+              "matches": 105,
+              "mean_predicted_pct": 47.94,
+              "observed_frequency_pct": 45.71
+            },
+            {
+              "probability_range": "60-80%",
+              "matches": 15,
+              "mean_predicted_pct": 64.53,
+              "observed_frequency_pct": 60.0
+            }
+          ],
+          "note": "Brier/log-loss binari one-vs-rest; punteggi più bassi sono migliori."
+        }
+      },
       "period_start": "2024-09-26",
       "period_end": "2026-10-11",
       "note": "Validazione cronologica: ogni previsione usa solo gare con data strettamente precedente; coppe e indisponibilità non sono incluse."
@@ -1014,6 +1216,104 @@
         ]
       },
       "market_coverage_matches": 570,
+      "outcome_calibration": {
+        "1": {
+          "matches": 570,
+          "brier_score": 0.2189,
+          "log_loss": 0.62884,
+          "reliability_bins": [
+            {
+              "probability_range": "0-20%",
+              "matches": 61,
+              "mean_predicted_pct": 12.77,
+              "observed_frequency_pct": 11.48
+            },
+            {
+              "probability_range": "20-40%",
+              "matches": 185,
+              "mean_predicted_pct": 30.64,
+              "observed_frequency_pct": 32.43
+            },
+            {
+              "probability_range": "40-60%",
+              "matches": 185,
+              "mean_predicted_pct": 49.1,
+              "observed_frequency_pct": 43.24
+            },
+            {
+              "probability_range": "60-80%",
+              "matches": 112,
+              "mean_predicted_pct": 68.22,
+              "observed_frequency_pct": 62.5
+            },
+            {
+              "probability_range": "80-100%",
+              "matches": 27,
+              "mean_predicted_pct": 85.7,
+              "observed_frequency_pct": 77.78
+            }
+          ],
+          "note": "Brier/log-loss binari one-vs-rest; punteggi più bassi sono migliori."
+        },
+        "X": {
+          "matches": 570,
+          "brier_score": 0.18753,
+          "log_loss": 0.56392,
+          "reliability_bins": [
+            {
+              "probability_range": "0-20%",
+              "matches": 194,
+              "mean_predicted_pct": 15.67,
+              "observed_frequency_pct": 20.1
+            },
+            {
+              "probability_range": "20-40%",
+              "matches": 376,
+              "mean_predicted_pct": 24.22,
+              "observed_frequency_pct": 27.39
+            }
+          ],
+          "note": "Brier/log-loss binari one-vs-rest; punteggi più bassi sono migliori."
+        },
+        "2": {
+          "matches": 570,
+          "brier_score": 0.20702,
+          "log_loss": 0.6052,
+          "reliability_bins": [
+            {
+              "probability_range": "0-20%",
+              "matches": 146,
+              "mean_predicted_pct": 12.62,
+              "observed_frequency_pct": 16.44
+            },
+            {
+              "probability_range": "20-40%",
+              "matches": 238,
+              "mean_predicted_pct": 30.04,
+              "observed_frequency_pct": 31.93
+            },
+            {
+              "probability_range": "40-60%",
+              "matches": 126,
+              "mean_predicted_pct": 48.56,
+              "observed_frequency_pct": 44.44
+            },
+            {
+              "probability_range": "60-80%",
+              "matches": 49,
+              "mean_predicted_pct": 67.83,
+              "observed_frequency_pct": 48.98
+            },
+            {
+              "probability_range": "80-100%",
+              "matches": 11,
+              "mean_predicted_pct": 84.63,
+              "observed_frequency_pct": 90.91
+            }
+          ],
+          "note": "Brier/log-loss binari one-vs-rest; punteggi più bassi sono migliori."
+        }
+      },
       "period_start": "2024-10-20",
       "period_end": "2026-10-11",
       "note": "Validazione cronologica: ogni previsione usa solo gare con data strettamente precedente; coppe e indisponibilità non sono incluse."
@@ -1351,6 +1651,104 @@
         ]
       },
       "market_coverage_matches": 732,
+      "outcome_calibration": {
+        "1": {
+          "matches": 732,
+          "brier_score": 0.22641,
+          "log_loss": 0.64225,
+          "reliability_bins": [
+            {
+              "probability_range": "0-20%",
+              "matches": 53,
+              "mean_predicted_pct": 12.83,
+              "observed_frequency_pct": 13.21
+            },
+            {
+              "probability_range": "20-40%",
+              "matches": 265,
+              "mean_predicted_pct": 30.74,
+              "observed_frequency_pct": 33.96
+            },
+            {
+              "probability_range": "40-60%",
+              "matches": 277,
+              "mean_predicted_pct": 48.99,
+              "observed_frequency_pct": 44.04
+            },
+            {
+              "probability_range": "60-80%",
+              "matches": 123,
+              "mean_predicted_pct": 67.55,
+              "observed_frequency_pct": 60.98
+            },
+            {
+              "probability_range": "80-100%",
+              "matches": 14,
+              "mean_predicted_pct": 83.09,
+              "observed_frequency_pct": 78.57
+            }
+          ],
+          "note": "Brier/log-loss binari one-vs-rest; punteggi più bassi sono migliori."
+        },
+        "X": {
+          "matches": 732,
+          "brier_score": 0.19323,
+          "log_loss": 0.57628,
+          "reliability_bins": [
+            {
+              "probability_range": "0-20%",
+              "matches": 139,
+              "mean_predicted_pct": 16.22,
+              "observed_frequency_pct": 23.74
+            },
+            {
+              "probability_range": "20-40%",
+              "matches": 593,
+              "mean_predicted_pct": 24.71,
+              "observed_frequency_pct": 26.48
+            }
+          ],
+          "note": "Brier/log-loss binari one-vs-rest; punteggi più bassi sono migliori."
+        },
+        "2": {
+          "matches": 732,
+          "brier_score": 0.19993,
+          "log_loss": 0.58645,
+          "reliability_bins": [
+            {
+              "probability_range": "0-20%",
+              "matches": 170,
+              "mean_predicted_pct": 13.86,
+              "observed_frequency_pct": 15.88
+            },
+            {
+              "probability_range": "20-40%",
+              "matches": 335,
+              "mean_predicted_pct": 29.95,
+              "observed_frequency_pct": 28.06
+            },
+            {
+              "probability_range": "40-60%",
+              "matches": 178,
+              "mean_predicted_pct": 48.25,
+              "observed_frequency_pct": 46.63
+            },
+            {
+              "probability_range": "60-80%",
+              "matches": 41,
+              "mean_predicted_pct": 67.76,
+              "observed_frequency_pct": 68.29
+            },
+            {
+              "probability_range": "80-100%",
+              "matches": 8,
+              "mean_predicted_pct": 83.59,
+              "observed_frequency_pct": 62.5
+            }
+          ],
+          "note": "Brier/log-loss binari one-vs-rest; punteggi più bassi sono migliori."
+        }
+      },
       "period_start": "2024-10-05",
       "period_end": "2026-10-11",
       "note": "Validazione cronologica: ogni previsione usa solo gare con data strettamente precedente; coppe e indisponibilità non sono incluse."
@@ -1682,6 +2080,110 @@
         ]
       },
       "market_coverage_matches": 574,
+      "outcome_calibration": {
+        "1": {
+          "matches": 574,
+          "brier_score": 0.2277,
+          "log_loss": 0.64668,
+          "reliability_bins": [
+            {
+              "probability_range": "0-20%",
+              "matches": 64,
+              "mean_predicted_pct": 15.06,
+              "observed_frequency_pct": 18.75
+            },
+            {
+              "probability_range": "20-40%",
+              "matches": 163,
+              "mean_predicted_pct": 30.45,
+              "observed_frequency_pct": 30.67
+            },
+            {
+              "probability_range": "40-60%",
+              "matches": 194,
+              "mean_predicted_pct": 49.55,
+              "observed_frequency_pct": 54.12
+            },
+            {
+              "probability_range": "60-80%",
+              "matches": 127,
+              "mean_predicted_pct": 67.72,
+              "observed_frequency_pct": 59.06
+            },
+            {
+              "probability_range": "80-100%",
+              "matches": 26,
+              "mean_predicted_pct": 83.94,
+              "observed_frequency_pct": 84.62
+            }
+          ],
+          "note": "Brier/log-loss binari one-vs-rest; punteggi più bassi sono migliori."
+        },
+        "X": {
+          "matches": 574,
+          "brier_score": 0.17457,
+          "log_loss": 0.53443,
+          "reliability_bins": [
+            {
+              "probability_range": "0-20%",
+              "matches": 159,
+              "mean_predicted_pct": 15.88,
+              "observed_frequency_pct": 20.13
+            },
+            {
+              "probability_range": "20-40%",
+              "matches": 414,
+              "mean_predicted_pct": 24.56,
+              "observed_frequency_pct": 23.19
+            },
+            {
+              "probability_range": "40-60%",
+              "matches": 1,
+              "mean_predicted_pct": 41.0,
+              "observed_frequency_pct": 0.0
+            }
+          ],
+          "note": "Brier/log-loss binari one-vs-rest; punteggi più bassi sono migliori."
+        },
+        "2": {
+          "matches": 574,
+          "brier_score": 0.19765,
+          "log_loss": 0.58205,
+          "reliability_bins": [
+            {
+              "probability_range": "0-20%",
+              "matches": 180,
+              "mean_predicted_pct": 13.36,
+              "observed_frequency_pct": 16.11
+            },
+            {
+              "probability_range": "20-40%",
+              "matches": 221,
+              "mean_predicted_pct": 29.43,
+              "observed_frequency_pct": 28.51
+            },
+            {
+              "probability_range": "40-60%",
+              "matches": 128,
+              "mean_predicted_pct": 49.43,
+              "observed_frequency_pct": 47.66
+            },
+            {
+              "probability_range": "60-80%",
+              "matches": 41,
+              "mean_predicted_pct": 67.51,
+              "observed_frequency_pct": 63.41
+            },
+            {
+              "probability_range": "80-100%",
+              "matches": 4,
+              "mean_predicted_pct": 84.9,
+              "observed_frequency_pct": 75.0
+            }
+          ],
+          "note": "Brier/log-loss binari one-vs-rest; punteggi più bassi sono migliori."
+        }
+      },
       "period_start": "2024-10-18",
       "period_end": "2026-10-11",
       "note": "Validazione cronologica: ogni previsione usa solo gare con data strettamente precedente; coppe e indisponibilità non sono incluse."
@@ -2019,6 +2521,98 @@
         ]
       },
       "market_coverage_matches": 426,
+      "outcome_calibration": {
+        "1": {
+          "matches": 426,
+          "brier_score": 0.20544,
+          "log_loss": 0.59908,
+          "reliability_bins": [
+            {
+              "probability_range": "0-20%",
+              "matches": 59,
+              "mean_predicted_pct": 14.96,
+              "observed_frequency_pct": 13.56
+            },
+            {
+              "probability_range": "20-40%",
+              "matches": 171,
+              "mean_predicted_pct": 30.9,
+              "observed_frequency_pct": 30.41
+            },
+            {
+              "probability_range": "40-60%",
+              "matches": 121,
+              "mean_predicted_pct": 49.43,
+              "observed_frequency_pct": 57.02
+            },
+            {
+              "probability_range": "60-80%",
+              "matches": 66,
+              "mean_predicted_pct": 66.8,
+              "observed_frequency_pct": 75.76
+            },
+            {
+              "probability_range": "80-100%",
+              "matches": 9,
+              "mean_predicted_pct": 83.41,
+              "observed_frequency_pct": 77.78
+            }
+          ],
+          "note": "Brier/log-loss binari one-vs-rest; punteggi più bassi sono migliori."
+        },
+        "X": {
+          "matches": 426,
+          "brier_score": 0.18019,
+          "log_loss": 0.54581,
+          "reliability_bins": [
+            {
+              "probability_range": "0-20%",
+              "matches": 47,
+              "mean_predicted_pct": 16.09,
+              "observed_frequency_pct": 14.89
+            },
+            {
+              "probability_range": "20-40%",
+              "matches": 379,
+              "mean_predicted_pct": 26.55,
+              "observed_frequency_pct": 24.54
+            }
+          ],
+          "note": "Brier/log-loss binari one-vs-rest; punteggi più bassi sono migliori."
+        },
+        "2": {
+          "matches": 426,
+          "brier_score": 0.18911,
+          "log_loss": 0.55876,
+          "reliability_bins": [
+            {
+              "probability_range": "0-20%",
+              "matches": 107,
+              "mean_predicted_pct": 13.56,
+              "observed_frequency_pct": 11.21
+            },
+            {
+              "probability_range": "20-40%",
+              "matches": 168,
+              "mean_predicted_pct": 30.32,
+              "observed_frequency_pct": 27.98
+            },
+            {
+              "probability_range": "40-60%",
+              "matches": 112,
+              "mean_predicted_pct": 47.68,
+              "observed_frequency_pct": 49.11
+            },
+            {
+              "probability_range": "60-80%",
+              "matches": 39,
+              "mean_predicted_pct": 66.41,
+              "observed_frequency_pct": 66.67
+            }
+          ],
+          "note": "Brier/log-loss binari one-vs-rest; punteggi più bassi sono migliori."
+        }
+      },
       "period_start": "2024-11-02",
       "period_end": "2026-10-11",
       "note": "Validazione cronologica: ogni previsione usa solo gare con data strettamente precedente; coppe e indisponibilità non sono incluse."
@@ -2356,6 +2950,110 @@
         ]
       },
       "market_coverage_matches": 732,
+      "outcome_calibration": {
+        "1": {
+          "matches": 732,
+          "brier_score": 0.20731,
+          "log_loss": 0.6026,
+          "reliability_bins": [
+            {
+              "probability_range": "0-20%",
+              "matches": 108,
+              "mean_predicted_pct": 13.45,
+              "observed_frequency_pct": 13.89
+            },
+            {
+              "probability_range": "20-40%",
+              "matches": 242,
+              "mean_predicted_pct": 29.23,
+              "observed_frequency_pct": 27.69
+            },
+            {
+              "probability_range": "40-60%",
+              "matches": 224,
+              "mean_predicted_pct": 49.03,
+              "observed_frequency_pct": 48.21
+            },
+            {
+              "probability_range": "60-80%",
+              "matches": 148,
+              "mean_predicted_pct": 67.72,
+              "observed_frequency_pct": 65.54
+            },
+            {
+              "probability_range": "80-100%",
+              "matches": 10,
+              "mean_predicted_pct": 83.11,
+              "observed_frequency_pct": 80.0
+            }
+          ],
+          "note": "Brier/log-loss binari one-vs-rest; punteggi più bassi sono migliori."
+        },
+        "X": {
+          "matches": 732,
+          "brier_score": 0.19183,
+          "log_loss": 0.57171,
+          "reliability_bins": [
+            {
+              "probability_range": "0-20%",
+              "matches": 131,
+              "mean_predicted_pct": 16.59,
+              "observed_frequency_pct": 16.79
+            },
+            {
+              "probability_range": "20-40%",
+              "matches": 596,
+              "mean_predicted_pct": 25.81,
+              "observed_frequency_pct": 27.85
+            },
+            {
+              "probability_range": "40-60%",
+              "matches": 5,
+              "mean_predicted_pct": 42.7,
+              "observed_frequency_pct": 0.0
+            }
+          ],
+          "note": "Brier/log-loss binari one-vs-rest; punteggi più bassi sono migliori."
+        },
+        "2": {
+          "matches": 732,
+          "brier_score": 0.19545,
+          "log_loss": 0.57418,
+          "reliability_bins": [
+            {
+              "probability_range": "0-20%",
+              "matches": 190,
+              "mean_predicted_pct": 13.15,
+              "observed_frequency_pct": 16.84
+            },
+            {
+              "probability_range": "20-40%",
+              "matches": 280,
+              "mean_predicted_pct": 29.29,
+              "observed_frequency_pct": 26.07
+            },
+            {
+              "probability_range": "40-60%",
+              "matches": 191,
+              "mean_predicted_pct": 49.21,
+              "observed_frequency_pct": 50.79
+            },
+            {
+              "probability_range": "60-80%",
+              "matches": 65,
+              "mean_predicted_pct": 68.61,
+              "observed_frequency_pct": 64.62
+            },
+            {
+              "probability_range": "80-100%",
+              "matches": 6,
+              "mean_predicted_pct": 84.18,
+              "observed_frequency_pct": 83.33
+            }
+          ],
+          "note": "Brier/log-loss binari one-vs-rest; punteggi più bassi sono migliori."
+        }
+      },
       "period_start": "2024-10-04",
       "period_end": "2026-10-12",
       "note": "Validazione cronologica: ogni previsione usa solo gare con data strettamente precedente; coppe e indisponibilità non sono incluse."
@@ -2687,6 +3385,104 @@
         ]
       },
       "market_coverage_matches": 594,
+      "outcome_calibration": {
+        "1": {
+          "matches": 594,
+          "brier_score": 0.22064,
+          "log_loss": 0.63077,
+          "reliability_bins": [
+            {
+              "probability_range": "0-20%",
+              "matches": 61,
+              "mean_predicted_pct": 13.81,
+              "observed_frequency_pct": 18.03
+            },
+            {
+              "probability_range": "20-40%",
+              "matches": 153,
+              "mean_predicted_pct": 31.0,
+              "observed_frequency_pct": 33.33
+            },
+            {
+              "probability_range": "40-60%",
+              "matches": 181,
+              "mean_predicted_pct": 49.97,
+              "observed_frequency_pct": 37.57
+            },
+            {
+              "probability_range": "60-80%",
+              "matches": 156,
+              "mean_predicted_pct": 68.73,
+              "observed_frequency_pct": 59.62
+            },
+            {
+              "probability_range": "80-100%",
+              "matches": 43,
+              "mean_predicted_pct": 85.88,
+              "observed_frequency_pct": 86.05
+            }
+          ],
+          "note": "Brier/log-loss binari one-vs-rest; punteggi più bassi sono migliori."
+        },
+        "X": {
+          "matches": 594,
+          "brier_score": 0.19642,
+          "log_loss": 0.58297,
+          "reliability_bins": [
+            {
+              "probability_range": "0-20%",
+              "matches": 215,
+              "mean_predicted_pct": 15.39,
+              "observed_frequency_pct": 22.79
+            },
+            {
+              "probability_range": "20-40%",
+              "matches": 379,
+              "mean_predicted_pct": 24.36,
+              "observed_frequency_pct": 28.5
+            }
+          ],
+          "note": "Brier/log-loss binari one-vs-rest; punteggi più bassi sono migliori."
+        },
+        "2": {
+          "matches": 594,
+          "brier_score": 0.17923,
+          "log_loss": 0.53299,
+          "reliability_bins": [
+            {
+              "probability_range": "0-20%",
+              "matches": 224,
+              "mean_predicted_pct": 11.83,
+              "observed_frequency_pct": 13.39
+            },
+            {
+              "probability_range": "20-40%",
+              "matches": 203,
+              "mean_predicted_pct": 28.84,
+              "observed_frequency_pct": 29.56
+            },
+            {
+              "probability_range": "40-60%",
+              "matches": 110,
+              "mean_predicted_pct": 48.55,
+              "observed_frequency_pct": 45.45
+            },
+            {
+              "probability_range": "60-80%",
+              "matches": 51,
+              "mean_predicted_pct": 67.68,
+              "observed_frequency_pct": 62.75
+            },
+            {
+              "probability_range": "80-100%",
+              "matches": 6,
+              "mean_predicted_pct": 86.4,
+              "observed_frequency_pct": 83.33
+            }
+          ],
+          "note": "Brier/log-loss binari one-vs-rest; punteggi più bassi sono migliori."
+        }
+      },
       "period_start": "2024-10-04",
       "period_end": "2026-10-11",
       "note": "Validazione cronologica: ogni previsione usa solo gare con data strettamente precedente; coppe e indisponibilità non sono incluse."
@@ -3024,6 +3820,110 @@
         ]
       },
       "market_coverage_matches": 599,
+      "outcome_calibration": {
+        "1": {
+          "matches": 599,
+          "brier_score": 0.19996,
+          "log_loss": 0.5847,
+          "reliability_bins": [
+            {
+              "probability_range": "0-20%",
+              "matches": 103,
+              "mean_predicted_pct": 12.48,
+              "observed_frequency_pct": 15.53
+            },
+            {
+              "probability_range": "20-40%",
+              "matches": 167,
+              "mean_predicted_pct": 31.5,
+              "observed_frequency_pct": 26.95
+            },
+            {
+              "probability_range": "40-60%",
+              "matches": 176,
+              "mean_predicted_pct": 50.0,
+              "observed_frequency_pct": 43.18
+            },
+            {
+              "probability_range": "60-80%",
+              "matches": 96,
+              "mean_predicted_pct": 68.14,
+              "observed_frequency_pct": 61.46
+            },
+            {
+              "probability_range": "80-100%",
+              "matches": 57,
+              "mean_predicted_pct": 86.2,
+              "observed_frequency_pct": 87.72
+            }
+          ],
+          "note": "Brier/log-loss binari one-vs-rest; punteggi più bassi sono migliori."
+        },
+        "X": {
+          "matches": 599,
+          "brier_score": 0.19473,
+          "log_loss": 0.57914,
+          "reliability_bins": [
+            {
+              "probability_range": "0-20%",
+              "matches": 152,
+              "mean_predicted_pct": 13.5,
+              "observed_frequency_pct": 16.45
+            },
+            {
+              "probability_range": "20-40%",
+              "matches": 446,
+              "mean_predicted_pct": 26.47,
+              "observed_frequency_pct": 30.49
+            },
+            {
+              "probability_range": "40-60%",
+              "matches": 1,
+              "mean_predicted_pct": 40.3,
+              "observed_frequency_pct": 100.0
+            }
+          ],
+          "note": "Brier/log-loss binari one-vs-rest; punteggi più bassi sono migliori."
+        },
+        "2": {
+          "matches": 599,
+          "brier_score": 0.17844,
+          "log_loss": 0.5288,
+          "reliability_bins": [
+            {
+              "probability_range": "0-20%",
+              "matches": 212,
+              "mean_predicted_pct": 11.45,
+              "observed_frequency_pct": 13.21
+            },
+            {
+              "probability_range": "20-40%",
+              "matches": 205,
+              "mean_predicted_pct": 29.99,
+              "observed_frequency_pct": 29.76
+            },
+            {
+              "probability_range": "40-60%",
+              "matches": 105,
+              "mean_predicted_pct": 48.6,
+              "observed_frequency_pct": 44.76
+            },
+            {
+              "probability_range": "60-80%",
+              "matches": 64,
+              "mean_predicted_pct": 68.85,
+              "observed_frequency_pct": 71.88
+            },
+            {
+              "probability_range": "80-100%",
+              "matches": 13,
+              "mean_predicted_pct": 85.79,
+              "observed_frequency_pct": 69.23
+            }
+          ],
+          "note": "Brier/log-loss binari one-vs-rest; punteggi più bassi sono migliori."
+        }
+      },
       "period_start": "2024-09-30",
       "period_end": "2026-10-12",
       "note": "Validazione cronologica: ogni previsione usa solo gare con data strettamente precedente; coppe e indisponibilità non sono incluse."
@@ -3355,6 +4255,104 @@
         ]
       },
       "market_coverage_matches": 431,
+      "outcome_calibration": {
+        "1": {
+          "matches": 431,
+          "brier_score": 0.22265,
+          "log_loss": 0.63931,
+          "reliability_bins": [
+            {
+              "probability_range": "0-20%",
+              "matches": 37,
+              "mean_predicted_pct": 12.26,
+              "observed_frequency_pct": 18.92
+            },
+            {
+              "probability_range": "20-40%",
+              "matches": 112,
+              "mean_predicted_pct": 31.36,
+              "observed_frequency_pct": 31.25
+            },
+            {
+              "probability_range": "40-60%",
+              "matches": 169,
+              "mean_predicted_pct": 49.88,
+              "observed_frequency_pct": 46.75
+            },
+            {
+              "probability_range": "60-80%",
+              "matches": 72,
+              "mean_predicted_pct": 68.92,
+              "observed_frequency_pct": 58.33
+            },
+            {
+              "probability_range": "80-100%",
+              "matches": 41,
+              "mean_predicted_pct": 86.68,
+              "observed_frequency_pct": 82.93
+            }
+          ],
+          "note": "Brier/log-loss binari one-vs-rest; punteggi più bassi sono migliori."
+        },
+        "X": {
+          "matches": 431,
+          "brier_score": 0.17512,
+          "log_loss": 0.53152,
+          "reliability_bins": [
+            {
+              "probability_range": "0-20%",
+              "matches": 120,
+              "mean_predicted_pct": 14.31,
+              "observed_frequency_pct": 13.33
+            },
+            {
+              "probability_range": "20-40%",
+              "matches": 311,
+              "mean_predicted_pct": 24.37,
+              "observed_frequency_pct": 27.01
+            }
+          ],
+          "note": "Brier/log-loss binari one-vs-rest; punteggi più bassi sono migliori."
+        },
+        "2": {
+          "matches": 431,
+          "brier_score": 0.20549,
+          "log_loss": 0.60651,
+          "reliability_bins": [
+            {
+              "probability_range": "0-20%",
+              "matches": 140,
+              "mean_predicted_pct": 11.09,
+              "observed_frequency_pct": 20.0
+            },
+            {
+              "probability_range": "20-40%",
+              "matches": 181,
+              "mean_predicted_pct": 29.13,
+              "observed_frequency_pct": 31.49
+            },
+            {
+              "probability_range": "40-60%",
+              "matches": 74,
+              "mean_predicted_pct": 47.32,
+              "observed_frequency_pct": 35.14
+            },
+            {
+              "probability_range": "60-80%",
+              "matches": 31,
+              "mean_predicted_pct": 69.21,
+              "observed_frequency_pct": 67.74
+            },
+            {
+              "probability_range": "80-100%",
+              "matches": 5,
+              "mean_predicted_pct": 84.2,
+              "observed_frequency_pct": 40.0
+            }
+          ],
+          "note": "Brier/log-loss binari one-vs-rest; punteggi più bassi sono migliori."
+        }
+      },
       "period_start": "2024-11-02",
       "period_end": "2026-10-11",
       "note": "Validazione cronologica: ogni previsione usa solo gare con data strettamente precedente; coppe e indisponibilità non sono incluse."
@@ -3686,6 +4684,110 @@
         ]
       },
       "market_coverage_matches": 739,
+      "outcome_calibration": {
+        "1": {
+          "matches": 739,
+          "brier_score": 0.22252,
+          "log_loss": 0.63796,
+          "reliability_bins": [
+            {
+              "probability_range": "0-20%",
+              "matches": 60,
+              "mean_predicted_pct": 14.12,
+              "observed_frequency_pct": 21.67
+            },
+            {
+              "probability_range": "20-40%",
+              "matches": 249,
+              "mean_predicted_pct": 31.25,
+              "observed_frequency_pct": 36.14
+            },
+            {
+              "probability_range": "40-60%",
+              "matches": 254,
+              "mean_predicted_pct": 49.26,
+              "observed_frequency_pct": 44.88
+            },
+            {
+              "probability_range": "60-80%",
+              "matches": 140,
+              "mean_predicted_pct": 68.63,
+              "observed_frequency_pct": 69.29
+            },
+            {
+              "probability_range": "80-100%",
+              "matches": 36,
+              "mean_predicted_pct": 83.66,
+              "observed_frequency_pct": 88.89
+            }
+          ],
+          "note": "Brier/log-loss binari one-vs-rest; punteggi più bassi sono migliori."
+        },
+        "X": {
+          "matches": 739,
+          "brier_score": 0.1822,
+          "log_loss": 0.54638,
+          "reliability_bins": [
+            {
+              "probability_range": "0-20%",
+              "matches": 159,
+              "mean_predicted_pct": 15.33,
+              "observed_frequency_pct": 11.32
+            },
+            {
+              "probability_range": "20-40%",
+              "matches": 576,
+              "mean_predicted_pct": 26.89,
+              "observed_frequency_pct": 28.12
+            },
+            {
+              "probability_range": "40-60%",
+              "matches": 4,
+              "mean_predicted_pct": 42.12,
+              "observed_frequency_pct": 0.0
+            }
+          ],
+          "note": "Brier/log-loss binari one-vs-rest; punteggi più bassi sono migliori."
+        },
+        "2": {
+          "matches": 739,
+          "brier_score": 0.18835,
+          "log_loss": 0.55758,
+          "reliability_bins": [
+            {
+              "probability_range": "0-20%",
+              "matches": 225,
+              "mean_predicted_pct": 12.49,
+              "observed_frequency_pct": 12.44
+            },
+            {
+              "probability_range": "20-40%",
+              "matches": 341,
+              "mean_predicted_pct": 29.54,
+              "observed_frequency_pct": 30.21
+            },
+            {
+              "probability_range": "40-60%",
+              "matches": 134,
+              "mean_predicted_pct": 48.1,
+              "observed_frequency_pct": 44.03
+            },
+            {
+              "probability_range": "60-80%",
+              "matches": 34,
+              "mean_predicted_pct": 67.46,
+              "observed_frequency_pct": 61.76
+            },
+            {
+              "probability_range": "80-100%",
+              "matches": 5,
+              "mean_predicted_pct": 84.58,
+              "observed_frequency_pct": 40.0
+            }
+          ],
+          "note": "Brier/log-loss binari one-vs-rest; punteggi più bassi sono migliori."
+        }
+      },
       "period_start": "2024-09-24",
       "period_end": "2026-10-12",
       "note": "Validazione cronologica: ogni previsione usa solo gare con data strettamente precedente; coppe e indisponibilità non sono incluse."
@@ -4023,6 +5125,110 @@
         ]
       },
       "market_coverage_matches": 611,
+      "outcome_calibration": {
+        "1": {
+          "matches": 611,
+          "brier_score": 0.22319,
+          "log_loss": 0.64045,
+          "reliability_bins": [
+            {
+              "probability_range": "0-20%",
+              "matches": 64,
+              "mean_predicted_pct": 12.8,
+              "observed_frequency_pct": 15.62
+            },
+            {
+              "probability_range": "20-40%",
+              "matches": 159,
+              "mean_predicted_pct": 30.61,
+              "observed_frequency_pct": 33.33
+            },
+            {
+              "probability_range": "40-60%",
+              "matches": 225,
+              "mean_predicted_pct": 49.76,
+              "observed_frequency_pct": 47.11
+            },
+            {
+              "probability_range": "60-80%",
+              "matches": 146,
+              "mean_predicted_pct": 69.16,
+              "observed_frequency_pct": 69.86
+            },
+            {
+              "probability_range": "80-100%",
+              "matches": 17,
+              "mean_predicted_pct": 83.3,
+              "observed_frequency_pct": 64.71
+            }
+          ],
+          "note": "Brier/log-loss binari one-vs-rest; punteggi più bassi sono migliori."
+        },
+        "X": {
+          "matches": 611,
+          "brier_score": 0.19123,
+          "log_loss": 0.57088,
+          "reliability_bins": [
+            {
+              "probability_range": "0-20%",
+              "matches": 159,
+              "mean_predicted_pct": 15.56,
+              "observed_frequency_pct": 17.61
+            },
+            {
+              "probability_range": "20-40%",
+              "matches": 451,
+              "mean_predicted_pct": 25.07,
+              "observed_frequency_pct": 28.38
+            },
+            {
+              "probability_range": "40-60%",
+              "matches": 1,
+              "mean_predicted_pct": 41.0,
+              "observed_frequency_pct": 100.0
+            }
+          ],
+          "note": "Brier/log-loss binari one-vs-rest; punteggi più bassi sono migliori."
+        },
+        "2": {
+          "matches": 611,
+          "brier_score": 0.17683,
+          "log_loss": 0.53497,
+          "reliability_bins": [
+            {
+              "probability_range": "0-20%",
+              "matches": 199,
+              "mean_predicted_pct": 12.87,
+              "observed_frequency_pct": 13.57
+            },
+            {
+              "probability_range": "20-40%",
+              "matches": 251,
+              "mean_predicted_pct": 28.71,
+              "observed_frequency_pct": 24.7
+            },
+            {
+              "probability_range": "40-60%",
+              "matches": 106,
+              "mean_predicted_pct": 48.75,
+              "observed_frequency_pct": 44.34
+            },
+            {
+              "probability_range": "60-80%",
+              "matches": 43,
+              "mean_predicted_pct": 68.35,
+              "observed_frequency_pct": 69.77
+            },
+            {
+              "probability_range": "80-100%",
+              "matches": 12,
+              "mean_predicted_pct": 84.4,
+              "observed_frequency_pct": 50.0
+            }
+          ],
+          "note": "Brier/log-loss binari one-vs-rest; punteggi più bassi sono migliori."
+        }
+      },
       "period_start": "2024-10-04",
       "period_end": "2026-10-12",
       "note": "Validazione cronologica: ogni previsione usa solo gare con data strettamente precedente; coppe e indisponibilità non sono incluse."
