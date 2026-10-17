@@ -752,5 +752,52 @@ class PredictionModelTests(unittest.TestCase):
                              for name in module.LEAGUES.values()))
 
 
+    def test_cup_competitions_cover_uefa_and_major_national_cups(self):
+        self.assertEqual(
+            module.EUROPEAN_ESPN_COMPETITIONS,
+            {
+                "uefa.champions": "Champions League",
+                "uefa.europa": "Europa League",
+                "uefa.europa.conf": "Conference League",
+            },
+        )
+        self.assertIn("Coppa Italia", module.COMPETITION_ESPN_CODES.values())
+        self.assertIn("FA Cup", module.COMPETITION_ESPN_CODES.values())
+        self.assertIn("Copa del Rey", module.COMPETITION_ESPN_CODES.values())
+        self.assertIn("DFB-Pokal", module.COMPETITION_ESPN_CODES.values())
+        self.assertEqual(
+            set(module.COMPETITION_ESPN_CODES.values()),
+            set(archive_module.ESPN_LEAGUES).intersection(module.COMPETITION_ESPN_CODES.values()),
+        )
+
+    def test_recent_national_cup_match_declassifies_league_forecast(self):
+        history = defaultdict(lambda: {
+            "played": 10, "home_games": 0, "away_games": 0,
+            "home_scored": 0, "home_conceded": 0,
+            "away_scored": 0, "away_conceded": 0,
+        })
+        history["Casa"].update({
+            "played": 10, "home_games": 10, "home_scored": 18, "home_conceded": 9,
+        })
+        history["Ospite"].update({
+            "played": 10, "away_games": 10, "away_scored": 13, "away_conceded": 12,
+        })
+        cup_match = {
+            "date": "2026-10-14", "home_team": "Casa", "away_team": "Ospite",
+            "competition": "Coppa Italia", "status": "completed",
+            "home_goals": 1, "away_goals": 0, "source": "ESPN",
+        }
+        forecast = module.make_forecast(
+            "Casa", "Ospite", "Serie A", date(2026, 10, 16), "20:45",
+            history, 1.5, 1.2, european_matches=[cup_match],
+        )
+        self.assertEqual(forecast["status"], "Stima preliminare")
+        self.assertEqual(len(forecast["recent_competition_context"]), 2)
+        self.assertEqual(forecast["european_context"], [])
+        self.assertEqual(forecast["recent_competition_context"][0]["competition"], "Coppa Italia")
+        self.assertEqual(forecast["competition_type"], "campionato")
+        self.assertEqual(forecast["suggested_markets"], [])
+
+
 if __name__ == "__main__":
     unittest.main()
