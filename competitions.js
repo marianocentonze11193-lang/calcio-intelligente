@@ -38,7 +38,7 @@ async function loadData(){
 function labelFor(code){const row=competitionData?.standings?.[code];if(row)return (row.competition||code)+" · "+(row.country||"");const item=(competitionData?.fixtures||[]).find(x=>x.competition_code===code);return item?(item.competition||code)+" · "+(item.country||""):code;}
 function renderCalendar(){
  if(!competitionData)return;
- const code=byId("calendar-competition").value,period=byId("calendar-period").value,today=new Date().toISOString().slice(0,10);
+ const code=byId("calendar-competition").value,period=byId("calendar-period").value,now=new Date(),today=[now.getFullYear(),String(now.getMonth()+1).padStart(2,"0"),String(now.getDate()).padStart(2,"0")].join("-");
  let rows=competitionData.fixtures.filter(x=>(!code||x.competition_code===code));
  if(period==="upcoming")rows=rows.filter(x=>x.date>=today&&x.status!=="completed").sort((a,b)=>(a.date+a.kickoff).localeCompare(b.date+b.kickoff));
  else if(period==="completed")rows=rows.filter(x=>x.status==="completed").sort((a,b)=>(b.date+b.kickoff).localeCompare(a.date+a.kickoff));
