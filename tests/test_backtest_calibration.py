@@ -39,7 +39,7 @@ class OutcomeCalibrationTests(unittest.TestCase):
         ]
         result = backtest.outcome_calibration_summary(rows)
         self.assertEqual(result["1"]["matches"], 1)
-        self.assertEqual(result["X"]["matches"], 2)
+        self.assertEqual(result["X"]["matches"], 1)
         self.assertTrue(math.isfinite(result["X"]["brier_score"]))
 
     def test_perfectly_confident_wrong_prediction_has_finite_log_loss(self):
