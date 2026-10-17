@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f2f5fa">
+  <meta name="description" content="Calendari stagionali e classifiche calcistiche con fonte e stato di aggiornamento.">
+  <title>Calendari e classifiche · Calcio Intelligente</title>
+  <style>
+    :root{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#142238;background:#f2f5fa;line-height:1.5}
+    *{box-sizing:border-box}body{margin:0}header{padding:24px max(18px,calc((100% - 1040px)/2));background:linear-gradient(120deg,#e0f2fe,#f0fdfa 68%,#fff);border-bottom:1px solid #cbd9e7}
+    h1{margin:0;color:#102a43;font-size:clamp(24px,5vw,34px)}header p{margin:8px 0 0;color:#334e68}
+    main{width:min(100% - 24px,1040px);margin:22px auto 40px}.panel{background:#fff;border:1px solid #d6e0eb;border-radius:16px;padding:18px;margin-bottom:16px;box-shadow:0 5px 18px #16304c0d}
+    h2{font-size:20px;margin:0 0 10px;color:#142f4c}.muted{color:#4b5d73;font-size:13px;line-height:1.6}
+    a{color:#075985}.filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;margin:14px 0}
+    label{display:grid;gap:5px;font-size:13px;color:#46566b}select,button{width:100%;padding:11px;border:1px solid #aebfd1;border-radius:9px;background:#fff;color:#142238;font:inherit}
+    button{background:#087f5b;color:#fff;border:0;font-weight:750;cursor:pointer}.status{padding:12px;background:#eaf2fb;border:1px solid #c9d9ec;border-radius:10px;color:#19324d;font-size:13px}
+    .table-wrap{overflow-x:auto;margin-top:12px}table{width:100%;border-collapse:collapse;font-size:13px;white-space:nowrap}th,td{text-align:right;padding:9px 8px;border-bottom:1px solid #e1e8f0}th{background:#edf4fb;color:#30465d}td:nth-child(2),th:nth-child(2){text-align:left}tr:nth-child(even) td{background:#fbfdff}
+    .group-title{font-weight:800;margin:16px 0 4px;color:#07533f}.fixture{padding:12px;border:1px solid #dce5ee;border-radius:11px;margin:8px 0;display:grid;grid-template-columns:100px 1fr auto;gap:12px;align-items:center}
+    .fixture-date{font-size:12px;color:#4b5d73}.fixture-teams{font-weight:750}.fixture-meta{font-size:12px;color:#4b5d73}.score{font-weight:850;color:#07533f}
+    .badge{display:inline-block;border-radius:999px;padding:3px 8px;background:#edf4fb;color:#334e68;font-size:11px;margin-left:6px}
+    @media(max-width:560px){.fixture{grid-template-columns:1fr auto;gap:5px}.fixture-date{grid-column:1/-1}.fixture-teams{font-size:14px}.panel{padding:14px}th,td{padding:8px 6px}}
+  </style>
+  <script src="./competitions.js?v=20261017-1" defer></script>
+</head>
+<body>
+<header><h1>Calendari e classifiche</h1><p>Calcio Intelligente · Dati stagionali, fonte dichiarata e controlli di coerenza.</p></header>
+<main>
+  <section class="panel">
+    <p><a href="./index.html">← Torna ai pronostici</a></p>
+    <h2>Stato dei dati</h2>
+    <div id="data-status" class="status">Caricamento di calendari e classifiche…</div>
+    <p class="muted">Fonte principale: endpoint pubblici ESPN. “Controllato” significa che formato, date, squadre e punteggi hanno superato i controlli automatici; non è una garanzia di copertura ufficiale completa. Le competizioni non aggiornate vengono segnalate esplicitamente.</p>
+    <button id="reload" type="button">Ricarica dati pubblicati</button>
+  </section>
+  <section class="panel">
+    <h2>Calendario stagionale</h2>
+    <div class="filters">
+      <label>Competizione<select id="calendar-competition"><option value="">Tutte le competizioni</option></select></label>
+      <label>Periodo<select id="calendar-period"><option value="upcoming">Prossime partite</option><option value="all">Tutta la stagione disponibile</option><option value="completed">Partite concluse</option></select></label>
+    </div>
+    <div id="calendar-status" class="muted"></div>
+    <div id="calendar-list"></div>
+  </section>
+  <section class="panel">
+    <h2>Classifiche</h2>
+    <div class="filters"><label>Competizione<select id="table-competition"><option value="">Seleziona una competizione</option></select></label></div>
+    <div id="table-status" class="muted">Seleziona una competizione per vedere la classifica.</div>
+    <div id="table-list"></div>
+  </section>
+</main>
+</body>
+</html>
