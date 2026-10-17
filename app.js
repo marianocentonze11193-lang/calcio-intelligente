@@ -433,6 +433,24 @@ function renderHistory(history) {
     readiness.textContent = metrics.note;
     metricsNode.append(readiness);
   }
+  const valueMetrics = history && history.value_bet_metrics;
+  if (valueMetrics) {
+    const heading = document.createElement("h3");
+    heading.textContent = "Rendimento storico dei candidati 1X2";
+    metricsNode.append(heading);
+    const row = document.createElement("p");
+    row.className = "match-meta";
+    row.textContent = (valueMetrics.settled_bets || 0) + " selezioni concluse · " +
+      (valueMetrics.wins || 0) + " vinte · " + (valueMetrics.losses || 0) + " perse · saldo teorico " +
+      (valueMetrics.net_units_per_one_unit_stake ?? 0) + " unità con puntata fissa di 1 unità per selezione · ROI " +
+      (typeof valueMetrics.roi_percent === "number" ? valueMetrics.roi_percent + "%" : "non pubblicabile prima di 30 selezioni concluse");
+    metricsNode.append(row);
+    const note = document.createElement("p");
+    note.className = "match-meta";
+    note.textContent = valueMetrics.note || "Rendimento teorico dei candidati archiviati, non delle schedine personali.";
+    metricsNode.append(note);
+  }
+
   const resultMatching = history && history.result_matching;
   if (resultMatching && Number(resultMatching.unresolved_past_matches || 0) > 0) {
     const unresolved = document.createElement("p");
