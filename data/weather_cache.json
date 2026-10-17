@@ -383,6 +383,38 @@
       "resolved_name": "Paredes",
       "country": "Portugal",
       "cached_at": "2026-10-17T20:21:27.808671+00:00"
+    },
+    "baku,azerbaijan": {
+      "latitude": 40.37767,
+      "longitude": 49.89201,
+      "timezone": "Asia/Baku",
+      "resolved_name": "Baku",
+      "country": "Azerbaijan",
+      "cached_at": "2026-10-17T20:32:29.423736+00:00"
+    },
+    "münchen,germany": {
+      "latitude": 48.13743,
+      "longitude": 11.57549,
+      "timezone": "Europe/Berlin",
+      "resolved_name": "Munich",
+      "country": "Germany",
+      "cached_at": "2026-10-17T20:32:29.423736+00:00"
+    },
+    "trabzon,türkiye": {
+      "latitude": 41.005,
+      "longitude": 39.72694,
+      "timezone": "Europe/Istanbul",
+      "resolved_name": "Trabzon",
+      "country": "Republic of Türkiye",
+      "cached_at": "2026-10-17T20:32:29.423736+00:00"
+    },
+    "coimbra,portugal": {
+      "latitude": 40.20686,
+      "longitude": -8.41996,
+      "timezone": "Europe/Lisbon",
+      "resolved_name": "Coimbra",
+      "country": "Portugal",
+      "cached_at": "2026-10-17T20:32:29.423736+00:00"
     }
   },
   "forecasts": {
@@ -1234,6 +1266,91 @@
       "cached_at": "2026-10-17T20:21:27.808671+00:00",
       "note": "Contesto orientativo: il meteo non modifica le probabilità del modello.",
       "venue": "Estádio do Restelo",
+      "source_fixture": "ESPN"
+    },
+    "40.37767,49.89201:2026-10-20T20": {
+      "status": "disponibile",
+      "provider": "Open-Meteo",
+      "location": "Baku",
+      "timezone": "Asia/Baku",
+      "kickoff_local": "2026-10-20T20:00",
+      "temperature_c": 18.6,
+      "precipitation_probability_pct": 4,
+      "precipitation_mm": 0.0,
+      "wind_speed_kmh": 18.1,
+      "weather_code": 3,
+      "description": "coperto",
+      "cached_at": "2026-10-17T20:32:29.423736+00:00",
+      "note": "Contesto orientativo: il meteo non modifica le probabilità del modello.",
+      "venue": "Baku Olympic Stadium",
+      "source_fixture": "ESPN"
+    },
+    "48.13743,11.57549:2026-10-21T21": {
+      "status": "disponibile",
+      "provider": "Open-Meteo",
+      "location": "Munich",
+      "timezone": "Europe/Berlin",
+      "kickoff_local": "2026-10-21T21:00",
+      "temperature_c": 7.7,
+      "precipitation_probability_pct": 80,
+      "precipitation_mm": 1.0,
+      "wind_speed_kmh": 13.6,
+      "weather_code": 61,
+      "description": "pioggia debole",
+      "cached_at": "2026-10-17T20:32:29.423736+00:00",
+      "note": "Contesto orientativo: il meteo non modifica le probabilità del modello.",
+      "venue": "Allianz Arena",
+      "source_fixture": "ESPN"
+    },
+    "40.30571,-3.73295:2026-10-22T18": {
+      "status": "disponibile",
+      "provider": "Open-Meteo",
+      "location": "Getafe",
+      "timezone": "Europe/Madrid",
+      "kickoff_local": "2026-10-22T18:00",
+      "temperature_c": 18.6,
+      "precipitation_probability_pct": 0,
+      "precipitation_mm": 0.0,
+      "wind_speed_kmh": 4.5,
+      "weather_code": 0,
+      "description": "sereno",
+      "cached_at": "2026-10-17T20:32:29.423736+00:00",
+      "note": "Contesto orientativo: il meteo non modifica le probabilità del modello.",
+      "venue": "Estadio Coliseum",
+      "source_fixture": "ESPN"
+    },
+    "41.005,39.72694:2026-10-22T19": {
+      "status": "disponibile",
+      "provider": "Open-Meteo",
+      "location": "Trabzon",
+      "timezone": "Europe/Istanbul",
+      "kickoff_local": "2026-10-22T19:00",
+      "temperature_c": 16.9,
+      "precipitation_probability_pct": 6,
+      "precipitation_mm": 0.0,
+      "wind_speed_kmh": 4.6,
+      "weather_code": 1,
+      "description": "prevalentemente sereno",
+      "cached_at": "2026-10-17T20:32:29.423736+00:00",
+      "note": "Contesto orientativo: il meteo non modifica le probabilità del modello.",
+      "venue": "Papara Park",
+      "source_fixture": "ESPN"
+    },
+    "40.20686,-8.41996:2026-10-17T20": {
+      "status": "disponibile",
+      "provider": "Open-Meteo",
+      "location": "Coimbra",
+      "timezone": "Europe/Lisbon",
+      "kickoff_local": "2026-10-17T20:00",
+      "temperature_c": 19.9,
+      "precipitation_probability_pct": 8,
+      "precipitation_mm": 0.0,
+      "wind_speed_kmh": 6.1,
+      "weather_code": 1,
+      "description": "prevalentemente sereno",
+      "cached_at": "2026-10-17T20:32:29.423736+00:00",
+      "note": "Contesto orientativo: il meteo non modifica le probabilità del modello.",
+      "venue": "Estádio Cidade de Coimbra",
       "source_fixture": "ESPN"
     }
   }
