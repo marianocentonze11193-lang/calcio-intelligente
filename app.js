@@ -342,9 +342,6 @@ function renderMatches(matches) {
     score.textContent = match.top_scorelines && match.top_scorelines.length
       ? "Risultati esatti più probabili (stime): " + match.top_scorelines.map(s => s.score + " (" + percent(s.probability) + ")").join(" · ")
       : "";
-    if (score.textContent) technical.append(score);
-    card.append(technical);
-
     card.append(meta, teams);
     appendWeather(match, card);
     const technical = document.createElement("details");
@@ -468,6 +465,7 @@ function renderMatches(matches) {
         card.append(dcLine);
       }
     }
+    card.append(technical);
     if (score.textContent) card.append(score);
     container.append(card);
   }
