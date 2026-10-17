@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T16:29:27+00:00",
+  "updated_at": "2026-10-17T16:39:36+00:00",
   "source": "https://www.football-data.co.uk",
   "season": "2627",
   "model": "Poisson con statistiche nazionali club, prior di lega, Elo, forma recente e contesto impegni UEFA/coppe nazionali sperimentale; non validato per coppe",
@@ -94,7 +94,7 @@
         "home_scores": 58.7,
         "away_scores": 76.0
       },
-      "analysis": "Il Liverpool affronta il Villarreal in questa sfida di Champions League, con il modello che assegna il favore del pronostico agli ospiti con il 49,6% di probabilità di vittoria, contro il 23,4% dei Reds e il 27% di pareggio. I gol attesi indicano 0,89 per i padroni di casa e 1,43 per gli spagnoli, delineando una gara da under 2,5 al 59,3%. Il ranking Elo vede le due squadre vicine, con Liverpool a 1509 e Villarreal a 1485, mentre la forma recente mostra un Liverpool da 1,6 punti a match e il Villarreal a 1,2. Il campione casa di sole 3 partite e quello trasferta di 5 gare risultano piuttosto piccoli, limitando la precisione della stima preliminare. Sulle indisponibilità la copertura API non è disponibile, quindi non risultano dati ufficiali sugli infortunati e le formazioni pubblicate.",
+      "analysis": "Questa sfida di Champions League si presenta piuttosto complessa da decifrare con i soli dati preliminari a disposizione. Il modello mostra una forte incertezza e non evidenzia mercati particolarmente solidi su cui puntare con decisione. Vista la scarsità di elementi verificabili e l'assenza di indicazioni chiare, la scelta più saggia è mantenere la massima prudenza ed evitare qualsiasi giocata.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -135,6 +135,10 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "non_verificabile",
+        "note": "Classifica aggiornata non disponibile: motivazioni non dedotte."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "europea",
@@ -195,7 +199,7 @@
         "home_scores": 73.0,
         "away_scores": 83.7
       },
-      "analysis": "Il Napoli riceve il Bodo/Glimt in una gara in cui il modello stima il 49,3% di probabilità per il successo esterno dei norvegesi, mentre la vittoria azzurra è data al 27,7% e il pareggio al 23%. Dal punto di vista offensivo, ci si attende una partita vivace con 1,31 gol per il Napoli e 1,82 per il Bodo, sostenendo l'over 1,5 all'81,9% e il btts sì al 61,2%. Nei valori Elo il Bodo/Glimt guida con 1642 punti contro i 1510 del Napoli, e la forma recente premia nettamente gli ospiti con 2,4 punti di media. Il campione casalingo del Napoli di 3 partite è molto ridotto, mentre i 15 match esterni del Bodo offrono un quadro più ampio ma pur sempre inserito in una stima preliminare. La copertura API è fuori fascia e non sono presenti segnalazioni esplicite di indisponibili.",
+      "analysis": "Il Napoli affronta un impegno europeo delicato contro un Bodo/Glimt spesso ostico e imprevedibile. Tuttavia, i dati preliminari attuali non offrono mercati consigliati o indicazioni sufficientemente forti per impostare una strategia di valore. Mancando riscontri certi su formazioni e contesto, l'approccio migliore richiede prudenza e suggerisce di restare in attesa senza effettuare alcuna giocata.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -236,6 +240,10 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "non_verificabile",
+        "note": "Classifica aggiornata non disponibile: motivazioni non dedotte."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "europea",
@@ -296,7 +304,7 @@
         "home_scores": 85.0,
         "away_scores": 71.7
       },
-      "analysis": "Il Lille parte favorito contro il Galatasaray secondo il modello, che attribuisce ai francesi il 52,2% di probabilità di vittoria, lasciando il pareggio al 22,4% e il successo turco al 25,4%. I gol attesi riflettono questo divario con 1,9 reti per i padroni di casa e 1,26 per gli ospiti, spingendo l'over 1,5 all'82,3% e il btts sì al 60,9%. Gli indici Elo confermano un sostanziale equilibrio a quota 1528 per il Lille e 1539 per il Galatasaray, con una forma recente ottima per entrambe le compagini. Il campione casalingo di 3 partite per il Lille e quello esterno di pari entità per il Galatasaray sono decisamente piccoli, limitando la solidità statistica di questa stima preliminare. L'accesso alle informazioni sulle formazioni e sugli indisponibili non è verificabile tramite API per questa data.",
+      "analysis": "Lille e Galatasaray si incrociano in un match europeo che promette battaglia sul piano del ritmo. Nonostante il quadro generale abbozzato dal modello, non emergono selezioni di mercato validate da criteri di sicurezza affidabili. In assenza di segnali concreti e con dati ancora preliminari, è fortemente consigliabile procedere con prudenza e non forzare alcuna giocata.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -337,6 +345,10 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "non_verificabile",
+        "note": "Classifica aggiornata non disponibile: motivazioni non dedotte."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "europea",
@@ -397,7 +409,7 @@
         "home_scores": 65.3,
         "away_scores": 83.9
       },
-      "analysis": "Il Betis ospita il Feyenoord in un match di Champions League in cui gli olandesi godono dei favori del modello con il 55,3% di probabilità di vittoria, a fronte del 21,8% per gli spagnoli e del 22,9% per il pari. I gol attesi si attestano a 1,06 per la squadra di casa e 1,83 per quella in trasferta, orientando le stime verso l'over 1,5 al 78,3%. Il punteggio Elo vede il Betis a 1549 e il Feyenoord a 1560, mentre la forma recente è eccellente per entrambe con 2,6 punti a incontro. Il campione di sole 4 partite casalinghe per il Betis e altrettante esterne per il Feyenoord risulta ridotto, condizionando la profondità di questa stima preliminare. La copertura delle disponibilità è fuori dal piano API attuale, dunque non si hanno conferme su squalificati o infortunati.",
+      "analysis": "Feyenoord leggermente favorita; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -438,6 +450,10 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "non_verificabile",
+        "note": "Classifica aggiornata non disponibile: motivazioni non dedotte."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "europea",
@@ -467,8 +483,7 @@
           "data di aggiornamento quote assente o oltre 24 ore"
         ],
         "historically_validated": false
-      },
-      "analysis_provider": "Gemini"
+      }
     },
     {
       "id": "2026-10-21-Champions League-Club Brugge-Lens",
@@ -498,7 +513,7 @@
         "home_scores": 94.4,
         "away_scores": 42.6
       },
-      "analysis": "Il Club Brugge affronta il Lens in Champions League con netta fiducia da parte del modello, che assegna l'84.6% all'uno e gol attesi di 2.89 a 0.56. I padroni di casa vantano un Elo di 1559.4 e una media di 2.4 punti nelle ultime cinque uscite, a fronte del 1491.2 degli ospiti. Il campione di sole 4 partite casalinghe e 3 esterne limita tuttavia la precisione della stima preliminare. Sulle indisponibilità la copertura API è fuori copertura, dunque non emergono dati ufficiali su infortuni o formazioni.",
+      "analysis": "Questa sfida di Champions League vede il Club Brugge nettamente favorito dai numeri di fronte a un Lens in evidente difficoltà esterna. Al momento non ci sono mercati consigliati dal sistema e la quantità di dati a disposizione resta piuttosto bassa. Ti suggerisco di procedere con grande prudenza e di evitare qualsiasi giocata su questo incontro.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -539,6 +554,10 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "non_verificabile",
+        "note": "Classifica aggiornata non disponibile: motivazioni non dedotte."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "europea",
@@ -599,7 +618,7 @@
         "home_scores": 98.3,
         "away_scores": 67.1
       },
-      "analysis": "Il Lech Poznan parte nettamente favorito contro il Sunderland in Europa League, forte di un Elo di 1607.7 contro il 1470.9 degli avversari. Le proiezioni indicano gol attesi pari a 4.07 per i locali e 1.11 per gli ospiti, con l'86.6% di probabilità per il segno uno. La stima si basa su 16 gare interne del Lech ma solo su 3 esterne del Sunderland, rendendo il campione ospite ridotto. La copertura API risulta attualmente assente e non vi sono indicazioni verificabili su formazioni o indisponibili.",
+      "analysis": "Il Lech Poznan si presenta a questo appuntamento europeo con numeri offensivi davvero importanti rispetto a un Sunderland in debito d'ossigeno lontano da casa. Tuttavia, l'assenza di mercati selezionati e la stima ancora preliminare dei dati ci invitano alla massima cautela. Ti consiglio di restare in attesa e di non effettuare alcuna giocata su questa partita.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -640,6 +659,10 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "non_verificabile",
+        "note": "Classifica aggiornata non disponibile: motivazioni non dedotte."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "europea",
@@ -700,7 +723,7 @@
         "home_scores": 85.6,
         "away_scores": 82.6
       },
-      "analysis": "Sfida di Europa League tra OFI Crete e Leverkusen caratterizzata da un sostanziale equilibrio nei numeri del modello. Le percentuali vedono l'uno al 43.0% e il due al 35.5%, con gol attesi stimati in 1.94 e 1.75. L'Elo di 1510.2 per i greci e 1524.7 per i tedeschi riflette una forza recente simile, confermata dai 2.0 punti a partita degli ospiti. Il campione di sole 3 gare casalinghe e 3 esterne limita fortemente la portata della stima preliminare. Non risultano dati ufficiali verificati su infortuni o formazioni a causa della mancata copertura API.",
+      "analysis": "Ci attende una gara di Europa League sulla carta molto aperta e ricca di potenziale offensivo tra OFI Crete e Leverkusen. Nonostante le premesse interessanti per quanto riguarda i gol, il modello non esprime mercati consigliati a causa della limitatezza dei campioni analizzati. Valuta la situazione con molta prudenza e preferisci non rischiare alcuna puntata.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -741,6 +764,10 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "non_verificabile",
+        "note": "Classifica aggiornata non disponibile: motivazioni non dedotte."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "europea",
@@ -801,7 +828,7 @@
         "home_scores": 93.1,
         "away_scores": 62.0
       },
-      "analysis": "Il Besiktas ospita il Crystal Palace in Europa League godendo del favore del pronostico con il 73.4% di probabilità per la vittoria interna. I gol attesi delineano un divario marcato, fissati a 2.67 per i turchi e 0.97 per gli inglesi. L'Elo premia i padroni di casa con 1529.6 contro 1490.9, supportati da una solida forma recente da 2.4 punti di media. Il campione limitato a 4 partite casalinghe e 3 esterne impone prudenza nella lettura della stima preliminare. La copertura API è attualmente esclusa e non vi sono segnalazioni esplicite su eventuali indisponibili.",
+      "analysis": "Il Besiktas gode dei favori del pronostico grazie a un rendimento casalingo recente decisamente solido e convincente. Mancano però mercati ufficialmente consigliati dal sistema e la lettura poggia su dati ancora preliminari. Il consiglio migliore è di mantenere un profilo prudente e di evitare giocate affrettate.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -842,6 +869,10 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "non_verificabile",
+        "note": "Classifica aggiornata non disponibile: motivazioni non dedotte."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "europea",
@@ -902,7 +933,7 @@
         "home_scores": 48.9,
         "away_scores": 30.2
       },
-      "analysis": "Il match di Europa League tra Celtic e Celta si preannuncia estremamente chiuso, con il modello che assegna il 44.8% di probabilità al pareggio e stima appena 0.67 gol attesi per i padroni di casa e 0.36 per gli ospiti. I mercati dei gol riflettono questa tendenza prudente, indicando l'under 2.5 al 91.4% e il segno BTTS no all'85.2%. A livello di Elo, il Celtic parte leggermente favorito con 1558.7 punti contro i 1489.4 del Celta, mentre la forma recente vede i biancoverdi brillare con 2.4 punti a partita nelle ultime cinque uscite. Il campione casalingo e in trasferta di sole 4 partite è però molto ridotto, limitando la precisione della stima. La disponibilità rosa non è verificabile per questa data e la copertura risulta fuori copertura API.",
+      "analysis": "Per la sfida di Europa League tra Celtic e Celta i dati a disposizione sono davvero pochi e non ci sono mercati consigliati dalle nostre regole. Ti suggerisco grande prudenza e di evitare qualsiasi giocata su questo incontro, in attesa di quadri statistici più solidi.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -943,6 +974,10 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "non_verificabile",
+        "note": "Classifica aggiornata non disponibile: motivazioni non dedotte."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "europea",
@@ -1003,7 +1038,7 @@
         "home_scores": 66.5,
         "away_scores": 84.9
       },
-      "analysis": "L'Hoffenheim ospita il Lione in Europa League in una sfida che il modello indirizza verso gli ospiti, dati favoriti al 56.0% per la vittoria a fronte del 21.7% per i tedeschi e del 22.3% per il pareggio. Le aspettative offensive sono sbilanciate sui francesi con 1.89 gol attesi rispetto ai 1.09 dei padroni di casa, spingendo l'over 1.5 al 79.9% e il BTTS yes al 56.5%. Nei dati Elo troviamo il Lione a 1519.1 punti e l'Hoffenheim a 1466.3, con i tedeschi reduci da un periodo complicato a 0.6 punti per match nelle ultime cinque gare. Il campione di sole 3 partite casalinghe e esterne rappresenta un limite strutturale per l'affidabilità della stima preliminare. Le informazioni su infortuni e formazioni non sono disponibili in quanto il match è fuori copertura API.",
+      "analysis": "Il match di Europa League tra Hoffenheim e Lione presenta una quantità di dati ridotta e nessun mercato selezionato dal modello. È saggio mantenere un profilo prudente ed evitare di piazzare scommesse, aspettando indicazioni più chiare sul match.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1044,6 +1079,10 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "non_verificabile",
+        "note": "Classifica aggiornata non disponibile: motivazioni non dedotte."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "europea",
@@ -1104,7 +1143,7 @@
         "home_scores": 84.6,
         "away_scores": 86.9
       },
-      "analysis": "Sfida di Europa League tra Lillestrom e Real Sociedad caratterizzata da spiccate premesse offensive, con 1.87 gol attesi per i norvegesi e 2.03 per gli spagnoli secondo il modello. Le probabilità vedono un leggero vantaggio esterno con il 42.8% per la Real Sociedad, il 36.3% per il Lillestrom e il 20.9% per il pareggio, mentre l'over 2.5 si attesta al 74.7% e il BTTS yes al 73.5%. I valori Elo sono molto vicini, 1506.4 per i padroni di casa e 1511.2 per gli ospiti, inseriti in un contesto di forma recente piuttosto vivace. Il campione di appena 4 partite esterne per la Real Sociedad risulta piuttosto piccolo e incide sulla solidità complessiva della stima. Non ci sono dati verificati su formazioni e indisponibili per via della copertura API assente.",
+      "analysis": "Lillestrom-Sociedad in Europa League si presenta con un quadro numerico limitato e senza indicazioni di mercato ufficiali. Ti consiglio di restare prudente e di non effettuare alcuna giocata, visto che i dati attuali non offrono certezze sufficienti.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1145,6 +1184,10 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "non_verificabile",
+        "note": "Classifica aggiornata non disponibile: motivazioni non dedotte."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "europea",
@@ -1205,7 +1248,7 @@
         "home_scores": 77.9,
         "away_scores": 64.1
       },
-      "analysis": "Per la Ligue 1 tra Lille e Brest, il modello attribuisce il 48.5% di probabilità al successo casalingo, lasciando il 25.8% al pareggio e il 25.7% alla vittoria esterna. I gol attesi si fermano a 1.51 per i padroni di casa e 1.02 per gli ospiti, con l'under 2.5 leggermente favorito al 53.5% e il BTTS diviso quasi a metà tra yes e no. La classifica Elo premia il Lille con 1528.0 punti contro i 1498.3 del Brest, e la forma recente conferma i padroni di casa a quota 2.0 punti per match nelle ultime cinque gare. Il campione casalingo e in trasferta limitato a sole 3 partite rappresenta un fattore restrittivo per la stima preliminare. La partita non è stata abbinata con certezza al calendario API-Football e non emergono dati ufficiali di disponibilità.",
+      "analysis": "Il Lille ospita il Brest in una sfida di Ligue 1 che vede i padroni di casa stabili nella zona alta della classifica. Nonostante la buona posizione e gli impegni ravvicinati dei padroni di casa, le regole non indicano mercati specifici: meglio procedere con prudenza ed evitare giocate azzardate.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1274,6 +1317,27 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 2,
+          "points": 13,
+          "played": 6,
+          "signals": [
+            "zona alta / possibile corsa al titolo",
+            "zona obiettivi europei o alta classifica"
+          ]
+        },
+        "away": {
+          "position": 7,
+          "points": 8,
+          "played": 6,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -1292,7 +1356,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:57+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:04+00:00",
       "odds_1x2": {
         "home": 1.84,
         "draw": 3.76,
@@ -1315,7 +1379,7 @@
         "draw": 0.88,
         "away": 1.55
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -1383,7 +1447,7 @@
         "home_scores": 65.4,
         "away_scores": 90.4
       },
-      "analysis": "Il modello assegna al Lens un netto favore con il 66,0% di probabilità di vittoria esterna, contro il 15,7% per il Troyes e il 18,4% di pareggio. I gol attesi riflettono questo divario, stimati a 2,35 per gli ospiti e a 1,06 per i padroni di casa. I valori Elo mostrano un leggero vantaggio del Lens (1491,2 contro 1467,1), mentre la forma recente evidenzia le difficoltà del Troyes, con soli 0,6 punti a partita. Il campione di appena 3 partite casalinghe e esterne rappresenta un limite strutturale per l'affidabilità della stima. La disponibilità non è stata verificata per assenza di abbinamento certo con il calendario.",
+      "analysis": "Il Lens arriva favorito su un Troyes in difficoltà nella parte bassa della classifica. Per questa sfida il modello non indica mercati specifici da raccomandare. Vista la situazione e i dati limitati, vi invitiamo a mantenere prudenza e a evitare giocate affrettate.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1452,6 +1516,26 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 17,
+          "points": 4,
+          "played": 6,
+          "signals": [
+            "zona bassa / possibile lotta salvezza"
+          ]
+        },
+        "away": {
+          "position": 10,
+          "points": 7,
+          "played": 6,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -1470,7 +1554,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:57+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:04+00:00",
       "odds_1x2": {
         "home": 3.84,
         "draw": 3.89,
@@ -1493,7 +1577,7 @@
         "draw": -5.69,
         "away": 14.5
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -1561,7 +1645,7 @@
         "home_scores": 64.9,
         "away_scores": 58.8
       },
-      "analysis": "Le probabilità 1/X/2 delineano una sfida piuttosto equilibrata, indicando il 38,6% per l'Angers, il 31,4% per il pareggio e il 30,1% per il successo del Marseille. I gol attesi rimangono contenuti, con 1,05 per i padroni di casa e 0,89 per gli ospiti. Gli indici Elo sono quasi allineati, posizionando l'Angers a 1488,7 e il Marseille a 1480,6. Il campione casalingo e esterno limitato a sole 3 partite riduce inevitabilemnte la precisione complessiva del modello. Per quanto riguarda la rosa, la fonte segnala 6 indisponibilità complessive tra cui J. Lefort e P. Hojbjerg, ricordando tuttavia che la copertura potrebbe essere incompleta.",
+      "analysis": "Un incontro di centroclassifica tra Angers e un Olympique Marsiglia reduce dagli impegni europei ravvicinati. Il quadro statistico attuale non evidenzia soluzioni di valore particolarmente pulite. È saggio procedere con grande prudenza e valutare l'assenza di una giocata consigliata.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1630,6 +1714,26 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 12,
+          "points": 7,
+          "played": 6,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "away": {
+          "position": 13,
+          "points": 6,
+          "played": 6,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -1687,7 +1791,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:57+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:04+00:00",
       "odds_1x2": {
         "home": 3.16,
         "draw": 3.71,
@@ -1710,7 +1814,7 @@
         "draw": 6.19,
         "away": -15.09
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -1778,7 +1882,7 @@
         "home_scores": 76.9,
         "away_scores": 67.1
       },
-      "analysis": "Il modello stima il Le Havre favorito con il 45,2% di probabilità di vittoria, mentre il pareggio si attesta al 26,1% e il successo dell'Auxerre al 28,7%. Sul fronte realizzativo, i gol attesi sono calcolati a 1,46 per la squadra di casa e a 1,11 per quella ospite. La classifica Elo vede l'Auxerre leggermente avanti a 1480,9 rispetto ai 1459,1 del Le Havre. Il campione di sole 3 gare interne ed esterne costituisce un limite importante per la stima preliminare. La fonte evidenzia ben 16 segnalazioni di indisponibilità, tra cui E. Jelert e A. Diousse, sebbene tale elenco possa non essere esaustivo.",
+      "analysis": "Scontro diretto nei bassifondi della graduatoria tra Le Havre e Auxerre, entrambe alla ricerca di punti salvezza preziosi. Le indicazioni preliminari non offrono mercati particolarmente solidi su cui puntare con convinzione. Il consiglio migliore è restare prudenti e non forzare alcuna giocata.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1819,6 +1923,26 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 18,
+          "points": 2,
+          "played": 6,
+          "signals": [
+            "zona bassa / possibile lotta salvezza"
+          ]
+        },
+        "away": {
+          "position": 16,
+          "points": 6,
+          "played": 6,
+          "signals": [
+            "zona bassa / possibile lotta salvezza"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -1936,7 +2060,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:57+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:04+00:00",
       "odds_1x2": {
         "home": 2.28,
         "draw": 3.36,
@@ -1959,7 +2083,7 @@
         "draw": -1.76,
         "away": -2.39
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -2027,7 +2151,7 @@
         "home_scores": 57.9,
         "away_scores": 76.7
       },
-      "analysis": "Il pronostico vede il Monaco favorito esterno con il 51,0% di probabilità di vittoria, contro il 22,3% del Lorient e il 26,7% del pareggio. I gol attesi premiano gli ospiti con 1,46 reti a fronte delle 0,86 dei padroni di casa. I dati Elo confermano la superiorità del Monaco (1539,7 contro 1500,4), supportata da una forma recente di 2,2 punti a partita. Il campione di sole 3 partite casalinghe e esterne rappresenta un limite da considerare nella lettura della stima. Le fonti riportano 4 indisponibilità totali, inclusi N. Mbamba e P. Brunner, ricordando che la copertura informativa potrebbe non essere completa.",
+      "analysis": "Il Monaco capolista fa visita a un Lorient solido ma atteso a un compito decisamente complesso. Non emergono mercati selezionati dalle nostre regole per questo incontro di Ligue 1. Conviene dunque osservare la sfida senza esporsi, privilegiando la prudenza e nessuna giocata.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -2068,6 +2192,26 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 8,
+          "points": 8,
+          "played": 6,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "away": {
+          "position": 1,
+          "points": 14,
+          "played": 6,
+          "signals": [
+            "zona alta / possibile corsa al titolo"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -2113,7 +2257,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:57+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:04+00:00",
       "odds_1x2": {
         "home": 3.48,
         "draw": 3.46,
@@ -2136,7 +2280,7 @@
         "draw": -0.34,
         "away": 4.92
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -2204,7 +2348,7 @@
         "home_scores": 58.8,
         "away_scores": 78.3
       },
-      "analysis": "Il Volos NFC parte leggermente favorito con il 52.3% di probabilità di vittoria, sostenuto da gol attesi pari a 1.53 contro gli 0.89 della squadra di casa. Il Levadeiakos mostra una forma recente difficile e un indice Elo molto vicino agli avversari, rispettivamente a quota 1449.6 e 1459.1. Il campione di sole tre partite casalinghe e in trasferta limita notevolmente la precisione della stima attuale. Per quanto riguarda le assenze, non risultano dati espliciti di indisponibilità o formazioni pubblicate, ricordando che la copertura informativa potrebbe rivelarsi incompleta.",
+      "analysis": "Questa sfida salvezza mette di fronte due squadre in grande difficoltà e con dati ancora limitati. Il modello individua una leggera preferenza per gli ospiti, ma visti i pochi elementi a disposizione è saggio procedere con prudenza. Ti consiglio di evitare giocate su questo match e osservare come si sviluppa la gara.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -2245,6 +2389,26 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 14,
+          "points": 1,
+          "played": 6,
+          "signals": [
+            "zona bassa / possibile lotta salvezza"
+          ]
+        },
+        "away": {
+          "position": 13,
+          "points": 2,
+          "played": 6,
+          "signals": [
+            "zona bassa / possibile lotta salvezza"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -2263,7 +2427,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:29:10+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:18+00:00",
       "odds_1x2": {
         "home": 2.13,
         "draw": 3.27,
@@ -2286,7 +2450,7 @@
         "draw": -1.98,
         "away": 22.98
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -2354,7 +2518,7 @@
         "home_scores": 80.8,
         "away_scores": 67.3
       },
-      "analysis": "Il Kalamata gode del favore del pronostico con il 49.7% di probabilità di successo, supportato da 1.65 gol attesi rispetto ai 1.12 stimati per gli ospiti. Entressioni simili nella forma recente e valutazioni Elo quasi allineate descrivono un contesto equilibrato, pur considerando la forza dell'OFI Crete a 1510.2 punti. L'analisi si basa su un campione ridotto a tre gare interne ed esterne, fattore che circoscrive l'affidabilità predittiva. Non sono pervenute segnalazioni ufficiali su indisponibili o formazioni, sebbene tale assenza di dati non escluda defezioni.",
+      "analysis": "Il Kalamata affronta un avversario reduce da impegni europei ravvicinati che potrebbero pesare sulle gambe. Il modello vede i padroni di casa leggermente favoriti in questa fase della stagione. Tuttavia, la quantità di dati ridotta suggerisce di restare prudenti e valutare la partita senza forzare la mano.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -2423,6 +2587,26 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 10,
+          "points": 7,
+          "played": 6,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "away": {
+          "position": 5,
+          "points": 10,
+          "played": 6,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -2441,7 +2625,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:29:10+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:18+00:00",
       "odds_1x2": {
         "home": 2.59,
         "draw": 3.16,
@@ -2464,7 +2648,7 @@
         "draw": -4.47,
         "away": -10.11
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -2532,7 +2716,7 @@
         "home_scores": 59.2,
         "away_scores": 69.1
       },
-      "analysis": "L'Olympiakos si presenta con il 42.2% di probabilità di vittoria e 1.17 gol attesi, fronteggiando un Panetolikos accreditato di 0.9 gol previsti. I dati Elo evidenziano un divario a favore degli ospiti con 1530.7 punti contro 1497.7, inseriti in un quadro di forma recente che premia la squadra ospite. Il campione analizzato si limita a soli tre incontri per parte, imponendo prudenza nella lettura del modello. Mancano indicazioni esplicite su infortunati o formazioni ufficiali, e la copertura parziale non garantisce la totale disponibilità delle rose.",
+      "analysis": "L'Olympiakos parte favorito su un campo complicato come quello del Panetolikos, forte di una classifica migliore. Le quote riflettono chiaramente il divario tecnico tra le due formazioni. Vista la bassa quantità di dati complessivi del modello, la prudenza resta comunque d'obbligo prima di ogni scelta.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -2573,6 +2757,26 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 8,
+          "points": 9,
+          "played": 6,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "away": {
+          "position": 3,
+          "points": 13,
+          "played": 6,
+          "signals": [
+            "zona obiettivi europei o alta classifica"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -2591,7 +2795,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:29:10+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:18+00:00",
       "odds_1x2": {
         "home": 8.72,
         "draw": 4.73,
@@ -2614,7 +2818,7 @@
         "draw": 10.5,
         "away": -28.03
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -2682,7 +2886,7 @@
         "home_scores": 84.6,
         "away_scores": 47.2
       },
-      "analysis": "Il Kifisia raccoglie una stima favorevole del 66.9% per l'esito casalingo, sostenuta da 1.87 gol attesi a fronte dei 0.64 previsti per l'Aris. I punteggi Elo si equivalgono intorno a quota 1500, mentre la forma recente mostra percorsi simili nonostante le difficoltà difensive esterne degli ospiti. La stima risente pesantemente di un campione di riferimento ridotto a sole tre partite casalinghe e in trasferta. Non sono disponibili informazioni verificate su indisponibili o formazioni, lasciando aperta la possibilità di una copertura incompleta.",
+      "analysis": "Il Kifisia ospita l'Aris in un confronto di metà classifica con stime preliminari ancora molto volatili. Il modello assegna buone possibilità ai padroni di casa, ma mancano mercati solidi indicati dalle regole. Ti suggerisco di non effettuare alcuna giocata e di attendere indicazioni più stabili dal campo.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -2723,6 +2927,26 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 9,
+          "points": 8,
+          "played": 6,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "away": {
+          "position": 6,
+          "points": 10,
+          "played": 6,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -2741,7 +2965,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:29:10+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:18+00:00",
       "odds_1x2": {
         "home": 2.87,
         "draw": 3.24,
@@ -2764,7 +2988,7 @@
         "draw": -7.02,
         "away": -28.24
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -2832,7 +3056,7 @@
         "home_scores": 76.3,
         "away_scores": 62.9
       },
-      "analysis": "Il PAOK parte favorito con una probabilità di vittoria del 47,4% contro il 26,0% dell'Iraklis, mentre il pareggio si attesta al 26,6%. I gol attesi dal modello sono 1.44 per i padroni di casa e 0.99 per gli ospiti, delineando un incontro da Under 2.5 al 56,1%. Le valutazioni Elo sono molto vicine, rispettivamente a 1519.5 e 1511.8, e riflettono una forma recente simile a quota 1.8 punti per match. Tuttavia, il campione casa di 3 partite e quello trasferta di 4 gare sono piuttosto ridotti e limitano la precisione della stima. Non sono disponibili dati ufficiali sulle formazioni e sulle indisponibilità.",
+      "analysis": "Il PAOK parte favorito in questa sfida casalinga contro l'Iraklis, forte di una classifica migliore nei quartieri alti. Il modello suggerisce prudenza e non evidenzia mercati particolarmente forti su cui puntare con decisione. Con dati preliminari e una stima di bassa quantità, la scelta più saggia è osservare la gara senza forzare alcuna giocata.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -2873,6 +3097,26 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 4,
+          "points": 12,
+          "played": 6,
+          "signals": [
+            "zona obiettivi europei o alta classifica"
+          ]
+        },
+        "away": {
+          "position": 7,
+          "points": 9,
+          "played": 6,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -2891,7 +3135,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:29:10+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:18+00:00",
       "odds_1x2": {
         "home": 1.22,
         "draw": 5.53,
@@ -2914,7 +3158,7 @@
         "draw": 10.15,
         "away": 17.0
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -2982,7 +3226,7 @@
         "home_scores": 88.4,
         "away_scores": 66.1
       },
-      "analysis": "L'Everton gode di una probabilità di successo del 61,8%, nettamente superiore al 18,1% attribuito al Chelsea, con il segno X stimato al 20,0%. Il modello prevede 2.15 gol attesi per la formazione di casa e 1.08 per gli ospiti, spingendo l'Over 1.5 all'83,3%. I punteggi Elo sono allineati a 1519.7 per l'Everton e 1510.3 per il Chelsea, ma il campione limitato a 3 partite casalinghe e 3 esterne rende la stima preliminare. La copertura delle indisponibilità segnala 4 elementi tra le file delle due squadre, ma l'elenco potrebbe non essere completo e le formazioni non sono state pubblicate.",
+      "analysis": "Everton e Chelsea si affrontano a Goodison Park in uno scontro d'alta classifica molto equilibrato. Le quote pendono leggermente verso gli ospiti, ma la mole di gol attesi dal modello apre a possibili scenari offensivi. Mancando indicazioni nette dai nostri filtri, conviene procedere con cautela ed evitare scommesse avventate su questo match.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -3023,6 +3267,26 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 5,
+          "points": 10,
+          "played": 6,
+          "signals": [
+            "zona obiettivi europei o alta classifica"
+          ]
+        },
+        "away": {
+          "position": 6,
+          "points": 10,
+          "played": 6,
+          "signals": [
+            "zona obiettivi europei o alta classifica"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -3068,7 +3332,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:52+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:00+00:00",
       "odds_1x2": {
         "home": 3.13,
         "draw": 3.62,
@@ -3091,7 +3355,7 @@
         "draw": -5.88,
         "away": -26.09
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -3159,7 +3423,7 @@
         "home_scores": 71.0,
         "away_scores": 51.1
       },
-      "analysis": "Il Brentford si presenta con il favore del pronostico al 48,7%, rispetto al 21,5% del Liverpool e a una quota di pareggio del 29,8%. I gol attesi sono contenuti a 1.24 per i padroni di casa e 0.71 per gli ospiti, premiando l'Under 2.5 al 68,9%. L'Elo dei due club è quasi identico intorno a quota 1520 e 1509, supportato da una forma recente analoga in termini di punti per partita. Il campione di sole 3 gare casalinghe e 3 in trasferta impone cautela nell'interpretazione della stima. La fonte segnala 14 indisponibili complessivi, ricordando però che la copertura potrebbe essere incompleta e senza formazioni ufficiali.",
+      "analysis": "Brentford leggermente favorito; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -3228,6 +3492,26 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 4,
+          "points": 10,
+          "played": 6,
+          "signals": [
+            "zona obiettivi europei o alta classifica"
+          ]
+        },
+        "away": {
+          "position": 9,
+          "points": 9,
+          "played": 6,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -3333,7 +3617,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:52+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:00+00:00",
       "odds_1x2": {
         "home": 2.34,
         "draw": 3.62,
@@ -3356,7 +3640,7 @@
         "draw": 3.88,
         "away": -12.49
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -3393,8 +3677,7 @@
           "campione inferiore a 8 gare per lato"
         ],
         "historically_validated": false
-      },
-      "analysis_provider": "Gemini"
+      }
     },
     {
       "id": "2026-10-17-Premier League-Fulham-Hull",
@@ -3424,7 +3707,7 @@
         "home_scores": 70.7,
         "away_scores": 81.6
       },
-      "analysis": "L'Hull City ribalta i pronostici tradizionali con una probabilità di vittoria esterna del 48,3%, mentre il Fulham padrone di casa si ferma al 27,8% e il pari al 23,9%. Il modello indica 1.23 gol attesi per i locali e 1.69 per gli ospiti, sostenendo l'Over 1.5 al 78,9%. I dati Elo mostrano i visitor a quota 1508.6 contro i 1458.9 del Fulham, che in casa ha raccolto soltanto 0.4 punti di media nelle ultime cinque uscite. Questo campione limitato a 3 partite casalinghe e 3 esterne riduce la robustezza della stima preliminare. Non sono presenti dati specifici sulle indisponibilità e la copertura potrebbe non essere esaustiva.",
+      "analysis": "Il Fulham cerca punti salvezza urgenti davanti al proprio pubblico contro un Hull City partito meglio in stagione. Le proiezioni indicano una gara aperta con diverse reti potenziali, ma mancano i presupposti per una selezione di quota affidabile. Vista la delicatezza della classifica dei padroni di casa, la mossa migliore è non effettuare alcuna giocata.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -3465,6 +3748,26 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 20,
+          "points": 2,
+          "played": 6,
+          "signals": [
+            "zona bassa / possibile lotta salvezza"
+          ]
+        },
+        "away": {
+          "position": 8,
+          "points": 9,
+          "played": 6,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -3483,7 +3786,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:52+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:00+00:00",
       "odds_1x2": {
         "home": 1.7,
         "draw": 3.89,
@@ -3506,7 +3809,7 @@
         "draw": -0.19,
         "away": 27.52
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -3574,7 +3877,7 @@
         "home_scores": 96.6,
         "away_scores": 69.4
       },
-      "analysis": "Il Manchester City parte nettamente favorito con una probabilità di successo dell'78.8% e gol attesi fissati a 3.38, contro il 9.4% dell'Ipswich e 1.18 reti. Nelle ultime cinque uscite i padroni di casa hanno viaggiato a una media di 3.0 punti a partita, evidenziando una superiorità confermata anche dai punteggi Elo di 1560.9 a 1499.2. Il campione casalingo e in trasferta di sole 3 partite risulta però molto ridotto, limitando l'affidabilità complessiva della stima preliminare. Tra le indisponibilità verificate, la fonte segnala J. Taylor per gli ospiti, ricordando che la copertura può essere incompleta.",
+      "analysis": "Il Manchester City affronta questo impegno casalingo con netta supremazia tecnica, reduce peraltro da impegni europei ravvicinati. Nonostante il divario in classifica, il modello suggerisce prudenza e non evidenzia particolari mercati di valore assoluto da consigliare. Conviene valutare la gara senza forzare giocate, restando prudenti di fronte a quote così sbilanciate.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -3643,6 +3946,26 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 1,
+          "points": 18,
+          "played": 6,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "away": {
+          "position": 10,
+          "points": 9,
+          "played": 6,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -3670,7 +3993,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:52+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:00+00:00",
       "odds_1x2": {
         "home": 1.24,
         "draw": 6.47,
@@ -3693,7 +4016,7 @@
         "draw": -2.78,
         "away": 0.04
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -3761,7 +4084,7 @@
         "home_scores": 86.6,
         "away_scores": 76.3
       },
-      "analysis": "Il modello assegna al Newcastle il 50.8% di probabilità di vittoria, con 2.01 gol attesi, mentre l'Aston Villa si attesta al 27.6% con 1.44 reti previste. Entrambe le squadre mostrano una forma recente simile, con 1.4 punti a partita per i padroni di casa e 1.0 per gli ospiti, supportate da valutazioni Elo molto vicine, rispettivamente a 1498.7 e 1481.5. Il campione di sole 3 partite casalinghe e esterne limita la precisione della stima preliminare. Nelle formazioni pubblicate figurano diverse assenze, tra cui A. Elanga e V. Livramento per il Newcastle, e I. Maatsen con A. Onana per l'Aston Villa.",
+      "analysis": "Newcastle e Aston Villa si sfidano in una gara piuttosto aperta, condizionata da diverse assenze importanti e dalle fatiche europee recenti degli ospiti. Il modello non indica opzioni di scommessa particolarmente forti per questo match di Premier League. Suggeriamo quindi molta prudenza e di evitare qualsiasi giocata in attesa di scenari più chiari.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -3830,6 +4153,26 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 11,
+          "points": 8,
+          "played": 6,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "away": {
+          "position": 16,
+          "points": 5,
+          "played": 6,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -3959,7 +4302,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:52+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:00+00:00",
       "odds_1x2": {
         "home": 2.22,
         "draw": 3.63,
@@ -3982,7 +4325,7 @@
         "draw": -4.21,
         "away": -4.38
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -4050,7 +4393,7 @@
         "home_scores": 82.9,
         "away_scores": 77.3
       },
-      "analysis": "Il Bournemouth gode del favore del pronostico con il 44.6% di probabilità di vittoria e 1.77 gol attesi, a fronte del 32.4% e 1.48 reti calcolate per il Sunderland. La forma recente evidenzia difficoltà per entrambe, con 0.6 punti a partita per i padroni di casa e 0.8 per gli ospiti, rispecchiando i dati Elo quasi identici di 1470.0 contro 1470.9. Il campione di soli 3 incontri interni ed esterni rappresenta un limite evidente per l'accuratezza di questa stima preliminare. Le segnalazioni indicano vari indisponibili, tra cui J. Araujo per il Bournemouth e D. Ballard per il Sunderland, senza garanzia di completezza.",
+      "analysis": "Scontro salvezza molto delicato tra due formazioni che cercano punti pesanti per allontanarsi dalla zona calda. Il Sunderland arriva da un impegno europeo ravvicinato che potrebbe pesare sulle gambe. Vista la situazione di classifica delicata e l'assenza di indicazioni forti dal modello, è saggio procedere con prudenza e non effettuare alcuna giocata.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -4119,6 +4462,26 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 18,
+          "points": 3,
+          "played": 6,
+          "signals": [
+            "zona bassa / possibile lotta salvezza"
+          ]
+        },
+        "away": {
+          "position": 17,
+          "points": 4,
+          "played": 6,
+          "signals": [
+            "zona bassa / possibile lotta salvezza"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -4188,7 +4551,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:52+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:00+00:00",
       "odds_1x2": {
         "home": 2.04,
         "draw": 3.51,
@@ -4211,7 +4574,7 @@
         "draw": -3.73,
         "away": 5.12
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -4279,7 +4642,7 @@
         "home_scores": 90.7,
         "away_scores": 47.4
       },
-      "analysis": "Il Brighton domina le proiezioni con il 76.1% di probabilità di vittoria e 2.38 gol attesi, mentre il Crystal Palace si ferma all'8.2% con 0.64 reti. Nelle ultime cinque sfide i padroni di casa hanno ottenuto 2.0 punti di media, vantando un indice Elo superiore di 1532.4 rispetto al 1490.9 degli avversari. Il campione casa e trasferta limitato a sole 3 partite incide sulla portata di questa stima preliminare. La fonte evidenzia un numero considerevole di indisponibilità, tra cui E. Ferguson e K. Mitoma per i locali e C. Riad per gli ospiti, ricordando che l'elenco potrebbe non essere esaustivo.",
+      "analysis": "Il Brighton parte favorito in questo derby, forte di un buon momento e di una classifica interessante nei piani alti. Tuttavia, la lista dei giocatori indisponibili è lunga e il Crystal Palace ha impegni ravvicinati nelle gambe. Mancando mercati con segnali davvero convincenti, il consiglio migliore è la massima prudenza, evitando giocate avventate.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -4348,6 +4711,26 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 3,
+          "points": 13,
+          "played": 6,
+          "signals": [
+            "zona obiettivi europei o alta classifica"
+          ]
+        },
+        "away": {
+          "position": 12,
+          "points": 7,
+          "played": 6,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -4459,7 +4842,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:52+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:00+00:00",
       "odds_1x2": {
         "home": 1.53,
         "draw": 4.42,
@@ -4482,7 +4865,7 @@
         "draw": -5.51,
         "away": -9.32
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -4550,7 +4933,7 @@
         "home_scores": 78.8,
         "away_scores": 55.8
       },
-      "analysis": "In questo scontro di Premier League, il Leeds si presenta con una stima preliminare che vede il segno 1 al 54.6%, mentre il pareggio si attesta al 25.6% e il successo del Man United al 19.8%. I gol attesi dal modello premiano i padroni di casa con 1.55 reti a fronte delle 0.82 degli ospiti. Analizzando i dati recenti, entrambe le squadre viaggiano a una media di 1.2 punti a partita nelle ultime cinque uscite, con l'Elo che registra 1509.6 per il Leeds e 1489.3 per il Man United. Tuttavia, il campione casa e trasferta è limitato a sole tre partite, fattore che riduce la precisione della stima. Sulle disponibilità non ci sono dati certi e ricordiamo che la copertura può essere incompleta.",
+      "analysis": "Questa sfida di Premier League si presenta con dati ancora preliminari e un campione ridotto, elementi che invitano a grande cautela. Il modello non evidenzia mercati particolarmente solidi o quote di valore da consigliare apertamente. Vista l'assenza di indicazioni forti e la complessità del match, la scelta più saggia è quella di evitare qualsiasi giocata e osservare la gara da spettatori.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -4591,6 +4974,26 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 7,
+          "points": 9,
+          "played": 6,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "away": {
+          "position": 13,
+          "points": 6,
+          "played": 6,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -4609,7 +5012,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:52+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:00+00:00",
       "odds_1x2": {
         "home": 2.32,
         "draw": 3.55,
@@ -4632,7 +5035,7 @@
         "draw": -0.79,
         "away": -13.42
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -4700,7 +5103,7 @@
         "home_scores": 41.4,
         "away_scores": 58.4
       },
-      "analysis": "La sfida tra Nott'm Forest e Arsenal vede gli ospiti favoriti dal modello con una probabilità del 41.7% per la vittoria esterna, contro il 37.2% del pareggio e il 21.1% per l'affermazione interna del Forest. I gol attesi restano bassi, stimati in 0.53 per la squadra di casa e 0.88 per quella ospite. Nelle ultime cinque partite l'Arsenal ha mostrato un ottimo rendimento con 2.4 punti di media, mentre il Nott'm Forest si ferma a 1.0, supportati rispettivamente da un Elo di 1541.1 e 1476.5. Il campione di sole tre partite casalinghe e esterne limita la portata dell'analisi. Non risultano dati espliciti di disponibilità verificata, ricordando che l'assenza di segnalazioni non garantisce la completezza dei ranghi.",
+      "analysis": "Il Nottingham Forest ospita un Arsenal in lotta nelle zone nobili della classifica, ma l'analisi si muove su basi ancora preliminari. Non ci sono mercati raccomandati dalle regole e i dati a disposizione non offrono appigli sufficienti per costruire una lettura affidabile. Con queste premesse è decisamente meglio non forzare la mano e rimanere prudenti, evitando qualsiasi tipo di puntata.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -4741,6 +5144,26 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 15,
+          "points": 5,
+          "played": 6,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "away": {
+          "position": 2,
+          "points": 15,
+          "played": 6,
+          "signals": [
+            "zona obiettivi europei o alta classifica"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -4759,7 +5182,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:52+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:00+00:00",
       "odds_1x2": {
         "home": 5.59,
         "draw": 3.82,
@@ -4782,7 +5205,7 @@
         "draw": 12.64,
         "away": -16.95
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -4891,6 +5314,26 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 19,
+          "points": 3,
+          "played": 6,
+          "signals": [
+            "zona bassa / possibile lotta salvezza"
+          ]
+        },
+        "away": {
+          "position": 14,
+          "points": 6,
+          "played": 6,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -4909,7 +5352,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:52+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:00+00:00",
       "odds_1x2": {
         "home": 1.46,
         "draw": 4.55,
@@ -4932,7 +5375,7 @@
         "draw": 14.27,
         "away": 14.43
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -5068,6 +5511,26 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 20,
+          "points": 0,
+          "played": 6,
+          "signals": [
+            "zona bassa / possibile lotta salvezza"
+          ]
+        },
+        "away": {
+          "position": 8,
+          "points": 10,
+          "played": 6,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -5211,7 +5674,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:55+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:03+00:00",
       "odds_1x2": {
         "home": 4.67,
         "draw": 4.0,
@@ -5234,7 +5697,7 @@
         "draw": -8.7,
         "away": 19.41
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -5342,6 +5805,26 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 15,
+          "points": 4,
+          "played": 6,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "away": {
+          "position": 13,
+          "points": 6,
+          "played": 6,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -5417,7 +5900,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:55+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:03+00:00",
       "odds_1x2": {
         "home": 1.87,
         "draw": 3.45,
@@ -5440,7 +5923,7 @@
         "draw": 1.41,
         "away": 6.94
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -5576,6 +6059,26 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 19,
+          "points": 4,
+          "played": 6,
+          "signals": [
+            "zona bassa / possibile lotta salvezza"
+          ]
+        },
+        "away": {
+          "position": 7,
+          "points": 11,
+          "played": 6,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -5639,7 +6142,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:55+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:03+00:00",
       "odds_1x2": {
         "home": 3.28,
         "draw": 3.61,
@@ -5662,7 +6165,7 @@
         "draw": -8.25,
         "away": 25.22
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -5798,6 +6301,27 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 6,
+          "points": 11,
+          "played": 6,
+          "signals": [
+            "zona obiettivi europei o alta classifica"
+          ]
+        },
+        "away": {
+          "position": 2,
+          "points": 16,
+          "played": 6,
+          "signals": [
+            "zona alta / possibile corsa al titolo",
+            "zona obiettivi europei o alta classifica"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -5885,7 +6409,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:55+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:03+00:00",
       "odds_1x2": {
         "home": 1.66,
         "draw": 3.76,
@@ -5908,7 +6432,7 @@
         "draw": 8.68,
         "away": 19.77
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -6016,6 +6540,26 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 18,
+          "points": 4,
+          "played": 6,
+          "signals": [
+            "zona bassa / possibile lotta salvezza"
+          ]
+        },
+        "away": {
+          "position": 12,
+          "points": 7,
+          "played": 6,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -6034,7 +6578,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:55+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:03+00:00",
       "odds_1x2": {
         "home": 2.99,
         "draw": 3.05,
@@ -6057,7 +6601,7 @@
         "draw": -1.98,
         "away": 3.87
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -6193,6 +6737,26 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 8,
+          "points": 38,
+          "played": 29,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "away": {
+          "position": 11,
+          "points": 33,
+          "played": 22,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -6334,6 +6898,26 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 3,
+          "points": 51,
+          "played": 28,
+          "signals": [
+            "zona obiettivi europei o alta classifica"
+          ]
+        },
+        "away": {
+          "position": 13,
+          "points": 30,
+          "played": 28,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -6512,6 +7096,26 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 17,
+          "points": 3,
+          "played": 8,
+          "signals": [
+            "zona bassa / possibile lotta salvezza"
+          ]
+        },
+        "away": {
+          "position": 2,
+          "points": 19,
+          "played": 8,
+          "signals": [
+            "zona obiettivi europei o alta classifica"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -6530,7 +7134,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:59+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:07+00:00",
       "odds_1x2": {
         "home": 8.37,
         "draw": 6.53,
@@ -6553,7 +7157,7 @@
         "draw": -4.48,
         "away": 8.42
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -6689,6 +7293,26 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 15,
+          "points": 6,
+          "played": 8,
+          "signals": [
+            "zona bassa / possibile lotta salvezza"
+          ]
+        },
+        "away": {
+          "position": 1,
+          "points": 20,
+          "played": 8,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -6752,7 +7376,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:59+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:07+00:00",
       "odds_1x2": {
         "home": 7.53,
         "draw": 5.62,
@@ -6775,7 +7399,7 @@
         "draw": -10.47,
         "away": 19.73
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -6883,6 +7507,26 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 14,
+          "points": 6,
+          "played": 8,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "away": {
+          "position": 18,
+          "points": 2,
+          "played": 8,
+          "signals": [
+            "zona bassa / possibile lotta salvezza"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -6946,7 +7590,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:59+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:07+00:00",
       "odds_1x2": {
         "home": 1.6,
         "draw": 4.31,
@@ -6969,7 +7613,7 @@
         "draw": -2.85,
         "away": -0.91
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -7077,6 +7721,26 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 16,
+          "points": 4,
+          "played": 8,
+          "signals": [
+            "zona bassa / possibile lotta salvezza"
+          ]
+        },
+        "away": {
+          "position": 8,
+          "points": 11,
+          "played": 8,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -7095,7 +7759,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:59+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:07+00:00",
       "odds_1x2": {
         "home": 3.31,
         "draw": 3.83,
@@ -7118,7 +7782,7 @@
         "draw": -12.66,
         "away": 32.94
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -7254,6 +7918,26 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 12,
+          "points": 8,
+          "played": 8,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "away": {
+          "position": 3,
+          "points": 19,
+          "played": 8,
+          "signals": [
+            "zona obiettivi europei o alta classifica"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -7311,7 +7995,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:59+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:07+00:00",
       "odds_1x2": {
         "home": 5.8,
         "draw": 4.83,
@@ -7334,7 +8018,7 @@
         "draw": -1.38,
         "away": 1.43
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -7470,6 +8154,26 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 6,
+          "points": 14,
+          "played": 8,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "away": {
+          "position": 5,
+          "points": 15,
+          "played": 8,
+          "signals": [
+            "zona obiettivi europei o alta classifica"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -7545,7 +8249,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:59+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:07+00:00",
       "odds_1x2": {
         "home": 3.4,
         "draw": 4.06,
@@ -7568,7 +8272,7 @@
         "draw": -3.25,
         "away": 7.93
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -7676,6 +8380,26 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 11,
+          "points": 9,
+          "played": 8,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "away": {
+          "position": 7,
+          "points": 14,
+          "played": 8,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -7694,7 +8418,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:59+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:07+00:00",
       "odds_1x2": {
         "home": 1.58,
         "draw": 4.38,
@@ -7717,7 +8441,7 @@
         "draw": -0.41,
         "away": 39.42
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -7853,6 +8577,26 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 4,
+          "points": 17,
+          "played": 8,
+          "signals": [
+            "zona obiettivi europei o alta classifica"
+          ]
+        },
+        "away": {
+          "position": 13,
+          "points": 8,
+          "played": 8,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -7928,7 +8672,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:59+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:07+00:00",
       "odds_1x2": {
         "home": 1.31,
         "draw": 5.61,
@@ -7951,7 +8695,7 @@
         "draw": -5.74,
         "away": -6.04
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -8059,6 +8803,26 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 9,
+          "points": 11,
+          "played": 7,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "away": {
+          "position": 8,
+          "points": 11,
+          "played": 7,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -8077,7 +8841,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:29:01+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:09+00:00",
       "odds_1x2": {
         "home": 1.57,
         "draw": 3.78,
@@ -8100,7 +8864,7 @@
         "draw": 11.11,
         "away": 11.74
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -8208,6 +8972,26 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 8,
+          "points": 8,
+          "played": 8,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "away": {
+          "position": 7,
+          "points": 10,
+          "played": 8,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -8228,7 +9012,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:58+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:05+00:00",
       "odds_1x2": {
         "home": 1.83,
         "draw": 3.66,
@@ -8251,7 +9035,7 @@
         "draw": 7.15,
         "away": -3.34
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -8359,6 +9143,26 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 10,
+          "points": 7,
+          "played": 8,
+          "signals": [
+            "zona bassa / possibile lotta salvezza"
+          ]
+        },
+        "away": {
+          "position": 11,
+          "points": 6,
+          "played": 8,
+          "signals": [
+            "zona bassa / possibile lotta salvezza"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -8379,7 +9183,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:58+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:05+00:00",
       "odds_1x2": {
         "home": 1.64,
         "draw": 3.91,
@@ -8402,7 +9206,7 @@
         "draw": 5.97,
         "away": 29.53
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -8510,6 +9314,26 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 12,
+          "points": 5,
+          "played": 8,
+          "signals": [
+            "zona bassa / possibile lotta salvezza"
+          ]
+        },
+        "away": {
+          "position": 9,
+          "points": 8,
+          "played": 8,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -8530,7 +9354,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:58+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:05+00:00",
       "odds_1x2": {
         "home": 3.18,
         "draw": 3.59,
@@ -8553,7 +9377,7 @@
         "draw": -3.89,
         "away": 16.81
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -8661,6 +9485,26 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 5,
+          "points": 11,
+          "played": 8,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "away": {
+          "position": 6,
+          "points": 11,
+          "played": 8,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -8679,7 +9523,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:58+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:05+00:00",
       "odds_1x2": {
         "home": 2.59,
         "draw": 3.46,
@@ -8702,7 +9546,7 @@
         "draw": -3.08,
         "away": 0.09
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -8810,6 +9654,26 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 4,
+          "points": 13,
+          "played": 8,
+          "signals": [
+            "zona obiettivi europei o alta classifica"
+          ]
+        },
+        "away": {
+          "position": 2,
+          "points": 19,
+          "played": 8,
+          "signals": [
+            "zona obiettivi europei o alta classifica"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -8830,7 +9694,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:58+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:05+00:00",
       "odds_1x2": {
         "home": 7.12,
         "draw": 4.91,
@@ -8853,7 +9717,7 @@
         "draw": 10.14,
         "away": -19.1
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -8989,6 +9853,26 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 1,
+          "points": 21,
+          "played": 8,
+          "signals": [
+            "zona alta / possibile corsa al titolo"
+          ]
+        },
+        "away": {
+          "position": 3,
+          "points": 16,
+          "played": 8,
+          "signals": [
+            "zona obiettivi europei o alta classifica"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -9007,7 +9891,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:58+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:05+00:00",
       "odds_1x2": {
         "home": 1.57,
         "draw": 4.32,
@@ -9030,7 +9914,7 @@
         "draw": 4.49,
         "away": -1.32
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -9138,6 +10022,26 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 12,
+          "points": 8,
+          "played": 8,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "away": {
+          "position": 2,
+          "points": 19,
+          "played": 8,
+          "signals": [
+            "zona obiettivi europei o alta classifica"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -9156,7 +10060,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:53+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:01+00:00",
       "odds_1x2": {
         "home": 4.68,
         "draw": 3.84,
@@ -9179,7 +10083,7 @@
         "draw": -4.71,
         "away": 6.83
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -9315,6 +10219,26 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 11,
+          "points": 8,
+          "played": 8,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "away": {
+          "position": 18,
+          "points": 6,
+          "played": 8,
+          "signals": [
+            "zona bassa / possibile lotta salvezza"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -9348,7 +10272,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:53+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:01+00:00",
       "odds_1x2": {
         "home": 1.44,
         "draw": 4.84,
@@ -9371,7 +10295,7 @@
         "draw": 1.17,
         "away": 31.15
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -9533,6 +10457,26 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 3,
+          "points": 19,
+          "played": 8,
+          "signals": [
+            "zona obiettivi europei o alta classifica"
+          ]
+        },
+        "away": {
+          "position": 1,
+          "points": 24,
+          "played": 8,
+          "signals": [
+            "zona alta / possibile corsa al titolo"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -9644,7 +10588,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:53+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:01+00:00",
       "odds_1x2": {
         "home": 6.0,
         "draw": 5.42,
@@ -9667,7 +10611,7 @@
         "draw": 2.18,
         "away": -3.74
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -9775,6 +10719,26 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 16,
+          "points": 8,
+          "played": 8,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "away": {
+          "position": 15,
+          "points": 8,
+          "played": 8,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -9793,7 +10757,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:53+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:01+00:00",
       "odds_1x2": {
         "home": 1.98,
         "draw": 3.61,
@@ -9816,7 +10780,7 @@
         "draw": -5.66,
         "away": -10.08
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -9952,6 +10916,26 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 9,
+          "points": 8,
+          "played": 8,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "away": {
+          "position": 7,
+          "points": 11,
+          "played": 8,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -10021,7 +11005,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:53+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:01+00:00",
       "odds_1x2": {
         "home": 2.1,
         "draw": 3.22,
@@ -10044,7 +11028,7 @@
         "draw": 1.74,
         "away": -1.84
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -10180,6 +11164,26 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 20,
+          "points": 4,
+          "played": 8,
+          "signals": [
+            "zona bassa / possibile lotta salvezza"
+          ]
+        },
+        "away": {
+          "position": 6,
+          "points": 13,
+          "played": 8,
+          "signals": [
+            "zona obiettivi europei o alta classifica"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -10249,7 +11253,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:53+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:01+00:00",
       "odds_1x2": {
         "home": 3.14,
         "draw": 3.48,
@@ -10272,7 +11276,7 @@
         "draw": -0.93,
         "away": 1.87
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -10408,6 +11412,26 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 4,
+          "points": 18,
+          "played": 8,
+          "signals": [
+            "zona obiettivi europei o alta classifica"
+          ]
+        },
+        "away": {
+          "position": 5,
+          "points": 14,
+          "played": 8,
+          "signals": [
+            "zona obiettivi europei o alta classifica"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -10489,7 +11513,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:53+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:01+00:00",
       "odds_1x2": {
         "home": 1.23,
         "draw": 6.27,
@@ -10512,7 +11536,7 @@
         "draw": 5.2,
         "away": 7.27
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -10648,6 +11672,26 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 14,
+          "points": 8,
+          "played": 8,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "away": {
+          "position": 13,
+          "points": 8,
+          "played": 7,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -10666,7 +11710,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:53+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:01+00:00",
       "odds_1x2": {
         "home": 2.85,
         "draw": 2.98,
@@ -10689,7 +11733,7 @@
         "draw": -5.42,
         "away": -15.03
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -10797,6 +11841,26 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 14,
+          "points": 8,
+          "played": 7,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "away": {
+          "position": 18,
+          "points": 3,
+          "played": 7,
+          "signals": [
+            "zona bassa / possibile lotta salvezza"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -10815,7 +11879,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:29:04+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:11+00:00",
       "odds_1x2": {
         "home": 1.58,
         "draw": 3.7,
@@ -10838,7 +11902,7 @@
         "draw": -5.23,
         "away": -8.01
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -10946,6 +12010,26 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 3,
+          "points": 14,
+          "played": 7,
+          "signals": [
+            "zona obiettivi europei o alta classifica"
+          ]
+        },
+        "away": {
+          "position": 16,
+          "points": 5,
+          "played": 7,
+          "signals": [
+            "zona bassa / possibile lotta salvezza"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -10964,7 +12048,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:29:04+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:11+00:00",
       "odds_1x2": {
         "home": 1.89,
         "draw": 3.44,
@@ -10987,7 +12071,7 @@
         "draw": -9.99,
         "away": -16.15
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -11123,6 +12207,26 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 13,
+          "points": 8,
+          "played": 7,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "away": {
+          "position": 1,
+          "points": 16,
+          "played": 7,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -11141,7 +12245,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:29:04+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:11+00:00",
       "odds_1x2": {
         "home": 6.69,
         "draw": 4.93,
@@ -11164,7 +12268,7 @@
         "draw": 0.95,
         "away": -9.91
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -11300,6 +12404,26 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 4,
+          "points": 13,
+          "played": 7,
+          "signals": [
+            "zona obiettivi europei o alta classifica"
+          ]
+        },
+        "away": {
+          "position": 7,
+          "points": 12,
+          "played": 7,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -11339,7 +12463,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:29:04+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:11+00:00",
       "odds_1x2": {
         "home": 1.27,
         "draw": 5.27,
@@ -11362,7 +12486,7 @@
         "draw": 0.26,
         "away": 4.39
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -11470,6 +12594,26 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 9,
+          "points": 10,
+          "played": 7,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "away": {
+          "position": 17,
+          "points": 4,
+          "played": 7,
+          "signals": [
+            "zona bassa / possibile lotta salvezza"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -11488,7 +12632,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:29:04+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:11+00:00",
       "odds_1x2": {
         "home": 2.45,
         "draw": 3.33,
@@ -11511,7 +12655,7 @@
         "draw": 5.18,
         "away": -11.34
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -11619,6 +12763,26 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 6,
+          "points": 12,
+          "played": 7,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "away": {
+          "position": 15,
+          "points": 6,
+          "played": 7,
+          "signals": [
+            "zona bassa / possibile lotta salvezza"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -11637,7 +12801,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:29:04+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:11+00:00",
       "odds_1x2": {
         "home": 2.81,
         "draw": 3.36,
@@ -11660,7 +12824,7 @@
         "draw": -6.05,
         "away": -20.75
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -11768,6 +12932,26 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 11,
+          "points": 8,
+          "played": 7,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "away": {
+          "position": 12,
+          "points": 8,
+          "played": 7,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -11786,7 +12970,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:29:04+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:11+00:00",
       "odds_1x2": {
         "home": 1.64,
         "draw": 3.96,
@@ -11809,7 +12993,7 @@
         "draw": -0.63,
         "away": 4.53
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -11971,6 +13155,27 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 5,
+          "points": 13,
+          "played": 7,
+          "signals": [
+            "zona obiettivi europei o alta classifica"
+          ]
+        },
+        "away": {
+          "position": 2,
+          "points": 15,
+          "played": 7,
+          "signals": [
+            "zona alta / possibile corsa al titolo",
+            "zona obiettivi europei o alta classifica"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -11989,7 +13194,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:29:04+00:00",
+      "odds_fetched_at": "2026-10-17T16:39:11+00:00",
       "odds_1x2": {
         "home": 2.8,
         "draw": 3.65,
@@ -12012,7 +13217,7 @@
         "draw": -14.29,
         "away": -36.2
       },
-      "market_analysis_updated_at": "2026-10-17T16:29:29+00:00",
+      "market_analysis_updated_at": "2026-10-17T16:39:37+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -12110,6 +13315,10 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "dati_insufficienti",
+        "note": "Poche partite concluse per valutare con prudenza gli obiettivi di classifica."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -12212,6 +13421,10 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "dati_insufficienti",
+        "note": "Poche partite concluse per valutare con prudenza gli obiettivi di classifica."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -12281,6 +13494,10 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "dati_insufficienti",
+        "note": "Poche partite concluse per valutare con prudenza gli obiettivi di classifica."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -12322,6 +13539,10 @@
       "away_recent_form": null,
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "dati_insufficienti",
+        "note": "Poche partite concluse per valutare con prudenza gli obiettivi di classifica."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -12396,6 +13617,10 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "dati_insufficienti",
+        "note": "Poche partite concluse per valutare con prudenza gli obiettivi di classifica."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -12465,6 +13690,10 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "dati_insufficienti",
+        "note": "Poche partite concluse per valutare con prudenza gli obiettivi di classifica."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -12506,6 +13735,10 @@
       "away_recent_form": null,
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "dati_insufficienti",
+        "note": "Poche partite concluse per valutare con prudenza gli obiettivi di classifica."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -12547,6 +13780,10 @@
       "away_recent_form": null,
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "dati_insufficienti",
+        "note": "Poche partite concluse per valutare con prudenza gli obiettivi di classifica."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -12642,6 +13879,10 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "dati_insufficienti",
+        "note": "Poche partite concluse per valutare con prudenza gli obiettivi di classifica."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -12711,6 +13952,10 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "dati_insufficienti",
+        "note": "Poche partite concluse per valutare con prudenza gli obiettivi di classifica."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -13029,6 +14274,10 @@
       "away_recent_form": null,
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "non_verificabile",
+        "note": "Classifica aggiornata non disponibile: motivazioni non dedotte."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "europea",
@@ -13085,6 +14334,10 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "non_verificabile",
+        "note": "Classifica aggiornata non disponibile: motivazioni non dedotte."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "europea",
@@ -13175,6 +14428,10 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "non_verificabile",
+        "note": "Classifica aggiornata non disponibile: motivazioni non dedotte."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "europea",
@@ -13673,6 +14930,10 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "non_verificabile",
+        "note": "Classifica aggiornata non disponibile: motivazioni non dedotte."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "europea",
@@ -14030,6 +15291,10 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "non_verificabile",
+        "note": "Classifica aggiornata non disponibile: motivazioni non dedotte."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "europea",
@@ -14324,6 +15589,26 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 11,
+          "points": 7,
+          "played": 6,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "away": {
+          "position": 6,
+          "points": 11,
+          "played": 6,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -14342,7 +15627,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:57+00:00"
+      "odds_fetched_at": "2026-10-17T16:39:04+00:00"
     },
     {
       "id": "2026-10-18-Ligue 1-Paris FC-Rennes",
@@ -14383,6 +15668,26 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 5,
+          "points": 11,
+          "played": 6,
+          "signals": [
+            "zona obiettivi europei o alta classifica"
+          ]
+        },
+        "away": {
+          "position": 3,
+          "points": 13,
+          "played": 6,
+          "signals": [
+            "zona obiettivi europei o alta classifica"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -14428,7 +15733,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:57+00:00"
+      "odds_fetched_at": "2026-10-17T16:39:04+00:00"
     },
     {
       "id": "2026-10-18-Ligue 1-Lyon-Nice",
@@ -14497,6 +15802,26 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 4,
+          "points": 11,
+          "played": 6,
+          "signals": [
+            "zona obiettivi europei o alta classifica"
+          ]
+        },
+        "away": {
+          "position": 9,
+          "points": 8,
+          "played": 6,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -14566,7 +15891,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:57+00:00"
+      "odds_fetched_at": "2026-10-17T16:39:04+00:00"
     },
     {
       "id": "2026-10-17-Bundesliga-Elversberg-Augsburg",
@@ -14607,6 +15932,26 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 9,
+          "points": 7,
+          "played": 5,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "away": {
+          "position": 6,
+          "points": 8,
+          "played": 5,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -14676,7 +16021,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:54+00:00"
+      "odds_fetched_at": "2026-10-17T16:39:02+00:00"
     },
     {
       "id": "2026-10-17-Bundesliga-Hamburg-Stuttgart",
@@ -14745,6 +16090,26 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 12,
+          "points": 6,
+          "played": 5,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "away": {
+          "position": 11,
+          "points": 6,
+          "played": 5,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -14763,7 +16128,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:54+00:00"
+      "odds_fetched_at": "2026-10-17T16:39:02+00:00"
     },
     {
       "id": "2026-10-17-Bundesliga-Schalke 04-Mainz",
@@ -14804,6 +16169,26 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 13,
+          "points": 5,
+          "played": 5,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "away": {
+          "position": 8,
+          "points": 7,
+          "played": 5,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -14822,7 +16207,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:54+00:00"
+      "odds_fetched_at": "2026-10-17T16:39:02+00:00"
     },
     {
       "id": "2026-10-17-Bundesliga-Union Berlin-Dortmund",
@@ -14891,6 +16276,26 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 16,
+          "points": 4,
+          "played": 5,
+          "signals": [
+            "zona bassa / possibile lotta salvezza"
+          ]
+        },
+        "away": {
+          "position": 2,
+          "points": 13,
+          "played": 5,
+          "signals": [
+            "zona obiettivi europei o alta classifica"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -14960,7 +16365,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:54+00:00"
+      "odds_fetched_at": "2026-10-17T16:39:02+00:00"
     },
     {
       "id": "2026-10-17-Bundesliga-Werder Bremen-Paderborn",
@@ -15001,6 +16406,26 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 7,
+          "points": 8,
+          "played": 5,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "away": {
+          "position": 15,
+          "points": 4,
+          "played": 5,
+          "signals": [
+            "zona bassa / possibile lotta salvezza"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -15088,7 +16513,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:54+00:00"
+      "odds_fetched_at": "2026-10-17T16:39:02+00:00"
     },
     {
       "id": "2026-10-17-Bundesliga-Bayern Munich-RB Leipzig",
@@ -15183,6 +16608,26 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 3,
+          "points": 11,
+          "played": 5,
+          "signals": [
+            "zona obiettivi europei o alta classifica"
+          ]
+        },
+        "away": {
+          "position": 5,
+          "points": 9,
+          "played": 5,
+          "signals": [
+            "zona obiettivi europei o alta classifica"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -15294,7 +16739,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:54+00:00"
+      "odds_fetched_at": "2026-10-17T16:39:02+00:00"
     },
     {
       "id": "2026-10-18-Bundesliga-Leverkusen-Freiburg",
@@ -15389,6 +16834,26 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 4,
+          "points": 10,
+          "played": 5,
+          "signals": [
+            "zona obiettivi europei o alta classifica"
+          ]
+        },
+        "away": {
+          "position": 1,
+          "points": 13,
+          "played": 5,
+          "signals": [
+            "zona alta / possibile corsa al titolo"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -15458,7 +16923,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:54+00:00"
+      "odds_fetched_at": "2026-10-17T16:39:02+00:00"
     },
     {
       "id": "2026-10-18-Bundesliga-M'gladbach-Hoffenheim",
@@ -15527,6 +16992,26 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 18,
+          "points": 0,
+          "played": 5,
+          "signals": [
+            "zona bassa / possibile lotta salvezza"
+          ]
+        },
+        "away": {
+          "position": 17,
+          "points": 3,
+          "played": 5,
+          "signals": [
+            "zona bassa / possibile lotta salvezza"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -15545,7 +17030,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:54+00:00"
+      "odds_fetched_at": "2026-10-17T16:39:02+00:00"
     },
     {
       "id": "2026-10-18-Super League greca-Panathinaikos-Asteras Tripolis",
@@ -15614,6 +17099,26 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 1,
+          "points": 15,
+          "played": 6,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "away": {
+          "position": 11,
+          "points": 5,
+          "played": 6,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -15634,7 +17139,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:29:10+00:00"
+      "odds_fetched_at": "2026-10-17T16:39:18+00:00"
     },
     {
       "id": "2026-10-17-Serie A-Bologna-Inter",
@@ -15703,6 +17208,26 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 14,
+          "points": 5,
+          "played": 6,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "away": {
+          "position": 1,
+          "points": 16,
+          "played": 6,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -15822,7 +17347,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:55+00:00"
+      "odds_fetched_at": "2026-10-17T16:39:03+00:00"
     },
     {
       "id": "2026-10-17-Serie A-Roma-Genoa",
@@ -15891,6 +17416,26 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 3,
+          "points": 14,
+          "played": 6,
+          "signals": [
+            "zona obiettivi europei o alta classifica"
+          ]
+        },
+        "away": {
+          "position": 17,
+          "points": 4,
+          "played": 6,
+          "signals": [
+            "zona bassa / possibile lotta salvezza"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -15990,7 +17535,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:55+00:00"
+      "odds_fetched_at": "2026-10-17T16:39:03+00:00"
     },
     {
       "id": "2026-10-18-Serie A-Milan-Atalanta",
@@ -16085,6 +17630,26 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 5,
+          "points": 12,
+          "played": 6,
+          "signals": [
+            "zona obiettivi europei o alta classifica"
+          ]
+        },
+        "away": {
+          "position": 10,
+          "points": 9,
+          "played": 6,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -16166,7 +17731,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:55+00:00"
+      "odds_fetched_at": "2026-10-17T16:39:03+00:00"
     },
     {
       "id": "2026-10-19-Serie A-Monza-Cagliari",
@@ -16207,6 +17772,26 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 16,
+          "points": 4,
+          "played": 6,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "away": {
+          "position": 4,
+          "points": 13,
+          "played": 6,
+          "signals": [
+            "zona obiettivi europei o alta classifica"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -16225,7 +17810,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:55+00:00"
+      "odds_fetched_at": "2026-10-17T16:39:03+00:00"
     },
     {
       "id": "2026-10-17-Eliteserien norvegese-VIKING FK-Fredrikstad",
@@ -16289,6 +17874,10 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "dati_insufficienti",
+        "note": "Poche partite concluse per valutare con prudenza gli obiettivi di classifica."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -16335,6 +17924,10 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "dati_insufficienti",
+        "note": "Poche partite concluse per valutare con prudenza gli obiettivi di classifica."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -16381,6 +17974,10 @@
       "away_recent_form": null,
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "dati_insufficienti",
+        "note": "Poche partite concluse per valutare con prudenza gli obiettivi di classifica."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -16455,6 +18052,10 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "dati_insufficienti",
+        "note": "Poche partite concluse per valutare con prudenza gli obiettivi di classifica."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -16529,6 +18130,10 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "dati_insufficienti",
+        "note": "Poche partite concluse per valutare con prudenza gli obiettivi di classifica."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -16580,6 +18185,26 @@
       },
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "indizi_classifica",
+        "home": {
+          "position": 19,
+          "points": 5,
+          "played": 8,
+          "signals": [
+            "zona bassa / possibile lotta salvezza"
+          ]
+        },
+        "away": {
+          "position": 10,
+          "points": 8,
+          "played": 6,
+          "signals": [
+            "motivazione competitiva ordinaria; obiettivo specifico non deducibile"
+          ]
+        },
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -16598,7 +18223,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T16:28:53+00:00"
+      "odds_fetched_at": "2026-10-17T16:39:01+00:00"
     },
     {
       "id": "2026-10-17-Allsvenskan svedese-AIK-IFK Göteborg",
@@ -16634,6 +18259,10 @@
       "away_recent_form": null,
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "dati_insufficienti",
+        "note": "Poche partite concluse per valutare con prudenza gli obiettivi di classifica."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -16675,6 +18304,10 @@
       "away_recent_form": null,
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "dati_insufficienti",
+        "note": "Poche partite concluse per valutare con prudenza gli obiettivi di classifica."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -16749,6 +18382,10 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
+      "motivation_context": {
+        "status": "dati_insufficienti",
+        "note": "Poche partite concluse per valutare con prudenza gli obiettivi di classifica."
+      },
       "european_fatigue_status": "rilevato",
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
@@ -16790,6 +18427,10 @@
       "away_recent_form": null,
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "dati_insufficienti",
+        "note": "Poche partite concluse per valutare con prudenza gli obiettivi di classifica."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -16836,6 +18477,10 @@
       "away_recent_form": null,
       "european_context": [],
       "recent_competition_context": [],
+      "motivation_context": {
+        "status": "dati_insufficienti",
+        "note": "Poche partite concluse per valutare con prudenza gli obiettivi di classifica."
+      },
       "european_fatigue_status": "nessuna gara europea recente verificata",
       "recent_competition_status": "nessun impegno recente verificato",
       "competition_type": "campionato",
@@ -16939,10 +18584,10 @@
       "requests_made_this_run": 0
     }
   },
-  "odds_updated_at": "2026-10-17T16:29:29+00:00",
+  "odds_updated_at": "2026-10-17T16:39:37+00:00",
   "odds_source_api_football": "API-Football",
   "market_analysis": {
-    "updated_at": "2026-10-17T16:29:29+00:00",
+    "updated_at": "2026-10-17T16:39:37+00:00",
     "matches_analyzed": 56,
     "additional_markets_analyzed": 56,
     "matches_total": 69,
@@ -16962,7 +18607,7 @@
     "method": "Probabilità implicite normalizzate per mercati binari; per doppia chance l'implied è 1/quota perché gli esiti si sovrappongono; EV teorico = probabilità modello × quota decimale − 1"
   },
   "odds_status": {
-    "updated_at": "2026-10-17T16:29:29+00:00",
+    "updated_at": "2026-10-17T16:39:37+00:00",
     "matches_total": 69,
     "matches_with_fresh_1x2": 56,
     "matches_with_fresh_additional_markets": 56,
