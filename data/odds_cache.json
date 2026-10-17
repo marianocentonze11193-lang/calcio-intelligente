@@ -188,10 +188,150 @@
       "markets": {},
       "status": "error",
       "error": "API-Football ha segnalato un errore: {'plan': 'Free plans are limited to a maximum value of 3 for the Page parameter'}"
+    },
+    "1552783": {
+      "fetched_at": "2026-10-17T01:47:06+00:00",
+      "date": "2026-10-18",
+      "home_team": "Angers",
+      "away_team": "Marseille",
+      "prices": null,
+      "markets": {},
+      "status": "error",
+      "error": "API-Football ha segnalato un errore: {'plan': 'Free plans are limited to a maximum value of 3 for the Page parameter'}"
+    },
+    "1550150": {
+      "fetched_at": "2026-10-17T01:47:06+00:00",
+      "date": "2026-10-18",
+      "home_team": "Fiorentina",
+      "away_team": "Como",
+      "prices": null,
+      "markets": {},
+      "status": "error",
+      "error": "API-Football ha segnalato un errore: {'plan': 'Free plans are limited to a maximum value of 3 for the Page parameter'}"
+    },
+    "1550152": {
+      "fetched_at": "2026-10-17T01:47:06+00:00",
+      "date": "2026-10-18",
+      "home_team": "Juventus",
+      "away_team": "Lazio",
+      "prices": null,
+      "markets": {},
+      "status": "error",
+      "error": "API-Football ha segnalato un errore: {'plan': 'Free plans are limited to a maximum value of 3 for the Page parameter'}"
+    },
+    "1552784": {
+      "fetched_at": "2026-10-17T01:47:06+00:00",
+      "date": "2026-10-18",
+      "home_team": "Le Havre",
+      "away_team": "Auxerre",
+      "prices": null,
+      "markets": {},
+      "status": "error",
+      "error": "API-Football ha segnalato un errore: {'plan': 'Free plans are limited to a maximum value of 3 for the Page parameter'}"
+    },
+    "1570420": {
+      "fetched_at": "2026-10-17T01:47:06+00:00",
+      "date": "2026-10-18",
+      "home_team": "Real Madrid",
+      "away_team": "Sevilla",
+      "prices": null,
+      "markets": {},
+      "status": "error",
+      "error": "API-Football ha segnalato un errore: {'plan': 'Free plans are limited to a maximum value of 3 for the Page parameter'}"
+    },
+    "1557429": {
+      "fetched_at": "2026-10-17T01:47:06+00:00",
+      "date": "2026-10-18",
+      "home_team": "Brighton",
+      "away_team": "Crystal Palace",
+      "prices": null,
+      "markets": {},
+      "status": "error",
+      "error": "API-Football ha segnalato un errore: {'plan': 'Free plans are limited to a maximum value of 3 for the Page parameter'}"
+    },
+    "1552197": {
+      "fetched_at": "2026-10-17T01:47:06+00:00",
+      "date": "2026-10-18",
+      "home_team": "Groningen",
+      "away_team": "Ajax",
+      "prices": null,
+      "markets": {},
+      "status": "error",
+      "error": "API-Football ha segnalato un errore: {'plan': 'Free plans are limited to a maximum value of 3 for the Page parameter'}"
+    },
+    "1552195": {
+      "fetched_at": "2026-10-17T01:47:06+00:00",
+      "date": "2026-10-18",
+      "home_team": "Cambuur",
+      "away_team": "AZ Alkmaar",
+      "prices": null,
+      "markets": {},
+      "status": "error",
+      "error": "API-Football ha segnalato un errore: {'plan': 'Free plans are limited to a maximum value of 3 for the Page parameter'}"
+    },
+    "1552787": {
+      "fetched_at": "2026-10-17T01:47:06+00:00",
+      "date": "2026-10-18",
+      "home_team": "Lorient",
+      "away_team": "Monaco",
+      "prices": null,
+      "markets": {},
+      "status": "error",
+      "error": "API-Football ha segnalato un errore: {'plan': 'Free plans are limited to a maximum value of 3 for the Page parameter'}"
+    },
+    "1550155": {
+      "fetched_at": "2026-10-17T01:47:06+00:00",
+      "date": "2026-10-18",
+      "home_team": "Udinese",
+      "away_team": "Lecce",
+      "prices": null,
+      "markets": {},
+      "status": "error",
+      "error": "API-Football ha segnalato un errore: {'plan': 'Free plans are limited to a maximum value of 3 for the Page parameter'}"
+    },
+    "1494783": {
+      "fetched_at": "2026-10-17T01:47:06+00:00",
+      "date": "2026-10-18",
+      "home_team": "Sandefjord",
+      "away_team": "Lillestrom",
+      "prices": null,
+      "markets": {},
+      "status": "error",
+      "error": "API-Football ha segnalato un errore: {'plan': 'Free plans are limited to a maximum value of 3 for the Page parameter'}"
+    },
+    "1494785": {
+      "fetched_at": "2026-10-17T01:47:06+00:00",
+      "date": "2026-10-18",
+      "home_team": "Tromso",
+      "away_team": "KFUM Oslo",
+      "prices": null,
+      "markets": {},
+      "status": "error",
+      "error": "API-Football ha segnalato un errore: {'plan': 'Free plans are limited to a maximum value of 3 for the Page parameter'}"
+    },
+    "1552196": {
+      "fetched_at": "2026-10-17T01:47:06+00:00",
+      "date": "2026-10-18",
+      "home_team": "Twente",
+      "away_team": "Utrecht",
+      "prices": null,
+      "markets": {},
+      "status": "error",
+      "error": "API-Football ha segnalato un errore: {'plan': 'Free plans are limited to a maximum value of 3 for the Page parameter'}"
+    },
+    "1557427": {
+      "fetched_at": "2026-10-17T01:47:06+00:00",
+      "date": "2026-10-18",
+      "home_team": "Bournemouth",
+      "away_team": "Sunderland",
+      "prices": null,
+      "markets": {},
+      "status": "error",
+      "error": "API-Football ha segnalato un errore: {'plan': 'Free plans are limited to a maximum value of 3 for the Page parameter'}"
     }
   },
   "daily_usage": {
-    "2026-10-17": 4
+    "2026-10-17": 8
   },
-  "updated_at": "2026-10-17T01:01:07+00:00"
+  "updated_at": "2026-10-17T01:47:06+00:00"
 }
