@@ -344,11 +344,11 @@ function renderMatches(matches) {
       : "";
     card.append(meta, teams);
     appendWeather(match, card);
-    const technical = document.createElement("details");
-    technical.className = "technical-details";
-    const technicalSummary = document.createElement("summary");
-    technicalSummary.textContent = "Apri probabilità e dati tecnici";
-    technical.append(technicalSummary, expected, grid, confidence);
+    const technical = document.createElement("section");
+    technical.className = "technical-details technical-details-open";
+    const technicalHeading = document.createElement("h4");
+    technicalHeading.textContent = "Probabilità e dati tecnici";
+    technical.append(technicalHeading, expected, grid, confidence);
     const motivation = match.motivation_context;
     if (motivation && motivation.status === "indizi_classifica") {
       const motivationNote = document.createElement("p");
