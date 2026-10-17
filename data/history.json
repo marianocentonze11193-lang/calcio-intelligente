@@ -1239,7 +1239,25 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
-      "european_fatigue_status": "rilevato"
+      "european_fatigue_status": "rilevato",
+      "recent_competition_context": [
+        {
+          "team": "Fenerbahce",
+          "competition": "Champions League",
+          "match_date": "2026-10-14",
+          "days_before": 3,
+          "venue": "trasferta",
+          "home_goals": 6,
+          "away_goals": 0,
+          "attack_factor": 0.95,
+          "adjustment_pct": 5.0,
+          "source": "ESPN",
+          "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
+        }
+      ],
+      "recent_competition_status": "impegno ravvicinato rilevato",
+      "competition_type": "campionato",
+      "historical_sources": []
     },
     {
       "id": "2026-10-17-Ligue 1-Lille-Brest",
@@ -1338,7 +1356,25 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
-      "european_fatigue_status": "rilevato"
+      "european_fatigue_status": "rilevato",
+      "recent_competition_context": [
+        {
+          "team": "Lille",
+          "competition": "Champions League",
+          "match_date": "2026-10-13",
+          "days_before": 4,
+          "venue": "trasferta",
+          "home_goals": 3,
+          "away_goals": 0,
+          "attack_factor": 0.98,
+          "adjustment_pct": 2.0,
+          "source": "ESPN",
+          "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
+        }
+      ],
+      "recent_competition_status": "impegno ravvicinato rilevato",
+      "competition_type": "campionato",
+      "historical_sources": []
     },
     {
       "id": "2026-10-17-Ligue 1-Troyes-Lens",
@@ -1437,7 +1473,25 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
-      "european_fatigue_status": "rilevato"
+      "european_fatigue_status": "rilevato",
+      "recent_competition_context": [
+        {
+          "team": "Lens",
+          "competition": "Champions League",
+          "match_date": "2026-10-13",
+          "days_before": 4,
+          "venue": "casa",
+          "home_goals": 0,
+          "away_goals": 2,
+          "attack_factor": 0.99,
+          "adjustment_pct": 1.0,
+          "source": "ESPN",
+          "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
+        }
+      ],
+      "recent_competition_status": "impegno ravvicinato rilevato",
+      "competition_type": "campionato",
+      "historical_sources": []
     },
     {
       "id": "2026-10-17-Eredivisie-Sparta Rotterdam-Willem II",
@@ -1868,7 +1922,25 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
-      "european_fatigue_status": "rilevato"
+      "european_fatigue_status": "rilevato",
+      "recent_competition_context": [
+        {
+          "team": "Marseille",
+          "competition": "Europa League",
+          "match_date": "2026-10-15",
+          "days_before": 3,
+          "venue": "casa",
+          "home_goals": 0,
+          "away_goals": 1,
+          "attack_factor": 0.97,
+          "adjustment_pct": 3.0,
+          "source": "ESPN",
+          "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
+        }
+      ],
+      "recent_competition_status": "impegno ravvicinato rilevato",
+      "competition_type": "campionato",
+      "historical_sources": []
     },
     {
       "id": "2026-10-18-Serie A-Fiorentina-Como",
@@ -1967,7 +2039,25 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
-      "european_fatigue_status": "rilevato"
+      "european_fatigue_status": "rilevato",
+      "recent_competition_context": [
+        {
+          "team": "Como",
+          "competition": "Champions League",
+          "match_date": "2026-10-14",
+          "days_before": 4,
+          "venue": "trasferta",
+          "home_goals": 3,
+          "away_goals": 2,
+          "attack_factor": 0.98,
+          "adjustment_pct": 2.0,
+          "source": "ESPN",
+          "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
+        }
+      ],
+      "recent_competition_status": "impegno ravvicinato rilevato",
+      "competition_type": "campionato",
+      "historical_sources": []
     },
     {
       "id": "2026-10-18-Serie A-Juventus-Lazio",
@@ -2066,7 +2156,25 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
-      "european_fatigue_status": "rilevato"
+      "european_fatigue_status": "rilevato",
+      "recent_competition_context": [
+        {
+          "team": "Juventus",
+          "competition": "Europa League",
+          "match_date": "2026-10-15",
+          "days_before": 3,
+          "venue": "trasferta",
+          "home_goals": 1,
+          "away_goals": 2,
+          "attack_factor": 0.95,
+          "adjustment_pct": 5.0,
+          "source": "ESPN",
+          "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
+        }
+      ],
+      "recent_competition_status": "impegno ravvicinato rilevato",
+      "competition_type": "campionato",
+      "historical_sources": []
     },
     {
       "id": "2026-10-18-La Liga-Real Madrid-Sevilla",
@@ -2165,7 +2273,25 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
-      "european_fatigue_status": "rilevato"
+      "european_fatigue_status": "rilevato",
+      "recent_competition_context": [
+        {
+          "team": "Real Madrid",
+          "competition": "Champions League",
+          "match_date": "2026-10-14",
+          "days_before": 4,
+          "venue": "trasferta",
+          "home_goals": 3,
+          "away_goals": 4,
+          "attack_factor": 0.98,
+          "adjustment_pct": 2.0,
+          "source": "ESPN",
+          "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
+        }
+      ],
+      "recent_competition_status": "impegno ravvicinato rilevato",
+      "competition_type": "campionato",
+      "historical_sources": []
     },
     {
       "id": "2026-10-19-Super Lig turca-Trabzonspor-Besiktas",
@@ -2277,7 +2403,38 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
-      "european_fatigue_status": "rilevato"
+      "european_fatigue_status": "rilevato",
+      "recent_competition_context": [
+        {
+          "team": "Trabzonspor",
+          "competition": "Conference League",
+          "match_date": "2026-10-15",
+          "days_before": 4,
+          "venue": "trasferta",
+          "home_goals": 2,
+          "away_goals": 4,
+          "attack_factor": 0.98,
+          "adjustment_pct": 2.0,
+          "source": "ESPN",
+          "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
+        },
+        {
+          "team": "Besiktas",
+          "competition": "Europa League",
+          "match_date": "2026-10-15",
+          "days_before": 4,
+          "venue": "trasferta",
+          "home_goals": 2,
+          "away_goals": 3,
+          "attack_factor": 0.98,
+          "adjustment_pct": 2.0,
+          "source": "ESPN",
+          "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
+        }
+      ],
+      "recent_competition_status": "impegno ravvicinato rilevato",
+      "competition_type": "campionato",
+      "historical_sources": []
     },
     {
       "id": "2026-10-19-Serie A-Parma-Torino",
@@ -2955,9 +3112,10 @@
       "expected_away_goals": 2.73,
       "sample_matches": 0,
       "archived_at": "2026-10-15T10:09:22.994773+00:00",
-      "outcome": null,
-      "home_goals": null,
-      "away_goals": null
+      "outcome": "1",
+      "home_goals": 2,
+      "away_goals": 1,
+      "settled_at": "2026-10-17T16:30:06.691511+00:00"
     },
     {
       "id": "2026-10-17-Eredivisie-Telstar-Feyenoord Rotterdam",
@@ -3621,7 +3779,25 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
-      "european_fatigue_status": "rilevato"
+      "european_fatigue_status": "rilevato",
+      "recent_competition_context": [
+        {
+          "team": "OFI Crete",
+          "competition": "Europa League",
+          "match_date": "2026-10-15",
+          "days_before": 3,
+          "venue": "trasferta",
+          "home_goals": 2,
+          "away_goals": 1,
+          "attack_factor": 0.95,
+          "adjustment_pct": 5.0,
+          "source": "ESPN",
+          "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
+        }
+      ],
+      "recent_competition_status": "impegno ravvicinato rilevato",
+      "competition_type": "campionato",
+      "historical_sources": []
     },
     {
       "id": "2026-10-18-Super League greca-Panetolikos-Olympiacos",
@@ -3953,7 +4129,25 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
-      "european_fatigue_status": "rilevato"
+      "european_fatigue_status": "rilevato",
+      "recent_competition_context": [
+        {
+          "team": "Aston Villa",
+          "competition": "Champions League",
+          "match_date": "2026-10-14",
+          "days_before": 3,
+          "venue": "casa",
+          "home_goals": 6,
+          "away_goals": 0,
+          "attack_factor": 0.97,
+          "adjustment_pct": 3.0,
+          "source": "ESPN",
+          "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
+        }
+      ],
+      "recent_competition_status": "impegno ravvicinato rilevato",
+      "competition_type": "campionato",
+      "historical_sources": []
     },
     {
       "id": "2026-10-17-Serie A-Bologna-Inter",
@@ -4168,7 +4362,38 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
-      "european_fatigue_status": "rilevato"
+      "european_fatigue_status": "rilevato",
+      "recent_competition_context": [
+        {
+          "team": "Betis",
+          "competition": "Champions League",
+          "match_date": "2026-10-14",
+          "days_before": 3,
+          "venue": "casa",
+          "home_goals": 3,
+          "away_goals": 2,
+          "attack_factor": 0.97,
+          "adjustment_pct": 3.0,
+          "source": "ESPN",
+          "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
+        },
+        {
+          "team": "Barcelona",
+          "competition": "Champions League",
+          "match_date": "2026-10-13",
+          "days_before": 4,
+          "venue": "trasferta",
+          "home_goals": 1,
+          "away_goals": 4,
+          "attack_factor": 0.98,
+          "adjustment_pct": 2.0,
+          "source": "ESPN",
+          "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
+        }
+      ],
+      "recent_competition_status": "impegno ravvicinato rilevato",
+      "competition_type": "campionato",
+      "historical_sources": []
     },
     {
       "id": "2026-10-18-La Liga-Celta-Alaves",
@@ -4268,7 +4493,25 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
-      "european_fatigue_status": "rilevato"
+      "european_fatigue_status": "rilevato",
+      "recent_competition_context": [
+        {
+          "team": "Celta",
+          "competition": "Europa League",
+          "match_date": "2026-10-15",
+          "days_before": 3,
+          "venue": "casa",
+          "home_goals": 1,
+          "away_goals": 2,
+          "attack_factor": 0.97,
+          "adjustment_pct": 3.0,
+          "source": "ESPN",
+          "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
+        }
+      ],
+      "recent_competition_status": "impegno ravvicinato rilevato",
+      "competition_type": "campionato",
+      "historical_sources": []
     },
     {
       "id": "2026-10-18-La Liga-Malaga-Sociedad",
@@ -4368,7 +4611,25 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
-      "european_fatigue_status": "rilevato"
+      "european_fatigue_status": "rilevato",
+      "recent_competition_context": [
+        {
+          "team": "Sociedad",
+          "competition": "Europa League",
+          "match_date": "2026-10-15",
+          "days_before": 3,
+          "venue": "trasferta",
+          "home_goals": 1,
+          "away_goals": 1,
+          "attack_factor": 0.95,
+          "adjustment_pct": 5.0,
+          "source": "ESPN",
+          "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
+        }
+      ],
+      "recent_competition_status": "impegno ravvicinato rilevato",
+      "competition_type": "campionato",
+      "historical_sources": []
     },
     {
       "id": "2026-10-17-Eredivisie-Telstar-Feyenoord",
@@ -4468,7 +4729,25 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
-      "european_fatigue_status": "rilevato"
+      "european_fatigue_status": "rilevato",
+      "recent_competition_context": [
+        {
+          "team": "Feyenoord",
+          "competition": "Champions League",
+          "match_date": "2026-10-14",
+          "days_before": 3,
+          "venue": "casa",
+          "home_goals": 3,
+          "away_goals": 2,
+          "attack_factor": 0.97,
+          "adjustment_pct": 3.0,
+          "source": "ESPN",
+          "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
+        }
+      ],
+      "recent_competition_status": "impegno ravvicinato rilevato",
+      "competition_type": "campionato",
+      "historical_sources": []
     },
     {
       "id": "2026-10-18-Eredivisie-Groningen-Ajax",
@@ -4568,7 +4847,25 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
-      "european_fatigue_status": "rilevato"
+      "european_fatigue_status": "rilevato",
+      "recent_competition_context": [
+        {
+          "team": "Ajax",
+          "competition": "Conference League",
+          "match_date": "2026-10-15",
+          "days_before": 3,
+          "venue": "trasferta",
+          "home_goals": 2,
+          "away_goals": 1,
+          "attack_factor": 0.95,
+          "adjustment_pct": 5.0,
+          "source": "ESPN",
+          "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
+        }
+      ],
+      "recent_competition_status": "impegno ravvicinato rilevato",
+      "competition_type": "campionato",
+      "historical_sources": []
     },
     {
       "id": "2026-10-18-Eredivisie-Twente-Utrecht",
@@ -4668,7 +4965,25 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
-      "european_fatigue_status": "rilevato"
+      "european_fatigue_status": "rilevato",
+      "recent_competition_context": [
+        {
+          "team": "Twente",
+          "competition": "Conference League",
+          "match_date": "2026-10-15",
+          "days_before": 3,
+          "venue": "casa",
+          "home_goals": 1,
+          "away_goals": 0,
+          "attack_factor": 0.97,
+          "adjustment_pct": 3.0,
+          "source": "ESPN",
+          "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
+        }
+      ],
+      "recent_competition_status": "impegno ravvicinato rilevato",
+      "competition_type": "campionato",
+      "historical_sources": []
     },
     {
       "id": "2026-10-17-Bundesliga-Elversberg-Augsburg",
@@ -4857,7 +5172,25 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
-      "european_fatigue_status": "rilevato"
+      "european_fatigue_status": "rilevato",
+      "recent_competition_context": [
+        {
+          "team": "Lillestrom",
+          "competition": "Europa League",
+          "match_date": "2026-10-15",
+          "days_before": 3,
+          "venue": "trasferta",
+          "home_goals": 1,
+          "away_goals": 1,
+          "attack_factor": 0.95,
+          "adjustment_pct": 5.0,
+          "source": "ESPN",
+          "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
+        }
+      ],
+      "recent_competition_status": "impegno ravvicinato rilevato",
+      "competition_type": "campionato",
+      "historical_sources": []
     },
     {
       "id": "2026-10-18-Eliteserien norvegese-Tromso-KFUM Oslo",
@@ -5414,7 +5747,25 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
-      "european_fatigue_status": "rilevato"
+      "european_fatigue_status": "rilevato",
+      "recent_competition_context": [
+        {
+          "team": "Man City",
+          "competition": "Champions League",
+          "match_date": "2026-10-14",
+          "days_before": 3,
+          "venue": "casa",
+          "home_goals": 2,
+          "away_goals": 4,
+          "attack_factor": 0.97,
+          "adjustment_pct": 3.0,
+          "source": "ESPN",
+          "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
+        }
+      ],
+      "recent_competition_status": "impegno ravvicinato rilevato",
+      "competition_type": "campionato",
+      "historical_sources": []
     },
     {
       "id": "2026-10-18-Premier League-Bournemouth-Sunderland",
@@ -5514,7 +5865,25 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
-      "european_fatigue_status": "rilevato"
+      "european_fatigue_status": "rilevato",
+      "recent_competition_context": [
+        {
+          "team": "Sunderland",
+          "competition": "Europa League",
+          "match_date": "2026-10-15",
+          "days_before": 3,
+          "venue": "trasferta",
+          "home_goals": 1,
+          "away_goals": 2,
+          "attack_factor": 0.95,
+          "adjustment_pct": 5.0,
+          "source": "ESPN",
+          "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
+        }
+      ],
+      "recent_competition_status": "impegno ravvicinato rilevato",
+      "competition_type": "campionato",
+      "historical_sources": []
     },
     {
       "id": "2026-10-18-Premier League-Brighton-Crystal Palace",
@@ -5614,7 +5983,25 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
-      "european_fatigue_status": "rilevato"
+      "european_fatigue_status": "rilevato",
+      "recent_competition_context": [
+        {
+          "team": "Crystal Palace",
+          "competition": "Europa League",
+          "match_date": "2026-10-15",
+          "days_before": 3,
+          "venue": "trasferta",
+          "home_goals": 3,
+          "away_goals": 2,
+          "attack_factor": 0.95,
+          "adjustment_pct": 5.0,
+          "source": "ESPN",
+          "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
+        }
+      ],
+      "recent_competition_status": "impegno ravvicinato rilevato",
+      "competition_type": "campionato",
+      "historical_sources": []
     },
     {
       "id": "2026-10-18-Premier League-Leeds-Man United",
@@ -5966,7 +6353,25 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
-      "european_fatigue_status": "rilevato"
+      "european_fatigue_status": "rilevato",
+      "recent_competition_context": [
+        {
+          "team": "PSV Eindhoven",
+          "competition": "Champions League",
+          "match_date": "2026-10-13",
+          "days_before": 4,
+          "venue": "trasferta",
+          "home_goals": 1,
+          "away_goals": 0,
+          "attack_factor": 0.98,
+          "adjustment_pct": 2.0,
+          "source": "ESPN",
+          "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
+        }
+      ],
+      "recent_competition_status": "impegno ravvicinato rilevato",
+      "competition_type": "campionato",
+      "historical_sources": []
     },
     {
       "id": "2026-10-18-Eredivisie-Zwolle-Go Ahead Eagles",
@@ -6150,7 +6555,25 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
-      "european_fatigue_status": "rilevato"
+      "european_fatigue_status": "rilevato",
+      "recent_competition_context": [
+        {
+          "team": "AZ Alkmaar",
+          "competition": "Europa League",
+          "match_date": "2026-10-15",
+          "days_before": 3,
+          "venue": "casa",
+          "home_goals": 2,
+          "away_goals": 1,
+          "attack_factor": 0.97,
+          "adjustment_pct": 3.0,
+          "source": "ESPN",
+          "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
+        }
+      ],
+      "recent_competition_status": "impegno ravvicinato rilevato",
+      "competition_type": "campionato",
+      "historical_sources": []
     },
     {
       "id": "2026-10-18-Eredivisie-Nijmegen-For Sittard",
@@ -6418,7 +6841,25 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
-      "european_fatigue_status": "rilevato"
+      "european_fatigue_status": "rilevato",
+      "recent_competition_context": [
+        {
+          "team": "Celtic",
+          "competition": "Europa League",
+          "match_date": "2026-10-15",
+          "days_before": 3,
+          "venue": "trasferta",
+          "home_goals": 4,
+          "away_goals": 1,
+          "attack_factor": 0.95,
+          "adjustment_pct": 5.0,
+          "source": "ESPN",
+          "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
+        }
+      ],
+      "recent_competition_status": "impegno ravvicinato rilevato",
+      "competition_type": "campionato",
+      "historical_sources": []
     },
     {
       "id": "2026-10-16-La Liga-La Coruna-Levante",
@@ -6770,7 +7211,25 @@
           "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
         }
       ],
-      "european_fatigue_status": "rilevato"
+      "european_fatigue_status": "rilevato",
+      "recent_competition_context": [
+        {
+          "team": "Getafe",
+          "competition": "Conference League",
+          "match_date": "2026-10-15",
+          "days_before": 4,
+          "venue": "trasferta",
+          "home_goals": 1,
+          "away_goals": 1,
+          "attack_factor": 0.98,
+          "adjustment_pct": 2.0,
+          "source": "ESPN",
+          "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
+        }
+      ],
+      "recent_competition_status": "impegno ravvicinato rilevato",
+      "competition_type": "campionato",
+      "historical_sources": []
     },
     {
       "id": "2026-10-16-Super Lig turca-Corum-Rizespor",
@@ -7191,11 +7650,616 @@
       "outcome": null,
       "home_goals": null,
       "away_goals": null
+    },
+    {
+      "id": "2026-10-20-Champions League-Liverpool-Villarreal",
+      "date": "2026-10-20",
+      "league": "Champions League",
+      "home_team": "Liverpool",
+      "away_team": "Villarreal",
+      "status_at_archive": "Stima preliminare",
+      "probabilities": {
+        "home_win": 23.4,
+        "draw": 27.0,
+        "away_win": 49.6,
+        "double_chance_1x": 50.4,
+        "double_chance_x2": 76.6,
+        "double_chance_12": 73.0,
+        "over_1_5": 67.1,
+        "over_2_5": 40.7,
+        "over_3_5": 20.3,
+        "under_1_5": 32.9,
+        "under_2_5": 59.3,
+        "under_3_5": 79.7,
+        "btts_yes": 44.6,
+        "btts_no": 55.4,
+        "home_scores": 58.7,
+        "away_scores": 76.0
+      },
+      "data_quality": "controllata",
+      "expected_home_goals": 0.89,
+      "expected_away_goals": 1.43,
+      "sample_matches": 3,
+      "european_context": [],
+      "recent_competition_context": [],
+      "european_fatigue_status": "nessuna gara europea recente verificata",
+      "recent_competition_status": "nessun impegno recente verificato",
+      "competition_type": "europea",
+      "historical_sources": [
+        "Premier League",
+        "La Liga"
+      ],
+      "suggested_markets": [],
+      "value_bets": [],
+      "odds_fetched_at": null,
+      "odds_1x2": null,
+      "odds_markets": null,
+      "odds_markets_source": null,
+      "market_analysis_markets": null,
+      "odds_source": null,
+      "market_implied_probability_1x2": null,
+      "market_overround_1x2": null,
+      "expected_value_1x2": null,
+      "odds_snapshot_at": null,
+      "archived_at": "2026-10-17T16:29:53.767316+00:00",
+      "outcome": null,
+      "home_goals": null,
+      "away_goals": null
+    },
+    {
+      "id": "2026-10-20-Champions League-Napoli-Bodo/Glimt",
+      "date": "2026-10-20",
+      "league": "Champions League",
+      "home_team": "Napoli",
+      "away_team": "Bodo/Glimt",
+      "status_at_archive": "Stima preliminare",
+      "probabilities": {
+        "home_win": 27.7,
+        "draw": 23.0,
+        "away_win": 49.3,
+        "double_chance_1x": 50.7,
+        "double_chance_x2": 72.3,
+        "double_chance_12": 77.0,
+        "over_1_5": 81.9,
+        "over_2_5": 60.5,
+        "over_3_5": 38.1,
+        "under_1_5": 18.1,
+        "under_2_5": 39.5,
+        "under_3_5": 61.9,
+        "btts_yes": 61.2,
+        "btts_no": 38.8,
+        "home_scores": 73.0,
+        "away_scores": 83.7
+      },
+      "data_quality": "controllata",
+      "expected_home_goals": 1.31,
+      "expected_away_goals": 1.82,
+      "sample_matches": 3,
+      "european_context": [],
+      "recent_competition_context": [],
+      "european_fatigue_status": "nessuna gara europea recente verificata",
+      "recent_competition_status": "nessun impegno recente verificato",
+      "competition_type": "europea",
+      "historical_sources": [
+        "Serie A",
+        "Eliteserien norvegese"
+      ],
+      "suggested_markets": [],
+      "value_bets": [],
+      "odds_fetched_at": null,
+      "odds_1x2": null,
+      "odds_markets": null,
+      "odds_markets_source": null,
+      "market_analysis_markets": null,
+      "odds_source": null,
+      "market_implied_probability_1x2": null,
+      "market_overround_1x2": null,
+      "expected_value_1x2": null,
+      "odds_snapshot_at": null,
+      "archived_at": "2026-10-17T16:29:53.767353+00:00",
+      "outcome": null,
+      "home_goals": null,
+      "away_goals": null
+    },
+    {
+      "id": "2026-10-21-Champions League-Lille-Galatasaray",
+      "date": "2026-10-21",
+      "league": "Champions League",
+      "home_team": "Lille",
+      "away_team": "Galatasaray",
+      "status_at_archive": "Stima preliminare",
+      "probabilities": {
+        "home_win": 52.2,
+        "draw": 22.4,
+        "away_win": 25.4,
+        "double_chance_1x": 74.6,
+        "double_chance_x2": 47.8,
+        "double_chance_12": 77.6,
+        "over_1_5": 82.3,
+        "over_2_5": 61.1,
+        "over_3_5": 38.8,
+        "under_1_5": 17.7,
+        "under_2_5": 38.9,
+        "under_3_5": 61.2,
+        "btts_yes": 60.9,
+        "btts_no": 39.1,
+        "home_scores": 85.0,
+        "away_scores": 71.7
+      },
+      "data_quality": "controllata",
+      "expected_home_goals": 1.9,
+      "expected_away_goals": 1.26,
+      "sample_matches": 3,
+      "european_context": [],
+      "recent_competition_context": [],
+      "european_fatigue_status": "nessuna gara europea recente verificata",
+      "recent_competition_status": "nessun impegno recente verificato",
+      "competition_type": "europea",
+      "historical_sources": [
+        "Ligue 1",
+        "Super Lig turca"
+      ],
+      "suggested_markets": [],
+      "value_bets": [],
+      "odds_fetched_at": null,
+      "odds_1x2": null,
+      "odds_markets": null,
+      "odds_markets_source": null,
+      "market_analysis_markets": null,
+      "odds_source": null,
+      "market_implied_probability_1x2": null,
+      "market_overround_1x2": null,
+      "expected_value_1x2": null,
+      "odds_snapshot_at": null,
+      "archived_at": "2026-10-17T16:29:53.767376+00:00",
+      "outcome": null,
+      "home_goals": null,
+      "away_goals": null
+    },
+    {
+      "id": "2026-10-21-Champions League-Betis-Feyenoord",
+      "date": "2026-10-21",
+      "league": "Champions League",
+      "home_team": "Betis",
+      "away_team": "Feyenoord",
+      "status_at_archive": "Stima preliminare",
+      "probabilities": {
+        "home_win": 21.8,
+        "draw": 22.9,
+        "away_win": 55.3,
+        "double_chance_1x": 44.7,
+        "double_chance_x2": 78.2,
+        "double_chance_12": 77.1,
+        "over_1_5": 78.3,
+        "over_2_5": 55.1,
+        "over_3_5": 32.7,
+        "under_1_5": 21.7,
+        "under_2_5": 44.9,
+        "under_3_5": 67.3,
+        "btts_yes": 54.8,
+        "btts_no": 45.2,
+        "home_scores": 65.3,
+        "away_scores": 83.9
+      },
+      "data_quality": "controllata",
+      "expected_home_goals": 1.06,
+      "expected_away_goals": 1.83,
+      "sample_matches": 4,
+      "european_context": [],
+      "recent_competition_context": [],
+      "european_fatigue_status": "nessuna gara europea recente verificata",
+      "recent_competition_status": "nessun impegno recente verificato",
+      "competition_type": "europea",
+      "historical_sources": [
+        "La Liga",
+        "Eredivisie"
+      ],
+      "suggested_markets": [],
+      "value_bets": [],
+      "odds_fetched_at": null,
+      "odds_1x2": null,
+      "odds_markets": null,
+      "odds_markets_source": null,
+      "market_analysis_markets": null,
+      "odds_source": null,
+      "market_implied_probability_1x2": null,
+      "market_overround_1x2": null,
+      "expected_value_1x2": null,
+      "odds_snapshot_at": null,
+      "archived_at": "2026-10-17T16:29:53.767396+00:00",
+      "outcome": null,
+      "home_goals": null,
+      "away_goals": null
+    },
+    {
+      "id": "2026-10-21-Champions League-Club Brugge-Lens",
+      "date": "2026-10-21",
+      "league": "Champions League",
+      "home_team": "Club Brugge",
+      "away_team": "Lens",
+      "status_at_archive": "Stima preliminare",
+      "probabilities": {
+        "home_win": 84.6,
+        "draw": 10.8,
+        "away_win": 4.6,
+        "double_chance_1x": 95.4,
+        "double_chance_x2": 15.4,
+        "double_chance_12": 89.2,
+        "over_1_5": 85.8,
+        "over_2_5": 66.9,
+        "over_3_5": 45.1,
+        "under_1_5": 14.2,
+        "under_2_5": 33.1,
+        "under_3_5": 54.9,
+        "btts_yes": 40.2,
+        "btts_no": 59.8,
+        "home_scores": 94.4,
+        "away_scores": 42.6
+      },
+      "data_quality": "controllata",
+      "expected_home_goals": 2.89,
+      "expected_away_goals": 0.56,
+      "sample_matches": 3,
+      "european_context": [],
+      "recent_competition_context": [],
+      "european_fatigue_status": "nessuna gara europea recente verificata",
+      "recent_competition_status": "nessun impegno recente verificato",
+      "competition_type": "europea",
+      "historical_sources": [
+        "Belgian Pro League",
+        "Ligue 1"
+      ],
+      "suggested_markets": [],
+      "value_bets": [],
+      "odds_fetched_at": null,
+      "odds_1x2": null,
+      "odds_markets": null,
+      "odds_markets_source": null,
+      "market_analysis_markets": null,
+      "odds_source": null,
+      "market_implied_probability_1x2": null,
+      "market_overround_1x2": null,
+      "expected_value_1x2": null,
+      "odds_snapshot_at": null,
+      "archived_at": "2026-10-17T16:29:53.767415+00:00",
+      "outcome": null,
+      "home_goals": null,
+      "away_goals": null
+    },
+    {
+      "id": "2026-10-22-Europa League-Lech Poznan-Sunderland",
+      "date": "2026-10-22",
+      "league": "Europa League",
+      "home_team": "Lech Poznan",
+      "away_team": "Sunderland",
+      "status_at_archive": "Stima preliminare",
+      "probabilities": {
+        "home_win": 86.6,
+        "draw": 8.0,
+        "away_win": 5.4,
+        "double_chance_1x": 94.6,
+        "double_chance_x2": 13.4,
+        "double_chance_12": 92.0,
+        "over_1_5": 96.5,
+        "over_2_5": 88.8,
+        "over_3_5": 75.7,
+        "under_1_5": 3.5,
+        "under_2_5": 11.2,
+        "under_3_5": 24.3,
+        "btts_yes": 65.9,
+        "btts_no": 34.1,
+        "home_scores": 98.3,
+        "away_scores": 67.1
+      },
+      "data_quality": "controllata",
+      "expected_home_goals": 4.07,
+      "expected_away_goals": 1.11,
+      "sample_matches": 3,
+      "european_context": [],
+      "recent_competition_context": [],
+      "european_fatigue_status": "nessuna gara europea recente verificata",
+      "recent_competition_status": "nessun impegno recente verificato",
+      "competition_type": "europea",
+      "historical_sources": [
+        "Ekstraklasa polacca",
+        "Premier League"
+      ],
+      "suggested_markets": [],
+      "value_bets": [],
+      "odds_fetched_at": null,
+      "odds_1x2": null,
+      "odds_markets": null,
+      "odds_markets_source": null,
+      "market_analysis_markets": null,
+      "odds_source": null,
+      "market_implied_probability_1x2": null,
+      "market_overround_1x2": null,
+      "expected_value_1x2": null,
+      "odds_snapshot_at": null,
+      "archived_at": "2026-10-17T16:29:53.767433+00:00",
+      "outcome": null,
+      "home_goals": null,
+      "away_goals": null
+    },
+    {
+      "id": "2026-10-22-Europa League-OFI Crete-Leverkusen",
+      "date": "2026-10-22",
+      "league": "Europa League",
+      "home_team": "OFI Crete",
+      "away_team": "Leverkusen",
+      "status_at_archive": "Stima preliminare",
+      "probabilities": {
+        "home_win": 43.0,
+        "draw": 21.6,
+        "away_win": 35.5,
+        "double_chance_1x": 64.5,
+        "double_chance_x2": 57.0,
+        "double_chance_12": 78.4,
+        "over_1_5": 88.3,
+        "over_2_5": 71.3,
+        "over_3_5": 50.4,
+        "under_1_5": 11.7,
+        "under_2_5": 28.7,
+        "under_3_5": 49.6,
+        "btts_yes": 70.8,
+        "btts_no": 29.2,
+        "home_scores": 85.6,
+        "away_scores": 82.6
+      },
+      "data_quality": "controllata",
+      "expected_home_goals": 1.94,
+      "expected_away_goals": 1.75,
+      "sample_matches": 3,
+      "european_context": [],
+      "recent_competition_context": [],
+      "european_fatigue_status": "nessuna gara europea recente verificata",
+      "recent_competition_status": "nessun impegno recente verificato",
+      "competition_type": "europea",
+      "historical_sources": [
+        "Super League greca",
+        "Bundesliga"
+      ],
+      "suggested_markets": [],
+      "value_bets": [],
+      "odds_fetched_at": null,
+      "odds_1x2": null,
+      "odds_markets": null,
+      "odds_markets_source": null,
+      "market_analysis_markets": null,
+      "odds_source": null,
+      "market_implied_probability_1x2": null,
+      "market_overround_1x2": null,
+      "expected_value_1x2": null,
+      "odds_snapshot_at": null,
+      "archived_at": "2026-10-17T16:29:53.767450+00:00",
+      "outcome": null,
+      "home_goals": null,
+      "away_goals": null
+    },
+    {
+      "id": "2026-10-22-Europa League-Besiktas-Crystal Palace",
+      "date": "2026-10-22",
+      "league": "Europa League",
+      "home_team": "Besiktas",
+      "away_team": "Crystal Palace",
+      "status_at_archive": "Stima preliminare",
+      "probabilities": {
+        "home_win": 73.4,
+        "draw": 15.3,
+        "away_win": 11.2,
+        "double_chance_1x": 88.8,
+        "double_chance_x2": 26.6,
+        "double_chance_12": 84.7,
+        "over_1_5": 87.8,
+        "over_2_5": 70.3,
+        "over_3_5": 49.2,
+        "under_1_5": 12.2,
+        "under_2_5": 29.7,
+        "under_3_5": 50.8,
+        "btts_yes": 57.7,
+        "btts_no": 42.3,
+        "home_scores": 93.1,
+        "away_scores": 62.0
+      },
+      "data_quality": "controllata",
+      "expected_home_goals": 2.67,
+      "expected_away_goals": 0.97,
+      "sample_matches": 3,
+      "european_context": [],
+      "recent_competition_context": [],
+      "european_fatigue_status": "nessuna gara europea recente verificata",
+      "recent_competition_status": "nessun impegno recente verificato",
+      "competition_type": "europea",
+      "historical_sources": [
+        "Super Lig turca",
+        "Premier League"
+      ],
+      "suggested_markets": [],
+      "value_bets": [],
+      "odds_fetched_at": null,
+      "odds_1x2": null,
+      "odds_markets": null,
+      "odds_markets_source": null,
+      "market_analysis_markets": null,
+      "odds_source": null,
+      "market_implied_probability_1x2": null,
+      "market_overround_1x2": null,
+      "expected_value_1x2": null,
+      "odds_snapshot_at": null,
+      "archived_at": "2026-10-17T16:29:53.767467+00:00",
+      "outcome": null,
+      "home_goals": null,
+      "away_goals": null
+    },
+    {
+      "id": "2026-10-22-Europa League-Celtic-Celta",
+      "date": "2026-10-22",
+      "league": "Europa League",
+      "home_team": "Celtic",
+      "away_team": "Celta",
+      "status_at_archive": "Stima preliminare",
+      "probabilities": {
+        "home_win": 38.0,
+        "draw": 44.8,
+        "away_win": 17.3,
+        "double_chance_1x": 82.7,
+        "double_chance_x2": 62.0,
+        "double_chance_12": 55.2,
+        "over_1_5": 27.6,
+        "over_2_5": 8.6,
+        "over_3_5": 2.1,
+        "under_1_5": 72.4,
+        "under_2_5": 91.4,
+        "under_3_5": 97.9,
+        "btts_yes": 14.8,
+        "btts_no": 85.2,
+        "home_scores": 48.9,
+        "away_scores": 30.2
+      },
+      "data_quality": "controllata",
+      "expected_home_goals": 0.67,
+      "expected_away_goals": 0.36,
+      "sample_matches": 4,
+      "european_context": [],
+      "recent_competition_context": [],
+      "european_fatigue_status": "nessuna gara europea recente verificata",
+      "recent_competition_status": "nessun impegno recente verificato",
+      "competition_type": "europea",
+      "historical_sources": [
+        "Scottish Premiership",
+        "La Liga"
+      ],
+      "suggested_markets": [],
+      "value_bets": [],
+      "odds_fetched_at": null,
+      "odds_1x2": null,
+      "odds_markets": null,
+      "odds_markets_source": null,
+      "market_analysis_markets": null,
+      "odds_source": null,
+      "market_implied_probability_1x2": null,
+      "market_overround_1x2": null,
+      "expected_value_1x2": null,
+      "odds_snapshot_at": null,
+      "archived_at": "2026-10-17T16:29:53.767484+00:00",
+      "outcome": null,
+      "home_goals": null,
+      "away_goals": null
+    },
+    {
+      "id": "2026-10-22-Europa League-Hoffenheim-Lyon",
+      "date": "2026-10-22",
+      "league": "Europa League",
+      "home_team": "Hoffenheim",
+      "away_team": "Lyon",
+      "status_at_archive": "Stima preliminare",
+      "probabilities": {
+        "home_win": 21.7,
+        "draw": 22.3,
+        "away_win": 56.0,
+        "double_chance_1x": 44.0,
+        "double_chance_x2": 78.3,
+        "double_chance_12": 77.7,
+        "over_1_5": 79.9,
+        "over_2_5": 57.4,
+        "over_3_5": 35.0,
+        "under_1_5": 20.1,
+        "under_2_5": 42.6,
+        "under_3_5": 65.0,
+        "btts_yes": 56.5,
+        "btts_no": 43.5,
+        "home_scores": 66.5,
+        "away_scores": 84.9
+      },
+      "data_quality": "controllata",
+      "expected_home_goals": 1.09,
+      "expected_away_goals": 1.89,
+      "sample_matches": 3,
+      "european_context": [],
+      "recent_competition_context": [],
+      "european_fatigue_status": "nessuna gara europea recente verificata",
+      "recent_competition_status": "nessun impegno recente verificato",
+      "competition_type": "europea",
+      "historical_sources": [
+        "Bundesliga",
+        "Ligue 1"
+      ],
+      "suggested_markets": [],
+      "value_bets": [],
+      "odds_fetched_at": null,
+      "odds_1x2": null,
+      "odds_markets": null,
+      "odds_markets_source": null,
+      "market_analysis_markets": null,
+      "odds_source": null,
+      "market_implied_probability_1x2": null,
+      "market_overround_1x2": null,
+      "expected_value_1x2": null,
+      "odds_snapshot_at": null,
+      "archived_at": "2026-10-17T16:29:53.767501+00:00",
+      "outcome": null,
+      "home_goals": null,
+      "away_goals": null
+    },
+    {
+      "id": "2026-10-22-Europa League-Lillestrom-Sociedad",
+      "date": "2026-10-22",
+      "league": "Europa League",
+      "home_team": "Lillestrom",
+      "away_team": "Sociedad",
+      "status_at_archive": "Stima preliminare",
+      "probabilities": {
+        "home_win": 36.3,
+        "draw": 20.9,
+        "away_win": 42.8,
+        "double_chance_1x": 57.2,
+        "double_chance_x2": 63.7,
+        "double_chance_12": 79.1,
+        "over_1_5": 90.1,
+        "over_2_5": 74.7,
+        "over_3_5": 54.7,
+        "under_1_5": 9.9,
+        "under_2_5": 25.3,
+        "under_3_5": 45.3,
+        "btts_yes": 73.5,
+        "btts_no": 26.5,
+        "home_scores": 84.6,
+        "away_scores": 86.9
+      },
+      "data_quality": "controllata",
+      "expected_home_goals": 1.87,
+      "expected_away_goals": 2.03,
+      "sample_matches": 4,
+      "european_context": [],
+      "recent_competition_context": [],
+      "european_fatigue_status": "nessuna gara europea recente verificata",
+      "recent_competition_status": "nessun impegno recente verificato",
+      "competition_type": "europea",
+      "historical_sources": [
+        "Eliteserien norvegese",
+        "La Liga"
+      ],
+      "suggested_markets": [],
+      "value_bets": [],
+      "odds_fetched_at": null,
+      "odds_1x2": null,
+      "odds_markets": null,
+      "odds_markets_source": null,
+      "market_analysis_markets": null,
+      "odds_source": null,
+      "market_implied_probability_1x2": null,
+      "market_overround_1x2": null,
+      "expected_value_1x2": null,
+      "odds_snapshot_at": null,
+      "archived_at": "2026-10-17T16:29:53.767518+00:00",
+      "outcome": null,
+      "home_goals": null,
+      "away_goals": null
     }
   ],
-  "updated_at": "2026-10-17T16:20:18.226127+00:00",
+  "updated_at": "2026-10-17T16:30:06.691940+00:00",
   "metrics": {
-    "settled_matches": 24,
+    "settled_matches": 25,
     "accuracy_1x2": null,
     "brier_score_1x2": null,
     "minimum_matches_required": 30,
@@ -7245,7 +8309,7 @@
     }
   },
   "result_matching": {
-    "checked_at": "2026-10-17T16:20:18.226110+00:00",
+    "checked_at": "2026-10-17T16:30:06.691930+00:00",
     "unresolved_past_matches": 3,
     "examples": [
       {
@@ -7289,12 +8353,12 @@
         "context_matches_archived": 26
       },
       "no_recent_european_match": {
-        "settled_matches": 22,
+        "settled_matches": 23,
         "accuracy_1x2": null,
         "brier_score_1x2": null,
         "minimum_matches_required": 30,
         "note": "Metriche non pubblicate: servono almeno 30 partite concluse con probabilità archiviate.",
-        "context_matches_archived": 84
+        "context_matches_archived": 95
       }
     },
     "note": "Il confronto è descrittivo e non dimostra che le coppe causino differenze. Le metriche compaiono solo dopo la soglia minima di partite concluse."

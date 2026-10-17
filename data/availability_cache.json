@@ -40040,6 +40040,61 @@
       "away_formation": "4-2-3-1",
       "home_coach": "M. Pellegrini",
       "away_coach": "H. Flick"
+    },
+    "1575185": {
+      "updated_at": "2026-10-17T16:29:27.929896+00:00",
+      "home_starters": [
+        "J. Urbig",
+        "K. Laimer",
+        "D. Upamecano",
+        "Kim Min-Jae",
+        "N. Brown",
+        "J. Kimmich",
+        "A. Pavlović",
+        "M. Olise",
+        "I. Saibari",
+        "L. Díaz",
+        "H. Kane"
+      ],
+      "away_starters": [
+        "M. Vandevoordt",
+        "L. Klostermann",
+        "W. Orbán",
+        "C. Lukeba",
+        "D. Raum",
+        "B. Gruda",
+        "R. Reitz",
+        "N. El Aynaoui",
+        "E. Banzuzi",
+        "A. Nusa",
+        "C. Nkunku"
+      ],
+      "home_substitutes": [
+        "S. Boey",
+        "J. Stanišić",
+        "A. Davies",
+        "L. Karl",
+        "J. Tah",
+        "S. Ulreich",
+        "H. Ito",
+        "S. Gnabry",
+        "T. Bischof"
+      ],
+      "away_substitutes": [
+        "M. Estève",
+        "Max Finkgräfe",
+        "B. Henrichs",
+        "A. MaksimoviÄ",
+        "Ø. Nyland",
+        "Rômulo",
+        "N. Seiwald",
+        "R. Baku",
+        "T. Gomis"
+      ],
+      "home_formation": "4-2-3-1",
+      "away_formation": "4-5-1",
+      "home_coach": "V. Kompany",
+      "away_coach": "M. Demichelis"
     }
   },
   "lineup_attempts": {
@@ -40051,7 +40106,8 @@
     "1561942": "2026-10-17T14:44:45.397902+00:00",
     "1550149": "2026-10-17T15:44:52.605484+00:00",
     "1557434": "2026-10-17T16:18:07.153596+00:00",
-    "1570413": "2026-10-17T16:19:40.278750+00:00"
+    "1570413": "2026-10-17T16:19:40.278750+00:00",
+    "1575185": "2026-10-17T16:29:27.929896+00:00"
   },
   "unavailable_dates": {}
 }
