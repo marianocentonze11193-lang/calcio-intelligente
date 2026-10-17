@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-10-17T16:49:08.160546+00:00",
+  "updated_at": "2026-10-17T16:50:53.088261+00:00",
   "source_policy": "Campionati: football-data.co.uk; coppe e fallback: ESPN. Date, nomi e punteggi sono controllati. La classifica nazionale è ricalcolata dai risultati e può differire dall'ufficiale per penalizzazioni o regole speciali.",
   "fixtures": [
     {
@@ -10650,7 +10650,7 @@
       "country": "Inghilterra",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T16:49:08.160546+00:00",
+      "updated_at": "2026-10-17T16:50:53.088261+00:00",
       "rows": [
         {
           "team_id": "",
@@ -10986,7 +10986,7 @@
       "country": "Spagna",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T16:49:08.160546+00:00",
+      "updated_at": "2026-10-17T16:50:53.088261+00:00",
       "rows": [
         {
           "team_id": "",
@@ -11322,7 +11322,7 @@
       "country": "Germania",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T16:49:08.160546+00:00",
+      "updated_at": "2026-10-17T16:50:53.088261+00:00",
       "rows": [
         {
           "team_id": "",
@@ -11626,7 +11626,7 @@
       "country": "Italia",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T16:49:08.160546+00:00",
+      "updated_at": "2026-10-17T16:50:53.088261+00:00",
       "rows": [
         {
           "team_id": "",
@@ -11962,7 +11962,7 @@
       "country": "Francia",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T16:49:08.160546+00:00",
+      "updated_at": "2026-10-17T16:50:53.088261+00:00",
       "rows": [
         {
           "team_id": "",
@@ -12266,7 +12266,7 @@
       "country": "Scozia",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T16:49:08.160546+00:00",
+      "updated_at": "2026-10-17T16:50:53.088261+00:00",
       "rows": [
         {
           "team_id": "",
@@ -12474,7 +12474,7 @@
       "country": "Paesi Bassi",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T16:49:08.160546+00:00",
+      "updated_at": "2026-10-17T16:50:53.088261+00:00",
       "rows": [
         {
           "team_id": "",
@@ -12778,7 +12778,7 @@
       "country": "Portogallo",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T16:49:08.160546+00:00",
+      "updated_at": "2026-10-17T16:50:53.088261+00:00",
       "rows": [
         {
           "team_id": "",
@@ -13082,7 +13082,7 @@
       "country": "Belgio",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T16:49:08.160546+00:00",
+      "updated_at": "2026-10-17T16:50:53.088261+00:00",
       "rows": [
         {
           "team_id": "",
@@ -13386,7 +13386,7 @@
       "country": "Turchia",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T16:49:08.160546+00:00",
+      "updated_at": "2026-10-17T16:50:53.088261+00:00",
       "rows": [
         {
           "team_id": "",
@@ -13690,7 +13690,7 @@
       "country": "Grecia",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T16:49:08.160546+00:00",
+      "updated_at": "2026-10-17T16:50:53.088261+00:00",
       "rows": [
         {
           "team_id": "",
@@ -13927,14 +13927,6 @@
     }
   },
   "coverage": {
-    "sco.1": {
-      "status": "loaded",
-      "events": 48,
-      "completed": 48,
-      "source": "football-data.co.uk",
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30"
-    },
     "ger.1": {
       "status": "loaded",
       "events": 45,
@@ -13943,10 +13935,10 @@
       "range_start": "2026-07-01",
       "range_end": "2027-06-30"
     },
-    "ita.1": {
+    "sco.1": {
       "status": "loaded",
-      "events": 60,
-      "completed": 60,
+      "events": 48,
+      "completed": 48,
       "source": "football-data.co.uk",
       "range_start": "2026-07-01",
       "range_end": "2027-06-30"
@@ -13955,6 +13947,14 @@
       "status": "loaded",
       "events": 54,
       "completed": 54,
+      "source": "football-data.co.uk",
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30"
+    },
+    "ita.1": {
+      "status": "loaded",
+      "events": 60,
+      "completed": 60,
       "source": "football-data.co.uk",
       "range_start": "2026-07-01",
       "range_end": "2027-06-30"
@@ -13975,10 +13975,10 @@
       "range_start": "2026-07-01",
       "range_end": "2027-06-30"
     },
-    "tur.1": {
+    "ned.1": {
       "status": "loaded",
-      "events": 63,
-      "completed": 63,
+      "events": 72,
+      "completed": 72,
       "source": "football-data.co.uk",
       "range_start": "2026-07-01",
       "range_end": "2027-06-30"
@@ -13991,10 +13991,10 @@
       "range_start": "2026-07-01",
       "range_end": "2027-06-30"
     },
-    "ned.1": {
+    "tur.1": {
       "status": "loaded",
-      "events": 72,
-      "completed": 72,
+      "events": 63,
+      "completed": 63,
       "source": "football-data.co.uk",
       "range_start": "2026-07-01",
       "range_end": "2027-06-30"
@@ -14324,217 +14324,7 @@
       "events": 0,
       "source": "ESPN"
     },
-    "tur.turkiye_kupasi": {
-      "status": "unavailable",
-      "chunks_ok": 0,
-      "chunks_failed": [
-        {
-          "from": "2026-07-01",
-          "to": "2026-09-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-10-01",
-          "to": "2026-12-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-01-01",
-          "to": "2027-03-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-04-01",
-          "to": "2027-06-30",
-          "error": "HTTP Error 400: Bad Request"
-        }
-      ],
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30",
-      "events": 0,
-      "source": "ESPN"
-    },
-    "sco.fa_cup": {
-      "status": "unavailable",
-      "chunks_ok": 0,
-      "chunks_failed": [
-        {
-          "from": "2026-07-01",
-          "to": "2026-09-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-10-01",
-          "to": "2026-12-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-01-01",
-          "to": "2027-03-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-04-01",
-          "to": "2027-06-30",
-          "error": "HTTP Error 400: Bad Request"
-        }
-      ],
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30",
-      "events": 0,
-      "source": "ESPN"
-    },
-    "esp.copa_del_rey": {
-      "status": "unavailable",
-      "chunks_ok": 0,
-      "chunks_failed": [
-        {
-          "from": "2026-07-01",
-          "to": "2026-09-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-10-01",
-          "to": "2026-12-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-01-01",
-          "to": "2027-03-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-04-01",
-          "to": "2027-06-30",
-          "error": "HTTP Error 400: Bad Request"
-        }
-      ],
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30",
-      "events": 0,
-      "source": "ESPN"
-    },
-    "eng.fa": {
-      "status": "unavailable",
-      "chunks_ok": 0,
-      "chunks_failed": [
-        {
-          "from": "2026-07-01",
-          "to": "2026-09-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-10-01",
-          "to": "2026-12-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-01-01",
-          "to": "2027-03-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-04-01",
-          "to": "2027-06-30",
-          "error": "HTTP Error 400: Bad Request"
-        }
-      ],
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30",
-      "events": 0,
-      "source": "ESPN"
-    },
-    "ned.knvb_cup": {
-      "status": "unavailable",
-      "chunks_ok": 0,
-      "chunks_failed": [
-        {
-          "from": "2026-07-01",
-          "to": "2026-09-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-10-01",
-          "to": "2026-12-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-01-01",
-          "to": "2027-03-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-04-01",
-          "to": "2027-06-30",
-          "error": "HTTP Error 400: Bad Request"
-        }
-      ],
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30",
-      "events": 0,
-      "source": "ESPN"
-    },
     "uefa.europa.conf": {
-      "status": "unavailable",
-      "chunks_ok": 0,
-      "chunks_failed": [
-        {
-          "from": "2026-07-01",
-          "to": "2026-09-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-10-01",
-          "to": "2026-12-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-01-01",
-          "to": "2027-03-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-04-01",
-          "to": "2027-06-30",
-          "error": "HTTP Error 400: Bad Request"
-        }
-      ],
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30",
-      "events": 0,
-      "source": "ESPN"
-    },
-    "uefa.champions": {
-      "status": "unavailable",
-      "chunks_ok": 0,
-      "chunks_failed": [
-        {
-          "from": "2026-07-01",
-          "to": "2026-09-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-10-01",
-          "to": "2026-12-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-01-01",
-          "to": "2027-03-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-04-01",
-          "to": "2027-06-30",
-          "error": "HTTP Error 400: Bad Request"
-        }
-      ],
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30",
-      "events": 0,
-      "source": "ESPN"
-    },
-    "ita.coppa_italia": {
       "status": "unavailable",
       "chunks_ok": 0,
       "chunks_failed": [
@@ -14594,7 +14384,7 @@
       "events": 0,
       "source": "ESPN"
     },
-    "uefa.europa": {
+    "tur.turkiye_kupasi": {
       "status": "unavailable",
       "chunks_ok": 0,
       "chunks_failed": [
@@ -14625,6 +14415,216 @@
       "source": "ESPN"
     },
     "fra.coupe_de_france": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 400: Bad Request"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0,
+      "source": "ESPN"
+    },
+    "sco.fa_cup": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 400: Bad Request"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0,
+      "source": "ESPN"
+    },
+    "ita.coppa_italia": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 400: Bad Request"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0,
+      "source": "ESPN"
+    },
+    "eng.fa": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 400: Bad Request"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0,
+      "source": "ESPN"
+    },
+    "esp.copa_del_rey": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 400: Bad Request"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0,
+      "source": "ESPN"
+    },
+    "ned.knvb_cup": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 400: Bad Request"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0,
+      "source": "ESPN"
+    },
+    "uefa.europa": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 400: Bad Request"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0,
+      "source": "ESPN"
+    },
+    "uefa.champions": {
       "status": "unavailable",
       "chunks_ok": 0,
       "chunks_failed": [
