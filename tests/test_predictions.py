@@ -93,20 +93,20 @@ class PredictionModelTests(unittest.TestCase):
         self.assertIn("possibile corsa al titolo", context["home"]["signals"][0])
         self.assertIn("non vengono dichiarati", context["note"])
 
-    def test_motivation_adjustment_is_bounded_and_skips_similar_or_missing_signals(self):
-        context = {"status": "indizi_classifica", "home": {"signals": ["zona bassa / possibile lotta salvezza"]}, "away": {"signals": ["motivazione competitiva ordinaria"]}}
+    def test_motivation_context_is_informational_until_backtested(self):
+        context = {"status": "indizi_classifica",
+                   "home": {"signals": ["zona bassa / possibile lotta salvezza"]},
+                   "away": {"signals": ["motivazione competitiva ordinaria"]}}
         home_xg, away_xg, result = module.apply_motivation_adjustment(1.40, 1.10, context)
-        self.assertAlmostEqual(home_xg, 1.421)
-        self.assertEqual(away_xg, 1.10)
-        self.assertTrue(result["applied"])
-        self.assertEqual(result["adjustment_pct"], 1.5)
-        similar = {"status": "indizi_classifica", "home": {"signals": ["possibile corsa al titolo"]}, "away": {"signals": ["zona obiettivi europei"]}}
-        h, a, result = module.apply_motivation_adjustment(1.40, 1.10, similar)
-        self.assertEqual((h, a), (1.40, 1.10))
+        self.assertEqual((home_xg, away_xg), (1.40, 1.10))
         self.assertFalse(result["applied"])
-        h, a, result = module.apply_motivation_adjustment(1.40, 1.10, {})
-        self.assertEqual((h, a), (1.40, 1.10))
-        self.assertEqual(result["status"], "non_verificabile")
+        self.assertEqual(result["adjustment_pct"], 0.0)
+        self.assertEqual(result["status"], "solo_informativa")
+        self.assertIn("backtest", result["note"])
+        missing = module.apply_motivation_adjustment(1.40, 1.10, {})
+        self.assertEqual(missing[:2], (1.40, 1.10))
+        self.assertFalse(missing[2]["applied"])
+        self.assertEqual(missing[2]["status"], "non_verificabile")
 
     def test_motivation_context_is_cautious_when_table_is_missing(self):
         context = module.motivation_for_match("Team A", "Team B", {})
