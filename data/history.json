@@ -3151,9 +3151,10 @@
       "expected_away_goals": 2.42,
       "sample_matches": 0,
       "archived_at": "2026-10-15T10:09:22.994788+00:00",
-      "outcome": null,
-      "home_goals": null,
-      "away_goals": null
+      "outcome": "2",
+      "home_goals": 3,
+      "away_goals": 4,
+      "settled_at": "2026-10-17T20:06:07.107005+00:00"
     },
     {
       "id": "2026-10-18-Eredivisie-PEC Zwolle-Go Ahead Eagles",
@@ -4670,9 +4671,9 @@
       "expected_away_goals": 4.23,
       "sample_matches": 4,
       "archived_at": "2026-10-15T21:16:35.262267+00:00",
-      "outcome": null,
-      "home_goals": null,
-      "away_goals": null,
+      "outcome": "2",
+      "home_goals": 3,
+      "away_goals": 4,
       "odds_markets": {
         "over_under_2_5": {
           "over": 1.3,
@@ -4756,7 +4757,8 @@
       ],
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "historical_sources": []
+      "historical_sources": [],
+      "settled_at": "2026-10-17T20:06:07.107107+00:00"
     },
     {
       "id": "2026-10-18-Eredivisie-Groningen-Ajax",
@@ -8266,17 +8268,102 @@
       "away_goals": null
     }
   ],
-  "updated_at": "2026-10-17T19:48:39.398300+00:00",
+  "updated_at": "2026-10-17T20:06:07.107314+00:00",
   "metrics": {
-    "settled_matches": 34,
-    "accuracy_1x2": 44.12,
-    "brier_score_1x2": 0.6912,
-    "log_loss_1x2": 1.1236,
+    "settled_matches": 36,
+    "accuracy_1x2": 47.22,
+    "brier_score_1x2": 0.6602,
+    "log_loss_1x2": 1.0784,
+    "calibration_1x2": {
+      "evaluated_matches": 36,
+      "minimum_matches_required": 30,
+      "by_outcome": {
+        "1": [
+          {
+            "range": "0-20%",
+            "matches": 7,
+            "mean_predicted_probability": 14.16,
+            "observed_frequency": 42.86
+          },
+          {
+            "range": "20-40%",
+            "matches": 12,
+            "mean_predicted_probability": 28.62,
+            "observed_frequency": 33.33
+          },
+          {
+            "range": "40-60%",
+            "matches": 9,
+            "mean_predicted_probability": 48.39,
+            "observed_frequency": 33.33
+          },
+          {
+            "range": "60-80%",
+            "matches": 6,
+            "mean_predicted_probability": 62.68,
+            "observed_frequency": 16.67
+          },
+          {
+            "range": "80-100%",
+            "matches": 2,
+            "mean_predicted_probability": 85.2,
+            "observed_frequency": 100.0
+          }
+        ],
+        "X": [
+          {
+            "range": "0-20%",
+            "matches": 14,
+            "mean_predicted_probability": 16.06,
+            "observed_frequency": 21.43
+          },
+          {
+            "range": "20-40%",
+            "matches": 22,
+            "mean_predicted_probability": 24.6,
+            "observed_frequency": 18.18
+          }
+        ],
+        "2": [
+          {
+            "range": "0-20%",
+            "matches": 7,
+            "mean_predicted_probability": 12.99,
+            "observed_frequency": 14.29
+          },
+          {
+            "range": "20-40%",
+            "matches": 12,
+            "mean_predicted_probability": 27.62,
+            "observed_frequency": 50.0
+          },
+          {
+            "range": "40-60%",
+            "matches": 9,
+            "mean_predicted_probability": 49.04,
+            "observed_frequency": 66.67
+          },
+          {
+            "range": "60-80%",
+            "matches": 7,
+            "mean_predicted_probability": 64.87,
+            "observed_frequency": 28.57
+          },
+          {
+            "range": "80-100%",
+            "matches": 1,
+            "mean_predicted_probability": 91.5,
+            "observed_frequency": 100.0
+          }
+        ]
+      },
+      "note": "Confrontare probabilità media e frequenza osservata; fasce con pochi casi sono instabili."
+    },
     "note": "Metriche descrittive su pronostici archiviati; Brier e log loss più bassi sono migliori. Non dimostrano redditività o affidabilità futura."
   },
   "metrics_by_league": {},
   "model_vs_market_metrics": {
-    "settled_matches_with_model_and_odds": 15,
+    "settled_matches_with_model_and_odds": 16,
     "minimum_matches_required": 30,
     "model": null,
     "market": null,
@@ -8293,7 +8380,7 @@
       "note": "Servono almeno 30 partite concluse con quote e probabilità per questo mercato."
     },
     "over_under_2_5": {
-      "settled_matches_with_model_and_odds": 15,
+      "settled_matches_with_model_and_odds": 16,
       "minimum_matches_required": 30,
       "model": null,
       "market": null,
@@ -8318,7 +8405,7 @@
     }
   },
   "result_matching": {
-    "checked_at": "2026-10-17T19:48:39.398279+00:00",
+    "checked_at": "2026-10-17T20:06:07.107305+00:00",
     "unresolved_past_matches": 3,
     "examples": [
       {
@@ -8354,19 +8441,104 @@
   "metrics_by_european_context": {
     "groups": {
       "recent_european_match": {
-        "settled_matches": 5,
+        "settled_matches": 6,
         "accuracy_1x2": null,
         "brier_score_1x2": null,
         "minimum_matches_required": 30,
+        "calibration_1x2": {
+          "evaluated_matches": 6,
+          "minimum_matches_required": 30,
+          "by_outcome": null,
+          "note": "Calibrazione non pubblicata: campione inferiore alla soglia minima."
+        },
         "note": "Metriche non pubblicate: servono almeno 30 partite concluse con probabilità archiviate.",
         "context_matches_archived": 26
       },
       "no_recent_european_match": {
-        "settled_matches": 29,
-        "accuracy_1x2": null,
-        "brier_score_1x2": null,
-        "minimum_matches_required": 30,
-        "note": "Metriche non pubblicate: servono almeno 30 partite concluse con probabilità archiviate.",
+        "settled_matches": 30,
+        "accuracy_1x2": 46.67,
+        "brier_score_1x2": 0.6909,
+        "log_loss_1x2": 1.1203,
+        "calibration_1x2": {
+          "evaluated_matches": 30,
+          "minimum_matches_required": 30,
+          "by_outcome": {
+            "1": [
+              {
+                "range": "0-20%",
+                "matches": 5,
+                "mean_predicted_probability": 15.78,
+                "observed_frequency": 60.0
+              },
+              {
+                "range": "20-40%",
+                "matches": 11,
+                "mean_predicted_probability": 28.1,
+                "observed_frequency": 36.36
+              },
+              {
+                "range": "40-60%",
+                "matches": 7,
+                "mean_predicted_probability": 48.31,
+                "observed_frequency": 42.86
+              },
+              {
+                "range": "60-80%",
+                "matches": 5,
+                "mean_predicted_probability": 63.14,
+                "observed_frequency": 0.0
+              },
+              {
+                "range": "80-100%",
+                "matches": 2,
+                "mean_predicted_probability": 85.2,
+                "observed_frequency": 100.0
+              }
+            ],
+            "X": [
+              {
+                "range": "0-20%",
+                "matches": 11,
+                "mean_predicted_probability": 16.42,
+                "observed_frequency": 27.27
+              },
+              {
+                "range": "20-40%",
+                "matches": 19,
+                "mean_predicted_probability": 24.78,
+                "observed_frequency": 15.79
+              }
+            ],
+            "2": [
+              {
+                "range": "0-20%",
+                "matches": 7,
+                "mean_predicted_probability": 12.99,
+                "observed_frequency": 14.29
+              },
+              {
+                "range": "20-40%",
+                "matches": 9,
+                "mean_predicted_probability": 28.58,
+                "observed_frequency": 44.44
+              },
+              {
+                "range": "40-60%",
+                "matches": 8,
+                "mean_predicted_probability": 49.66,
+                "observed_frequency": 75.0
+              },
+              {
+                "range": "60-80%",
+                "matches": 6,
+                "mean_predicted_probability": 65.12,
+                "observed_frequency": 16.67
+              }
+            ]
+          },
+          "note": "Confrontare probabilità media e frequenza osservata; fasce con pochi casi sono instabili."
+        },
+        "note": "Metriche descrittive su pronostici archiviati; Brier e log loss più bassi sono migliori. Non dimostrano redditività o affidabilità futura.",
         "context_matches_archived": 95
       }
     },
