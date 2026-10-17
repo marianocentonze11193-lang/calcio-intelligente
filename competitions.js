@@ -53,7 +53,7 @@ function renderTable(){
  const table=competitionData.standings?.[code];
  if(!table){status.textContent="Classifica non disponibile per la competizione selezionata.";return;}
  const diag=table.diagnostics||{},stamp=table.updated_at?new Date(table.updated_at).toLocaleString("it-IT"):"non disponibile";
- status.textContent=(diag.status==="available"?"Classifica acquisita e controllata":"ATTENZIONE · Classifica non aggiornata")+" · stagione "+table.season+" · "+table.rows.length+" squadre · fonte "+(diag.source||"non indicata")+" · aggiornamento "+stamp+(diag.refresh_error?" · ultimo errore: "+diag.refresh_error:"");
+ status.textContent=(diag.status==="computed_from_results"?"Classifica calcolata dai risultati":diag.status==="available"?"Classifica acquisita dalla fonte":diag.status==="partial"?"ATTENZIONE · Classifica parziale":"ATTENZIONE · Classifica non aggiornata")+" · stagione "+table.season+" · "+table.rows.length+" squadre · fonte "+(diag.source||"non indicata")+" · aggiornamento "+stamp+(diag.refresh_error?" · ultimo errore: "+diag.refresh_error:"");
  const groups={};for(const row of table.rows||[])(groups[row.group||table.competition]??=[]).push(row);
  for(const [groupName,rows] of Object.entries(groups)){
   const heading=document.createElement("h3");heading.className="group-title";heading.textContent=groupName;wrap.append(heading);
