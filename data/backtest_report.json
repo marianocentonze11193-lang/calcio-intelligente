@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T20:03:04.584860+00:00",
+  "updated_at": "2026-10-17T20:04:33.276535+00:00",
   "method": "walk-forward cronologico per data, con baseline di frequenza 1/X/2 calcolata solo sui risultati precedenti e smoothing di Laplace",
   "period_start_requested": "2024-07-01",
   "period_end_requested": "2026-10-16",
@@ -28,6 +28,12 @@
         "accuracy_1x2": 50.94,
         "brier_score_1x2": 0.6045,
         "log_loss_1x2": 1.0134
+      },
+      "poisson_elo_form": {
+        "matches": 6616,
+        "accuracy_1x2": 51.0,
+        "brier_score_1x2": 0.6053,
+        "log_loss_1x2": 1.0159
       }
     },
     "prior_frequency_baseline": {
