@@ -18,6 +18,10 @@ ODDS_SCRIPT = Path(__file__).resolve().parents[1] / "scripts" / "enrich_with_odd
 ODDS_SPEC = importlib.util.spec_from_file_location("enrich_with_odds", ODDS_SCRIPT)
 odds_module = importlib.util.module_from_spec(ODDS_SPEC)
 ODDS_SPEC.loader.exec_module(odds_module)
+SYNC_SCRIPT = Path(__file__).resolve().parents[1] / "scripts" / "sync_competitions.py"
+SYNC_SPEC = importlib.util.spec_from_file_location("sync_competitions", SYNC_SCRIPT)
+sync_module = importlib.util.module_from_spec(SYNC_SPEC)
+SYNC_SPEC.loader.exec_module(sync_module)
 ARCHIVE_SCRIPT = Path(__file__).resolve().parents[1] / "scripts" / "archive_predictions.py"
 ARCHIVE_SPEC = importlib.util.spec_from_file_location("archive_predictions", ARCHIVE_SCRIPT)
 archive_module = importlib.util.module_from_spec(ARCHIVE_SPEC)
@@ -41,6 +45,37 @@ MARKET_SPEC.loader.exec_module(market_module)
 
 
 class PredictionModelTests(unittest.TestCase):
+    def test_domestic_cup_espn_slugs_are_correct_and_extended(self):
+        expected = {
+            "ned.knvb_cup": "ned.cup",
+            "por.taca_de_portugal": "por.taca.portugal",
+            "sco.fa_cup": "sco.tennents",
+        }
+        for internal, espn_slug in expected.items():
+            self.assertEqual(sync_module.ESPN_COMPETITION_SLUGS[internal], espn_slug)
+        for code in ("eng.league_cup", "eng.charity", "ita.super_cup", "esp.super_cup",
+                     "ger.super_cup", "fra.super_cup", "ned.supercup", "sco.cis"):
+            self.assertIn(code, sync_module.COMPETITIONS)
+        self.assertIn("EFL Cup", module.NATIONAL_CUP_ESPN_COMPETITIONS.values())
+        self.assertIn("Supercoppa Italiana", module.NATIONAL_CUP_ESPN_COMPETITIONS.values())
+
+    def test_national_cup_recent_match_is_flagged_and_cup_bets_are_disabled(self):
+        cup_match = {
+            "date": "2026-10-14", "home_team": "Roma", "away_team": "Milan",
+            "competition": "Coppa Italia", "status": "completed", "source": "ESPN",
+            "home_goals": 1, "away_goals": 0,
+        }
+        context = module.european_fatigue_context("Roma", "Milan", date(2026, 10, 16), [cup_match])
+        self.assertEqual(len(context), 2)
+        forecast = {"probabilities": {"home_win": 55}, "suggested_markets": ["1"],
+                    "suggested_market_details": [{"market": "1"}], "value_bets": [{"market": "1"}],
+                    "expected_value_1x2": {"home": 0.1}}
+        result = module.declassify_cup_forecast(forecast, "Coppa Italia")
+        self.assertEqual(result["status"], "Stima preliminare")
+        self.assertEqual(result["suggested_markets"], [])
+        self.assertEqual(result["value_bets"], [])
+        self.assertEqual(result["expected_value_1x2"], {})
+
     def test_motivation_context_uses_table_signals_without_claiming_final_outcomes(self):
         completed = [
             ("Team A", "Team C", 2, 0), ("Team A", "Team D", 1, 0),

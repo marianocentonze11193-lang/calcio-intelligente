@@ -52,13 +52,27 @@ EUROPEAN = {
 CUPS = {
     "ita.coppa_italia": "Coppa Italia",
     "eng.fa": "FA Cup",
+    "eng.league_cup": "EFL Cup",
+    "eng.charity": "Community Shield",
     "esp.copa_del_rey": "Copa del Rey",
+    "esp.super_cup": "Supercoppa di Spagna",
     "ger.dfb_pokal": "DFB-Pokal",
+    "ger.super_cup": "Supercoppa di Germania",
     "fra.coupe_de_france": "Coupe de France",
+    "fra.super_cup": "Trophée des Champions",
+    "ita.super_cup": "Supercoppa Italiana",
     "ned.knvb_cup": "KNVB Beker",
+    "ned.supercup": "Supercoppa olandese",
     "por.taca_de_portugal": "Taça de Portugal",
     "sco.fa_cup": "Scottish Cup",
+    "sco.cis": "Scottish League Cup",
     "tur.turkiye_kupasi": "Coppa di Turchia",
+}
+# Internal keys remain stable for stored data/API-Football IDs; ESPN uses different slugs for some cups.
+ESPN_COMPETITION_SLUGS = {
+    "ned.knvb_cup": "ned.cup",
+    "por.taca_de_portugal": "por.taca.portugal",
+    "sco.fa_cup": "sco.tennents",
 }
 LEAGUES = {
     "eng.1": ("Premier League", "Inghilterra", "summer"),
@@ -88,12 +102,20 @@ COMPETITIONS = {
        for code, name, country in [
            ("ita.coppa_italia", "Coppa Italia", "Italia"),
            ("eng.fa", "FA Cup", "Inghilterra"),
+           ("eng.league_cup", "EFL Cup", "Inghilterra"),
+           ("eng.charity", "Community Shield", "Inghilterra"),
            ("esp.copa_del_rey", "Copa del Rey", "Spagna"),
+           ("esp.super_cup", "Supercoppa di Spagna", "Spagna"),
            ("ger.dfb_pokal", "DFB-Pokal", "Germania"),
+           ("ger.super_cup", "Supercoppa di Germania", "Germania"),
            ("fra.coupe_de_france", "Coupe de France", "Francia"),
+           ("fra.super_cup", "Trophée des Champions", "Francia"),
+           ("ita.super_cup", "Supercoppa Italiana", "Italia"),
            ("ned.knvb_cup", "KNVB Beker", "Paesi Bassi"),
+           ("ned.supercup", "Supercoppa olandese", "Paesi Bassi"),
            ("por.taca_de_portugal", "Taça de Portugal", "Portogallo"),
            ("sco.fa_cup", "Scottish Cup", "Scozia"),
+           ("sco.cis", "Scottish League Cup", "Scozia"),
            ("tur.turkiye_kupasi", "Coppa di Turchia", "Turchia"),
        ]},
     **{code: {"name": name, "country": country, "kind": "Campionato"}
@@ -438,7 +460,8 @@ def fetch_calendar_competition(code, meta, start, end):
     matches = {}
     successful_chunks = 0
     failed_chunks = []
-    base = f"{BASE}/site/v2/sports/soccer/{code}/scoreboard"
+    espn_code = ESPN_COMPETITION_SLUGS.get(code, code)
+    base = f"{BASE}/site/v2/sports/soccer/{espn_code}/scoreboard"
     # ESPN rifiuta gli intervalli di date per queste coppe: il suo scoreboard
     # funziona con una singola data. Per limitare il carico, sincronizziamo per
     # le coppe solo i risultati recenti e il calendario utile alle previsioni.
@@ -626,7 +649,8 @@ def main():
     if api_key:
         # Un'unica richiesta fixtures per competizione recupera tutta la stagione.
         with ThreadPoolExecutor(max_workers=4) as pool:
-            futures = {pool.submit(fetch_api_football_fixtures, api_key, code, jobs[code][0], jobs[code][3]): code for code in jobs if code not in cached_api_codes}
+            futures = {pool.submit(fetch_api_football_fixtures, api_key, code, jobs[code][0], jobs[code][3]): code
+                       for code in jobs if code in API_FOOTBALL_LEAGUE_IDS and code not in cached_api_codes}
             for future in as_completed(futures):
                 code = futures[future]
                 try:

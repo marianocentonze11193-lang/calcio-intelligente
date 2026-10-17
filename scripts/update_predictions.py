@@ -454,20 +454,32 @@ EUROPEAN_ESPN_COMPETITIONS = {
 NATIONAL_CUP_ESPN_COMPETITIONS = {
     "ita.coppa_italia": "Coppa Italia",
     "eng.fa": "FA Cup",
+    "eng.league_cup": "EFL Cup",
+    "eng.charity": "Community Shield",
     "esp.copa_del_rey": "Copa del Rey",
+    "esp.super_cup": "Supercoppa di Spagna",
     "ger.dfb_pokal": "DFB-Pokal",
+    "ger.super_cup": "Supercoppa di Germania",
     "fra.coupe_de_france": "Coupe de France",
-    "ned.knvb_cup": "KNVB Beker",
-    "por.taca_de_portugal": "Taça de Portugal",
-    "sco.fa_cup": "Scottish Cup",
+    "fra.super_cup": "Trophée des Champions",
+    "ita.super_cup": "Supercoppa Italiana",
+    "ned.cup": "KNVB Beker",
+    "ned.supercup": "Supercoppa olandese",
+    "por.taca.portugal": "Taça de Portugal",
+    "sco.tennents": "Scottish Cup",
+    "sco.cis": "Scottish League Cup",
     "tur.turkiye_kupasi": "Coppa di Turchia",
 }
 COMPETITION_ESPN_CODES = {**EUROPEAN_ESPN_COMPETITIONS, **NATIONAL_CUP_ESPN_COMPETITIONS}
 COMPETITION_COUNTRIES = {
     "Champions League": "Europa", "Europa League": "Europa", "Conference League": "Europa",
-    "Coppa Italia": "Italia", "FA Cup": "Inghilterra", "Copa del Rey": "Spagna",
-    "DFB-Pokal": "Germania", "Coupe de France": "Francia", "KNVB Beker": "Paesi Bassi",
-    "Taça de Portugal": "Portogallo", "Scottish Cup": "Scozia", "Coppa di Turchia": "Turchia",
+    "Coppa Italia": "Italia", "FA Cup": "Inghilterra", "EFL Cup": "Inghilterra",
+    "Community Shield": "Inghilterra", "Copa del Rey": "Spagna", "Supercoppa di Spagna": "Spagna",
+    "DFB-Pokal": "Germania", "Supercoppa di Germania": "Germania",
+    "Coupe de France": "Francia", "Trophée des Champions": "Francia",
+    "Supercoppa Italiana": "Italia", "KNVB Beker": "Paesi Bassi",
+    "Supercoppa olandese": "Paesi Bassi", "Taça de Portugal": "Portogallo",
+    "Scottish Cup": "Scozia", "Scottish League Cup": "Scozia", "Coppa di Turchia": "Turchia",
 }
 
 
