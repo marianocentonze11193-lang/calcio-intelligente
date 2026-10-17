@@ -133,6 +133,45 @@ def metric_summary(rows):
     }
 
 
+def outcome_calibration_summary(rows):
+    """One-vs-rest Brier/log-loss and reliability bins separately for 1, X and 2."""
+    result = {}
+    bins = [(0.0, 0.2), (0.2, 0.4), (0.4, 0.6), (0.6, 0.8), (0.8, 1.0000001)]
+    for label, key in (("1", "home_win"), ("X", "draw"), ("2", "away_win")):
+        scored = []
+        for row in rows:
+            probabilities = row.get("model_probabilities")
+            if not isinstance(probabilities, dict) or key not in probabilities:
+                continue
+            try:
+                probability = float(probabilities[key]) / 100.0
+            except (TypeError, ValueError):
+                continue
+            if not math.isfinite(probability) or not 0 <= probability <= 1:
+                continue
+            actual = 1.0 if row.get("outcome") == label else 0.0
+            scored.append((probability, actual))
+        calibration = []
+        for lower, upper in bins:
+            selected = [(p, a) for p, a in scored if lower <= p < upper]
+            if selected:
+                calibration.append({
+                    "probability_range": f"{int(lower * 100)}-{min(100, int(upper * 100))}%",
+                    "matches": len(selected),
+                    "mean_predicted_pct": round(sum(p for p, _ in selected) * 100 / len(selected), 2),
+                    "observed_frequency_pct": round(sum(a for _, a in selected) * 100 / len(selected), 2),
+                })
+        n = len(scored)
+        result[label] = {
+            "matches": n,
+            "brier_score": round(sum((p - a) ** 2 for p, a in scored) / n, 5) if n else None,
+            "log_loss": round(-sum(math.log(max(1e-15, min(1 - 1e-15, p))) if a else math.log(max(1e-15, 1 - p)) for p, a in scored) / n, 5) if n else None,
+            "reliability_bins": calibration,
+            "note": "Brier/log-loss binari one-vs-rest; punteggi più bassi sono migliori.",
+        }
+    return result
+
+
 def load_league_results(code, today):
     if code not in model.FOOTBALL_DATA_LEAGUES:
         return []
@@ -205,6 +244,7 @@ def walk_forward_league(league_name, results):
                         variants["market_blend_50_50"] = score_probabilities(blended, outcome)
                     predictions.append({
                         "date": match_day.isoformat(), "outcome": outcome,
+                        "model_probabilities": model_probabilities,
                         "variants": variants, "baseline": score_probabilities(baseline, outcome),
                         "market_baseline": scored_market,
                     })
@@ -220,6 +260,7 @@ def main():
     all_baseline = []
     all_market = []
     all_variants = defaultdict(list)
+    all_evaluated = []
     errors = []
     for code in sorted(model.FOOTBALL_DATA_LEAGUES):
         league = model.LEAGUES[code]
@@ -229,6 +270,7 @@ def main():
                 errors.append(f"{league}: nessun risultato storico valido")
                 continue
             evaluated = walk_forward_league(league, results)
+            all_evaluated.extend(evaluated)
             all_by_league[league] = {
                 "source_matches": len(results),
                 "variants": {name: metric_summary([item["variants"][name] for item in evaluated if name in item["variants"]])
@@ -236,6 +278,7 @@ def main():
                 "prior_frequency_baseline": metric_summary([item["baseline"] for item in evaluated]),
                 "market_baseline": metric_summary([item["market_baseline"] for item in evaluated if item.get("market_baseline")]),
                 "market_coverage_matches": sum(1 for item in evaluated if item.get("market_baseline")),
+                "outcome_calibration": outcome_calibration_summary(evaluated),
                 "period_start": min((item["date"] for item in evaluated), default=None),
                 "period_end": max((item["date"] for item in evaluated), default=None),
             }
@@ -263,6 +306,7 @@ def main():
             "ablations": {name: metric_summary(rows) for name, rows in all_variants.items()},
             "prior_frequency_baseline": metric_summary(all_baseline),
             "market_baseline": metric_summary(all_market),
+            "outcome_calibration": outcome_calibration_summary(all_evaluated),
             "market_coverage_matches": len(all_market),
             "comparison_note": "Confronto su identiche partite; per Brier score e log loss un valore più basso è migliore. Il mercato è confrontato solo sulle partite con quote storiche complete.",
         },
