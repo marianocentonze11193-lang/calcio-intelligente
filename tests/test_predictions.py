@@ -88,8 +88,10 @@ class PredictionModelTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             cache = Path(directory) / "competition_data.json"
             cache.write_text(__import__("json").dumps(payload), encoding="utf-8")
-            with patch.object(module, "COMPETITION_DATA_FILE", cache), \\
-                 patch.object(module, "fetch_competition_calendar", side_effect=AssertionError("fallback non atteso")):
+            with (
+                patch.object(module, "COMPETITION_DATA_FILE", cache),
+                patch.object(module, "fetch_competition_calendar", side_effect=AssertionError("fallback non atteso")):,
+            ):
                 matches = module.load_competition_calendar(
                     date(2026, 10, 13), date(2026, 10, 22), now=now
                 )
@@ -110,8 +112,10 @@ class PredictionModelTests(unittest.TestCase):
                 }),
                 encoding="utf-8",
             )
-            with patch.object(module, "COMPETITION_DATA_FILE", cache), \\
-                 patch.object(module, "fetch_competition_calendar", return_value=fallback) as fetch:
+            with (
+                patch.object(module, "COMPETITION_DATA_FILE", cache),
+                patch.object(module, "fetch_competition_calendar", return_value=fallback) as fetch:,
+            ):
                 matches = module.load_competition_calendar(
                     date(2026, 10, 13), date(2026, 10, 22), now=now
                 )
