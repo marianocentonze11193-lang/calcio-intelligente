@@ -722,14 +722,14 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
         summary = f"{outcome_text}; {goal_text}; {btts_text}. Commento automatico basato solo sul modello statistico, non su notizie o quote."
         # Le selezioni automatiche richiedono un campione minimo casa/trasferta
         # di almeno tre gare per lato; le stime preliminari restano descrittive.
-        if home_sample >= 8 and away_sample >= 8 and not european_context:
+        if home_sample >= 8 and away_sample >= 8 and not recent_competition_context:
             if over15 >= 0.70: suggested.append("Over 1,5")
             if btts >= 0.70: suggested.append("Goal")
             if best_probability >= 0.70: suggested.append(best_outcome)
     return {
         "id": f"{match_date.isoformat()}-{league}-{home}-{away}",
         "date": match_date.isoformat(), "kickoff": kickoff or "", "league": league,
-        "country": LEAGUE_COUNTRIES.get(league, "Competizioni UEFA" if league in ("Champions League", "Europa League", "Conference League") else "Altro"),
+        "country": LEAGUE_COUNTRIES.get(league, COMPETITION_COUNTRIES.get(league, "Altro")),
         "home_team": home, "away_team": away,
         "expected_home_goals": round(expected_home, 2),
         "expected_away_goals": round(expected_away, 2),
@@ -744,7 +744,7 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
         "sample_matches": sample,
         "home_matches_sample": home_sample,
         "away_matches_sample": away_sample,
-        "status": ("Pronostico valutabile" if home_sample >= 8 and away_sample >= 8 and not european_context else "Stima preliminare") if valid else "NO BET",
+        "status": ("Pronostico valutabile" if home_sample >= 8 and away_sample >= 8 and not recent_competition_context else "Stima preliminare") if valid else "NO BET",
         "no_bet_type": "" if valid else no_bet_type,
         "reason": "" if valid else no_bet_reason,
         "confidence": "alta quantità di dati (non sinonimo di accuratezza verificata)" if sample >= 8 else "media quantità di dati" if sample >= 5 else "bassa quantità di dati",
@@ -985,7 +985,7 @@ def main():
         for home, away, match_date, kickoff in fixtures:
             home = normalized_history.get(team_key(home), home)
             away = normalized_history.get(team_key(away), away)
-            forecast = make_forecast(home, away, league_name, match_date, kickoff, history, league_home_avg, league_away_avg, elo_ratings, recent_form, european_matches)
+            forecast = make_forecast(home, away, league_name, match_date, kickoff, history, league_home_avg, league_away_avg, elo_ratings, recent_form, competition_calendar)
             if forecast:
                 fixture_key = (match_date.isoformat(), team_key(home), team_key(away))
                 quote = fixture_odds.get(fixture_key)
