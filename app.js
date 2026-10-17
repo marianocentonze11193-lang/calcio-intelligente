@@ -104,10 +104,23 @@ function translateAvailabilityTerm(value) {
 
 function appendWeather(match, card) {
   const weather = match && match.weather_context;
-  if (!weather || weather.status !== "disponibile") return;
   const section = document.createElement("section");
-  section.className = "match-analysis";
+  section.className = "match-analysis weather-panel";
   const title = document.createElement("strong");
+  if (!weather || weather.status !== "disponibile") {
+    title.textContent = "METEO · non disponibile";
+    const reason = document.createElement("p");
+    reason.className = "match-meta";
+    reason.textContent = weather && weather.reason
+      ? weather.reason
+      : "Sede dello stadio o orario verificato non disponibili nella fonte.";
+    const note = document.createElement("p");
+    note.className = "match-meta";
+    note.textContent = "Solo contesto informativo: non modifica le probabilità del modello.";
+    section.append(title, reason, note);
+    card.append(section);
+    return;
+  }
   title.textContent = "METEO PREVISTO · " + (weather.location || weather.venue || "zona dello stadio");
   const details = document.createElement("p");
   const values = [];
@@ -120,7 +133,7 @@ function appendWeather(match, card) {
   const note = document.createElement("p");
   note.className = "match-meta";
   note.textContent = "Fonte: Open-Meteo · " + (weather.kickoff_local || "orario locale non disponibile") +
-    ". Fattore sperimentale solo informativo: non modifica le percentuali finché un backtest non ne dimostra il beneficio.";
+    ". Solo contesto informativo: non modifica le percentuali del pronostico.";
   section.append(title, details, note);
   card.append(section);
 }
