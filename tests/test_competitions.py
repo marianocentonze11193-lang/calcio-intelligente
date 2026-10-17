@@ -55,6 +55,36 @@ class CompetitionSyncTests(unittest.TestCase):
         }
         self.assertIsNone(sync.parse_event(event, "ita.1", {"name": "Serie A", "country": "Italia", "kind": "Campionato"}))
 
+    def test_api_football_fixture_parser(self):
+        payload = [{
+            "fixture": {"id": 9001, "date": "2026-10-17T18:00:00+00:00", "status": {"short": "FT"}},
+            "teams": {"home": {"name": "Inter"}, "away": {"name": "Roma"}},
+            "goals": {"home": 2, "away": 1},
+        }]
+        from unittest.mock import patch
+        meta = {"name": "Serie A", "country": "Italia", "kind": "Campionato"}
+        with patch.object(sync, "api_football_get", return_value=payload):
+            events, diag = sync.fetch_api_football_fixtures("test-key", "ita.1", meta, 2026)
+        self.assertEqual(len(events), 1)
+        self.assertEqual(events[0]["status"], "completed")
+        self.assertEqual((events[0]["home_goals"], events[0]["away_goals"]), (2, 1))
+        self.assertEqual(diag["source"], "API-Football")
+
+    def test_api_football_standings_parser(self):
+        payload = [{"league": {"name": "Serie A", "standings": [[{
+            "rank": 1, "team": {"id": 1, "name": "Inter"}, "points": 19, "goalsDiff": 12,
+            "group": "Regular Season",
+            "all": {"played": 8, "win": 6, "draw": 1, "lose": 1, "goals": {"for": 17, "against": 5}},
+            "form": "WWDWW",
+        }]]}}]
+        from unittest.mock import patch
+        meta = {"name": "Serie A", "country": "Italia", "kind": "Campionato"}
+        with patch.object(sync, "api_football_get", return_value=payload):
+            table = sync.fetch_api_football_standings("test-key", "ita.1", meta, 2026)
+        self.assertEqual(table["rows"][0]["team"], "Inter")
+        self.assertEqual(table["rows"][0]["points"], 19)
+        self.assertEqual(table["diagnostics"]["status"], "available")
+
     def test_standings_parsed_by_stat_name(self):
         payload = {"children": [{"name": "Serie A", "standings": {"entries": [{
             "team": {"id": "1", "displayName": "Inter"},
