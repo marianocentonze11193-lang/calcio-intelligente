@@ -1,6 +1,6 @@
 {
   "schema_version": 3,
-  "updated_at": "2026-10-17T20:47:24.039128+00:00",
+  "updated_at": "2026-10-17T20:53:24.430531+00:00",
   "source_policy": "Fonte prioritaria: API-Football se la chiave è configurata; fallback football-data.co.uk per i campionati ed ESPN per le coppe. Classifiche ufficiali API-Football per Premier League, La Liga, Serie A e Champions League; altre classifiche ricalcolate dai risultati, con possibili differenze per penalizzazioni o regole speciali. Date, squadre e punteggi sono controllati.",
   "fixtures": [
     {
@@ -15978,7 +15978,7 @@
       "country": "Inghilterra",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T20:47:24.039128+00:00",
+      "updated_at": "2026-10-17T20:53:24.430531+00:00",
       "rows": [
         {
           "team_id": "",
@@ -16314,7 +16314,7 @@
       "country": "Spagna",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T20:47:24.039128+00:00",
+      "updated_at": "2026-10-17T20:53:24.430531+00:00",
       "rows": [
         {
           "team_id": "",
@@ -16650,7 +16650,7 @@
       "country": "Germania",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T20:47:24.039128+00:00",
+      "updated_at": "2026-10-17T20:53:24.430531+00:00",
       "rows": [
         {
           "team_id": "",
@@ -16954,7 +16954,7 @@
       "country": "Italia",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T20:47:24.039128+00:00",
+      "updated_at": "2026-10-17T20:53:24.430531+00:00",
       "rows": [
         {
           "team_id": "",
@@ -17290,7 +17290,7 @@
       "country": "Francia",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T20:47:24.039128+00:00",
+      "updated_at": "2026-10-17T20:53:24.430531+00:00",
       "rows": [
         {
           "team_id": "",
@@ -17594,7 +17594,7 @@
       "country": "Scozia",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T20:47:24.039128+00:00",
+      "updated_at": "2026-10-17T20:53:24.430531+00:00",
       "rows": [
         {
           "team_id": "",
@@ -17802,7 +17802,7 @@
       "country": "Paesi Bassi",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T20:47:24.039128+00:00",
+      "updated_at": "2026-10-17T20:53:24.430531+00:00",
       "rows": [
         {
           "team_id": "",
@@ -18106,7 +18106,7 @@
       "country": "Portogallo",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T20:47:24.039128+00:00",
+      "updated_at": "2026-10-17T20:53:24.430531+00:00",
       "rows": [
         {
           "team_id": "",
@@ -18410,7 +18410,7 @@
       "country": "Belgio",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T20:47:24.039128+00:00",
+      "updated_at": "2026-10-17T20:53:24.430531+00:00",
       "rows": [
         {
           "team_id": "",
@@ -18714,7 +18714,7 @@
       "country": "Turchia",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T20:47:24.039128+00:00",
+      "updated_at": "2026-10-17T20:53:24.430531+00:00",
       "rows": [
         {
           "team_id": "",
@@ -19018,7 +19018,7 @@
       "country": "Grecia",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T20:47:24.039128+00:00",
+      "updated_at": "2026-10-17T20:53:24.430531+00:00",
       "rows": [
         {
           "team_id": "",
@@ -19255,112 +19255,20 @@
     }
   },
   "coverage": {
-    "gre.1": {
-      "status": "loaded",
-      "events": 48,
-      "completed": 42,
-      "source": "football-data.co.uk",
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30",
-      "future_fixtures": 6,
-      "future_source": "football-data.co.uk fixtures.csv"
-    },
-    "sco.1": {
-      "status": "loaded",
-      "events": 54,
-      "completed": 48,
-      "source": "football-data.co.uk",
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30",
-      "future_fixtures": 6,
-      "future_source": "football-data.co.uk fixtures.csv"
-    },
-    "eng.1": {
-      "status": "loaded",
-      "events": 70,
-      "completed": 60,
-      "source": "football-data.co.uk",
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30",
-      "future_fixtures": 10,
-      "future_source": "football-data.co.uk fixtures.csv"
-    },
-    "esp.1": {
-      "status": "loaded",
-      "events": 87,
-      "completed": 78,
-      "source": "football-data.co.uk",
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30",
-      "future_fixtures": 9,
-      "future_source": "football-data.co.uk fixtures.csv"
-    },
-    "irl.1": {
-      "status": "unavailable",
-      "source": "ESPN",
-      "error": "nessuna partita valida nel CSV stagionale",
-      "chunks_ok": 0,
-      "chunks_failed": [
-        {
-          "from": "2026-01-01",
-          "to": "2026-03-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-04-01",
-          "to": "2026-06-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-07-01",
-          "to": "2026-09-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-10-01",
-          "to": "2026-12-31",
-          "error": "HTTP Error 400: Bad Request"
-        }
-      ],
-      "range_start": "2026-01-01",
-      "range_end": "2026-12-31",
-      "events": 0
-    },
-    "den.1": {
-      "status": "unavailable",
-      "source": "ESPN",
-      "error": "nessuna partita valida nel CSV stagionale",
-      "chunks_ok": 0,
-      "chunks_failed": [
-        {
-          "from": "2026-07-01",
-          "to": "2026-09-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-10-01",
-          "to": "2026-12-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-01-01",
-          "to": "2027-03-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-04-01",
-          "to": "2027-06-30",
-          "error": "HTTP Error 400: Bad Request"
-        }
-      ],
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30",
-      "events": 0
-    },
     "fra.1": {
       "status": "loaded",
       "events": 62,
       "completed": 54,
+      "source": "football-data.co.uk",
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "future_fixtures": 8,
+      "future_source": "football-data.co.uk fixtures.csv"
+    },
+    "ger.1": {
+      "status": "loaded",
+      "events": 53,
+      "completed": 45,
       "source": "football-data.co.uk",
       "range_start": "2026-07-01",
       "range_end": "2027-06-30",
@@ -19377,107 +19285,17 @@
       "future_fixtures": 8,
       "future_source": "football-data.co.uk fixtures.csv"
     },
-    "ned.1": {
-      "status": "loaded",
-      "events": 80,
-      "completed": 72,
-      "source": "football-data.co.uk",
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30",
-      "future_fixtures": 8,
-      "future_source": "football-data.co.uk fixtures.csv"
-    },
-    "aut.1": {
-      "status": "unavailable",
-      "source": "ESPN",
-      "error": "nessuna partita valida nel CSV stagionale",
-      "chunks_ok": 0,
-      "chunks_failed": [
-        {
-          "from": "2026-07-01",
-          "to": "2026-09-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-10-01",
-          "to": "2026-12-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-01-01",
-          "to": "2027-03-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-04-01",
-          "to": "2027-06-30",
-          "error": "HTTP Error 400: Bad Request"
-        }
-      ],
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30",
-      "events": 0
-    },
-    "ita.1": {
-      "status": "loaded",
-      "events": 69,
-      "completed": 60,
-      "source": "football-data.co.uk",
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30",
-      "future_fixtures": 9,
-      "future_source": "football-data.co.uk fixtures.csv"
-    },
-    "fin.1": {
-      "status": "unavailable",
-      "source": "ESPN",
-      "error": "nessuna partita valida nel CSV stagionale",
-      "chunks_ok": 0,
-      "chunks_failed": [
-        {
-          "from": "2026-01-01",
-          "to": "2026-03-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-04-01",
-          "to": "2026-06-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-07-01",
-          "to": "2026-09-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-10-01",
-          "to": "2026-12-31",
-          "error": "HTTP Error 400: Bad Request"
-        }
-      ],
-      "range_start": "2026-01-01",
-      "range_end": "2026-12-31",
-      "events": 0
-    },
-    "ger.1": {
-      "status": "loaded",
-      "events": 53,
-      "completed": 45,
-      "source": "football-data.co.uk",
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30",
-      "future_fixtures": 8,
-      "future_source": "football-data.co.uk fixtures.csv"
-    },
-    "bel.1": {
+    "por.1": {
       "status": "loaded",
       "events": 72,
-      "completed": 72,
+      "completed": 71,
       "source": "football-data.co.uk",
       "range_start": "2026-07-01",
-      "range_end": "2027-06-30"
+      "range_end": "2027-06-30",
+      "future_fixtures": 1,
+      "future_source": "football-data.co.uk fixtures.csv"
     },
-    "nor.1": {
+    "irl.1": {
       "status": "unavailable",
       "source": "ESPN",
       "error": "nessuna partita valida nel CSV stagionale",
@@ -19539,6 +19357,77 @@
       "range_end": "2027-06-30",
       "events": 0
     },
+    "ned.1": {
+      "status": "loaded",
+      "events": 80,
+      "completed": 72,
+      "source": "football-data.co.uk",
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "future_fixtures": 8,
+      "future_source": "football-data.co.uk fixtures.csv"
+    },
+    "den.1": {
+      "status": "unavailable",
+      "source": "ESPN",
+      "error": "nessuna partita valida nel CSV stagionale",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 400: Bad Request"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0
+    },
+    "ita.1": {
+      "status": "loaded",
+      "events": 69,
+      "completed": 60,
+      "source": "football-data.co.uk",
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "future_fixtures": 9,
+      "future_source": "football-data.co.uk fixtures.csv"
+    },
+    "sco.1": {
+      "status": "loaded",
+      "events": 54,
+      "completed": 48,
+      "source": "football-data.co.uk",
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "future_fixtures": 6,
+      "future_source": "football-data.co.uk fixtures.csv"
+    },
+    "esp.1": {
+      "status": "loaded",
+      "events": 87,
+      "completed": 78,
+      "source": "football-data.co.uk",
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "future_fixtures": 9,
+      "future_source": "football-data.co.uk fixtures.csv"
+    },
     "pol.1": {
       "status": "unavailable",
       "source": "ESPN",
@@ -19570,17 +19459,97 @@
       "range_end": "2027-06-30",
       "events": 0
     },
-    "por.1": {
+    "nor.1": {
+      "status": "unavailable",
+      "source": "ESPN",
+      "error": "nessuna partita valida nel CSV stagionale",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-01-01",
+          "to": "2026-03-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-04-01",
+          "to": "2026-06-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-07-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 400: Bad Request"
+        }
+      ],
+      "range_start": "2026-01-01",
+      "range_end": "2026-12-31",
+      "events": 0
+    },
+    "bel.1": {
       "status": "loaded",
       "events": 72,
-      "completed": 71,
+      "completed": 72,
+      "source": "football-data.co.uk",
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30"
+    },
+    "eng.1": {
+      "status": "loaded",
+      "events": 70,
+      "completed": 60,
       "source": "football-data.co.uk",
       "range_start": "2026-07-01",
       "range_end": "2027-06-30",
-      "future_fixtures": 1,
+      "future_fixtures": 10,
       "future_source": "football-data.co.uk fixtures.csv"
     },
-    "rou.1": {
+    "fin.1": {
+      "status": "unavailable",
+      "source": "ESPN",
+      "error": "nessuna partita valida nel CSV stagionale",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-01-01",
+          "to": "2026-03-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-04-01",
+          "to": "2026-06-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-07-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 400: Bad Request"
+        }
+      ],
+      "range_start": "2026-01-01",
+      "range_end": "2026-12-31",
+      "events": 0
+    },
+    "gre.1": {
+      "status": "loaded",
+      "events": 48,
+      "completed": 42,
+      "source": "football-data.co.uk",
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "future_fixtures": 6,
+      "future_source": "football-data.co.uk fixtures.csv"
+    },
+    "aut.1": {
       "status": "unavailable",
       "source": "ESPN",
       "error": "nessuna partita valida nel CSV stagionale",
@@ -19642,13 +19611,44 @@
       "range_end": "2026-12-31",
       "events": 0
     },
-    "ned.supercup": {
+    "rou.1": {
+      "status": "unavailable",
+      "source": "ESPN",
+      "error": "nessuna partita valida nel CSV stagionale",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 400: Bad Request"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0
+    },
+    "uefa.europa.conf": {
       "status": "complete_window",
       "chunks_ok": 22,
       "chunks_failed": [],
       "range_start": "2026-10-10",
       "range_end": "2026-10-31",
-      "events": 0,
+      "events": 36,
       "source": "ESPN"
     },
     "ned.knvb_cup": {
@@ -19658,69 +19658,6 @@
       "range_start": "2026-10-10",
       "range_end": "2026-10-31",
       "events": 26,
-      "source": "ESPN"
-    },
-    "eng.charity": {
-      "status": "complete_window",
-      "chunks_ok": 22,
-      "chunks_failed": [],
-      "range_start": "2026-10-10",
-      "range_end": "2026-10-31",
-      "events": 0,
-      "source": "ESPN"
-    },
-    "ita.coppa_italia": {
-      "status": "complete_window",
-      "chunks_ok": 22,
-      "chunks_failed": [],
-      "range_start": "2026-10-10",
-      "range_end": "2026-10-31",
-      "events": 0,
-      "source": "ESPN"
-    },
-    "uefa.europa": {
-      "status": "complete_window",
-      "chunks_ok": 22,
-      "chunks_failed": [],
-      "range_start": "2026-10-10",
-      "range_end": "2026-10-31",
-      "events": 36,
-      "source": "ESPN"
-    },
-    "sco.cis": {
-      "status": "complete_window",
-      "chunks_ok": 22,
-      "chunks_failed": [],
-      "range_start": "2026-10-10",
-      "range_end": "2026-10-31",
-      "events": 1,
-      "source": "ESPN"
-    },
-    "sco.fa_cup": {
-      "status": "complete_window",
-      "chunks_ok": 22,
-      "chunks_failed": [],
-      "range_start": "2026-10-10",
-      "range_end": "2026-10-31",
-      "events": 20,
-      "source": "ESPN"
-    },
-    "ger.super_cup": {
-      "status": "complete_window",
-      "chunks_ok": 22,
-      "chunks_failed": [],
-      "range_start": "2026-10-10",
-      "range_end": "2026-10-31",
-      "events": 0,
-      "source": "ESPN"
-    },
-    "esp.super_cup": {
-      "status": "complete_window",
-      "chunks_ok": 22,
-      "chunks_failed": [],
-      "range_start": "2026-10-10",
-      "range_end": "2026-10-31",
-      "events": 0,
       "source": "ESPN"
     },
     "fra.coupe_de_france": {
@@ -19741,15 +19678,6 @@
       "events": 0,
       "source": "ESPN"
     },
-    "eng.league_cup": {
-      "status": "complete_window",
-      "chunks_ok": 22,
-      "chunks_failed": [],
-      "range_start": "2026-10-10",
-      "range_end": "2026-10-31",
-      "events": 8,
-      "source": "ESPN"
-    },
     "por.taca_de_portugal": {
       "status": "complete_window",
       "chunks_ok": 22,
@@ -19757,15 +19685,6 @@
       "range_start": "2026-10-10",
       "range_end": "2026-10-31",
       "events": 27,
-      "source": "ESPN"
-    },
-    "ger.dfb_pokal": {
-      "status": "complete_window",
-      "chunks_ok": 22,
-      "chunks_failed": [],
-      "range_start": "2026-10-10",
-      "range_end": "2026-10-31",
-      "events": 16,
       "source": "ESPN"
     },
     "fra.super_cup": {
@@ -19777,7 +19696,16 @@
       "events": 0,
       "source": "ESPN"
     },
-    "ita.super_cup": {
+    "sco.cis": {
+      "status": "complete_window",
+      "chunks_ok": 22,
+      "chunks_failed": [],
+      "range_start": "2026-10-10",
+      "range_end": "2026-10-31",
+      "events": 1,
+      "source": "ESPN"
+    },
+    "ita.coppa_italia": {
       "status": "complete_window",
       "chunks_ok": 22,
       "chunks_failed": [],
@@ -19795,13 +19723,22 @@
       "events": 2,
       "source": "ESPN"
     },
-    "uefa.europa.conf": {
+    "ger.dfb_pokal": {
       "status": "complete_window",
       "chunks_ok": 22,
       "chunks_failed": [],
       "range_start": "2026-10-10",
       "range_end": "2026-10-31",
-      "events": 36,
+      "events": 16,
+      "source": "ESPN"
+    },
+    "ned.supercup": {
+      "status": "complete_window",
+      "chunks_ok": 22,
+      "chunks_failed": [],
+      "range_start": "2026-10-10",
+      "range_end": "2026-10-31",
+      "events": 0,
       "source": "ESPN"
     },
     "uefa.champions": {
@@ -19811,6 +19748,69 @@
       "range_start": "2026-10-10",
       "range_end": "2026-10-31",
       "events": 36,
+      "source": "ESPN"
+    },
+    "ita.super_cup": {
+      "status": "complete_window",
+      "chunks_ok": 22,
+      "chunks_failed": [],
+      "range_start": "2026-10-10",
+      "range_end": "2026-10-31",
+      "events": 0,
+      "source": "ESPN"
+    },
+    "sco.fa_cup": {
+      "status": "complete_window",
+      "chunks_ok": 22,
+      "chunks_failed": [],
+      "range_start": "2026-10-10",
+      "range_end": "2026-10-31",
+      "events": 20,
+      "source": "ESPN"
+    },
+    "ger.super_cup": {
+      "status": "complete_window",
+      "chunks_ok": 22,
+      "chunks_failed": [],
+      "range_start": "2026-10-10",
+      "range_end": "2026-10-31",
+      "events": 0,
+      "source": "ESPN"
+    },
+    "uefa.europa": {
+      "status": "complete_window",
+      "chunks_ok": 22,
+      "chunks_failed": [],
+      "range_start": "2026-10-10",
+      "range_end": "2026-10-31",
+      "events": 36,
+      "source": "ESPN"
+    },
+    "eng.league_cup": {
+      "status": "complete_window",
+      "chunks_ok": 22,
+      "chunks_failed": [],
+      "range_start": "2026-10-10",
+      "range_end": "2026-10-31",
+      "events": 8,
+      "source": "ESPN"
+    },
+    "eng.charity": {
+      "status": "complete_window",
+      "chunks_ok": 22,
+      "chunks_failed": [],
+      "range_start": "2026-10-10",
+      "range_end": "2026-10-31",
+      "events": 0,
+      "source": "ESPN"
+    },
+    "esp.super_cup": {
+      "status": "complete_window",
+      "chunks_ok": 22,
+      "chunks_failed": [],
+      "range_start": "2026-10-10",
+      "range_end": "2026-10-31",
+      "events": 0,
       "source": "ESPN"
     },
     "tur.turkiye_kupasi": {

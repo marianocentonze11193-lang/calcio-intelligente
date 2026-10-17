@@ -1525,9 +1525,9 @@
       "expected_away_goals": 1.63,
       "sample_matches": 4,
       "archived_at": "2026-10-15T09:51:33.524198+00:00",
-      "outcome": null,
-      "home_goals": null,
-      "away_goals": null,
+      "outcome": "1",
+      "home_goals": 3,
+      "away_goals": 2,
       "odds_markets": {
         "over_under_2_5": {
           "over": 1.43,
@@ -1577,7 +1577,8 @@
         "draw": -0.194,
         "away": -0.1128
       },
-      "odds_snapshot_at": "2026-10-16T08:38:27+00:00"
+      "odds_snapshot_at": "2026-10-16T08:38:27+00:00",
+      "settled_at": "2026-10-17T20:54:49.289949+00:00"
     },
     {
       "id": "2026-10-17-Scottish Premiership-Dundee-Rangers",
@@ -1608,9 +1609,9 @@
       "expected_away_goals": 1.1,
       "sample_matches": 4,
       "archived_at": "2026-10-15T09:51:33.524211+00:00",
-      "outcome": null,
-      "home_goals": null,
-      "away_goals": null,
+      "outcome": "X",
+      "home_goals": 2,
+      "away_goals": 2,
       "odds_markets": {
         "over_under_2_5": {
           "over": 1.5,
@@ -1660,7 +1661,8 @@
         "draw": 0.4337,
         "away": -0.3279
       },
-      "odds_snapshot_at": "2026-10-16T08:38:27+00:00"
+      "odds_snapshot_at": "2026-10-16T08:38:27+00:00",
+      "settled_at": "2026-10-17T20:54:49.289975+00:00"
     },
     {
       "id": "2026-10-18-Serie A-Udinese-Lecce",
@@ -3388,9 +3390,10 @@
       "expected_away_goals": 1.85,
       "sample_matches": 0,
       "archived_at": "2026-10-15T10:09:22.994951+00:00",
-      "outcome": null,
-      "home_goals": null,
-      "away_goals": null
+      "outcome": "X",
+      "home_goals": 0,
+      "away_goals": 0,
+      "settled_at": "2026-10-17T20:54:49.290133+00:00"
     },
     {
       "id": "2026-10-18-La Liga-Osasuna-Racing Santander",
@@ -8272,14 +8275,14 @@
       "away_goals": null
     }
   ],
-  "updated_at": "2026-10-17T20:49:07.890931+00:00",
+  "updated_at": "2026-10-17T20:54:49.290472+00:00",
   "metrics": {
-    "settled_matches": 40,
-    "accuracy_1x2": 50.0,
-    "brier_score_1x2": 0.6348,
-    "log_loss_1x2": 1.0438,
+    "settled_matches": 43,
+    "accuracy_1x2": 48.84,
+    "brier_score_1x2": 0.6383,
+    "log_loss_1x2": 1.0488,
     "calibration_1x2": {
-      "evaluated_matches": 40,
+      "evaluated_matches": 43,
       "minimum_matches_required": 30,
       "by_outcome": {
         "1": [
@@ -8291,15 +8294,15 @@
           },
           {
             "range": "20-40%",
-            "matches": 13,
-            "mean_predicted_probability": 28.27,
-            "observed_frequency": 30.77
+            "matches": 15,
+            "mean_predicted_probability": 27.9,
+            "observed_frequency": 26.67
           },
           {
             "range": "40-60%",
-            "matches": 11,
-            "mean_predicted_probability": 48.85,
-            "observed_frequency": 36.36
+            "matches": 12,
+            "mean_predicted_probability": 49.0,
+            "observed_frequency": 41.67
           },
           {
             "range": "60-80%",
@@ -8323,9 +8326,9 @@
           },
           {
             "range": "20-40%",
-            "matches": 25,
-            "mean_predicted_probability": 24.48,
-            "observed_frequency": 20.0
+            "matches": 28,
+            "mean_predicted_probability": 24.49,
+            "observed_frequency": 25.0
           }
         ],
         "2": [
@@ -8337,15 +8340,15 @@
           },
           {
             "range": "20-40%",
-            "matches": 14,
-            "mean_predicted_probability": 27.14,
-            "observed_frequency": 42.86
+            "matches": 16,
+            "mean_predicted_probability": 28.02,
+            "observed_frequency": 37.5
           },
           {
             "range": "40-60%",
-            "matches": 10,
-            "mean_predicted_probability": 49.6,
-            "observed_frequency": 70.0
+            "matches": 11,
+            "mean_predicted_probability": 50.2,
+            "observed_frequency": 63.64
           },
           {
             "range": "60-80%",
@@ -8367,7 +8370,7 @@
   },
   "metrics_by_league": {},
   "model_vs_market_metrics": {
-    "settled_matches_with_model_and_odds": 18,
+    "settled_matches_with_model_and_odds": 20,
     "minimum_matches_required": 30,
     "model": null,
     "market": null,
@@ -8384,7 +8387,7 @@
       "note": "Servono almeno 30 partite concluse con quote e probabilità per questo mercato."
     },
     "over_under_2_5": {
-      "settled_matches_with_model_and_odds": 18,
+      "settled_matches_with_model_and_odds": 20,
       "minimum_matches_required": 30,
       "model": null,
       "market": null,
@@ -8409,7 +8412,7 @@
     }
   },
   "result_matching": {
-    "checked_at": "2026-10-17T20:49:07.890909+00:00",
+    "checked_at": "2026-10-17T20:54:49.290457+00:00",
     "unresolved_past_matches": 3,
     "examples": [
       {
@@ -8459,12 +8462,12 @@
         "context_matches_archived": 26
       },
       "no_recent_european_match": {
-        "settled_matches": 32,
-        "accuracy_1x2": 50.0,
-        "brier_score_1x2": 0.6611,
-        "log_loss_1x2": 1.0787,
+        "settled_matches": 35,
+        "accuracy_1x2": 48.57,
+        "brier_score_1x2": 0.6631,
+        "log_loss_1x2": 1.082,
         "calibration_1x2": {
-          "evaluated_matches": 32,
+          "evaluated_matches": 35,
           "minimum_matches_required": 30,
           "by_outcome": {
             "1": [
@@ -8476,15 +8479,15 @@
               },
               {
                 "range": "20-40%",
-                "matches": 11,
-                "mean_predicted_probability": 28.1,
-                "observed_frequency": 36.36
+                "matches": 13,
+                "mean_predicted_probability": 27.7,
+                "observed_frequency": 30.77
               },
               {
                 "range": "40-60%",
-                "matches": 8,
-                "mean_predicted_probability": 48.73,
-                "observed_frequency": 50.0
+                "matches": 9,
+                "mean_predicted_probability": 48.94,
+                "observed_frequency": 55.56
               },
               {
                 "range": "60-80%",
@@ -8508,9 +8511,9 @@
               },
               {
                 "range": "20-40%",
-                "matches": 20,
-                "mean_predicted_probability": 24.8,
-                "observed_frequency": 15.0
+                "matches": 23,
+                "mean_predicted_probability": 24.77,
+                "observed_frequency": 21.74
               }
             ],
             "2": [
@@ -8522,15 +8525,15 @@
               },
               {
                 "range": "20-40%",
-                "matches": 10,
-                "mean_predicted_probability": 28.03,
-                "observed_frequency": 40.0
+                "matches": 12,
+                "mean_predicted_probability": 29.06,
+                "observed_frequency": 33.33
               },
               {
                 "range": "40-60%",
-                "matches": 8,
-                "mean_predicted_probability": 49.66,
-                "observed_frequency": 75.0
+                "matches": 9,
+                "mean_predicted_probability": 50.39,
+                "observed_frequency": 66.67
               },
               {
                 "range": "60-80%",
