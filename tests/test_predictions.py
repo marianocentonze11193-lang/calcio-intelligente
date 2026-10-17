@@ -40,6 +40,28 @@ MARKET_SPEC.loader.exec_module(market_module)
 
 
 class PredictionModelTests(unittest.TestCase):
+    def test_motivation_context_uses_table_signals_without_claiming_final_outcomes(self):
+        completed = [
+            ("Team A", "Team C", 2, 0), ("Team A", "Team D", 1, 0),
+            ("Team A", "Team E", 3, 1), ("Team A", "Team F", 2, 1),
+            ("Team A", "Team G", 1, 0),
+            ("Team B", "Team C", 1, 0), ("Team B", "Team D", 2, 0),
+            ("Team B", "Team E", 1, 1), ("Team B", "Team F", 0, 1),
+            ("Team B", "Team G", 1, 0),
+        ]
+        table = module.build_motivation_table(completed)
+        context = module.motivation_for_match("Team A", "Team B", table)
+        self.assertEqual(context["status"], "indizi_classifica")
+        self.assertEqual(context["home"]["position"], 1)
+        self.assertEqual(context["home"]["played"], 5)
+        self.assertIn("possibile corsa al titolo", context["home"]["signals"][0])
+        self.assertIn("non vengono dichiarati", context["note"])
+
+    def test_motivation_context_is_cautious_when_table_is_missing(self):
+        context = module.motivation_for_match("Team A", "Team B", {})
+        self.assertEqual(context["status"], "non_verificabile")
+        self.assertIn("non dedotte", context["note"])
+
     def test_european_fatigue_context_flags_short_rest_and_away_trip(self):
         match = {
             "date": "2026-10-14", "home_team": "Inter Milan", "away_team": "Arsenal",
