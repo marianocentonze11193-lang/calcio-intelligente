@@ -36,6 +36,12 @@
     .market-chip { display: inline-block; margin: 3px 5px 3px 0; padding: 7px 10px; border-radius: 8px; font-size: 13px; font-weight: 800; }
     .market-green { background: #123b2c; border: 1px solid #2b9b6b; color: #a4f2ca; }
     .market-no-pick { color: #f3d28a; background: #443819; border: 1px solid #b58a26; border-radius: 8px; padding: 9px; font-size: 12px; line-height: 1.5; }
+    .betting-advice { margin: 10px 0; padding: 12px 14px; border: 1px solid #b8dccc; border-left: 4px solid #087f5b; border-radius: 10px; background: #effaf4; }
+    .betting-advice strong { color: #07553d; font-size: 13px; }
+    .betting-advice p { margin: 5px 0 0; color: #203b32; font-size: 14px; line-height: 1.6; }
+    .technical-details { margin-top: 12px; border-top: 1px solid #d5e0eb; padding-top: 10px; }
+    .technical-details summary { color: #075985; font-size: 13px; font-weight: 700; cursor: pointer; }
+    .technical-details[open] summary { margin-bottom: 10px; }
     .history-item { background: #111925; border: 1px solid #303b4d; border-radius: 10px; padding: 12px; margin: 10px 0; }
     .history-result { font-weight: 800; color: #a4f2ca; }
     .history-pending { color: #f3d28a; }
@@ -134,6 +140,11 @@
     .availability-heading { color: #075985; }
     .availability-list { color: #344b62; }
     .market-green { color: #07553d; background: #e2f5eb; border-color: #68ad8a; }
+    .betting-advice { border-color: #b8dccc; border-left-color: #087f5b; background: #effaf4; }
+    .betting-advice strong { color: #07553d; }
+    .betting-advice p { color: #203b32; }
+    .technical-details { border-top-color: #d5e0eb; }
+    .technical-details summary { color: #075985; }
     .market-no-pick { color: #75400a; background: #fff4d9; border-color: #d6a84b; }
     .history-metric { color: #20364f; background: #edf4fb; border-color: #d1deeb; }
     .history-metric strong, .history-result { color: #08704f; }
@@ -149,7 +160,7 @@
       .probability strong { font-size: 15px; }
     }
 </style>
-  <script src="./app.js?v=20261017-35" defer></script>
+  <script src="./app.js?v=20261017-36" defer></script>
 </head>
 <body>
   <header>
@@ -172,8 +183,8 @@
       <p class="muted"><a href="./competitions.html">Apri calendari stagionali e classifiche →</a></p>
     </section>
     <section class="panel">
-      <h2>Partite e probabilità</h2>
-      <p class="muted">Stime sperimentali basate su Poisson, statistiche casa/trasferta, prior di lega e correzione Elo. Ogni partita è classificata come pronostico valutabile, stima preliminare o NO BET; la quantità di dati non equivale ad accuratezza verificata. Date, squadre e punteggi vengono sottoposti a controlli di coerenza prima del calcolo. Sono incluse le massime divisioni nazionali per cui è disponibile uno storico football-data: Inghilterra, Spagna, Germania, Italia, Francia, Scozia, Paesi Bassi, Portogallo, Belgio, Turchia, Austria, Danimarca, Grecia, Finlandia, Irlanda, Norvegia, Polonia, Romania, Svezia e Svizzera. Il calendario include anche Champions League, Europa League, Conference League e le principali coppe nazionali quando ESPN le rende disponibili. Per le coppe, le stime riutilizzano lo storico nazionale dei club; se le squadre non sono abbinabili o i dati sono insufficienti, la partita resta NO BET. Il calendario può essere incompleto e la correzione per impegni ravvicinati è sperimentale.</p>
+      <h2>Partite e consigli</h2>
+      <p class="muted">Per ogni partita trovi prima una lettura breve e un eventuale esito da valutare; le probabilità e i dettagli tecnici restano disponibili aprendo la sezione dedicata. I consigli sono filtrati in base allo storico: se i dati sono pochi, c'è una coppa ravvicinata o la quota non è abbastanza interessante, la scelta migliore può essere non giocare. Il calendario copre i principali campionati nazionali, Champions League, Europa League, Conference League e alcune coppe nazionali quando le fonti le rendono disponibili. Le stime delle coppe restano preliminari perché il modello non è ancora validato su uno storico specifico di quelle competizioni.</p>
       <div class="filters">
         <label for="country-filter" class="muted">Nazione<select id="country-filter"><option value="">Tutte le nazioni</option></select></label>
         <label for="league-filter" class="muted">Competizione<select id="league-filter"><option value="">Tutte le competizioni</option></select></label>
