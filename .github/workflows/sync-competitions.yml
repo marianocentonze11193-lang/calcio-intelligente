@@ -1,0 +1,53 @@
+name: Sincronizzazione calendari e classifiche
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 4 * * *"
+  push:
+    paths:
+      - "scripts/sync_competitions.py"
+      - "tests/test_competitions.py"
+      - ".github/workflows/sync-competitions.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-calendari-classifiche
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Configura Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verifica parser e controlli
+        run: python -m unittest tests.test_competitions -v
+      - name: Scarica calendari stagionali e classifiche
+        run: python scripts/sync_competitions.py
+      - name: Controlla archivio prodotto
+        run: python -c "import json; d=json.load(open('data/competition_data.json', encoding='utf-8')); assert isinstance(d.get('fixtures'), list); assert isinstance(d.get('standings'), dict); assert d.get('summary', {}).get('competitions_configured', 0) >= 20; print(d['summary'])"
+      - name: Pubblica archivio
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/competition_data.json
+          if git diff --cached --quiet; then
+            echo "Nessuna variazione dell'archivio."
+            exit 0
+          fi
+          git commit -m "Aggiorna calendari stagionali e classifiche"
+          for attempt in 1 2 3; do
+            git pull --rebase origin main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 2
+          done
+          echo "Pubblicazione fallita dopo tre tentativi."
+          exit 1
