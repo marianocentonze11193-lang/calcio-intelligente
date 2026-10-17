@@ -799,6 +799,38 @@
       "resolved_name": "Paredes",
       "country": "Portugal",
       "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "comoitaly": {
+      "latitude": 45.80819,
+      "longitude": 9.0832,
+      "timezone": "Europe/Rome",
+      "resolved_name": "Como",
+      "country": "Italy",
+      "cached_at": "2026-10-17T21:28:51.779572+00:00"
+    },
+    "kaunaslithuania": {
+      "latitude": 54.90156,
+      "longitude": 23.90909,
+      "timezone": "Europe/Vilnius",
+      "resolved_name": "Kaunas",
+      "country": "Lithuania",
+      "cached_at": "2026-10-17T21:28:51.779572+00:00"
+    },
+    "grazaustria": {
+      "latitude": 47.06733,
+      "longitude": 15.44197,
+      "timezone": "Europe/Vienna",
+      "resolved_name": "Graz",
+      "country": "Austria",
+      "cached_at": "2026-10-17T21:28:51.779572+00:00"
+    },
+    "felgueirasportugal": {
+      "latitude": 41.36806,
+      "longitude": -8.19396,
+      "timezone": "Europe/Lisbon",
+      "resolved_name": "Felgueiras",
+      "country": "Portugal",
+      "cached_at": "2026-10-17T21:28:51.779572+00:00"
     }
   },
   "forecasts": {
