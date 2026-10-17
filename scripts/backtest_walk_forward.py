@@ -176,7 +176,7 @@ def main():
             }
             all_model.extend(item["variants"]["model"] for item in evaluated if "model" in item["variants"])
             all_baseline.extend(item["baseline"] for item in evaluated)
-            for name in ("poisson_only", "poisson_elo", "poisson_form"):
+            for name in ("poisson_only", "poisson_elo", "poisson_form", "poisson_elo_form"):
                 all_variants[name].extend(item["variants"][name] for item in evaluated if name in item["variants"])
             print(f"{league}: {len(results)} risultati sorgente, {len(evaluated)} previsioni walk-forward.")
         except (urllib.error.URLError, TimeoutError, OSError, ValueError, KeyError, TypeError) as error:
