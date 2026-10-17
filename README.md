@@ -12,9 +12,22 @@ Dashboard statica di pronostici calcistici con aggiornamento automatico tramite 
 - Probabilità 1X2, doppia chance, Over/Under, Goal/No Goal e risultati esatti stimati.
 - Commenti Gemini quando il secret `GEMINI_API_KEY` è configurato; l'AI non inventa informazioni non fornite.
 - Quote 1X2 e, quando disponibili nella risposta API-Football, Over/Under 1,5, 2,5 e 3,5, Gol/No Gol e doppia chance. Confronto con le probabilità del modello, stima del valore atteso teorico e metriche storiche separate per Over/Under e Gol/No Gol.
-- Archivio della prima stima e verifica dei risultati finali, con controlli su data, squadre, punteggi e coerenza delle probabilità. Accuratezza 1X2 e Brier score vengono pubblicati solo dopo almeno 30 partite valutate; anche le metriche per campionato richiedono almeno 30 esiti verificati. Un confronto separato misura modello contro mercato sugli stessi match conclusi con quote archiviate, usando accuratezza, Brier score e log loss.
+- Archivio immutabile della prima previsione disponibile per partita, con versione descrittiva del modello, orario del calcio d'inizio, timestamp di generazione e probabilità pre-partita. Gli snapshot dello stesso giorno sono esclusi se l'orario manca o il kickoff è già passato, per ridurre il rischio di leakage temporale.
+- Audit probabilistico su risultati verificati: accuratezza 1X2, Brier score, log loss e calibrazione per fasce di probabilità. Le metriche complessive vengono pubblicate da almeno 30 partite valutate; i campioni per singolo campionato o fascia possono essere molto più piccoli e instabili. Il confronto modello-mercato usa le stesse partite concluse con quote archiviate.
 - Filtri per nazione e competizione; partite ordinate per nazione, competizione, data e orario. Il filtro nazione viene popolato automaticamente dalle partite effettivamente caricate.
 - Aggiornamento pianificato ogni ora via GitHub Actions.
+
+## Audit della qualità dei pronostici
+
+L'archivio valuta la prima fotografia conservata per ogni partita, non l'ultima probabilità aggiornata dopo aver conosciuto il risultato. Il controllo del kickoff usa il fuso orario della competizione; se una partita è in programma oggi ma non ha un orario attendibile, lo snapshot viene rimandato. I record storici creati prima del tracciamento della versione restano legacy: non è possibile ricostruire retroattivamente una versione del modello o un timestamp pre-partita che non era stato salvato.
+
+Le metriche da leggere insieme sono:
+- **Accuracy 1X2**: quota di esiti corretti scegliendo la probabilità più alta; da sola ignora quanto erano calibrate le probabilità.
+- **Brier score e log loss**: valutano le probabilità assegnate ai tre esiti; più bassi è meglio.
+- **Calibrazione**: confronta probabilità media prevista e frequenza osservata per fasce e per esito.
+- **Modello contro mercato**: confronto sulle stesse partite per cui esistono probabilità e quote archiviate, senza ricostruire quote a posteriori.
+
+Queste metriche sono un audit prospettico delle previsioni effettivamente archiviate, non un backtest storico completo ricostruito da zero. Un backtest senza leakage richiede di rigenerare ogni previsione usando soltanto dati disponibili prima del relativo kickoff e di confrontarla con una baseline sullo stesso periodo. Finché non è stato completato e validato questo passaggio, non si dichiara dimostrato alcun vantaggio del modello, né si attivano automaticamente fattori sperimentali (motivazione, stanchezza da coppe o indisponibilità) come correzioni delle probabilità.
 
 ## Limiti e trasparenza
 - Elo e Poisson sono un modello sperimentale; non è ancora dimostrata la sua redditività e la calibrazione va misurata su un campione storico ampio.
