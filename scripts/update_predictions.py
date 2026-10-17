@@ -885,7 +885,7 @@ def build_betting_recommendations(probabilities, home_sample, away_sample, recen
         )
     return labels, chosen, advice
 
-def make_forecast(home, away, league, match_date, kickoff, history, league_home_avg, league_away_avg, elo_ratings=None, recent_form=None, european_matches=None, motivation_table=None, apply_form_adjustment=True):
+def make_forecast(home, away, league, match_date, kickoff, history, league_home_avg, league_away_avg, elo_ratings=None, recent_form=None, european_matches=None, motivation_table=None, apply_form_adjustment=True, apply_competition_adjustment=True):
     hs, aws = history[home], history[away]
 
     def smooth(goals, games, prior):
@@ -920,11 +920,12 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
         expected_away = max(0.15, min(4.5, expected_away * away_form_factor))
     recent_competition_context = european_fatigue_context(home, away, match_date, european_matches)
     european_context = [item for item in recent_competition_context if item.get("competition") in EUROPEAN_ESPN_COMPETITIONS.values()]
-    for item in recent_competition_context:
-        if team_key(item["team"]) == team_key(home):
-            expected_home = max(0.15, expected_home * item["attack_factor"])
-        elif team_key(item["team"]) == team_key(away):
-            expected_away = max(0.15, expected_away * item["attack_factor"])
+    if apply_competition_adjustment:
+        for item in recent_competition_context:
+            if team_key(item["team"]) == team_key(home):
+                expected_home = max(0.15, expected_home * item["attack_factor"])
+            elif team_key(item["team"]) == team_key(away):
+                expected_away = max(0.15, expected_away * item["attack_factor"])
     motivation_context = motivation_for_match(home, away, motivation_table or {})
     expected_home, expected_away, motivation_adjustment = apply_motivation_adjustment(
         expected_home, expected_away, motivation_context
@@ -1022,7 +1023,7 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
         "european_fatigue_status": "rilevato" if european_context else "nessuna gara europea recente verificata",
         "recent_competition_status": "impegno ravvicinato rilevato" if recent_competition_context else "nessun impegno recente verificato",
         "competition_type": "europea" if league in EUROPEAN_ESPN_COMPETITIONS.values() else "nazionale" if league in NATIONAL_CUP_ESPN_COMPETITIONS.values() else "campionato",
-        "method": "Poisson casa/trasferta + prior di lega + Elo; forma ultime 5 gare solo informativa, non applicata agli expected goals; contesto impegni UEFA/coppe nazionali sperimentale; non validato per coppe",
+        "method": "Poisson casa/trasferta + prior di lega + Elo; forma recente e impegni UEFA/coppe nazionali solo informativi, non applicati agli expected goals finché non validati",
         "availability_data": {
             "status": "non_integrata",
             "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
@@ -1263,7 +1264,7 @@ def main():
         for home, away, match_date, kickoff in fixtures:
             home = normalized_history.get(team_key(home), home)
             away = normalized_history.get(team_key(away), away)
-            forecast = make_forecast(home, away, league_name, match_date, kickoff, history, league_home_avg, league_away_avg, elo_ratings, recent_form, recent_competition_matches, motivation_table, apply_form_adjustment=False)
+            forecast = make_forecast(home, away, league_name, match_date, kickoff, history, league_home_avg, league_away_avg, elo_ratings, recent_form, recent_competition_matches, motivation_table, apply_form_adjustment=False, apply_competition_adjustment=False)
             if forecast:
                 fixture_key = (match_date.isoformat(), team_key(home), team_key(away))
                 quote = fixture_odds.get(fixture_key)
@@ -1340,7 +1341,7 @@ def main():
             forecast = make_forecast(
                 home_team, away_team, competition_name, match_date, fixture.get("kickoff", ""),
                 combined_history, home_avg, away_avg, combined_elo, combined_recent, competition_calendar, {},
-                apply_form_adjustment=False,
+                apply_form_adjustment=False, apply_competition_adjustment=False,
             )
             forecast = declassify_cup_forecast(forecast, competition_name)
             forecast["source_calendar"] = fixture.get("source", "ESPN")
@@ -1382,7 +1383,7 @@ def main():
     result = {
         "updated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
         "source": SOURCE, "season": season,
-        "model": "Poisson con statistiche casa/trasferta, prior di lega ed Elo; forma recente solo informativa; contesto coppe UEFA/nazionali sperimentale e non validato",
+        "model": "Poisson con statistiche casa/trasferta, prior di lega ed Elo; forma recente e contesto coppe UEFA/nazionali solo informativi finché non validati",
         "competition_calendar": {
             "source": "ESPN", "range_start": (today - timedelta(days=4)).isoformat(),
             "range_end": last_date.isoformat(), "events_loaded": len(competition_calendar),
