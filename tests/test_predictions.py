@@ -108,6 +108,15 @@ class PredictionModelTests(unittest.TestCase):
         self.assertFalse(missing[2]["applied"])
         self.assertEqual(missing[2]["status"], "non_verificabile")
 
+    def test_publication_keeps_all_no_bet_matches_beyond_old_limit(self):
+        forecasts = [
+            {"id": str(index), "status": "NO BET"}
+            for index in range(93)
+        ]
+        published = module.published_forecast_lists(forecasts)
+        self.assertEqual(len(published["no_bet_matches"]), 93)
+        self.assertEqual(published["matches"], [])
+
     def test_motivation_context_is_cautious_when_table_is_missing(self):
         context = module.motivation_for_match("Team A", "Team B", {})
         self.assertEqual(context["status"], "non_verificabile")
