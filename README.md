@@ -75,6 +75,12 @@ Il flusso `scripts/enrich_with_api_football_odds.py` riutilizza il secret `API_F
 
 Le quote migliori tra quelle restituite vengono confrontate con le probabilità del modello per calcolare l’EV teorico. Un EV positivo non prova che esista un vantaggio reale: la calibrazione deve essere verificata sui risultati storici.
 
+## Expected Goals (xG) e calibrazione per esito
+
+L'adattatore sperimentale `scripts/xg_provider_understat.py` legge xG storici da Understat per Premier League, La Liga, Bundesliga, Serie A e Ligue 1. Sono i cinque campionati mappati esplicitamente dal provider, non la copertura totale dell'app. Altre leghe e coppe non vengono riempite con valori stimati o copiati da altre competizioni: quando la fonte non fornisce xG, il dato resta assente.
+
+**Gli xG non modificano ancora le probabilità pubblicate.** Prima dell'attivazione serve un backtest cronologico che abbini correttamente squadra e data, usi solo xG disponibili prima del calcio d'inizio e dimostri un miglioramento fuori campione di Brier score/log loss rispetto al modello corrente e alle baseline. Un adattatore che scarica dati non dimostra, da solo, che quei dati migliorino i pronostici. Le metriche di calibrazione per 1, X e 2 sono separate e scartano vettori di probabilità incompleti, non finiti o non normalizzati.
+
 ## Infortuni, squalifiche e formazioni
 
 Il flusso opzionale `scripts/enrich_with_availability.py` usa API-Football (API-Sports) per cercare segnalazioni di infortuni/squalifiche e, vicino al calcio d'inizio, le formazioni disponibili. Richiede il secret GitHub Actions `API_FOOTBALL_KEY`. Se il secret non è configurato, le probabilità continuano a essere generate e l'app mostra chiaramente che i dati di disponibilità non sono configurati.
