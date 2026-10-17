@@ -205,8 +205,10 @@ def load_league_xg(league_name, today):
     for season in range(START_DATE.year, today.year + 1):
         try:
             rows = xg_provider.fetch_league_xg(league_name, season)
-        except (urllib.error.URLError, TimeoutError, OSError, ValueError, TypeError):
+        except (urllib.error.URLError, TimeoutError, OSError, ValueError, TypeError) as error:
+            print(f"AVVISO Understat {league_name}/{season}: {error}")
             rows = []
+        print(f"Understat {league_name}/{season}: {len(rows)} osservazioni xG valide.")
         for row in rows:
             try:
                 match_date = date.fromisoformat(row["date"])
