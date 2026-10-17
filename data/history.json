@@ -315,9 +315,9 @@
       "expected_away_goals": 1.0,
       "sample_matches": 3,
       "archived_at": "2026-10-15T09:51:33.524008+00:00",
-      "outcome": null,
-      "home_goals": null,
-      "away_goals": null,
+      "outcome": "2",
+      "home_goals": 0,
+      "away_goals": 2,
       "odds_1x2": {
         "home": 3.28,
         "draw": 3.88,
@@ -367,7 +367,8 @@
           },
           "overround": 7.06
         }
-      }
+      },
+      "settled_at": "2026-10-17T13:45:46.248341+00:00"
     },
     {
       "id": "2026-10-17-Serie A-Venezia-Napoli",
@@ -6729,9 +6730,9 @@
       "away_goals": null
     }
   ],
-  "updated_at": "2026-10-17T12:55:07.906226+00:00",
+  "updated_at": "2026-10-17T13:45:46.248996+00:00",
   "metrics": {
-    "settled_matches": 5,
+    "settled_matches": 6,
     "accuracy_1x2": null,
     "brier_score_1x2": null,
     "minimum_matches_required": 30,
@@ -6739,7 +6740,7 @@
   },
   "metrics_by_league": {},
   "model_vs_market_metrics": {
-    "settled_matches_with_model_and_odds": 3,
+    "settled_matches_with_model_and_odds": 4,
     "minimum_matches_required": 30,
     "model": null,
     "market": null,
@@ -6756,7 +6757,7 @@
       "note": "Servono almeno 30 partite concluse con quote e probabilità per questo mercato."
     },
     "over_under_2_5": {
-      "settled_matches_with_model_and_odds": 3,
+      "settled_matches_with_model_and_odds": 4,
       "minimum_matches_required": 30,
       "model": null,
       "market": null,
@@ -6781,7 +6782,7 @@
     }
   },
   "result_matching": {
-    "checked_at": "2026-10-17T12:55:07.906210+00:00",
+    "checked_at": "2026-10-17T13:45:46.248981+00:00",
     "unresolved_past_matches": 3,
     "examples": [
       {

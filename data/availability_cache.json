@@ -39742,13 +39742,69 @@
       "away_formation": "3-4-2-1",
       "home_coach": "D. Nicola",
       "away_coach": "M. Allegri"
+    },
+    "1494781": {
+      "updated_at": "2026-10-17T13:45:06.569900+00:00",
+      "home_starters": [
+        "M. Lansing",
+        "D. Tufekcic",
+        "S. Svendsen",
+        "J. Júlíusson",
+        "J. Isaksen",
+        "W. Igor",
+        "M. Elvius",
+        "Z. Bytyqi",
+        "H. Bruseth",
+        "D. Ulvestad",
+        "L. Alvheim"
+      ],
+      "away_starters": [
+        "I. Skotheim",
+        "M. Andresen",
+        "U. Charles",
+        "M. Christensen",
+        "Ó. Guðmundsson",
+        "E. Hagen",
+        "S. Kartum",
+        "D. Mbacke",
+        "K. Nessø",
+        "marcus haagensen reed",
+        "Luca Podlech"
+      ],
+      "home_substitutes": [
+        "G. Christensen",
+        "F. Flex",
+        "H. Haugen",
+        "J. Kitolano",
+        "A. Rønning",
+        "A. Sæther",
+        "S. Skeide",
+        "T. Svendsen",
+        "M. Williamsen"
+      ],
+      "away_substitutes": [
+        "S. Vecchia",
+        "E. Osenbroch",
+        "J. Ørsahl",
+        "P. Ngongo",
+        "E. Myrlid",
+        "T. Leikanger",
+        "T. Larsen",
+        "M. Kristensen",
+        "E. Engqvist"
+      ],
+      "home_formation": "",
+      "away_formation": "",
+      "home_coach": "A. Skiri",
+      "away_coach": "K. Rekdal"
     }
   },
   "lineup_attempts": {
     "1549035": "2026-10-16T16:52:05.657004+00:00",
     "1552189": "2026-10-16T17:48:12.151719+00:00",
     "1557430": "2026-10-17T10:45:40.213124+00:00",
-    "1550156": "2026-10-17T12:54:30.029189+00:00"
+    "1550156": "2026-10-17T12:54:30.029189+00:00",
+    "1494781": "2026-10-17T13:45:06.569900+00:00"
   },
   "unavailable_dates": {}
 }
