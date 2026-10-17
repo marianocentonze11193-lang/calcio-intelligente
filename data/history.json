@@ -6728,7 +6728,7 @@
       "away_goals": null
     }
   ],
-  "updated_at": "2026-10-17T03:50:59.903865+00:00",
+  "updated_at": "2026-10-17T04:49:42.962695+00:00",
   "metrics": {
     "settled_matches": 4,
     "accuracy_1x2": null,
@@ -6780,7 +6780,7 @@
     }
   },
   "result_matching": {
-    "checked_at": "2026-10-17T03:50:59.903842+00:00",
+    "checked_at": "2026-10-17T04:49:42.962676+00:00",
     "unresolved_past_matches": 3,
     "examples": [
       {
