@@ -345,7 +345,8 @@ def row_value(row, *names):
 
 
 def number(value):
-    value = str(value or "").strip()
+    # Zero è un punteggio valido (0-0, 1-0, ecc.), non un valore mancante.
+    value = str("" if value is None else value).strip()
     if not value:
         return None
     try:
