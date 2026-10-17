@@ -1022,7 +1022,7 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
         "european_fatigue_status": "rilevato" if european_context else "nessuna gara europea recente verificata",
         "recent_competition_status": "impegno ravvicinato rilevato" if recent_competition_context else "nessun impegno recente verificato",
         "competition_type": "europea" if league in EUROPEAN_ESPN_COMPETITIONS.values() else "nazionale" if league in NATIONAL_CUP_ESPN_COMPETITIONS.values() else "campionato",
-        "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto impegni ravvicinati UEFA/coppe nazionali sperimentale; nessuna correzione motivazionale applicata; non validato per coppe",
+        "method": "Poisson casa/trasferta + prior di lega + Elo; forma ultime 5 gare solo informativa, non applicata agli expected goals; contesto impegni UEFA/coppe nazionali sperimentale; non validato per coppe",
         "availability_data": {
             "status": "non_integrata",
             "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
@@ -1382,7 +1382,7 @@ def main():
     result = {
         "updated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
         "source": SOURCE, "season": season,
-        "model": "Poisson con statistiche nazionali club, prior di lega, Elo, forma recente e contesto impegni UEFA/coppe nazionali sperimentale; non validato per coppe",
+        "model": "Poisson con statistiche casa/trasferta, prior di lega ed Elo; forma recente solo informativa; contesto coppe UEFA/nazionali sperimentale e non validato",
         "competition_calendar": {
             "source": "ESPN", "range_start": (today - timedelta(days=4)).isoformat(),
             "range_end": last_date.isoformat(), "events_loaded": len(competition_calendar),
