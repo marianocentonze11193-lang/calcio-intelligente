@@ -101,6 +101,29 @@ function translateAvailabilityTerm(value) {
   return translated.charAt(0).toLocaleUpperCase("it-IT") + translated.slice(1);
 }
 
+function appendWeather(match, card) {
+  const weather = match && match.weather_context;
+  if (!weather || weather.status !== "disponibile") return;
+  const section = document.createElement("section");
+  section.className = "match-analysis";
+  const title = document.createElement("strong");
+  title.textContent = "METEO PREVISTO · " + (weather.location || weather.venue || "zona dello stadio");
+  const details = document.createElement("p");
+  const values = [];
+  if (weather.description) values.push(weather.description);
+  if (typeof weather.temperature_c === "number") values.push(Math.round(weather.temperature_c) + " °C");
+  if (typeof weather.precipitation_probability_pct === "number") values.push("probabilità pioggia " + weather.precipitation_probability_pct + "%");
+  if (typeof weather.precipitation_mm === "number") values.push("precipitazioni " + weather.precipitation_mm + " mm");
+  if (typeof weather.wind_speed_kmh === "number") values.push("vento " + Math.round(weather.wind_speed_kmh) + " km/h");
+  details.textContent = values.join(" · ") || "Dati meteo parziali.";
+  const note = document.createElement("p");
+  note.className = "match-meta";
+  note.textContent = "Fonte: Open-Meteo · " + (weather.kickoff_local || "orario locale non disponibile") +
+    ". Fattore sperimentale solo informativo: non modifica le percentuali finché un backtest non ne dimostra il beneficio.";
+  section.append(title, details, note);
+  card.append(section);
+}
+
 function appendAvailability(match, card) {
   const data = match && match.availability_data ? match.availability_data : {};
   const section = document.createElement("section");
@@ -211,6 +234,7 @@ function renderMatches(matches) {
         (match.reason || "Dati insufficienti: nessun esito consigliato.") +
         (match.data_quality ? " · Controllo qualità: " + match.data_quality : "");
       card.append(meta, teams, noBet);
+      appendWeather(match, card);
       appendAvailability(match, card);
       if (match.analysis) {
         const analysis = document.createElement("p");
@@ -321,6 +345,7 @@ function renderMatches(matches) {
     card.append(technical);
 
     card.append(meta, teams);
+    appendWeather(match, card);
     const technical = document.createElement("details");
     technical.className = "technical-details";
     const technicalSummary = document.createElement("summary");
