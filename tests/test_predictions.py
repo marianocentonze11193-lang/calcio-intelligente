@@ -40,6 +40,34 @@ MARKET_SPEC.loader.exec_module(market_module)
 
 
 class PredictionModelTests(unittest.TestCase):
+    def test_european_fatigue_context_flags_short_rest_and_away_trip(self):
+        match = {
+            "date": "2026-10-14", "home_team": "Inter Milan", "away_team": "Arsenal",
+            "competition": "Champions League", "status": "completed",
+            "source": "ESPN", "home_goals": 1, "away_goals": 0,
+        }
+        context = module.european_fatigue_context(
+            "Inter", "Arsenal", date(2026, 10, 16), [match]
+        )
+        self.assertEqual(len(context), 2)
+        by_team = {item["team"]: item for item in context}
+        self.assertEqual(by_team["Inter"]["days_before"], 2)
+        self.assertEqual(by_team["Inter"]["venue"], "casa")
+        self.assertEqual(by_team["Inter"]["attack_factor"], 0.95)
+        self.assertEqual(by_team["Arsenal"]["venue"], "trasferta")
+        self.assertEqual(by_team["Arsenal"]["attack_factor"], 0.92)
+
+    def test_european_fatigue_context_ignores_same_day_old_and_unrelated_matches(self):
+        matches = [
+            {"date": "2026-10-16", "home_team": "Inter", "away_team": "Arsenal", "competition": "UCL"},
+            {"date": "2026-10-10", "home_team": "Inter", "away_team": "Arsenal", "competition": "UCL"},
+            {"date": "2026-10-14", "home_team": "Roma", "away_team": "Ajax", "competition": "UEL"},
+        ]
+        self.assertEqual(
+            module.european_fatigue_context("Inter", "Arsenal", date(2026, 10, 16), matches),
+            [],
+        )
+
     def test_api_football_odds_parser_extracts_best_1x2_prices(self):
         payload = {"response": [{
             "bookmakers": [
