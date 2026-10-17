@@ -26,8 +26,8 @@ def rows_to_results(rows, code, start_date, end_date):
         if not home or not away or not match_date or hg is None or ag is None:
             continue
         try:
-            parsed_date = date.fromisoformat(match_date)
-        except ValueError:
+            parsed_date = match_date if isinstance(match_date, date) else date.fromisoformat(str(match_date))
+        except (ValueError, TypeError):
             continue
         home_key, away_key = model.team_key(home), model.team_key(away)
         if not start_date <= parsed_date <= end_date or not home_key or not away_key or home_key == away_key:
