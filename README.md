@@ -3,7 +3,8 @@
 Dashboard statica di pronostici calcistici con aggiornamento automatico tramite GitHub Actions.
 
 ## Funzioni implementate
-- Calendario e risultati da football-data.co.uk, con calendario ESPN di riserva.
+- Calendari stagionali per 20 campionati, tre coppe UEFA e nove coppe nazionali, usando API-Football quando la chiave è configurata; football-data.co.uk ed ESPN sono fonti di riserva. La sincronizzazione controlla date, squadre e punteggi, conserva la cache quando una fonte fallisce e pubblica lo stato per competizione.
+- Pagina dedicata a [calendari e classifiche](./competitions.html), con filtri per competizione, partite future/concluse, fonte e ultimo aggiornamento. Le classifiche di Premier League, La Liga, Serie A e Champions League sono fornite da API-Football quando disponibili; le altre sono calcolate dai risultati e possono differire in caso di penalizzazioni o regole particolari.
 - 20 massime divisioni configurate. Usa i CSV stagionali di football-data.co.uk per 11 competizioni (Inghilterra, Spagna, Germania, Italia, Francia, Scozia, Paesi Bassi, Portogallo, Belgio, Turchia e Grecia) e tenta anche i CSV cumulativi gratuiti `/new/{CODICE}.csv` per Austria, Danimarca, Finlandia, Irlanda, Norvegia, Polonia, Romania, Svezia e Svizzera. Per i CSV cumulativi vengono considerati solo i risultati dell'ultimo anno; ESPN resta una fonte di riserva. La copertura reale varia per lega e stagione e viene riportata nel JSON di aggiornamento. Le divisioni inferiori inglesi e scozzesi sono escluse.
 - Stime Poisson basate su statistiche casa/trasferta, medie di lega, Elo sequenziale e forma delle ultime cinque gare.
 - Stima preliminare solo quando entrambe le squadre hanno almeno due gare nel corretto contesto casa/trasferta; NO BET quando mancano dati o il campione è insufficiente.
