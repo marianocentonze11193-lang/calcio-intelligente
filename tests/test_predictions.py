@@ -1037,3 +1037,40 @@ class BettingAdviceTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+    def test_archive_only_snapshots_before_local_kickoff(self):
+        now = datetime(2026, 10, 17, 19, 0, tzinfo=timezone.utc)
+        self.assertFalse(archive_module.is_pre_match_forecast(
+            {"date": "2026-10-17", "kickoff": "20:45", "league": "Serie A"}, now))
+        self.assertTrue(archive_module.is_pre_match_forecast(
+            {"date": "2026-10-17", "kickoff": "22:00", "league": "Serie A"}, now))
+        self.assertFalse(archive_module.is_pre_match_forecast(
+            {"date": "2026-10-17", "league": "Serie A"}, now))
+        self.assertTrue(archive_module.is_pre_match_forecast(
+            {"date": "2026-10-18", "league": "Serie A"}, now))
+        self.assertFalse(archive_module.is_pre_match_forecast(
+            {"date": "2026-10-16", "kickoff": "20:45", "league": "Serie A"}, now))
+
+    def test_calibration_reports_predicted_probability_against_observed_frequency(self):
+        records = []
+        for i in range(30):
+            records.append({
+                "outcome": "1" if i < 15 else "X",
+                "probabilities": {"home_win": 60, "draw": 30, "away_win": 10},
+            })
+        calibration = archive_module.calculate_calibration(records)
+        self.assertEqual(calibration["evaluated_matches"], 30)
+        self.assertIsNotNone(calibration["by_outcome"])
+        home_bucket = calibration["by_outcome"]["1"][0]
+        self.assertEqual(home_bucket["matches"], 30)
+        self.assertEqual(home_bucket["mean_predicted_probability"], 60.0)
+        self.assertEqual(home_bucket["observed_frequency"], 50.0)
+
+    def test_calibration_is_not_published_below_minimum_sample(self):
+        records = [{
+            "outcome": "1",
+            "probabilities": {"home_win": 60, "draw": 30, "away_win": 10},
+        } for _ in range(29)]
+        calibration = archive_module.calculate_calibration(records)
+        self.assertIsNone(calibration["by_outcome"])
+        self.assertEqual(calibration["minimum_matches_required"], 30)
