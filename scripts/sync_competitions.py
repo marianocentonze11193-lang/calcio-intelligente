@@ -453,7 +453,11 @@ def fetch_calendar_competition(code, meta, start, end):
         query_start, query_end = start, end
         chunks = quarter_chunks(start, end)
     for chunk_start, chunk_end in chunks:
-        url = f"{base}?dates={chunk_start:%Y%m%d}-{chunk_end:%Y%m%d}&limit=100"
+        date_param = (
+            f"{chunk_start:%Y%m%d}" if chunk_start == chunk_end
+            else f"{chunk_start:%Y%m%d}-{chunk_end:%Y%m%d}"
+        )
+        url = f"{base}?dates={date_param}&limit=100"
         try:
             payload = fetch_json(url)
             events = payload.get("events")
