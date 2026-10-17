@@ -1123,7 +1123,7 @@ def main():
             away_avg = (home_model["away_avg"] + away_model["away_avg"]) / 2
             forecast = make_forecast(
                 home_team, away_team, competition_name, match_date, fixture.get("kickoff", ""),
-                combined_history, home_avg, away_avg, combined_elo, combined_recent, competition_calendar,\n                {**home_model.get("motivation_table", {}), **away_model.get("motivation_table", {})},
+                combined_history, home_avg, away_avg, combined_elo, combined_recent, competition_calendar, {},
             )
             forecast["competition_type"] = "europea" if competition_name in EUROPEAN_ESPN_COMPETITIONS.values() else "coppa_nazionale"
             forecast["source_calendar"] = fixture.get("source", "ESPN")
