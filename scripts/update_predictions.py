@@ -789,53 +789,25 @@ def motivation_for_match(home, away, table):
 
 
 def apply_motivation_adjustment(expected_home, expected_away, motivation_context):
-    """Applica una correzione minima e trasparente solo con segnali di classifica verificabili.
-
-    È una feature sperimentale: non presume che la pressione migliori sempre la prestazione.
-    Corregge al massimo dell'1.5% l'attacco stimato della squadra con un segnale competitivo
-    forte quando l'avversaria non ne presenta uno. Se entrambe hanno segnali, o i dati
-    sono incompleti, non modifica le attese.
-    """
+    """Espone il contesto motivazionale senza alterare probabilità non validate."""
     result = {
         "home_factor": 1.0,
         "away_factor": 1.0,
         "applied": False,
         "adjustment_pct": 0.0,
-        "status": "nessuna_correzione",
-        "note": "Nessuna correzione motivazionale: segnali insufficienti o pressione competitiva simile.",
+        "status": "solo_informativa",
+        "note": (
+            "Motivazioni di classifica mostrate solo come contesto informativo: "
+            "non modificano gol attesi o probabilità finché l'effetto non è calibrato "
+            "e verificato con backtest fuori campione."
+        ),
     }
     if not isinstance(motivation_context, dict) or motivation_context.get("status") != "indizi_classifica":
         result["status"] = "non_verificabile"
-        result["note"] = "Motivazioni non applicate: classifica o campione insufficiente."
-        return expected_home, expected_away, result
-
-    high_stakes_labels = ("possibile corsa al titolo", "zona obiettivi europei", "possibile lotta salvezza")
-    def has_stakes(side):
-        signals = side.get("signals", []) if isinstance(side, dict) else []
-        return any(any(label in str(signal).casefold() for label in high_stakes_labels)
-                   for signal in signals)
-
-    home_stakes = has_stakes(motivation_context.get("home"))
-    away_stakes = has_stakes(motivation_context.get("away"))
-    if home_stakes == away_stakes:
-        result["status"] = "pressione_simile"
-        result["note"] = "Nessuna correzione: entrambe le squadre hanno segnali competitivi simili, oppure nessuna ne ha."
-        return expected_home, expected_away, result
-
-    factor = 1.015
-    if home_stakes:
-        expected_home = max(0.15, min(4.5, expected_home * factor))
-        result.update({"home_factor": factor, "applied": True, "adjustment_pct": 1.5})
-        team = "squadra di casa"
-    else:
-        expected_away = max(0.15, min(4.5, expected_away * factor))
-        result.update({"away_factor": factor, "applied": True, "adjustment_pct": 1.5})
-        team = "squadra ospite"
-    result["status"] = "sperimentale_applicata"
-    result["note"] = (
-        f"Correzione sperimentale +1,5% ai gol attesi della {team} per segnali di classifica; "
-        "effetto prudenziale, non prova di maggiore probabilità di vittoria. Da validare su dati storici."
-    )
+        result["note"] = (
+            "Motivazioni non verificabili con i dati disponibili; nessuna modifica "
+            "a gol attesi o probabilità."
+        )
     return expected_home, expected_away, result
 
 
