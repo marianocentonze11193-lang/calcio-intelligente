@@ -133,6 +133,53 @@ def metric_summary(rows):
     }
 
 
+
+def outcome_calibration_summary(rows):
+    """One-vs-rest Brier/log-loss and reliability bins separately for 1, X and 2."""
+    result = {}
+    bins = [(0.0, 0.2), (0.2, 0.4), (0.4, 0.6), (0.6, 0.8), (0.8, 1.0000001)]
+    keys = (("1", "home_win"), ("X", "draw"), ("2", "away_win"))
+    scored_by_outcome = {label: [] for label, _ in keys}
+    for row in rows:
+        probabilities = row.get("model_probabilities")
+        if not isinstance(probabilities, dict):
+            continue
+        try:
+            values = [float(probabilities[key]) for _, key in keys]
+        except (KeyError, TypeError, ValueError):
+            continue
+        if any(not math.isfinite(value) or not 0 <= value <= 100 for value in values):
+            continue
+        if abs(sum(values) - 100) > 1.5:
+            continue
+        outcome = row.get("outcome")
+        if outcome not in scored_by_outcome:
+            continue
+        for (label, _), value in zip(keys, values):
+            scored_by_outcome[label].append((value / 100.0, 1.0 if outcome == label else 0.0))
+
+    for label, _ in keys:
+        scored = scored_by_outcome[label]
+        calibration = []
+        for lower, upper in bins:
+            selected = [(p, a) for p, a in scored if lower <= p < upper]
+            if selected:
+                calibration.append({
+                    "probability_range": f"{int(lower * 100)}-{min(100, int(upper * 100))}%",
+                    "matches": len(selected),
+                    "mean_predicted_pct": round(sum(p for p, _ in selected) * 100 / len(selected), 2),
+                    "observed_frequency_pct": round(sum(a for _, a in selected) * 100 / len(selected), 2),
+                })
+        n = len(scored)
+        result[label] = {
+            "matches": n,
+            "brier_score": round(sum((p - a) ** 2 for p, a in scored) / n, 5) if n else None,
+            "log_loss": round(-sum(math.log(max(1e-15, min(1 - 1e-15, p))) if a else math.log(max(1e-15, 1 - p)) for p, a in scored) / n, 5) if n else None,
+            "reliability_bins": calibration,
+            "note": "Brier/log-loss binari one-vs-rest; punteggi più bassi sono migliori.",
+        }
+    return result
+
 def load_league_results(code, today):
     if code not in model.FOOTBALL_DATA_LEAGUES:
         return []
