@@ -59,6 +59,10 @@ ESPN_TIMEZONES = {
     "Premier Division irlandese": "Europe/Dublin", "Eliteserien norvegese": "Europe/Oslo",
     "Ekstraklasa polacca": "Europe/Warsaw", "Liga I rumena": "Europe/Bucharest",
     "Allsvenskan svedese": "Europe/Stockholm", "Super League svizzera": "Europe/Zurich",
+    "Champions League": "Europe/Rome", "Europa League": "Europe/Rome", "Conference League": "Europe/Rome",
+    "Coppa Italia": "Europe/Rome", "FA Cup": "Europe/London", "Copa del Rey": "Europe/Madrid",
+    "DFB-Pokal": "Europe/Berlin", "Coupe de France": "Europe/Paris", "KNVB Beker": "Europe/Amsterdam",
+    "Taça de Portugal": "Europe/Lisbon", "Scottish Cup": "Europe/London", "Coppa di Turchia": "Europe/Istanbul",
 }
 
 
