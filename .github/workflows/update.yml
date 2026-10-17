@@ -46,15 +46,12 @@ jobs:
         run: python -m unittest discover -s tests -v
       - name: Verifica sintassi JavaScript
         run: node --check app.js
-      - name: Aggiorna calendario stagionale di campionati e coppe
-        env:
-          FORCE_COMPETITION_SYNC: ${{ github.event_name == 'push' && github.event.head_commit.message != 'Aggiorna dati e pronostici calcistici' && '1' || '0' }}
-        run: python scripts/sync_competitions.py
       - name: Sincronizza, genera e salva i dati aggiornati
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
           API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+          FORCE_COMPETITION_SYNC: ${{ github.event_name == 'push' && github.event.head_commit.message != 'Aggiorna dati e pronostici calcistici' && '1' || '0' }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -65,6 +62,9 @@ jobs:
             echo "Tentativo sincronizzazione $attempt/3"
             git fetch origin main
             git reset --hard origin/main
+            # Il calendario va sincronizzato dopo il reset, altrimenti git reset
+            # eliminerebbe i dati appena scaricati nello step precedente.
+            python scripts/sync_competitions.py
             python scripts/update_predictions.py
             python scripts/enrich_with_availability.py
             python scripts/enrich_with_odds.py
