@@ -71,12 +71,16 @@ class CompetitionSyncTests(unittest.TestCase):
         self.assertEqual(diag["source"], "API-Football")
 
     def test_api_football_standings_parser(self):
-        payload = [{"league": {"name": "Serie A", "standings": [[{
-            "rank": 1, "team": {"id": 1, "name": "Inter"}, "points": 19, "goalsDiff": 12,
-            "group": "Regular Season",
-            "all": {"played": 8, "win": 6, "draw": 1, "lose": 1, "goals": {"for": 17, "against": 5}},
-            "form": "WWDWW",
-        }]]}}]
+        payload = [{"league": {"name": "Serie A", "standings": [[
+            {"rank": 1, "team": {"id": 1, "name": "Inter"}, "points": 19, "goalsDiff": 12,
+             "group": "Regular Season", "all": {"played": 8, "win": 6, "draw": 1, "lose": 1, "goals": {"for": 17, "against": 5}}, "form": "WWDWW"},
+            {"rank": 2, "team": {"id": 2, "name": "Roma"}, "points": 17, "goalsDiff": 7,
+             "group": "Regular Season", "all": {"played": 8, "win": 5, "draw": 2, "lose": 1, "goals": {"for": 14, "against": 7}}, "form": "WWDWL"},
+            {"rank": 3, "team": {"id": 3, "name": "Milan"}, "points": 15, "goalsDiff": 5,
+             "group": "Regular Season", "all": {"played": 8, "win": 4, "draw": 3, "lose": 1, "goals": {"for": 12, "against": 7}}, "form": "WDDWW"},
+            {"rank": 4, "team": {"id": 4, "name": "Lazio"}, "points": 13, "goalsDiff": 2,
+             "group": "Regular Season", "all": {"played": 8, "win": 4, "draw": 1, "lose": 3, "goals": {"for": 11, "against": 9}}, "form": "WLWWL"},
+        ]]}}]
         from unittest.mock import patch
         meta = {"name": "Serie A", "country": "Italia", "kind": "Campionato"}
         with patch.object(sync, "api_football_get", return_value=payload):
