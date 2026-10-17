@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T19:59:28.716595+00:00",
+  "updated_at": "2026-10-17T20:00:38.892813+00:00",
   "method": "walk-forward cronologico per data, con baseline di frequenza 1/X/2 calcolata solo sui risultati precedenti e smoothing di Laplace",
   "period_start_requested": "2024-07-01",
   "period_end_requested": "2026-10-16",
@@ -9,6 +9,26 @@
       "accuracy_1x2": 51.0,
       "brier_score_1x2": 0.6053,
       "log_loss_1x2": 1.0159
+    },
+    "ablations": {
+      "poisson_only": {
+        "matches": 6616,
+        "accuracy_1x2": 51.28,
+        "brier_score_1x2": 0.6003,
+        "log_loss_1x2": 1.0057
+      },
+      "poisson_elo": {
+        "matches": 6616,
+        "accuracy_1x2": 51.51,
+        "brier_score_1x2": 0.5995,
+        "log_loss_1x2": 1.005
+      },
+      "poisson_form": {
+        "matches": 6616,
+        "accuracy_1x2": 50.94,
+        "brier_score_1x2": 0.6045,
+        "log_loss_1x2": 1.0134
+      }
     },
     "prior_frequency_baseline": {
       "matches": 6616,
@@ -21,11 +41,31 @@
   "leagues": {
     "Belgian Pro League": {
       "source_matches": 695,
-      "walk_forward": {
-        "matches": 608,
-        "accuracy_1x2": 47.7,
-        "brier_score_1x2": 0.6286,
-        "log_loss_1x2": 1.0473
+      "variants": {
+        "poisson_only": {
+          "matches": 608,
+          "accuracy_1x2": 47.2,
+          "brier_score_1x2": 0.6277,
+          "log_loss_1x2": 1.0435
+        },
+        "poisson_elo": {
+          "matches": 608,
+          "accuracy_1x2": 47.86,
+          "brier_score_1x2": 0.6277,
+          "log_loss_1x2": 1.0438
+        },
+        "poisson_form": {
+          "matches": 608,
+          "accuracy_1x2": 48.19,
+          "brier_score_1x2": 0.6275,
+          "log_loss_1x2": 1.0447
+        },
+        "model": {
+          "matches": 608,
+          "accuracy_1x2": 47.7,
+          "brier_score_1x2": 0.6286,
+          "log_loss_1x2": 1.0473
+        }
       },
       "prior_frequency_baseline": {
         "matches": 608,
@@ -39,11 +79,31 @@
     },
     "Bundesliga": {
       "source_matches": 657,
-      "walk_forward": {
-        "matches": 570,
-        "accuracy_1x2": 50.18,
-        "brier_score_1x2": 0.6188,
-        "log_loss_1x2": 1.0391
+      "variants": {
+        "poisson_only": {
+          "matches": 570,
+          "accuracy_1x2": 49.65,
+          "brier_score_1x2": 0.6142,
+          "log_loss_1x2": 1.0276
+        },
+        "poisson_elo": {
+          "matches": 570,
+          "accuracy_1x2": 49.3,
+          "brier_score_1x2": 0.6134,
+          "log_loss_1x2": 1.0276
+        },
+        "poisson_form": {
+          "matches": 570,
+          "accuracy_1x2": 50.35,
+          "brier_score_1x2": 0.6175,
+          "log_loss_1x2": 1.0355
+        },
+        "model": {
+          "matches": 570,
+          "accuracy_1x2": 50.18,
+          "brier_score_1x2": 0.6188,
+          "log_loss_1x2": 1.0391
+        }
       },
       "prior_frequency_baseline": {
         "matches": 570,
@@ -57,11 +117,31 @@
     },
     "Premier League": {
       "source_matches": 820,
-      "walk_forward": {
-        "matches": 732,
-        "accuracy_1x2": 47.68,
-        "brier_score_1x2": 0.6279,
-        "log_loss_1x2": 1.044
+      "variants": {
+        "poisson_only": {
+          "matches": 732,
+          "accuracy_1x2": 48.5,
+          "brier_score_1x2": 0.6204,
+          "log_loss_1x2": 1.0324
+        },
+        "poisson_elo": {
+          "matches": 732,
+          "accuracy_1x2": 49.18,
+          "brier_score_1x2": 0.6196,
+          "log_loss_1x2": 1.0312
+        },
+        "poisson_form": {
+          "matches": 732,
+          "accuracy_1x2": 47.81,
+          "brier_score_1x2": 0.6269,
+          "log_loss_1x2": 1.0419
+        },
+        "model": {
+          "matches": 732,
+          "accuracy_1x2": 47.68,
+          "brier_score_1x2": 0.6279,
+          "log_loss_1x2": 1.044
+        }
       },
       "prior_frequency_baseline": {
         "matches": 732,
@@ -75,11 +155,31 @@
     },
     "Ligue 1": {
       "source_matches": 666,
-      "walk_forward": {
-        "matches": 574,
-        "accuracy_1x2": 52.09,
-        "brier_score_1x2": 0.6121,
-        "log_loss_1x2": 1.026
+      "variants": {
+        "poisson_only": {
+          "matches": 574,
+          "accuracy_1x2": 53.31,
+          "brier_score_1x2": 0.6,
+          "log_loss_1x2": 1.0059
+        },
+        "poisson_elo": {
+          "matches": 574,
+          "accuracy_1x2": 53.31,
+          "brier_score_1x2": 0.5999,
+          "log_loss_1x2": 1.0064
+        },
+        "poisson_form": {
+          "matches": 574,
+          "accuracy_1x2": 51.39,
+          "brier_score_1x2": 0.6111,
+          "log_loss_1x2": 1.0227
+        },
+        "model": {
+          "matches": 574,
+          "accuracy_1x2": 52.09,
+          "brier_score_1x2": 0.6121,
+          "log_loss_1x2": 1.026
+        }
       },
       "prior_frequency_baseline": {
         "matches": 574,
@@ -93,11 +193,31 @@
     },
     "Super League greca": {
       "source_matches": 511,
-      "walk_forward": {
-        "matches": 426,
-        "accuracy_1x2": 53.99,
-        "brier_score_1x2": 0.5827,
-        "log_loss_1x2": 0.9821
+      "variants": {
+        "poisson_only": {
+          "matches": 426,
+          "accuracy_1x2": 54.93,
+          "brier_score_1x2": 0.579,
+          "log_loss_1x2": 0.9756
+        },
+        "poisson_elo": {
+          "matches": 426,
+          "accuracy_1x2": 55.16,
+          "brier_score_1x2": 0.5748,
+          "log_loss_1x2": 0.9696
+        },
+        "poisson_form": {
+          "matches": 426,
+          "accuracy_1x2": 54.69,
+          "brier_score_1x2": 0.585,
+          "log_loss_1x2": 0.9847
+        },
+        "model": {
+          "matches": 426,
+          "accuracy_1x2": 53.99,
+          "brier_score_1x2": 0.5827,
+          "log_loss_1x2": 0.9821
+        }
       },
       "prior_frequency_baseline": {
         "matches": 426,
@@ -111,11 +231,31 @@
     },
     "Serie A": {
       "source_matches": 820,
-      "walk_forward": {
-        "matches": 732,
-        "accuracy_1x2": 53.96,
-        "brier_score_1x2": 0.5941,
-        "log_loss_1x2": 0.9994
+      "variants": {
+        "poisson_only": {
+          "matches": 732,
+          "accuracy_1x2": 52.87,
+          "brier_score_1x2": 0.5965,
+          "log_loss_1x2": 1.0005
+        },
+        "poisson_elo": {
+          "matches": 732,
+          "accuracy_1x2": 53.69,
+          "brier_score_1x2": 0.5946,
+          "log_loss_1x2": 0.9978
+        },
+        "poisson_form": {
+          "matches": 732,
+          "accuracy_1x2": 53.83,
+          "brier_score_1x2": 0.5942,
+          "log_loss_1x2": 0.9985
+        },
+        "model": {
+          "matches": 732,
+          "accuracy_1x2": 53.96,
+          "brier_score_1x2": 0.5941,
+          "log_loss_1x2": 0.9994
+        }
       },
       "prior_frequency_baseline": {
         "matches": 732,
@@ -129,11 +269,31 @@
     },
     "Eredivisie": {
       "source_matches": 684,
-      "walk_forward": {
-        "matches": 594,
-        "accuracy_1x2": 50.67,
-        "brier_score_1x2": 0.6035,
-        "log_loss_1x2": 1.0078
+      "variants": {
+        "poisson_only": {
+          "matches": 594,
+          "accuracy_1x2": 51.52,
+          "brier_score_1x2": 0.5949,
+          "log_loss_1x2": 0.9949
+        },
+        "poisson_elo": {
+          "matches": 594,
+          "accuracy_1x2": 52.02,
+          "brier_score_1x2": 0.5963,
+          "log_loss_1x2": 0.9963
+        },
+        "poisson_form": {
+          "matches": 594,
+          "accuracy_1x2": 50.51,
+          "brier_score_1x2": 0.6005,
+          "log_loss_1x2": 1.003
+        },
+        "model": {
+          "matches": 594,
+          "accuracy_1x2": 50.67,
+          "brier_score_1x2": 0.6035,
+          "log_loss_1x2": 1.0078
+        }
       },
       "prior_frequency_baseline": {
         "matches": 594,
@@ -147,11 +307,31 @@
     },
     "Primeira Liga": {
       "source_matches": 683,
-      "walk_forward": {
-        "matches": 599,
-        "accuracy_1x2": 52.42,
-        "brier_score_1x2": 0.5738,
-        "log_loss_1x2": 0.9679
+      "variants": {
+        "poisson_only": {
+          "matches": 599,
+          "accuracy_1x2": 53.59,
+          "brier_score_1x2": 0.5734,
+          "log_loss_1x2": 0.9631
+        },
+        "poisson_elo": {
+          "matches": 599,
+          "accuracy_1x2": 53.59,
+          "brier_score_1x2": 0.5731,
+          "log_loss_1x2": 0.9626
+        },
+        "poisson_form": {
+          "matches": 599,
+          "accuracy_1x2": 52.25,
+          "brier_score_1x2": 0.5723,
+          "log_loss_1x2": 0.9642
+        },
+        "model": {
+          "matches": 599,
+          "accuracy_1x2": 52.42,
+          "brier_score_1x2": 0.5738,
+          "log_loss_1x2": 0.9679
+        }
       },
       "prior_frequency_baseline": {
         "matches": 599,
@@ -165,11 +345,31 @@
     },
     "Scottish Premiership": {
       "source_matches": 504,
-      "walk_forward": {
-        "matches": 431,
-        "accuracy_1x2": 50.81,
-        "brier_score_1x2": 0.6113,
-        "log_loss_1x2": 1.0385
+      "variants": {
+        "poisson_only": {
+          "matches": 431,
+          "accuracy_1x2": 50.58,
+          "brier_score_1x2": 0.6021,
+          "log_loss_1x2": 1.0164
+        },
+        "poisson_elo": {
+          "matches": 431,
+          "accuracy_1x2": 50.35,
+          "brier_score_1x2": 0.6033,
+          "log_loss_1x2": 1.0201
+        },
+        "poisson_form": {
+          "matches": 431,
+          "accuracy_1x2": 50.35,
+          "brier_score_1x2": 0.6091,
+          "log_loss_1x2": 1.0314
+        },
+        "model": {
+          "matches": 431,
+          "accuracy_1x2": 50.81,
+          "brier_score_1x2": 0.6113,
+          "log_loss_1x2": 1.0385
+        }
       },
       "prior_frequency_baseline": {
         "matches": 431,
@@ -183,11 +383,31 @@
     },
     "La Liga": {
       "source_matches": 838,
-      "walk_forward": {
-        "matches": 739,
-        "accuracy_1x2": 49.93,
-        "brier_score_1x2": 0.602,
-        "log_loss_1x2": 1.0111
+      "variants": {
+        "poisson_only": {
+          "matches": 739,
+          "accuracy_1x2": 49.8,
+          "brier_score_1x2": 0.5947,
+          "log_loss_1x2": 0.9977
+        },
+        "poisson_elo": {
+          "matches": 739,
+          "accuracy_1x2": 49.8,
+          "brier_score_1x2": 0.5931,
+          "log_loss_1x2": 0.9957
+        },
+        "poisson_form": {
+          "matches": 739,
+          "accuracy_1x2": 49.93,
+          "brier_score_1x2": 0.6022,
+          "log_loss_1x2": 1.0102
+        },
+        "model": {
+          "matches": 739,
+          "accuracy_1x2": 49.93,
+          "brier_score_1x2": 0.602,
+          "log_loss_1x2": 1.0111
+        }
       },
       "prior_frequency_baseline": {
         "matches": 739,
@@ -201,11 +421,31 @@
     },
     "Super Lig turca": {
       "source_matches": 711,
-      "walk_forward": {
-        "matches": 611,
-        "accuracy_1x2": 52.7,
-        "brier_score_1x2": 0.5976,
-        "log_loss_1x2": 1.0079
+      "variants": {
+        "poisson_only": {
+          "matches": 611,
+          "accuracy_1x2": 53.68,
+          "brier_score_1x2": 0.5923,
+          "log_loss_1x2": 0.9966
+        },
+        "poisson_elo": {
+          "matches": 611,
+          "accuracy_1x2": 53.52,
+          "brier_score_1x2": 0.5913,
+          "log_loss_1x2": 0.996
+        },
+        "poisson_form": {
+          "matches": 611,
+          "accuracy_1x2": 52.21,
+          "brier_score_1x2": 0.5975,
+          "log_loss_1x2": 1.0059
+        },
+        "model": {
+          "matches": 611,
+          "accuracy_1x2": 52.7,
+          "brier_score_1x2": 0.5976,
+          "log_loss_1x2": 1.0079
+        }
       },
       "prior_frequency_baseline": {
         "matches": 611,
