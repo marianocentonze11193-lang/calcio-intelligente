@@ -815,6 +815,23 @@ class PredictionModelTests(unittest.TestCase):
             self.assertEqual(result["data_quality"], "coppa_non_validata")
             self.assertIn("non validato", result["cup_model_note"])
 
+    def test_market_analysis_suppresses_ev_for_unvalidated_cup_competitions(self):
+        for competition_type in ("europea", "coppa_nazionale"):
+            match = {
+                "competition_type": competition_type,
+                "status": "Stima preliminare",
+                "probabilities": {"home_win": 55, "draw": 25, "away_win": 20},
+                "odds_1x2": {"home": 2.0, "draw": 3.5, "away": 4.0},
+                "suggested_markets": [{"market": "1"}],
+                "value_bets": [{"market": "1"}],
+                "expected_value_1x2": {"home": 0.1},
+            }
+            self.assertFalse(market_module.market_analysis(match))
+            self.assertEqual(match["suggested_markets"], [])
+            self.assertEqual(match["value_bets"], [])
+            self.assertNotIn("expected_value_1x2", match)
+            self.assertFalse(match["value_assessment"]["eligible_for_candidate"])
+
     def test_cup_no_bet_stays_without_probabilities(self):
         forecast = {
             "status": "NO BET", "probabilities": {},
