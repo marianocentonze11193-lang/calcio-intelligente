@@ -335,9 +335,11 @@ function renderMatches(matches) {
         const signals = Array.isArray(context.signals) ? context.signals.join(", ") : "";
         return teamName + " " + context.position + "ª (" + context.points + " punti): " + signals;
       };
+      const adjustment = motivation.model_adjustment || match.motivation_adjustment;
       motivationNote.textContent = "MOTIVAZIONI DI CLASSIFICA · " +
         [describeTeam(match.home_team, motivation.home), describeTeam(match.away_team, motivation.away)].filter(Boolean).join(" · ") +
-        ". Indicazioni orientative basate sui risultati disponibili: non confermano obiettivi già raggiunti né verdetti matematici.";
+        ". Indicazioni orientative basate sui risultati disponibili: non confermano obiettivi già raggiunti né verdetti matematici." +
+        (adjustment && adjustment.note ? " IMPATTO SULLA STIMA: " + adjustment.note : " IMPATTO SULLA STIMA: non applicato.");
       card.append(motivationNote);
     }
     if (match.competition_type === "europea" || match.competition_type === "coppa_nazionale") {
