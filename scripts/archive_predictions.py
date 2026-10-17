@@ -268,8 +268,10 @@ def calculate_metrics(records):
             "minimum_matches_required": MIN_METRIC_MATCHES,
             "note": f"Metriche non pubblicate: servono almeno {MIN_METRIC_MATCHES} partite concluse con probabilità archiviate.",
         }
+    import math
     correct = 0
     brier_total = 0.0
+    logloss_total = 0.0
     for item in evaluated:
         probs = item["probabilities"]
         keys = ("home_win", "draw", "away_win")
@@ -279,11 +281,13 @@ def calculate_metrics(records):
         actual_idx = ("1", "X", "2").index(item["outcome"])
         correct += int(predicted == actual_idx)
         brier_total += sum((values[idx] - actual[idx]) ** 2 for idx in range(3))
+        logloss_total += -math.log(max(1e-15, values[actual_idx]))
     return {
         "settled_matches": len(evaluated),
         "accuracy_1x2": round(correct / len(evaluated) * 100, 2),
         "brier_score_1x2": round(brier_total / len(evaluated), 4),
-        "note": "Metriche descrittive su pronostici archiviati; non dimostrano redditività o affidabilità futura.",
+        "log_loss_1x2": round(logloss_total / len(evaluated), 4),
+        "note": "Metriche descrittive su pronostici archiviati; Brier e log loss più bassi sono migliori. Non dimostrano redditività o affidabilità futura.",
     }
 
 
@@ -301,6 +305,23 @@ def calculate_metrics_by_league(records):
         if metrics.get("settled_matches", 0) >= MIN_METRIC_MATCHES:
             metrics_by_league[league] = metrics
     return metrics_by_league
+
+
+def calculate_metrics_by_european_context(records):
+    """Confronta la calibrazione in partite con/senza un impegno UEFA recente verificato."""
+    groups = {
+        "recent_european_match": [item for item in records if item.get("european_context")],
+        "no_recent_european_match": [item for item in records if not item.get("european_context")],
+    }
+    output = {}
+    for key, items in groups.items():
+        metrics = calculate_metrics(items)
+        metrics["context_matches_archived"] = len(items)
+        output[key] = metrics
+    return {
+        "groups": output,
+        "note": "Il confronto è descrittivo e non dimostra che le coppe causino differenze. Le metriche compaiono solo dopo la soglia minima di partite concluse.",
+    }
 
 
 def calculate_model_market_metrics(records):
@@ -463,6 +484,11 @@ def main():
             "expected_home_goals": match.get("expected_home_goals"),
             "expected_away_goals": match.get("expected_away_goals"),
             "sample_matches": match.get("sample_matches", 0),
+            "european_context": match.get("european_context") or [],
+            "european_fatigue_status": match.get("european_fatigue_status"),
+            "suggested_markets": match.get("suggested_markets") or [],
+            "value_bets": match.get("value_bets") or [],
+            "odds_fetched_at": match.get("odds_fetched_at"),
             "odds_1x2": match.get("odds_1x2"),
             "odds_markets": match.get("odds_markets"),
             "odds_markets_source": match.get("odds_markets_source"),
@@ -484,6 +510,11 @@ def main():
         current = current_by_id.get(item.get("id"))
         if not current or item.get("outcome") is not None:
             continue
+        if not item.get("european_context") and current.get("european_context"):
+            item["european_context"] = current.get("european_context")
+            item["european_fatigue_status"] = current.get("european_fatigue_status")
+        if not item.get("suggested_markets") and current.get("suggested_markets"):
+            item["suggested_markets"] = current.get("suggested_markets")
         if not item.get("market_analysis_markets") and current.get("market_analysis_markets"):
             item["odds_markets"] = current.get("odds_markets")
             item["odds_markets_source"] = current.get("odds_markets_source")
@@ -575,6 +606,7 @@ def main():
     history["updated_at"] = datetime.now(timezone.utc).isoformat()
     history["metrics"] = calculate_metrics(records)
     history["metrics_by_league"] = calculate_metrics_by_league(records)
+    history["metrics_by_european_context"] = calculate_metrics_by_european_context(records)
     history["model_vs_market_metrics"] = calculate_model_market_metrics(records)
     history["additional_market_metrics"] = calculate_additional_market_metrics(records)
     HISTORY_FILE.parent.mkdir(parents=True, exist_ok=True)
