@@ -79,29 +79,34 @@ def main():
             },
             "quote_1x2_disponibili": match.get("odds_1x2"),
             "mercati_selezionati_da_regole": match.get("suggested_markets", []),
+            "motivazioni_e_classifica": match.get("motivation_context", {}),
+            "impegni_ravvicinati": match.get("recent_competition_context", []),
         })
 
     def request_batch(batch):
         prompt = (
-            "Sei l'analista calcistico di Calcio Intelligente. Scrivi in italiano naturale, "
-            "con tono umano, chiaro e specifico per ogni partita. Per ciascun incontro produci "
-            "4-5 frasi ben collegate, circa 75-105 parole: interpreta le probabilità 1/X/2 e i "
-            "gol attesi con numeri concreti; commenta forma recente ed Elo soltanto se presenti; "
-            "spiega se il campione casa/trasferta è piccolo e come limita la stima. "
-            "Per indisponibilità e formazioni cita solo dati espliciti e ricorda che la copertura "
-            "può essere incompleta; nessuna segnalazione non significa che tutti siano disponibili. "
-            "Non inventare statistiche, notizie, tattiche, giocatori o quote. Non promettere "
-            "risultati, non consigliare puntate e non modificare probabilità o mercati. "
-            "Il modello è sperimentale e non ancora validato su un campione sufficiente. "
-            "Evita frasi generiche ripetute. Rispondi SOLO con JSON valido nel formato "
-            '{"analyses":[{"id":"ID esatto","analysis":"testo in italiano"}]}. '
-            "Includi un commento per ogni ID fornito. Dati:\\n"
+            "Sei il commentatore calcistico di Calcio Intelligente. Scrivi in italiano naturale, "
+            "caldo e concreto, come una persona competente che aiuta a leggere la partita. "
+            "Per ogni incontro scrivi 3-4 frasi, circa 45-70 parole: apri con l'idea principale, "
+            "riassumi il pronostico più interessante tra quelli già indicati dal modello e spiega "
+            "in parole semplici perché può avere senso. Dai priorità a consigli pratici e leggibili, "
+            "non a elenchi di percentuali o statistiche. Usa al massimo un dato numerico se davvero utile. "
+            "Considera la classifica e le motivazioni solo se il campo fornito contiene indizi verificabili; "
+            "presentali come segnali e non come certezze. Se non ci sono mercati consigliati o i dati sono "
+            "deboli, dillo chiaramente e suggerisci prudenza / nessuna giocata, senza inventare alternative. "
+            "Tieni conto degli impegni ravvicinati verificati quando presenti. Non inventare notizie, "
+            "infortuni, formazioni, obiettivi già raggiunti o retrocessioni matematiche. Non promettere vincite "
+            "e non cambiare probabilità o mercati: il tuo compito è spiegare, non creare nuove selezioni. "
+            "Evita formule robotiche e ripetizioni; varia il linguaggio tra le partite. "
+            "Rispondi SOLO con JSON valido nel formato "
+            '{"analyses":[{"id":"ID esatto","analysis":"commento breve e umano"}]}. '
+            "Includi un commento per ogni ID. Dati:\\n"
             + json.dumps(batch, ensure_ascii=False, separators=(",", ":"))
         )
         body = {
             "contents": [{"role": "user", "parts": [{"text": prompt}]}],
             "generationConfig": {
-                "temperature": 0.2,
+                "temperature": 0.45,
                 "maxOutputTokens": 2200,
                 "responseMimeType": "application/json",
             },
