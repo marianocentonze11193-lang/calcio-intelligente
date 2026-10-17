@@ -2,6 +2,7 @@
 
 const DATA_URL = "./data/predictions.json";
 const HISTORY_URL = "./data/history.json";
+const BACKTEST_URL = "./data/backtest_report.json";
 let allLoadedMatches = [];
 let lastRefreshAt = 0;
 
@@ -650,6 +651,72 @@ function renderHistory(history) {
   }
 }
 
+function renderBacktestReport(report) {
+  const node = document.getElementById("backtest-metrics");
+  if (!node) return;
+  node.replaceChildren();
+  const overall = report && report.overall;
+  const model = overall && overall.walk_forward;
+  if (!model || !Number.isFinite(model.matches)) {
+    node.textContent = "Il report del backtest cronologico non è ancora disponibile.";
+    return;
+  }
+  const market = overall.market_baseline || {};
+  const blend = overall.ablations && overall.ablations.market_blend_50_50;
+  const fmt = value => typeof value === "number"
+    ? value.toLocaleString("it-IT", { maximumFractionDigits: 4 })
+    : "—";
+  const metricItems = [
+    ["Partite testate", Number(model.matches).toLocaleString("it-IT")],
+    ["Accuratezza modello", typeof model.accuracy_1x2 === "number" ? percent(model.accuracy_1x2) : "—"],
+    ["Brier score modello", fmt(model.brier_score_1x2)],
+    ["Log loss modello", fmt(model.log_loss_1x2)],
+    ["Accuratezza quote", typeof market.accuracy_1x2 === "number" ? percent(market.accuracy_1x2) : "Quote non disponibili"],
+    ["Brier score quote", fmt(market.brier_score_1x2)],
+    ["Log loss quote", fmt(market.log_loss_1x2)]
+  ];
+  if (blend && blend.matches) {
+    metricItems.push(["Miscela 50/50 (solo test)", typeof blend.accuracy_1x2 === "number" ? percent(blend.accuracy_1x2) : "—"]);
+    metricItems.push(["Brier miscela 50/50", fmt(blend.brier_score_1x2)]);
+    metricItems.push(["Log loss miscela 50/50", fmt(blend.log_loss_1x2)]);
+  }
+  for (const [label, value] of metricItems) {
+    const item = document.createElement("div");
+    item.className = "history-metric";
+    const caption = document.createElement("span");
+    caption.className = "match-meta";
+    caption.textContent = label;
+    const strong = document.createElement("strong");
+    strong.textContent = value;
+    item.append(caption, strong);
+    node.append(item);
+  }
+  const note = document.createElement("p");
+  note.className = "match-meta";
+  const sameSample = Number(market.matches) === Number(model.matches);
+  note.textContent = "Backtest walk-forward aggiornato " +
+    (report.updated_at ? new Date(report.updated_at).toLocaleDateString("it-IT") : "senza data") +
+    ". Modello: " + model.matches + " partite; quote di mercato: " + (market.matches || 0) +
+    ". " + (sameSample
+      ? "Modello e mercato sono valutati sullo stesso numero di partite."
+      : "Il campione del mercato è diverso da quello del modello: il confronto va letto con cautela.") +
+    " Brier score e log loss: più bassi è meglio. La miscela 50/50 è sperimentale e non modifica i pronostici pubblicati.";
+  node.append(note);
+  const calibration = Array.isArray(model.top_class_calibration) ? model.top_class_calibration : [];
+  if (calibration.length) {
+    const heading = document.createElement("h3");
+    heading.textContent = "Calibrazione per fascia di confidenza";
+    node.append(heading);
+    for (const bin of calibration) {
+      const row = document.createElement("p");
+      row.className = "match-meta";
+      row.textContent = bin.confidence_range + ": " + bin.matches + " partite · confidenza media " +
+        fmt(bin.mean_predicted_confidence_pct) + "% · accuratezza osservata " + fmt(bin.observed_accuracy_pct) + "%";
+      node.append(row);
+    }
+  }
+}
+
 async function aggiornaStorico() {
   const listNode = document.getElementById("history-list");
   try {
@@ -658,6 +725,12 @@ async function aggiornaStorico() {
       throw new Error("Formato archivio non valido");
     }
     renderHistory(history);
+    try {
+      const backtest = await fetchJsonWithTimeout(BACKTEST_URL + "?t=" + Date.now());
+      renderBacktestReport(backtest);
+    } catch (backtestError) {
+      renderBacktestReport(null);
+    }
   } catch (error) {
     if (listNode) listNode.textContent = "Lo storico non è ancora disponibile. Verrà pubblicato dopo il prossimo aggiornamento automatico.";
   }
