@@ -885,7 +885,7 @@ def build_betting_recommendations(probabilities, home_sample, away_sample, recen
         )
     return labels, chosen, advice
 
-def make_forecast(home, away, league, match_date, kickoff, history, league_home_avg, league_away_avg, elo_ratings=None, recent_form=None, european_matches=None, motivation_table=None):
+def make_forecast(home, away, league, match_date, kickoff, history, league_home_avg, league_away_avg, elo_ratings=None, recent_form=None, european_matches=None, motivation_table=None, apply_form_adjustment=True):
     hs, aws = history[home], history[away]
 
     def smooth(goals, games, prior):
@@ -908,7 +908,7 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
     # Forma delle ultime cinque gare, con correzione volutamente moderata.
     home_form = (recent_form or {}).get(home, {})
     away_form = (recent_form or {}).get(away, {})
-    if home_form and away_form:
+    if home_form and away_form and apply_form_adjustment:
         league_goal_avg = max(0.5, (league_home_avg + league_away_avg) / 2)
         home_attack_form = home_form["goals_for"] / league_goal_avg
         home_defence_form = away_form["goals_against"] / max(0.5, league_home_avg)
@@ -1263,7 +1263,7 @@ def main():
         for home, away, match_date, kickoff in fixtures:
             home = normalized_history.get(team_key(home), home)
             away = normalized_history.get(team_key(away), away)
-            forecast = make_forecast(home, away, league_name, match_date, kickoff, history, league_home_avg, league_away_avg, elo_ratings, recent_form, recent_competition_matches, motivation_table)
+            forecast = make_forecast(home, away, league_name, match_date, kickoff, history, league_home_avg, league_away_avg, elo_ratings, recent_form, recent_competition_matches, motivation_table, apply_form_adjustment=False)
             if forecast:
                 fixture_key = (match_date.isoformat(), team_key(home), team_key(away))
                 quote = fixture_odds.get(fixture_key)
@@ -1340,6 +1340,7 @@ def main():
             forecast = make_forecast(
                 home_team, away_team, competition_name, match_date, fixture.get("kickoff", ""),
                 combined_history, home_avg, away_avg, combined_elo, combined_recent, competition_calendar, {},
+                apply_form_adjustment=False,
             )
             forecast = declassify_cup_forecast(forecast, competition_name)
             forecast["source_calendar"] = fixture.get("source", "ESPN")
