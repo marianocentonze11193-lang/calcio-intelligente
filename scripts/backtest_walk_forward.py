@@ -184,7 +184,7 @@ def main():
 
 # Le metriche aggregate vengono ricalcolate dalle metriche partita, non dalla media delle medie di lega.
     for league, report in all_by_league.items():
-        if report["walk_forward"]["matches"]:
+        if report["variants"]["model"]["matches"]:
             report["note"] = "Validazione cronologica: ogni previsione usa solo gare con data strettamente precedente; coppe e indisponibilità non sono incluse."
     report = {
         "updated_at": datetime.now(timezone.utc).isoformat(),
