@@ -100,7 +100,7 @@ def main():
             "Evita formule robotiche e ripetizioni; varia il linguaggio tra le partite. "
             "Rispondi SOLO con JSON valido nel formato "
             '{"analyses":[{"id":"ID esatto","analysis":"commento breve e umano"}]}. '
-            "Includi un commento per ogni ID. Dati:\\n"
+            "Includi un commento per ogni ID. Dati:\n"
             + json.dumps(batch, ensure_ascii=False, separators=(",", ":"))
         )
         body = {
