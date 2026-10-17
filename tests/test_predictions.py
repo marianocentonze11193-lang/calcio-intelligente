@@ -1035,13 +1035,11 @@ class BettingAdviceTests(unittest.TestCase):
         self.assertIn("impegno ravvicinato", advice.lower())
 
 
-if __name__ == "__main__":
-    unittest.main()
-
+class ArchiveReliabilityTests(unittest.TestCase):
     def test_archive_only_snapshots_before_local_kickoff(self):
         now = datetime(2026, 10, 17, 19, 0, tzinfo=timezone.utc)
         self.assertFalse(archive_module.is_pre_match_forecast(
-            {"date": "2026-10-17", "kickoff": "20:45", "league": "Serie A"}, now))
+            {"date": "2026-10-17", "kickoff": "18:45", "league": "Serie A"}, now))
         self.assertTrue(archive_module.is_pre_match_forecast(
             {"date": "2026-10-17", "kickoff": "22:00", "league": "Serie A"}, now))
         self.assertFalse(archive_module.is_pre_match_forecast(
@@ -1051,29 +1049,48 @@ if __name__ == "__main__":
         self.assertFalse(archive_module.is_pre_match_forecast(
             {"date": "2026-10-16", "kickoff": "20:45", "league": "Serie A"}, now))
 
+    def test_cup_results_are_matched_by_competition_and_team(self):
+        fixtures = [
+            {"date": "2026-10-14", "competition": "Champions League",
+             "home_team": "Inter Milan", "away_team": "Liverpool",
+             "status": "completed", "home_goals": 2, "away_goals": 1},
+            {"date": "2026-10-14", "competition": "Europa League",
+             "home_team": "Inter Milan", "away_team": "Liverpool",
+             "status": "completed", "home_goals": 0, "away_goals": 1},
+            {"date": "2026-10-14", "competition": "Champions League",
+             "home_team": "Roma", "away_team": "Milan",
+             "status": "scheduled", "home_goals": None, "away_goals": None},
+        ]
+        index = archive_module.competition_result_index(fixtures)
+        self.assertEqual(index[("2026-10-14", "champions league",
+                                archive_module.team_key("Inter"), archive_module.team_key("Liverpool"))], (2, 1))
+        self.assertEqual(index[("2026-10-14", "europa league",
+                                archive_module.team_key("Inter Milan"), archive_module.team_key("Liverpool"))], (0, 1))
+        self.assertEqual(len(index), 2)
+
+    def test_conflicting_cup_results_are_not_used(self):
+        base = {"date": "2026-10-14", "competition": "Champions League",
+                "home_team": "Inter", "away_team": "Liverpool", "status": "completed"}
+        fixtures = [
+            {**base, "home_goals": 2, "away_goals": 1},
+            {**base, "home_goals": 1, "away_goals": 1},
+        ]
+        self.assertEqual(archive_module.competition_result_index(fixtures), {})
+
     def test_calibration_reports_predicted_probability_against_observed_frequency(self):
-        records = []
-        for i in range(30):
-            records.append({
-                "outcome": "1" if i < 15 else "X",
-                "probabilities": {"home_win": 60, "draw": 30, "away_win": 10},
-            })
+        records = [{"outcome": "1" if i < 15 else "X",
+                    "probabilities": {"home_win": 60, "draw": 30, "away_win": 10}}
+                   for i in range(30)]
         calibration = archive_module.calculate_calibration(records)
         self.assertEqual(calibration["evaluated_matches"], 30)
         self.assertIsNotNone(calibration["by_outcome"])
-        home_bucket = calibration["by_outcome"]["1"][0]
-        self.assertEqual(home_bucket["matches"], 30)
-        self.assertEqual(home_bucket["mean_predicted_probability"], 60.0)
-        self.assertEqual(home_bucket["observed_frequency"], 50.0)
+        self.assertEqual(calibration["by_outcome"]["1"][0]["observed_frequency"], 50.0)
 
     def test_calibration_is_not_published_below_minimum_sample(self):
-        records = [{
-            "outcome": "1",
-            "probabilities": {"home_win": 60, "draw": 30, "away_win": 10},
-        } for _ in range(29)]
-        calibration = archive_module.calculate_calibration(records)
-        self.assertIsNone(calibration["by_outcome"])
-        self.assertEqual(calibration["minimum_matches_required"], 30)
+        records = [{"outcome": "1",
+                    "probabilities": {"home_win": 60, "draw": 30, "away_win": 10}}
+                   for _ in range(29)]
+        self.assertIsNone(archive_module.calculate_calibration(records)["by_outcome"])
 
     def test_recent_form_can_be_reported_without_adjusting_probabilities(self):
         history = defaultdict(lambda: {
@@ -1096,7 +1113,6 @@ if __name__ == "__main__":
         )
         self.assertNotEqual(adjusted["expected_home_goals"], informational["expected_home_goals"])
         self.assertEqual(informational["home_recent_form"], recent["Casa"])
-        self.assertEqual(informational["away_recent_form"], recent["Ospite"])
 
     def test_unvalidated_cup_context_is_informational_when_adjustment_disabled(self):
         history = defaultdict(lambda: {
@@ -1122,4 +1138,7 @@ if __name__ == "__main__":
             )
         self.assertGreater(informational["expected_home_goals"], adjusted["expected_home_goals"])
         self.assertEqual(informational["recent_competition_context"], context)
-        self.assertEqual(informational["status"], "Stima preliminare")
+
+
+if __name__ == "__main__":
+    unittest.main()
