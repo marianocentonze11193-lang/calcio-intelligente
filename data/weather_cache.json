@@ -423,6 +423,382 @@
       "resolved_name": "Olhão",
       "country": "Portugal",
       "cached_at": "2026-10-17T20:43:57.132731+00:00"
+    },
+    "napoliitaly": {
+      "latitude": 40.87618,
+      "longitude": 14.5195,
+      "timezone": "Europe/Rome",
+      "resolved_name": "Napoli-Nola",
+      "country": "Italy",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "lillefrance": {
+      "latitude": 50.63391,
+      "longitude": 3.05512,
+      "timezone": "Europe/Paris",
+      "resolved_name": "Lille",
+      "country": "France",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "bruggebelgium": {
+      "latitude": 51.20892,
+      "longitude": 3.22424,
+      "timezone": "Europe/Brussels",
+      "resolved_name": "Bruges",
+      "country": "Belgium",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "poznanpoland": {
+      "latitude": 52.40692,
+      "longitude": 16.92993,
+      "timezone": "Europe/Warsaw",
+      "resolved_name": "Poznan",
+      "country": "Poland",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "istanbulturkiye": {
+      "latitude": 41.01384,
+      "longitude": 28.94966,
+      "timezone": "Europe/Istanbul",
+      "resolved_name": "Istanbul",
+      "country": "Republic of Türkiye",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "bakuazerbaijan": {
+      "latitude": 40.37767,
+      "longitude": 49.89201,
+      "timezone": "Asia/Baku",
+      "resolved_name": "Baku",
+      "country": "Azerbaijan",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "romaitaly": {
+      "latitude": 44.99364,
+      "longitude": 11.10642,
+      "timezone": "Europe/Rome",
+      "resolved_name": "Roma",
+      "country": "Italy",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "portoportugal": {
+      "latitude": 41.1485,
+      "longitude": -8.61097,
+      "timezone": "Europe/Lisbon",
+      "resolved_name": "Porto",
+      "country": "Portugal",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "parisfrance": {
+      "latitude": 48.85341,
+      "longitude": 2.3488,
+      "timezone": "Europe/Paris",
+      "resolved_name": "Paris",
+      "country": "France",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "stuttgartgermany": {
+      "latitude": 48.78232,
+      "longitude": 9.17702,
+      "timezone": "Europe/Berlin",
+      "resolved_name": "Stuttgart",
+      "country": "Germany",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "munchengermany": {
+      "latitude": 48.13743,
+      "longitude": 11.57549,
+      "timezone": "Europe/Berlin",
+      "resolved_name": "Munich",
+      "country": "Germany",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "milanoitaly": {
+      "latitude": 42.78235,
+      "longitude": 12.59836,
+      "timezone": "Europe/Rome",
+      "resolved_name": "Milan",
+      "country": "Italy",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "madridspain": {
+      "latitude": 40.4165,
+      "longitude": -3.70256,
+      "timezone": "Europe/Madrid",
+      "resolved_name": "Madrid",
+      "country": "Spain",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "lisbonportugal": {
+      "latitude": 38.72509,
+      "longitude": -9.1498,
+      "timezone": "Europe/Lisbon",
+      "resolved_name": "Lisbon",
+      "country": "Portugal",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "almatykazakhstan": {
+      "latitude": 43.25249,
+      "longitude": 76.9115,
+      "timezone": "Asia/Almaty",
+      "resolved_name": "Almaty",
+      "country": "Kazakhstan",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "farumdenmark": {
+      "latitude": 55.80858,
+      "longitude": 12.36066,
+      "timezone": "Europe/Copenhagen",
+      "resolved_name": "Farum",
+      "country": "Denmark",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "getafespain": {
+      "latitude": 40.30571,
+      "longitude": -3.73295,
+      "timezone": "Europe/Madrid",
+      "resolved_name": "Getafe",
+      "country": "Spain",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "tbilisigeorgia": {
+      "latitude": 41.69143,
+      "longitude": 44.83412,
+      "timezone": "Asia/Tbilisi",
+      "resolved_name": "Tbilisi",
+      "country": "Georgia",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "encampandorra": {
+      "latitude": 42.53474,
+      "longitude": 1.58014,
+      "timezone": "Europe/Andorra",
+      "resolved_name": "Encamp",
+      "country": "Andorra",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "jablonecczechia": {
+      "latitude": 50.72431,
+      "longitude": 15.17108,
+      "timezone": "Europe/Prague",
+      "resolved_name": "Jablonec nad Nisou",
+      "country": "Czechia",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "kolossicyprus": {
+      "latitude": 34.66865,
+      "longitude": 32.93375,
+      "timezone": "Asia/Nicosia",
+      "resolved_name": "Kolossi",
+      "country": "Cyprus",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "belgradeserbia": {
+      "latitude": 44.80401,
+      "longitude": 20.46513,
+      "timezone": "Europe/Belgrade",
+      "resolved_name": "Belgrade",
+      "country": "Serbia",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "trabzonturkiye": {
+      "latitude": 41.005,
+      "longitude": 39.72694,
+      "timezone": "Europe/Istanbul",
+      "resolved_name": "Trabzon",
+      "country": "Republic of Türkiye",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "randersdenmark": {
+      "latitude": 56.4607,
+      "longitude": 10.03639,
+      "timezone": "Europe/Copenhagen",
+      "resolved_name": "Randers",
+      "country": "Denmark",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "banjalukabosniaandherzegovina": {
+      "latitude": 44.77879,
+      "longitude": 17.20629,
+      "timezone": "Europe/Sarajevo",
+      "resolved_name": "Banja Luka",
+      "country": "Bosnia and Herzegovina",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "bragaportugal": {
+      "latitude": 41.5514,
+      "longitude": -8.42311,
+      "timezone": "Europe/Lisbon",
+      "resolved_name": "Braga",
+      "country": "Portugal",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "herningdenmark": {
+      "latitude": 56.13615,
+      "longitude": 8.97662,
+      "timezone": "Europe/Copenhagen",
+      "resolved_name": "Herning",
+      "country": "Denmark",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "thunswitzerland": {
+      "latitude": 46.75118,
+      "longitude": 7.62166,
+      "timezone": "Europe/Zurich",
+      "resolved_name": "Thun",
+      "country": "Switzerland",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "yerevanarmenia": {
+      "latitude": 40.17765,
+      "longitude": 44.5126,
+      "timezone": "Asia/Yerevan",
+      "resolved_name": "Yerevan",
+      "country": "Armenia",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "zagrebcroatia": {
+      "latitude": 45.81444,
+      "longitude": 15.97798,
+      "timezone": "Europe/Zagreb",
+      "resolved_name": "Zagreb",
+      "country": "Croatia",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "budapesthungary": {
+      "latitude": 47.49835,
+      "longitude": 19.04045,
+      "timezone": "Europe/Budapest",
+      "resolved_name": "Budapest",
+      "country": "Hungary",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "torinoitaly": {
+      "latitude": 45.07049,
+      "longitude": 7.68682,
+      "timezone": "Europe/Rome",
+      "resolved_name": "Turin",
+      "country": "Italy",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "dusseldorfgermany": {
+      "latitude": 51.22319,
+      "longitude": 6.77927,
+      "timezone": "Europe/Berlin",
+      "resolved_name": "Düsseldorf",
+      "country": "Germany",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "bialystokpoland": {
+      "latitude": 53.13333,
+      "longitude": 23.16433,
+      "timezone": "Europe/Warsaw",
+      "resolved_name": "Bialystok",
+      "country": "Poland",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "celjeslovenia": {
+      "latitude": 46.23092,
+      "longitude": 15.26044,
+      "timezone": "Europe/Ljubljana",
+      "resolved_name": "Celje",
+      "country": "Slovenia",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "piraeusgreece": {
+      "latitude": 37.94203,
+      "longitude": 23.64619,
+      "timezone": "Europe/Athens",
+      "resolved_name": "Piraeus",
+      "country": "Greece",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "nicosiacyprus": {
+      "latitude": 35.17284,
+      "longitude": 33.35397,
+      "timezone": "Asia/Nicosia",
+      "resolved_name": "Nicosia",
+      "country": "Cyprus",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "plzenczechia": {
+      "latitude": 49.67517,
+      "longitude": 13.27462,
+      "timezone": "Europe/Prague",
+      "resolved_name": "Plzen",
+      "country": "Czechia",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "alcocheteportugal": {
+      "latitude": 38.75534,
+      "longitude": -8.96086,
+      "timezone": "Europe/Lisbon",
+      "resolved_name": "Alcochete",
+      "country": "Portugal",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "fatimaportugal": {
+      "latitude": 39.62071,
+      "longitude": -8.65237,
+      "timezone": "Europe/Lisbon",
+      "resolved_name": "Fátima",
+      "country": "Portugal",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "oliveiradeazemeisportugal": {
+      "latitude": 40.84101,
+      "longitude": -8.47555,
+      "timezone": "Europe/Lisbon",
+      "resolved_name": "Oliveira de Azeméis",
+      "country": "Portugal",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "mafraportugal": {
+      "latitude": 38.93793,
+      "longitude": -9.32756,
+      "timezone": "Europe/Lisbon",
+      "resolved_name": "Mafra",
+      "country": "Portugal",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "olhaoportugal": {
+      "latitude": 37.0286,
+      "longitude": -7.8411,
+      "timezone": "Europe/Lisbon",
+      "resolved_name": "Olhão",
+      "country": "Portugal",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "santamariadafeiraportugal": {
+      "latitude": 40.92726,
+      "longitude": -8.54839,
+      "timezone": "Europe/Lisbon",
+      "resolved_name": "Santa Maria da Feira",
+      "country": "Portugal",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "tondelaportugal": {
+      "latitude": 40.51682,
+      "longitude": -8.08087,
+      "timezone": "Europe/Lisbon",
+      "resolved_name": "Tondela",
+      "country": "Portugal",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "setubalportugal": {
+      "latitude": 38.5244,
+      "longitude": -8.8882,
+      "timezone": "Europe/Lisbon",
+      "resolved_name": "Setúbal",
+      "country": "Portugal",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
+    },
+    "paredesportugal": {
+      "latitude": 41.20485,
+      "longitude": -8.33147,
+      "timezone": "Europe/Lisbon",
+      "resolved_name": "Paredes",
+      "country": "Portugal",
+      "cached_at": "2026-10-17T21:21:42.481900+00:00"
     }
   },
   "forecasts": {
