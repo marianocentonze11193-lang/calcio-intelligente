@@ -7,6 +7,7 @@ import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "data" / "competition_data.json"
@@ -115,9 +116,9 @@ def parse_event(event, code, meta):
     raw_date = event.get("date") or ""
     try:
         parsed = datetime.fromisoformat(raw_date.replace("Z", "+00:00"))
-        local = parsed.astimezone(timezone(timedelta(hours=2)))  # canonical display fallback; date is replaced below for UTC-safe parsing
-        event_date = parsed.date()
-        kickoff = parsed.strftime("%H:%M")
+        local = parsed.astimezone(ZoneInfo("Europe/Rome"))
+        event_date = local.date()
+        kickoff = local.strftime("%H:%M")
     except (ValueError, TypeError):
         return None
     # Use the event's official ISO date as a stable calendar key; timezone is explicitly identified.
@@ -145,7 +146,7 @@ def parse_event(event, code, meta):
         "id": str(event.get("id") or ""),
         "date": event_date.isoformat(),
         "kickoff": kickoff,
-        "timezone": "UTC source timestamp",
+        "timezone": "Europe/Rome",
         "home_team": home[0],
         "away_team": away[0],
         "status": "completed" if completed else ("in_progress" if status_obj.get("inProgress") else "scheduled"),
