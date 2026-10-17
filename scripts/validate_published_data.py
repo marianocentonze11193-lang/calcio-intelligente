@@ -8,6 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 PREDICTIONS_FILE = ROOT / "data" / "predictions.json"
 HISTORY_FILE = ROOT / "data" / "history.json"
+COMPETITION_FILE = ROOT / "data" / "competition_data.json"
 
 
 def load_json(path):
@@ -30,10 +31,70 @@ def is_recent_timestamp(value, now=None, max_age_hours=36):
         return False
 
 
+
+def validate_competition_archive(archive):
+    """Controlla integrità minima del calendario stagionale, senza imporre una freschezza rigida."""
+    errors = []
+    if not isinstance(archive, dict):
+        return ["competition_data.json: il contenuto deve essere un oggetto."]
+    try:
+        datetime.fromisoformat(str(archive.get("updated_at", "")).replace("Z", "+00:00"))
+    except (TypeError, ValueError, OverflowError):
+        errors.append("competition_data.json: updated_at mancante o non valido.")
+    fixtures = archive.get("fixtures")
+    if not isinstance(fixtures, list):
+        return errors + ["competition_data.json: fixtures deve essere una lista."]
+    seen_ids, seen_matches = set(), set()
+    for index, fixture in enumerate(fixtures):
+        label = f"competition_data.json fixtures[{index}]"
+        if not isinstance(fixture, dict):
+            errors.append(f"{label}: record non valido.")
+            continue
+        fixture_id = fixture.get("id")
+        if not fixture_id:
+            errors.append(f"{label}: id mancante.")
+        elif fixture_id in seen_ids:
+            errors.append(f"{label}: id duplicato {fixture_id!r}.")
+        else:
+            seen_ids.add(fixture_id)
+        try:
+            match_date = date.fromisoformat(str(fixture.get("date", ""))).isoformat()
+        except (TypeError, ValueError):
+            errors.append(f"{label}: data non valida.")
+            continue
+        home, away = str(fixture.get("home_team", "")).strip(), str(fixture.get("away_team", "")).strip()
+        if not home or not away or home.casefold() == away.casefold():
+            errors.append(f"{label}: nomi delle squadre mancanti o identici.")
+        competition = str(fixture.get("competition_code") or fixture.get("competition") or "").strip()
+        if not competition:
+            errors.append(f"{label}: competizione mancante.")
+        key = (match_date, competition.casefold(), home.casefold(), away.casefold())
+        if key in seen_matches:
+            errors.append(f"{label}: partita duplicata per data, competizione e squadre.")
+        seen_matches.add(key)
+        if fixture.get("status") == "completed":
+            goals = (fixture.get("home_goals"), fixture.get("away_goals"))
+            if not all(isinstance(value, int) and 0 <= value <= 15 for value in goals):
+                errors.append(f"{label}: partita conclusa senza punteggio valido.")
+    summary = archive.get("summary")
+    if summary is not None and not isinstance(summary, dict):
+        errors.append("competition_data.json: summary deve essere un oggetto.")
+    return errors
+
+
 def validate():
     predictions = load_json(PREDICTIONS_FILE)
     history = load_json(HISTORY_FILE)
     errors = []
+
+    if not COMPETITION_FILE.exists():
+        errors.append("competition_data.json mancante: calendario stagionale non disponibile.")
+    else:
+        try:
+            competition_archive = load_json(COMPETITION_FILE)
+            errors.extend(validate_competition_archive(competition_archive))
+        except (OSError, ValueError, TypeError) as error:
+            errors.append(f"competition_data.json non leggibile: {error}")
 
     if not is_recent_timestamp(predictions.get("updated_at")):
         errors.append("predictions.json: updated_at mancante, non valido, nel futuro o più vecchio di 36 ore.")
