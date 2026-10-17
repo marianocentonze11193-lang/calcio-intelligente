@@ -1097,3 +1097,29 @@ if __name__ == "__main__":
         self.assertNotEqual(adjusted["expected_home_goals"], informational["expected_home_goals"])
         self.assertEqual(informational["home_recent_form"], recent["Casa"])
         self.assertEqual(informational["away_recent_form"], recent["Ospite"])
+
+    def test_unvalidated_cup_context_is_informational_when_adjustment_disabled(self):
+        history = defaultdict(lambda: {
+            "played": 5, "home_games": 0, "away_games": 0,
+            "home_scored": 0, "home_conceded": 0, "away_scored": 0, "away_conceded": 0,
+        })
+        history["Casa"].update({"home_games": 5, "home_scored": 10, "home_conceded": 5})
+        history["Ospite"].update({"away_games": 5, "away_scored": 7, "away_conceded": 8})
+        context = [
+            {"team": "Casa", "competition": "Champions League", "attack_factor": 0.8},
+            {"team": "Ospite", "competition": "Champions League", "attack_factor": 1.1},
+        ]
+        with patch.object(module, "european_fatigue_context", return_value=context):
+            informational = module.make_forecast(
+                "Casa", "Ospite", "Serie A", date(2026, 10, 20), "20:00",
+                history, 1.5, 1.2, None, {}, [], {},
+                apply_form_adjustment=False, apply_competition_adjustment=False,
+            )
+            adjusted = module.make_forecast(
+                "Casa", "Ospite", "Serie A", date(2026, 10, 20), "20:00",
+                history, 1.5, 1.2, None, {}, [], {},
+                apply_form_adjustment=False, apply_competition_adjustment=True,
+            )
+        self.assertEqual(informational["expected_home_goals"], round(adjusted["expected_home_goals"] / 0.8, 2))
+        self.assertEqual(informational["recent_competition_context"], context)
+        self.assertEqual(informational["status"], "Stima preliminare")
