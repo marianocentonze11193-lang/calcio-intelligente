@@ -399,9 +399,9 @@
       "expected_away_goals": 2.26,
       "sample_matches": 3,
       "archived_at": "2026-10-15T09:51:33.524022+00:00",
-      "outcome": null,
-      "home_goals": null,
-      "away_goals": null,
+      "outcome": "1",
+      "home_goals": 1,
+      "away_goals": 0,
       "odds_1x2": {
         "home": 4.89,
         "draw": 4.22,
@@ -451,7 +451,8 @@
           },
           "overround": 7.05
         }
-      }
+      },
+      "settled_at": "2026-10-17T15:45:30.383819+00:00"
     },
     {
       "id": "2026-10-17-Super Lig turca-Genclerbirligi-Galatasaray",
@@ -482,9 +483,9 @@
       "expected_away_goals": 1.98,
       "sample_matches": 3,
       "archived_at": "2026-10-15T09:51:33.524036+00:00",
-      "outcome": null,
-      "home_goals": null,
-      "away_goals": null,
+      "outcome": "2",
+      "home_goals": 0,
+      "away_goals": 1,
       "odds_markets": {
         "over_under_2_5": {
           "over": 1.45,
@@ -534,7 +535,8 @@
         "draw": -0.0436,
         "away": -0.2098
       },
-      "odds_snapshot_at": "2026-10-16T08:38:27+00:00"
+      "odds_snapshot_at": "2026-10-16T08:38:27+00:00",
+      "settled_at": "2026-10-17T15:45:30.383849+00:00"
     },
     {
       "id": "2026-10-17-Championship-Bristol City-Sheffield United",
@@ -2373,9 +2375,10 @@
       "expected_away_goals": 1.67,
       "sample_matches": 2,
       "archived_at": "2026-10-15T10:09:22.994513+00:00",
-      "outcome": null,
-      "home_goals": null,
-      "away_goals": null
+      "outcome": "2",
+      "home_goals": 0,
+      "away_goals": 1,
+      "settled_at": "2026-10-17T15:45:30.383944+00:00"
     },
     {
       "id": "2026-10-17-Bundesliga-Werder Bremen-SC Paderborn 07",
@@ -2406,9 +2409,10 @@
       "expected_away_goals": 1.45,
       "sample_matches": 0,
       "archived_at": "2026-10-15T10:09:22.994526+00:00",
-      "outcome": null,
-      "home_goals": null,
-      "away_goals": null
+      "outcome": "X",
+      "home_goals": 2,
+      "away_goals": 2,
+      "settled_at": "2026-10-17T15:45:30.383953+00:00"
     },
     {
       "id": "2026-10-17-Bundesliga-Bayern Munich-RB Leipzig",
@@ -3233,9 +3237,10 @@
       "expected_away_goals": 0.95,
       "sample_matches": 0,
       "archived_at": "2026-10-15T10:09:22.995042+00:00",
-      "outcome": null,
-      "home_goals": null,
-      "away_goals": null
+      "outcome": "1",
+      "home_goals": 1,
+      "away_goals": 0,
+      "settled_at": "2026-10-17T15:45:30.384032+00:00"
     },
     {
       "id": "2026-10-18-Super Lig turca-Kocaelispor-Goztepe",
@@ -4371,9 +4376,10 @@
       "expected_away_goals": 2.77,
       "sample_matches": 2,
       "archived_at": "2026-10-16T05:21:56.153747+00:00",
-      "outcome": null,
-      "home_goals": null,
-      "away_goals": null
+      "outcome": "1",
+      "home_goals": 4,
+      "away_goals": 3,
+      "settled_at": "2026-10-17T15:45:30.384090+00:00"
     },
     {
       "id": "2026-10-17-Bundesliga-Union Berlin-Dortmund",
@@ -4405,9 +4411,10 @@
       "expected_away_goals": 2.35,
       "sample_matches": 2,
       "archived_at": "2026-10-16T05:21:56.153779+00:00",
-      "outcome": null,
-      "home_goals": null,
-      "away_goals": null
+      "outcome": "X",
+      "home_goals": 0,
+      "away_goals": 0,
+      "settled_at": "2026-10-17T15:45:30.384097+00:00"
     },
     {
       "id": "2026-10-17-Bundesliga-Werder Bremen-Paderborn",
@@ -4439,9 +4446,10 @@
       "expected_away_goals": 0.71,
       "sample_matches": 2,
       "archived_at": "2026-10-16T05:21:56.153795+00:00",
-      "outcome": null,
-      "home_goals": null,
-      "away_goals": null
+      "outcome": "X",
+      "home_goals": 2,
+      "away_goals": 2,
+      "settled_at": "2026-10-17T15:45:30.384103+00:00"
     },
     {
       "id": "2026-10-18-Bundesliga-Leverkusen-Freiburg",
@@ -6730,9 +6738,9 @@
       "away_goals": null
     }
   ],
-  "updated_at": "2026-10-17T14:45:30.063582+00:00",
+  "updated_at": "2026-10-17T15:45:30.384212+00:00",
   "metrics": {
-    "settled_matches": 6,
+    "settled_matches": 14,
     "accuracy_1x2": null,
     "brier_score_1x2": null,
     "minimum_matches_required": 30,
@@ -6740,7 +6748,7 @@
   },
   "metrics_by_league": {},
   "model_vs_market_metrics": {
-    "settled_matches_with_model_and_odds": 4,
+    "settled_matches_with_model_and_odds": 6,
     "minimum_matches_required": 30,
     "model": null,
     "market": null,
@@ -6757,7 +6765,7 @@
       "note": "Servono almeno 30 partite concluse con quote e probabilità per questo mercato."
     },
     "over_under_2_5": {
-      "settled_matches_with_model_and_odds": 4,
+      "settled_matches_with_model_and_odds": 6,
       "minimum_matches_required": 30,
       "model": null,
       "market": null,
@@ -6782,7 +6790,7 @@
     }
   },
   "result_matching": {
-    "checked_at": "2026-10-17T14:45:30.063562+00:00",
+    "checked_at": "2026-10-17T15:45:30.384200+00:00",
     "unresolved_past_matches": 3,
     "examples": [
       {
