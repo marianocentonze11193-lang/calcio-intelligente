@@ -161,6 +161,8 @@ def main():
                 "period_start": min((item["date"] for item in evaluated), default=None),
                 "period_end": max((item["date"] for item in evaluated), default=None),
             }
+            all_model.extend(item["model"] for item in evaluated)
+            all_baseline.extend(item["baseline"] for item in evaluated)
             print(f"{league}: {len(results)} risultati sorgente, {len(evaluated)} previsioni walk-forward.")
         except (urllib.error.URLError, TimeoutError, OSError, ValueError, KeyError, TypeError) as error:
             errors.append(f"{league}: {error}")
@@ -177,6 +179,11 @@ def main():
         "method": "walk-forward cronologico per data, con baseline di frequenza 1/X/2 calcolata solo sui risultati precedenti e smoothing di Laplace",
         "period_start_requested": START_DATE.isoformat(),
         "period_end_requested": (today - timedelta(days=1)).isoformat(),
+        "overall": {
+            "walk_forward": metric_summary(all_model),
+            "prior_frequency_baseline": metric_summary(all_baseline),
+            "comparison_note": "Confronto su identiche partite; per Brier score e log loss un valore più basso è migliore.",
+        },
         "leagues": all_by_league,
         "leagues_with_results": len(all_by_league),
         "errors": errors,
