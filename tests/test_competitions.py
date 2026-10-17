@@ -24,6 +24,28 @@ class CompetitionSyncTests(unittest.TestCase):
         self.assertEqual(sync.season_range(date(2026, 3, 10), "calendar"),
                          (date(2026, 1, 1), date(2026, 12, 31)))
 
+    def test_cup_calendar_uses_daily_scoreboard_requests(self):
+        from unittest.mock import patch
+        from datetime import timedelta
+        from zoneinfo import ZoneInfo
+        from datetime import timezone
+
+        today = sync.datetime.now(timezone.utc).astimezone(ZoneInfo("Europe/Rome")).date()
+        start, end = today - timedelta(days=7), today + timedelta(days=14)
+        with patch.object(sync, "fetch_json", return_value={"events": []}) as mocked:
+            code, events, diagnostics = sync.fetch_calendar_competition(
+                "uefa.champions",
+                {"name": "Champions League", "country": "Europa", "kind": "Coppa europea"},
+                start, end,
+            )
+        self.assertEqual(code, "uefa.champions")
+        self.assertEqual(events, [])
+        self.assertEqual(diagnostics["chunks_ok"], 22)
+        requested_dates = [call.args[0].split("dates=")[1].split("&")[0] for call in mocked.call_args_list]
+        self.assertEqual(len(requested_dates), 22)
+        self.assertTrue(all(len(value) == 8 and "-" not in value for value in requested_dates))
+
+
     def test_parse_event_valid_finished_match(self):
         event = {
             "id": "123",
