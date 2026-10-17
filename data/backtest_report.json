@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T20:56:57.479313+00:00",
+  "updated_at": "2026-10-17T20:59:01.491516+00:00",
   "method": "walk-forward cronologico per data, con baseline di frequenza 1/X/2 calcolata solo sui risultati precedenti e smoothing di Laplace",
   "period_start_requested": "2024-07-01",
   "period_end_requested": "2026-10-16",
