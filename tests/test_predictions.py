@@ -890,7 +890,7 @@ class PredictionModelTests(unittest.TestCase):
         self.assertIn("DFB-Pokal", module.COMPETITION_ESPN_CODES.values())
         self.assertEqual(
             set(module.COMPETITION_ESPN_CODES.values()),
-            set(archive_module.ESPN_LEAGUES).intersection(module.COMPETITION_ESPN_CODES.values()),
+            set(module.COMPETITION_COUNTRIES),
         )
 
     def test_cup_forecasts_are_always_preliminary_and_never_auto_recommend_markets(self):
