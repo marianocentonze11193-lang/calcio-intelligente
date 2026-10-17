@@ -66,6 +66,7 @@ jobs:
             # eliminerebbe i dati appena scaricati nello step precedente.
             env -u API_FOOTBALL_KEY python scripts/sync_competitions.py
             python scripts/update_predictions.py
+            python scripts/enrich_with_weather.py
             python scripts/enrich_with_availability.py
             python scripts/enrich_with_odds.py
             python scripts/enrich_with_api_football_odds.py
