@@ -1,7 +1,7 @@
 {
-  "schema_version": 2,
-  "updated_at": "2026-10-17T16:50:53.088261+00:00",
-  "source_policy": "Campionati: football-data.co.uk; coppe e fallback: ESPN. Date, nomi e punteggi sono controllati. La classifica nazionale è ricalcolata dai risultati e può differire dall'ufficiale per penalizzazioni o regole speciali.",
+  "schema_version": 3,
+  "updated_at": "2026-10-17T16:53:45.260150+00:00",
+  "source_policy": "Fonte prioritaria: API-Football se la chiave è configurata; fallback football-data.co.uk per i campionati ed ESPN per le coppe. Date, squadre e punteggi sono controllati. La copertura e gli errori sono esposti per competizione.",
   "fixtures": [
     {
       "id": "fd-sco.1-2026-07-31-dundee united-rangers",
@@ -10642,6 +10642,1174 @@
       "country": "Portogallo",
       "kind": "Campionato",
       "source": "football-data.co.uk"
+    },
+    {
+      "id": "fd-tur.1-2026-10-17-erzurumspor-eyupspor",
+      "date": "2026-10-17",
+      "kickoff": "11:30",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Erzurumspor",
+      "away_team": "Eyupspor",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "tur.1",
+      "competition": "Super Lig turca",
+      "country": "Turchia",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-eng.1-2026-10-17-everton-chelsea",
+      "date": "2026-10-17",
+      "kickoff": "12:30",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Everton",
+      "away_team": "Chelsea",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "eng.1",
+      "competition": "Premier League",
+      "country": "Inghilterra",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-esp.1-2026-10-17-espanol-ath madrid",
+      "date": "2026-10-17",
+      "kickoff": "13:00",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Espanol",
+      "away_team": "Ath Madrid",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "esp.1",
+      "competition": "La Liga",
+      "country": "Spagna",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-ita.1-2026-10-17-venezia-napoli",
+      "date": "2026-10-17",
+      "kickoff": "14:00",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Venezia",
+      "away_team": "Napoli",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "ita.1",
+      "competition": "Serie A",
+      "country": "Italia",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-tur.1-2026-10-17-amedspor-konyaspor",
+      "date": "2026-10-17",
+      "kickoff": "14:00",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Amedspor",
+      "away_team": "Konyaspor",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "tur.1",
+      "competition": "Super Lig turca",
+      "country": "Turchia",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-tur.1-2026-10-17-genclerbirligi-galatasaray",
+      "date": "2026-10-17",
+      "kickoff": "14:00",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Genclerbirligi",
+      "away_team": "Galatasaray",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "tur.1",
+      "competition": "Super Lig turca",
+      "country": "Turchia",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-ger.1-2026-10-17-elversberg-augsburg",
+      "date": "2026-10-17",
+      "kickoff": "14:30",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Elversberg",
+      "away_team": "Augsburg",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "ger.1",
+      "competition": "Bundesliga",
+      "country": "Germania",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-ger.1-2026-10-17-hamburg-stuttgart",
+      "date": "2026-10-17",
+      "kickoff": "14:30",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Hamburg",
+      "away_team": "Stuttgart",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "ger.1",
+      "competition": "Bundesliga",
+      "country": "Germania",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-ger.1-2026-10-17-schalke 04-mainz",
+      "date": "2026-10-17",
+      "kickoff": "14:30",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Schalke 04",
+      "away_team": "Mainz",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "ger.1",
+      "competition": "Bundesliga",
+      "country": "Germania",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-ger.1-2026-10-17-union berlin-dortmund",
+      "date": "2026-10-17",
+      "kickoff": "14:30",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Union Berlin",
+      "away_team": "Dortmund",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "ger.1",
+      "competition": "Bundesliga",
+      "country": "Germania",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-ger.1-2026-10-17-werder bremen-paderborn",
+      "date": "2026-10-17",
+      "kickoff": "14:30",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Werder Bremen",
+      "away_team": "Paderborn",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "ger.1",
+      "competition": "Bundesliga",
+      "country": "Germania",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-eng.1-2026-10-17-brentford-liverpool",
+      "date": "2026-10-17",
+      "kickoff": "15:00",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Brentford",
+      "away_team": "Liverpool",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "eng.1",
+      "competition": "Premier League",
+      "country": "Inghilterra",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-eng.1-2026-10-17-fulham-hull",
+      "date": "2026-10-17",
+      "kickoff": "15:00",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Fulham",
+      "away_team": "Hull",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "eng.1",
+      "competition": "Premier League",
+      "country": "Inghilterra",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-eng.1-2026-10-17-man city-ipswich",
+      "date": "2026-10-17",
+      "kickoff": "15:00",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Man City",
+      "away_team": "Ipswich",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "eng.1",
+      "competition": "Premier League",
+      "country": "Inghilterra",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-sco.1-2026-10-17-aberdeen-st mirren",
+      "date": "2026-10-17",
+      "kickoff": "15:00",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Aberdeen",
+      "away_team": "St Mirren",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "sco.1",
+      "competition": "Scottish Premiership",
+      "country": "Scozia",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-sco.1-2026-10-17-hibernian-falkirk",
+      "date": "2026-10-17",
+      "kickoff": "15:00",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Hibernian",
+      "away_team": "Falkirk",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "sco.1",
+      "competition": "Scottish Premiership",
+      "country": "Scozia",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-sco.1-2026-10-17-kilmarnock-motherwell",
+      "date": "2026-10-17",
+      "kickoff": "15:00",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Kilmarnock",
+      "away_team": "Motherwell",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "sco.1",
+      "competition": "Scottish Premiership",
+      "country": "Scozia",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-sco.1-2026-10-17-st johnstone-dundee united",
+      "date": "2026-10-17",
+      "kickoff": "15:00",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "St Johnstone",
+      "away_team": "Dundee United",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "sco.1",
+      "competition": "Scottish Premiership",
+      "country": "Scozia",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-gre.1-2026-10-17-levadeiakos-volos nfc",
+      "date": "2026-10-17",
+      "kickoff": "15:00",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Levadeiakos",
+      "away_team": "Volos NFC",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "gre.1",
+      "competition": "Super League greca",
+      "country": "Grecia",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-esp.1-2026-10-17-villarreal-elche",
+      "date": "2026-10-17",
+      "kickoff": "15:15",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Villarreal",
+      "away_team": "Elche",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "esp.1",
+      "competition": "La Liga",
+      "country": "Spagna",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-ned.1-2026-10-17-den haag-psv eindhoven",
+      "date": "2026-10-17",
+      "kickoff": "15:30",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Den Haag",
+      "away_team": "PSV Eindhoven",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "ned.1",
+      "competition": "Eredivisie",
+      "country": "Paesi Bassi",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-fra.1-2026-10-17-strasbourg-paris sg",
+      "date": "2026-10-17",
+      "kickoff": "16:15",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Strasbourg",
+      "away_team": "Paris SG",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "fra.1",
+      "competition": "Ligue 1",
+      "country": "Francia",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-ita.1-2026-10-17-bologna-inter",
+      "date": "2026-10-17",
+      "kickoff": "17:00",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Bologna",
+      "away_team": "Inter",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "ita.1",
+      "competition": "Serie A",
+      "country": "Italia",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-tur.1-2026-10-17-fenerbahce-alanyaspor",
+      "date": "2026-10-17",
+      "kickoff": "17:00",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Fenerbahce",
+      "away_team": "Alanyaspor",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "tur.1",
+      "competition": "Super Lig turca",
+      "country": "Turchia",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-ger.1-2026-10-17-bayern munich-rb leipzig",
+      "date": "2026-10-17",
+      "kickoff": "17:30",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Bayern Munich",
+      "away_team": "RB Leipzig",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "ger.1",
+      "competition": "Bundesliga",
+      "country": "Germania",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-esp.1-2026-10-17-betis-barcelona",
+      "date": "2026-10-17",
+      "kickoff": "17:30",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Betis",
+      "away_team": "Barcelona",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "esp.1",
+      "competition": "La Liga",
+      "country": "Spagna",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-eng.1-2026-10-17-newcastle-aston villa",
+      "date": "2026-10-17",
+      "kickoff": "17:30",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Newcastle",
+      "away_team": "Aston Villa",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "eng.1",
+      "competition": "Premier League",
+      "country": "Inghilterra",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-ned.1-2026-10-17-telstar-feyenoord",
+      "date": "2026-10-17",
+      "kickoff": "19:00",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Telstar",
+      "away_team": "Feyenoord",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "ned.1",
+      "competition": "Eredivisie",
+      "country": "Paesi Bassi",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-fra.1-2026-10-17-lille-brest",
+      "date": "2026-10-17",
+      "kickoff": "19:45",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Lille",
+      "away_team": "Brest",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "fra.1",
+      "competition": "Ligue 1",
+      "country": "Francia",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-fra.1-2026-10-17-troyes-lens",
+      "date": "2026-10-17",
+      "kickoff": "19:45",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Troyes",
+      "away_team": "Lens",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "fra.1",
+      "competition": "Ligue 1",
+      "country": "Francia",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-ita.1-2026-10-17-roma-genoa",
+      "date": "2026-10-17",
+      "kickoff": "19:45",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Roma",
+      "away_team": "Genoa",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "ita.1",
+      "competition": "Serie A",
+      "country": "Italia",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-ned.1-2026-10-17-sparta rotterdam-willem ii",
+      "date": "2026-10-17",
+      "kickoff": "20:00",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Sparta Rotterdam",
+      "away_team": "Willem II",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "ned.1",
+      "competition": "Eredivisie",
+      "country": "Paesi Bassi",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-esp.1-2026-10-17-valencia-ath bilbao",
+      "date": "2026-10-17",
+      "kickoff": "20:00",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Valencia",
+      "away_team": "Ath Bilbao",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "esp.1",
+      "competition": "La Liga",
+      "country": "Spagna",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-sco.1-2026-10-17-dundee-rangers",
+      "date": "2026-10-17",
+      "kickoff": "20:00",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Dundee",
+      "away_team": "Rangers",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "sco.1",
+      "competition": "Scottish Premiership",
+      "country": "Scozia",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-ned.1-2026-10-18-zwolle-go ahead eagles",
+      "date": "2026-10-18",
+      "kickoff": "11:15",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Zwolle",
+      "away_team": "Go Ahead Eagles",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "ned.1",
+      "competition": "Eredivisie",
+      "country": "Paesi Bassi",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-ita.1-2026-10-18-udinese-lecce",
+      "date": "2026-10-18",
+      "kickoff": "11:30",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Udinese",
+      "away_team": "Lecce",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "ita.1",
+      "competition": "Serie A",
+      "country": "Italia",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-tur.1-2026-10-18-kasimpasa-samsunspor",
+      "date": "2026-10-18",
+      "kickoff": "11:30",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Kasimpasa",
+      "away_team": "Samsunspor",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "tur.1",
+      "competition": "Super Lig turca",
+      "country": "Turchia",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-esp.1-2026-10-18-osasuna-santander",
+      "date": "2026-10-18",
+      "kickoff": "13:00",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Osasuna",
+      "away_team": "Santander",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "esp.1",
+      "competition": "La Liga",
+      "country": "Spagna",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-ned.1-2026-10-18-cambuur-az alkmaar",
+      "date": "2026-10-18",
+      "kickoff": "13:30",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Cambuur",
+      "away_team": "AZ Alkmaar",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "ned.1",
+      "competition": "Eredivisie",
+      "country": "Paesi Bassi",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-fra.1-2026-10-18-angers-marseille",
+      "date": "2026-10-18",
+      "kickoff": "14:00",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Angers",
+      "away_team": "Marseille",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "fra.1",
+      "competition": "Ligue 1",
+      "country": "Francia",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-eng.1-2026-10-18-bournemouth-sunderland",
+      "date": "2026-10-18",
+      "kickoff": "14:00",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Bournemouth",
+      "away_team": "Sunderland",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "eng.1",
+      "competition": "Premier League",
+      "country": "Inghilterra",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-eng.1-2026-10-18-brighton-crystal palace",
+      "date": "2026-10-18",
+      "kickoff": "14:00",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Brighton",
+      "away_team": "Crystal Palace",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "eng.1",
+      "competition": "Premier League",
+      "country": "Inghilterra",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-eng.1-2026-10-18-leeds-man united",
+      "date": "2026-10-18",
+      "kickoff": "14:00",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Leeds",
+      "away_team": "Man United",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "eng.1",
+      "competition": "Premier League",
+      "country": "Inghilterra",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-ita.1-2026-10-18-fiorentina-como",
+      "date": "2026-10-18",
+      "kickoff": "14:00",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Fiorentina",
+      "away_team": "Como",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "ita.1",
+      "competition": "Serie A",
+      "country": "Italia",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-gre.1-2026-10-18-kalamata-ofi crete",
+      "date": "2026-10-18",
+      "kickoff": "14:00",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Kalamata",
+      "away_team": "OFI Crete",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "gre.1",
+      "competition": "Super League greca",
+      "country": "Grecia",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-tur.1-2026-10-18-kocaelispor-goztep",
+      "date": "2026-10-18",
+      "kickoff": "14:00",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Kocaelispor",
+      "away_team": "Goztep",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "tur.1",
+      "competition": "Super Lig turca",
+      "country": "Turchia",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-ger.1-2026-10-18-leverkusen-freiburg",
+      "date": "2026-10-18",
+      "kickoff": "14:30",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Leverkusen",
+      "away_team": "Freiburg",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "ger.1",
+      "competition": "Bundesliga",
+      "country": "Germania",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-sco.1-2026-10-18-celtic-hearts",
+      "date": "2026-10-18",
+      "kickoff": "15:00",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Celtic",
+      "away_team": "Hearts",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "sco.1",
+      "competition": "Scottish Premiership",
+      "country": "Scozia",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-gre.1-2026-10-18-panetolikos-olympiakos",
+      "date": "2026-10-18",
+      "kickoff": "15:00",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Panetolikos",
+      "away_team": "Olympiakos",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "gre.1",
+      "competition": "Super League greca",
+      "country": "Grecia",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-esp.1-2026-10-18-celta-alaves",
+      "date": "2026-10-18",
+      "kickoff": "15:15",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Celta",
+      "away_team": "Alaves",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "esp.1",
+      "competition": "La Liga",
+      "country": "Spagna",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-gre.1-2026-10-18-panathinaikos-asteras tripolis",
+      "date": "2026-10-18",
+      "kickoff": "15:30",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Panathinaikos",
+      "away_team": "Asteras Tripolis",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "gre.1",
+      "competition": "Super League greca",
+      "country": "Grecia",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-ned.1-2026-10-18-groningen-ajax",
+      "date": "2026-10-18",
+      "kickoff": "15:45",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Groningen",
+      "away_team": "Ajax",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "ned.1",
+      "competition": "Eredivisie",
+      "country": "Paesi Bassi",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-fra.1-2026-10-18-le havre-auxerre",
+      "date": "2026-10-18",
+      "kickoff": "16:15",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Le Havre",
+      "away_team": "Auxerre",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "fra.1",
+      "competition": "Ligue 1",
+      "country": "Francia",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-fra.1-2026-10-18-lorient-monaco",
+      "date": "2026-10-18",
+      "kickoff": "16:15",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Lorient",
+      "away_team": "Monaco",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "fra.1",
+      "competition": "Ligue 1",
+      "country": "Francia",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-fra.1-2026-10-18-paris fc-rennes",
+      "date": "2026-10-18",
+      "kickoff": "16:15",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Paris FC",
+      "away_team": "Rennes",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "fra.1",
+      "competition": "Ligue 1",
+      "country": "Francia",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-ger.1-2026-10-18-m'gladbach-hoffenheim",
+      "date": "2026-10-18",
+      "kickoff": "16:30",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "M'gladbach",
+      "away_team": "Hoffenheim",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "ger.1",
+      "competition": "Bundesliga",
+      "country": "Germania",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-eng.1-2026-10-18-nott'm forest-arsenal",
+      "date": "2026-10-18",
+      "kickoff": "16:30",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Nott'm Forest",
+      "away_team": "Arsenal",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "eng.1",
+      "competition": "Premier League",
+      "country": "Inghilterra",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-ita.1-2026-10-18-milan-atalanta",
+      "date": "2026-10-18",
+      "kickoff": "17:00",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Milan",
+      "away_team": "Atalanta",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "ita.1",
+      "competition": "Serie A",
+      "country": "Italia",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-tur.1-2026-10-18-buyuksehyr-gaziantep",
+      "date": "2026-10-18",
+      "kickoff": "17:00",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Buyuksehyr",
+      "away_team": "Gaziantep",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "tur.1",
+      "competition": "Super Lig turca",
+      "country": "Turchia",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-esp.1-2026-10-18-malaga-sociedad",
+      "date": "2026-10-18",
+      "kickoff": "17:30",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Malaga",
+      "away_team": "Sociedad",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "esp.1",
+      "competition": "La Liga",
+      "country": "Spagna",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-gre.1-2026-10-18-kifisia-aris",
+      "date": "2026-10-18",
+      "kickoff": "18:00",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Kifisia",
+      "away_team": "Aris",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "gre.1",
+      "competition": "Super League greca",
+      "country": "Grecia",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-ned.1-2026-10-18-nijmegen-for sittard",
+      "date": "2026-10-18",
+      "kickoff": "19:00",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Nijmegen",
+      "away_team": "For Sittard",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "ned.1",
+      "competition": "Eredivisie",
+      "country": "Paesi Bassi",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-ned.1-2026-10-18-twente-utrecht",
+      "date": "2026-10-18",
+      "kickoff": "19:00",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Twente",
+      "away_team": "Utrecht",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "ned.1",
+      "competition": "Eredivisie",
+      "country": "Paesi Bassi",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-gre.1-2026-10-18-paok-iraklis",
+      "date": "2026-10-18",
+      "kickoff": "19:00",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "PAOK",
+      "away_team": "Iraklis",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "gre.1",
+      "competition": "Super League greca",
+      "country": "Grecia",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-fra.1-2026-10-18-lyon-nice",
+      "date": "2026-10-18",
+      "kickoff": "19:45",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Lyon",
+      "away_team": "Nice",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "fra.1",
+      "competition": "Ligue 1",
+      "country": "Francia",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-ita.1-2026-10-18-juventus-lazio",
+      "date": "2026-10-18",
+      "kickoff": "19:45",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Juventus",
+      "away_team": "Lazio",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "ita.1",
+      "competition": "Serie A",
+      "country": "Italia",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-esp.1-2026-10-18-real madrid-sevilla",
+      "date": "2026-10-18",
+      "kickoff": "20:00",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Real Madrid",
+      "away_team": "Sevilla",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "esp.1",
+      "competition": "La Liga",
+      "country": "Spagna",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-ita.1-2026-10-19-monza-cagliari",
+      "date": "2026-10-19",
+      "kickoff": "17:30",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Monza",
+      "away_team": "Cagliari",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "ita.1",
+      "competition": "Serie A",
+      "country": "Italia",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-tur.1-2026-10-19-trabzonspor-besiktas",
+      "date": "2026-10-19",
+      "kickoff": "18:00",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Trabzonspor",
+      "away_team": "Besiktas",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "tur.1",
+      "competition": "Super Lig turca",
+      "country": "Turchia",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-ita.1-2026-10-19-parma-torino",
+      "date": "2026-10-19",
+      "kickoff": "19:45",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Parma",
+      "away_team": "Torino",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "ita.1",
+      "competition": "Serie A",
+      "country": "Italia",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-esp.1-2026-10-19-getafe-vallecano",
+      "date": "2026-10-19",
+      "kickoff": "20:00",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Getafe",
+      "away_team": "Vallecano",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "esp.1",
+      "competition": "La Liga",
+      "country": "Spagna",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-eng.1-2026-10-19-tottenham-coventry",
+      "date": "2026-10-19",
+      "kickoff": "20:00",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Tottenham",
+      "away_team": "Coventry",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "eng.1",
+      "competition": "Premier League",
+      "country": "Inghilterra",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
+    },
+    {
+      "id": "fd-por.1-2026-10-19-sp braga-gil vicente",
+      "date": "2026-10-19",
+      "kickoff": "20:15",
+      "timezone": "fuso orario non specificato dalla fonte",
+      "home_team": "Sp Braga",
+      "away_team": "Gil Vicente",
+      "status": "scheduled",
+      "home_goals": null,
+      "away_goals": null,
+      "competition_code": "por.1",
+      "competition": "Primeira Liga",
+      "country": "Portogallo",
+      "kind": "Campionato",
+      "source": "football-data.co.uk fixtures.csv"
     }
   ],
   "standings": {
@@ -10650,7 +11818,7 @@
       "country": "Inghilterra",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T16:50:53.088261+00:00",
+      "updated_at": "2026-10-17T16:53:45.260150+00:00",
       "rows": [
         {
           "team_id": "",
@@ -10986,7 +12154,7 @@
       "country": "Spagna",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T16:50:53.088261+00:00",
+      "updated_at": "2026-10-17T16:53:45.260150+00:00",
       "rows": [
         {
           "team_id": "",
@@ -11322,7 +12490,7 @@
       "country": "Germania",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T16:50:53.088261+00:00",
+      "updated_at": "2026-10-17T16:53:45.260150+00:00",
       "rows": [
         {
           "team_id": "",
@@ -11626,7 +12794,7 @@
       "country": "Italia",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T16:50:53.088261+00:00",
+      "updated_at": "2026-10-17T16:53:45.260150+00:00",
       "rows": [
         {
           "team_id": "",
@@ -11962,7 +13130,7 @@
       "country": "Francia",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T16:50:53.088261+00:00",
+      "updated_at": "2026-10-17T16:53:45.260150+00:00",
       "rows": [
         {
           "team_id": "",
@@ -12266,7 +13434,7 @@
       "country": "Scozia",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T16:50:53.088261+00:00",
+      "updated_at": "2026-10-17T16:53:45.260150+00:00",
       "rows": [
         {
           "team_id": "",
@@ -12474,7 +13642,7 @@
       "country": "Paesi Bassi",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T16:50:53.088261+00:00",
+      "updated_at": "2026-10-17T16:53:45.260150+00:00",
       "rows": [
         {
           "team_id": "",
@@ -12778,7 +13946,7 @@
       "country": "Portogallo",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T16:50:53.088261+00:00",
+      "updated_at": "2026-10-17T16:53:45.260150+00:00",
       "rows": [
         {
           "team_id": "",
@@ -13082,7 +14250,7 @@
       "country": "Belgio",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T16:50:53.088261+00:00",
+      "updated_at": "2026-10-17T16:53:45.260150+00:00",
       "rows": [
         {
           "team_id": "",
@@ -13386,7 +14554,7 @@
       "country": "Turchia",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T16:50:53.088261+00:00",
+      "updated_at": "2026-10-17T16:53:45.260150+00:00",
       "rows": [
         {
           "team_id": "",
@@ -13690,7 +14858,7 @@
       "country": "Grecia",
       "kind": "Campionato",
       "season": 2026,
-      "updated_at": "2026-10-17T16:50:53.088261+00:00",
+      "updated_at": "2026-10-17T16:53:45.260150+00:00",
       "rows": [
         {
           "team_id": "",
@@ -13927,92 +15095,22 @@
     }
   },
   "coverage": {
-    "ger.1": {
-      "status": "loaded",
-      "events": 45,
-      "completed": 45,
-      "source": "football-data.co.uk",
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30"
-    },
-    "sco.1": {
-      "status": "loaded",
-      "events": 48,
-      "completed": 48,
-      "source": "football-data.co.uk",
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30"
-    },
-    "fra.1": {
-      "status": "loaded",
-      "events": 54,
-      "completed": 54,
-      "source": "football-data.co.uk",
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30"
-    },
-    "ita.1": {
-      "status": "loaded",
-      "events": 60,
-      "completed": 60,
-      "source": "football-data.co.uk",
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30"
-    },
-    "esp.1": {
-      "status": "loaded",
-      "events": 78,
-      "completed": 78,
-      "source": "football-data.co.uk",
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30"
-    },
-    "eng.1": {
-      "status": "loaded",
-      "events": 60,
-      "completed": 60,
-      "source": "football-data.co.uk",
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30"
-    },
-    "ned.1": {
-      "status": "loaded",
-      "events": 72,
-      "completed": 72,
-      "source": "football-data.co.uk",
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30"
-    },
-    "bel.1": {
-      "status": "loaded",
-      "events": 72,
-      "completed": 72,
-      "source": "football-data.co.uk",
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30"
-    },
-    "tur.1": {
-      "status": "loaded",
-      "events": 63,
-      "completed": 63,
-      "source": "football-data.co.uk",
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30"
-    },
-    "por.1": {
-      "status": "loaded",
-      "events": 71,
-      "completed": 71,
-      "source": "football-data.co.uk",
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30"
-    },
-    "aut.1": {
+    "irl.1": {
       "status": "unavailable",
       "source": "ESPN",
       "error": "nessuna partita valida nel CSV stagionale",
       "chunks_ok": 0,
       "chunks_failed": [
+        {
+          "from": "2026-01-01",
+          "to": "2026-03-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-04-01",
+          "to": "2026-06-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
         {
           "from": "2026-07-01",
           "to": "2026-09-30",
@@ -14022,20 +15120,10 @@
           "from": "2026-10-01",
           "to": "2026-12-31",
           "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-01-01",
-          "to": "2027-03-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-04-01",
-          "to": "2027-06-30",
-          "error": "HTTP Error 400: Bad Request"
         }
       ],
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30",
+      "range_start": "2026-01-01",
+      "range_end": "2026-12-31",
       "events": 0
     },
     "den.1": {
@@ -14069,108 +15157,7 @@
       "range_end": "2027-06-30",
       "events": 0
     },
-    "gre.1": {
-      "status": "loaded",
-      "events": 42,
-      "completed": 42,
-      "source": "football-data.co.uk",
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30"
-    },
-    "fin.1": {
-      "status": "unavailable",
-      "source": "ESPN",
-      "error": "nessuna partita valida nel CSV stagionale",
-      "chunks_ok": 0,
-      "chunks_failed": [
-        {
-          "from": "2026-01-01",
-          "to": "2026-03-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-04-01",
-          "to": "2026-06-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-07-01",
-          "to": "2026-09-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-10-01",
-          "to": "2026-12-31",
-          "error": "HTTP Error 400: Bad Request"
-        }
-      ],
-      "range_start": "2026-01-01",
-      "range_end": "2026-12-31",
-      "events": 0
-    },
-    "irl.1": {
-      "status": "unavailable",
-      "source": "ESPN",
-      "error": "nessuna partita valida nel CSV stagionale",
-      "chunks_ok": 0,
-      "chunks_failed": [
-        {
-          "from": "2026-01-01",
-          "to": "2026-03-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-04-01",
-          "to": "2026-06-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-07-01",
-          "to": "2026-09-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-10-01",
-          "to": "2026-12-31",
-          "error": "HTTP Error 400: Bad Request"
-        }
-      ],
-      "range_start": "2026-01-01",
-      "range_end": "2026-12-31",
-      "events": 0
-    },
-    "nor.1": {
-      "status": "unavailable",
-      "source": "ESPN",
-      "error": "nessuna partita valida nel CSV stagionale",
-      "chunks_ok": 0,
-      "chunks_failed": [
-        {
-          "from": "2026-01-01",
-          "to": "2026-03-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-04-01",
-          "to": "2026-06-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-07-01",
-          "to": "2026-09-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-10-01",
-          "to": "2026-12-31",
-          "error": "HTTP Error 400: Bad Request"
-        }
-      ],
-      "range_start": "2026-01-01",
-      "range_end": "2026-12-31",
-      "events": 0
-    },
-    "pol.1": {
+    "aut.1": {
       "status": "unavailable",
       "source": "ESPN",
       "error": "nessuna partita valida nel CSV stagionale",
@@ -14201,7 +15188,7 @@
       "range_end": "2027-06-30",
       "events": 0
     },
-    "rou.1": {
+    "sui.1": {
       "status": "unavailable",
       "source": "ESPN",
       "error": "nessuna partita valida nel CSV stagionale",
@@ -14263,7 +15250,7 @@
       "range_end": "2026-12-31",
       "events": 0
     },
-    "sui.1": {
+    "rou.1": {
       "status": "unavailable",
       "source": "ESPN",
       "error": "nessuna partita valida nel CSV stagionale",
@@ -14294,38 +15281,89 @@
       "range_end": "2027-06-30",
       "events": 0
     },
-    "ger.dfb_pokal": {
-      "status": "unavailable",
-      "chunks_ok": 0,
-      "chunks_failed": [
-        {
-          "from": "2026-07-01",
-          "to": "2026-09-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-10-01",
-          "to": "2026-12-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-01-01",
-          "to": "2027-03-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-04-01",
-          "to": "2027-06-30",
-          "error": "HTTP Error 400: Bad Request"
-        }
-      ],
+    "bel.1": {
+      "status": "loaded",
+      "events": 72,
+      "completed": 72,
+      "source": "football-data.co.uk",
       "range_start": "2026-07-01",
-      "range_end": "2027-06-30",
-      "events": 0,
-      "source": "ESPN"
+      "range_end": "2027-06-30"
     },
-    "uefa.europa.conf": {
+    "fin.1": {
       "status": "unavailable",
+      "source": "ESPN",
+      "error": "nessuna partita valida nel CSV stagionale",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-01-01",
+          "to": "2026-03-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-04-01",
+          "to": "2026-06-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-07-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 400: Bad Request"
+        }
+      ],
+      "range_start": "2026-01-01",
+      "range_end": "2026-12-31",
+      "events": 0
+    },
+    "sco.1": {
+      "status": "loaded",
+      "events": 54,
+      "completed": 48,
+      "source": "football-data.co.uk",
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "future_fixtures": 6,
+      "future_source": "football-data.co.uk fixtures.csv"
+    },
+    "ita.1": {
+      "status": "loaded",
+      "events": 69,
+      "completed": 60,
+      "source": "football-data.co.uk",
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "future_fixtures": 9,
+      "future_source": "football-data.co.uk fixtures.csv"
+    },
+    "esp.1": {
+      "status": "loaded",
+      "events": 87,
+      "completed": 78,
+      "source": "football-data.co.uk",
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "future_fixtures": 9,
+      "future_source": "football-data.co.uk fixtures.csv"
+    },
+    "tur.1": {
+      "status": "loaded",
+      "events": 71,
+      "completed": 63,
+      "source": "football-data.co.uk",
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "future_fixtures": 8,
+      "future_source": "football-data.co.uk fixtures.csv"
+    },
+    "pol.1": {
+      "status": "unavailable",
+      "source": "ESPN",
+      "error": "nessuna partita valida nel CSV stagionale",
       "chunks_ok": 0,
       "chunks_failed": [
         {
@@ -14351,160 +15389,100 @@
       ],
       "range_start": "2026-07-01",
       "range_end": "2027-06-30",
-      "events": 0,
-      "source": "ESPN"
+      "events": 0
+    },
+    "por.1": {
+      "status": "loaded",
+      "events": 72,
+      "completed": 71,
+      "source": "football-data.co.uk",
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "future_fixtures": 1,
+      "future_source": "football-data.co.uk fixtures.csv"
+    },
+    "ger.1": {
+      "status": "loaded",
+      "events": 53,
+      "completed": 45,
+      "source": "football-data.co.uk",
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "future_fixtures": 8,
+      "future_source": "football-data.co.uk fixtures.csv"
+    },
+    "gre.1": {
+      "status": "loaded",
+      "events": 48,
+      "completed": 42,
+      "source": "football-data.co.uk",
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "future_fixtures": 6,
+      "future_source": "football-data.co.uk fixtures.csv"
+    },
+    "ned.1": {
+      "status": "loaded",
+      "events": 80,
+      "completed": 72,
+      "source": "football-data.co.uk",
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "future_fixtures": 8,
+      "future_source": "football-data.co.uk fixtures.csv"
+    },
+    "fra.1": {
+      "status": "loaded",
+      "events": 62,
+      "completed": 54,
+      "source": "football-data.co.uk",
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "future_fixtures": 8,
+      "future_source": "football-data.co.uk fixtures.csv"
+    },
+    "eng.1": {
+      "status": "loaded",
+      "events": 70,
+      "completed": 60,
+      "source": "football-data.co.uk",
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "future_fixtures": 10,
+      "future_source": "football-data.co.uk fixtures.csv"
+    },
+    "nor.1": {
+      "status": "unavailable",
+      "source": "ESPN",
+      "error": "nessuna partita valida nel CSV stagionale",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-01-01",
+          "to": "2026-03-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-04-01",
+          "to": "2026-06-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-07-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 400: Bad Request"
+        }
+      ],
+      "range_start": "2026-01-01",
+      "range_end": "2026-12-31",
+      "events": 0
     },
     "por.taca_de_portugal": {
-      "status": "unavailable",
-      "chunks_ok": 0,
-      "chunks_failed": [
-        {
-          "from": "2026-07-01",
-          "to": "2026-09-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-10-01",
-          "to": "2026-12-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-01-01",
-          "to": "2027-03-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-04-01",
-          "to": "2027-06-30",
-          "error": "HTTP Error 400: Bad Request"
-        }
-      ],
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30",
-      "events": 0,
-      "source": "ESPN"
-    },
-    "tur.turkiye_kupasi": {
-      "status": "unavailable",
-      "chunks_ok": 0,
-      "chunks_failed": [
-        {
-          "from": "2026-07-01",
-          "to": "2026-09-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-10-01",
-          "to": "2026-12-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-01-01",
-          "to": "2027-03-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-04-01",
-          "to": "2027-06-30",
-          "error": "HTTP Error 400: Bad Request"
-        }
-      ],
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30",
-      "events": 0,
-      "source": "ESPN"
-    },
-    "fra.coupe_de_france": {
-      "status": "unavailable",
-      "chunks_ok": 0,
-      "chunks_failed": [
-        {
-          "from": "2026-07-01",
-          "to": "2026-09-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-10-01",
-          "to": "2026-12-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-01-01",
-          "to": "2027-03-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-04-01",
-          "to": "2027-06-30",
-          "error": "HTTP Error 400: Bad Request"
-        }
-      ],
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30",
-      "events": 0,
-      "source": "ESPN"
-    },
-    "sco.fa_cup": {
-      "status": "unavailable",
-      "chunks_ok": 0,
-      "chunks_failed": [
-        {
-          "from": "2026-07-01",
-          "to": "2026-09-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-10-01",
-          "to": "2026-12-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-01-01",
-          "to": "2027-03-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-04-01",
-          "to": "2027-06-30",
-          "error": "HTTP Error 400: Bad Request"
-        }
-      ],
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30",
-      "events": 0,
-      "source": "ESPN"
-    },
-    "ita.coppa_italia": {
-      "status": "unavailable",
-      "chunks_ok": 0,
-      "chunks_failed": [
-        {
-          "from": "2026-07-01",
-          "to": "2026-09-30",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2026-10-01",
-          "to": "2026-12-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-01-01",
-          "to": "2027-03-31",
-          "error": "HTTP Error 400: Bad Request"
-        },
-        {
-          "from": "2027-04-01",
-          "to": "2027-06-30",
-          "error": "HTTP Error 400: Bad Request"
-        }
-      ],
-      "range_start": "2026-07-01",
-      "range_end": "2027-06-30",
-      "events": 0,
-      "source": "ESPN"
-    },
-    "eng.fa": {
       "status": "unavailable",
       "chunks_ok": 0,
       "chunks_failed": [
@@ -14564,7 +15542,37 @@
       "events": 0,
       "source": "ESPN"
     },
-    "ned.knvb_cup": {
+    "uefa.europa.conf": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 400: Bad Request"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0,
+      "source": "ESPN"
+    },
+    "sco.fa_cup": {
       "status": "unavailable",
       "chunks_ok": 0,
       "chunks_failed": [
@@ -14624,7 +15632,187 @@
       "events": 0,
       "source": "ESPN"
     },
+    "ita.coppa_italia": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 400: Bad Request"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0,
+      "source": "ESPN"
+    },
+    "fra.coupe_de_france": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 400: Bad Request"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0,
+      "source": "ESPN"
+    },
+    "ned.knvb_cup": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 400: Bad Request"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0,
+      "source": "ESPN"
+    },
+    "eng.fa": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 400: Bad Request"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0,
+      "source": "ESPN"
+    },
+    "ger.dfb_pokal": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 400: Bad Request"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0,
+      "source": "ESPN"
+    },
     "uefa.champions": {
+      "status": "unavailable",
+      "chunks_ok": 0,
+      "chunks_failed": [
+        {
+          "from": "2026-07-01",
+          "to": "2026-09-30",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2026-10-01",
+          "to": "2026-12-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-01-01",
+          "to": "2027-03-31",
+          "error": "HTTP Error 400: Bad Request"
+        },
+        {
+          "from": "2027-04-01",
+          "to": "2027-06-30",
+          "error": "HTTP Error 400: Bad Request"
+        }
+      ],
+      "range_start": "2026-07-01",
+      "range_end": "2027-06-30",
+      "events": 0,
+      "source": "ESPN"
+    },
+    "tur.turkiye_kupasi": {
       "status": "unavailable",
       "chunks_ok": 0,
       "chunks_failed": [
@@ -14658,9 +15846,9 @@
   "summary": {
     "competitions_configured": 32,
     "competitions_with_fixtures": 11,
-    "fixtures_total": 665,
+    "fixtures_total": 738,
     "fixtures_completed": 665,
-    "fixtures_scheduled": 0,
+    "fixtures_scheduled": 73,
     "standings_available": 11,
     "validation_errors": []
   }
