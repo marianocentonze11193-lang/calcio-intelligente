@@ -6728,7 +6728,7 @@
       "away_goals": null
     }
   ],
-  "updated_at": "2026-10-16T23:42:41.798754+00:00",
+  "updated_at": "2026-10-17T01:01:42.052403+00:00",
   "metrics": {
     "settled_matches": 4,
     "accuracy_1x2": null,
@@ -6780,14 +6780,26 @@
     }
   },
   "result_matching": {
-    "checked_at": "2026-10-16T23:42:41.798741+00:00",
-    "unresolved_past_matches": 1,
+    "checked_at": "2026-10-17T01:01:42.052379+00:00",
+    "unresolved_past_matches": 3,
     "examples": [
       {
         "date": "2026-10-15",
         "league": "League One",
         "home_team": "Mansfield",
         "away_team": "Oxford"
+      },
+      {
+        "date": "2026-10-16",
+        "league": "La Liga",
+        "home_team": "La Coruna",
+        "away_team": "Levante"
+      },
+      {
+        "date": "2026-10-16",
+        "league": "Super Lig turca",
+        "home_team": "Corum",
+        "away_team": "Rizespor"
       }
     ],
     "note": "Le partite passate senza esito restano escluse dalle metriche finché il risultato non è associato con certezza."
