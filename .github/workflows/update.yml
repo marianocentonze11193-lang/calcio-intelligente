@@ -64,7 +64,7 @@ jobs:
             git reset --hard origin/main
             # Il calendario va sincronizzato dopo il reset, altrimenti git reset
             # eliminerebbe i dati appena scaricati nello step precedente.
-            python scripts/sync_competitions.py
+            env -u API_FOOTBALL_KEY python scripts/sync_competitions.py
             python scripts/update_predictions.py
             python scripts/enrich_with_availability.py
             python scripts/enrich_with_odds.py
