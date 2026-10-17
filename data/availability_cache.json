@@ -39924,6 +39924,61 @@
       "away_formation": "3-5-2",
       "home_coach": "Raffaele Palladino",
       "away_coach": "C. Chivu"
+    },
+    "1557434": {
+      "updated_at": "2026-10-17T16:18:07.153596+00:00",
+      "home_starters": [
+        "L. Horníček",
+        "L. Miley",
+        "M. Thiaw",
+        "S. Botman",
+        "L. Hall",
+        "Nico González",
+        "Joelinton",
+        "J. Willock",
+        "Y. Wissa",
+        "H. Barnes",
+        "M. Fernandez-Pardo"
+      ],
+      "away_starters": [
+        "Z. Suzuki",
+        "M. Cash",
+        "V. Lindelöf",
+        "T. Mings",
+        "A. Wan-Bissaka",
+        "B. Kamara",
+        "João Gomes",
+        "Alysson Edward",
+        "E. Buendía",
+        "J. Manzambi",
+        "N. Jackson"
+      ],
+      "home_substitutes": [
+        "Sean Steur",
+        "B. Touré",
+        "W. Osula",
+        "J. Murphy",
+        "N. Pope",
+        "F. Schär",
+        "D. Burn",
+        "A. Dedić",
+        "A. Bamba"
+      ],
+      "away_substitutes": [
+        "T. Harwood-Bellis",
+        "Pau Torres",
+        "J.  McGinn",
+        "R. Barkley",
+        "L. Bogarde",
+        "L. Goretzka",
+        "I. Mbaye",
+        "M. Bizot",
+        "Brian Madjo"
+      ],
+      "home_formation": "4-2-3-1",
+      "away_formation": "4-2-3-1",
+      "home_coach": "M. Jaissle",
+      "away_coach": "Unai Emery"
     }
   },
   "lineup_attempts": {
@@ -39933,7 +39988,8 @@
     "1550156": "2026-10-17T12:54:30.029189+00:00",
     "1494781": "2026-10-17T13:45:06.569900+00:00",
     "1561942": "2026-10-17T14:44:45.397902+00:00",
-    "1550149": "2026-10-17T15:44:52.605484+00:00"
+    "1550149": "2026-10-17T15:44:52.605484+00:00",
+    "1557434": "2026-10-17T16:18:07.153596+00:00"
   },
   "unavailable_dates": {}
 }
