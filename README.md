@@ -29,6 +29,12 @@ Le metriche da leggere insieme sono:
 
 Queste metriche sono un audit prospettico delle previsioni effettivamente archiviate, non un backtest storico completo ricostruito da zero. Un backtest senza leakage richiede di rigenerare ogni previsione usando soltanto dati disponibili prima del relativo kickoff e di confrontarla con una baseline sullo stesso periodo. Finché non è stato completato e validato questo passaggio, non si dichiara dimostrato alcun vantaggio del modello, né si attivano automaticamente fattori sperimentali (motivazione, stanchezza da coppe o indisponibilità) come correzioni delle probabilità.
 
+## Backtest cronologico e confronto con baseline
+
+Lo script `scripts/backtest_walk_forward.py` ricostruisce previsioni storiche per le 11 leghe con CSV stagionali diretti, dal luglio 2024 all'ultimo giorno concluso disponibile. Per ogni data usa esclusivamente partite di date precedenti; tutte le gare dello stesso giorno vengono previste prima di aggiungere qualsiasi risultato di quella giornata. Il report `data/backtest_report.json` confronta accuracy, Brier score e log loss del modello con una baseline semplice basata sulle frequenze 1/X/2 osservate fino a quel momento, con smoothing di Laplace.
+
+Il workflow dedicato si può avviare manualmente da GitHub Actions e lo aggiorna settimanalmente. Il report indica copertura ed errori delle fonti; se la fonte manca, la lega non viene spacciata per verificata. Questo backtest ricostruisce il modello attuale su dati storici e non include coppe, indisponibilità o formazioni: è un primo confronto cronologico, non una prova di redditività futura.
+
 ## Limiti e trasparenza
 - Elo e Poisson sono un modello sperimentale; non è ancora dimostrata la sua redditività e la calibrazione va misurata su un campione storico ampio.
 - Per alcuni campionati il calendario ESPN può essere disponibile senza dati storici equivalenti. Il flusso evita richieste CSV alle divisioni non supportate dalla fonte primaria e prova un recupero storico ESPN recente; se la fonte non restituisce risultati verificabili, la partita resta NO BET con una causa esplicita. La disponibilità del fallback può variare e non garantisce copertura completa.
