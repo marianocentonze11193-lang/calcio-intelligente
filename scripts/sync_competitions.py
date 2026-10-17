@@ -667,7 +667,7 @@ def main():
     if api_key:
         # Riserva le chiamate alle classifiche ufficiali alle cinque leghe principali e alle tre coppe UEFA.
         # Per gli altri campionati la tabella è calcolata dai risultati completi già scaricati.
-        official_table_codes = {"eng.1", "esp.1", "ger.1", "ita.1", "fra.1"} | set(EUROPEAN)
+        official_table_codes = {"eng.1", "esp.1", "ita.1", "uefa.champions"}
         eligible_tables = (official_table_codes & success) - cached_tables
         tables.update({code: old_tables[code] for code in cached_tables if code in old_tables})
         with ThreadPoolExecutor(max_workers=4) as pool:
@@ -706,7 +706,7 @@ def main():
         seen.add(key); valid.append(item)
 
     result={"schema_version":3,"updated_at":now.isoformat(),
-      "source_policy":"Fonte prioritaria: API-Football se la chiave è configurata; fallback football-data.co.uk per i campionati ed ESPN per le coppe. Classifiche ufficiali API-Football per le cinque leghe principali e coppe UEFA; altre classifiche ricalcolate dai risultati, con possibili differenze per penalizzazioni o regole speciali. Date, squadre e punteggi sono controllati.",
+      "source_policy":"Fonte prioritaria: API-Football se la chiave è configurata; fallback football-data.co.uk per i campionati ed ESPN per le coppe. Classifiche ufficiali API-Football per Premier League, La Liga, Serie A e Champions League; altre classifiche ricalcolate dai risultati, con possibili differenze per penalizzazioni o regole speciali. Date, squadre e punteggi sono controllati.",
       "fixtures":valid,"standings":tables,"coverage":coverage,
       "summary":{"competitions_configured":len(jobs),
         "competitions_with_fixtures":sum(1 for code in jobs if coverage.get(code,{}).get("events",0)>0),
