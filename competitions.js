@@ -17,6 +17,15 @@ async function loadData(){
   const updated=data.updated_at?new Date(data.updated_at).toLocaleString("it-IT"):"non disponibile";
   const age=data.updated_at?(Date.now()-new Date(data.updated_at).getTime())/3600000:Infinity;
   status.textContent="Ultimo aggiornamento: "+updated+". "+summary.fixtures_total+" partite archiviate, "+summary.fixtures_completed+" concluse, "+summary.standings_available+" classifiche disponibili su "+summary.competitions_configured+" competizioni configurate."+(age>36?" ATTENZIONE: archivio più vecchio di 36 ore.":"");
+  const coverageList=byId("coverage-list");coverageList.replaceChildren();
+  const coverageEntries=Object.entries(data.coverage||{}).sort((a,b)=>labelFor(a[0]).localeCompare(labelFor(b[0]),"it"));
+  for(const [code,diag] of coverageEntries){
+   const line=document.createElement("p");line.className="muted";
+   const count=diag.events??0;const source=diag.source||"fonte non indicata";
+   const state=diag.status==="loaded"||diag.status==="complete_window"?"Acquisito":diag.status==="partial"?"Parziale":"Non aggiornato";
+   line.textContent=labelFor(code)+": "+state+" · "+count+" partite · "+source+(diag.error?" · "+diag.error:"")+(diag.chunks_failed?.length?" · "+diag.chunks_failed.length+" intervalli non recuperati":"");
+   coverageList.append(line);
+  }
   const codes=[...new Set([...Object.keys(data.coverage||{}),...Object.keys(data.standings||{})])].sort((a,b)=>labelFor(a).localeCompare(labelFor(b),"it"));
   const cal=byId("calendar-competition"),tab=byId("table-competition"),oldCal=cal.value,oldTab=tab.value;
   cal.replaceChildren(new Option("Tutte le competizioni",""));
