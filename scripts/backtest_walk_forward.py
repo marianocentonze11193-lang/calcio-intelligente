@@ -145,6 +145,8 @@ def walk_forward_league(league_name, results):
 def main():
     today = datetime.now(timezone.utc).date()
     all_by_league = {}
+    all_model = []
+    all_baseline = []
     errors = []
     for code in sorted(model.FOOTBALL_DATA_LEAGUES):
         league = model.LEAGUES[code]
@@ -168,9 +170,7 @@ def main():
             errors.append(f"{league}: {error}")
             print(f"ERRORE backtest {league}: {error}")
 
-    all_model = []
-    all_baseline = []
-    # Le metriche aggregate vengono ricalcolate dalle metriche partita, non dalla media delle medie di lega.
+# Le metriche aggregate vengono ricalcolate dalle metriche partita, non dalla media delle medie di lega.
     for league, report in all_by_league.items():
         if report["walk_forward"]["matches"]:
             report["note"] = "Validazione cronologica: ogni previsione usa solo gare con data strettamente precedente; coppe e indisponibilità non sono incluse."
