@@ -1,5 +1,6 @@
 import importlib.util
 import unittest
+import tempfile
 from unittest.mock import MagicMock, patch
 from collections import defaultdict
 from datetime import date, datetime, timezone
@@ -61,6 +62,61 @@ class PredictionModelTests(unittest.TestCase):
         context = module.motivation_for_match("Team A", "Team B", {})
         self.assertEqual(context["status"], "non_verificabile")
         self.assertIn("non dedotte", context["note"])
+
+    def test_load_competition_calendar_uses_fresh_cache_for_european_and_national_cups(self):
+        now = datetime(2026, 10, 17, 12, tzinfo=timezone.utc)
+        payload = {
+            "updated_at": "2026-10-17T10:00:00+00:00",
+            "fixtures": [
+                {"id": "ucl-1", "date": "2026-10-14", "kickoff": "21:00",
+                 "home_team": "Inter Milan", "away_team": "Liverpool",
+                 "status": "completed", "home_goals": 2, "away_goals": 1,
+                 "competition": "Champions League", "kind": "Coppa europea", "source": "API-Football"},
+                {"id": "cup-1", "date": "2026-10-15", "kickoff": "20:45",
+                 "home_team": "Roma", "away_team": "Milan", "status": "completed",
+                 "home_goals": 1, "away_goals": 0, "competition": "Coppa Italia",
+                 "kind": "Coppa nazionale", "source": "ESPN"},
+                {"id": "league-1", "date": "2026-10-16", "kickoff": "20:45",
+                 "home_team": "Inter", "away_team": "Milan", "status": "completed",
+                 "home_goals": 1, "away_goals": 0, "competition": "Serie A",
+                 "kind": "Campionato", "source": "ESPN"},
+                {"id": "bad-score", "date": "2026-10-16", "home_team": "Roma", "away_team": "Lazio",
+                 "status": "completed", "home_goals": None, "away_goals": 0,
+                 "competition": "Coppa Italia"},
+            ],
+        }
+        with tempfile.TemporaryDirectory() as directory:
+            cache = Path(directory) / "competition_data.json"
+            cache.write_text(__import__("json").dumps(payload), encoding="utf-8")
+            with patch.object(module, "COMPETITION_DATA_FILE", cache), \\
+                 patch.object(module, "fetch_competition_calendar", side_effect=AssertionError("fallback non atteso")):
+                matches = module.load_competition_calendar(
+                    date(2026, 10, 13), date(2026, 10, 22), now=now
+                )
+        self.assertEqual([item["competition"] for item in matches], ["Champions League", "Coppa Italia"])
+        self.assertEqual(matches[0]["home_goals"], 2)
+        self.assertEqual(matches[0]["source"], "API-Football")
+
+    def test_load_competition_calendar_falls_back_when_cache_is_stale(self):
+        now = datetime(2026, 10, 17, 12, tzinfo=timezone.utc)
+        fallback = [{"date": "2026-10-16", "home_team": "Inter", "away_team": "Roma",
+                     "competition": "Champions League", "status": "completed", "source": "ESPN"}]
+        with tempfile.TemporaryDirectory() as directory:
+            cache = Path(directory) / "competition_data.json"
+            cache.write_text(
+                __import__("json").dumps({
+                    "updated_at": "2026-10-15T00:00:00+00:00",
+                    "fixtures": [],
+                }),
+                encoding="utf-8",
+            )
+            with patch.object(module, "COMPETITION_DATA_FILE", cache), \\
+                 patch.object(module, "fetch_competition_calendar", return_value=fallback) as fetch:
+                matches = module.load_competition_calendar(
+                    date(2026, 10, 13), date(2026, 10, 22), now=now
+                )
+        fetch.assert_called_once()
+        self.assertEqual(matches, fallback)
 
     def test_european_fatigue_context_flags_short_rest_and_away_trip(self):
         match = {
