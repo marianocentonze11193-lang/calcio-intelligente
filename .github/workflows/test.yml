@@ -16,7 +16,7 @@ permissions:
 jobs:
   test:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -28,3 +28,13 @@ jobs:
         run: python -m py_compile scripts/*.py
       - name: Controllo sintassi JavaScript
         run: node --check app.js
+      - name: Backtest cronologico e confronto storico xG
+        run: python scripts/backtest_walk_forward.py
+      - name: Carica il report del backtest
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: report-validazione-storica-xg
+          path: data/backtest_report.json
+          if-no-files-found: warn
+          retention-days: 14
