@@ -632,6 +632,7 @@ def main():
             "recent_competition_status": match.get("recent_competition_status"),
             "competition_type": match.get("competition_type", "campionato"),
             "historical_sources": match.get("historical_sources") or [],
+            "weather_context": match.get("weather_context"),
             "suggested_markets": match.get("suggested_markets") or [],
             "value_bets": match.get("value_bets") or [],
             "odds_fetched_at": match.get("odds_fetched_at"),
