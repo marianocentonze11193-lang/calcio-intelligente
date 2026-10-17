@@ -449,44 +449,52 @@ EUROPEAN_ESPN_COMPETITIONS = {
     "uefa.europa": "Europa League",
     "uefa.europa.conf": "Conference League",
 }
+NATIONAL_CUP_ESPN_COMPETITIONS = {
+    "ita.coppa_italia": "Coppa Italia",
+    "eng.fa": "FA Cup",
+    "esp.copa_del_rey": "Copa del Rey",
+    "ger.dfb_pokal": "DFB-Pokal",
+    "fra.coupe_de_france": "Coupe de France",
+    "ned.knvb_cup": "KNVB Beker",
+    "por.taca_de_portugal": "Taça de Portugal",
+    "sco.fa_cup": "Scottish Cup",
+    "tur.turkiye_kupasi": "Coppa di Turchia",
+}
+COMPETITION_ESPN_CODES = {**EUROPEAN_ESPN_COMPETITIONS, **NATIONAL_CUP_ESPN_COMPETITIONS}
+COMPETITION_COUNTRIES = {
+    "Champions League": "Europa", "Europa League": "Europa", "Conference League": "Europa",
+    "Coppa Italia": "Italia", "FA Cup": "Inghilterra", "Copa del Rey": "Spagna",
+    "DFB-Pokal": "Germania", "Coupe de France": "Francia", "KNVB Beker": "Paesi Bassi",
+    "Taça de Portugal": "Portogallo", "Scottish Cup": "Scozia", "Coppa di Turchia": "Turchia",
+}
 
 
-def fetch_european_matches(start_date, end_date):
-    """Recupera da ESPN partite UEFA recenti/concluse; dati incompleti non vengono inventati."""
-    days = []
-    cursor = start_date
-    while cursor <= end_date:
-        days.append(cursor)
-        cursor += timedelta(days=1)
+def fetch_competition_calendar(start_date, end_date):
+    """Recupera calendario e risultati di coppe UEFA/nazionali; nessun punteggio viene inventato."""
+    if end_date < start_date:
+        return []
+    competitions = COMPETITION_ESPN_CODES
+    results = []
 
-    def fetch_day(day, sport_code, competition_name):
-        url = (
-            "https://site.api.espn.com/apis/site/v2/sports/soccer/"
-            f"{sport_code}/scoreboard?dates={day:%Y%m%d}&limit=100"
-        )
-        try:
-            request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-            with urllib.request.urlopen(request, timeout=8) as response:
-                payload = json.loads(response.read().decode("utf-8"))
-        except (urllib.error.URLError, TimeoutError, OSError, ValueError) as error:
-            print(f"AVVISO: calendario europeo {competition_name} {day}: {error}")
-            return []
+    def parse_payload(payload, competition_name, requested_start, requested_end):
         found = []
         for event in payload.get("events", []):
-            competitions = event.get("competitions") or []
-            if not competitions:
+            competitions_data = event.get("competitions") or []
+            if not competitions_data:
                 continue
-            competition = competitions[0]
-            status = (competition.get("status") or {}).get("type") or {}
-            if not status.get("completed"):
-                continue
+            competition = competitions_data[0]
+            status_obj = (competition.get("status") or {}).get("type") or {}
+            completed = bool(status_obj.get("completed"))
             raw_date = event.get("date", "")
             try:
                 event_dt = datetime.fromisoformat(raw_date.replace("Z", "+00:00"))
-                event_date = event_dt.astimezone(ZoneInfo("Europe/Rome")).date()
+                local_dt = event_dt.astimezone(ZoneInfo("Europe/Rome"))
+                event_date = local_dt.date()
+                kickoff = local_dt.strftime("%H:%M")
             except (ValueError, TypeError):
                 event_date = parse_date(raw_date)
-            if not event_date:
+                kickoff = raw_date[11:16] if "T" in raw_date else ""
+            if not event_date or not (requested_start <= event_date <= requested_end):
                 continue
             home = away = None
             for competitor in competition.get("competitors", []):
@@ -498,33 +506,72 @@ def fetch_european_matches(start_date, end_date):
                     away = (team, score)
             if not home or not away or not home[0] or not away[0]:
                 continue
-            if home[1] is None or away[1] is None:
-                continue
             if team_key(home[0]) == team_key(away[0]):
                 continue
-            found.append({
-                "date": event_date.isoformat(), "home_team": home[0], "away_team": away[0],
-                "home_goals": int(home[1]), "away_goals": int(away[1]),
-                "competition": competition_name, "status": "completed",
+            item = {
+                "date": event_date.isoformat(), "kickoff": kickoff,
+                "home_team": home[0], "away_team": away[0],
+                "competition": competition_name,
+                "status": "completed" if completed and home[1] is not None and away[1] is not None else "scheduled",
                 "source": "ESPN",
-            })
+            }
+            if item["status"] == "completed":
+                if not (0 <= home[1] <= 15 and 0 <= away[1] <= 15):
+                    continue
+                item["home_goals"], item["away_goals"] = int(home[1]), int(away[1])
+            found.append(item)
         return found
 
-    tasks = []
+    def fetch_range(sport_code, competition_name):
+        base = "https://site.api.espn.com/apis/site/v2/sports/soccer/"
+        params = f"?dates={start_date:%Y%m%d}-{end_date:%Y%m%d}&limit=100"
+        try:
+            request = urllib.request.Request(base + sport_code + "/scoreboard" + params, headers={"User-Agent": USER_AGENT})
+            with urllib.request.urlopen(request, timeout=8) as response:
+                payload = json.loads(response.read().decode("utf-8"))
+            found = parse_payload(payload, competition_name, start_date, end_date)
+        except (urllib.error.URLError, TimeoutError, OSError, ValueError) as error:
+            print(f"AVVISO: calendario {competition_name} non disponibile: {error}")
+            found = []
+        # Alcuni scoreboard ESPN non rispettano sempre l'intervallo: usa il fallback
+        # giornaliero soltanto quando la richiesta compatta non ha restituito eventi.
+        if found:
+            return found
+        fallback = []
+        cursor = start_date
+        while cursor <= end_date:
+            url = base + sport_code + f"/scoreboard?dates={cursor:%Y%m%d}&limit=100"
+            try:
+                request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+                with urllib.request.urlopen(request, timeout=8) as response:
+                    payload = json.loads(response.read().decode("utf-8"))
+                fallback.extend(parse_payload(payload, competition_name, cursor, cursor))
+            except (urllib.error.URLError, TimeoutError, OSError, ValueError) as error:
+                print(f"AVVISO: calendario {competition_name} {cursor}: {error}")
+            cursor += timedelta(days=1)
+        return fallback
+
     with ThreadPoolExecutor(max_workers=8) as pool:
-        for day in days:
-            for sport_code, competition_name in EUROPEAN_ESPN_COMPETITIONS.items():
-                tasks.append(pool.submit(fetch_day, day, sport_code, competition_name))
-        results = []
-        for task in as_completed(tasks):
-            results.extend(task.result())
+        futures = [pool.submit(fetch_range, code, name) for code, name in competitions.items()]
+        for future in as_completed(futures):
+            results.extend(future.result())
     unique = {}
     for item in results:
-        key = (item["date"], team_key(item["home_team"]), team_key(item["away_team"]))
+        key = (item["date"], item["competition"], team_key(item["home_team"]), team_key(item["away_team"]))
         unique[key] = item
-    ordered = sorted(unique.values(), key=lambda item: item["date"])
-    print(f"Calendario UEFA ESPN: {len(ordered)} risultati europei conclusi recuperati.")
+    ordered = sorted(unique.values(), key=lambda item: (item["date"], item["kickoff"], item["competition"]))
+    completed = sum(1 for item in ordered if item["status"] == "completed")
+    scheduled = sum(1 for item in ordered if item["status"] == "scheduled")
+    print(f"Calendari coppe ESPN: {len(ordered)} gare ({completed} concluse, {scheduled} future) su {len(competitions)} competizioni configurate.")
     return ordered
+
+
+def fetch_european_matches(start_date, end_date):
+    """Compatibilità: restituisce soltanto risultati UEFA conclusi nella finestra richiesta."""
+    return [
+        item for item in fetch_competition_calendar(start_date, end_date)
+        if item.get("status") == "completed" and item.get("competition") in EUROPEAN_ESPN_COMPETITIONS.values()
+    ]
 
 
 def european_fatigue_context(home, away, match_date, european_matches):
@@ -607,8 +654,9 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
         away_form_factor = max(0.82, min(1.18, math.sqrt(away_attack_form * away_defence_form)))
         expected_home = max(0.15, min(4.5, expected_home * home_form_factor))
         expected_away = max(0.15, min(4.5, expected_away * away_form_factor))
-    european_context = european_fatigue_context(home, away, match_date, european_matches)
-    for item in european_context:
+    recent_competition_context = european_fatigue_context(home, away, match_date, european_matches)
+    european_context = [item for item in recent_competition_context if item.get("competition") in EUROPEAN_ESPN_COMPETITIONS.values()]
+    for item in recent_competition_context:
         if team_key(item["team"]) == team_key(home):
             expected_home = max(0.15, expected_home * item["attack_factor"])
         elif team_key(item["team"]) == team_key(away):
@@ -706,8 +754,11 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
         "home_recent_form": (recent_form or {}).get(home),
         "away_recent_form": (recent_form or {}).get(away),
         "european_context": european_context,
+        "recent_competition_context": recent_competition_context,
         "european_fatigue_status": "rilevato" if european_context else "nessuna gara europea recente verificata",
-        "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + contesto coppe UEFA sperimentale; non ancora validato",
+        "recent_competition_status": "impegno ravvicinato rilevato" if recent_competition_context else "nessun impegno recente verificato",
+        "competition_type": "europea" if league in EUROPEAN_ESPN_COMPETITIONS.values() else "nazionale" if league in NATIONAL_CUP_ESPN_COMPETITIONS.values() else "campionato",
+        "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + calendario coppe UEFA/nazionali sperimentale; non ancora validato",
         "availability_data": {
             "status": "non_integrata",
             "note": "Infortuni, squalifiche e formazioni ufficiali non sono inclusi: nessuna fonte verificata disponibile nel calcolo."
@@ -721,9 +772,11 @@ def main():
     last_date = today + timedelta(days=MAX_DAYS_AHEAD)
     forecasts, downloaded, failed = [], 0, []
     historical_available = []
+    league_models = []
     fixture_odds = {}
     fixture_markets = {}
-    european_matches = fetch_european_matches(today - timedelta(days=4), today)
+    competition_calendar = fetch_competition_calendar(today - timedelta(days=4), last_date)
+    european_matches = [item for item in competition_calendar if item.get("status") == "completed" and item.get("competition") in EUROPEAN_ESPN_COMPETITIONS.values()]
 
     # Football-data pubblica le prossime partite in un CSV separato.
     try:
@@ -921,9 +974,14 @@ def main():
             aws["away_scored"] += ag
             aws["away_conceded"] += hg
 
-        skipped = 0
-        # Associa varianti di nomi squadra ai nomi storici più vicini.
+        # Conserva i modelli nazionali per usare lo storico di campionato anche nelle coppe.
         normalized_history = {team_key(team): team for team in history}
+        league_models.append({
+            "league": league_name, "history": history, "home_avg": league_home_avg,
+            "away_avg": league_away_avg, "elo": elo_ratings, "recent": recent_form,
+            "normalized_history": normalized_history,
+        })
+        skipped = 0
         for home, away, match_date, kickoff in fixtures:
             home = normalized_history.get(team_key(home), home)
             away = normalized_history.get(team_key(away), away)
@@ -960,8 +1018,75 @@ def main():
                 skipped += 1
         print(f"{league_name}: pronostici creati {len(fixtures) - skipped}; scartate per storico insufficiente {skipped}.")
 
-    # Il calendario dei campionati resta separato; i risultati UEFA verificati sono usati solo per il contesto di riposo.
-    # Le correzioni da coppe sono sperimentali e non rendono una stima automaticamente valutabile.
+    # Aggiunge le partite future delle coppe. Per ogni club usa il suo storico nazionale;
+    # se uno dei due club non è abbinabile, la partita resta visibile come NO BET.
+    future_cup_fixtures = [
+        item for item in competition_calendar
+        if item.get("status") == "scheduled"
+        and today <= date.fromisoformat(item["date"]) <= last_date
+    ]
+    team_records = {}
+    for model in league_models:
+        for team, stats in model["history"].items():
+            key = team_key(team)
+            if key and key not in team_records:
+                team_records[key] = {"team": team, "stats": stats, "model": model}
+    existing_fixture_keys = {
+        (item.get("date"), item.get("league"), team_key(item.get("home_team")), team_key(item.get("away_team")))
+        for item in forecasts
+    }
+    cup_added = 0
+    for fixture in future_cup_fixtures:
+        competition_name = fixture["competition"]
+        home_key, away_key = team_key(fixture["home_team"]), team_key(fixture["away_team"])
+        unique_key = (fixture["date"], competition_name, home_key, away_key)
+        if unique_key in existing_fixture_keys:
+            continue
+        home_record, away_record = team_records.get(home_key), team_records.get(away_key)
+        match_date = date.fromisoformat(fixture["date"])
+        if home_record and away_record:
+            home_team, away_team = home_record["team"], away_record["team"]
+            combined_history = defaultdict(lambda: {
+                "played": 0, "home_games": 0, "away_games": 0,
+                "home_scored": 0, "home_conceded": 0, "away_scored": 0, "away_conceded": 0,
+            })
+            combined_history[home_team] = home_record["stats"]
+            combined_history[away_team] = away_record["stats"]
+            home_model, away_model = home_record["model"], away_record["model"]
+            combined_elo = {home_team: home_model["elo"].get(home_team, 1500.0), away_team: away_model["elo"].get(away_team, 1500.0)}
+            combined_recent = {}
+            if home_team in home_model["recent"]: combined_recent[home_team] = home_model["recent"][home_team]
+            if away_team in away_model["recent"]: combined_recent[away_team] = away_model["recent"][away_team]
+            home_avg = (home_model["home_avg"] + away_model["home_avg"]) / 2
+            away_avg = (home_model["away_avg"] + away_model["away_avg"]) / 2
+            forecast = make_forecast(
+                home_team, away_team, competition_name, match_date, fixture.get("kickoff", ""),
+                combined_history, home_avg, away_avg, combined_elo, combined_recent, competition_calendar,
+            )
+            forecast["competition_type"] = "europea" if competition_name in EUROPEAN_ESPN_COMPETITIONS.values() else "coppa_nazionale"
+            forecast["source_calendar"] = fixture.get("source", "ESPN")
+            forecast["historical_sources"] = [home_model["league"], away_model["league"]]
+        else:
+            forecast = {
+                "id": f"{fixture['date']}-{competition_name}-{fixture['home_team']}-{fixture['away_team']}",
+                "date": fixture["date"], "kickoff": fixture.get("kickoff", ""), "league": competition_name,
+                "country": COMPETITION_COUNTRIES.get(competition_name, "Europa"),
+                "home_team": fixture["home_team"], "away_team": fixture["away_team"],
+                "expected_home_goals": None, "expected_away_goals": None, "probabilities": {},
+                "analysis": "", "suggested_markets": [], "value_bets": [], "top_scorelines": [],
+                "sample_matches": 0, "home_matches_sample": 0, "away_matches_sample": 0,
+                "status": "NO BET", "no_bet_type": "dati_mancanti",
+                "reason": "Storico nazionale non abbinabile a entrambe le squadre: la partita è mostrata ma non viene stimata.",
+                "confidence": "non stimabile", "data_quality": "storico_assente",
+                "method": "Nessuna stima: storico club non disponibile o nome squadra non riconciliato",
+                "availability_data": {"status": "non_integrata", "note": "Disponibilità non verificata."},
+                "competition_type": "europea" if competition_name in EUROPEAN_ESPN_COMPETITIONS.values() else "coppa_nazionale",
+                "source_calendar": fixture.get("source", "ESPN"),
+            }
+        forecasts.append(forecast)
+        existing_fixture_keys.add(unique_key)
+        cup_added += 1
+    print(f"Coppe: {cup_added} partite future aggiunte al dataset (stima solo con storico nazionale abbinabile).")
 
     if downloaded == 0:
         raise SystemExit("Nessuna fonte dati raggiungibile: il file precedente è stato mantenuto.")
@@ -977,11 +1102,22 @@ def main():
     result = {
         "updated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
         "source": SOURCE, "season": season,
-        "model": "Poisson casa/trasferta con prior di lega e correzione Elo; stime sperimentali, non garanzie",
+        "model": "Poisson con statistiche nazionali club, prior di lega, Elo, forma recente e contesto impegni UEFA/coppe nazionali sperimentale; non validato per coppe",
+        "competition_calendar": {
+            "source": "ESPN", "range_start": (today - timedelta(days=4)).isoformat(),
+            "range_end": last_date.isoformat(), "events_loaded": len(competition_calendar),
+            "completed_results": sum(1 for item in competition_calendar if item.get("status") == "completed"),
+            "upcoming_fixtures": len(future_cup_fixtures),
+            "competitions_configured": list(COMPETITION_ESPN_CODES.values()),
+        },
         "leagues_checked": downloaded,
         "coverage": {
             "leagues_configured": len(LEAGUES),
             "csv_downloaded": downloaded,
+            "cup_competitions_configured": len(COMPETITION_ESPN_CODES),
+            "cup_fixtures_found": len(future_cup_fixtures),
+            "cup_fixtures_added": cup_added,
+            "cup_competitions_with_fixtures": sorted({item.get("competition") for item in future_cup_fixtures}),
             "leagues_with_history": sorted(set(historical_available)),
             "leagues_without_history": sorted(set(LEAGUES.values()) - set(historical_available)),
             "matches_with_estimates": sum(1 for item in forecasts if item.get("status") in ("Pronostico valutabile", "Stima preliminare")),
