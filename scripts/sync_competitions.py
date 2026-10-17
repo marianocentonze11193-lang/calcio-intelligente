@@ -439,7 +439,11 @@ def fetch_calendar_competition(code, meta, start, end):
     successful_chunks = 0
     failed_chunks = []
     base = f"{BASE}/site/v2/sports/soccer/{code}/scoreboard"
-    for chunk_start, chunk_end in quarter_chunks(start, end):
+    # ESPN rifiuta alcune richieste su intervalli trimestrali per le coppe.
+    # I calendari UEFA e nazionali vengono quindi interrogati per mese, mentre
+    # i campionati mantengono blocchi trimestrali per contenere il numero di richieste.
+    chunks = month_chunks(start, end) if code in EUROPEAN or code in CUPS else quarter_chunks(start, end)
+    for chunk_start, chunk_end in chunks:
         url = f"{base}?dates={chunk_start:%Y%m%d}-{chunk_end:%Y%m%d}&limit=100"
         try:
             payload = fetch_json(url)
@@ -552,9 +556,15 @@ def main():
     try:
         old_stamp = datetime.fromisoformat(str(old.get("updated_at", "")).replace("Z", "+00:00"))
         if old_stamp.tzinfo is None: old_stamp = old_stamp.replace(tzinfo=timezone.utc)
-        cache_fresh = timedelta(0) <= now - old_stamp.astimezone(timezone.utc) <= timedelta(hours=20)
+        cache_age = now - old_stamp.astimezone(timezone.utc)
+        cache_fresh = timedelta(0) <= cache_age <= timedelta(hours=20)
+        cache_recent = timedelta(0) <= cache_age <= timedelta(hours=6)
     except (ValueError, TypeError):
         cache_fresh = False
+        cache_recent = False
+    if cache_recent and os.environ.get("FORCE_COMPETITION_SYNC", "").strip() != "1":
+        print(f"Calendario coppe/campionati aggiornato da meno di 6 ore ({old.get('updated_at')}); sincronizzazione saltata.")
+        return
     jobs = {}
     for code, meta in COMPETITIONS.items():
         start, end = season_range(today, LEAGUES[code][2]) if code in LEAGUES else season_range(today, "summer")
