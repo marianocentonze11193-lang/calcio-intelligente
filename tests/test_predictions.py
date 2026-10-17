@@ -938,5 +938,43 @@ class PredictionModelTests(unittest.TestCase):
         self.assertEqual(forecast["suggested_markets"], [])
 
 
+class BettingAdviceTests(unittest.TestCase):
+    def test_betting_advice_returns_few_markets_with_target_odds(self):
+        probabilities = {
+            "home_win": 62.0, "draw": 20.0, "away_win": 18.0,
+            "double_chance_1x": 82.0, "double_chance_x2": 38.0,
+            "double_chance_12": 80.0, "over_1_5": 78.0, "over_2_5": 51.0,
+            "under_2_5": 49.0, "under_3_5": 82.0, "btts_yes": 46.0, "btts_no": 54.0,
+        }
+        markets, details, advice = module.build_betting_recommendations(
+            probabilities, 12, 11, []
+        )
+        self.assertLessEqual(len(markets), 2)
+        self.assertTrue(markets)
+        self.assertEqual(len({item["family"] for item in details}), len(details))
+        self.assertTrue(all(item["target_odds"] > item["fair_odds"] for item in details))
+        self.assertIn("quota", advice.lower())
+
+    def test_betting_advice_skips_short_samples_and_recent_cup_matches(self):
+        probabilities = {
+            "home_win": 75.0, "draw": 10.0, "away_win": 15.0,
+            "double_chance_1x": 85.0, "double_chance_x2": 25.0,
+            "double_chance_12": 90.0, "over_1_5": 75.0, "over_2_5": 60.0,
+            "under_2_5": 40.0, "under_3_5": 80.0, "btts_yes": 55.0, "btts_no": 45.0,
+        }
+        markets, details, advice = module.build_betting_recommendations(
+            probabilities, 5, 9, []
+        )
+        self.assertEqual(markets, [])
+        self.assertEqual(details, [])
+        self.assertIn("storico", advice.lower())
+        markets, details, advice = module.build_betting_recommendations(
+            probabilities, 12, 12, [{"team": "Casa", "competition": "Champions League"}]
+        )
+        self.assertEqual(markets, [])
+        self.assertEqual(details, [])
+        self.assertIn("impegno ravvicinato", advice.lower())
+
+
 if __name__ == "__main__":
     unittest.main()
