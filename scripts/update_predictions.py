@@ -623,6 +623,36 @@ def european_fatigue_context(home, away, match_date, european_matches):
     return context
 
 
+
+def declassify_cup_forecast(forecast, competition_name):
+    """Impedisce di presentare come validato un modello basato sul campionato per una coppa."""
+    if not isinstance(forecast, dict):
+        return forecast
+    is_european = competition_name in EUROPEAN_ESPN_COMPETITIONS.values()
+    forecast["competition_type"] = "europea" if is_european else "coppa_nazionale"
+    forecast["status"] = "Stima preliminare" if forecast.get("probabilities") else "NO BET"
+    forecast["suggested_markets"] = []
+    forecast["value_bets"] = []
+    forecast["expected_value_1x2"] = {}
+    if isinstance(forecast.get("value_assessment"), dict):
+        forecast["value_assessment"]["eligible_for_candidate"] = False
+    forecast["confidence"] = "limitata: modello non validato per coppe"
+    forecast["data_quality"] = "coppa_non_validata"
+    forecast["cup_model_note"] = (
+        "Stima orientativa basata sui dati dei campionati nazionali disponibili, "
+        "non su uno storico specifico della coppa. Pronostico non validato: nessun "
+        "mercato o value bet automatico viene consigliato."
+    )
+    if forecast.get("status") == "NO BET":
+        forecast["reason"] = (
+            "Dati insufficienti o squadre non riconciliate: nessuna probabilità pubblicata. "
+            + forecast.get("reason", "")
+        ).strip()
+    else:
+        forecast["reason"] = forecast["cup_model_note"]
+    return forecast
+
+
 def build_motivation_table(completed):
     """Classifica le pressioni di classifica senza fingere di conoscere verdetti matematici."""
     table = defaultdict(lambda: {"played": 0, "points": 0, "gf": 0, "ga": 0, "wins": 0})
@@ -1125,7 +1155,7 @@ def main():
                 home_team, away_team, competition_name, match_date, fixture.get("kickoff", ""),
                 combined_history, home_avg, away_avg, combined_elo, combined_recent, competition_calendar, {},
             )
-            forecast["competition_type"] = "europea" if competition_name in EUROPEAN_ESPN_COMPETITIONS.values() else "coppa_nazionale"
+            forecast = declassify_cup_forecast(forecast, competition_name)
             forecast["source_calendar"] = fixture.get("source", "ESPN")
             forecast["historical_sources"] = [home_model["league"], away_model["league"]]
         else:
@@ -1143,6 +1173,7 @@ def main():
                 "method": "Nessuna stima: storico club non disponibile o nome squadra non riconciliato",
                 "availability_data": {"status": "non_integrata", "note": "Disponibilità non verificata."},
                 "competition_type": "europea" if competition_name in EUROPEAN_ESPN_COMPETITIONS.values() else "coppa_nazionale",
+                "cup_model_note": "Nessuna stima affidabile: lo storico nazionale non è abbinabile a entrambe le squadre.",
                 "source_calendar": fixture.get("source", "ESPN"),
             }
         forecasts.append(forecast)
