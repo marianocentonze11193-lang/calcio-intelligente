@@ -792,6 +792,40 @@ class PredictionModelTests(unittest.TestCase):
             set(archive_module.ESPN_LEAGUES).intersection(module.COMPETITION_ESPN_CODES.values()),
         )
 
+    def test_cup_forecasts_are_always_preliminary_and_never_auto_recommend_markets(self):
+        for competition, expected_type in (
+            ("Champions League", "europea"),
+            ("Coppa Italia", "coppa_nazionale"),
+        ):
+            forecast = {
+                "status": "Pronostico valutabile",
+                "probabilities": {"home_win": 50.0, "draw": 25.0, "away_win": 25.0},
+                "suggested_markets": [{"market": "1"}],
+                "value_bets": [{"market": "1"}],
+                "expected_value_1x2": {"home": 0.1},
+                "confidence": "alta",
+                "data_quality": "buona",
+            }
+            result = module.declassify_cup_forecast(forecast, competition)
+            self.assertEqual(result["status"], "Stima preliminare")
+            self.assertEqual(result["competition_type"], expected_type)
+            self.assertEqual(result["suggested_markets"], [])
+            self.assertEqual(result["value_bets"], [])
+            self.assertEqual(result["expected_value_1x2"], {})
+            self.assertEqual(result["data_quality"], "coppa_non_validata")
+            self.assertIn("non validato", result["cup_model_note"])
+
+    def test_cup_no_bet_stays_without_probabilities(self):
+        forecast = {
+            "status": "NO BET", "probabilities": {},
+            "suggested_markets": [], "value_bets": [],
+            "reason": "Storico non disponibile",
+        }
+        result = module.declassify_cup_forecast(forecast, "Conference League")
+        self.assertEqual(result["status"], "NO BET")
+        self.assertEqual(result["probabilities"], {})
+        self.assertEqual(result["competition_type"], "europea")
+
     def test_recent_national_cup_match_declassifies_league_forecast(self):
         history = defaultdict(lambda: {
             "played": 10, "home_games": 0, "away_games": 0,
