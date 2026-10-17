@@ -623,7 +623,64 @@ def european_fatigue_context(home, away, match_date, european_matches):
     return context
 
 
-def make_forecast(home, away, league, match_date, kickoff, history, league_home_avg, league_away_avg, elo_ratings=None, recent_form=None, european_matches=None):
+def build_motivation_table(completed):
+    """Classifica le pressioni di classifica senza fingere di conoscere verdetti matematici."""
+    table = defaultdict(lambda: {"played": 0, "points": 0, "gf": 0, "ga": 0, "wins": 0})
+    for home, away, hg, ag in completed:
+        if team_key(home) == team_key(away):
+            continue
+        h, a = table[team_key(home)], table[team_key(away)]
+        h["played"] += 1; a["played"] += 1
+        h["gf"] += hg; h["ga"] += ag
+        a["gf"] += ag; a["ga"] += hg
+        if hg > ag:
+            h["points"] += 3; h["wins"] += 1
+        elif hg < ag:
+            a["points"] += 3; a["wins"] += 1
+        else:
+            h["points"] += 1; a["points"] += 1
+    ordered = sorted(
+        table.items(),
+        key=lambda item: (item[1]["points"], item[1]["gf"] - item[1]["ga"], item[1]["gf"], item[1]["wins"]),
+        reverse=True,
+    )
+    total = len(ordered)
+    result = {}
+    for position, (key, stats) in enumerate(ordered, 1):
+        result[key] = {**stats, "position": position, "teams_count": total}
+    return result
+
+
+def motivation_for_match(home, away, table):
+    """Restituisce indizi prudenti di classifica; non dichiara titoli o retrocessioni matematiche."""
+    if not table:
+        return {"status": "non_verificabile", "note": "Classifica aggiornata non disponibile: motivazioni non dedotte."}
+    h, a = table.get(team_key(home)), table.get(team_key(away))
+    if not h or not a or min(h["played"], a["played"]) < 5:
+        return {"status": "dati_insufficienti", "note": "Poche partite concluse per valutare con prudenza gli obiettivi di classifica."}
+    total = max(h["teams_count"], a["teams_count"])
+    def labels(stats, opponent):
+        labels = []
+        position = stats["position"]
+        points_gap = stats["points"] - opponent["points"]
+        if position <= min(2, max(1, total // 8)) and abs(points_gap) <= 6:
+            labels.append("zona alta / possibile corsa al titolo")
+        if position <= max(4, round(total * 0.30)) and position > 1:
+            labels.append("zona obiettivi europei o alta classifica")
+        if position >= max(1, total - max(3, round(total * 0.20)) + 1):
+            labels.append("zona bassa / possibile lotta salvezza")
+        if not labels:
+            labels.append("motivazione competitiva ordinaria; obiettivo specifico non deducibile")
+        return labels
+    return {
+        "status": "indizi_classifica",
+        "home": {"position": h["position"], "points": h["points"], "played": h["played"], "signals": labels(h, a)},
+        "away": {"position": a["position"], "points": a["points"], "played": a["played"], "signals": labels(a, h)},
+        "note": "Indizi calcolati dai risultati di campionato disponibili, non verdetti ufficiali. Titolo già vinto/retrocessione matematica non vengono dichiarati senza una classifica e un calendario completi verificati.",
+    }
+
+
+def make_forecast(home, away, league, match_date, kickoff, history, league_home_avg, league_away_avg, elo_ratings=None, recent_form=None, european_matches=None, motivation_table=None):
     hs, aws = history[home], history[away]
 
     def smooth(goals, games, prior):
@@ -757,6 +814,7 @@ def make_forecast(home, away, league, match_date, kickoff, history, league_home_
         "away_recent_form": (recent_form or {}).get(away),
         "european_context": european_context,
         "recent_competition_context": recent_competition_context,
+        "motivation_context": motivation_for_match(home, away, motivation_table or {}),
         "european_fatigue_status": "rilevato" if european_context else "nessuna gara europea recente verificata",
         "recent_competition_status": "impegno ravvicinato rilevato" if recent_competition_context else "nessun impegno recente verificato",
         "competition_type": "europea" if league in EUROPEAN_ESPN_COMPETITIONS.values() else "nazionale" if league in NATIONAL_CUP_ESPN_COMPETITIONS.values() else "campionato",
@@ -976,18 +1034,20 @@ def main():
             aws["away_scored"] += ag
             aws["away_conceded"] += hg
 
+        motivation_table = build_motivation_table(completed) if history_season == season else {}
+
         # Conserva i modelli nazionali per usare lo storico di campionato anche nelle coppe.
         normalized_history = {team_key(team): team for team in history}
         league_models.append({
             "league": league_name, "history": history, "home_avg": league_home_avg,
             "away_avg": league_away_avg, "elo": elo_ratings, "recent": recent_form,
-            "normalized_history": normalized_history,
+            "normalized_history": normalized_history, "motivation_table": motivation_table,
         })
         skipped = 0
         for home, away, match_date, kickoff in fixtures:
             home = normalized_history.get(team_key(home), home)
             away = normalized_history.get(team_key(away), away)
-            forecast = make_forecast(home, away, league_name, match_date, kickoff, history, league_home_avg, league_away_avg, elo_ratings, recent_form, competition_calendar)
+            forecast = make_forecast(home, away, league_name, match_date, kickoff, history, league_home_avg, league_away_avg, elo_ratings, recent_form, competition_calendar, motivation_table)
             if forecast:
                 fixture_key = (match_date.isoformat(), team_key(home), team_key(away))
                 quote = fixture_odds.get(fixture_key)
@@ -1063,7 +1123,7 @@ def main():
             away_avg = (home_model["away_avg"] + away_model["away_avg"]) / 2
             forecast = make_forecast(
                 home_team, away_team, competition_name, match_date, fixture.get("kickoff", ""),
-                combined_history, home_avg, away_avg, combined_elo, combined_recent, competition_calendar,
+                combined_history, home_avg, away_avg, combined_elo, combined_recent, competition_calendar,\n                {**home_model.get("motivation_table", {}), **away_model.get("motivation_table", {})},
             )
             forecast["competition_type"] = "europea" if competition_name in EUROPEAN_ESPN_COMPETITIONS.values() else "coppa_nazionale"
             forecast["source_calendar"] = fixture.get("source", "ESPN")
