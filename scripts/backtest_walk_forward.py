@@ -137,20 +137,28 @@ def outcome_calibration_summary(rows):
     """One-vs-rest Brier/log-loss and reliability bins separately for 1, X and 2."""
     result = {}
     bins = [(0.0, 0.2), (0.2, 0.4), (0.4, 0.6), (0.6, 0.8), (0.8, 1.0000001)]
-    for label, key in (("1", "home_win"), ("X", "draw"), ("2", "away_win")):
-        scored = []
-        for row in rows:
-            probabilities = row.get("model_probabilities")
-            if not isinstance(probabilities, dict) or key not in probabilities:
-                continue
-            try:
-                probability = float(probabilities[key]) / 100.0
-            except (TypeError, ValueError):
-                continue
-            if not math.isfinite(probability) or not 0 <= probability <= 1:
-                continue
-            actual = 1.0 if row.get("outcome") == label else 0.0
-            scored.append((probability, actual))
+    keys = (("1", "home_win"), ("X", "draw"), ("2", "away_win"))
+    scored_by_outcome = {label: [] for label, _ in keys}
+    for row in rows:
+        probabilities = row.get("model_probabilities")
+        if not isinstance(probabilities, dict):
+            continue
+        try:
+            values = [float(probabilities[key]) for _, key in keys]
+        except (KeyError, TypeError, ValueError):
+            continue
+        if any(not math.isfinite(value) or not 0 <= value <= 100 for value in values):
+            continue
+        if abs(sum(values) - 100) > 1.5:
+            continue
+        outcome = row.get("outcome")
+        if outcome not in scored_by_outcome:
+            continue
+        for (label, _), value in zip(keys, values):
+            scored_by_outcome[label].append((value / 100.0, 1.0 if outcome == label else 0.0))
+
+    for label, _ in keys:
+        scored = scored_by_outcome[label]
         calibration = []
         for lower, upper in bins:
             selected = [(p, a) for p, a in scored if lower <= p < upper]
@@ -170,8 +178,6 @@ def outcome_calibration_summary(rows):
             "note": "Brier/log-loss binari one-vs-rest; punteggi più bassi sono migliori.",
         }
     return result
-
-
 def load_league_results(code, today):
     if code not in model.FOOTBALL_DATA_LEAGUES:
         return []
