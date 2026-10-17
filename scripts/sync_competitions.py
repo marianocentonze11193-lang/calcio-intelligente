@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Sincronizza calendari stagionali e classifiche da ESPN con cache, controlli e diagnostica."""
+import csv
+import io
 import json
+import re
 import time
 import urllib.error
 import urllib.request
@@ -13,7 +16,17 @@ ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "data" / "competition_data.json"
 BASE = "https://site.api.espn.com/apis"
 TIMEOUT = 12
-USER_AGENT = "CalcioIntelligente/1.0 (+public schedule sync)"
+USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+FOOTBALL_DATA = "https://www.football-data.co.uk"
+FOOTBALL_CODES = {
+ "eng.1":("E0","E0","season"),"esp.1":("SP1","SP1","season"),"ger.1":("D1","D1","season"),
+ "ita.1":("I1","I1","season"),"fra.1":("F1","F1","season"),"sco.1":("SC0","SC0","season"),
+ "ned.1":("N1","N1","season"),"por.1":("P1","P1","season"),"bel.1":("B1","B1","season"),
+ "tur.1":("T1","T1","season"),"gre.1":("G1","G1","season"),"aut.1":("AUT","AUT","rolling"),
+ "den.1":("DNK","DNK","rolling"),"fin.1":("FIN","FIN","rolling"),"irl.1":("IRL","IRL","rolling"),
+ "nor.1":("NOK","NOR","rolling"),"pol.1":("POL","POL","rolling"),"rou.1":("RO","ROU","rolling"),
+ "swe.1":("SWE","SWE","rolling"),"sui.1":("SWZ","SWZ","rolling"),
+}
 EUROPEAN = {
     "uefa.champions": "Champions League",
     "uefa.europa": "Europa League",
@@ -75,7 +88,7 @@ def fetch_json(url, retries=2):
     last_error = None
     for attempt in range(retries + 1):
         try:
-            request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept": "application/json"})
+            request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept": "application/json", "Referer": "https://www.espn.com/soccer/"})
             with urllib.request.urlopen(request, timeout=TIMEOUT) as response:
                 payload = json.loads(response.read().decode("utf-8"))
             if not isinstance(payload, dict):
@@ -105,6 +118,103 @@ def month_chunks(start, end):
         chunk_end = min(end, next_month - timedelta(days=1))
         yield cursor, chunk_end
         cursor = chunk_end + timedelta(days=1)
+
+
+def quarter_chunks(start, end):
+    cursor = start
+    while cursor <= end:
+        quarter_end_month = ((cursor.month - 1) // 3 + 1) * 3
+        next_period = date(cursor.year + 1, 1, 1) if quarter_end_month == 12 else date(cursor.year, quarter_end_month + 1, 1)
+        chunk_end = min(end, next_period - timedelta(days=1))
+        yield cursor, chunk_end
+        cursor = chunk_end + timedelta(days=1)
+
+
+def csv_field(row, *names):
+    normalized = {re.sub(r"[^a-z0-9]", "", str(k).lower()): v for k, v in row.items()}
+    for name in names:
+        value = normalized.get(re.sub(r"[^a-z0-9]", "", name.lower()))
+        if value is not None and str(value).strip():
+            return str(value).strip()
+    return ""
+
+
+def csv_date(value):
+    for fmt in ("%d/%m/%Y", "%d/%m/%y", "%Y-%m-%d"):
+        try:
+            return datetime.strptime(str(value).strip(), fmt).date()
+        except (ValueError, TypeError):
+            pass
+    return None
+
+
+def fetch_domestic_csv(code, meta, start, end):
+    internal, source_code, source_type = FOOTBALL_CODES[code]
+    if source_type == "season":
+        season = f"{start.year % 100:02d}{(start.year + 1) % 100:02d}"
+        url = f"https://www.football-data.co.uk/mmz4281/{season}/{source_code}.csv"
+    else:
+        url = f"https://www.football-data.co.uk/new/{source_code}.csv"
+    request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Referer": "https://www.football-data.co.uk/"})
+    with urllib.request.urlopen(request, timeout=20) as response:
+        text = response.read().decode("cp1252", errors="replace").lstrip("\\ufeffï»¿")
+    reader = csv.DictReader(io.StringIO(text))
+    events = []
+    for row in reader:
+        d = csv_date(csv_field(row, "Date"))
+        home, away = csv_field(row, "HomeTeam"), csv_field(row, "AwayTeam")
+        if not d or not start <= d <= end or not home or not away or home.casefold() == away.casefold():
+            continue
+        try:
+            hg, ag = int(float(csv_field(row, "FTHG"))), int(float(csv_field(row, "FTAG")))
+            done = 0 <= hg <= 15 and 0 <= ag <= 15
+        except (ValueError, TypeError):
+            hg = ag = None
+            done = False
+        events.append({
+            "id": f"fd-{code}-{d.isoformat()}-{home.casefold()}-{away.casefold()}",
+            "date": d.isoformat(), "kickoff": csv_field(row, "Time"),
+            "timezone": "fuso orario non specificato dalla fonte", "home_team": home, "away_team": away,
+            "status": "completed" if done else "scheduled", "home_goals": hg if done else None,
+            "away_goals": ag if done else None, "competition_code": code, "competition": meta["name"],
+            "country": meta["country"], "kind": meta["kind"], "source": "football-data.co.uk"
+        })
+    if not events:
+        raise ValueError("nessuna partita valida nel CSV stagionale")
+    return events, {"status": "loaded", "events": len(events),
+                    "completed": sum(x["status"] == "completed" for x in events),
+                    "source": "football-data.co.uk", "range_start": start.isoformat(), "range_end": end.isoformat()}
+
+
+def calculate_domestic_table(fixtures, code, meta, season, updated_at):
+    teams = {}
+    games = [x for x in fixtures if x.get("competition_code") == code and x.get("status") == "completed"]
+    def team(name):
+        return teams.setdefault(name.casefold(), {"team_id":"", "team":name, "group":meta["name"], "played":0,
+            "wins":0,"draws":0,"losses":0,"goals_for":0,"goals_against":0,"goal_difference":0,
+            "points":0,"position":None,"record":"","source":"football-data.co.uk"})
+    for game in games:
+        h, a = team(game["home_team"]), team(game["away_team"])
+        hg, ag = game["home_goals"], game["away_goals"]
+        h["played"] += 1; a["played"] += 1
+        h["goals_for"] += hg; h["goals_against"] += ag
+        a["goals_for"] += ag; a["goals_against"] += hg
+        if hg > ag:
+            h["wins"] += 1; h["points"] += 3; a["losses"] += 1
+        elif hg < ag:
+            a["wins"] += 1; a["points"] += 3; h["losses"] += 1
+        else:
+            h["draws"] += 1; a["draws"] += 1; h["points"] += 1; a["points"] += 1
+    rows = list(teams.values())
+    for row in rows:
+        row["goal_difference"] = row["goals_for"] - row["goals_against"]
+    rows.sort(key=lambda r:(r["points"],r["goal_difference"],r["goals_for"],r["wins"]),reverse=True)
+    for i,row in enumerate(rows,1): row["position"] = i
+    return {"competition":meta["name"],"country":meta["country"],"kind":meta["kind"],"season":season,
+            "updated_at":updated_at,"rows":rows,
+            "diagnostics":{"status":"computed_from_results" if len(rows)>=8 and games else "partial",
+             "teams":len(rows),"results_used":len(games),"source":"football-data.co.uk",
+             "note":"Classifica calcolata dai risultati acquisiti; può differire dalla classifica ufficiale per penalizzazioni o regole particolari."}}
 
 
 def parse_event(event, code, meta):
@@ -165,7 +275,7 @@ def fetch_calendar_competition(code, meta, start, end):
     successful_chunks = 0
     failed_chunks = []
     base = f"{BASE}/site/v2/sports/soccer/{code}/scoreboard"
-    for chunk_start, chunk_end in month_chunks(start, end):
+    for chunk_start, chunk_end in quarter_chunks(start, end):
         url = f"{base}?dates={chunk_start:%Y%m%d}-{chunk_end:%Y%m%d}&limit=100"
         try:
             payload = fetch_json(url)
@@ -267,129 +377,102 @@ def fetch_standings(code, meta, season_year):
 
 def main():
     now = datetime.now(timezone.utc)
-    today = now.date()
-    previous = {}
+    today = now.astimezone(ZoneInfo("Europe/Rome")).date()
+    old = {}
     if OUTPUT.exists():
-        try:
-            previous = json.loads(OUTPUT.read_text(encoding="utf-8"))
-        except (OSError, ValueError):
-            previous = {}
-    old_fixtures = previous.get("fixtures", []) if isinstance(previous.get("fixtures"), list) else []
-    old_standings = previous.get("standings", {}) if isinstance(previous.get("standings"), dict) else {}
-    old_coverage = previous.get("coverage", {}) if isinstance(previous.get("coverage"), dict) else {}
-
-    meta_by_code = dict(COMPETITIONS)
+        try: old = json.loads(OUTPUT.read_text(encoding="utf-8"))
+        except (OSError, ValueError): old = {}
+    old_fixtures = old.get("fixtures", []) if isinstance(old.get("fixtures"), list) else []
+    old_tables = old.get("standings", {}) if isinstance(old.get("standings"), dict) else {}
     jobs = {}
-    for code, meta in meta_by_code.items():
-        if code in LEAGUES:
-            start, end = season_range(today, LEAGUES[code][2])
-            season_year = start.year
-        else:
-            start, end = season_range(today, "summer")
-            season_year = start.year
-        jobs[code] = (meta, start, end, season_year)
+    for code, meta in COMPETITIONS.items():
+        start, end = season_range(today, LEAGUES[code][2]) if code in LEAGUES else season_range(today, "summer")
+        jobs[code] = (meta, start, end, start.year)
 
-    fresh_by_code = {}
-    coverage = {}
+    fresh, coverage, success, failed = {}, {}, set(), set()
+    # Calendari nazionali: CSV stagionali di football-data.co.uk, già usati dal modello.
     with ThreadPoolExecutor(max_workers=6) as pool:
-        futures = {pool.submit(fetch_calendar_competition, code, meta, start, end): code
-                   for code, (meta, start, end, _) in jobs.items()}
+        futures = {pool.submit(fetch_domestic_csv, code, jobs[code][0], jobs[code][1], jobs[code][2]): code for code in LEAGUES}
+        for future in as_completed(futures):
+            code = futures[future]
+            try:
+                events, diag = future.result()
+                fresh[code] = events; coverage[code] = diag; success.add(code)
+                print(f"football-data {code}: {len(events)} gare, {diag['completed']} risultati")
+            except Exception as error:
+                failed.add(code)
+                coverage[code] = {"status":"unavailable","source":"football-data.co.uk","error":str(error)[:160]}
+                print(f"AVVISO football-data {code}: {error}; provo ESPN.")
+
+    # ESPN per coppe UEFA/nazionali e solo come fallback per i CSV nazionali mancanti.
+    espn_codes = set(EUROPEAN) | set(CUPS) | (failed & set(LEAGUES))
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        futures = {pool.submit(fetch_calendar_competition, code, jobs[code][0], jobs[code][1], jobs[code][2]): code for code in espn_codes}
         for future in as_completed(futures):
             code = futures[future]
             try:
                 _, events, diag = future.result()
-                fresh_by_code[code] = events
-                coverage[code] = diag
-                print(f"Calendario {code}: {len(events)} eventi, stato {diag['status']}")
+                coverage[code] = {**coverage.get(code, {}), **diag}
+                if events:
+                    fresh[code] = events; success.add(code); failed.discard(code)
+                else:
+                    failed.add(code)
+                print(f"ESPN {code}: {len(events)} eventi ({diag['status']})")
             except Exception as error:
-                coverage[code] = {"status": "unavailable", "error": str(error)[:200], "source": "ESPN"}
-                print(f"ERRORE calendario {code}: {error}")
+                failed.add(code)
+                coverage.setdefault(code, {}).update({"status":"unavailable","source":"ESPN","error":str(error)[:160]})
+                print(f"ERRORE ESPN {code}: {error}")
 
-    # Preserve last known fixtures for failed date ranges; successful windows replace only matching competition dates.
+    # Non cancellare mai l'ultimo calendario noto quando una fonte è irraggiungibile.
     fixture_map = {}
     for item in old_fixtures:
-        if isinstance(item, dict) and item.get("competition_code") in jobs:
-            key = (item.get("competition_code"), item.get("id") or "|".join((item.get("date", ""), item.get("home_team", ""), item.get("away_team", ""))))
-            fixture_map[key] = item
-    for code, events in fresh_by_code.items():
-        diag = coverage.get(code, {})
-        if diag.get("status") == "unavailable":
-            continue
-        for item in events:
-            key = (code, item.get("id") or "|".join((item.get("date", ""), item.get("home_team", ""), item.get("away_team", ""))))
-            fixture_map[key] = item
-    fixtures = sorted(fixture_map.values(), key=lambda item: (item.get("date", ""), item.get("kickoff", ""), item.get("competition", "")))
+        if isinstance(item, dict) and item.get("competition_code") in failed:
+            key=(item.get("competition_code"),item.get("id") or "|".join((item.get("date",""),item.get("home_team",""),item.get("away_team",""))))
+            fixture_map[key]=item
+    for code in success:
+        for item in fresh.get(code,[]):
+            key=(code,item.get("id") or "|".join((item.get("date",""),item.get("home_team",""),item.get("away_team",""))))
+            fixture_map[key]=item
+    fixtures=sorted(fixture_map.values(),key=lambda x:(x.get("date",""),x.get("kickoff",""),x.get("competition","")))
 
-    standings = dict(old_standings)
-    def get_table(code, meta, season_year):
-        try:
-            rows, diag = fetch_standings(code, meta, season_year)
-            standings[code] = {
-                "competition": meta["name"], "country": meta["country"], "kind": meta["kind"],
-                "season": season_year, "updated_at": now.isoformat(), "rows": rows, "diagnostics": diag,
-            }
-            return code, diag
-        except Exception as error:
-            old = standings.get(code)
-            if old:
-                old.setdefault("diagnostics", {})["refresh_error"] = str(error)[:180]
-                old["diagnostics"]["status"] = "stale"
-            return code, {"status": "stale" if old else "unavailable", "error": str(error)[:180]}
+    tables={}
+    for code,(meta,start,end,season) in jobs.items():
+        if code in LEAGUES and code in success:
+            tables[code]=calculate_domestic_table(fixtures,code,meta,season,now.isoformat())
+        elif code in old_tables:
+            tables[code]=old_tables[code]
+            if code in failed:
+                tables[code].setdefault("diagnostics",{})["status"]="stale"
+                tables[code]["diagnostics"]["refresh_error"]=coverage.get(code,{}).get("error","fonte non disponibile")
 
-    with ThreadPoolExecutor(max_workers=6) as pool:
-        futures = [pool.submit(get_table, code, meta, season_year)
-                   for code, (meta, _, _, season_year) in jobs.items()]
-        for future in as_completed(futures):
-            code, diag = future.result()
-            coverage.setdefault(code, {})["standings"] = diag
-            print(f"Classifica {code}: {diag.get('status')}")
-
-    # Consistency checks: valid dates, distinct teams, valid scores and no duplicate event keys.
-    errors = []
-    seen = set()
-    valid_fixtures = []
+    errors=[]; seen=set(); valid=[]
     for item in fixtures:
-        try:
-            date.fromisoformat(item["date"])
-        except (ValueError, TypeError, KeyError):
-            errors.append("data non valida")
-            continue
-        if not item.get("home_team") or not item.get("away_team") or item["home_team"].casefold() == item["away_team"].casefold():
-            errors.append("nomi squadre non validi")
-            continue
-        if item.get("status") == "completed":
-            hg, ag = item.get("home_goals"), item.get("away_goals")
-            if not isinstance(hg, int) or not isinstance(ag, int) or not (0 <= hg <= 15 and 0 <= ag <= 15):
-                errors.append("punteggio finale non valido")
-                continue
-        key = (item.get("competition_code"), item.get("id") or item["date"] + item["home_team"] + item["away_team"])
-        if key in seen:
-            continue
-        seen.add(key)
-        valid_fixtures.append(item)
+        try: date.fromisoformat(item["date"])
+        except (ValueError,TypeError,KeyError):
+            errors.append("data non valida"); continue
+        if not item.get("home_team") or not item.get("away_team") or item["home_team"].casefold()==item["away_team"].casefold():
+            errors.append("nomi squadre non validi"); continue
+        if item.get("status")=="completed":
+            hg,ag=item.get("home_goals"),item.get("away_goals")
+            if not isinstance(hg,int) or not isinstance(ag,int) or not (0<=hg<=15 and 0<=ag<=15):
+                errors.append("punteggio finale non valido"); continue
+        key=(item.get("competition_code"),item.get("id") or item["date"]+item["home_team"]+item["away_team"])
+        if key in seen: continue
+        seen.add(key); valid.append(item)
 
-    result = {
-        "schema_version": 1,
-        "updated_at": now.isoformat(),
-        "source_policy": "ESPN public endpoints; schema and internal consistency validated. Coverage depends on upstream availability; see per-competition diagnostics.",
-        "fixtures": valid_fixtures,
-        "standings": standings,
-        "coverage": coverage,
-        "summary": {
-            "competitions_configured": len(jobs),
-            "competitions_with_fixtures": sum(1 for code in jobs if coverage.get(code, {}).get("events", 0) > 0),
-            "fixtures_total": len(valid_fixtures),
-            "fixtures_completed": sum(1 for item in valid_fixtures if item.get("status") == "completed"),
-            "fixtures_scheduled": sum(1 for item in valid_fixtures if item.get("status") == "scheduled"),
-            "standings_available": sum(1 for item in standings.values() if item.get("diagnostics", {}).get("status") == "available"),
-            "validation_errors": errors[:20],
-        },
-    }
-    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print("Riepilogo calendario/classifiche:", json.dumps(result["summary"], ensure_ascii=False))
-    if errors:
-        raise SystemExit("Controllo integrità fallito: " + "; ".join(errors[:5]))
+    result={"schema_version":2,"updated_at":now.isoformat(),
+      "source_policy":"Campionati: football-data.co.uk; coppe e fallback: ESPN. Date, nomi e punteggi sono controllati. La classifica nazionale è ricalcolata dai risultati e può differire dall'ufficiale per penalizzazioni o regole speciali.",
+      "fixtures":valid,"standings":tables,"coverage":coverage,
+      "summary":{"competitions_configured":len(jobs),
+        "competitions_with_fixtures":sum(1 for code in jobs if coverage.get(code,{}).get("events",0)>0),
+        "fixtures_total":len(valid),"fixtures_completed":sum(1 for x in valid if x.get("status")=="completed"),
+        "fixtures_scheduled":sum(1 for x in valid if x.get("status")=="scheduled"),
+        "standings_available":sum(1 for x in tables.values() if x.get("diagnostics",{}).get("status") in ("computed_from_results","partial")),
+        "validation_errors":errors[:20]}}
+    OUTPUT.parent.mkdir(parents=True,exist_ok=True)
+    OUTPUT.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    print("Riepilogo:",json.dumps(result["summary"],ensure_ascii=False))
+    if errors: raise SystemExit("Controllo integrità fallito: "+"; ".join(errors[:5]))
 
 
 if __name__ == "__main__":
