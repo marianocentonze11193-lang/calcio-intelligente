@@ -122,20 +122,28 @@ def walk_forward_league(league_name, results):
                 baseline_total = sum(baseline_counts.values())
                 baseline_probs = {label: baseline_counts[label] / baseline_total for label in baseline_counts}
                 for _, home, away, hg, ag in day_fixtures:
-                    forecast = model.make_forecast(
-                        home, away, league_name, match_day, "", history, home_avg, away_avg,
-                        elo, recent, [], motivation,
-                    )
-                    probs = forecast.get("probabilities") or {}
-                    if not all(key in probs for key in ("home_win", "draw", "away_win")):
-                        continue
                     outcome = "1" if hg > ag else "X" if hg == ag else "2"
-                    model_score = score_probabilities(probs, outcome)
+                    variants = {}
+                    variant_args = {
+                        "poisson_only": (None, {}),
+                        "poisson_elo": (elo, {}),
+                        "poisson_form": (None, recent),
+                        "model": (elo, recent),
+                    }
+                    for variant, (variant_elo, variant_form) in variant_args.items():
+                        forecast = model.make_forecast(
+                            home, away, league_name, match_day, "", history, home_avg, away_avg,
+                            variant_elo, variant_form, [], motivation,
+                        )
+                        probs = forecast.get("probabilities") or {}
+                        if all(key in probs for key in ("home_win", "draw", "away_win")):
+                            variants[variant] = score_probabilities(probs, outcome)
+                    if "model" not in variants:
+                        continue
                     baseline = {key: baseline_probs[label] * 100 for key, label in zip(("home_win", "draw", "away_win"), ("1", "X", "2"))}
-                    baseline_score = score_probabilities(baseline, outcome)
                     predictions.append({
                         "date": match_day.isoformat(), "outcome": outcome,
-                        "model": model_score, "baseline": baseline_score,
+                        "variants": variants, "baseline": score_probabilities(baseline, outcome),
                     })
         prior_results.extend(day_fixtures)
         cursor = end
@@ -147,6 +155,7 @@ def main():
     all_by_league = {}
     all_model = []
     all_baseline = []
+    all_variants = defaultdict(list)
     errors = []
     for code in sorted(model.FOOTBALL_DATA_LEAGUES):
         league = model.LEAGUES[code]
@@ -158,13 +167,16 @@ def main():
             evaluated = walk_forward_league(league, results)
             all_by_league[league] = {
                 "source_matches": len(results),
-                "walk_forward": metric_summary([item["model"] for item in evaluated]),
+                "variants": {name: metric_summary([item["variants"][name] for item in evaluated if name in item["variants"]])
+                             for name in ("poisson_only", "poisson_elo", "poisson_form", "model")},
                 "prior_frequency_baseline": metric_summary([item["baseline"] for item in evaluated]),
                 "period_start": min((item["date"] for item in evaluated), default=None),
                 "period_end": max((item["date"] for item in evaluated), default=None),
             }
-            all_model.extend(item["model"] for item in evaluated)
+            all_model.extend(item["variants"]["model"] for item in evaluated if "model" in item["variants"])
             all_baseline.extend(item["baseline"] for item in evaluated)
+            for name in ("poisson_only", "poisson_elo", "poisson_form"):
+                all_variants[name].extend(item["variants"][name] for item in evaluated if name in item["variants"])
             print(f"{league}: {len(results)} risultati sorgente, {len(evaluated)} previsioni walk-forward.")
         except (urllib.error.URLError, TimeoutError, OSError, ValueError, KeyError, TypeError) as error:
             errors.append(f"{league}: {error}")
@@ -181,6 +193,7 @@ def main():
         "period_end_requested": (today - timedelta(days=1)).isoformat(),
         "overall": {
             "walk_forward": metric_summary(all_model),
+            "ablations": {name: metric_summary(rows) for name, rows in all_variants.items()},
             "prior_frequency_baseline": metric_summary(all_baseline),
             "comparison_note": "Confronto su identiche partite; per Brier score e log loss un valore più basso è migliore.",
         },
