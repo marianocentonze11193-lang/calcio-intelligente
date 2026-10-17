@@ -428,6 +428,7 @@ def main():
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Report walk-forward scritto in {OUTPUT}; leghe: {len(all_by_league)}; errori: {len(errors)}")
+    print("XG_VALIDATION_SUMMARY=" + json.dumps(report["overall"]["xg_validation"], ensure_ascii=False, sort_keys=True))
 
 
 if __name__ == "__main__":
