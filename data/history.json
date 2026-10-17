@@ -1171,9 +1171,9 @@
       "expected_away_goals": 1.29,
       "sample_matches": 3,
       "archived_at": "2026-10-15T09:51:33.524158+00:00",
-      "outcome": null,
-      "home_goals": null,
-      "away_goals": null,
+      "outcome": "1",
+      "home_goals": 3,
+      "away_goals": 0,
       "odds_markets": {
         "over_under_2_5": {
           "over": 1.54,
@@ -1257,7 +1257,8 @@
       ],
       "recent_competition_status": "impegno ravvicinato rilevato",
       "competition_type": "campionato",
-      "historical_sources": []
+      "historical_sources": [],
+      "settled_at": "2026-10-17T17:56:48.100902+00:00"
     },
     {
       "id": "2026-10-17-Ligue 1-Lille-Brest",
@@ -2981,9 +2982,10 @@
       "expected_away_goals": 1.31,
       "sample_matches": 0,
       "archived_at": "2026-10-15T10:09:22.994665+00:00",
-      "outcome": null,
-      "home_goals": null,
-      "away_goals": null
+      "outcome": "2",
+      "home_goals": 1,
+      "away_goals": 3,
+      "settled_at": "2026-10-17T17:56:48.100990+00:00"
     },
     {
       "id": "2026-10-17-Serie A-AS Roma-Genoa",
@@ -4180,9 +4182,10 @@
       "expected_away_goals": 1.66,
       "sample_matches": 2,
       "archived_at": "2026-10-15T19:59:46.525948+00:00",
-      "outcome": null,
-      "home_goals": null,
-      "away_goals": null
+      "outcome": "2",
+      "home_goals": 1,
+      "away_goals": 3,
+      "settled_at": "2026-10-17T17:56:48.101066+00:00"
     },
     {
       "id": "2026-10-17-Serie A-Roma-Genoa",
@@ -8258,9 +8261,9 @@
       "away_goals": null
     }
   ],
-  "updated_at": "2026-10-17T17:51:46.603853+00:00",
+  "updated_at": "2026-10-17T17:56:48.101229+00:00",
   "metrics": {
-    "settled_matches": 26,
+    "settled_matches": 29,
     "accuracy_1x2": null,
     "brier_score_1x2": null,
     "minimum_matches_required": 30,
@@ -8268,7 +8271,7 @@
   },
   "metrics_by_league": {},
   "model_vs_market_metrics": {
-    "settled_matches_with_model_and_odds": 12,
+    "settled_matches_with_model_and_odds": 13,
     "minimum_matches_required": 30,
     "model": null,
     "market": null,
@@ -8285,7 +8288,7 @@
       "note": "Servono almeno 30 partite concluse con quote e probabilità per questo mercato."
     },
     "over_under_2_5": {
-      "settled_matches_with_model_and_odds": 12,
+      "settled_matches_with_model_and_odds": 13,
       "minimum_matches_required": 30,
       "model": null,
       "market": null,
@@ -8310,7 +8313,7 @@
     }
   },
   "result_matching": {
-    "checked_at": "2026-10-17T17:51:46.603835+00:00",
+    "checked_at": "2026-10-17T17:56:48.101222+00:00",
     "unresolved_past_matches": 3,
     "examples": [
       {
@@ -8346,7 +8349,7 @@
   "metrics_by_european_context": {
     "groups": {
       "recent_european_match": {
-        "settled_matches": 2,
+        "settled_matches": 3,
         "accuracy_1x2": null,
         "brier_score_1x2": null,
         "minimum_matches_required": 30,
@@ -8354,7 +8357,7 @@
         "context_matches_archived": 26
       },
       "no_recent_european_match": {
-        "settled_matches": 24,
+        "settled_matches": 26,
         "accuracy_1x2": null,
         "brier_score_1x2": null,
         "minimum_matches_required": 30,

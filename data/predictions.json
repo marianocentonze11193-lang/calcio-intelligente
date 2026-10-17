@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T17:51:14+00:00",
+  "updated_at": "2026-10-17T17:56:20+00:00",
   "source": "https://www.football-data.co.uk",
   "season": "2627",
   "model": "Poisson con statistiche nazionali club, prior di lega, Elo, forma recente e contesto impegni UEFA/coppe nazionali sperimentale; non validato per coppe",
@@ -61,7 +61,7 @@
     ],
     "leagues_without_history": [],
     "matches_with_estimates": 69,
-    "matches_no_bet": 81,
+    "matches_no_bet": 80,
     "failed_sources": []
   },
   "no_bet_notice": "Le partite NO BET sono mostrate perché i dati non bastano o non sono comparabili. Nessun esito consigliato.",
@@ -94,7 +94,7 @@
         "home_scores": 58.7,
         "away_scores": 76.0
       },
-      "analysis": "Ci attende una sfida di Champions League molto particolare ad Anfield, dove il Liverpool ospita il Villarreal. I dati del nostro modello restano del tutto preliminari e privi di validazione specifica per le coppe europee. Inoltre, la copertura informativa odierna non ci permette di verificare formazioni e infortuni ufficiali. In queste condizioni di forte incertezza e senza mercati selezionati dalle regole, il consiglio migliore è la massima prudenza: meglio evitare qualsiasi giocata e osservare l'andamento del match senza rischi.",
+      "analysis": "Partita di Champions League molto delicata ad Anfield, dove il Liverpool affronta un Villarreal insidioso. Visto il contesto europeo e i dati preliminari, il modello mostra molta prudenza senza indicare mercati solidi o sicuri. Si consiglia di osservare la gara senza effettuare alcuna giocata, data l'assenza di segnali forti.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -201,7 +201,7 @@
         "home_scores": 73.0,
         "away_scores": 83.7
       },
-      "analysis": "Il Napoli si prepara ad affrontare il Bodo/Glimt in un confronto europeo che si preannuncia insidioso. Al momento non disponiamo di una convalida del modello statistico per questa competizione e mancano i dati aggiornati sulle formazioni in campo. Visto il quadro informativo debole e l'assenza di indicazioni dai nostri mercati di riferimento, vi invitiamo a mantenere un profilo estremamente cauto. Senza elementi certi su cui costruire un'analisi solida, la scelta più saggia è quella di non effettuare alcuna giocata.",
+      "analysis": "Sfida europea affascinante ma complessa per il Napoli contro un avversario abituato a ritmi alti come il Bodo/Glimt. L'analisi preliminare non evidenzia mercati di valore o indicazioni particolarmente affidabili su cui puntare. La prudenza è d'obbligo: meglio evitare giocate e godersi lo spettacolo del campo.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -308,7 +308,7 @@
         "home_scores": 85.0,
         "away_scores": 71.7
       },
-      "analysis": "Il Lille scende in campo contro il Galatasaray in un incrocio di Champions League che promette grande intensità agonistica. Le stime attuali del nostro algoritmo mantengono un carattere puramente preliminare e non beneficiano di una validazione ufficiale per i tornei internazionali. Mancando del tutto i riscontri sulle scelte dei tecnici e sulle condizioni dei singoli, non ci sono i presupposti per una lettura affidabile. Consigliamo di restare prudenti e di non rischiare alcuna giocata in attesa di contesti più chiari.",
+      "analysis": "Il Lille ospita il Galatasaray in un incrocio di Champions League dall'esito tuttora incerto sulla carta. Non emergono selezioni di scommessa raccomandate dai nostri modelli di riferimento per questo incontro specifico. Ti invitiamo alla massima cautela e a rimanere in attesa di contesti più chiari.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -415,7 +415,7 @@
         "home_scores": 65.3,
         "away_scores": 83.9
       },
-      "analysis": "Il Betis affronta il Feyenoord in una notte di coppa dal pronostico apertamente complesso da decifrare. Il modello di Calcio Intelligente offre una stima ancora limitata e non validata per i match europei, priva del supporto fondamentale delle formazioni ufficiali. In assenza di mercati selezionati e con dati così preliminari, non possiamo suggerire alcun tipo di investimento. Vi invitiamo caldamente alla prudenza e a evitare qualsiasi giocata, godendoci semplicemente lo spettacolo della partita.",
+      "analysis": "Betis e Feyenoord si sfidano in Europa in una gara che promette grande intensità ma che non offre appigli statistici definiti. Il modello non suggerisce alcuna giocata valida per questa partita a causa della stima preliminare e dei dati deboli. È consigliabile non correre rischi inutili e puntare su altre partite.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -522,7 +522,7 @@
         "home_scores": 94.4,
         "away_scores": 42.6
       },
-      "analysis": "Questa sfida di Champions League vede il Club Brugge nettamente favorito dai numeri casalinghi contro un Lens in difficoltà esterna. Dal momento che non ci sono mercati ufficiali consigliati e la copertura dei dati è limitata, ti suggerisco di procedere con prudenza ed evitare giocate azzardate.",
+      "analysis": "Questa sfida di Champions League vede il Club Brugge nettamente favorito nei numeri contro il Lens. Tuttavia, trattandosi di competizioni europee, il modello suggerisce molta prudenza. In assenza di mercati validati e con dati ancora preliminari, la scelta più saggia è osservare senza sbilanciarsi in alcuna giocata.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -629,7 +629,7 @@
         "home_scores": 98.3,
         "away_scores": 67.1
       },
-      "analysis": "Il Lech Poznan ospita il Sunderland in Europa League con aspettative di gol molto alte per i padroni di casa. Nonostante i dati di modello indichino una netta superiorità interna, la mancanza di mercati validati e di riscontri ufficiali impone massima cautela: meglio restare a guardare.",
+      "analysis": "Il Lech Poznan affronta il Sunderland in una gara che sulla carta promette gol e spettacolo offensivo. I dati preliminari mostrano proiezioni molto alte per i padroni di casa. Nonostante i numeri intriganti, la copertura limitata per le coppe europee consiglia di mantenere la massima prudenza e restare alla finestra.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -736,7 +736,7 @@
         "home_scores": 85.6,
         "away_scores": 82.6
       },
-      "analysis": "OFI Crete e Leverkusen si affrontano in una gara europea che si preannuncia piuttosto equilibrata e aperta a diverse soluzioni. Con una situazione di dati preliminari e l'assenza di selezioni di mercato consigliate, la scelta più saggia è quella di non effettuare alcuna giocata.",
+      "analysis": "Ci attende una partita molto equilibrata tra OFI Crete e Leverkusen, dove entrambe le squadre appaiono in grado di pungere. Le proiezioni indicano una gara aperta e vivace dal punto di vista realizzativo. Mancando però indicazioni ufficiali sui mercati e dati completi, è preferibile evitare qualsiasi investimento e godersi semplicemente il match.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -843,7 +843,7 @@
         "home_scores": 93.1,
         "away_scores": 62.0
       },
-      "analysis": "Besiktas leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
+      "analysis": "Il Besiktas si presenta con statistiche recenti incoraggianti nel match casalingo contro il Crystal Palace. Il quadro generale spingerebbe verso una forte supremetta interna. Trattandosi però di una stima preliminare senza riscontri ufficiali di mercato, la regola d'oro resta la prudenza: meglio evitare giocate azzardate.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -919,7 +919,8 @@
           "qualità dati non verificata"
         ],
         "historically_validated": false
-      }
+      },
+      "analysis_provider": "Gemini"
     },
     {
       "id": "2026-10-22-Europa League-Celtic-Celta",
@@ -949,7 +950,7 @@
         "home_scores": 48.9,
         "away_scores": 30.2
       },
-      "analysis": "Per la sfida di Europa League tra Celtic e Celta non emergono mercati consigliati dal modello, visti i dati deboli e l'assenza di validazioni specifiche per le coppe. Ti invito a procedere con molta prudenza e a evitare qualsiasi giocata su questo incontro, in attesa di indicazioni più solide.",
+      "analysis": "Per la sfida di Europa League tra Celtic e Celta i dati a disposizione sono davvero scarsi e non ci sono mercati consigliati dal modello. Trattandosi di un contesto di coppa senza indicazioni forti, ti invitiamo a mantenere la massima prudenza e a evitare qualsiasi giocata.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1056,7 +1057,7 @@
         "home_scores": 66.5,
         "away_scores": 84.9
       },
-      "analysis": "Il match di Europa League tra Hoffenheim e Lione presenta un quadro complesso e non validato per le competizioni europee dal nostro sistema. Mancano indicazioni di valore e suggerisco di mantenere un profilo prudente, evitando di effettuare puntate su questa specifica gara.",
+      "analysis": "Hoffenheim e Lione si affrontano in un contesto europeo delicato e privo di mercati ufficialmente selezionati dal nostro sistema. I dati di base suggeriscono cautela: mancano elementi solidi per impostare una lettura affidabile, quindi ti consigliamo di restare in attesa e di non rischiare giocate.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1163,7 +1164,7 @@
         "home_scores": 84.6,
         "away_scores": 86.9
       },
-      "analysis": "La partita di Europa League tra Lillestrom e Real Sociedad si muove su binari di incertezza elevata, senza mercati selezionati dal modello per via dei dati preliminari. Meglio restare prudenti ed evitare scommesse, attendendo contesti più leggibili e sicuri.",
+      "analysis": "Il match tra Lillestrom e Real Sociedad presenta un quadro incerto e non supportato da indicazioni di mercato concrete. Senza segnali univoci o validazioni approfondite per le coppe, la scelta più saggia è quella di evitare scommesse su questo incontro.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1270,7 +1271,7 @@
         "home_scores": 77.9,
         "away_scores": 64.1
       },
-      "analysis": "Il Lille parte favorito in questa sfida di Ligue 1, forte di un buon rendimento casalingo e di una classifica che lo vede stabilmente nella zona alta. Nonostante i dati di base siano limitati e vi sia un impegno ravvicinato da considerare, il quadro generale non offre spunti operativi ufficiali: ti consiglio prudenza e di valutare con attenzione.",
+      "analysis": "Il Lille ospita il Brest in una sfida di Ligue 1 che vede i padroni di casa favoriti grazie a una solida posizione nelle zone alte della classifica. Nonostante gli impegni ravvicinati, il modello non evidenzia giocate automatiche consigliate: ti invitiamo quindi a valutare la partita con prudenza.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1378,7 +1379,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:44+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:51+00:00",
       "odds_1x2": {
         "home": 1.84,
         "draw": 3.76,
@@ -1401,7 +1402,7 @@
         "draw": 0.88,
         "away": 1.55
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -1469,7 +1470,7 @@
         "home_scores": 65.4,
         "away_scores": 90.4
       },
-      "analysis": "Il Lens parte favorito su un Troyes in difficoltà in questo avvio di stagione. Osservando il quadro generale, non emergono mercati particolarmente solidi consigliati dalle nostre regole. Ti suggerisco quindi di procedere con prudenza e di evitare giocate su questo incontro.",
+      "analysis": "Il Lens parte favorito su un Troyes in difficoltà, reduce da una classifica deficitaria. I dati di modello non evidenziano mercati pronti da consigliare con forza. Visti i pochi elementi a disposizione, conviene procedere con prudenza e valutare lo scenario senza forzare alcuna giocata.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1576,7 +1577,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:44+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:51+00:00",
       "odds_1x2": {
         "home": 3.84,
         "draw": 3.89,
@@ -1599,7 +1600,7 @@
         "draw": -5.69,
         "away": 14.5
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -1667,7 +1668,7 @@
         "home_scores": 64.9,
         "away_scores": 58.8
       },
-      "analysis": "Sfida di metà classifica tra Angers e un Marseille reduce da impegni europei ravvicinati. Al momento i dati non evidenziano opzioni di valore limpido o mercati di spessore. Ti consiglio di restare prudente e valutare di passare la mano.",
+      "analysis": "Partita che si preannuncia molto equilibrata tra Angers e un Olympique Marsiglia atteso da impegni ravvicinati. Il modello non suggerisce opzioni di valore netto su cui puntare. La situazione di incertezza generale consiglia molta prudenza e di evitare qualsiasi giocata.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -1813,7 +1814,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:44+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:51+00:00",
       "odds_1x2": {
         "home": 3.16,
         "draw": 3.71,
@@ -1836,7 +1837,7 @@
         "draw": 6.19,
         "away": -15.09
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -1904,7 +1905,7 @@
         "home_scores": 76.9,
         "away_scores": 67.1
       },
-      "analysis": "Un vero e proprio scontro salvezza tra due formazioni che cercano punti pesanti per risalire la china. Le indicazioni numeriche non offrono però spunti abbastanza forti da suggerire una giocata sicura. Meglio mantenere un approccio prudente ed evitare scommesse.",
+      "analysis": "Scontro diretto in zona salvezza tra Le Havre e Auxerre, condizionato da diverse assenze da ambo le parti. Le indicazioni numeriche non offrono spunti sufficienti per raccomandare una scelta precisa. È saggio mantenere un profilo prudente e orientarsi verso nessuna giocata.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -2082,7 +2083,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:44+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:51+00:00",
       "odds_1x2": {
         "home": 2.28,
         "draw": 3.36,
@@ -2105,7 +2106,7 @@
         "draw": -1.76,
         "away": -2.39
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -2173,7 +2174,7 @@
         "home_scores": 57.9,
         "away_scores": 76.7
       },
-      "analysis": "Il Monaco capolista fa visita a un Lorient fin qui solido tra le mura amiche. Anche in questo caso, la lettura dei dati non fa emergere mercati ideali su cui puntare con convinzione. Il consiglio migliore resta la prudenza, senza forzare alcuna giocata.",
+      "analysis": "Il Monaco capolista fa visita a un Lorient solido ma inferiore sulla carta per qualità complessiva. Non emergono tuttavia mercati di quota particolarmente delineati dalle regole del modello. Meglio restare prudenti, osservare l'andamento ed evitare scommesse avventate.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -2279,7 +2280,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:44+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:51+00:00",
       "odds_1x2": {
         "home": 3.48,
         "draw": 3.46,
@@ -2302,7 +2303,7 @@
         "draw": -0.34,
         "away": 4.92
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -2370,7 +2371,7 @@
         "home_scores": 58.8,
         "away_scores": 78.3
       },
-      "analysis": "Questa sfida salvezza mette di fronte due squadre in difficoltà e con dati ancora molto limitati. Il modello non evidenzia mercati particolarmente solidi su cui puntare con convinzione. Il consiglio migliore è mantenere la massima prudenza e valutare lo stop totale.",
+      "analysis": "Sfida salvezza delicata tra due squadre che faticano a trovare continuità in avvio di stagione. Il modello individua una leggera preferenza per gli ospiti, ma i dati a disposizione sono davvero troppo scarsi per esporsi. Visto il quadro incerto e l'assenza di mercati validati dalle regole, è decisamente saggio astenersi e non effettuare alcuna giocata.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -2449,7 +2450,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:57+00:00",
+      "odds_fetched_at": "2026-10-17T17:56:04+00:00",
       "odds_1x2": {
         "home": 2.13,
         "draw": 3.27,
@@ -2472,7 +2473,7 @@
         "draw": -1.98,
         "away": 22.98
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -2540,7 +2541,7 @@
         "home_scores": 80.8,
         "away_scores": 67.3
       },
-      "analysis": "Il Kalamata affronta un avversario impegnato tre giorni fa in Europa League, un fattore che potrebbe pesare sulle energie degli ospiti. Ciononostante, il quadro complessivo non offre indicazioni abbastanza nette per suggerire una giocata sicura. Conviene osservare l'andamento senza forzare alcun pronostico.",
+      "analysis": "Il Kalamata affronta un OFI Crete reduce da un impegno europeo ravvicinato in trasferta, fattore che potrebbe pesare sulle energie dei cretesi. Nonostante i pronostici indichino una spinta iniziale per i padroni di casa, la situazione generale non offre indicazioni abbastanza forti. Ti suggerisco di procedere con prudenza e di evitare questo incontro.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -2647,7 +2648,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:57+00:00",
+      "odds_fetched_at": "2026-10-17T17:56:04+00:00",
       "odds_1x2": {
         "home": 2.59,
         "draw": 3.16,
@@ -2670,7 +2671,7 @@
         "draw": -4.47,
         "away": -10.11
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -2738,7 +2739,7 @@
         "home_scores": 59.2,
         "away_scores": 69.1
       },
-      "analysis": "L'Olympiakos parte favorito in trasferta contro un Panetolikos solido ma inferiore sulla carta. Nonostante i favori del pronostico per gli ospiti, le quote non offrono margini di valore davvero interessanti da sfruttare. Ti suggerisco di evitare la giocata e passare oltre.",
+      "analysis": "Il Panetolikos riceve un Olympiakos stabilmente nelle zone nobili della classifica e superiore per qualità complessiva. Il divario tecnico è evidente, ma il modello non evidenzia mercati particolarmente vantaggiosi da consigliare con forza. Mancando indicazioni solide, la scelta migliore resta quella di guardare la partita senza rischiare puntate.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -2817,7 +2818,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:57+00:00",
+      "odds_fetched_at": "2026-10-17T17:56:04+00:00",
       "odds_1x2": {
         "home": 8.72,
         "draw": 4.73,
@@ -2840,7 +2841,7 @@
         "draw": 10.5,
         "away": -28.03
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -2908,7 +2909,7 @@
         "home_scores": 84.6,
         "away_scores": 47.2
       },
-      "analysis": "Il Kifisia cerca punti preziosi in casa contro un Aris reduce da trasferte non irresistibili. Anche in questo caso la quantità di dati a disposizione è bassa e non emergono opzioni di scommessa pulite. Meglio astenersi e non rischiare il capitale.",
+      "analysis": "Il Kifisia ospita un Aris reduce da trasferte non semplici e con un rendimento esterno altalenante. Anche se i numeri abbozzano una lettura favorevole ai padroni di casa, la quantità di dati limitata impone grande cautela. Non essendoci mercati consigliati dalle nostre regole, ti invito a passare oltre e non scommettere.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -2987,7 +2988,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:57+00:00",
+      "odds_fetched_at": "2026-10-17T17:56:04+00:00",
       "odds_1x2": {
         "home": 2.87,
         "draw": 3.24,
@@ -3010,7 +3011,7 @@
         "draw": -7.02,
         "away": -28.24
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -3078,7 +3079,7 @@
         "home_scores": 76.3,
         "away_scores": 62.9
       },
-      "analysis": "Il PAOK parte favorito in questa sfida casalinga contro l'Iraklis, forte di una classifica che li vede stabilmente nelle zone nobili. I modelli stimano una gara tendenzialmente bloccata, con una discreta inclinazione per la prudenza. Visto il quadro generale e la mancanza di mercati di spicco indicati dalle regole, il consiglio migliore è procedere con molta cautela o valutare l'assenza di giocate sicure.",
+      "analysis": "Il PAOK parte favorito in questa sfida casalinga contro l'Iraklis, forte di una classifica migliore e di una buona spinta iniziale. Il modello evidenzia una discreta tendenza al controllo, rendendo l'Under 2.5 un'opzione prudente da valutare. Considerata la quantità limitata di dati a disposizione, è consigliabile procedere con molta cautela senza forzare la mano.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -3157,7 +3158,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:57+00:00",
+      "odds_fetched_at": "2026-10-17T17:56:04+00:00",
       "odds_1x2": {
         "home": 1.22,
         "draw": 5.53,
@@ -3180,7 +3181,7 @@
         "draw": 10.15,
         "away": 17.0
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -3248,7 +3249,7 @@
         "home_scores": 88.4,
         "away_scores": 66.1
       },
-      "analysis": "Everton e Chelsea si affrontano a Goodison Park con ambizioni di alta classifica molto simili. Le stime evidenziano una leggera preferenza per i padroni di casa, ma le diverse assenze segnalate tra le file ospiti invitano a leggere il match con attenzione. Non emergono indicazioni di scommessa particolarmente forti dalle nostre regole, per cui conviene mantenere un profilo prudente.",
+      "analysis": "Everton e Chelsea si affrontano a Goodison Park con ambizioni simili di alta classifica e qualche problema di infermeria da monitorare. Le stime suggeriscono una partita vivace, con l'Over 1.5 che emerge come scenario più leggibile grazie alla spinta offensiva degli ospiti. Non essendoci indicazioni nette di mercato, conviene osservare l'andamento senza sbilanciarsi troppo.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -3354,7 +3355,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:39+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:47+00:00",
       "odds_1x2": {
         "home": 3.13,
         "draw": 3.62,
@@ -3377,7 +3378,7 @@
         "draw": -5.88,
         "away": -26.09
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -3445,7 +3446,7 @@
         "home_scores": 71.0,
         "away_scores": 51.1
       },
-      "analysis": "Il Brentford riceve un Liverpool reduce da impegni ravvicinati e con una lista di indisponibili piuttosto corposa. I dati abbozzano una leggera preferenza per la compagine di casa, frenata però da un quadro generale incerto. Non essendoci mercati consigliati solidi, l'opzione più saggia è quella di evitare scommesse e osservare l'andamento da spettatori.",
+      "analysis": "Brentford leggermente favorito; totale gol incerto; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -3639,7 +3640,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:39+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:47+00:00",
       "odds_1x2": {
         "home": 2.34,
         "draw": 3.62,
@@ -3662,7 +3663,7 @@
         "draw": 3.88,
         "away": -12.49
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -3699,8 +3700,7 @@
           "campione inferiore a 8 gare per lato"
         ],
         "historically_validated": false
-      },
-      "analysis_provider": "Gemini"
+      }
     },
     {
       "id": "2026-10-17-Premier League-Fulham-Hull",
@@ -3730,7 +3730,7 @@
         "home_scores": 70.7,
         "away_scores": 81.6
       },
-      "analysis": "Il Fulham cerca punti pesanti per uscire dalla zona calda della classifica contro un Hull City in salute. Le proiezioni assegnano un buon vantaggio agli ospiti, sebbene le quote di mercato raccontino una storia leggermente diversa. Mancando selezioni ufficiali vincolanti dal modello, è consigliabile non forzare la mano e rimanere prudenti.",
+      "analysis": "Il Fulham cerca punti salvezza urgenti in casa contro un Hull che si muove stabilmente a metà classifica. I numeri indicano una buona probabilità di reti da entrambe le parti, rendendo l'Over 1.5 una lettura coerente con l'andamento recente. Vista la delicatezza della posta in palio per i padroni di casa, valutate ogni mossa con molta attenzione.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -3809,7 +3809,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:39+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:47+00:00",
       "odds_1x2": {
         "home": 1.7,
         "draw": 3.89,
@@ -3832,7 +3832,7 @@
         "draw": -0.19,
         "away": 27.52
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -3900,7 +3900,7 @@
         "home_scores": 96.6,
         "away_scores": 69.4
       },
-      "analysis": "Il Manchester City affronta l'Ipswich in una sfida sulla carta a senso unico, con i padroni di casa favoriti dai dati offensivi. Il modello indica una probabilità molto alta per l'esito casalingo e diverse opzioni legate ai gol. Visti i valori in campo, puntare su una vittoria netta o su mercati con margine ampio riflette la differenza tecnica.",
+      "analysis": "Il Manchester City affronta l'Ipswich in una sfida sulla carta a senso unico, con i padroni di casa favoriti dai numeri e dalla classifica. Il modello indica una netta superiorità offensiva dei Citizens, reduci però dagli impegni europei di pochi giorni fa. Non ci sono mercati forti selezionati dalle regole: si consiglia prudenza e di valutare attentamente il contesto prima di agire.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -4016,7 +4016,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:39+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:47+00:00",
       "odds_1x2": {
         "home": 1.24,
         "draw": 6.47,
@@ -4039,7 +4039,7 @@
         "draw": -2.78,
         "away": 0.04
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -4107,7 +4107,7 @@
         "home_scores": 86.6,
         "away_scores": 76.3
       },
-      "analysis": "Newcastle e Aston Villa si incrociano in un match equilibrato, complicato da diverse assenze segnalate per entrambe le squadre. Le quote vedono leggermente avanti i padroni di casa, ma le stime suggeriscono prudenza. Non emergono indicazioni particolarmente nette dai dati, quindi è saggio valutare con attenzione prima di esporsi.",
+      "analysis": "Newcastle e Aston Villa si incrociano in una gara piuttosto equilibrata, complici le fatiche di coppa dei Villans e una serie di assenze importanti da entrambe le parti. Le quote offrono spunti incerti e il modello non evidenzia giocate a colpo sicuro. La prudenza resta d'obbligo, valutando se attendere le formazioni ufficiali prima di qualsiasi scelta.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -4325,7 +4325,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:39+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:47+00:00",
       "odds_1x2": {
         "home": 2.22,
         "draw": 3.63,
@@ -4348,7 +4348,7 @@
         "draw": -4.21,
         "away": -4.38
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -4416,7 +4416,7 @@
         "home_scores": 82.9,
         "away_scores": 77.3
       },
-      "analysis": "Scontro diretto delicato nei bassifondi della classifica tra Bournemouth e Sunderland, entrambe bisognose di punti salvezza. Il Sunderland arriva da un impegno europeo ravvicinato che potrebbe pesare sulle gambe. Le quote mantengono l'equilibrio e, vista la posta in palio, i margini di errore sono ridotti: meglio procedere con cautela.",
+      "analysis": "Scontro salvezza molto delicato tra Bournemouth e Sunderland, con gli ospiti che arrivano da un impegno europeo ravvicinato in trasferta. La classifica corta e la tensione del momento suggeriscono una gara combattuta ma potenzialmente bloccata. Non emergono mercati particolarmente caldeggiati dal modello, per cui è consigliabile restare prudenti e osservare l'andamento.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -4574,7 +4574,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:39+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:47+00:00",
       "odds_1x2": {
         "home": 2.04,
         "draw": 3.51,
@@ -4597,7 +4597,7 @@
         "draw": -3.73,
         "away": 5.12
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -4665,7 +4665,7 @@
         "home_scores": 90.7,
         "away_scores": 47.4
       },
-      "analysis": "Il Brighton ospita il Crystal Palace con l'obiettivo di consolidare la propria posizione nelle zone alte della classifica. Gli ospiti arrivano da una trasferta europea ravvicinata e devono fare i conti con un'infermeria affollata. I modelli danno fiducia ai padroni di casa, rendendo l'opzione di una vittoria interna la più logica da seguire.",
+      "analysis": "Brighton leggermente favorito; scenario da almeno 2 gol; Goal/No Goal non netto. Commento automatico basato solo sul modello statistico, non su notizie o quote.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -4865,7 +4865,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:39+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:47+00:00",
       "odds_1x2": {
         "home": 1.53,
         "draw": 4.42,
@@ -4888,7 +4888,7 @@
         "draw": -5.51,
         "away": -9.32
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -4925,8 +4925,7 @@
           "campione inferiore a 8 gare per lato"
         ],
         "historically_validated": false
-      },
-      "analysis_provider": "Gemini"
+      }
     },
     {
       "id": "2026-10-18-Premier League-Leeds-Man United",
@@ -4956,7 +4955,7 @@
         "home_scores": 78.8,
         "away_scores": 55.8
       },
-      "analysis": "Questa sfida di Premier League si presenta piuttosto equilibrata, con il Leeds che cerca di sfruttare il fattore campo contro un Manchester United discontinuo. Il modello mostra una mole di dati iniziale ridotta e non indica mercati vincolati da regole precise. Per questo motivo è saggio procedere con grande prudenza, evitando di forzare una giocata e valutando magari solo un'osservazione live della gara.",
+      "analysis": "Questa sfida di Premier League si presenta piuttosto incerta a causa di una limitata quantità di dati storici a disposizione. Il modello non evidenzia mercati particolarmente solidi su cui puntare con convinzione. Il consiglio migliore in questo scenario è la massima prudenza, evitando qualsiasi tipo di giocata.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -5035,7 +5034,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:39+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:47+00:00",
       "odds_1x2": {
         "home": 2.32,
         "draw": 3.55,
@@ -5058,7 +5057,7 @@
         "draw": -0.79,
         "away": -13.42
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -5126,7 +5125,7 @@
         "home_scores": 41.4,
         "away_scores": 58.4
       },
-      "analysis": "Il Nottingham Forest ospita un Arsenal lanciato nelle zone altissime della classifica e decisamente favorito sulla carta. Tuttavia, l'analisi non evidenzia mercati consigliati sicuri a causa di una stima preliminare e di un campione di dati limitato. La scelta migliore è decisamente quella di restare a guardare e non investire su questa partita.",
+      "analysis": "Il Nottingham Forest riceve un Arsenal che viaggia a ritmi alti in alta classifica, ma i numeri offensivi stimati restano piuttosto bassi per entrambe. Le regole del nostro modello non individuano opzioni di valore limpido su cui scommettere. Con queste premesse è saggio restare alla finestra ed evitare di forzare la mano.",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [
@@ -5205,7 +5204,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:39+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:47+00:00",
       "odds_1x2": {
         "home": 5.59,
         "draw": 3.82,
@@ -5228,7 +5227,7 @@
         "draw": 12.64,
         "away": -16.95
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -5375,7 +5374,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:39+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:47+00:00",
       "odds_1x2": {
         "home": 1.46,
         "draw": 4.55,
@@ -5398,7 +5397,7 @@
         "draw": 14.27,
         "away": 14.43
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -5697,7 +5696,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:43+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:50+00:00",
       "odds_1x2": {
         "home": 4.67,
         "draw": 4.0,
@@ -5720,7 +5719,7 @@
         "draw": -8.7,
         "away": 19.41
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -5923,7 +5922,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:43+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:50+00:00",
       "odds_1x2": {
         "home": 1.87,
         "draw": 3.45,
@@ -5946,7 +5945,7 @@
         "draw": 1.41,
         "away": 6.94
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -6165,7 +6164,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:43+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:50+00:00",
       "odds_1x2": {
         "home": 3.28,
         "draw": 3.61,
@@ -6188,7 +6187,7 @@
         "draw": -8.25,
         "away": 25.22
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -6432,7 +6431,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:43+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:50+00:00",
       "odds_1x2": {
         "home": 1.66,
         "draw": 3.76,
@@ -6455,7 +6454,7 @@
         "draw": 8.68,
         "away": 19.77
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -6601,7 +6600,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:43+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:50+00:00",
       "odds_1x2": {
         "home": 2.99,
         "draw": 3.05,
@@ -6624,7 +6623,7 @@
         "draw": -1.98,
         "away": 3.87
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -7157,7 +7156,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:46+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:54+00:00",
       "odds_1x2": {
         "home": 8.37,
         "draw": 6.53,
@@ -7180,7 +7179,7 @@
         "draw": -4.48,
         "away": 8.42
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -7459,7 +7458,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:46+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:54+00:00",
       "odds_1x2": {
         "home": 7.53,
         "draw": 5.62,
@@ -7482,7 +7481,7 @@
         "draw": -10.47,
         "away": 19.73
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -7673,7 +7672,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:46+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:54+00:00",
       "odds_1x2": {
         "home": 1.6,
         "draw": 4.31,
@@ -7696,7 +7695,7 @@
         "draw": -2.85,
         "away": -0.91
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -7842,7 +7841,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:46+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:54+00:00",
       "odds_1x2": {
         "home": 3.31,
         "draw": 3.83,
@@ -7865,7 +7864,7 @@
         "draw": -12.66,
         "away": 32.94
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -8078,7 +8077,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:46+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:54+00:00",
       "odds_1x2": {
         "home": 5.8,
         "draw": 4.83,
@@ -8101,7 +8100,7 @@
         "draw": -1.38,
         "away": 1.43
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -8332,7 +8331,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:46+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:54+00:00",
       "odds_1x2": {
         "home": 3.4,
         "draw": 4.06,
@@ -8355,7 +8354,7 @@
         "draw": -3.25,
         "away": 7.93
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -8501,7 +8500,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:46+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:54+00:00",
       "odds_1x2": {
         "home": 1.58,
         "draw": 4.38,
@@ -8524,7 +8523,7 @@
         "draw": -0.41,
         "away": 39.42
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -8755,7 +8754,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:46+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:54+00:00",
       "odds_1x2": {
         "home": 1.31,
         "draw": 5.61,
@@ -8778,7 +8777,7 @@
         "draw": -5.74,
         "away": -6.04
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -8924,7 +8923,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:48+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:55+00:00",
       "odds_1x2": {
         "home": 1.57,
         "draw": 3.78,
@@ -8947,7 +8946,7 @@
         "draw": 11.11,
         "away": 11.74
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -9095,7 +9094,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:45+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:52+00:00",
       "odds_1x2": {
         "home": 1.83,
         "draw": 3.66,
@@ -9118,7 +9117,7 @@
         "draw": 7.15,
         "away": -3.34
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -9266,7 +9265,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:45+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:52+00:00",
       "odds_1x2": {
         "home": 1.64,
         "draw": 3.91,
@@ -9289,7 +9288,7 @@
         "draw": 5.97,
         "away": 29.53
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -9437,7 +9436,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:45+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:52+00:00",
       "odds_1x2": {
         "home": 3.18,
         "draw": 3.59,
@@ -9460,7 +9459,7 @@
         "draw": -3.89,
         "away": 16.81
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -9606,7 +9605,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:45+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:52+00:00",
       "odds_1x2": {
         "home": 2.59,
         "draw": 3.46,
@@ -9629,7 +9628,7 @@
         "draw": -3.08,
         "away": 0.09
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -9777,7 +9776,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:45+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:52+00:00",
       "odds_1x2": {
         "home": 7.12,
         "draw": 4.91,
@@ -9800,7 +9799,7 @@
         "draw": 10.14,
         "away": -19.1
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -9974,7 +9973,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:45+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:52+00:00",
       "odds_1x2": {
         "home": 1.57,
         "draw": 4.32,
@@ -9997,7 +9996,7 @@
         "draw": 4.49,
         "away": -1.32
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -10143,7 +10142,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:41+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:48+00:00",
       "odds_1x2": {
         "home": 4.68,
         "draw": 3.84,
@@ -10166,7 +10165,7 @@
         "draw": -4.71,
         "away": 6.83
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -10355,7 +10354,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:41+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:48+00:00",
       "odds_1x2": {
         "home": 1.44,
         "draw": 4.84,
@@ -10378,7 +10377,7 @@
         "draw": 1.17,
         "away": 31.15
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -10671,7 +10670,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:41+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:48+00:00",
       "odds_1x2": {
         "home": 6.0,
         "draw": 5.42,
@@ -10694,7 +10693,7 @@
         "draw": 2.18,
         "away": -3.74
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -10840,7 +10839,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:41+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:48+00:00",
       "odds_1x2": {
         "home": 1.98,
         "draw": 3.61,
@@ -10863,7 +10862,7 @@
         "draw": -5.66,
         "away": -10.08
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -11088,7 +11087,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:41+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:48+00:00",
       "odds_1x2": {
         "home": 2.1,
         "draw": 3.22,
@@ -11111,7 +11110,7 @@
         "draw": 1.74,
         "away": -1.84
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -11336,7 +11335,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:41+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:48+00:00",
       "odds_1x2": {
         "home": 3.14,
         "draw": 3.48,
@@ -11359,7 +11358,7 @@
         "draw": -0.93,
         "away": 1.87
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -11596,7 +11595,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:41+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:48+00:00",
       "odds_1x2": {
         "home": 1.23,
         "draw": 6.27,
@@ -11619,7 +11618,7 @@
         "draw": 5.2,
         "away": 7.27
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -11793,7 +11792,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:41+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:48+00:00",
       "odds_1x2": {
         "home": 2.85,
         "draw": 2.98,
@@ -11816,7 +11815,7 @@
         "draw": -5.42,
         "away": -15.03
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -11962,7 +11961,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:51+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:58+00:00",
       "odds_1x2": {
         "home": 1.58,
         "draw": 3.7,
@@ -11985,7 +11984,7 @@
         "draw": -5.23,
         "away": -8.01
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -12131,7 +12130,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:51+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:58+00:00",
       "odds_1x2": {
         "home": 1.89,
         "draw": 3.44,
@@ -12154,7 +12153,7 @@
         "draw": -9.99,
         "away": -16.15
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -12328,7 +12327,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:51+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:58+00:00",
       "odds_1x2": {
         "home": 6.69,
         "draw": 4.93,
@@ -12351,7 +12350,7 @@
         "draw": 0.95,
         "away": -9.91
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -12546,7 +12545,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:51+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:58+00:00",
       "odds_1x2": {
         "home": 1.27,
         "draw": 5.27,
@@ -12569,7 +12568,7 @@
         "draw": 0.26,
         "away": 4.39
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -12715,7 +12714,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:51+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:58+00:00",
       "odds_1x2": {
         "home": 2.45,
         "draw": 3.33,
@@ -12738,7 +12737,7 @@
         "draw": 5.18,
         "away": -11.34
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -12884,7 +12883,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:51+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:58+00:00",
       "odds_1x2": {
         "home": 2.81,
         "draw": 3.36,
@@ -12907,7 +12906,7 @@
         "draw": -6.05,
         "away": -20.75
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -13053,7 +13052,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:51+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:58+00:00",
       "odds_1x2": {
         "home": 1.64,
         "draw": 3.96,
@@ -13076,7 +13075,7 @@
         "draw": -0.63,
         "away": 4.53
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -13277,7 +13276,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:51+00:00",
+      "odds_fetched_at": "2026-10-17T17:55:58+00:00",
       "odds_1x2": {
         "home": 2.8,
         "draw": 3.65,
@@ -13300,7 +13299,7 @@
         "draw": -14.29,
         "away": -36.2
       },
-      "market_analysis_updated_at": "2026-10-17T17:51:16+00:00",
+      "market_analysis_updated_at": "2026-10-17T17:56:20+00:00",
       "market_analysis_markets": {
         "over_under_2_5": {
           "odds": {
@@ -14210,40 +14209,22 @@
       "country": "Europa",
       "home_team": "Aston Villa",
       "away_team": "VIKING FK",
-      "expected_home_goals": 1.4,
-      "expected_away_goals": 1.5,
+      "expected_home_goals": null,
+      "expected_away_goals": null,
       "probabilities": {},
       "analysis": "",
       "suggested_markets": [],
       "value_bets": [],
       "top_scorelines": [],
       "sample_matches": 0,
-      "home_matches_sample": 3,
+      "home_matches_sample": 0,
       "away_matches_sample": 0,
       "status": "NO BET",
-      "no_bet_type": "campione_insufficiente",
-      "reason": "Dati insufficienti o squadre non riconciliate: nessuna probabilità pubblicata. Campione insufficiente: servono almeno tre gare casalinghe per la squadra di casa e tre gare in trasferta per l’avversaria.",
-      "confidence": "limitata: modello non validato per coppe",
-      "data_quality": "coppa_non_validata",
-      "elo_home": 1481.5,
-      "elo_away": 1500.0,
-      "home_recent_form": {
-        "games": 5,
-        "goals_for": 1.2,
-        "goals_against": 1.4,
-        "points_per_match": 1.0
-      },
-      "away_recent_form": null,
-      "european_context": [],
-      "recent_competition_context": [],
-      "motivation_context": {
-        "status": "non_verificabile",
-        "note": "Classifica aggiornata non disponibile: motivazioni non dedotte."
-      },
-      "european_fatigue_status": "nessuna gara europea recente verificata",
-      "recent_competition_status": "nessun impegno recente verificato",
-      "competition_type": "europea",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + calendario coppe UEFA/nazionali sperimentale; non ancora validato",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Storico nazionale non abbinabile a entrambe le squadre: la partita è mostrata ma non viene stimata.",
+      "confidence": "non stimabile",
+      "data_quality": "storico_assente",
+      "method": "Nessuna stima: storico club non disponibile o nome squadra non riconciliato",
       "availability_data": {
         "status": "fuori_copertura_api",
         "source": "API-Football",
@@ -14251,13 +14232,9 @@
         "injuries": [],
         "lineups": null
       },
-      "expected_value_1x2": {},
-      "cup_model_note": "Stima orientativa basata sui dati dei campionati nazionali disponibili, non su uno storico specifico della coppa. Pronostico non validato: nessun mercato o value bet automatico viene consigliato.",
-      "source_calendar": "ESPN",
-      "historical_sources": [
-        "Premier League",
-        "Eliteserien norvegese"
-      ]
+      "competition_type": "europea",
+      "cup_model_note": "Nessuna stima affidabile: lo storico nazionale non è abbinabile a entrambe le squadre.",
+      "source_calendar": "ESPN"
     },
     {
       "id": "2026-10-21-Champions League-Bayern Munich-Arsenal",
@@ -15629,7 +15606,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:44+00:00"
+      "odds_fetched_at": "2026-10-17T17:55:51+00:00"
     },
     {
       "id": "2026-10-18-Ligue 1-Paris FC-Rennes",
@@ -15735,7 +15712,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:44+00:00"
+      "odds_fetched_at": "2026-10-17T17:55:51+00:00"
     },
     {
       "id": "2026-10-18-Ligue 1-Lyon-Nice",
@@ -15893,7 +15870,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:44+00:00"
+      "odds_fetched_at": "2026-10-17T17:55:51+00:00"
     },
     {
       "id": "2026-10-17-Bundesliga-Elversberg-Augsburg",
@@ -16023,7 +16000,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:42+00:00"
+      "odds_fetched_at": "2026-10-17T17:55:49+00:00"
     },
     {
       "id": "2026-10-17-Bundesliga-Hamburg-Stuttgart",
@@ -16130,7 +16107,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:42+00:00"
+      "odds_fetched_at": "2026-10-17T17:55:49+00:00"
     },
     {
       "id": "2026-10-17-Bundesliga-Schalke 04-Mainz",
@@ -16209,7 +16186,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:42+00:00"
+      "odds_fetched_at": "2026-10-17T17:55:49+00:00"
     },
     {
       "id": "2026-10-17-Bundesliga-Union Berlin-Dortmund",
@@ -16367,7 +16344,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:42+00:00"
+      "odds_fetched_at": "2026-10-17T17:55:49+00:00"
     },
     {
       "id": "2026-10-17-Bundesliga-Werder Bremen-Paderborn",
@@ -16515,7 +16492,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:42+00:00"
+      "odds_fetched_at": "2026-10-17T17:55:49+00:00"
     },
     {
       "id": "2026-10-17-Bundesliga-Bayern Munich-RB Leipzig",
@@ -16741,7 +16718,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:42+00:00"
+      "odds_fetched_at": "2026-10-17T17:55:49+00:00"
     },
     {
       "id": "2026-10-18-Bundesliga-Leverkusen-Freiburg",
@@ -16925,7 +16902,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:42+00:00"
+      "odds_fetched_at": "2026-10-17T17:55:49+00:00"
     },
     {
       "id": "2026-10-18-Bundesliga-M'gladbach-Hoffenheim",
@@ -17032,7 +17009,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:42+00:00"
+      "odds_fetched_at": "2026-10-17T17:55:49+00:00"
     },
     {
       "id": "2026-10-18-Super League greca-Panathinaikos-Asteras Tripolis",
@@ -17141,7 +17118,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:57+00:00"
+      "odds_fetched_at": "2026-10-17T17:56:04+00:00"
     },
     {
       "id": "2026-10-17-Serie A-Bologna-Inter",
@@ -17349,7 +17326,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:43+00:00"
+      "odds_fetched_at": "2026-10-17T17:55:50+00:00"
     },
     {
       "id": "2026-10-17-Serie A-Roma-Genoa",
@@ -17537,7 +17514,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:43+00:00"
+      "odds_fetched_at": "2026-10-17T17:55:50+00:00"
     },
     {
       "id": "2026-10-18-Serie A-Milan-Atalanta",
@@ -17733,7 +17710,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:43+00:00"
+      "odds_fetched_at": "2026-10-17T17:55:50+00:00"
     },
     {
       "id": "2026-10-19-Serie A-Monza-Cagliari",
@@ -17812,85 +17789,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:43+00:00"
-    },
-    {
-      "id": "2026-10-17-Eliteserien norvegese-VIKING FK-Fredrikstad",
-      "date": "2026-10-17",
-      "kickoff": "18:00",
-      "league": "Eliteserien norvegese",
-      "country": "Norvegia",
-      "home_team": "VIKING FK",
-      "away_team": "Fredrikstad",
-      "expected_home_goals": 1.77,
-      "expected_away_goals": 1.16,
-      "probabilities": {},
-      "analysis": "",
-      "suggested_markets": [],
-      "value_bets": [],
-      "top_scorelines": [],
-      "sample_matches": 0,
-      "home_matches_sample": 0,
-      "away_matches_sample": 15,
-      "status": "NO BET",
-      "no_bet_type": "campione_insufficiente",
-      "reason": "Campione insufficiente: servono almeno tre gare casalinghe per la squadra di casa e tre gare in trasferta per l’avversaria.",
-      "confidence": "bassa quantità di dati",
-      "data_quality": "controllata",
-      "elo_home": 1500.0,
-      "elo_away": 1505.8,
-      "home_recent_form": null,
-      "away_recent_form": {
-        "games": 5,
-        "goals_for": 1.6,
-        "goals_against": 1.2,
-        "points_per_match": 1.2
-      },
-      "european_context": [
-        {
-          "team": "VIKING FK",
-          "competition": "Champions League",
-          "match_date": "2026-10-13",
-          "days_before": 4,
-          "venue": "casa",
-          "home_goals": 3,
-          "away_goals": 3,
-          "attack_factor": 0.99,
-          "adjustment_pct": 1.0,
-          "source": "ESPN",
-          "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
-        }
-      ],
-      "recent_competition_context": [
-        {
-          "team": "VIKING FK",
-          "competition": "Champions League",
-          "match_date": "2026-10-13",
-          "days_before": 4,
-          "venue": "casa",
-          "home_goals": 3,
-          "away_goals": 3,
-          "attack_factor": 0.99,
-          "adjustment_pct": 1.0,
-          "source": "ESPN",
-          "note": "Stima sperimentale: minuti effettivi, viaggio e supplementari non verificati."
-        }
-      ],
-      "motivation_context": {
-        "status": "dati_insufficienti",
-        "note": "Poche partite concluse per valutare con prudenza gli obiettivi di classifica."
-      },
-      "european_fatigue_status": "rilevato",
-      "recent_competition_status": "impegno ravvicinato rilevato",
-      "competition_type": "campionato",
-      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + calendario coppe UEFA/nazionali sperimentale; non ancora validato",
-      "availability_data": {
-        "status": "non_trovata",
-        "source": "API-Football",
-        "note": "Partita non abbinata con certezza al calendario API-Football; nessun dato di disponibilità attribuito.",
-        "injuries": [],
-        "lineups": null
-      }
+      "odds_fetched_at": "2026-10-17T17:55:50+00:00"
     },
     {
       "id": "2026-10-18-Eliteserien norvegese-Sarpsborg FK-Rosenborg",
@@ -18225,7 +18124,7 @@
         }
       },
       "odds_markets_source": "football-data.co.uk",
-      "odds_fetched_at": "2026-10-17T17:50:41+00:00"
+      "odds_fetched_at": "2026-10-17T17:55:48+00:00"
     },
     {
       "id": "2026-10-17-Allsvenskan svedese-AIK-IFK Göteborg",
@@ -18688,6 +18587,51 @@
         "lineups": null,
         "lineup_status": "non_pubblicate"
       }
+    },
+    {
+      "id": "2026-10-19-Allsvenskan svedese-Degerfors IF-Kalmar FF",
+      "date": "2026-10-19",
+      "kickoff": "19:00",
+      "league": "Allsvenskan svedese",
+      "country": "Svezia",
+      "home_team": "Degerfors IF",
+      "away_team": "Kalmar FF",
+      "expected_home_goals": 1.63,
+      "expected_away_goals": 1.32,
+      "probabilities": {},
+      "analysis": "",
+      "suggested_markets": [],
+      "value_bets": [],
+      "top_scorelines": [],
+      "sample_matches": 0,
+      "home_matches_sample": 0,
+      "away_matches_sample": 0,
+      "status": "NO BET",
+      "no_bet_type": "dati_mancanti",
+      "reason": "Dati mancanti: nessuna osservazione storica pertinente per casa o trasferta.",
+      "confidence": "bassa quantità di dati",
+      "data_quality": "controllata",
+      "elo_home": 1500.0,
+      "elo_away": 1500.0,
+      "home_recent_form": null,
+      "away_recent_form": null,
+      "european_context": [],
+      "recent_competition_context": [],
+      "motivation_context": {
+        "status": "dati_insufficienti",
+        "note": "Poche partite concluse per valutare con prudenza gli obiettivi di classifica."
+      },
+      "european_fatigue_status": "nessuna gara europea recente verificata",
+      "recent_competition_status": "nessun impegno recente verificato",
+      "competition_type": "campionato",
+      "method": "Poisson casa/trasferta + prior di lega + Elo + forma ultime 5 gare + calendario coppe UEFA/nazionali sperimentale; non ancora validato",
+      "availability_data": {
+        "status": "fuori_copertura_api",
+        "source": "API-Football",
+        "note": "Il piano API-Football attuale non consente di verificare questa data in anticipo. Infortuni e formazioni non sono confermati; le probabilità restano indipendenti da questi dati.",
+        "injuries": [],
+        "lineups": null
+      }
     }
   ],
   "notice": "Le probabilità sono stime statistiche e non garantiscono risultati.",
@@ -18705,10 +18649,10 @@
       "requests_made_this_run": 0
     }
   },
-  "odds_updated_at": "2026-10-17T17:51:16+00:00",
+  "odds_updated_at": "2026-10-17T17:56:20+00:00",
   "odds_source_api_football": "API-Football",
   "market_analysis": {
-    "updated_at": "2026-10-17T17:51:16+00:00",
+    "updated_at": "2026-10-17T17:56:20+00:00",
     "matches_analyzed": 56,
     "additional_markets_analyzed": 56,
     "matches_total": 69,
@@ -18728,7 +18672,7 @@
     "method": "Probabilità implicite normalizzate per mercati binari; per doppia chance l'implied è 1/quota perché gli esiti si sovrappongono; EV teorico = probabilità modello × quota decimale − 1"
   },
   "odds_status": {
-    "updated_at": "2026-10-17T17:51:16+00:00",
+    "updated_at": "2026-10-17T17:56:20+00:00",
     "matches_total": 69,
     "matches_with_fresh_1x2": 56,
     "matches_with_fresh_additional_markets": 56,
