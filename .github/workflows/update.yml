@@ -10,7 +10,7 @@ on:
       - "scripts/enrich_with_odds.py"
       - "scripts/enrich_with_api_football_odds.py"
       - "scripts/analyze_market_odds.py"
-      - "scripts/enrich_with_availability.py"
+      - "scripts/enrich_with_availability.py"\n      - "scripts/enrich_with_weather.py"
       - "scripts/archive_predictions.py"
       - "scripts/validate_published_data.py"
       - "app.js"
@@ -73,7 +73,7 @@ jobs:
             python scripts/enrich_with_gemini.py
             python scripts/archive_predictions.py
             python scripts/validate_published_data.py
-            git add data/predictions.json data/history.json data/competition_data.json data/availability_cache.json data/odds_cache.json
+            git add data/predictions.json data/history.json data/competition_data.json data/availability_cache.json data/odds_cache.json data/weather_cache.json
             if git diff --cached --quiet; then
               echo "Nessun cambiamento nei dati."
               exit 0
