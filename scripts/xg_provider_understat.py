@@ -51,8 +51,13 @@ def parse_match_rows(html, league_name):
             continue
         try:
             match_date = datetime.fromtimestamp(int(match["datetime"]), tz=timezone.utc).date().isoformat()
-            home_xg = float(match["team_h_xg"])
-            away_xg = float(match["team_a_xg"])
+            # Understat datesData normally nests expected goals under xG.h/xG.a.
+            # Keep support for flat exports used by some cached/test fixtures.
+            xg_values = match.get("xG") if isinstance(match.get("xG"), dict) else {}
+            home_value = xg_values.get("h", match.get("team_h_xg"))
+            away_value = xg_values.get("a", match.get("team_a_xg"))
+            home_xg = float(home_value)
+            away_xg = float(away_value)
         except (KeyError, TypeError, ValueError, OverflowError, OSError):
             continue
         home = str(match.get("h", {}).get("title", "")).strip()
