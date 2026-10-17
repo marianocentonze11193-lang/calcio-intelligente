@@ -42,7 +42,7 @@ function renderCalendar(){
   const card=document.createElement("article");card.className="fixture";
   const date=document.createElement("div");date.className="fixture-date";date.textContent=safeDate(match.date)+(match.kickoff?" · "+match.kickoff:"");
   const middle=document.createElement("div");const teams=document.createElement("div");teams.className="fixture-teams";teams.textContent=match.home_team+" — "+match.away_team;
-  const meta=document.createElement("div");meta.className="fixture-meta";meta.textContent=match.competition+" · "+match.source+" · "+(match.status==="completed"?"Conclusa":match.status==="in_progress"?"In corso":"Programm ata".replace(" ",""));middle.append(teams,meta);
+  const meta=document.createElement("div");meta.className="fixture-meta";meta.textContent=match.competition+" · "+match.source+" · "+(match.status==="completed"?"Conclusa":match.status==="in_progress"?"In corso":"Programmata");middle.append(teams,meta);
   const score=document.createElement("div");score.className="score";score.textContent=match.status==="completed"?(match.home_goals+" - "+match.away_goals):"vs";
   card.append(date,middle,score);list.append(card);
  }
