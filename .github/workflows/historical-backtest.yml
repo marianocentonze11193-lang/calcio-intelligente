@@ -1,13 +1,6 @@
 name: Validazione storica modello e xG
 
 on:
-  pull_request:
-    paths:
-      - "scripts/backtest_walk_forward.py"
-      - "scripts/xg_provider_understat.py"
-      - "scripts/update_predictions.py"
-      - "tests/**"
-      - ".github/workflows/historical-backtest.yml"
   workflow_dispatch:
 
 permissions:
