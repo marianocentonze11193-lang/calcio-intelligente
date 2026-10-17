@@ -723,7 +723,7 @@ def main():
     historical_available = []
     fixture_odds = {}
     fixture_markets = {}
-    european_matches = fetch_european_matches(today - timedelta(days=7), last_date)
+    european_matches = fetch_european_matches(today - timedelta(days=4), today)
 
     # Football-data pubblica le prossime partite in un CSV separato.
     try:
