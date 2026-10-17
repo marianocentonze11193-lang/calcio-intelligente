@@ -418,6 +418,7 @@ class PredictionModelTests(unittest.TestCase):
         self.assertEqual(metrics["settled_matches"], 30)
         self.assertEqual(metrics["accuracy_1x2"], 100.0)
         self.assertAlmostEqual(metrics["brier_score_1x2"], 0.14, places=4)
+        self.assertIsInstance(metrics["log_loss_1x2"], float)
 
     def test_supported_leagues_have_country_and_calendar_mappings(self):
         for code in ("AUT", "DNK", "G1", "FIN", "IRL", "NOK", "POL", "RO", "SWE", "SWZ"):
@@ -461,6 +462,18 @@ class PredictionModelTests(unittest.TestCase):
         unresolved = archive_module.unresolved_past_matches(records, date(2026, 10, 16))
         self.assertEqual(len(unresolved), 1)
         self.assertEqual(unresolved[0]["home_team"], "Casa")
+
+    def test_metrics_can_be_split_by_european_context(self):
+        records = []
+        for i in range(30):
+            records.append({
+                "outcome": "1", "probabilities": {"home_win": 60, "draw": 25, "away_win": 15},
+                "european_context": [{"team": "Inter"}] if i % 2 == 0 else [],
+            })
+        result = archive_module.calculate_metrics_by_european_context(records)
+        self.assertEqual(result["groups"]["recent_european_match"]["context_matches_archived"], 15)
+        self.assertIsNone(result["groups"]["recent_european_match"]["accuracy_1x2"])
+        self.assertIsNone(result["groups"]["no_recent_european_match"]["accuracy_1x2"])
 
     def test_metrics_are_hidden_until_minimum_sample(self):
         records = [{
