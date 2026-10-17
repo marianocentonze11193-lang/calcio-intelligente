@@ -10,7 +10,6 @@ import re
 import urllib.error
 import urllib.request
 from datetime import date
-from html import unescape
 
 LEAGUES = {
     "Premier League": "EPL",
@@ -33,11 +32,11 @@ def _decode_understat_json(html, variable):
         return None
     # Understat escapes JSON for embedding in a single-quoted JS string.
     raw = match.group(1)
+    # Decode JSON directly first to preserve UTF-8 team names. Some embedded
+    # scripts use JavaScript-only escapes; handle those conservatively as fallback.
     try:
-        decoded = raw.encode("utf-8").decode("unicode_escape")
-        return json.loads(decoded)
-    except (UnicodeDecodeError, json.JSONDecodeError, ValueError):
-        # Some seasons use ordinary JSON string escapes; never return partial data.
+        return json.loads(raw)
+    except (json.JSONDecodeError, TypeError):
         try:
             return json.loads(raw.replace("\\'", "'").replace("\\/", "/"))
         except (json.JSONDecodeError, TypeError):
@@ -55,17 +54,10 @@ def parse_match_rows(html, league_name):
             continue
         try:
             match_date = date.fromtimestamp(int(match["datetime"])).isoformat()
-            home_xg = float(match[" team_h_xg".strip()])
-            away_xg = float(match[" team_a_xg".strip()])
+            home_xg = float(match["team_h_xg"])
+            away_xg = float(match["team_a_xg"])
         except (KeyError, TypeError, ValueError, OverflowError, OSError):
-            # Understat field names normally have no leading spaces; support only
-            # explicitly present fields below rather than guessing values.
-            try:
-                match_date = date.fromtimestamp(int(match["datetime"])).isoformat()
-                home_xg = float(match["team_h_xg"])
-                away_xg = float(match["team_a_xg"])
-            except (KeyError, TypeError, ValueError, OverflowError, OSError):
-                continue
+            continue
         home = str(match.get("h", {}).get("title", "")).strip()
         away = str(match.get("a", {}).get("title", "")).strip()
         if not home or not away or home.casefold() == away.casefold():
