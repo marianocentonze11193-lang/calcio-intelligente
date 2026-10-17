@@ -53,6 +53,7 @@ LEAGUE_COUNTRIES = {
     "Super League svizzera": "Svizzera",
 }
 OUTPUT = Path("data/predictions.json")
+COMPETITION_DATA_FILE = Path(__file__).resolve().parents[1] / "data" / "competition_data.json"
 USER_AGENT = "CalcioIntelligente/1.0"
 MAX_DAYS_AHEAD = 5
 MIN_TEAM_MATCHES = 3
@@ -566,6 +567,63 @@ def fetch_competition_calendar(start_date, end_date):
     return ordered
 
 
+
+def load_competition_calendar(start_date, end_date, now=None):
+    """Usa il calendario stagionale già sincronizzato; ricorre a ESPN solo se la cache manca o è obsoleta."""
+    current = now or datetime.now(timezone.utc)
+    try:
+        with COMPETITION_DATA_FILE.open("r", encoding="utf-8") as handle:
+            payload = json.load(handle)
+        updated_at = datetime.fromisoformat(str(payload.get("updated_at", "")).replace("Z", "+00:00"))
+        if updated_at.tzinfo is None:
+            updated_at = updated_at.replace(tzinfo=timezone.utc)
+        age = current.astimezone(timezone.utc) - updated_at.astimezone(timezone.utc)
+        fixtures = payload.get("fixtures")
+        if age < timedelta(0) or age > timedelta(hours=36) or not isinstance(fixtures, list):
+            raise ValueError("cache calendario obsoleta o non valida")
+    except (OSError, ValueError, TypeError, json.JSONDecodeError) as error:
+        print(f"Calendario stagionale non utilizzabile ({error}); attivo il fallback ESPN.")
+        return fetch_competition_calendar(start_date, end_date)
+
+    allowed_competitions = set(COMPETITION_COUNTRIES)
+    selected = []
+    for item in fixtures:
+        if not isinstance(item, dict) or item.get("competition") not in allowed_competitions:
+            continue
+        if item.get("status") not in ("completed", "scheduled"):
+            continue
+        try:
+            fixture_date = date.fromisoformat(str(item.get("date", "")))
+        except (TypeError, ValueError):
+            continue
+        if not start_date <= fixture_date <= end_date:
+            continue
+        home = str(item.get("home_team", "")).strip()
+        away = str(item.get("away_team", "")).strip()
+        if not home or not away or team_key(home) == team_key(away):
+            continue
+        normalized = dict(item)
+        normalized["date"] = fixture_date.isoformat()
+        normalized["home_team"] = home
+        normalized["away_team"] = away
+        normalized["kickoff"] = str(item.get("kickoff") or "")
+        if normalized["status"] == "completed":
+            hg, ag = number(item.get("home_goals")), number(item.get("away_goals"))
+            if hg is None or ag is None or not (0 <= hg <= 15 and 0 <= ag <= 15):
+                continue
+            normalized["home_goals"], normalized["away_goals"] = int(hg), int(ag)
+        selected.append(normalized)
+
+    # Se il file è valido ma non contiene partite nella finestra, l'elenco vuoto è
+    # un risultato legittimo: evitare di interrogare 12 scoreboard ogni ora.
+    selected.sort(key=lambda item: (item["date"], item["kickoff"], item["competition"]))
+    print(
+        f"Calendario da cache: {len(selected)} gare coppe nella finestra "
+        f"{start_date.isoformat()}–{end_date.isoformat()}."
+    )
+    return selected
+
+
 def fetch_european_matches(start_date, end_date):
     """Compatibilità: restituisce soltanto risultati UEFA conclusi nella finestra richiesta."""
     return [
@@ -865,7 +923,7 @@ def main():
     league_models = []
     fixture_odds = {}
     fixture_markets = {}
-    competition_calendar = fetch_competition_calendar(today - timedelta(days=4), last_date)
+    competition_calendar = load_competition_calendar(today - timedelta(days=4), last_date)
     european_matches = [item for item in competition_calendar if item.get("status") == "completed" and item.get("competition") in EUROPEAN_ESPN_COMPETITIONS.values()]
 
     # Football-data pubblica le prossime partite in un CSV separato.
