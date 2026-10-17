@@ -1074,3 +1074,26 @@ if __name__ == "__main__":
         calibration = archive_module.calculate_calibration(records)
         self.assertIsNone(calibration["by_outcome"])
         self.assertEqual(calibration["minimum_matches_required"], 30)
+
+    def test_recent_form_can_be_reported_without_adjusting_probabilities(self):
+        history = defaultdict(lambda: {
+            "played": 5, "home_games": 0, "away_games": 0,
+            "home_scored": 0, "home_conceded": 0, "away_scored": 0, "away_conceded": 0,
+        })
+        history["Casa"].update({"home_games": 5, "home_scored": 12, "home_conceded": 4})
+        history["Ospite"].update({"away_games": 5, "away_scored": 10, "away_conceded": 8})
+        recent = {
+            "Casa": {"games": 5, "goals_for": 2.8, "goals_against": 0.5, "points_per_match": 2.4},
+            "Ospite": {"games": 5, "goals_for": 0.6, "goals_against": 2.5, "points_per_match": 0.4},
+        }
+        adjusted = module.make_forecast(
+            "Casa", "Ospite", "Test League", date(2026, 10, 20), "20:00",
+            history, 1.5, 1.2, None, recent, [], {}, apply_form_adjustment=True,
+        )
+        informational = module.make_forecast(
+            "Casa", "Ospite", "Test League", date(2026, 10, 20), "20:00",
+            history, 1.5, 1.2, None, recent, [], {}, apply_form_adjustment=False,
+        )
+        self.assertNotEqual(adjusted["expected_home_goals"], informational["expected_home_goals"])
+        self.assertEqual(informational["home_recent_form"], recent["Casa"])
+        self.assertEqual(informational["away_recent_form"], recent["Ospite"])
