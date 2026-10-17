@@ -548,6 +548,13 @@ def main():
         except (OSError, ValueError): old = {}
     old_fixtures = old.get("fixtures", []) if isinstance(old.get("fixtures"), list) else []
     old_tables = old.get("standings", {}) if isinstance(old.get("standings"), dict) else {}
+    old_coverage = old.get("coverage", {}) if isinstance(old.get("coverage"), dict) else {}
+    try:
+        old_stamp = datetime.fromisoformat(str(old.get("updated_at", "")).replace("Z", "+00:00"))
+        if old_stamp.tzinfo is None: old_stamp = old_stamp.replace(tzinfo=timezone.utc)
+        cache_fresh = timedelta(0) <= now - old_stamp.astimezone(timezone.utc) <= timedelta(hours=20)
+    except (ValueError, TypeError):
+        cache_fresh = False
     jobs = {}
     for code, meta in COMPETITIONS.items():
         start, end = season_range(today, LEAGUES[code][2]) if code in LEAGUES else season_range(today, "summer")
@@ -555,10 +562,30 @@ def main():
 
     fresh, coverage, success, failed = {}, {}, set(), set(jobs)
     api_key = os.environ.get("API_FOOTBALL_KEY", "").strip()
+    cached_api_codes = set()
+    cached_tables = set()
+    if api_key and cache_fresh:
+        for code in jobs:
+            diag = old_coverage.get(code, {})
+            cached_rows = [item for item in old_fixtures if item.get("competition_code") == code]
+            if diag.get("source") == "API-Football" and diag.get("status") == "loaded" and cached_rows:
+                fresh[code] = cached_rows
+                coverage[code] = diag
+                success.add(code); failed.discard(code); cached_api_codes.add(code)
+            table = old_tables.get(code)
+            if isinstance(table, dict) and table.get("diagnostics", {}).get("source") == "API-Football" and table.get("updated_at"):
+                try:
+                    table_stamp = datetime.fromisoformat(str(table["updated_at"]).replace("Z", "+00:00"))
+                    if table_stamp.tzinfo is None: table_stamp = table_stamp.replace(tzinfo=timezone.utc)
+                    if timedelta(0) <= now - table_stamp.astimezone(timezone.utc) <= timedelta(hours=20):
+                        cached_tables.add(code)
+                except (ValueError, TypeError):
+                    pass
+        print(f"Cache API-Football riutilizzata per {len(cached_api_codes)} competizioni.")
     if api_key:
         # Un'unica richiesta fixtures per competizione recupera tutta la stagione.
         with ThreadPoolExecutor(max_workers=4) as pool:
-            futures = {pool.submit(fetch_api_football_fixtures, api_key, code, jobs[code][0], jobs[code][3]): code for code in jobs}
+            futures = {pool.submit(fetch_api_football_fixtures, api_key, code, jobs[code][0], jobs[code][3]): code for code in jobs if code not in cached_api_codes}
             for future in as_completed(futures):
                 code = futures[future]
                 try:
@@ -638,7 +665,8 @@ def main():
 
     tables={}
     if api_key:
-        eligible_tables = (set(LEAGUES) | set(EUROPEAN)) & success
+        eligible_tables = ((set(LEAGUES) | set(EUROPEAN)) & success) - cached_tables
+        tables.update({code: old_tables[code] for code in cached_tables if code in old_tables})
         with ThreadPoolExecutor(max_workers=4) as pool:
             futures = {pool.submit(fetch_api_football_standings, api_key, code, jobs[code][0], jobs[code][3]): code for code in eligible_tables}
             for future in as_completed(futures):
